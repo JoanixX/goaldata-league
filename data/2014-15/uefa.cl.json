@@ -1,0 +1,2110 @@
+{
+  "name": "UEFA Champions League 2014/15",
+  "matches": [
+    {
+      "round": "Group A",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Olympiakos Piraeus (GRE)",
+      "team2": "Atlético Madrid (ESP)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "Malmö FF (SWE)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "Atlético Madrid (ESP)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "Malmö FF (SWE)",
+      "team2": "Olympiakos Piraeus (GRE)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "Atlético Madrid (ESP)",
+      "team2": "Malmö FF (SWE)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          5,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "Olympiakos Piraeus (GRE)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "Malmö FF (SWE)",
+      "team2": "Atlético Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "Olympiakos Piraeus (GRE)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "Atlético Madrid (ESP)",
+      "team2": "Olympiakos Piraeus (GRE)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "Malmö FF (SWE)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "Atlético Madrid (ESP)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group A",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Olympiakos Piraeus (GRE)",
+      "team2": "Malmö FF (SWE)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "FC Basel 1893 (SUI)",
+      "score": {
+        "ht": [
+          4,
+          1
+        ],
+        "ft": [
+          5,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Liverpool FC (ENG)",
+      "team2": "PFC Ludogorets Razgrad (BUL)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "FC Basel 1893 (SUI)",
+      "team2": "Liverpool FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "PFC Ludogorets Razgrad (BUL)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "PFC Ludogorets Razgrad (BUL)",
+      "team2": "FC Basel 1893 (SUI)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "Liverpool FC (ENG)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          3
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "FC Basel 1893 (SUI)",
+      "team2": "PFC Ludogorets Razgrad (BUL)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "Liverpool FC (ENG)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "FC Basel 1893 (SUI)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "PFC Ludogorets Razgrad (BUL)",
+      "team2": "Liverpool FC (ENG)",
+      "score": {
+        "ht": [
+          1,
+          2
+        ],
+        "ft": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Liverpool FC (ENG)",
+      "team2": "FC Basel 1893 (SUI)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group B",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "PFC Ludogorets Razgrad (BUL)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "AS Monaco (FRA)",
+      "team2": "Bayer Leverkusen (GER)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "SL Benfica (POR)",
+      "team2": "Zenit St. Petersburg (RUS)",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-10-01",
+      "time": "18:00",
+      "team1": "Zenit St. Petersburg (RUS)",
+      "team2": "AS Monaco (FRA)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "Bayer Leverkusen (GER)",
+      "team2": "SL Benfica (POR)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "AS Monaco (FRA)",
+      "team2": "SL Benfica (POR)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "Bayer Leverkusen (GER)",
+      "team2": "Zenit St. Petersburg (RUS)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-11-04",
+      "time": "18:00",
+      "team1": "Zenit St. Petersburg (RUS)",
+      "team2": "Bayer Leverkusen (GER)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "SL Benfica (POR)",
+      "team2": "AS Monaco (FRA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-11-26",
+      "time": "18:00",
+      "team1": "Zenit St. Petersburg (RUS)",
+      "team2": "SL Benfica (POR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "Bayer Leverkusen (GER)",
+      "team2": "AS Monaco (FRA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "AS Monaco (FRA)",
+      "team2": "Zenit St. Petersburg (RUS)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group C",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "SL Benfica (POR)",
+      "team2": "Bayer Leverkusen (GER)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Borussia Dortmund (GER)",
+      "team2": "Arsenal FC (ENG)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-09-16",
+      "time": "20:45",
+      "team1": "Galatasaray (TUR)",
+      "team2": "RSC Anderlecht (BEL)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "Arsenal FC (ENG)",
+      "team2": "Galatasaray (TUR)",
+      "score": {
+        "ht": [
+          3,
+          0
+        ],
+        "ft": [
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-10-01",
+      "time": "20:45",
+      "team1": "RSC Anderlecht (BEL)",
+      "team2": "Borussia Dortmund (GER)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "RSC Anderlecht (BEL)",
+      "team2": "Arsenal FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-10-22",
+      "time": "20:45",
+      "team1": "Galatasaray (TUR)",
+      "team2": "Borussia Dortmund (GER)",
+      "score": {
+        "ht": [
+          0,
+          3
+        ],
+        "ft": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "Arsenal FC (ENG)",
+      "team2": "RSC Anderlecht (BEL)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-11-04",
+      "time": "20:45",
+      "team1": "Borussia Dortmund (GER)",
+      "team2": "Galatasaray (TUR)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "Arsenal FC (ENG)",
+      "team2": "Borussia Dortmund (GER)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-11-26",
+      "time": "20:45",
+      "team1": "RSC Anderlecht (BEL)",
+      "team2": "Galatasaray (TUR)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Galatasaray (TUR)",
+      "team2": "Arsenal FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          3
+        ],
+        "ft": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "round": "Group D",
+      "date": "2014-12-09",
+      "time": "20:45",
+      "team1": "Borussia Dortmund (GER)",
+      "team2": "RSC Anderlecht (BEL)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "AS Roma (ITA)",
+      "team2": "CSKA Moskva (RUS)",
+      "score": {
+        "ht": [
+          4,
+          0
+        ],
+        "ft": [
+          5,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "Manchester City (ENG)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-09-30",
+      "time": "18:00",
+      "team1": "CSKA Moskva (RUS)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "Manchester City (ENG)",
+      "team2": "AS Roma (ITA)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-10-21",
+      "time": "18:00",
+      "team1": "CSKA Moskva (RUS)",
+      "team2": "Manchester City (ENG)",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "AS Roma (ITA)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ht": [
+          0,
+          5
+        ],
+        "ft": [
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "AS Roma (ITA)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Manchester City (ENG)",
+      "team2": "CSKA Moskva (RUS)",
+      "score": {
+        "ht": [
+          1,
+          2
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-11-25",
+      "time": "18:00",
+      "team1": "CSKA Moskva (RUS)",
+      "team2": "AS Roma (ITA)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "Manchester City (ENG)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ht": [
+          1,
+          2
+        ],
+        "ft": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "AS Roma (ITA)",
+      "team2": "Manchester City (ENG)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group E",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "CSKA Moskva (RUS)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "AFC Ajax (NED)",
+      "team2": "Paris Saint-Germain (FRA)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "APOEL Nikosia (CYP)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "APOEL Nikosia (CYP)",
+      "team2": "AFC Ajax (NED)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "Paris Saint-Germain (FRA)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "AFC Ajax (NED)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "APOEL Nikosia (CYP)",
+      "team2": "Paris Saint-Germain (FRA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "AFC Ajax (NED)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Paris Saint-Germain (FRA)",
+      "team2": "APOEL Nikosia (CYP)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "Paris Saint-Germain (FRA)",
+      "team2": "AFC Ajax (NED)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "APOEL Nikosia (CYP)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "AFC Ajax (NED)",
+      "team2": "APOEL Nikosia (CYP)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group F",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "Paris Saint-Germain (FRA)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "Chelsea FC (ENG)",
+      "team2": "FC Schalke 04 (GER)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "NK Maribor (SVN)",
+      "team2": "Sporting CP (POR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "Sporting CP (POR)",
+      "team2": "Chelsea FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "FC Schalke 04 (GER)",
+      "team2": "NK Maribor (SVN)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "Chelsea FC (ENG)",
+      "team2": "NK Maribor (SVN)",
+      "score": {
+        "ht": [
+          3,
+          0
+        ],
+        "ft": [
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "FC Schalke 04 (GER)",
+      "team2": "Sporting CP (POR)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "NK Maribor (SVN)",
+      "team2": "Chelsea FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Sporting CP (POR)",
+      "team2": "FC Schalke 04 (GER)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "FC Schalke 04 (GER)",
+      "team2": "Chelsea FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          3
+        ],
+        "ft": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "Sporting CP (POR)",
+      "team2": "NK Maribor (SVN)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "Chelsea FC (ENG)",
+      "team2": "Sporting CP (POR)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group G",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "NK Maribor (SVN)",
+      "team2": "FC Schalke 04 (GER)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "Athletic Club (ESP)",
+      "team2": "Shakhtar Donetsk (UKR)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-09-17",
+      "time": "20:45",
+      "team1": "FC Porto (POR)",
+      "team2": "BATE Borisov (BLR)",
+      "score": {
+        "ht": [
+          3,
+          0
+        ],
+        "ft": [
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "BATE Borisov (BLR)",
+      "team2": "Athletic Club (ESP)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-09-30",
+      "time": "20:45",
+      "team1": "Shakhtar Donetsk (UKR)",
+      "team2": "FC Porto (POR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "FC Porto (POR)",
+      "team2": "Athletic Club (ESP)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-10-21",
+      "time": "20:45",
+      "team1": "BATE Borisov (BLR)",
+      "team2": "Shakhtar Donetsk (UKR)",
+      "score": {
+        "ht": [
+          0,
+          6
+        ],
+        "ft": [
+          0,
+          7
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Athletic Club (ESP)",
+      "team2": "FC Porto (POR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-11-05",
+      "time": "20:45",
+      "team1": "Shakhtar Donetsk (UKR)",
+      "team2": "BATE Borisov (BLR)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          5,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-11-25",
+      "time": "18:00",
+      "team1": "BATE Borisov (BLR)",
+      "team2": "FC Porto (POR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-11-25",
+      "time": "20:45",
+      "team1": "Shakhtar Donetsk (UKR)",
+      "team2": "Athletic Club (ESP)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "Athletic Club (ESP)",
+      "team2": "BATE Borisov (BLR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Group H",
+      "date": "2014-12-10",
+      "time": "20:45",
+      "team1": "FC Porto (POR)",
+      "team2": "Shakhtar Donetsk (UKR)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-17",
+      "time": "20:45",
+      "team1": "Paris Saint-Germain (FRA)",
+      "team2": "Chelsea FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-17",
+      "time": "20:45",
+      "team1": "Shakhtar Donetsk (UKR)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-18",
+      "time": "20:45",
+      "team1": "FC Schalke 04 (GER)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-18",
+      "time": "20:45",
+      "team1": "FC Basel 1893 (SUI)",
+      "team2": "FC Porto (POR)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-24",
+      "time": "20:45",
+      "team1": "Manchester City (ENG)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-24",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "Borussia Dortmund (GER)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-25",
+      "time": "20:45",
+      "team1": "Bayer Leverkusen (GER)",
+      "team2": "Atlético Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-02-25",
+      "time": "20:45",
+      "team1": "Arsenal FC (ENG)",
+      "team2": "AS Monaco (FRA)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-10",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "FC Schalke 04 (GER)",
+      "score": {
+        "ht": [
+          2,
+          2
+        ],
+        "ft": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-10",
+      "time": "20:45",
+      "team1": "FC Porto (POR)",
+      "team2": "FC Basel 1893 (SUI)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-11",
+      "time": "20:45",
+      "team1": "Chelsea FC (ENG)",
+      "team2": "Paris Saint-Germain (FRA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ],
+        "et": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-11",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "Shakhtar Donetsk (UKR)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          7,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-17",
+      "time": "20:45",
+      "team1": "Atlético Madrid (ESP)",
+      "team2": "Bayer Leverkusen (GER)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ],
+        "et": [
+          1,
+          0
+        ],
+        "p": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-17",
+      "time": "20:45",
+      "team1": "AS Monaco (FRA)",
+      "team2": "Arsenal FC (ENG)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-18",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "Manchester City (ENG)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Round of 16",
+      "date": "2015-03-18",
+      "time": "20:45",
+      "team1": "Borussia Dortmund (GER)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-14",
+      "time": "20:45",
+      "team1": "Atlético Madrid (ESP)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-14",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "AS Monaco (FRA)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-15",
+      "time": "20:45",
+      "team1": "Paris Saint-Germain (FRA)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-15",
+      "time": "20:45",
+      "team1": "FC Porto (POR)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ht": [
+          2,
+          1
+        ],
+        "ft": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-21",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "Paris Saint-Germain (FRA)",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-21",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "FC Porto (POR)",
+      "score": {
+        "ht": [
+          5,
+          0
+        ],
+        "ft": [
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-22",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "Atlético Madrid (ESP)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Quarterfinals",
+      "date": "2015-04-22",
+      "time": "20:45",
+      "team1": "AS Monaco (FRA)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ft": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Semifinals",
+      "date": "2015-05-05",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "Real Madrid (ESP)",
+      "score": {
+        "ht": [
+          1,
+          1
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Semifinals",
+      "date": "2015-05-06",
+      "time": "20:45",
+      "team1": "FC Barcelona (ESP)",
+      "team2": "Bayern München (GER)",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "round": "Semifinals",
+      "date": "2015-05-12",
+      "time": "20:45",
+      "team1": "Bayern München (GER)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          1,
+          2
+        ],
+        "ft": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "round": "Semifinals",
+      "date": "2015-05-13",
+      "time": "20:45",
+      "team1": "Real Madrid (ESP)",
+      "team2": "Juventus (ITA)",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "round": "Final",
+      "date": "2015-06-06",
+      "time": "20:45",
+      "team1": "Juventus (ITA)",
+      "team2": "FC Barcelona (ESP)",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          3
+        ]
+      }
+    }
+  ]
+}
