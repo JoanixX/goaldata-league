@@ -5,3 +5,6 @@ inspect_json.py
 # Entornos
 .venv
 .env
+
+# cache
+__pycache__
