@@ -1,0 +1,2412 @@
+/*https://match.uefa.com/v5/matches?matchId=2003765*/
+[
+    {
+        "awayTeam": {
+            "associationId": "200122",
+            "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/ESP.svg",
+            "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/52268.png",
+            "confederationType": "UEFA",
+            "countryCode": "ESP",
+            "id": "52268",
+            "idProvider": "FAME",
+            "internationalName": "Valencia",
+            "isPlaceHolder": false,
+            "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/52268.png",
+            "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/52268.png",
+            "organizationId": "252268",
+            "teamCode": "VAL",
+            "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+            "translations": {
+                "countryName": {
+                    "EN": "Spain",
+                    "FR": "Espagne",
+                    "DE": "Spanien",
+                    "ES": "España",
+                    "PT": "Espanha",
+                    "IT": "Spagna",
+                    "RU": "Испания",
+                    "ZH": "西班牙",
+                    "TR": "Spain",
+                    "HU": "Spain",
+                    "CS": "Spain",
+                    "NL": "Spain"
+                },
+                "displayName": {
+                    "EN": "Valencia",
+                    "FR": "Valencia",
+                    "DE": "Valencia",
+                    "ES": "Valencia",
+                    "PT": "Valencia",
+                    "IT": "Valencia",
+                    "RU": "Валенсия",
+                    "ZH": "瓦伦西亚",
+                    "TR": "Valencia",
+                    "HU": "Valencia",
+                    "CS": "Valencia",
+                    "NL": "Valencia"
+                },
+                "displayOfficialName": {
+                    "EN": "Valencia CF",
+                    "FR": "Valencia CF",
+                    "DE": "Valencia CF",
+                    "ES": "Valencia CF",
+                    "PT": "Valencia CF",
+                    "IT": "Valencia CF",
+                    "RU": "Валенсия",
+                    "ZH": "巴伦西亚",
+                    "TR": "Valencia CF",
+                    "HU": "Valencia CF",
+                    "CS": "Valencia CF",
+                    "NL": "Valencia CF"
+                },
+                "displayTeamCode": {
+                    "EN": "VAL",
+                    "FR": "VAL",
+                    "DE": "VAL",
+                    "ES": "VAL",
+                    "PT": "VAL",
+                    "IT": "VAL",
+                    "RU": "VAL",
+                    "ZH": "VAL",
+                    "TR": "VAL",
+                    "HU": "VAL",
+                    "CS": "VAL",
+                    "NL": "VAL"
+                },
+                "shortName": {
+                    "EN": "Valencia",
+                    "FR": "Valencia",
+                    "DE": "Valencia",
+                    "ES": "Valencia",
+                    "PT": "Valencia",
+                    "IT": "Valencia",
+                    "RU": "Валенсия",
+                    "ZH": "Valencia",
+                    "TR": "Valencia",
+                    "HU": "Valencia",
+                    "CS": "Valencia",
+                    "NL": "Valencia"
+                }
+            },
+            "typeIsNational": false,
+            "typeTeam": "DOMESTIC"
+        },
+        "competition": {
+            "age": "ADULT",
+            "code": "UCL",
+            "id": "1",
+            "images": {
+                "FULL_LOGO": "https://img.uefa.com/imgml/uefacom/elements/logos/competitions/color/full/1.svg"
+            },
+            "metaData": {
+                "name": "UEFA Champions League"
+            },
+            "region": "CONTINENTAL",
+            "sex": "MALE",
+            "sportsType": "FOOTBALL",
+            "teamCategory": "CLUB",
+            "translations": {
+                "name": {
+                    "EN": "UEFA Champions League",
+                    "FR": "UEFA Champions League",
+                    "DE": "UEFA Champions League",
+                    "ES": "UEFA Champions League",
+                    "PT": "UEFA Champions League",
+                    "IT": "UEFA Champions League",
+                    "RU": "Лига чемпионов УЕФА",
+                    "ZH": "欧洲冠军联赛",
+                    "TR": "UEFA Champions League",
+                    "HU": "UEFA Champions League",
+                    "CS": "UEFA Champions League",
+                    "NL": "UEFA Champions League"
+                },
+                "prequalifyingName": {
+                    "EN": "UEFA Champions League",
+                    "FR": "UEFA Champions League",
+                    "DE": "UEFA Champions League",
+                    "ES": "UEFA Champions League",
+                    "PT": "UEFA Champions League",
+                    "IT": "UEFA Champions League",
+                    "RU": "Лига чемпионов УЕФА",
+                    "ZH": "欧洲冠军联赛",
+                    "TR": "UEFA Champions League",
+                    "HU": "UEFA Champions League",
+                    "CS": "UEFA Champions League",
+                    "NL": "UEFA Champions League"
+                },
+                "qualifyingName": {
+                    "EN": "UEFA Champions League",
+                    "FR": "UEFA Champions League",
+                    "DE": "UEFA Champions League",
+                    "ES": "UEFA Champions League",
+                    "PT": "UEFA Champions League",
+                    "IT": "UEFA Champions League",
+                    "RU": "Лига чемпионов УЕФА",
+                    "ZH": "欧洲冠军联赛",
+                    "TR": "UEFA Champions League",
+                    "HU": "UEFA Champions League",
+                    "CS": "UEFA Champions League",
+                    "NL": "UEFA Champions League"
+                },
+                "tournamentName": {
+                    "EN": "UEFA Champions League",
+                    "FR": "UEFA Champions League",
+                    "DE": "UEFA Champions League",
+                    "ES": "UEFA Champions League",
+                    "PT": "UEFA Champions League",
+                    "IT": "UEFA Champions League",
+                    "RU": "Лига чемпионов УЕФА",
+                    "ZH": "欧洲冠军联赛",
+                    "TR": "UEFA Champions League",
+                    "HU": "UEFA Champions League",
+                    "CS": "UEFA Champions League",
+                    "NL": "UEFA Champions League"
+                }
+            },
+            "type": "CUP"
+        },
+        "fullTimeAt": "2011-03-09T21:37:13Z",
+        "homeTeam": {
+            "associationId": "200047",
+            "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/GER.svg",
+            "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/57388.png",
+            "confederationType": "UEFA",
+            "countryCode": "GER",
+            "id": "57388",
+            "idProvider": "FAME",
+            "internationalName": "Schalke",
+            "isPlaceHolder": false,
+            "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/57388.png",
+            "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/57388.png",
+            "organizationId": "257388",
+            "teamCode": "SCH",
+            "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+            "translations": {
+                "countryName": {
+                    "EN": "Germany",
+                    "FR": "Allemagne",
+                    "DE": "Deutschland",
+                    "ES": "Alemania",
+                    "PT": "Alemanha",
+                    "IT": "Germania",
+                    "RU": "Германия",
+                    "ZH": "德国",
+                    "TR": "Germany",
+                    "HU": "Germany",
+                    "CS": "Germany",
+                    "NL": "Germany"
+                },
+                "displayName": {
+                    "EN": "Schalke",
+                    "FR": "Schalke",
+                    "DE": "Schalke",
+                    "ES": "Schalke",
+                    "PT": "Schalke",
+                    "IT": "Schalke",
+                    "RU": "Шальке",
+                    "ZH": "沙尔克04",
+                    "TR": "Schalke",
+                    "HU": "Schalke",
+                    "CS": "Schalke",
+                    "NL": "Schalke"
+                },
+                "displayOfficialName": {
+                    "EN": "FC Schalke 04",
+                    "FR": "FC Schalke 04",
+                    "DE": "FC Schalke 04",
+                    "ES": "FC Schalke 04",
+                    "PT": "FC Schalke 04",
+                    "IT": "FC Schalke 04",
+                    "RU": "Шальке-04",
+                    "ZH": "沙尔克04",
+                    "TR": "FC Schalke 04",
+                    "HU": "FC Schalke 04",
+                    "CS": "FC Schalke 04",
+                    "NL": "FC Schalke 04"
+                },
+                "displayTeamCode": {
+                    "EN": "SCH",
+                    "FR": "SCH",
+                    "DE": "SCH",
+                    "ES": "SCH",
+                    "PT": "SCH",
+                    "IT": "SCH",
+                    "RU": "SCH",
+                    "ZH": "SCH",
+                    "TR": "SCH",
+                    "HU": "SCH",
+                    "CS": "SCH",
+                    "NL": "SCH"
+                },
+                "shortName": {
+                    "EN": "Schalke",
+                    "FR": "Schalke",
+                    "DE": "Schalke",
+                    "ES": "Schalke",
+                    "PT": "Schalke",
+                    "IT": "Schalke",
+                    "RU": "Шальке",
+                    "ZH": "Schalke",
+                    "TR": "Schalke",
+                    "HU": "Schalke",
+                    "CS": "Schalke",
+                    "NL": "Schalke"
+                }
+            },
+            "typeIsNational": false,
+            "typeTeam": "DOMESTIC"
+        },
+        "id": "2003765",
+        "kickOffTime": {
+            "date": "2011-03-09",
+            "dateTime": "2011-03-09T19:45:00Z",
+            "utcOffsetInHours": 1
+        },
+        "leg": {
+            "dateTimeFrom": "2011-03-07T23:00:00Z",
+            "dateTimeTo": "2011-03-08T23:00:00Z",
+            "number": 2,
+            "translations": {
+                "name": {
+                    "EN": "2nd leg",
+                    "FR": "retour",
+                    "DE": "Rückspiel",
+                    "ES": "Partido de vuelta",
+                    "PT": "2ª mão",
+                    "IT": "ritorno",
+                    "RU": "2-й матч",
+                    "ZH": "次回合",
+                    "TR": "2nd leg",
+                    "HU": "2nd leg",
+                    "CS": "2nd leg",
+                    "NL": "2nd leg"
+                }
+            }
+        },
+        "lineupStatus": "TACTICAL_AVAILABLE",
+        "matchAttendance": 53517,
+        "matchday": {
+            "competitionId": "1",
+            "dateFrom": "2011-03-07T23:00:00+0000",
+            "dateTo": "2011-03-08T23:00:00+0000",
+            "format": "EXTRA_TIME_WITH_PENALTIES",
+            "id": "31483",
+            "longName": "MatchDay 8a",
+            "name": "MD8a",
+            "phase": "TOURNAMENT",
+            "roundId": "2000119",
+            "seasonYear": "2011",
+            "sequenceNumber": "3",
+            "translations": {
+                "longName": {
+                    "EN": "Matchday 8a",
+                    "FR": "Journée 8a",
+                    "DE": "Spieltag 8a",
+                    "ES": "Jornada 8a",
+                    "PT": "Jornada 8a",
+                    "IT": "Giornata 8a",
+                    "RU": "Тур 8a",
+                    "ZH": "比赛日 8a",
+                    "TR": "Matchday 8a",
+                    "HU": "Matchday 8a",
+                    "CS": "Matchday 8a",
+                    "NL": "Matchday 8a"
+                },
+                "name": {
+                    "EN": "MD 8a",
+                    "FR": "J 8a",
+                    "DE": "ST 8a",
+                    "ES": "JOR 8a",
+                    "PT": "J 8a",
+                    "IT": "G 8a",
+                    "RU": "Тур 8a",
+                    "ZH": "比赛日 8a",
+                    "TR": "MD 8a",
+                    "HU": "MD 8a",
+                    "CS": "MD 8a",
+                    "NL": "MD 8a"
+                }
+            },
+            "type": "SECOND_LEG"
+        },
+        "playerEvents": {
+            "scorers": [
+                {
+                    "goalType": "SCORED",
+                    "id": "6B53C826A7F04EF6A4F9BFFDFEDD1F09",
+                    "phase": "FIRST_HALF",
+                    "player": {
+                        "age": "44",
+                        "birthDate": "1981-05-16",
+                        "clubJerseyNumber": "20",
+                        "clubShirtName": "R. Costa",
+                        "countryCode": "POR",
+                        "detailedFieldPosition": "CENTRE_BACK",
+                        "fieldPosition": "DEFENDER",
+                        "gender": "MALE",
+                        "height": 184,
+                        "id": "34480",
+                        "imageUrl": "https://img.uefa.com/imgml/TP/players/1/2011/324x324/34480.jpg",
+                        "internationalName": "Ricardo Costa",
+                        "nationalFieldPosition": "DEFENDER",
+                        "nationalJerseyNumber": "13",
+                        "nationalShirtName": "R.COSTA",
+                        "translations": {
+                            "countryName": {
+                                "EN": "Portugal",
+                                "FR": "Portugal",
+                                "DE": "Portugal",
+                                "ES": "Portugal",
+                                "PT": "Portugal",
+                                "IT": "Portogallo",
+                                "RU": "Португалия",
+                                "ZH": "葡萄牙",
+                                "TR": "Portugal",
+                                "HU": "Portugal",
+                                "CS": "Portugal",
+                                "NL": "Portugal"
+                            },
+                            "fieldPosition": {
+                                "EN": "Defender",
+                                "FR": "Défenseur",
+                                "DE": "Verteidiger",
+                                "ES": "Defensa",
+                                "PT": "Defesa",
+                                "IT": "Difensore",
+                                "RU": "Защитник",
+                                "ZH": "后卫",
+                                "TR": "Defender",
+                                "HU": "Defender",
+                                "CS": "Defender",
+                                "NL": "Defender"
+                            },
+                            "firstName": {
+                                "ZH": "里卡多·科斯塔"
+                            },
+                            "lastName": {
+                                "EN": "Ricardo Costa",
+                                "FR": "Ricardo Costa",
+                                "DE": "Ricardo Costa",
+                                "ES": "Ricardo Costa",
+                                "PT": "Ricardo Costa",
+                                "IT": "Ricardo Costa",
+                                "RU": "Рикарду Кошта",
+                                "ZH": "里卡多·科斯塔",
+                                "TR": "Ricardo Costa",
+                                "HU": "Ricardo Costa",
+                                "CS": "Ricardo Costa",
+                                "NL": "Ricardo Costa"
+                            },
+                            "name": {
+                                "EN": "Ricardo Costa",
+                                "FR": "Ricardo Costa",
+                                "DE": "Ricardo Costa",
+                                "ES": "Ricardo Costa",
+                                "PT": "Ricardo Costa",
+                                "IT": "Ricardo Costa",
+                                "RU": "Рикарду Кошта",
+                                "ZH": "里卡多·科斯塔",
+                                "TR": "Ricardo Costa",
+                                "HU": "Ricardo Costa",
+                                "CS": "Ricardo Costa",
+                                "NL": "Ricardo Costa"
+                            },
+                            "nationalFieldPosition": {
+                                "EN": "Defender",
+                                "FR": "Défenseur",
+                                "DE": "Verteidiger",
+                                "ES": "Defensa",
+                                "PT": "Defesa",
+                                "IT": "Difensore",
+                                "RU": "Защитник",
+                                "ZH": "后卫",
+                                "TR": "Defender",
+                                "HU": "Defender",
+                                "CS": "Defender",
+                                "NL": "Defender"
+                            },
+                            "shortName": {
+                                "EN": "Ricardo Costa",
+                                "FR": "Ricardo Costa",
+                                "DE": "Ricardo Costa",
+                                "ES": "Ricardo Costa",
+                                "PT": "Ricardo Costa",
+                                "IT": "Ricardo Costa",
+                                "RU": "Рикарду Кошта",
+                                "ZH": "里卡多·科斯塔",
+                                "TR": "Ricardo Costa",
+                                "HU": "Ricardo Costa",
+                                "CS": "Ricardo Costa",
+                                "NL": "Ricardo Costa"
+                            }
+                        },
+                        "weight": 80
+                    },
+                    "teamId": "52268",
+                    "teamIdProvider": "FAME",
+                    "time": {
+                        "minute": 17,
+                        "second": 12
+                    }
+                },
+                {
+                    "goalType": "SCORED",
+                    "id": "D81E72D66F1E42C28C727205B8BA54AF",
+                    "phase": "FIRST_HALF",
+                    "player": {
+                        "age": "41",
+                        "birthDate": "1984-10-26",
+                        "clubId": "53065",
+                        "clubJerseyNumber": "8",
+                        "clubShirtName": "Farfan",
+                        "countryCode": "PER",
+                        "detailedFieldPosition": "WINGER",
+                        "fieldPosition": "MIDFIELDER",
+                        "gender": "MALE",
+                        "height": 178,
+                        "id": "91479",
+                        "imageUrl": "https://img.uefa.com/imgml/TP/players/1/2011/324x324/91479.jpg",
+                        "internationalName": "Jefferson Farfán",
+                        "nationalFieldPosition": "FORWARD",
+                        "nationalShirtName": "Farfán",
+                        "nationalTeamId": "107",
+                        "translations": {
+                            "countryName": {
+                                "EN": "Peru",
+                                "FR": "Pérou",
+                                "DE": "Peru",
+                                "ES": "Perú",
+                                "PT": "Peru",
+                                "IT": "Perù",
+                                "RU": "Перу",
+                                "ZH": "秘鲁",
+                                "TR": "Peru",
+                                "HU": "Peru",
+                                "CS": "Peru",
+                                "NL": "Peru"
+                            },
+                            "fieldPosition": {
+                                "EN": "Midfielder",
+                                "FR": "Milieu",
+                                "DE": "Mittelfeldspieler",
+                                "ES": "Centrocampista",
+                                "PT": "Médio",
+                                "IT": "Centrocampista",
+                                "RU": "Полузащитник",
+                                "ZH": "中场球员",
+                                "TR": "Midfielder",
+                                "HU": "Midfielder",
+                                "CS": "Midfielder",
+                                "NL": "Midfielder"
+                            },
+                            "firstName": {
+                                "EN": "Jefferson",
+                                "FR": "Jefferson",
+                                "DE": "Jefferson",
+                                "ES": "Jefferson",
+                                "PT": "Jefferson",
+                                "IT": "Jefferson",
+                                "RU": "Джефферсон",
+                                "ZH": "杰弗逊",
+                                "TR": "Jefferson",
+                                "HU": "Jefferson",
+                                "CS": "Jefferson",
+                                "NL": "Jefferson"
+                            },
+                            "lastName": {
+                                "EN": "Farfán",
+                                "FR": "Farfán",
+                                "DE": "Farfán",
+                                "ES": "Farfán",
+                                "PT": "Farfán",
+                                "IT": "Farfán",
+                                "RU": "Фарфан",
+                                "ZH": "法尔范",
+                                "TR": "Farfán",
+                                "HU": "Farfán",
+                                "CS": "Farfán",
+                                "NL": "Farfán"
+                            },
+                            "name": {
+                                "EN": "Jefferson Farfán",
+                                "FR": "Jefferson Farfán",
+                                "DE": "Jefferson Farfán",
+                                "ES": "Jefferson Farfán",
+                                "PT": "Jefferson Farfán",
+                                "IT": "Jefferson Farfán",
+                                "RU": "Джефферсон Фарфан",
+                                "ZH": "杰弗逊·法尔范",
+                                "TR": "Jefferson Farfán",
+                                "HU": "Jefferson Farfán",
+                                "CS": "Jefferson Farfán",
+                                "NL": "Jefferson Farfán"
+                            },
+                            "nationalFieldPosition": {
+                                "EN": "Forward",
+                                "FR": "Attaquant",
+                                "DE": "Stürmer",
+                                "ES": "Delantero",
+                                "PT": "Avançado",
+                                "IT": "Attaccante",
+                                "RU": "Нападающий",
+                                "ZH": "前锋",
+                                "TR": "Forward",
+                                "HU": "Forward",
+                                "CS": "Forward",
+                                "NL": "Forward"
+                            },
+                            "shortName": {
+                                "EN": "Farfán",
+                                "FR": "Farfán",
+                                "DE": "Farfán",
+                                "ES": "Farfán",
+                                "PT": "Farfán",
+                                "IT": "Farfán",
+                                "RU": "Фарфан",
+                                "ZH": "法尔范",
+                                "TR": "Farfán",
+                                "HU": "Farfán",
+                                "CS": "Farfán",
+                                "NL": "Farfán"
+                            }
+                        },
+                        "weight": 84
+                    },
+                    "teamId": "57388",
+                    "teamIdProvider": "FAME",
+                    "time": {
+                        "minute": 40,
+                        "second": 24
+                    }
+                },
+                {
+                    "goalType": "SCORED",
+                    "id": "7ED42CA5784C415E94C395209A6E5D61",
+                    "phase": "SECOND_HALF",
+                    "player": {
+                        "age": "36",
+                        "birthDate": "1989-11-24",
+                        "clubId": "88359",
+                        "clubJerseyNumber": "11",
+                        "clubShirtName": "Gavranović",
+                        "countryCode": "SUI",
+                        "detailedFieldPosition": "STRIKER",
+                        "fieldPosition": "FORWARD",
+                        "gender": "MALE",
+                        "height": 175,
+                        "id": "102130",
+                        "imageUrl": "https://img.uefa.com/imgml/TP/players/1/2011/324x324/102130.jpg",
+                        "internationalName": "Mario Gavranović",
+                        "nationalFieldPosition": "FORWARD",
+                        "nationalJerseyNumber": "19",
+                        "nationalShirtName": "Gavranović",
+                        "nationalTeamId": "128",
+                        "translations": {
+                            "countryName": {
+                                "EN": "Switzerland",
+                                "FR": "Suisse",
+                                "DE": "Schweiz",
+                                "ES": "Suiza",
+                                "PT": "Suíça",
+                                "IT": "Svizzera",
+                                "RU": "Швейцария",
+                                "ZH": "瑞士",
+                                "TR": "Switzerland",
+                                "HU": "Switzerland",
+                                "CS": "Switzerland",
+                                "NL": "Switzerland"
+                            },
+                            "fieldPosition": {
+                                "EN": "Forward",
+                                "FR": "Attaquant",
+                                "DE": "Stürmer",
+                                "ES": "Delantero",
+                                "PT": "Avançado",
+                                "IT": "Attaccante",
+                                "RU": "Нападающий",
+                                "ZH": "前锋",
+                                "TR": "Forward",
+                                "HU": "Forward",
+                                "CS": "Forward",
+                                "NL": "Forward"
+                            },
+                            "firstName": {
+                                "EN": "Mario",
+                                "FR": "Mario",
+                                "DE": "Mario",
+                                "ES": "Mario",
+                                "PT": "Mario",
+                                "IT": "Mario",
+                                "RU": "Марио",
+                                "ZH": "加夫拉诺维奇",
+                                "TR": "Mario",
+                                "HU": "Mario",
+                                "CS": "Mario",
+                                "NL": "Mario"
+                            },
+                            "lastName": {
+                                "EN": "Gavranović",
+                                "FR": "Gavranović",
+                                "DE": "Gavranović",
+                                "ES": "Gavranović",
+                                "PT": "Gavranović",
+                                "IT": "Gavranović",
+                                "RU": "Гавранович",
+                                "ZH": "马里奥",
+                                "TR": "Gavranović",
+                                "HU": "Gavranović",
+                                "CS": "Gavranović",
+                                "NL": "Gavranović"
+                            },
+                            "name": {
+                                "EN": "Mario Gavranović",
+                                "FR": "Mario Gavranović",
+                                "DE": "Mario Gavranović",
+                                "ES": "Mario Gavranović",
+                                "PT": "Mario Gavranović",
+                                "IT": "Mario Gavranović",
+                                "RU": "Марио Гавранович",
+                                "ZH": "马里奥·加夫拉诺维奇",
+                                "TR": "Mario Gavranović",
+                                "HU": "Mario Gavranović",
+                                "CS": "Mario Gavranović",
+                                "NL": "Mario Gavranović"
+                            },
+                            "nationalFieldPosition": {
+                                "EN": "Forward",
+                                "FR": "Attaquant",
+                                "DE": "Stürmer",
+                                "ES": "Delantero",
+                                "PT": "Avançado",
+                                "IT": "Attaccante",
+                                "RU": "Нападающий",
+                                "ZH": "前锋",
+                                "TR": "Forward",
+                                "HU": "Forward",
+                                "CS": "Forward",
+                                "NL": "Forward"
+                            },
+                            "shortName": {
+                                "EN": "Gavranović",
+                                "FR": "Gavranović",
+                                "DE": "Gavranović",
+                                "ES": "Gavranović",
+                                "PT": "Gavranović",
+                                "IT": "Gavranović",
+                                "RU": "Гавранович",
+                                "ZH": "加夫拉诺维奇",
+                                "TR": "Gavranović",
+                                "HU": "Gavranović",
+                                "CS": "Gavranović",
+                                "NL": "Gavranović"
+                            }
+                        }
+                    },
+                    "teamId": "57388",
+                    "teamIdProvider": "FAME",
+                    "time": {
+                        "minute": 52,
+                        "second": 54
+                    }
+                },
+                {
+                    "goalType": "SCORED",
+                    "id": "42B199B0F8D444788B13B56D7DF23B27",
+                    "phase": "SECOND_HALF",
+                    "player": {
+                        "age": "41",
+                        "birthDate": "1984-10-26",
+                        "clubId": "53065",
+                        "clubJerseyNumber": "8",
+                        "clubShirtName": "Farfan",
+                        "countryCode": "PER",
+                        "detailedFieldPosition": "WINGER",
+                        "fieldPosition": "MIDFIELDER",
+                        "gender": "MALE",
+                        "height": 178,
+                        "id": "91479",
+                        "imageUrl": "https://img.uefa.com/imgml/TP/players/1/2011/324x324/91479.jpg",
+                        "internationalName": "Jefferson Farfán",
+                        "nationalFieldPosition": "FORWARD",
+                        "nationalShirtName": "Farfán",
+                        "nationalTeamId": "107",
+                        "translations": {
+                            "countryName": {
+                                "EN": "Peru",
+                                "FR": "Pérou",
+                                "DE": "Peru",
+                                "ES": "Perú",
+                                "PT": "Peru",
+                                "IT": "Perù",
+                                "RU": "Перу",
+                                "ZH": "秘鲁",
+                                "TR": "Peru",
+                                "HU": "Peru",
+                                "CS": "Peru",
+                                "NL": "Peru"
+                            },
+                            "fieldPosition": {
+                                "EN": "Midfielder",
+                                "FR": "Milieu",
+                                "DE": "Mittelfeldspieler",
+                                "ES": "Centrocampista",
+                                "PT": "Médio",
+                                "IT": "Centrocampista",
+                                "RU": "Полузащитник",
+                                "ZH": "中场球员",
+                                "TR": "Midfielder",
+                                "HU": "Midfielder",
+                                "CS": "Midfielder",
+                                "NL": "Midfielder"
+                            },
+                            "firstName": {
+                                "EN": "Jefferson",
+                                "FR": "Jefferson",
+                                "DE": "Jefferson",
+                                "ES": "Jefferson",
+                                "PT": "Jefferson",
+                                "IT": "Jefferson",
+                                "RU": "Джефферсон",
+                                "ZH": "杰弗逊",
+                                "TR": "Jefferson",
+                                "HU": "Jefferson",
+                                "CS": "Jefferson",
+                                "NL": "Jefferson"
+                            },
+                            "lastName": {
+                                "EN": "Farfán",
+                                "FR": "Farfán",
+                                "DE": "Farfán",
+                                "ES": "Farfán",
+                                "PT": "Farfán",
+                                "IT": "Farfán",
+                                "RU": "Фарфан",
+                                "ZH": "法尔范",
+                                "TR": "Farfán",
+                                "HU": "Farfán",
+                                "CS": "Farfán",
+                                "NL": "Farfán"
+                            },
+                            "name": {
+                                "EN": "Jefferson Farfán",
+                                "FR": "Jefferson Farfán",
+                                "DE": "Jefferson Farfán",
+                                "ES": "Jefferson Farfán",
+                                "PT": "Jefferson Farfán",
+                                "IT": "Jefferson Farfán",
+                                "RU": "Джефферсон Фарфан",
+                                "ZH": "杰弗逊·法尔范",
+                                "TR": "Jefferson Farfán",
+                                "HU": "Jefferson Farfán",
+                                "CS": "Jefferson Farfán",
+                                "NL": "Jefferson Farfán"
+                            },
+                            "nationalFieldPosition": {
+                                "EN": "Forward",
+                                "FR": "Attaquant",
+                                "DE": "Stürmer",
+                                "ES": "Delantero",
+                                "PT": "Avançado",
+                                "IT": "Attaccante",
+                                "RU": "Нападающий",
+                                "ZH": "前锋",
+                                "TR": "Forward",
+                                "HU": "Forward",
+                                "CS": "Forward",
+                                "NL": "Forward"
+                            },
+                            "shortName": {
+                                "EN": "Farfán",
+                                "FR": "Farfán",
+                                "DE": "Farfán",
+                                "ES": "Farfán",
+                                "PT": "Farfán",
+                                "IT": "Farfán",
+                                "RU": "Фарфан",
+                                "ZH": "法尔范",
+                                "TR": "Farfán",
+                                "HU": "Farfán",
+                                "CS": "Farfán",
+                                "NL": "Farfán"
+                            }
+                        },
+                        "weight": 84
+                    },
+                    "teamId": "57388",
+                    "teamIdProvider": "FAME",
+                    "time": {
+                        "injuryMinute": 4,
+                        "minute": 90,
+                        "second": 34
+                    }
+                }
+            ]
+        },
+        "referees": [
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/262282.jpg"
+                },
+                "person": {
+                    "countryCode": "ENG",
+                    "gender": "MALE",
+                    "id": "262282",
+                    "translations": {
+                        "countryName": {
+                            "EN": "England",
+                            "FR": "Angleterre",
+                            "DE": "England",
+                            "ES": "Inglaterra",
+                            "PT": "Inglaterra",
+                            "IT": "Inghilterra",
+                            "RU": "Англия",
+                            "ZH": "英格兰",
+                            "TR": "England",
+                            "HU": "England",
+                            "CS": "England",
+                            "NL": "England"
+                        },
+                        "firstName": {
+                            "EN": "Michael",
+                            "FR": "Michael",
+                            "DE": "Michael",
+                            "ES": "Michael",
+                            "PT": "Michael",
+                            "IT": "Michael",
+                            "RU": "Michael",
+                            "ZH": "Michael",
+                            "TR": "Michael",
+                            "HU": "Michael",
+                            "CS": "Michael",
+                            "NL": "Michael"
+                        },
+                        "lastName": {
+                            "EN": "Riley",
+                            "FR": "Riley",
+                            "DE": "Riley",
+                            "ES": "Riley",
+                            "PT": "Riley",
+                            "IT": "Riley",
+                            "RU": "Riley",
+                            "ZH": "RILEY",
+                            "TR": "Riley",
+                            "HU": "Riley",
+                            "CS": "Riley",
+                            "NL": "Riley"
+                        },
+                        "name": {
+                            "EN": "Mike Riley",
+                            "FR": "Mike Riley",
+                            "DE": "Mike Riley",
+                            "ES": "Mike Riley",
+                            "PT": "Mike Riley",
+                            "IT": "Mike Riley",
+                            "RU": "Майкл Райли",
+                            "ZH": "麦克尔-里雷伊",
+                            "TR": "Mike Riley",
+                            "HU": "Mike Riley",
+                            "CS": "Mike Riley",
+                            "NL": "Mike Riley"
+                        },
+                        "shortName": {
+                            "EN": "Riley",
+                            "FR": "Riley",
+                            "DE": "Riley",
+                            "ES": "Riley",
+                            "PT": "Riley",
+                            "IT": "Riley",
+                            "RU": "Райли",
+                            "ZH": "里雷伊",
+                            "TR": "Riley",
+                            "HU": "Riley",
+                            "CS": "Riley",
+                            "NL": "Riley"
+                        }
+                    }
+                },
+                "role": "REFEREE_OBSERVER",
+                "translations": {
+                    "roleName": {
+                        "EN": "Referee observer",
+                        "FR": "Observateur d'arbitres",
+                        "DE": "Referee observer",
+                        "ES": "Observador arbitral",
+                        "PT": "Observador de árbitro",
+                        "IT": "Referee observer",
+                        "RU": "Судейский наблюдатель",
+                        "ZH": "Referee observer",
+                        "TR": "Referee observer",
+                        "HU": "Referee observer",
+                        "CS": "Referee observer",
+                        "NL": "Referee observer"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/1905144.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "1905144",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Tobias",
+                            "FR": "Tobias",
+                            "DE": "Tobias",
+                            "ES": "Tobias",
+                            "PT": "Tobias",
+                            "IT": "Tobias",
+                            "RU": "Tobias",
+                            "ZH": "Tobias",
+                            "TR": "Tobias",
+                            "HU": "Tobias",
+                            "CS": "Tobias",
+                            "NL": "Tobias"
+                        },
+                        "lastName": {
+                            "EN": "Mattsson",
+                            "FR": "Mattsson",
+                            "DE": "Mattsson",
+                            "ES": "Mattsson",
+                            "PT": "Mattsson",
+                            "IT": "Mattsson",
+                            "RU": "Mattsson",
+                            "ZH": "Mattsson",
+                            "TR": "Mattsson",
+                            "HU": "Mattsson",
+                            "CS": "Mattsson",
+                            "NL": "Mattsson"
+                        },
+                        "name": {
+                            "EN": "Tobias Mattsson",
+                            "FR": "Tobias Mattsson",
+                            "DE": "Tobias Mattsson",
+                            "ES": "Tobias Mattsson",
+                            "PT": "Tobias Mattsson",
+                            "IT": "Tobias Mattsson",
+                            "RU": "Тобиас Маттссон",
+                            "ZH": "Tobias Mattsson",
+                            "TR": "Tobias Mattsson",
+                            "HU": "Tobias Mattsson",
+                            "CS": "Tobias Mattsson",
+                            "NL": "Tobias Mattsson"
+                        },
+                        "shortName": {
+                            "EN": "Mattsson",
+                            "FR": "Mattsson",
+                            "DE": "Mattsson",
+                            "ES": "Mattsson",
+                            "PT": "Mattsson",
+                            "IT": "Mattsson",
+                            "RU": "Маттссон",
+                            "ZH": "Mattsson",
+                            "TR": "Mattsson",
+                            "HU": "Mattsson",
+                            "CS": "Mattsson",
+                            "NL": "Mattsson"
+                        }
+                    }
+                },
+                "role": "ADDITIONAL_ASSISTANT_REFEREE_TWO",
+                "translations": {
+                    "roleName": {
+                        "EN": "Additional assistant referee two",
+                        "FR": "Arbitre assistant supplémentaire n°2",
+                        "DE": "Zusätzlicher Schiedsrichterassistent zwei",
+                        "ES": "Segundo árbitro asistente adicional",
+                        "PT": "Árbitro assistente adicional 2",
+                        "IT": "Assistente addizionale due",
+                        "RU": "Дополнительный ассистент рефери 2",
+                        "ZH": "Árbitro-assistente adicional 2",
+                        "TR": "Additional assistant referee two",
+                        "HU": "Additional assistant referee two",
+                        "CS": "Additional assistant referee two",
+                        "NL": "Additional assistant referee two"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/274189.jpg"
+                },
+                "person": {
+                    "countryCode": "SCO",
+                    "gender": "MALE",
+                    "id": "274189",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Scotland",
+                            "FR": "Écosse",
+                            "DE": "Schottland",
+                            "ES": "Escocia",
+                            "PT": "Escócia",
+                            "IT": "Scozia",
+                            "RU": "Шотландия",
+                            "ZH": "苏格兰",
+                            "TR": "Scotland",
+                            "HU": "Scotland",
+                            "CS": "Scotland",
+                            "NL": "Scotland"
+                        },
+                        "firstName": {
+                            "EN": "William",
+                            "FR": "William",
+                            "DE": "William",
+                            "ES": "William",
+                            "PT": "William",
+                            "IT": "William",
+                            "RU": "William",
+                            "ZH": "William",
+                            "TR": "William",
+                            "HU": "William",
+                            "CS": "William",
+                            "NL": "William"
+                        },
+                        "lastName": {
+                            "EN": "McDougall",
+                            "FR": "McDougall",
+                            "DE": "McDougall",
+                            "ES": "McDougall",
+                            "PT": "McDougall",
+                            "IT": "McDougall",
+                            "RU": "McDougall",
+                            "ZH": "McDougall",
+                            "TR": "McDougall",
+                            "HU": "McDougall",
+                            "CS": "McDougall",
+                            "NL": "McDougall"
+                        },
+                        "name": {
+                            "EN": "William Mcdougall",
+                            "FR": "William Mcdougall",
+                            "DE": "William Mcdougall",
+                            "ES": "William Mcdougall",
+                            "PT": "William Mcdougall",
+                            "IT": "William Mcdougall",
+                            "RU": "Уильям Макдугал",
+                            "ZH": "威廉·麦克道加尔",
+                            "TR": "William Mcdougall",
+                            "HU": "William Mcdougall",
+                            "CS": "William Mcdougall",
+                            "NL": "William Mcdougall"
+                        },
+                        "shortName": {
+                            "EN": "McDougall",
+                            "FR": "McDougall",
+                            "DE": "McDougall",
+                            "ES": "McDougall",
+                            "PT": "McDougall",
+                            "IT": "McDougall",
+                            "RU": "Макдугал",
+                            "ZH": "麦克道加尔",
+                            "TR": "McDougall",
+                            "HU": "McDougall",
+                            "CS": "McDougall",
+                            "NL": "McDougall"
+                        }
+                    }
+                },
+                "role": "UEFA_DELEGATE",
+                "translations": {
+                    "roleName": {
+                        "EN": "UEFA Delegate",
+                        "FR": "Délégué ou déléguée UEFA",
+                        "DE": "UEFA-Delegierter",
+                        "ES": "Delegado UEFA",
+                        "PT": "Delegado da UEFA",
+                        "IT": "Delegata UEFA",
+                        "RU": "Делегат УЕФА",
+                        "ZH": "UEFA delegate",
+                        "TR": "UEFA Delegate",
+                        "HU": "UEFA delegate",
+                        "CS": "UEFA Delegate",
+                        "NL": "UEFA delegate"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/293792.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "293792",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Arne Mathias Emanuel",
+                            "FR": "Arne Mathias Emanuel",
+                            "DE": "Arne Mathias Emanuel",
+                            "ES": "Arne Mathias Emanuel",
+                            "PT": "Arne Mathias Emanuel",
+                            "IT": "Arne Mathias Emanuel",
+                            "RU": "Mathias",
+                            "ZH": "Arne Mathias Emanuel",
+                            "TR": "Arne Mathias Emanuel",
+                            "HU": "Arne Mathias Emanuel",
+                            "CS": "Arne Mathias Emanuel",
+                            "NL": "Arne Mathias Emanuel"
+                        },
+                        "lastName": {
+                            "EN": "Klasenius",
+                            "FR": "Klasenius",
+                            "DE": "Klasenius",
+                            "ES": "Klasenius",
+                            "PT": "Klasenius",
+                            "IT": "Klasenius",
+                            "RU": "KLASENIUS",
+                            "ZH": "Klasenius",
+                            "TR": "Klasenius",
+                            "HU": "Klasenius",
+                            "CS": "Klasenius",
+                            "NL": "Klasenius"
+                        },
+                        "name": {
+                            "EN": "Mathias Klasenius",
+                            "FR": "Mathias Klasenius",
+                            "DE": "Mathias Klasenius",
+                            "ES": "Mathias Klasenius",
+                            "PT": "Mathias Klasenius",
+                            "IT": "Mathias Klasenius",
+                            "RU": "Матиас Класениус",
+                            "ZH": "马蒂亚斯·克拉森纽斯",
+                            "TR": "Mathias Klasenius",
+                            "HU": "Mathias Klasenius",
+                            "CS": "Mathias Klasenius",
+                            "NL": "Mathias Klasenius"
+                        },
+                        "shortName": {
+                            "EN": "Klasenius",
+                            "FR": "Klasenius",
+                            "DE": "Klasenius",
+                            "ES": "Klasenius",
+                            "PT": "Klasenius",
+                            "IT": "Klasenius",
+                            "RU": "Класениус",
+                            "ZH": "克拉森纽斯",
+                            "TR": "Klasenius",
+                            "HU": "Klasenius",
+                            "CS": "Klasenius",
+                            "NL": "Klasenius"
+                        }
+                    }
+                },
+                "role": "ASSISTANT_REFEREE_TWO",
+                "translations": {
+                    "roleName": {
+                        "EN": "Assistant referee two",
+                        "FR": "Arbitre assistant n°2",
+                        "DE": "Schiedsrichterassistent zwei",
+                        "ES": "Segundo árbitro asistente",
+                        "PT": "Árbitro assistente 2",
+                        "IT": "Guardalinee due",
+                        "RU": "Ассистент рефери 2",
+                        "ZH": "Árbitro-assistente 2",
+                        "TR": "Assistant referee two",
+                        "HU": "Assistant referee two",
+                        "CS": "Assistant referee two",
+                        "NL": "Assistant referee two"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/288513.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "288513",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Markus",
+                            "FR": "Markus",
+                            "DE": "Markus",
+                            "ES": "Markus",
+                            "PT": "Markus",
+                            "IT": "Markus",
+                            "RU": "Markus",
+                            "ZH": "Markus",
+                            "TR": "Karl Markus",
+                            "HU": "Karl Markus",
+                            "CS": "Karl Markus",
+                            "NL": "Karl Markus"
+                        },
+                        "lastName": {
+                            "EN": "Strömbergsson",
+                            "FR": "Strömbergsson",
+                            "DE": "Strömbergsson",
+                            "ES": "Strömbergsson",
+                            "PT": "Strömbergsson",
+                            "IT": "Strömbergsson",
+                            "RU": "STRÖMBERGSSON",
+                            "ZH": "STRÖMBERGSSON",
+                            "TR": "Strömbergsson",
+                            "HU": "Strömbergsson",
+                            "CS": "Strömbergsson",
+                            "NL": "Strömbergsson"
+                        },
+                        "name": {
+                            "EN": "Markus Strömbergsson",
+                            "FR": "Markus Strömbergsson",
+                            "DE": "Markus Strömbergsson",
+                            "ES": "Markus Strömbergsson",
+                            "PT": "Markus Strömbergsson",
+                            "IT": "Markus Strömbergsson",
+                            "RU": "Маркус Стрембергсон",
+                            "ZH": "马库斯·斯特罗姆伯格森",
+                            "TR": "Markus Strömbergsson",
+                            "HU": "Markus Strömbergsson",
+                            "CS": "Markus Strömbergsson",
+                            "NL": "Markus Strömbergsson"
+                        },
+                        "shortName": {
+                            "EN": "Strömbergsson",
+                            "FR": "Strömbergsson",
+                            "DE": "Strömbergsson",
+                            "ES": "Strömbergsson",
+                            "PT": "Strömbergsson",
+                            "IT": "Strömbergsson",
+                            "RU": "Стрембергсон",
+                            "ZH": "斯特罗姆伯格森",
+                            "TR": "Strömbergsson",
+                            "HU": "Strömbergsson",
+                            "CS": "Strömbergsson",
+                            "NL": "Strömbergsson"
+                        }
+                    }
+                },
+                "role": "FOURTH_OFFICIAL",
+                "translations": {
+                    "roleName": {
+                        "EN": "Fourth official",
+                        "FR": "Quatrième arbitre",
+                        "DE": "Vierter Offizieller",
+                        "ES": "Cuarto árbitro",
+                        "PT": "Quarto árbitro",
+                        "IT": "Quarto uomo",
+                        "RU": "Четвертый рефери",
+                        "ZH": "Quarto árbitro",
+                        "TR": "Fourth official",
+                        "HU": "Fourth official",
+                        "CS": "Fourth official",
+                        "NL": "Fourth official"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/263434.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "263434",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Martin",
+                            "FR": "Martin",
+                            "DE": "Martin",
+                            "ES": "Martin",
+                            "PT": "Martin",
+                            "IT": "Martin",
+                            "RU": "Martin",
+                            "ZH": "Martin",
+                            "TR": "Martin",
+                            "HU": "Martin",
+                            "CS": "Martin",
+                            "NL": "Martin"
+                        },
+                        "lastName": {
+                            "EN": "Strömbergsson",
+                            "FR": "Strömbergsson",
+                            "DE": "Strömbergsson",
+                            "ES": "Strömbergsson",
+                            "PT": "Strömbergsson",
+                            "IT": "Strömbergsson",
+                            "RU": "Strömbergsson",
+                            "ZH": "Strömbergsson",
+                            "TR": "Strömbergsson",
+                            "HU": "Strömbergsson",
+                            "CS": "Strömbergsson",
+                            "NL": "Strömbergsson"
+                        },
+                        "name": {
+                            "EN": "Martin Strömbergsson",
+                            "FR": "Martin Strömbergsson",
+                            "DE": "Martin Strömbergsson",
+                            "ES": "Martin Strömbergsson",
+                            "PT": "Martin Strömbergsson",
+                            "IT": "Martin Strömbergsson",
+                            "RU": "Мартин Стрембергссон",
+                            "ZH": "马丁·斯特罗姆博格",
+                            "TR": "Martin Strömbergsson",
+                            "HU": "Martin Strömbergsson",
+                            "CS": "Martin Strömbergsson",
+                            "NL": "Martin Strömbergsson"
+                        },
+                        "shortName": {
+                            "EN": "Strömbergsson",
+                            "FR": "Strömbergsson",
+                            "DE": "Strömbergsson",
+                            "ES": "Strömbergsson",
+                            "PT": "Strömbergsson",
+                            "IT": "Strömbergsson",
+                            "RU": "Стрембергссон",
+                            "ZH": "斯特罗姆博格",
+                            "TR": "Strömbergsson",
+                            "HU": "Strömbergsson",
+                            "CS": "Strömbergsson",
+                            "NL": "Strömbergsson"
+                        }
+                    }
+                },
+                "role": "ADDITIONAL_ASSISTANT_REFEREE_ONE",
+                "translations": {
+                    "roleName": {
+                        "EN": "Additional assistant referees",
+                        "FR": "Arbitres assistants supplémentaires",
+                        "DE": "Zusätzliche Schiedsrichterassistenten",
+                        "ES": "Árbitros asistentes adicionales",
+                        "PT": "Árbitros assistentes adicionais",
+                        "IT": "Assistenti addizionali",
+                        "RU": "Дополнительные ассистенты рефери",
+                        "ZH": "Árbitros assistentes adicionais",
+                        "TR": "Additional assistant referees",
+                        "HU": "Additional assistant referees",
+                        "CS": "Additional assistant referees",
+                        "NL": "Additional assistant referees"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/261320.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "261320",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Stefan",
+                            "FR": "Stefan",
+                            "DE": "Stefan",
+                            "ES": "Stefan",
+                            "PT": "Stefan",
+                            "IT": "Stefan",
+                            "RU": "Stefan",
+                            "ZH": "Stefan",
+                            "TR": "Stefan",
+                            "HU": "Stefan",
+                            "CS": "Stefan",
+                            "NL": "Stefan"
+                        },
+                        "lastName": {
+                            "EN": "Wittberg",
+                            "FR": "Wittberg",
+                            "DE": "Wittberg",
+                            "ES": "Wittberg",
+                            "PT": "Wittberg",
+                            "IT": "Wittberg",
+                            "RU": "Wittberg",
+                            "ZH": "WITTBERG",
+                            "TR": "Wittberg",
+                            "HU": "Wittberg",
+                            "CS": "Wittberg",
+                            "NL": "Wittberg"
+                        },
+                        "name": {
+                            "EN": "Stefan Wittberg",
+                            "FR": "Stefan Wittberg",
+                            "DE": "Stefan Wittberg",
+                            "ES": "Stefan Wittberg",
+                            "PT": "Stefan Wittberg",
+                            "IT": "Stefan Wittberg",
+                            "RU": "Стефан Виттберг",
+                            "ZH": "斯特凡·维特博格",
+                            "TR": "Stefan Wittberg",
+                            "HU": "Stefan Wittberg",
+                            "CS": "Stefan Wittberg",
+                            "NL": "Stefan Wittberg"
+                        },
+                        "shortName": {
+                            "EN": "Wittberg",
+                            "FR": "Wittberg",
+                            "DE": "Wittberg",
+                            "ES": "Wittberg",
+                            "PT": "Wittberg",
+                            "IT": "Wittberg",
+                            "RU": "Виттберг",
+                            "ZH": "维特博格",
+                            "TR": "Wittberg",
+                            "HU": "Wittberg",
+                            "CS": "Wittberg",
+                            "NL": "Wittberg"
+                        }
+                    }
+                },
+                "role": "ASSISTANT_REFEREE_ONE",
+                "translations": {
+                    "roleName": {
+                        "EN": "Assistant referees",
+                        "FR": "Arbitres assistants",
+                        "DE": "Schiedsrichterassistenten",
+                        "ES": "Árbitros asistentes",
+                        "PT": "Árbitros assistentes",
+                        "IT": "Assistenti arbitrali",
+                        "RU": "Ассистенты рефери",
+                        "ZH": "Árbitros assistentes",
+                        "TR": "Assistant referees",
+                        "HU": "Assistant referees",
+                        "CS": "Assistant referees",
+                        "NL": "Assistant referees"
+                    }
+                }
+            },
+            {
+                "images": {
+                    "SMALL_SQUARE": "https://img.uefa.com/imgml/referees/75x75/279007.jpg"
+                },
+                "person": {
+                    "countryCode": "SWE",
+                    "gender": "MALE",
+                    "id": "279007",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Sweden",
+                            "FR": "Suède",
+                            "DE": "Schweden",
+                            "ES": "Suecia",
+                            "PT": "Suécia",
+                            "IT": "Svezia",
+                            "RU": "Швеция",
+                            "ZH": "瑞典",
+                            "TR": "Sweden",
+                            "HU": "Sweden",
+                            "CS": "Sweden",
+                            "NL": "Sweden"
+                        },
+                        "firstName": {
+                            "EN": "Hans Jonas",
+                            "FR": "Hans Jonas",
+                            "DE": "Hans Jonas",
+                            "ES": "Hans Jonas",
+                            "PT": "Hans Jonas",
+                            "IT": "Hans Jonas",
+                            "RU": "Hans Jonas",
+                            "ZH": "Jonas",
+                            "TR": "Hans Jonas",
+                            "HU": "Hans Jonas",
+                            "CS": "Hans Jonas",
+                            "NL": "Hans Jonas"
+                        },
+                        "lastName": {
+                            "EN": "Eriksson",
+                            "FR": "Eriksson",
+                            "DE": "Eriksson",
+                            "ES": "Eriksson",
+                            "PT": "Eriksson",
+                            "IT": "Eriksson",
+                            "RU": "Eriksson",
+                            "ZH": "ERIKSSON",
+                            "TR": "Eriksson",
+                            "HU": "Eriksson",
+                            "CS": "Eriksson",
+                            "NL": "Eriksson"
+                        },
+                        "name": {
+                            "EN": "Jonas Eriksson",
+                            "FR": "Jonas Eriksson",
+                            "DE": "Jonas Eriksson",
+                            "ES": "Jonas Eriksson",
+                            "PT": "Jonas Eriksson",
+                            "IT": "Jonas Eriksson",
+                            "RU": "Юнас Эрикссон",
+                            "ZH": "乔纳斯·埃里克森",
+                            "TR": "Jonas Eriksson",
+                            "HU": "Jonas Eriksson",
+                            "CS": "Jonas Eriksson",
+                            "NL": "Jonas Eriksson"
+                        },
+                        "shortName": {
+                            "EN": "Eriksson",
+                            "FR": "Eriksson",
+                            "DE": "Eriksson",
+                            "ES": "Eriksson",
+                            "PT": "Eriksson",
+                            "IT": "Eriksson",
+                            "RU": "Эрикссон",
+                            "ZH": "埃里克森",
+                            "TR": "Eriksson",
+                            "HU": "Eriksson",
+                            "CS": "Eriksson",
+                            "NL": "Eriksson"
+                        }
+                    }
+                },
+                "role": "REFEREE",
+                "translations": {
+                    "roleName": {
+                        "EN": "Referee",
+                        "FR": "Arbitre",
+                        "DE": "Schiedsrichter",
+                        "ES": "Árbitro",
+                        "PT": "Árbitro",
+                        "IT": "Arbitro",
+                        "RU": "Рефери",
+                        "ZH": "Árbitro",
+                        "TR": "Referee",
+                        "HU": "Referee",
+                        "CS": "Referee",
+                        "NL": "Referee"
+                    }
+                }
+            }
+        ],
+        "relatedMatches": [
+            {
+                "awayTeam": {
+                    "associationId": "200047",
+                    "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/GER.svg",
+                    "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/57388.png",
+                    "confederationType": "UEFA",
+                    "countryCode": "GER",
+                    "id": "57388",
+                    "idProvider": "FAME",
+                    "internationalName": "Schalke",
+                    "isPlaceHolder": false,
+                    "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/57388.png",
+                    "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/57388.png",
+                    "organizationId": "257388",
+                    "teamCode": "SCH",
+                    "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Germany",
+                            "FR": "Allemagne",
+                            "DE": "Deutschland",
+                            "ES": "Alemania",
+                            "PT": "Alemanha",
+                            "IT": "Germania",
+                            "RU": "Германия",
+                            "ZH": "德国",
+                            "TR": "Germany",
+                            "HU": "Germany",
+                            "CS": "Germany",
+                            "NL": "Germany"
+                        },
+                        "displayName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "沙尔克04",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        },
+                        "displayOfficialName": {
+                            "EN": "FC Schalke 04",
+                            "FR": "FC Schalke 04",
+                            "DE": "FC Schalke 04",
+                            "ES": "FC Schalke 04",
+                            "PT": "FC Schalke 04",
+                            "IT": "FC Schalke 04",
+                            "RU": "Шальке-04",
+                            "ZH": "沙尔克04",
+                            "TR": "FC Schalke 04",
+                            "HU": "FC Schalke 04",
+                            "CS": "FC Schalke 04",
+                            "NL": "FC Schalke 04"
+                        },
+                        "displayTeamCode": {
+                            "EN": "SCH",
+                            "FR": "SCH",
+                            "DE": "SCH",
+                            "ES": "SCH",
+                            "PT": "SCH",
+                            "IT": "SCH",
+                            "RU": "SCH",
+                            "ZH": "SCH",
+                            "TR": "SCH",
+                            "HU": "SCH",
+                            "CS": "SCH",
+                            "NL": "SCH"
+                        },
+                        "shortName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "Schalke",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        }
+                    },
+                    "typeIsNational": false,
+                    "typeTeam": "DOMESTIC"
+                },
+                "homeTeam": {
+                    "associationId": "200122",
+                    "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/ESP.svg",
+                    "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/52268.png",
+                    "confederationType": "UEFA",
+                    "countryCode": "ESP",
+                    "id": "52268",
+                    "idProvider": "FAME",
+                    "internationalName": "Valencia",
+                    "isPlaceHolder": false,
+                    "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/52268.png",
+                    "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/52268.png",
+                    "organizationId": "252268",
+                    "teamCode": "VAL",
+                    "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Spain",
+                            "FR": "Espagne",
+                            "DE": "Spanien",
+                            "ES": "España",
+                            "PT": "Espanha",
+                            "IT": "Spagna",
+                            "RU": "Испания",
+                            "ZH": "西班牙",
+                            "TR": "Spain",
+                            "HU": "Spain",
+                            "CS": "Spain",
+                            "NL": "Spain"
+                        },
+                        "displayName": {
+                            "EN": "Valencia",
+                            "FR": "Valencia",
+                            "DE": "Valencia",
+                            "ES": "Valencia",
+                            "PT": "Valencia",
+                            "IT": "Valencia",
+                            "RU": "Валенсия",
+                            "ZH": "瓦伦西亚",
+                            "TR": "Valencia",
+                            "HU": "Valencia",
+                            "CS": "Valencia",
+                            "NL": "Valencia"
+                        },
+                        "displayOfficialName": {
+                            "EN": "Valencia CF",
+                            "FR": "Valencia CF",
+                            "DE": "Valencia CF",
+                            "ES": "Valencia CF",
+                            "PT": "Valencia CF",
+                            "IT": "Valencia CF",
+                            "RU": "Валенсия",
+                            "ZH": "巴伦西亚",
+                            "TR": "Valencia CF",
+                            "HU": "Valencia CF",
+                            "CS": "Valencia CF",
+                            "NL": "Valencia CF"
+                        },
+                        "displayTeamCode": {
+                            "EN": "VAL",
+                            "FR": "VAL",
+                            "DE": "VAL",
+                            "ES": "VAL",
+                            "PT": "VAL",
+                            "IT": "VAL",
+                            "RU": "VAL",
+                            "ZH": "VAL",
+                            "TR": "VAL",
+                            "HU": "VAL",
+                            "CS": "VAL",
+                            "NL": "VAL"
+                        },
+                        "shortName": {
+                            "EN": "Valencia",
+                            "FR": "Valencia",
+                            "DE": "Valencia",
+                            "ES": "Valencia",
+                            "PT": "Valencia",
+                            "IT": "Valencia",
+                            "RU": "Валенсия",
+                            "ZH": "Valencia",
+                            "TR": "Valencia",
+                            "HU": "Valencia",
+                            "CS": "Valencia",
+                            "NL": "Valencia"
+                        }
+                    },
+                    "typeIsNational": false,
+                    "typeTeam": "DOMESTIC"
+                },
+                "id": "2003755",
+                "kickOffTime": {
+                    "date": "2011-02-15",
+                    "dateTime": "2011-02-15T19:45:00Z",
+                    "utcOffsetInHours": 1
+                },
+                "score": {
+                    "aggregate": {
+                        "away": 4,
+                        "home": 2
+                    },
+                    "regular": {
+                        "away": 1,
+                        "home": 1
+                    },
+                    "total": {
+                        "away": 1,
+                        "home": 1
+                    }
+                },
+                "status": "FINISHED",
+                "type": "FIRST_LEG",
+                "winner": {
+                    "aggregate": {
+                        "reason": "WIN_ON_AGGREGATE",
+                        "team": {
+                            "associationId": "200047",
+                            "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/GER.svg",
+                            "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/57388.png",
+                            "confederationType": "UEFA",
+                            "countryCode": "GER",
+                            "id": "57388",
+                            "idProvider": "FAME",
+                            "internationalName": "Schalke",
+                            "isPlaceHolder": false,
+                            "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/57388.png",
+                            "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/57388.png",
+                            "organizationId": "257388",
+                            "teamCode": "SCH",
+                            "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+                            "translations": {
+                                "countryName": {
+                                    "EN": "Germany",
+                                    "FR": "Allemagne",
+                                    "DE": "Deutschland",
+                                    "ES": "Alemania",
+                                    "PT": "Alemanha",
+                                    "IT": "Germania",
+                                    "RU": "Германия",
+                                    "ZH": "德国",
+                                    "TR": "Germany",
+                                    "HU": "Germany",
+                                    "CS": "Germany",
+                                    "NL": "Germany"
+                                },
+                                "displayName": {
+                                    "EN": "Schalke",
+                                    "FR": "Schalke",
+                                    "DE": "Schalke",
+                                    "ES": "Schalke",
+                                    "PT": "Schalke",
+                                    "IT": "Schalke",
+                                    "RU": "Шальке",
+                                    "ZH": "沙尔克04",
+                                    "TR": "Schalke",
+                                    "HU": "Schalke",
+                                    "CS": "Schalke",
+                                    "NL": "Schalke"
+                                },
+                                "displayOfficialName": {
+                                    "EN": "FC Schalke 04",
+                                    "FR": "FC Schalke 04",
+                                    "DE": "FC Schalke 04",
+                                    "ES": "FC Schalke 04",
+                                    "PT": "FC Schalke 04",
+                                    "IT": "FC Schalke 04",
+                                    "RU": "Шальке-04",
+                                    "ZH": "沙尔克04",
+                                    "TR": "FC Schalke 04",
+                                    "HU": "FC Schalke 04",
+                                    "CS": "FC Schalke 04",
+                                    "NL": "FC Schalke 04"
+                                },
+                                "displayTeamCode": {
+                                    "EN": "SCH",
+                                    "FR": "SCH",
+                                    "DE": "SCH",
+                                    "ES": "SCH",
+                                    "PT": "SCH",
+                                    "IT": "SCH",
+                                    "RU": "SCH",
+                                    "ZH": "SCH",
+                                    "TR": "SCH",
+                                    "HU": "SCH",
+                                    "CS": "SCH",
+                                    "NL": "SCH"
+                                },
+                                "shortName": {
+                                    "EN": "Schalke",
+                                    "FR": "Schalke",
+                                    "DE": "Schalke",
+                                    "ES": "Schalke",
+                                    "PT": "Schalke",
+                                    "IT": "Schalke",
+                                    "RU": "Шальке",
+                                    "ZH": "Schalke",
+                                    "TR": "Schalke",
+                                    "HU": "Schalke",
+                                    "CS": "Schalke",
+                                    "NL": "Schalke"
+                                }
+                            },
+                            "typeIsNational": false,
+                            "typeTeam": "DOMESTIC"
+                        },
+                        "translations": {
+                            "reasonTextAbbr": {
+                                "ZH": "沙尔克04 总比分取胜",
+                                "EN": "Schalke win",
+                                "TR": "Schalke win",
+                                "IT": "Schalke vince",
+                                "DE": "Schalke gewinnt",
+                                "ES": "Gana Schalke",
+                                "RU": "Шальке побеждает",
+                                "NL": "Schalke agg. win",
+                                "CS": "Schalke win",
+                                "FR": "Schalke: vainqueur",
+                                "PT": "Schalke vence",
+                                "HU": "Schalke agg. win"
+                            }
+                        }
+                    },
+                    "match": {
+                        "reason": "DRAW",
+                        "translations": {
+                            "reasonText": {
+                                "ZH": "首回合比赛打平",
+                                "EN": "First leg ended in a draw",
+                                "TR": "First leg ended in a draw",
+                                "IT": "Andata finita in pareggio",
+                                "DE": "Das Hinspiel endete unentschieden",
+                                "ES": "El partido de ida finalizó en empate",
+                                "RU": "Первый матч закончился вничью",
+                                "NL": "First leg ended in a draw",
+                                "CS": "First leg ended in a draw",
+                                "FR": "L'aller s'est terminé sur un nul",
+                                "PT": "A primeira mão terminou com um empate",
+                                "HU": "First leg ended in a draw"
+                            },
+                            "reasonTextAbbr": {
+                                "ZH": "平局",
+                                "EN": "Draw",
+                                "TR": "Draw",
+                                "IT": "Pareggio",
+                                "DE": "Unentschieden",
+                                "ES": "Empate",
+                                "RU": "Ничья",
+                                "NL": "Draw",
+                                "CS": "Draw",
+                                "FR": "Nul",
+                                "PT": "Empate",
+                                "HU": "Draw"
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "round": {
+            "active": false,
+            "benchGKCount": 1,
+            "benchPlayersCount": 7,
+            "benchStaffCount": 6,
+            "coefficientWinnerBonus": 0.0,
+            "competitionId": "1",
+            "dateFrom": "2011-02-14T23:00:00+0000",
+            "dateTo": "2011-03-16T22:59:59+0000",
+            "fieldPlayersCount": 11,
+            "groupCount": 8,
+            "id": "2000119",
+            "metaData": {
+                "name": "Round of 16",
+                "type": "ROUND_OF_16"
+            },
+            "mode": "KNOCK_OUT",
+            "modeDetail": "KNOCK_OUT_TWO_LEGS",
+            "orderInCompetition": 6,
+            "phase": "TOURNAMENT",
+            "seasonYear": "2011",
+            "secondaryType": "KNOCKOUT_PHASE",
+            "stadiumNameType": "OFFICIAL_NAME",
+            "status": "FINISHED",
+            "substitutionCount": 3,
+            "teamCount": 16,
+            "teams": [
+                "52709",
+                "52707",
+                "5312",
+                "50080",
+                "52280",
+                "50051",
+                "52682",
+                "1652",
+                "52268",
+                "57388",
+                "50037",
+                "50058",
+                "50138",
+                "50137",
+                "52748",
+                "52914"
+            ],
+            "translations": {
+                "abbreviation": {
+                    "EN": "R16",
+                    "FR": "8es",
+                    "DE": "AF",
+                    "ES": "OF",
+                    "PT": "Oit.",
+                    "IT": "OF",
+                    "RU": "1/8",
+                    "ZH": "R16",
+                    "TR": "R16",
+                    "HU": "R16",
+                    "CS": "R16",
+                    "NL": "R16"
+                },
+                "name": {
+                    "EN": "Round of 16",
+                    "FR": "Huitièmes de finale",
+                    "DE": "Achtelfinale",
+                    "ES": "Octavos de final",
+                    "PT": "Oitavos-de-final",
+                    "IT": "Ottavi di finale",
+                    "RU": "1/8 финала",
+                    "ZH": "Round of 16",
+                    "TR": "Round of 16",
+                    "HU": "Nyolcaddöntő",
+                    "CS": "Round of 16",
+                    "NL": "Achtste finales"
+                },
+                "shortName": {
+                    "EN": "Round of 16",
+                    "FR": "8es de finale",
+                    "DE": "Achtelfinale",
+                    "ES": "Octavos de final",
+                    "PT": "Oitavos-de-final",
+                    "IT": "Ottavi di finale",
+                    "RU": "1/8 финала",
+                    "ZH": "16强赛",
+                    "TR": "Round of 16",
+                    "HU": "Nyolcaddöntő",
+                    "CS": "Round of 16",
+                    "NL": "Achtste finales"
+                }
+            }
+        },
+        "score": {
+            "aggregate": {
+                "away": 2,
+                "home": 4
+            },
+            "regular": {
+                "away": 1,
+                "home": 3
+            },
+            "total": {
+                "away": 1,
+                "home": 3
+            }
+        },
+        "seasonYear": "2011",
+        "sessionNumber": 2,
+        "stadium": {
+            "address": "Arenaring",
+            "capacity": 45965,
+            "city": {
+                "countryCode": "GER",
+                "id": "1682",
+                "translations": {
+                    "name": {
+                        "EN": "Gelsenkirchen",
+                        "FR": "Gelsenkirchen",
+                        "DE": "Gelsenkirchen",
+                        "ES": "Gelsenkirchen",
+                        "PT": "Gelsenkirchen",
+                        "IT": "Gelsenkirchen",
+                        "RU": "Гельзенкирхен",
+                        "ZH": "盖尔森基兴",
+                        "TR": "Gelsenkirchen",
+                        "HU": "Gelsenkirchen",
+                        "CS": "Gelsenkirchen",
+                        "NL": "Gelsenkirchen"
+                    }
+                }
+            },
+            "countryCode": "GER",
+            "geolocation": {
+                "latitude": 51.5545417,
+                "longitude": 7.0675694
+            },
+            "id": "79089",
+            "images": {
+                "MEDIUM_WIDE": "https://img.uefa.com/imgml/stadium/matchinfo/w1/79089.jpg",
+                "LARGE_ULTRA_WIDE": "https://img.uefa.com/imgml/stadium/matchinfo/uw/79089.jpg"
+            },
+            "openingDate": "2001-01-01",
+            "pitch": {
+                "length": 105,
+                "width": 68
+            },
+            "translations": {
+                "mediaName": {
+                    "EN": "Arena AufSchalke",
+                    "FR": "Arena AufSchalke",
+                    "DE": "Arena AufSchalke",
+                    "ES": "Arena AufSchalke",
+                    "PT": "Arena AufSchalke",
+                    "IT": "Arena AufSchalke",
+                    "RU": "Арена АуфШальке",
+                    "ZH": "Arena AufSchalke",
+                    "TR": "Arena AufSchalke",
+                    "HU": "Arena AufSchalke",
+                    "CS": "Arena AufSchalke",
+                    "NL": "Arena AufSchalke"
+                },
+                "name": {
+                    "EN": "Arena AufSchalke",
+                    "FR": "Arena AufSchalke",
+                    "DE": "Arena AufSchalke",
+                    "ES": "Arena AufSchalke",
+                    "PT": "Arena AufSchalke",
+                    "IT": "Arena AufSchalke",
+                    "RU": "Арена АуфШальке",
+                    "ZH": "Arena AufSchalke",
+                    "TR": "Arena AufSchalke",
+                    "HU": "Arena AufSchalke",
+                    "CS": "Arena AufSchalke",
+                    "NL": "Arena AufSchalke"
+                },
+                "officialName": {
+                    "EN": "Arena AufSchalke",
+                    "FR": "Arena AufSchalke",
+                    "DE": "Arena AufSchalke",
+                    "ES": "Arena AufSchalke",
+                    "PT": "Arena AufSchalke",
+                    "IT": "Arena AufSchalke",
+                    "RU": "Арена АуфШальке",
+                    "ZH": "Arena AufSchalke",
+                    "TR": "Arena AufSchalke",
+                    "HU": "Arena AufSchalke",
+                    "CS": "Arena AufSchalke",
+                    "NL": "Arena AufSchalke"
+                },
+                "specialEventsName": {
+                    "EN": "Arena AufSchalke",
+                    "FR": "Arena AufSchalke",
+                    "DE": "Arena AufSchalke",
+                    "ES": "Arena AufSchalke",
+                    "PT": "Arena AufSchalke",
+                    "IT": "Arena AufSchalke",
+                    "RU": "Арена АуфШальке",
+                    "ZH": "Arena AufSchalke",
+                    "TR": "Arena AufSchalke",
+                    "HU": "Arena AufSchalke",
+                    "CS": "Arena AufSchalke",
+                    "NL": "Arena AufSchalke"
+                },
+                "sponsorName": {
+                    "EN": "Veltins Arena",
+                    "FR": "Veltins Arena",
+                    "DE": "Veltins Arena",
+                    "ES": "Veltins Arena",
+                    "PT": "Veltins Arena",
+                    "IT": "Veltins Arena",
+                    "RU": "Veltins Арена",
+                    "ZH": "Veltins Arena",
+                    "TR": "Veltins Arena",
+                    "HU": "Veltins Arena",
+                    "CS": "Veltins Arena",
+                    "NL": "Veltins Arena"
+                }
+            }
+        },
+        "status": "FINISHED",
+        "type": "SECOND_LEG",
+        "winner": {
+            "aggregate": {
+                "reason": "WIN_ON_AGGREGATE",
+                "team": {
+                    "associationId": "200047",
+                    "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/GER.svg",
+                    "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/57388.png",
+                    "confederationType": "UEFA",
+                    "countryCode": "GER",
+                    "id": "57388",
+                    "idProvider": "FAME",
+                    "internationalName": "Schalke",
+                    "isPlaceHolder": false,
+                    "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/57388.png",
+                    "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/57388.png",
+                    "organizationId": "257388",
+                    "teamCode": "SCH",
+                    "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Germany",
+                            "FR": "Allemagne",
+                            "DE": "Deutschland",
+                            "ES": "Alemania",
+                            "PT": "Alemanha",
+                            "IT": "Germania",
+                            "RU": "Германия",
+                            "ZH": "德国",
+                            "TR": "Germany",
+                            "HU": "Germany",
+                            "CS": "Germany",
+                            "NL": "Germany"
+                        },
+                        "displayName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "沙尔克04",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        },
+                        "displayOfficialName": {
+                            "EN": "FC Schalke 04",
+                            "FR": "FC Schalke 04",
+                            "DE": "FC Schalke 04",
+                            "ES": "FC Schalke 04",
+                            "PT": "FC Schalke 04",
+                            "IT": "FC Schalke 04",
+                            "RU": "Шальке-04",
+                            "ZH": "沙尔克04",
+                            "TR": "FC Schalke 04",
+                            "HU": "FC Schalke 04",
+                            "CS": "FC Schalke 04",
+                            "NL": "FC Schalke 04"
+                        },
+                        "displayTeamCode": {
+                            "EN": "SCH",
+                            "FR": "SCH",
+                            "DE": "SCH",
+                            "ES": "SCH",
+                            "PT": "SCH",
+                            "IT": "SCH",
+                            "RU": "SCH",
+                            "ZH": "SCH",
+                            "TR": "SCH",
+                            "HU": "SCH",
+                            "CS": "SCH",
+                            "NL": "SCH"
+                        },
+                        "shortName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "Schalke",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        }
+                    },
+                    "typeIsNational": false,
+                    "typeTeam": "DOMESTIC"
+                },
+                "translations": {
+                    "reasonTextAbbr": {
+                        "ZH": "沙尔克04 总比分取胜",
+                        "EN": "Schalke win",
+                        "TR": "Schalke win",
+                        "IT": "Schalke vince",
+                        "DE": "Schalke gewinnt",
+                        "ES": "Gana Schalke",
+                        "RU": "Шальке побеждает",
+                        "NL": "Schalke agg. win",
+                        "CS": "Schalke win",
+                        "FR": "Schalke: vainqueur",
+                        "PT": "Schalke vence",
+                        "HU": "Schalke agg. win"
+                    }
+                }
+            },
+            "match": {
+                "reason": "WIN_REGULAR",
+                "team": {
+                    "associationId": "200047",
+                    "associationLogoUrl": "https://img.uefa.com/imgml/uefacom/elements/logos/ma/GER.svg",
+                    "bigLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/700x700/57388.png",
+                    "confederationType": "UEFA",
+                    "countryCode": "GER",
+                    "id": "57388",
+                    "idProvider": "FAME",
+                    "internationalName": "Schalke",
+                    "isPlaceHolder": false,
+                    "logoUrl": "https://img.uefa.com/imgml/TP/teams/logos/70x70/57388.png",
+                    "mediumLogoUrl": "https://img.uefa.com/imgml/TP/teams/logos/240x240/57388.png",
+                    "organizationId": "257388",
+                    "teamCode": "SCH",
+                    "teamTypeDetail": "DOMESTIC_MEN_TEAM_A",
+                    "translations": {
+                        "countryName": {
+                            "EN": "Germany",
+                            "FR": "Allemagne",
+                            "DE": "Deutschland",
+                            "ES": "Alemania",
+                            "PT": "Alemanha",
+                            "IT": "Germania",
+                            "RU": "Германия",
+                            "ZH": "德国",
+                            "TR": "Germany",
+                            "HU": "Germany",
+                            "CS": "Germany",
+                            "NL": "Germany"
+                        },
+                        "displayName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "沙尔克04",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        },
+                        "displayOfficialName": {
+                            "EN": "FC Schalke 04",
+                            "FR": "FC Schalke 04",
+                            "DE": "FC Schalke 04",
+                            "ES": "FC Schalke 04",
+                            "PT": "FC Schalke 04",
+                            "IT": "FC Schalke 04",
+                            "RU": "Шальке-04",
+                            "ZH": "沙尔克04",
+                            "TR": "FC Schalke 04",
+                            "HU": "FC Schalke 04",
+                            "CS": "FC Schalke 04",
+                            "NL": "FC Schalke 04"
+                        },
+                        "displayTeamCode": {
+                            "EN": "SCH",
+                            "FR": "SCH",
+                            "DE": "SCH",
+                            "ES": "SCH",
+                            "PT": "SCH",
+                            "IT": "SCH",
+                            "RU": "SCH",
+                            "ZH": "SCH",
+                            "TR": "SCH",
+                            "HU": "SCH",
+                            "CS": "SCH",
+                            "NL": "SCH"
+                        },
+                        "shortName": {
+                            "EN": "Schalke",
+                            "FR": "Schalke",
+                            "DE": "Schalke",
+                            "ES": "Schalke",
+                            "PT": "Schalke",
+                            "IT": "Schalke",
+                            "RU": "Шальке",
+                            "ZH": "Schalke",
+                            "TR": "Schalke",
+                            "HU": "Schalke",
+                            "CS": "Schalke",
+                            "NL": "Schalke"
+                        }
+                    },
+                    "typeIsNational": false,
+                    "typeTeam": "DOMESTIC"
+                }
+            }
+        }
+    }
+]

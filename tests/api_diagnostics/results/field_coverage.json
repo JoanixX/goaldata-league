@@ -1,0 +1,115 @@
+{
+  "total_rows": 445,
+  "coverage": {
+    "arbitro_principal": {
+      "filled": 410,
+      "missing": 35,
+      "pct": 92.1
+    },
+    "arbitros_linea": {
+      "filled": 393,
+      "missing": 52,
+      "pct": 88.3
+    },
+    "entrenador_local": {
+      "filled": 416,
+      "missing": 29,
+      "pct": 93.5
+    },
+    "entrenador_visitante": {
+      "filled": 416,
+      "missing": 29,
+      "pct": 93.5
+    },
+    "planteles": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_totales": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_totales_local": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_totales_visitante": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_puerta": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_puerta_local": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "tiros_puerta_visitante": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "goles": {
+      "filled": 420,
+      "missing": 25,
+      "pct": 94.4
+    },
+    "asistencias": {
+      "filled": 1,
+      "missing": 444,
+      "pct": 0.2
+    },
+    "amarillas": {
+      "filled": 321,
+      "missing": 124,
+      "pct": 72.1
+    },
+    "posesion_local": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "posesion_visitante": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "faltas_total": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "faltas_local": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "faltas_visitante": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "corners_total": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "corners_local": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "corners_visitante": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    }
+  }
+}

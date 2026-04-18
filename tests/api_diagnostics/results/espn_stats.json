@@ -1,0 +1,54 @@
+{
+  "Valencia vs Schalke 04 (15-02-2011)": {
+    "status": "✓",
+    "event_id": "310989",
+    "posesion_local": "65%",
+    "posesion_visitante": "35%",
+    "tiros_totales_local": "15",
+    "tiros_totales_visitante": "9",
+    "tiros_puerta_local": "6",
+    "tiros_puerta_visitante": "5",
+    "faltas_local": "9",
+    "faltas_visitante": "21",
+    "corners_local": "5",
+    "corners_visitante": "7",
+    "missing_home": [],
+    "missing_away": []
+  },
+  "Bayern vs Dortmund Final 2013": {
+    "status": "✓",
+    "event_id": "365094",
+    "posesion_local": "39%",
+    "posesion_visitante": "61%",
+    "tiros_totales_local": "12",
+    "tiros_totales_visitante": "17",
+    "tiros_puerta_local": "7",
+    "tiros_puerta_visitante": "10",
+    "faltas_local": "11",
+    "faltas_visitante": "8",
+    "corners_local": "6",
+    "corners_visitante": "8",
+    "missing_home": [],
+    "missing_away": []
+  },
+  "Real Madrid vs Dortmund Final 2024": {
+    "status": "✓",
+    "event_id": "702410",
+    "posesion_local": "43%",
+    "posesion_visitante": "57%",
+    "tiros_totales_local": "13",
+    "tiros_totales_visitante": "13",
+    "tiros_puerta_local": "4",
+    "tiros_puerta_visitante": "6",
+    "faltas_local": "12",
+    "faltas_visitante": "8",
+    "corners_local": "9",
+    "corners_visitante": "8",
+    "missing_home": [],
+    "missing_away": []
+  },
+  "Man City vs Inter Final 2023": {
+    "status": "✗",
+    "http": 404
+  }
+}
