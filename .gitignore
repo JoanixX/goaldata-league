@@ -1,8 +1,10 @@
 # Archivos extra
 bigData_pc1_uxxxxxxxxx.tex
 inspect_json.py
-responses.json
 .pytest_cache
+scratch
+scratch/*
+uefa_match_events.csv
 
 # Entornos
 .venv
@@ -10,3 +12,6 @@ responses.json
 
 # cache
 __pycache__
+
+# copias de seguridad
+copia_buena.csv
