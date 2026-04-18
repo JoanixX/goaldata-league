@@ -1,17 +1,17 @@
 column,dtype,missing,missing_%,description,example
 season,object,0,0.0,Season of the competition,2010-2011
-fase,object,0,0.0,"Competition phase (group stage, knockout)",Octavos
-instancia,object,0,0.0,"Specific round (e.g., quarter-final)",Ida
+fase,object,0,0.0,Competition phase,Octavos
+instancia,object,0,0.0,Match round,Ida
 fecha,datetime64[ns],0,0.0,Match date,2011-02-15 00:00:00
 local,object,0,0.0,Home team,Valencia
 visitante,object,0,0.0,Away team,Schalke 04
-marcador,object,0,0.0,Match score (home-away),1-1
-global,object,0,0.0,Aggregate score in knockout rounds,2-4
+marcador,object,0,0.0,Match score,1-1
+global,object,36,8.09,Aggregate score in knockout rounds,2-4
 estadio,object,0,0.0,Stadium name,Mestalla
-ciudad,object,0,0.0,City of the stadium,Valencia
-pais,object,0,0.0,Country where match was played,España
-entrenador_local,object,0,0.0,Home team coach,Unai Emery
-entrenador_visitante,object,0,0.0,Away team coach,Felix Magath
-goles,object,0,0.0,Goal details or scorers,Soldado 17'; Raul 64'
+ciudad,object,0,0.0,City,Valencia
+pais,object,0,0.0,Country,España
+entrenador_local,object,29,6.52,Home coach,Unai Emery
+entrenador_visitante,object,29,6.52,Away coach,Felix Magath
+goles,object,26,5.84,Goal details,Soldado 17'; Raul 64'
 home_goals,int64,0,0.0,Goals scored by home team,1
 away_goals,int64,0,0.0,Goals scored by away team,1
