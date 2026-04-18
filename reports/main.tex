@@ -201,6 +201,46 @@ pip install -r requirements.txt
 python src/main.py
 \end{lstlisting}
 
+\section{Source Code Details (src)}
+The \texttt{src} directory is the engine of the project, containing all necessary scripts for data extraction and transformation.
+
+\subsection{File Descriptions}
+\begin{itemize}
+    \item \textbf{main.py}: Coordinates the ingestion from UEFA and ESPN APIs. It handles the logic for skipping matches already processed, ensuring efficiency.
+    \item \textbf{api\_clients.py}: Encapsulates the connection logic for external APIs, including timeout handling and JSON parsing.
+    \item \textbf{formatter.py}: Standardizes raw data strings into structured formats (dates, percentages, and team names).
+    \item \textbf{build\_dataset.py}: Responsible for the final merge of structural, tactical, and statistical data into a single CSV file.
+\end{itemize}
+
+\subsection{Enrichment Logic}
+The enrichment process uses a fuzzy-matching algorithm to link teams from different sources despite variations in naming (e.g., "Paris Saint-Germain" vs. "PSG").
+
+\section{Testing and Diagnostics (tests)}
+The robustness of the dataset is maintained through a comprehensive testing suite that validates both individual components and the final data output.
+
+\subsection{API Diagnostics}
+The \texttt{tests/api\_diagnostics/} folder contains scripts that specifically measure the health of the data pipeline:
+\begin{itemize}
+    \item \textbf{Field Coverage}: Automated scanning of the final CSV to report completion percentages for every column.
+    \item \textbf{API Health}: Tests to ensure the UEFA and ESPN endpoints are returning the expected data structures.
+\end{itemize}
+
+\subsection{Integration Tests}
+Integration tests ensure that changes to one module (e.g., the formatter) do not break the overall pipeline. These tests simulate a full match enrichment cycle using mock or cached API responses.
+
+\section{Analysis and Prototyping (notebooks)}
+The \texttt{notebooks} directory contains the initial research phase of the project, focusing on Exploratory Data Analysis (EDA).
+
+\subsection{EDA Explorer Insights}
+The primary notebook, \texttt{eda\_explorer.ipynb}, served as the diagnostic foundation for the project. Key findings include:
+\begin{itemize}
+    \item \textbf{Initial Sparsity Analysis}: The raw dataset was found to have a sparsity of approximately \textbf{62.64\%}, with critical columns like \textit{arbitro\_principal} and \textit{tiros\_totales} showing near-total nullity.
+    \item \textbf{Data Integrity}: Verified that the dataset contains 445 unique rows with \textbf{no duplicated entries}, ensuring a solid baseline for enrichment.
+    \item \textbf{Normalization Strategy}: Identified the need to convert \texttt{fecha} from string to \texttt{datetime} objects and to split the \texttt{marcador} into numerical \textit{home\_goals} and \textit{away\_goals}.
+    \item \textbf{Feature Selection}: Decisions were made to drop dispensable columns such as \textit{hora\_inicio} and \textit{hora\_fin} to reduce noise while maintaining 100\% of the match records.
+\end{itemize}
+These insights were instrumental in defining the automated ingestion rules now implemented in the core \texttt{src} pipeline.
+
 \appendix
 \section{Data Dictionary (Draft)}
 \begin{itemize}
