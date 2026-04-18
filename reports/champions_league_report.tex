@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Colores para código
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    numbers=left,
+}
+
+\title{
+    \vspace{-2cm}
+    \includegraphics[width=0.16\textwidth]{logo_universidad.png} \\ % Reemplaza con tu logo si tienes
+    \vspace{1cm}
+    \textbf{UEFA Champions League: Tactical Evolution \& Performance Analytics (2011-2025)} \\
+    \large Milestone 1: Dataset Charter and Data Engineering Pipeline
+}
+\author{JoanixX / goaldata-league}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This project aims to build a comprehensive dataset of UEFA Champions League matches from 2011 to 2025. The dataset includes technical statistics, tactical lineups, and official match details to enable advanced sports performance analytics.
+
+\section{Data Engineering Pipeline}
+The pipeline is designed to be incremental and robust, merging data from multiple official and semi-official sources.
+
+\subsection{Sources}
+\begin{itemize}
+    \item \textbf{UEFA Official API:} Used for match officials, kickoff times, and official lineups.
+    \item \textbf{ESPN Summary API:} Used for granular match statistics (possession, shots, fouls) and event timelines.
+    \item \textbf{Manual Overrides:} A JSON-based cache handles edge cases where automated discovery fails due to team name variations or historical discrepancies.
+\end{itemize}
+
+\subsection{Data Fields}
+The following fields are extracted and validated:
+\begin{itemize}
+    \item \textbf{Structural:} Season, fase, jornada, fecha, local, visitante, resultado, etc.
+    \item \textbf{Officials:} Principal referee and linesmen.
+    \item \textbf{Tactical:} Starting lineups (planteles) and coaches.
+    \item \textbf{Statistical:} Total shots, shots on target, possession \%, fouls, and corners.
+\end{itemize}
+
+\section{Data Quality and Validation}
+A diagnostic suite has been implemented to ensure data integrity and track coverage.
+
+\subsection{Coverage Report}
+Current coverage metrics for the 445-match dataset:
+\begin{table}[h]
+\centering
+\begin{tabular}{lr}
+\toprule
+Field Category & Completion \% \\
+\midrule
+Structural / Statistical & 100.0\% \\
+Tactical (Lineups) & 100.0\% \\
+Officials / Coaches & ~93.0\% \\
+Assists & 0.2\% (Limitation) \\
+\bottomrule
+\end{tabular}
+\caption{Dataset Completion Metrics}
+\end{table}
+
+\section{Conclusion}
+The ingestion pipeline is fully operational and has successfully processed over 400 historical matches. While most statistical fields are complete, assist data remains a challenge due to API limitations and will be addressed in future milestones using alternative scraping techniques.
+
+\end{document}

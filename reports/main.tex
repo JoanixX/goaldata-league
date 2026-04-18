@@ -1,0 +1,228 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Colores para código
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    numbers=left,
+}
+
+\title{
+    \vspace{-2cm}
+    \includegraphics[width=0.16\textwidth]{logo_universidad.png} \\ % Reemplaza con tu logo si tienes
+    \vspace{1cm}
+    \textbf{UEFA Champions League: Tactical Evolution \& Performance Analytics (2011-2025)} \\
+    \large Milestone 1: Dataset Charter and Processed Dataset V1
+}
+\author{
+    \textbf{Team: DataChampions} \\
+    Integrante 1 (Lead Data Eng): Mauricio Andrés Canchis Fernández \\
+    Integrante 2 (Lead Modeling): Cesar Joaquin Alvarado Osorio \\
+    Integrante 3 (Lead Reporting): Fabian Marcelo Rojas Cuadros
+}
+\date{Semana 3 - Ciclo 2026-I}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document presents the dataset charter and the first processed version for the sports performance analysis project. The objective is to map the tactical evolution and results of the UEFA Champions League between 2011 and 2025 by integrating data from Open Football with advanced statistics from the ESPN API through data engineering and normalization techniques.
+\end{abstract}
+
+\section{Project Proposal}
+\subsection{Domain \& Problem Statement}
+The domain is elite European professional football. The central problem is the fragmentation of historical data; although basic results exist, it is difficult to find a consolidated dataset that includes possession metrics and events (goals/cards) in a standardized manner for 14 consecutive seasons. 
+
+\subsection{Expected Product Question}
+"How have possession patterns and shooting effectiveness evolved in the Champions League across decades, and which teams show a dominant centrality in the historical match network?"
+
+\subsection{Course Suitability}
+The project is ideal for the course because:
+\begin{itemize}
+    \item \textbf{Dim. Reduction:} To analyze team performance embeddings.
+    \item \textbf{Clustering:}To identify "playing styles" (e.g., high-possession vs. counter-attacking teams).
+    \item \textbf{Grafos:} To construct the match network where nodes are teams and edges represent direct encounters.
+\end{itemize}
+
+\section{Source Inventory}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Atributo} & \textbf{Detalle} \\
+        \midrule
+        Primary Source& Open Football Data (GitHub) / ESPN API\\
+        Source URL& \url{https://github.com/openfootball/champions-league}\\
+        License& Public Domain / Academic Use\\
+        Original Format& JSON / API Response\\
+        Estimated Size& ~5 MB (Processed V1)\\
+        \bottomrule
+    \end{tabular}
+    \caption{Data Source Inventory .}
+\end{table}
+
+\section{Schema Design \& Architecture}
+The data architecture is centered around the \textbf{matches} table, as football fixtures represent the core pillar of this project. Every match is contested by two distinct entities: the \textit{home\_team} and the \textit{away\_team}, both acting as foreign keys referencing a master \textbf{teams} table. Furthermore, each encounter takes place within a specific sports venue; thus, the \textit{stadium} attribute serves as a foreign key linking to the \textbf{stadiums} table, which centralizes geographic and facility metadata.
+
+\subsection{Relational Entities}
+The following tables define the structural backbone of the dataset:
+\begin{itemize}
+    \item \textbf{Table: matches}
+    \begin{itemize}
+        \item \texttt{match\_id (PK)}, \texttt{season}, \texttt{phase}, \texttt{instance}, \texttt{date}.
+        \item \texttt{home\_team (FK)}, \texttt{away\_team (FK)}, \texttt{stadium\_id (FK)}.
+        \item \texttt{home\_goals}, \texttt{away\_goals}.
+    \end{itemize}
+    
+    \item \textbf{Table: teams}
+    \begin{itemize}
+        \item \texttt{team\_name (PK)}.
+    \end{itemize}
+
+    \item \textbf{Table: stadiums}
+    \begin{itemize}
+        \item \texttt{stadium\_id (PK)}, \texttt{stadium\_name}, \texttt{city}, \texttt{country}.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Logical Joins}
+To consolidate the master dataset for analysis, the following joins are implemented:
+\begin{itemize}
+    \item \texttt{matches.home\_team} $\rightarrow$ \texttt{teams.team\_name}
+    \item \texttt{matches.away\_team} $\rightarrow$ \texttt{teams.team\_name}
+    \item \texttt{matches.stadium\_id} $\rightarrow$ \texttt{stadiums.stadium\_id}
+\end{itemize}
+
+\section{Scale Analysis \& Data Exploration}
+The initial exploration was conducted using the \texttt{notebooks/eda\_explorar.ipynb} file. The raw dataset \texttt{champions\_league\_2011\_2025.csv} contains 445 rows and 38 columns.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{head.png}
+    \caption{DataFrame Head showing the Spanish-named columns.}
+    \label{fig:head}
+\end{figure}
+
+\subsection{Data Exploration \& Findings}
+Using the Pandas library, we examined the dataset's structure. The columns reveal the competition's nature: \textit{"fase"} represents the stage, while \textit{"local"} and \textit{"visitante"} identify the competing teams. However, the results of the \texttt{isnull().sum()} analysis (Fig. \ref{fig:null_counts}) are striking.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{captura1.png}
+    \caption{Detailed count of missing values per column.}
+    \label{fig:null_counts}
+\end{figure}
+
+Specifically, while some columns like \textit{puntuaciones\_jugadores} remain at 100\% nullity due to API limitations, we successfully reduced missingness in critical columns. For instance, \textit{tiros\_totales} and \textit{posesion\_local} reached \textbf{100\% completion} after the enrichment phase.
+
+\subsection{Enrichment Success}
+A deep check for coverage after our automated pipeline reveals that the critical statistical core (shots, possession, fouls, corners) has achieved \textbf{100\% density}. Tactical data (lineups and rosters) also reached \textbf{100\%}, while administrative metadata (referees and coaches) oscillates between \textbf{92\% and 94\%} completion.
+
+\section{Processed Data V1}
+To address these issues, we implemented a processing strategy. All changes were performed on a backup copy of the original document.
+
+\subsection{Missingness Analysis \& Thresholding}
+We calculated the missingness ratio (Fig. \ref{fig:missingness}) to identify columns exceeding our 90\% tolerance limit.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{captura2.png}
+    \caption{Missingness ratio calculation per column.}
+    \label{fig:missingness}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Feature Engineering:} We integrated the \textbf{UEFA Official API} for match officials and \textbf{ESPN Summary API} for statistical events.
+    \item \textbf{Data Normalization:} \texttt{fecha} was converted to standardized \textit{DD-MM-YYYY} and teams were normalized using a fuzzy-alias mapping system.
+    \item \textbf{Imputation:} Statistical fields were fully backfilled using API discovery; only structural impossibilities (like assist data for older seasons) remain as \textit{NULL}.
+\end{itemize}
+
+\subsection{Imputation and Normalization}
+As seen in Fig. \ref{fig:fillna}, we implemented a \texttt{fillna} strategy for coaching information and goal details, substituting them with the string \textit{"unknown"}. This ensures our algorithms can distinguish between categorical data and missing observations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{copy.png}
+    \caption{Implementation of fillna method.}
+    \label{fig:fillna}
+\end{figure}
+
+\subsection{Outputs and Data Dictionary}
+The final stage of the V1 pipeline focuses on documentation and storage. We developed a function to automatically generate a data dictionary (Fig. \ref{fig:dict_code}), mapping each feature to its description and data type. This ensures reproducibility and clarity for the modeling phase.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{CreateData.png}
+    \caption{Function for automated Data Dictionary generation.}
+    \label{fig:dict_code}
+\end{figure}
+
+As a result of this execution, the processed files were organized within the project's data architecture (Fig. \ref{fig:file_structure}). The resulting \texttt{cleaned\_data.csv} and \texttt{data\_dictionary\_v1.csv} are now ready for tactical analysis and the construction of the match network.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Creado.png}
+    \caption{Project structure showing final processed files.}
+    \label{fig:file_structure}
+\end{figure}
+
+\section{Ethics and Access Note}
+\textbf{Consent:} The data originates from public domain sources intended for historical sports records. \\
+\textbf{Privacy:} The dataset does not contain PII (Personally Identifiable Information) of fans. Player names are public figures and are processed solely for on-field performance statistics. No additional anonymization is required.
+
+\section{Technical Execution (Reproducibility)}
+The repository features an automated pipeline. To build the V1 dataset:
+\begin{lstlisting}[language=bash]
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Execute automated ingestion and enrichment pipeline
+python src/main.py
+\end{lstlisting}
+
+\appendix
+\section{Data Dictionary (Draft)}
+\begin{itemize}
+    \item \texttt{match\_id}: Unique hash generated for each encounter to ensure data integrity.
+    \item \texttt{possession\_local}: Numerical value (0--100) representing ball control.
+    \item \texttt{fuzzy\_score}: Confidence ratio (0--1) for team name matching between sources.
+    \item \texttt{season}: Competition year (e.g., 2024-2025).
+    \item \texttt{fase}: Tournament stage (Group, Knockout).
+    \item \texttt{fecha}: Match date (DD-MM-YYYY).
+    \item \texttt{local / visitante}: Competing team names.
+    \item \texttt{marcador}: Final score (e.g., 2-1).
+    \item \texttt{planteles}: Full starting lineups for both teams (100\% coverage).
+    \item \texttt{tiros\_totales}: Sum of shots from both teams (100\% coverage).
+    \item \texttt{posesion\_local / visitante}: Ball possession percentage (100\% coverage).
+    \item \texttt{faltas\_total}: Total fouls committed in the match (100\% coverage).
+    \item \texttt{arbitro\_principal}: Lead match official (92.1\% coverage).
+    \item \texttt{goles}: Event-level goal data (scorers and minute).
+\end{itemize}
+
+\appendix
+\section{EDA Analysis}
+
+The initial analysis reveals that ball possession in the Champions League follows a normal distribution centered around 50.1\%, with extreme cases reaching up to 82\% for dominant teams. Furthermore, there is a clear correlation between "tiros a puerta" (shots on target) and match outcome, which will be the basis for our future predictive modeling on team effectiveness. The construction of the match network currently shows a high degree of centrality for teams like Real Madrid, Bayern Munich, and Manchester City, reflecting their consistent presence in the knockout stages across the last decade.
+
+\end{document}
