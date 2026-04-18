@@ -1,0 +1,12 @@
+\section{Testing and Diagnostics (tests)}
+The robustness of the dataset is maintained through a comprehensive testing suite that validates both individual components and the final data output.
+
+\subsection{API Diagnostics}
+The \texttt{tests/api\_diagnostics/} folder contains scripts that specifically measure the health of the data pipeline:
+\begin{itemize}
+    \item \textbf{Field Coverage}: Automated scanning of the final CSV to report completion percentages for every column.
+    \item \textbf{API Health}: Tests to ensure the UEFA and ESPN endpoints are returning the expected data structures.
+\end{itemize}
+
+\subsection{Integration Tests}
+Integration tests ensure that changes to one module (e.g., the formatter) do not break the overall pipeline. These tests simulate a full match enrichment cycle using mock or cached API responses.
