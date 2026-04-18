@@ -1,446 +1,446 @@
-season,fase,instancia,fecha,local,visitante,marcador,global,estadio,ciudad,pais,entrenador_local,entrenador_visitante,goles,home_goals,away_goals
-2010-2011,Octavos,Ida,2011-02-15,Valencia,Schalke 04,1-1,2-4,Mestalla,Valencia,España,Unai Emery,Felix Magath,Soldado 17'; Raul 64',1,1
-2010-2011,Octavos,Vuelta,2011-03-09,Schalke 04,Valencia,3-1,4-2,Veltins-Arena,Gelsenkirchen,Alemania,Felix Magath,Unai Emery,Farfan 40'; Gavranovic 52'; Kuranyi 90'; Soldado 17',3,1
-2010-2011,Octavos,Ida,2011-02-16,AC Milan,Tottenham,0-1,0-1,San Siro,Milan,Italia,Massimiliano Allegri,Harry Redknapp,Crouch 80',0,1
-2010-2011,Octavos,Vuelta,2011-03-09,Tottenham,AC Milan,0-0,1-0,White Hart Lane,Londres,Inglaterra,Harry Redknapp,Massimiliano Allegri,,0,0
-2010-2011,Octavos,Ida,2011-02-15,Arsenal,Barcelona,2-1,3-4,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Pep Guardiola,Van Persie 78'; Arshavin 83'; Villa 26',2,1
-2010-2011,Octavos,Vuelta,2011-03-08,Barcelona,Arsenal,3-1,4-3,Camp Nou,Barcelona,España,Pep Guardiola,Arsene Wenger,Messi 45'; Xavi 69'; Messi 71'; Busquets OG 53',3,1
-2010-2011,Octavos,Ida,2011-02-16,Roma,Shakhtar,2-3,2-6,Olimpico,Roma,Italia,Claudio Ranieri,Mircea Lucescu,Perrotta 28'; Menez 61'; Jadson 29'; Douglas Costa 36'; Luiz Adriano 41',2,3
-2010-2011,Octavos,Vuelta,2011-03-08,Shakhtar,Roma,3-0,6-2,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Claudio Ranieri,Hubschman 18'; Willian 58'; Eduardo 87',3,0
-2010-2011,Octavos,Ida,2011-02-22,Inter,Bayern Munich,0-1,3-3,San Siro,Milan,Italia,Leonardo,Louis van Gaal,Gomez 90',0,1
-2010-2011,Octavos,Vuelta,2011-03-15,Bayern Munich,Inter,2-3,3-3,Allianz Arena,Munich,Alemania,Louis van Gaal,Leonardo,Gomez 21'; Muller 31'; Eto'o 4'; Sneijder 63'; Pandev 88',2,3
-2010-2011,Octavos,Ida,2011-02-23,Marseille,Manchester United,0-0,1-2,Velodrome,Marseille,Francia,Didier Deschamps,Alex Ferguson,,0,0
-2010-2011,Octavos,Vuelta,2011-03-15,Manchester United,Marseille,2-1,2-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Didier Deschamps,Chicharito 5'; 75'; Brown OG 82',2,1
-2010-2011,Octavos,Ida,2011-02-22,Copenhagen,Chelsea,0-2,0-2,Parken Stadium,Copenhague,Dinamarca,Stale Solbakken,Carlo Ancelotti,Anelka 17'; 54',0,2
-2010-2011,Octavos,Vuelta,2011-03-16,Chelsea,Copenhagen,0-0,2-0,Stamford Bridge,Londres,Inglaterra,Carlo Ancelotti,Stale Solbakken,,0,0
-2010-2011,Octavos,Ida,2011-02-23,Lyon,Real Madrid,1-1,1-4,Stade Gerland,Lyon,Francia,Claude Puel,Jose Mourinho,Gomis 47'; Benzema 65',1,1
-2010-2011,Octavos,Vuelta,2011-03-16,Real Madrid,Lyon,3-0,4-1,Santiago Bernabeu,Madrid,España,Jose Mourinho,Claude Puel,Marcelo 37'; Benzema 66'; Di Maria 76',3,0
-2010-2011,Cuartos,Ida,2011-04-05,Real Madrid,Tottenham,4-0,5-0,Santiago Bernabeu,Madrid,España,Jose Mourinho,Harry Redknapp,Adebayor 4'; 57'; Di Maria 72'; Ronaldo 87',4,0
-2010-2011,Cuartos,Vuelta,2011-04-13,Tottenham,Real Madrid,0-1,0-5,White Hart Lane,Londres,Inglaterra,Harry Redknapp,Jose Mourinho,Ronaldo 50',0,1
-2010-2011,Cuartos,Ida,2011-04-05,Inter,Schalke 04,2-5,3-7,San Siro,Milan,Italia,Leonardo,Ralf Rangnick,Stankovic 1'; Milito 34'; Matip 17'; Edu 40'; Raul 53'; Ranocchia OG 57'; Edu 75',2,5
-2010-2011,Cuartos,Vuelta,2011-04-13,Schalke 04,Inter,2-1,7-3,Veltins-Arena,Gelsenkirchen,Alemania,Ralf Rangnick,Leonardo,Raul 45'; Howedes 81'; Motta 49',2,1
-2010-2011,Cuartos,Ida,2011-04-06,Barcelona,Shakhtar,5-1,6-1,Camp Nou,Barcelona,España,Pep Guardiola,Mircea Lucescu,Iniesta 2'; Alves 34'; Pique 53'; Keita 60'; Xavi 86'; Rakitskiy 59',5,1
-2010-2011,Cuartos,Vuelta,2011-04-12,Shakhtar,Barcelona,0-1,1-6,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Pep Guardiola,Messi 43',0,1
-2010-2011,Cuartos,Ida,2011-04-06,Chelsea,Manchester United,0-1,1-3,Stamford Bridge,Londres,Inglaterra,Carlo Ancelotti,Alex Ferguson,Rooney 24',0,1
-2010-2011,Cuartos,Vuelta,2011-04-12,Manchester United,Chelsea,2-1,3-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Carlo Ancelotti,Chicharito 43'; Park 77'; Drogba 77',2,1
-2010-2011,Semifinal,Ida,2011-04-26,Real Madrid,Barcelona,0-2,1-3,Santiago Bernabeu,Madrid,España,Jose Mourinho,Pep Guardiola,Messi 76'; 87',0,2
-2010-2011,Semifinal,Vuelta,2011-05-03,Barcelona,Real Madrid,1-1,3-1,Camp Nou,Barcelona,España,Pep Guardiola,Jose Mourinho,Pedro 54'; Marcelo 64',1,1
-2010-2011,Semifinal,Ida,2011-04-26,Schalke 04,Manchester United,0-2,1-6,Veltins-Arena,Gelsenkirchen,Alemania,Ralf Rangnick,Alex Ferguson,Giggs 67'; Rooney 69',0,2
-2010-2011,Semifinal,Vuelta,2011-05-04,Manchester United,Schalke 04,4-1,6-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Ralf Rangnick,Valencia 26'; Gibson 31'; Anderson 72'; 76'; Jurado 35',4,1
-2010-2011,Final,Final,2011-05-28,Barcelona,Manchester United,3-1,,Wembley,Londres,Inglaterra,Pep Guardiola,Alex Ferguson,Pedro 27'; Messi 54'; Villa 69'; Rooney 34',3,1
-2011-2012,Octavos,Ida,2012-02-14,Bayer Leverkusen,Barcelona,1-3,2-10,BayArena,Leverkusen,Alemania,,,Kadlec 52'; Messi 41'; 88'; Alexis 55',1,3
-2011-2012,Octavos,Vuelta,2012-03-07,Barcelona,Bayer Leverkusen,7-1,10-2,Camp Nou,Barcelona,España,,,Messi 25'; 42'; 49'; 58'; 85'; Tello 55'; 62'; Bellarabi 90',7,1
-2011-2012,Octavos,Ida,2012-02-15,AC Milan,Arsenal,4-0,4-3,San Siro,Milán,Italia,,,Boateng 15'; Robinho 38'; 49'; Ibrahimovic 79',4,0
-2011-2012,Octavos,Vuelta,2012-03-06,Arsenal,AC Milan,3-0,3-4,Emirates Stadium,Londres,Inglaterra,,,Koscielny 7'; Rosicky 26'; Van Persie 43',3,0
-2011-2012,Octavos,Ida,2012-02-14,Lyon,APOEL,1-0,1-1,Stade Gerland,Lyon,Francia,,,Lacazette 58',1,0
-2011-2012,Octavos,Vuelta,2012-03-07,APOEL,Lyon,1-0,1-1,GSP Stadium,Nicosia,Chipre,,,Manduca 9',1,0
-2011-2012,Octavos,Ida,2012-02-15,Zenit,Benfica,3-2,3-4,Petrovsky Stadium,San Petersburgo,Rusia,,,Shirokov 27'; 71'; Semak 88'; Pereira 20'; Cardozo 87',3,2
-2011-2012,Octavos,Vuelta,2012-03-06,Benfica,Zenit,2-0,4-3,Estadio da Luz,Lisboa,Portugal,,,Pereira 45'; Nelson Oliveira 90',2,0
-2011-2012,Octavos,Ida,2012-02-21,CSKA Moscow,Real Madrid,1-1,2-5,Luzhniki Stadium,Moscú,Rusia,,,Wernbloom 90'; Ronaldo 28',1,1
-2011-2012,Octavos,Vuelta,2012-03-14,Real Madrid,CSKA Moscow,4-1,5-2,Santiago Bernabeu,Madrid,España,,,Higuain 26'; Ronaldo 55'; 90'; Benzema 70'; Tosic 77',4,1
-2011-2012,Octavos,Ida,2012-02-21,Napoli,Chelsea,3-1,4-5,Stadio San Paolo,Napoles,Italia,,,Lavezzi 38'; 65'; Cavani 45'; Mata 27',3,1
-2011-2012,Octavos,Vuelta,2012-03-14,Chelsea,Napoli,4-1,5-4,Stamford Bridge,Londres,Inglaterra,,,Drogba 28'; Terry 47'; Lampard 75'; Ivanovic 105'; Inler 55',4,1
-2011-2012,Octavos,Ida,2012-02-22,Marseille,Inter,1-0,2-2,Stade Velodrome,Marseille,Francia,,,Ayew 90',1,0
-2011-2012,Octavos,Vuelta,2012-03-13,Inter,Marseille,2-1,2-2,San Siro,Milán,Italia,,,Milito 75'; 90'; Brandao 90',2,1
-2011-2012,Octavos,Ida,2012-02-22,Basel,Bayern Munich,1-0,1-7,St. Jakob-Park,Basilea,Suiza,,,Stocker 86',1,0
-2011-2012,Octavos,Vuelta,2012-03-13,Bayern Munich,Basel,7-0,7-1,Allianz Arena,Munich,Alemania,,,Gomez 23'; 42'; 50'; 61'; 67'; Robben 11'; Muller 81',7,0
-2011-2012,Cuartos,Ida,2012-03-27,APOEL,Real Madrid,0-3,2-8,GSP Stadium,Nicosia,Chipre,,,Benzema 74'; Kaka 82'; Benzema 90',0,3
-2011-2012,Cuartos,Vuelta,2012-04-04,Real Madrid,APOEL,5-2,8-2,Santiago Bernabeu,Madrid,España,,,Ronaldo 26'; 49'; Kaka 37'; Callejon 80'; Di Maria 83'; Manduca 67'; Solari 75',5,2
-2011-2012,Cuartos,Ida,2012-03-27,Benfica,Chelsea,0-1,1-3,Estadio da Luz,Lisboa,Portugal,,,Kalou 75',0,1
-2011-2012,Cuartos,Vuelta,2012-04-04,Chelsea,Benfica,2-1,3-1,Stamford Bridge,Londres,Inglaterra,,,Lampard 21'; Meireles 90'; Javi Garcia 85',2,1
-2011-2012,Cuartos,Ida,2012-03-28,AC Milan,Barcelona,0-0,1-3,San Siro,Milán,Italia,,,,0,0
-2011-2012,Cuartos,Vuelta,2012-04-03,Barcelona,AC Milan,3-1,3-1,Camp Nou,Barcelona,España,,,Messi 11'; 41'; Iniesta 53'; Nocerino 32',3,1
-2011-2012,Cuartos,Ida,2012-03-28,Marseille,Bayern Munich,0-2,0-4,Stade Velodrome,Marseille,Francia,,,Gomez 44'; Robben 69',0,2
-2011-2012,Cuartos,Vuelta,2012-04-03,Bayern Munich,Marseille,2-0,4-0,Allianz Arena,Munich,Alemania,,,Olic 13'; 37',2,0
-2011-2012,Semifinal,Ida,2012-04-17,Bayern Munich,Real Madrid,2-1,3-3,Allianz Arena,Munich,Alemania,,,Ribery 17'; Gomez 90'; Ozil 53',2,1
-2011-2012,Semifinal,Vuelta,2012-04-25,Real Madrid,Bayern Munich,2-1,3-3,Santiago Bernabeu,Madrid,España,,,Ronaldo 6'; 14'; Robben 27',2,1
-2011-2012,Semifinal,Ida,2012-04-18,Chelsea,Barcelona,1-0,3-2,Stamford Bridge,Londres,Inglaterra,,,Drogba 45',1,0
-2011-2012,Semifinal,Vuelta,2012-04-24,Barcelona,Chelsea,2-2,2-3,Camp Nou,Barcelona,España,,,Busquets 35'; Iniesta 43'; Ramires 45'; Torres 90',2,2
-2011-2012,Final,Final,2012-05-19,Bayern Munich,Chelsea,1-1,,Allianz Arena,Munich,Alemania,,,Muller 83'; Drogba 88',1,1
-2012-2013,Octavos,Ida,2013-02-12,Celtic,Juventus,0-3,0-5,Celtic Park,Glasgow,Escocia,Neil Lennon,Antonio Conte,Matri 3'; Marchisio 77'; Vucinic 83',0,3
-2012-2013,Octavos,Vuelta,2013-03-06,Juventus,Celtic,2-0,5-0,Juventus Stadium,Turin,Italia,Antonio Conte,Neil Lennon,Matri 24'; Quagliarella 65',2,0
-2012-2013,Octavos,Ida,2013-02-12,Valencia,PSG,1-2,2-3,Mestalla,Valencia,España,Ernesto Valverde,Carlo Ancelotti,Rami 90'; Lavezzi 10'; Pastore 43',1,2
-2012-2013,Octavos,Vuelta,2013-03-06,PSG,Valencia,1-1,3-2,Parc des Princes,Paris,Francia,Carlo Ancelotti,Ernesto Valverde,Lavezzi 66'; Jonas 55',1,1
-2012-2013,Octavos,Ida,2013-02-13,Real Madrid,Manchester United,1-1,3-2,Santiago Bernabeu,Madrid,España,Jose Mourinho,Alex Ferguson,Ronaldo 30'; Welbeck 20',1,1
-2012-2013,Octavos,Vuelta,2013-03-05,Manchester United,Real Madrid,1-2,2-3,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Jose Mourinho,Ramos OG 48'; Modric 66'; Ronaldo 69',1,2
-2012-2013,Octavos,Ida,2013-02-13,Shakhtar,Barcelona,2-2,2-4,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Tito Vilanova,Teixeira 2'; Srna 59'; Sanchez 9'; Messi 60',2,2
-2012-2013,Octavos,Vuelta,2013-03-12,Barcelona,Shakhtar,2-1,4-3,Camp Nou,Barcelona,España,Tito Vilanova,Mircea Lucescu,Messi 43'; Tello 68'; Rakitskiy 59',2,1
-2012-2013,Octavos,Ida,2013-02-19,Porto,Malaga,1-0,1-2,Estadio do Dragao,Porto,Portugal,Vitor Pereira,Manuel Pellegrini,Moutinho 56',1,0
-2012-2013,Octavos,Vuelta,2013-03-13,Malaga,Porto,2-0,2-1,La Rosaleda,Malaga,España,Manuel Pellegrini,Vitor Pereira,Isco 43'; Santa Cruz 77',2,0
-2012-2013,Octavos,Ida,2013-02-19,Arsenal,Bayern Munich,1-3,3-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Jupp Heynckes,Podolski 55'; Kroos 7'; Muller 21'; Mandzukic 77',1,3
-2012-2013,Octavos,Vuelta,2013-03-13,Bayern Munich,Arsenal,0-2,3-3,Allianz Arena,Munich,Alemania,Jupp Heynckes,Arsene Wenger,Giroud 3'; Koscielny 86',0,2
-2012-2013,Octavos,Ida,2013-02-20,AC Milan,Barcelona,2-0,2-4,San Siro,Milán,Italia,Massimiliano Allegri,Tito Vilanova,Boateng 57'; Muntari 81',2,0
-2012-2013,Octavos,Vuelta,2013-03-12,Barcelona,AC Milan,4-0,4-2,Camp Nou,Barcelona,España,Tito Vilanova,Massimiliano Allegri,Messi 5'; 40'; Villa 55'; Alba 90',4,0
-2012-2013,Octavos,Ida,2013-02-20,Galatasaray,Schalke 04,1-1,3-4,Turk Telekom Arena,Estambul,Turquia,Fatih Terim,Jens Keller,Yilmaz 12'; Jones 45',1,1
-2012-2013,Octavos,Vuelta,2013-03-12,Schalke 04,Galatasaray,2-3,4-3,Veltins-Arena,Gelsenkirchen,Alemania,Jens Keller,Fatih Terim,Neustadter 17'; Bastos 63'; Altintop 37'; Yilmaz 42'; Bulut 90',2,3
-2012-2013,Cuartos,Ida,2013-04-02,PSG,Barcelona,2-2,3-3,Parc des Princes,Paris,Francia,Carlo Ancelotti,Tito Vilanova,Ibrahimovic 79'; Matuidi 90'; Messi 38'; Xavi 89',2,2
-2012-2013,Cuartos,Vuelta,2013-04-10,Barcelona,PSG,1-1,3-3,Camp Nou,Barcelona,España,Tito Vilanova,Carlo Ancelotti,Pedro 71'; Pastore 50',1,1
-2012-2013,Cuartos,Ida,2013-04-02,Bayern Munich,Juventus,2-0,4-0,Allianz Arena,Munich,Alemania,Jupp Heynckes,Antonio Conte,Alaba 1'; Muller 63',2,0
-2012-2013,Cuartos,Vuelta,2013-04-10,Juventus,Bayern Munich,0-2,0-4,Juventus Stadium,Turin,Italia,Antonio Conte,Jupp Heynckes,Mandzukic 64'; Pizarro 90',0,2
-2012-2013,Cuartos,Ida,2013-04-03,Malaga,Borussia Dortmund,0-0,2-3,La Rosaleda,Malaga,España,Manuel Pellegrini,Jurgen Klopp,,0,0
-2012-2013,Cuartos,Vuelta,2013-04-09,Borussia Dortmund,Malaga,3-2,3-2,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Manuel Pellegrini,Reus 90'; Santana 90'; Joaquin 25'; Eliseu 82',3,2
-2012-2013,Cuartos,Ida,2013-04-03,Real Madrid,Galatasaray,3-0,5-3,Santiago Bernabeu,Madrid,España,Jose Mourinho,Fatih Terim,Ronaldo 9'; Benzema 29'; Higuain 73',3,0
-2012-2013,Cuartos,Vuelta,2013-04-09,Galatasaray,Real Madrid,3-2,3-5,Turk Telekom Arena,Estambul,Turquia,Fatih Terim,Jose Mourinho,Eboue 57'; Sneijder 70'; Drogba 72'; Ronaldo 7'; 90',3,2
-2012-2013,Semifinal,Ida,2013-04-23,Bayern Munich,Barcelona,4-0,7-0,Allianz Arena,Munich,Alemania,Jupp Heynckes,Tito Vilanova,Muller 25'; Gomez 49'; Robben 73'; Muller 82',4,0
-2012-2013,Semifinal,Vuelta,2013-05-01,Barcelona,Bayern Munich,0-3,0-7,Camp Nou,Barcelona,España,Tito Vilanova,Jupp Heynckes,Robben 49'; Pique OG 72'; Muller 76',0,3
-2012-2013,Semifinal,Ida,2013-04-24,Borussia Dortmund,Real Madrid,4-1,4-3,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Jose Mourinho,Lewandowski 8'; 50'; 55'; 66'; Ronaldo 43',4,1
-2012-2013,Semifinal,Vuelta,2013-04-30,Real Madrid,Borussia Dortmund,2-0,3-4,Santiago Bernabeu,Madrid,España,Jose Mourinho,Jurgen Klopp,Benzema 83'; Ramos 88',2,0
-2012-2013,Final,Final,2013-05-25,Bayern Munich,Borussia Dortmund,2-1,,Wembley,Londres,Inglaterra,Jupp Heynckes,Jurgen Klopp,Mandzukic 60'; Gundogan 68'; Robben 89',2,1
-2013-2014,Octavos,Ida,2014-02-18,Manchester City,Barcelona,0-2,1-4,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Tata Martino,Messi 54'; Alves 90',0,2
-2013-2014,Octavos,Vuelta,2014-03-12,Barcelona,Manchester City,2-1,4-1,Camp Nou,Barcelona,España,Tata Martino,Manuel Pellegrini,Messi 67'; Alves 90'; Kompany 89',2,1
-2013-2014,Octavos,Ida,2014-02-19,Arsenal,Bayern Munich,0-2,1-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Pep Guardiola,Kroos 54'; Muller 88',0,2
-2013-2014,Octavos,Vuelta,2014-03-11,Bayern Munich,Arsenal,1-1,3-1,Allianz Arena,Munich,Alemania,Pep Guardiola,Arsene Wenger,Schweinsteiger 57',1,1
-2013-2014,Octavos,Ida,2014-02-18,AC Milan,Atletico Madrid,0-1,1-5,San Siro,Milán,Italia,Clarence Seedorf,Diego Simeone,Diego Costa 83',0,1
-2013-2014,Octavos,Vuelta,2014-03-11,Atletico Madrid,AC Milan,4-1,5-1,Vicente Calderon,Madrid,España,Diego Simeone,Clarence Seedorf,Diego Costa 3'; 27'; Arda Turan 40'; Raul Garcia 71'; Kaka 51',4,1
-2013-2014,Octavos,Ida,2014-02-19,Bayer Leverkusen,PSG,0-4,1-6,BayArena,Leverkusen,Alemania,Sami Hyypia,Laurent Blanc,Matuidi 3'; Ibrahimovic 39'; 42'; Cabaye 88',0,4
-2013-2014,Octavos,Vuelta,2014-03-12,PSG,Bayer Leverkusen,2-1,6-1,Parc des Princes,Paris,Francia,Laurent Blanc,Sami Hyypia,Marquinhos 13'; Lavezzi 53'; Rolfes 6',2,1
-2013-2014,Octavos,Ida,2014-02-25,Olympiacos,Manchester United,2-0,2-3,Karaiskakis Stadium,Pireo,Grecia,Michel,David Moyes,Dominguez 38'; Campbell 55',2,0
-2013-2014,Octavos,Vuelta,2014-03-19,Manchester United,Olympiacos,3-0,3-2,Old Trafford,Manchester,Inglaterra,David Moyes,Michel,Van Persie 25'; 45'; 52',3,0
-2013-2014,Octavos,Ida,2014-02-25,Zenit,Borussia Dortmund,2-4,4-5,Petrovsky Stadium,San Petersburgo,Rusia,Luciano Spalletti,Jurgen Klopp,Hulk 58'; Rondon 69'; Mkhitaryan 4'; Reus 5'; Lewandowski 61'; 71',2,4
-2013-2014,Octavos,Vuelta,2014-03-19,Borussia Dortmund,Zenit,1-2,5-4,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Luciano Spalletti,Kehl 38'; Hulk 16'; Rondon 73',1,2
-2013-2014,Octavos,Ida,2014-02-26,Galatasaray,Chelsea,1-1,1-3,Turk Telekom Arena,Estambul,Turquia,Roberto Mancini,Jose Mourinho,Chedjou 65'; Torres 9',1,1
-2013-2014,Octavos,Vuelta,2014-03-18,Chelsea,Galatasaray,2-0,3-1,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Roberto Mancini,Eto'o 4'; Cahill 42',2,0
-2013-2014,Octavos,Ida,2014-02-26,Schalke 04,Real Madrid,1-6,1-9,Veltins-Arena,Gelsenkirchen,Alemania,Jens Keller,Carlo Ancelotti,Ronaldo 21'; 89'; Benzema 13'; 57'; Bale 52'; 69'; Huntelaar 90',1,6
-2013-2014,Octavos,Vuelta,2014-03-18,Real Madrid,Schalke 04,3-1,9-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jens Keller,Ronaldo 31'; Morata 75'; Bale 52'; Hoogland OG 87',3,1
-2013-2014,Cuartos,Ida,2014-04-01,Barcelona,Atletico Madrid,1-1,2-1,Camp Nou,Barcelona,España,Tata Martino,Diego Simeone,Neymar 71'; Diego 56',1,1
-2013-2014,Cuartos,Vuelta,2014-04-09,Atletico Madrid,Barcelona,1-0,2-1,Vicente Calderon,Madrid,España,Diego Simeone,Tata Martino,Koke 5',1,0
-2013-2014,Cuartos,Ida,2014-04-01,Manchester United,Bayern Munich,1-1,2-4,Old Trafford,Manchester,Inglaterra,David Moyes,Pep Guardiola,Vidic 58'; Schweinsteiger 67',1,1
-2013-2014,Cuartos,Vuelta,2014-04-09,Bayern Munich,Manchester United,3-1,4-2,Allianz Arena,Munich,Alemania,Pep Guardiola,David Moyes,Mandzukic 59'; Muller 68'; Robben 76'; Evra 57',3,1
-2013-2014,Cuartos,Ida,2014-04-02,Real Madrid,Borussia Dortmund,3-0,3-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jurgen Klopp,Bale 3'; Isco 27'; Ronaldo 57',3,0
-2013-2014,Cuartos,Vuelta,2014-04-08,Borussia Dortmund,Real Madrid,2-0,2-3,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Carlo Ancelotti,Reus 24'; 37',2,0
-2013-2014,Cuartos,Ida,2014-04-02,PSG,Chelsea,3-1,3-3,Parc des Princes,Paris,Francia,Laurent Blanc,Jose Mourinho,Lavezzi 4'; Luiz OG 61'; Pastore 90'; Hazard 27',3,1
-2013-2014,Cuartos,Vuelta,2014-04-08,Chelsea,PSG,2-0,3-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Laurent Blanc,Schurrle 32'; Ba 87',2,0
-2013-2014,Semifinal,Ida,2014-04-22,Atletico Madrid,Chelsea,0-0,3-1,Vicente Calderon,Madrid,España,Diego Simeone,Jose Mourinho,,0,0
-2013-2014,Semifinal,Vuelta,2014-04-30,Chelsea,Atletico Madrid,1-3,1-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Diego Simeone,Torres 36'; Adrian 44'; Diego Costa 60'; Arda Turan 72',1,3
-2013-2014,Semifinal,Ida,2014-04-23,Real Madrid,Bayern Munich,1-0,5-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,Benzema 19',1,0
-2013-2014,Semifinal,Vuelta,2014-04-29,Bayern Munich,Real Madrid,0-4,0-5,Allianz Arena,Munich,Alemania,Pep Guardiola,Carlo Ancelotti,Ramos 16'; 20'; Ronaldo 34'; 90',0,4
-2013-2014,Final,Final,2014-05-24,Real Madrid,Atletico Madrid,4-1,,Estadio da Luz,Lisboa,Portugal,Carlo Ancelotti,Diego Simeone,Ramos 93'; Bale 110'; Marcelo 118'; Ronaldo 120'; Godin 36',4,1
-2014-2015,Octavos,Ida,2015-02-17,PSG,Chelsea,1-1,3-3,Parc des Princes,Paris,Francia,Laurent Blanc,Jose Mourinho,Cavani 54'; Ivanovic 36',1,1
-2014-2015,Octavos,Vuelta,2015-03-11,Chelsea,PSG,2-2,3-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Laurent Blanc,Cahill 81'; Hazard 96'; Luiz 86'; Thiago Silva 114',2,2
-2014-2015,Octavos,Ida,2015-02-18,Manchester City,Barcelona,1-2,1-3,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Luis Enrique,Suarez 16'; 30'; Aguero 69',1,2
-2014-2015,Octavos,Vuelta,2015-03-18,Barcelona,Manchester City,1-0,3-1,Camp Nou,Barcelona,España,Luis Enrique,Manuel Pellegrini,Rakitic 31',1,0
-2014-2015,Octavos,Ida,2015-02-24,Bayer Leverkusen,Atletico Madrid,1-0,1-1,BayArena,Leverkusen,Alemania,Roger Schmidt,Diego Simeone,Calhanoglu 57',1,0
-2014-2015,Octavos,Vuelta,2015-03-17,Atletico Madrid,Bayer Leverkusen,1-0,1-1,Vicente Calderon,Madrid,España,Diego Simeone,Roger Schmidt,Garcia 27',1,0
-2014-2015,Octavos,Ida,2015-02-24,Arsenal,Monaco,1-3,3-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Leonardo Jardim,Oxlade-Chamberlain 90'; Kondogbia 38'; Berbatov 53'; Ferreira Carrasco 90',1,3
-2014-2015,Octavos,Vuelta,2015-03-17,Monaco,Arsenal,0-2,3-3,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Arsene Wenger,Giroud 36'; Ramsey 79',0,2
-2014-2015,Octavos,Ida,2015-02-25,Shakhtar,Bayern Munich,0-0,0-7,Arena Lviv,Lviv,Ucrania,Mircea Lucescu,Pep Guardiola,,0,0
-2014-2015,Octavos,Vuelta,2015-03-11,Bayern Munich,Shakhtar,7-0,7-0,Allianz Arena,Munich,Alemania,Pep Guardiola,Mircea Lucescu,Muller 4'; 52'; Boateng 34'; Ribery 49'; Badstuber 63'; Lewandowski 75'; Gotze 87',7,0
-2014-2015,Octavos,Ida,2015-02-25,Schalke 04,Real Madrid,0-2,4-5,Veltins-Arena,Gelsenkirchen,Alemania,Roberto Di Matteo,Carlo Ancelotti,Ronaldo 26'; Marcelo 79',0,2
-2014-2015,Octavos,Vuelta,2015-03-10,Real Madrid,Schalke 04,3-4,5-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Roberto Di Matteo,Ronaldo 25'; 45'; Benzema 52'; Fuchs 20'; Huntelaar 40'; Sane 57'; Huntelaar 84',3,4
-2014-2015,Octavos,Ida,2015-02-18,Basel,Porto,1-1,1-5,St. Jakob-Park,Basilea,Suiza,Paulo Sousa,Julen Lopetegui,Gonzalez 11'; Danilo 79',1,1
-2014-2015,Octavos,Vuelta,2015-03-10,Porto,Basel,4-0,5-1,Estadio do Dragao,Porto,Portugal,Julen Lopetegui,Paulo Sousa,Brahimi 14'; Herrera 47'; Casemiro 56'; Aboubakar 76',4,0
-2014-2015,Octavos,Ida,2015-02-17,Juventus,Borussia Dortmund,2-1,5-1,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Jurgen Klopp,Tevez 13'; Morata 43'; Reus 18',2,1
-2014-2015,Octavos,Vuelta,2015-03-18,Borussia Dortmund,Juventus,0-3,1-5,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Massimiliano Allegri,Tevez 3'; Morata 70'; Tevez 79',0,3
-2014-2015,Cuartos,Ida,2015-04-14,Atletico Madrid,Real Madrid,0-0,0-1,Vicente Calderon,Madrid,España,Diego Simeone,Carlo Ancelotti,,0,0
-2014-2015,Cuartos,Vuelta,2015-04-22,Real Madrid,Atletico Madrid,1-0,1-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Diego Simeone,Chicharito 88',1,0
-2014-2015,Cuartos,Ida,2015-04-14,PSG,Barcelona,1-3,1-5,Parc des Princes,Paris,Francia,Laurent Blanc,Luis Enrique,Neymar 18'; 34'; Suarez 67'; Van der Wiel 82',1,3
-2014-2015,Cuartos,Vuelta,2015-04-21,Barcelona,PSG,2-0,5-1,Camp Nou,Barcelona,España,Luis Enrique,Laurent Blanc,Neymar 14'; 34',2,0
-2014-2015,Cuartos,Ida,2015-04-15,Porto,Bayern Munich,3-1,4-7,Estadio do Dragao,Porto,Portugal,Julen Lopetegui,Pep Guardiola,Quaresma 3'; 10'; Martinez 65'; Thiago 28',3,1
-2014-2015,Cuartos,Vuelta,2015-04-21,Bayern Munich,Porto,6-1,7-4,Allianz Arena,Munich,Alemania,Pep Guardiola,Julen Lopetegui,Thiago 14'; Boateng 22'; Lewandowski 27'; Muller 36'; Alonso 40'; Lewandowski 64'; Martinez 73',6,1
-2014-2015,Cuartos,Ida,2015-04-15,Juventus,Monaco,1-0,1-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Leonardo Jardim,Vidal 57',1,0
-2014-2015,Cuartos,Vuelta,2015-04-22,Monaco,Juventus,0-0,0-1,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Massimiliano Allegri,,0,0
-2014-2015,Semifinal,Ida,2015-05-05,Juventus,Real Madrid,2-1,3-2,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Carlo Ancelotti,Morata 8'; Tevez 58'; Ronaldo 27',2,1
-2014-2015,Semifinal,Vuelta,2015-05-13,Real Madrid,Juventus,1-1,2-3,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Massimiliano Allegri,Ronaldo 23'; Morata 57',1,1
-2014-2015,Semifinal,Ida,2015-05-06,Barcelona,Bayern Munich,3-0,5-3,Camp Nou,Barcelona,España,Luis Enrique,Pep Guardiola,Messi 77'; 80'; Neymar 90',3,0
-2014-2015,Semifinal,Vuelta,2015-05-12,Bayern Munich,Barcelona,3-2,3-5,Allianz Arena,Munich,Alemania,Pep Guardiola,Luis Enrique,Benatia 7'; Lewandowski 59'; Muller 74'; Neymar 15'; 29',3,2
-2014-2015,Final,Final,2015-06-06,Barcelona,Juventus,3-1,,Olympiastadion,Berlin,Alemania,Luis Enrique,Massimiliano Allegri,Rakitic 4'; Suarez 68'; Neymar 90'; Morata 55',3,1
-2015-2016,Octavos,Ida,2016-02-16,PSG,Chelsea,2-1,4-2,Parc des Princes,Paris,Francia,Laurent Blanc,Guus Hiddink,Ibrahimovic 39'; Cavani 78'; Obi Mikel 45',2,1
-2015-2016,Octavos,Vuelta,2016-03-09,Chelsea,PSG,1-2,2-4,Stamford Bridge,Londres,Inglaterra,Guus Hiddink,Laurent Blanc,Costa 27'; Rabiot 16'; Ibrahimovic 67',1,2
-2015-2016,Octavos,Ida,2016-02-17,Roma,Real Madrid,0-2,0-4,Stadio Olimpico,Roma,Italia,Luciano Spalletti,Zinedine Zidane,Ronaldo 57'; Jese 86',0,2
-2015-2016,Octavos,Vuelta,2016-03-08,Real Madrid,Roma,2-0,4-0,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Luciano Spalletti,Ronaldo 64'; James 68',2,0
-2015-2016,Octavos,Ida,2016-02-23,Arsenal,Barcelona,0-2,1-5,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Luis Enrique,Messi 71'; 83',0,2
-2015-2016,Octavos,Vuelta,2016-03-16,Barcelona,Arsenal,3-1,5-1,Camp Nou,Barcelona,España,Luis Enrique,Arsene Wenger,Neymar 18'; Suarez 65'; Messi 88'; Elneny 51',3,1
-2015-2016,Octavos,Ida,2016-02-23,Juventus,Bayern Munich,2-2,4-6,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Pep Guardiola,Dybala 63'; Sturaro 76'; Muller 43'; Robben 55',2,2
-2015-2016,Octavos,Vuelta,2016-03-16,Bayern Munich,Juventus,4-2,6-4,Allianz Arena,Munich,Alemania,Pep Guardiola,Massimiliano Allegri,Lewandowski 73'; Muller 90'; Thiago 108'; Coman 110'; Pogba 5'; Cuadrado 28',4,2
-2015-2016,Octavos,Ida,2016-02-24,PSV,Atletico Madrid,0-0,0-0,Philips Stadion,Eindhoven,Países Bajos,Phillip Cocu,Diego Simeone,,0,0
-2015-2016,Octavos,Vuelta,2016-03-15,Atletico Madrid,PSV,0-0,0-0,Vicente Calderon,Madrid,España,Diego Simeone,Phillip Cocu,,0,0
-2015-2016,Octavos,Ida,2016-02-24,Dynamo Kyiv,Manchester City,1-3,1-3,Olimpiyskiy Stadium,Kiev,Ucrania,Serhiy Rebrov,Manuel Pellegrini,Buialskiy 59'; Aguero 15'; Silva 40'; Toure 90',1,3
-2015-2016,Octavos,Vuelta,2016-03-15,Manchester City,Dynamo Kyiv,0-0,3-1,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Serhiy Rebrov,,0,0
-2015-2016,Octavos,Ida,2016-02-16,Benfica,Zenit,1-0,3-1,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Andre Villas-Boas,Jonas 90',1,0
-2015-2016,Octavos,Vuelta,2016-03-09,Zenit,Benfica,1-2,1-3,Petrovsky Stadium,San Petersburgo,Rusia,Andre Villas-Boas,Rui Vitoria,Hulk 69'; Gaitan 85'; Talisca 90',1,2
-2015-2016,Octavos,Ida,2016-02-17,Gent,Wolfsburg,2-3,2-4,Ghelamco Arena,Ghent,Bélgica,Hein Vanhaezebrouck,Dieter Hecking,Kums 80'; Coulibaly 89'; Draxler 44'; 54'; Kruse 60',2,3
-2015-2016,Octavos,Vuelta,2016-03-08,Wolfsburg,Gent,1-0,4-2,Volkswagen Arena,Wolfsburg,Alemania,Dieter Hecking,Hein Vanhaezebrouck,Schurrle 74',1,0
-2015-2016,Cuartos,Ida,2016-04-05,Barcelona,Atletico Madrid,2-1,2-3,Camp Nou,Barcelona,España,Luis Enrique,Diego Simeone,Suarez 63'; 74'; Torres 25',2,1
-2015-2016,Cuartos,Vuelta,2016-04-13,Atletico Madrid,Barcelona,2-0,3-2,Vicente Calderon,Madrid,España,Diego Simeone,Luis Enrique,Griezmann 36'; 88',2,0
-2015-2016,Cuartos,Ida,2016-04-05,Bayern Munich,Benfica,1-0,3-2,Allianz Arena,Munich,Alemania,Pep Guardiola,Rui Vitoria,Vidal 2',1,0
-2015-2016,Cuartos,Vuelta,2016-04-13,Benfica,Bayern Munich,2-2,2-3,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Pep Guardiola,Raul Jimenez 27'; Talisca 76'; Vidal 38'; Muller 52',2,2
-2015-2016,Cuartos,Ida,2016-04-06,Wolfsburg,Real Madrid,2-0,2-3,Volkswagen Arena,Wolfsburg,Alemania,Dieter Hecking,Zinedine Zidane,Rodriguez 18'; Arnold 25',2,0
-2015-2016,Cuartos,Vuelta,2016-04-12,Real Madrid,Wolfsburg,3-0,3-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Dieter Hecking,Ronaldo 16'; 17'; 77',3,0
-2015-2016,Cuartos,Ida,2016-04-06,PSG,Manchester City,2-2,2-3,Parc des Princes,Paris,Francia,Laurent Blanc,Manuel Pellegrini,Ibrahimovic 41'; Rabiot 59'; De Bruyne 38'; Fernandinho 72',2,2
-2015-2016,Cuartos,Vuelta,2016-04-12,Manchester City,PSG,1-0,3-2,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Laurent Blanc,De Bruyne 76',1,0
-2015-2016,Semifinal,Ida,2016-04-26,Manchester City,Real Madrid,0-0,0-1,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Zinedine Zidane,,0,0
-2015-2016,Semifinal,Vuelta,2016-05-04,Real Madrid,Manchester City,1-0,1-0,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Manuel Pellegrini,Bale (OG) 20',1,0
-2015-2016,Semifinal,Ida,2016-04-27,Atletico Madrid,Bayern Munich,1-0,2-2,Vicente Calderon,Madrid,España,Diego Simeone,Pep Guardiola,Saul 11',1,0
-2015-2016,Semifinal,Vuelta,2016-05-03,Bayern Munich,Atletico Madrid,2-1,2-2,Allianz Arena,Munich,Alemania,Pep Guardiola,Diego Simeone,Alaba 31'; Lewandowski 74'; Griezmann 54',2,1
-2015-2016,Final,Final,2016-05-28,Real Madrid,Atletico Madrid,1-1,,San Siro,Milán,Italia,Zinedine Zidane,Diego Simeone,Ramos 15'; Carrasco 79',1,1
-2016-2017,Octavos,Ida,2017-02-14,PSG,Barcelona,4-0,5-6,Parc des Princes,Paris,Francia,Unai Emery,Luis Enrique,Di Maria 18'; 55'; Draxler 40'; Cavani 72',4,0
-2016-2017,Octavos,Vuelta,2017-03-08,Barcelona,PSG,6-1,6-5,Camp Nou,Barcelona,España,Luis Enrique,Unai Emery,Suarez 3'; Kurzawa OG 40'; Messi 50'; Neymar 88'; 90'; Sergi Roberto 95'; Cavani 62',6,1
-2016-2017,Octavos,Ida,2017-02-15,Benfica,Borussia Dortmund,1-0,1-4,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Thomas Tuchel,Mitroglou 48',1,0
-2016-2017,Octavos,Vuelta,2017-03-08,Borussia Dortmund,Benfica,4-0,4-1,Signal Iduna Park,Dortmund,Alemania,Thomas Tuchel,Rui Vitoria,Aubameyang 4'; 61'; 85'; Pulisic 59',4,0
-2016-2017,Octavos,Ida,2017-02-14,Bayern Munich,Arsenal,5-1,10-2,Allianz Arena,Munich,Alemania,Carlo Ancelotti,Arsene Wenger,Robben 11'; Lewandowski 53'; Thiago 56'; 63'; Muller 88'; Sanchez 30',5,1
-2016-2017,Octavos,Vuelta,2017-03-07,Arsenal,Bayern Munich,1-5,2-10,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Carlo Ancelotti,Walsh 20'; Lewandowski 55'; Robben 68'; Douglas Costa 78'; Vidal 80'; 85',1,5
-2016-2017,Octavos,Ida,2017-02-15,Real Madrid,Napoli,3-1,6-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Maurizio Sarri,Benzema 18'; Kroos 49'; Casemiro 54'; Insigne 8',3,1
-2016-2017,Octavos,Vuelta,2017-03-07,Napoli,Real Madrid,1-3,2-6,San Paolo,Napoles,Italia,Maurizio Sarri,Zinedine Zidane,Mertens 24'; Ramos 51'; 57'; Morata 91',1,3
-2016-2017,Octavos,Ida,2017-02-21,Manchester City,Monaco,5-3,6-6,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Leonardo Jardim,Sterling 26'; Aguero 58'; 71'; Stones 77'; Sane 82'; Falcao 32'; 61'; Mbappe 40',5,3
-2016-2017,Octavos,Vuelta,2017-03-15,Monaco,Manchester City,3-1,6-6,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Pep Guardiola,Mbappe 8'; Fabinho 29'; Bakayoko 77'; Sane 71',3,1
-2016-2017,Octavos,Ida,2017-02-21,Bayer Leverkusen,Atletico Madrid,2-4,2-8,BayArena,Leverkusen,Alemania,Tayfun Korkut,Diego Simeone,Bellabi 48'; Savic OG 68'; Saul 17'; Griezmann 25'; Gameiro 59'; Torres 86',2,4
-2016-2017,Octavos,Vuelta,2017-03-15,Atletico Madrid,Bayer Leverkusen,0-0,8-2,Vicente Calderon,Madrid,España,Diego Simeone,Tayfun Korkut,,0,0
-2016-2017,Octavos,Ida,2017-02-22,Porto,Juventus,0-2,0-3,Estadio do Dragao,Porto,Portugal,Nuno Espirito Santo,Massimiliano Allegri,Pjaca 72'; Alves 74',0,2
-2016-2017,Octavos,Vuelta,2017-03-14,Juventus,Porto,1-0,3-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Nuno Espirito Santo,Dybala 42',1,0
-2016-2017,Octavos,Ida,2017-02-22,Sevilla,Leicester City,2-1,2-3,Ramon Sanchez Pizjuan,Sevilla,España,Jorge Sampaoli,Claudio Ranieri,Sarabia 25'; Correa 62'; Vardy 73',2,1
-2016-2017,Octavos,Vuelta,2017-03-14,Leicester City,Sevilla,2-0,3-2,King Power Stadium,Leicester,Inglaterra,Craig Shakespeare,Jorge Sampaoli,Morgan 27'; Albrighton 54',2,0
-2016-2017,Cuartos,Ida,2017-04-11,Juventus,Barcelona,3-0,3-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Luis Enrique,Dybala 7'; 22'; Chiellini 55',3,0
-2016-2017,Cuartos,Vuelta,2017-04-19,Barcelona,Juventus,0-0,0-3,Camp Nou,Barcelona,España,Luis Enrique,Massimiliano Allegri,,0,0
-2016-2017,Cuartos,Ida,2017-04-11,Borussia Dortmund,Monaco,2-3,3-6,Signal Iduna Park,Dortmund,Alemania,Thomas Tuchel,Leonardo Jardim,Dembélé 57'; Kagawa 84'; Mbappe 19'; 79'; Bender OG 35',2,3
-2016-2017,Cuartos,Vuelta,2017-04-19,Monaco,Borussia Dortmund,3-1,6-3,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Thomas Tuchel,Mbappe 3'; Falcao 17'; Germain 81'; Reus 48',3,1
-2016-2017,Cuartos,Ida,2017-04-12,Atletico Madrid,Leicester City,1-0,2-1,Vicente Calderon,Madrid,España,Diego Simeone,Craig Shakespeare,Griezmann 28',1,0
-2016-2017,Cuartos,Vuelta,2017-04-18,Leicester City,Atletico Madrid,1-1,1-2,King Power Stadium,Leicester,Inglaterra,Craig Shakespeare,Diego Simeone,Vardy 61teiger 55'; P'; Saul 26',1,1
-2016-2017,Cuartos,Ida,2017-04-12,Bayern Munich,Real Madrid,1-2,3-6,Allianz Arena,Munich,Alemania,Carlo Ancelotti,Zinedine Zidane,Vidal 25'; Ronaldo 47'; 77',1,2
-2016-2017,Cuartos,Vuelta,2017-04-18,Real Madrid,Bayern Munich,4-2,6-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Carlo Ancelotti,Ronaldo 76'; 105'; 109'; Asensio 112'; Lewandowski 53'; Ramos OG 78',4,2
-2016-2017,Semifinal,Ida,2017-05-02,Real Madrid,Atletico Madrid,3-0,4-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Diego Simeone,Ronaldo 10'; 73'; 86',3,0
-2016-2017,Semifinal,Vuelta,2017-05-10,Atletico Madrid,Real Madrid,2-1,2-4,Vicente Calderon,Madrid,España,Diego Simeone,Zinedine Zidane,Saul 12'; Griezmann 16'; Isco 42',2,1
-2016-2017,Semifinal,Ida,2017-05-03,Monaco,Juventus,0-2,1-4,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Massimiliano Allegri,Higuain 29'; 59',0,2
-2016-2017,Semifinal,Vuelta,2017-05-09,Juventus,Monaco,2-1,4-1,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Leonardo Jardim,Mandzukic 33'; Alves 44'; Mbappe 69',2,1
-2016-2017,Final,Final,2017-06-03,Juventus,Real Madrid,1-4,,Millennium Stadium,Cardiff,Gales,Massimiliano Allegri,Zinedine Zidane,Ronaldo 20'; 64'; Casemiro 61'; Asensio 90'; Mandzukic 27',1,4
-2017-2018,Octavos,Ida,2018-02-13,Juventus,Tottenham,2-2,3-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Mauricio Pochettino,Higuain 2'; 9'; Kane 35'; Eriksen 71',2,2
-2017-2018,Octavos,Vuelta,2018-03-07,Tottenham,Juventus,1-2,4-3,Wembley,Londres,Inglaterra,Mauricio Pochettino,Massimiliano Allegri,Son 39'; Higuain 64'; Dybala 67',1,2
-2017-2018,Octavos,Ida,2018-02-13,Basel,Manchester City,0-4,1-5,St. Jakob-Park,Basilea,Suiza,Raphael Wicky,Pep Guardiola,Gundogan 14'; 53'; Bernardo Silva 18'; Aguero 23',0,4
-2017-2018,Octavos,Vuelta,2018-03-07,Manchester City,Basel,1-2,5-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Raphael Wicky,Jesus 8'; Elyounoussi 17'; Lang 71',1,2
-2017-2018,Octavos,Ida,2018-02-14,Porto,Liverpool,0-5,0-5,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Jurgen Klopp,Mane 25'; 53'; 85'; Salah 29'; Firmino 69',0,5
-2017-2018,Octavos,Vuelta,2018-03-06,Liverpool,Porto,0-0,5-0,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Sergio Conceicao,,0,0
-2017-2018,Octavos,Ida,2018-02-14,Real Madrid,PSG,3-1,5-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Unai Emery,Ronaldo 45'; 83'; Marcelo 86'; Rabiot 33',3,1
-2017-2018,Octavos,Vuelta,2018-03-06,PSG,Real Madrid,1-2,2-5,Parc des Princes,Paris,Francia,Unai Emery,Zinedine Zidane,Cavani 71'; Ronaldo 51'; Casemiro 80',1,2
-2017-2018,Octavos,Ida,2018-02-20,Chelsea,Barcelona,1-1,1-4,Stamford Bridge,Londres,Inglaterra,Antonio Conte,Ernesto Valverde,Willian 62'; Messi 75',1,1
-2017-2018,Octavos,Vuelta,2018-03-14,Barcelona,Chelsea,3-0,4-1,Camp Nou,Barcelona,España,Ernesto Valverde,Antonio Conte,Messi 3'; 63'; Dembele 20',3,0
-2017-2018,Octavos,Ida,2018-02-20,Bayern Munich,Besiktas,5-0,8-1,Allianz Arena,Munich,Alemania,Jupp Heynckes,Senol Gunes,Muller 43'; 66'; Coman 53'; Lewandowski 79'; 88',5,0
-2017-2018,Octavos,Vuelta,2018-03-14,Besiktas,Bayern Munich,1-3,1-8,Vodafone Park,Estambul,Turquia,Senol Gunes,Jupp Heynckes,Vagner Love 59'; Thiago 18'; Gonalons OG 46'; Wagner 84',1,3
-2017-2018,Octavos,Ida,2018-02-21,Shakhtar,Roma,2-1,2-2,Metalist Stadium,Kharkiv,Ucrania,Paulo Fonseca,Eusebio Di Francesco,Ferreyra 52'; Fred 71'; Under 41',2,1
-2017-2018,Octavos,Vuelta,2018-03-13,Roma,Shakhtar,1-0,2-2,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Paulo Fonseca,Dzeko 52',1,0
-2017-2018,Octavos,Ida,2018-02-21,Sevilla,Manchester United,0-0,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Vincenzo Montella,Jose Mourinho,,0,0
-2017-2018,Octavos,Vuelta,2018-03-13,Manchester United,Sevilla,1-2,2-1,Old Trafford,Manchester,Inglaterra,Jose Mourinho,Vincenzo Montella,Ben Yedder 74'; 78'; Lukaku 84',1,2
-2017-2018,Cuartos,Ida,2018-04-03,Juventus,Real Madrid,0-3,3-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Zinedine Zidane,Ronaldo 3'; 64'; Marcelo 72',0,3
-2017-2018,Cuartos,Vuelta,2018-04-11,Real Madrid,Juventus,1-3,4-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Massimiliano Allegri,Ronaldo 90'; Mandzukic 2'; 37'; Matuidi 61',1,3
-2017-2018,Cuartos,Ida,2018-04-03,Sevilla,Bayern Munich,1-2,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Vincenzo Montella,Jupp Heynckes,Sarabia 32'; Navas OG 37'; Thiago 68',1,2
-2017-2018,Cuartos,Vuelta,2018-04-11,Bayern Munich,Sevilla,0-0,2-1,Allianz Arena,Munich,Alemania,Jupp Heynckes,Vincenzo Montella,,0,0
-2017-2018,Cuartos,Ida,2018-04-04,Barcelona,Roma,4-1,4-4,Camp Nou,Barcelona,España,Ernesto Valverde,Eusebio Di Francesco,De Rossi OG 38'; Manolas OG 55'; Pique 59'; Suarez 87'; Dzeko 80',4,1
-2017-2018,Cuartos,Vuelta,2018-04-10,Roma,Barcelona,3-0,4-4,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Ernesto Valverde,Dzeko 6'; De Rossi 58'; Manolas 82',3,0
-2017-2018,Cuartos,Ida,2018-04-04,Liverpool,Manchester City,3-0,5-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Pep Guardiola,Salah 12'; Oxlade-Chamberlain 21'; Mane 31',3,0
-2017-2018,Cuartos,Vuelta,2018-04-10,Manchester City,Liverpool,1-2,1-5,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Jurgen Klopp,Jesus 2'; Salah 56'; Firmino 77',1,2
-2017-2018,Semifinal,Ida,2018-04-24,Liverpool,Roma,5-2,7-6,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Eusebio Di Francesco,Salah 36'; 45'; Mane 56'; Firmino 61'; 69'; Dzeko 81'; Perotti 85',5,2
-2017-2018,Semifinal,Vuelta,2018-05-02,Roma,Liverpool,4-2,6-7,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Jurgen Klopp,Milner OG 15'; Dzeko 52'; Nainggolan 86'; 90'; Mane 9'; Wijnaldum 25',4,2
-2017-2018,Semifinal,Ida,2018-04-25,Bayern Munich,Real Madrid,1-2,3-4,Allianz Arena,Munich,Alemania,Jupp Heynckes,Zinedine Zidane,Kimmich 28'; Marcelo 44'; Asensio 57',1,2
-2017-2018,Semifinal,Vuelta,2018-05-01,Real Madrid,Bayern Munich,2-2,4-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Jupp Heynckes,Benzema 11'; 46'; Kimmich 3'; James 63',2,2
-2017-2018,Final,Final,2018-05-26,Real Madrid,Liverpool,3-1,,NSC Olimpiyskiy,Kiev,Ucrania,Zinedine Zidane,Jurgen Klopp,Benzema 51'; Bale 64'; 83'; Mane 55',3,1
-2018-2019,Octavos,Ida,2019-02-12,Manchester United,PSG,0-2,3-3,Old Trafford,Manchester,Inglaterra,Ole Gunnar Solskjaer,Thomas Tuchel,Kimpembe 53'; Mbappe 60',0,2
-2018-2019,Octavos,Vuelta,2019-03-06,PSG,Manchester United,1-3,3-3,Parc des Princes,Paris,Francia,Thomas Tuchel,Ole Gunnar Solskjaer,Bernat 12'; Lukaku 2'; 30'; Rashford 94',1,3
-2018-2019,Octavos,Ida,2019-02-12,Roma,Porto,2-1,3-4,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Sergio Conceicao,Zaniolo 70'; 76'; Adrian Lopez 79',2,1
-2018-2019,Octavos,Vuelta,2019-03-06,Porto,Roma,3-1,4-3,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Eusebio Di Francesco,Tiquinho 26'; Marega 52'; Alex Telles 117'; De Rossi 37',3,1
-2018-2019,Octavos,Ida,2019-02-13,Ajax,Real Madrid,1-2,3-5,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Santiago Solari,Ziyech 75'; Benzema 60'; Asensio 87',1,2
-2018-2019,Octavos,Vuelta,2019-03-05,Real Madrid,Ajax,1-4,3-5,Santiago Bernabeu,Madrid,España,Santiago Solari,Erik ten Hag,Asensio 70'; Ziyech 7'; Neres 18'; Tadic 62'; Schone 72',1,4
-2018-2019,Octavos,Ida,2019-02-13,Tottenham,Borussia Dortmund,3-0,4-0,Wembley,Londres,Inglaterra,Mauricio Pochettino,Lucien Favre,Son 47'; Vertonghen 83'; Llorente 86',3,0
-2018-2019,Octavos,Vuelta,2019-03-05,Borussia Dortmund,Tottenham,0-1,0-4,Signal Iduna Park,Dortmund,Alemania,Lucien Favre,Mauricio Pochettino,Kane 49',0,1
-2018-2019,Octavos,Ida,2019-02-19,Lyon,Barcelona,0-0,1-5,Groupama Stadium,Lyon,Francia,Bruno Genesio,Ernesto Valverde,,0,0
-2018-2019,Octavos,Vuelta,2019-03-13,Barcelona,Lyon,5-1,5-1,Camp Nou,Barcelona,España,Ernesto Valverde,Bruno Genesio,Messi 17'; 78'; Coutinho 31'; Pique 81'; Dembele 86'; Tousart 58',5,1
-2018-2019,Octavos,Ida,2019-02-19,Liverpool,Bayern Munich,0-0,3-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Niko Kovac,,0,0
-2018-2019,Octavos,Vuelta,2019-03-13,Bayern Munich,Liverpool,1-3,1-3,Allianz Arena,Munich,Alemania,Niko Kovac,Jurgen Klopp,Mane 26'; 84'; Van Dijk 69'; Matip OG 39',1,3
-2018-2019,Octavos,Ida,2019-02-20,Atletico Madrid,Juventus,2-0,2-3,Wanda Metropolitano,Madrid,España,Diego Simeone,Massimiliano Allegri,Gimenez 78'; Godin 83',2,0
-2018-2019,Octavos,Vuelta,2019-03-12,Juventus,Atletico Madrid,3-0,3-2,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Diego Simeone,Ronaldo 27'; 48'; 86',3,0
-2018-2019,Octavos,Ida,2019-02-20,Schalke 04,Manchester City,2-3,3-10,Veltins-Arena,Gelsenkirchen,Alemania,Domenico Tedesco,Pep Guardiola,Bentaleb 38'; 45'; Aguero 18'; Sane 85'; Sterling 90',2,3
-2018-2019,Octavos,Vuelta,2019-03-12,Manchester City,Schalke 04,7-0,10-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Domenico Tedesco,Aguero 35'; 38'; Sane 42'; Sterling 56'; Silva 71'; Foden 78'; Jesus 84',7,0
-2018-2019,Cuartos,Ida,2019-04-09,Liverpool,Porto,2-0,6-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Sergio Conceicao,Keita 5'; Firmino 26',2,0
-2018-2019,Cuartos,Vuelta,2019-04-17,Porto,Liverpool,1-4,1-6,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Jurgen Klopp,Mane 26'; Salah 65'; Firmino 77'; Van Dijk 84'; Militao 69',1,4
-2018-2019,Cuartos,Ida,2019-04-09,Tottenham,Manchester City,1-0,4-4,Tottenham Hotspur Stadium,Londres,Inglaterra,Mauricio Pochettino,Pep Guardiola,Son 78',1,0
-2018-2019,Cuartos,Vuelta,2019-04-17,Manchester City,Tottenham,4-3,4-4,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Mauricio Pochettino,Sterling 4'; 21'; Aguero 59'; Bernardo Silva 11'; Son 7'; 10'; Llorente 73',4,3
-2018-2019,Cuartos,Ida,2019-04-10,Ajax,Juventus,1-1,3-2,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Massimiliano Allegri,Neres 46'; Ronaldo 45',1,1
-2018-2019,Cuartos,Vuelta,2019-04-16,Juventus,Ajax,1-2,2-3,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Erik ten Hag,Ronaldo 28'; Van de Beek 34'; De Ligt 67',1,2
-2018-2019,Cuartos,Ida,2019-04-10,Manchester United,Barcelona,0-1,0-4,Old Trafford,Manchester,Inglaterra,Ole Gunnar Solskjaer,Ernesto Valverde,Shaw OG 12',0,1
-2018-2019,Cuartos,Vuelta,2019-04-16,Barcelona,Manchester United,3-0,4-0,Camp Nou,Barcelona,España,Ernesto Valverde,Ole Gunnar Solskjaer,Messi 16'; 20'; Coutinho 61',3,0
-2018-2019,Semifinal,Ida,2019-04-30,Tottenham,Ajax,0-1,3-3,Tottenham Hotspur Stadium,Londres,Inglaterra,Mauricio Pochettino,Erik ten Hag,Van de Beek 15',0,1
-2018-2019,Semifinal,Vuelta,2019-05-08,Ajax,Tottenham,2-3,3-3,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Mauricio Pochettino,De Ligt 5'; Ziyech 35'; Lucas Moura 55'; 59'; 96',2,3
-2018-2019,Semifinal,Ida,2019-05-01,Barcelona,Liverpool,3-0,3-4,Camp Nou,Barcelona,España,Ernesto Valverde,Jurgen Klopp,Suarez 26'; Messi 75'; 82',3,0
-2018-2019,Semifinal,Vuelta,2019-05-07,Liverpool,Barcelona,4-0,4-3,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Ernesto Valverde,Origi 7'; Wijnaldum 54'; 56'; Origi 79',4,0
-2018-2019,Final,Final,2019-06-01,Tottenham,Liverpool,0-2,,Wanda Metropolitano,Madrid,España,Mauricio Pochettino,Jurgen Klopp,Salah 2'; Origi 87',0,2
-2019-2020,Octavos,Ida,2020-02-18,Atletico Madrid,Liverpool,1-0,4-2,Wanda Metropolitano,Madrid,España,Diego Simeone,Jurgen Klopp,Saul 4',1,0
-2019-2020,Octavos,Vuelta,2020-03-11,Liverpool,Atletico Madrid,2-3,2-4,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Diego Simeone,Wijnaldum 43'; Firmino 94'; Llorente 97'; 105'; Morata 120',2,3
-2019-2020,Octavos,Ida,2020-02-19,Borussia Dortmund,PSG,2-1,2-3,Signal Iduna Park,Dortmund,Alemania,Lucien Favre,Thomas Tuchel,Haaland 69'; 77'; Neymar 75',2,1
-2019-2020,Octavos,Vuelta,2020-03-11,PSG,Borussia Dortmund,2-0,3-2,Parc des Princes,Paris,Francia,Thomas Tuchel,Lucien Favre,Neymar 28'; Bernat 45',2,0
-2019-2020,Octavos,Ida,2020-02-25,Real Madrid,Manchester City,1-2,2-4,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Pep Guardiola,Isco 60'; Jesus 78'; De Bruyne 83',1,2
-2019-2020,Octavos,Vuelta,2020-08-07,Manchester City,Real Madrid,2-1,4-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Zinedine Zidane,Sterling 9'; Jesus 68'; Benzema 28',2,1
-2019-2020,Octavos,Ida,2020-02-25,Lyon,Juventus,1-0,2-2,Groupama Stadium,Lyon,Francia,Rudi Garcia,Maurizio Sarri,Tousart 31',1,0
-2019-2020,Octavos,Vuelta,2020-08-07,Juventus,Lyon,2-1,2-2,Allianz Stadium,Turin,Italia,Maurizio Sarri,Rudi Garcia,Ronaldo 43'; 60'; Depay 12',2,1
-2019-2020,Octavos,Ida,2020-02-26,Tottenham,RB Leipzig,0-1,0-4,Tottenham Hotspur Stadium,Londres,Inglaterra,Jose Mourinho,Julian Nagelsmann,Werner 58',0,1
-2019-2020,Octavos,Vuelta,2020-03-10,RB Leipzig,Tottenham,3-0,4-0,Red Bull Arena,Leipzig,Alemania,Julian Nagelsmann,Jose Mourinho,Sabitzer 10'; 21'; Forsberg 87',3,0
-2019-2020,Octavos,Ida,2020-02-18,Atalanta,Valencia,4-1,8-4,San Siro,Milán,Italia,Gian Piero Gasperini,Albert Celades,Hateboer 16'; 62'; Ilicic 42'; Freuler 57'; Cheryshev 66',4,1
-2019-2020,Octavos,Vuelta,2020-03-10,Valencia,Atalanta,3-4,4-8,Mestalla,Valencia,España,Albert Celades,Gian Piero Gasperini,Gameiro 21'; 51'; Torres 67'; Ilicic 3'; 43'; 71'; 82',3,4
-2019-2020,Octavos,Ida,2020-02-19,Chelsea,Bayern Munich,0-3,1-7,Stamford Bridge,Londres,Inglaterra,Frank Lampard,Hansi Flick,Gnabry 51'; 54'; Lewandowski 76',0,3
-2019-2020,Octavos,Vuelta,2020-08-08,Bayern Munich,Chelsea,4-1,7-1,Allianz Arena,Munich,Alemania,Hansi Flick,Frank Lampard,Lewandowski 10'; 84'; Perisic 24'; Tolisso 76'; Abraham 44',4,1
-2019-2020,Octavos,Ida,2020-02-19,Napoli,Barcelona,1-1,2-4,San Paolo,Napoles,Italia,Gennaro Gattuso,Quique Setien,Mertens 30'; Griezmann 57',1,1
-2019-2020,Octavos,Vuelta,2020-08-08,Barcelona,Napoli,3-1,4-2,Camp Nou,Barcelona,España,Quique Setien,Gennaro Gattuso,Lenglet 10'; Messi 23'; Suarez 45'; Insigne 45',3,1
-2019-2020,Cuartos,Unico,2020-08-12,Atalanta,PSG,1-2,1-2,Estadio da Luz,Lisboa,Portugal,Gian Piero Gasperini,Thomas Tuchel,Pasalic 27'; Marquinhos 90'; Choupo-Moting 93',1,2
-2019-2020,Cuartos,Unico,2020-08-13,RB Leipzig,Atletico Madrid,2-1,2-1,Estadio Jose Alvalade,Lisboa,Portugal,Julian Nagelsmann,Diego Simeone,Olmo 51'; Adams 88'; Felix 71',2,1
-2019-2020,Cuartos,Unico,2020-08-14,Barcelona,Bayern Munich,2-8,2-8,Estadio da Luz,Lisboa,Portugal,Quique Setien,Hansi Flick,Alaba OG 7'; Suarez 57'; Muller 4'; 31'; Perisic 22'; Gnabry 28'; Kimmich 63'; Lewandowski 82'; Coutinho 85'; 89',2,8
-2019-2020,Cuartos,Unico,2020-08-15,Manchester City,Lyon,1-3,1-3,Estadio Jose Alvalade,Lisboa,Portugal,Pep Guardiola,Rudi Garcia,De Bruyne 69'; Cornet 24'; Dembele 79'; 87',1,3
-2019-2020,Semifinal,Unico,2020-08-18,RB Leipzig,PSG,0-3,0-3,Estadio da Luz,Lisboa,Portugal,Julian Nagelsmann,Thomas Tuchel,Marquinhos 13'; Di Maria 42'; Bernat 56',0,3
-2019-2020,Semifinal,Unico,2020-08-19,Lyon,Bayern Munich,0-3,0-3,Estadio Jose Alvalade,Lisboa,Portugal,Rudi Garcia,Hansi Flick,Gnabry 18'; 33'; Lewandowski 88',0,3
-2019-2020,Final,Final,2020-08-23,PSG,Bayern Munich,0-1,,Estadio da Luz,Lisboa,Portugal,Thomas Tuchel,Hansi Flick,Coman 59',0,1
-2020-2021,Octavos,Ida,2021-02-16,Barcelona,PSG,1-4,2-5,Camp Nou,Barcelona,España,Ronald Koeman,Mauricio Pochettino,Messi 27'; Mbappe 32'; 65'; 85'; Kean 70',1,4
-2020-2021,Octavos,Vuelta,2021-03-10,PSG,Barcelona,1-1,5-2,Parc des Princes,Paris,Francia,Mauricio Pochettino,Ronald Koeman,Mbappe 30'; Messi 37',1,1
-2020-2021,Octavos,Ida,2021-02-17,Porto,Juventus,2-1,4-4,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Andrea Pirlo,Taremi 2'; Marega 46'; Chiesa 82',2,1
-2020-2021,Octavos,Vuelta,2021-03-09,Juventus,Porto,3-2,4-4,Allianz Stadium,Turin,Italia,Andrea Pirlo,Sergio Conceicao,Chiesa 49'; 63'; Rabiot 117'; Oliveira 19'; 115',3,2
-2020-2021,Octavos,Ida,2021-02-16,RB Leipzig,Liverpool,0-2,0-4,Puskas Arena,Budapest,Hungria,Julian Nagelsmann,Jurgen Klopp,Salah 53'; Mane 58',0,2
-2020-2021,Octavos,Vuelta,2021-03-10,Liverpool,RB Leipzig,2-0,4-0,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Julian Nagelsmann,Salah 70'; Mane 74',2,0
-2020-2021,Octavos,Ida,2021-02-17,Sevilla,Borussia Dortmund,2-3,4-5,Ramon Sanchez Pizjuan,Sevilla,España,Julen Lopetegui,Edin Terzic,Suso 7'; De Jong 84'; Haaland 27'; 43'; Dahoud 19',2,3
-2020-2021,Octavos,Vuelta,2021-03-09,Borussia Dortmund,Sevilla,2-2,5-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Julen Lopetegui,Haaland 35'; 54'; En-Nesyri 68'; 96',2,2
-2020-2021,Octavos,Ida,2021-02-23,Atletico Madrid,Chelsea,0-1,0-3,Arena Nationala,Bucarest,Rumania,Diego Simeone,Thomas Tuchel,Giroud 68',0,1
-2020-2021,Octavos,Vuelta,2021-03-17,Chelsea,Atletico Madrid,2-0,3-0,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Diego Simeone,Ziyech 34'; Emerson 94',2,0
-2020-2021,Octavos,Ida,2021-02-23,Lazio,Bayern Munich,1-4,2-6,Stadio Olimpico,Roma,Italia,Simone Inzaghi,Hansi Flick,Correa 49'; Lewandowski 9'; Musiala 24'; Sane 42'; Acerbi OG 47',1,4
-2020-2021,Octavos,Vuelta,2021-03-17,Bayern Munich,Lazio,2-1,6-2,Allianz Arena,Munich,Alemania,Hansi Flick,Simone Inzaghi,Lewandowski 33'; Choupo-Moting 73'; Parolo 82',2,1
-2020-2021,Octavos,Ida,2021-02-24,Atalanta,Real Madrid,0-1,1-4,Gewiss Stadium,Bergamo,Italia,Gian Piero Gasperini,Zinedine Zidane,Mendy 86',0,1
-2020-2021,Octavos,Vuelta,2021-03-16,Real Madrid,Atalanta,3-1,4-1,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Gian Piero Gasperini,Benzema 34'; Ramos 60'; Asensio 84'; Muriel 83',3,1
-2020-2021,Octavos,Ida,2021-02-24,Borussia Monchengladbach,Manchester City,0-2,0-4,Puskas Arena,Budapest,Hungria,Marco Rose,Pep Guardiola,Bernardo Silva 29'; Jesus 65',0,2
-2020-2021,Octavos,Vuelta,2021-03-16,Manchester City,Borussia Monchengladbach,2-0,4-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Marco Rose,De Bruyne 12'; Gundogan 18',2,0
-2020-2021,Cuartos,Ida,2021-04-06,Real Madrid,Liverpool,3-1,3-3,Alfredo Di Stefano,Madrid,España,Zinedine Zidane,Jurgen Klopp,Vinicius 27'; 65'; Asensio 36'; Salah 51',3,1
-2020-2021,Cuartos,Vuelta,2021-04-14,Liverpool,Real Madrid,0-0,3-3,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Zinedine Zidane,,0,0
-2020-2021,Cuartos,Ida,2021-04-06,Manchester City,Borussia Dortmund,2-1,4-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Edin Terzic,De Bruyne 19'; Foden 90'; Reus 84',2,1
-2020-2021,Cuartos,Vuelta,2021-04-14,Borussia Dortmund,Manchester City,1-2,2-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Pep Guardiola,Bellingham 15'; Mahrez 55'; Foden 75',1,2
-2020-2021,Cuartos,Ida,2021-04-07,Bayern Munich,PSG,2-3,3-3,Allianz Arena,Munich,Alemania,Hansi Flick,Mauricio Pochettino,Choupo-Moting 37'; Muller 60'; Mbappe 3'; 68'; Marquinhos 28',2,3
-2020-2021,Cuartos,Vuelta,2021-04-13,PSG,Bayern Munich,0-1,3-3,Parc des Princes,Paris,Francia,Mauricio Pochettino,Hansi Flick,Choupo-Moting 40',0,1
-2020-2021,Cuartos,Ida,2021-04-07,Porto,Chelsea,0-2,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Sergio Conceicao,Thomas Tuchel,Mount 32'; Chilwell 85',0,2
-2020-2021,Cuartos,Vuelta,2021-04-13,Chelsea,Porto,0-1,2-1,Ramon Sanchez Pizjuan,Sevilla,España,Thomas Tuchel,Sergio Conceicao,Taremi 94',0,1
-2020-2021,Semifinal,Ida,2021-04-27,Real Madrid,Chelsea,1-1,1-3,Alfredo Di Stefano,Madrid,España,Zinedine Zidane,Thomas Tuchel,Benzema 29'; Pulisic 14',1,1
-2020-2021,Semifinal,Vuelta,2021-05-05,Chelsea,Real Madrid,2-0,3-1,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Zinedine Zidane,Werner 28'; Mount 85',2,0
-2020-2021,Semifinal,Ida,2021-04-28,PSG,Manchester City,1-2,1-4,Parc des Princes,Paris,Francia,Mauricio Pochettino,Pep Guardiola,Marquinhos 15'; De Bruyne 64'; Mahrez 71',1,2
-2020-2021,Semifinal,Vuelta,2021-05-04,Manchester City,PSG,2-0,4-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Mauricio Pochettino,Mahrez 11'; 63',2,0
-2020-2021,Final,Final,2021-05-29,Manchester City,Chelsea,0-1,,Estadio do Dragao,Porto,Portugal,Pep Guardiola,Thomas Tuchel,Havertz 42',0,1
-2021-2022,Octavos,Ida,2022-02-15,PSG,Real Madrid,1-0,2-3,Parc des Princes,Paris,Francia,Mauricio Pochettino,Carlo Ancelotti,Mbappe 94',1,0
-2021-2022,Octavos,Vuelta,2022-03-09,Real Madrid,PSG,3-1,3-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Mauricio Pochettino,Benzema 61'; 76'; 78'; Mbappe 39',3,1
-2021-2022,Octavos,Ida,2022-02-15,Sporting CP,Manchester City,0-5,0-5,Estadio Jose Alvalade,Lisboa,Portugal,Ruben Amorim,Pep Guardiola,Mahrez 7'; Silva 17'; 44'; Foden 32'; Sterling 58',0,5
-2021-2022,Octavos,Vuelta,2022-03-09,Manchester City,Sporting CP,0-0,5-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Ruben Amorim,,0,0
-2021-2022,Octavos,Ida,2022-02-16,Inter,Liverpool,0-2,0-2,San Siro,Milán,Italia,Simone Inzaghi,Jurgen Klopp,Firmino 75'; Salah 83',0,2
-2021-2022,Octavos,Vuelta,2022-03-08,Liverpool,Inter,0-1,2-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Simone Inzaghi,Lautaro 61',0,1
-2021-2022,Octavos,Ida,2022-02-16,Salzburg,Bayern Munich,1-1,1-8,Red Bull Arena,Salzburgo,Austria,Matthias Jaissle,Julian Nagelsmann,Adamu 21'; Coman 90',1,1
-2021-2022,Octavos,Vuelta,2022-03-08,Bayern Munich,Salzburg,7-1,8-2,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Matthias Jaissle,Lewandowski 12'; 21'; 23'; Gnabry 31'; Muller 54'; 83'; Sane 85'; Kjaergaard 70',7,1
-2021-2022,Octavos,Ida,2022-02-22,Chelsea,Lille,2-0,4-1,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Jocelyn Gourvennec,Havertz 8'; Pulisic 63',2,0
-2021-2022,Octavos,Vuelta,2022-03-16,Lille,Chelsea,1-2,1-4,Stade Pierre-Mauroy,Lille,Francia,Jocelyn Gourvennec,Thomas Tuchel,Burak Yilmaz 38'; Pulisic 45'; Azpilicueta 71',1,2
-2021-2022,Octavos,Ida,2022-02-22,Villarreal,Juventus,1-1,4-1,Estadio de la Ceramica,Villarreal,España,Unai Emery,Massimiliano Allegri,Danjuma 66'; Vlahovic 1',1,1
-2021-2022,Octavos,Vuelta,2022-03-16,Juventus,Villarreal,0-3,1-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Unai Emery,Gerard Moreno 78'; Torres 85'; Danjuma 92',0,3
-2021-2022,Octavos,Ida,2022-02-23,Atletico Madrid,Manchester United,1-1,2-1,Wanda Metropolitano,Madrid,España,Diego Simeone,Ralf Rangnick,Joao Felix 7'; Elanga 80',1,1
-2021-2022,Octavos,Vuelta,2022-03-15,Manchester United,Atletico Madrid,0-1,1-2,Old Trafford,Manchester,Inglaterra,Ralf Rangnick,Diego Simeone,Lodi 41',0,1
-2021-2022,Octavos,Ida,2022-02-23,Benfica,Ajax,2-2,3-2,Estadio da Luz,Lisboa,Portugal,Nelson Verissimo,Erik ten Hag,Yaremchuk 72'; Haller OG 26'; Tadic 18'; Haller 29',2,2
-2021-2022,Octavos,Vuelta,2022-03-15,Ajax,Benfica,0-1,2-3,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Nelson Verissimo,Nunez 77',0,1
-2021-2022,Cuartos,Ida,2022-04-05,Manchester City,Atletico Madrid,1-0,1-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Diego Simeone,De Bruyne 70',1,0
-2021-2022,Cuartos,Vuelta,2022-04-13,Atletico Madrid,Manchester City,0-0,0-1,Wanda Metropolitano,Madrid,España,Diego Simeone,Pep Guardiola,,0,0
-2021-2022,Cuartos,Ida,2022-04-05,Benfica,Liverpool,1-3,4-6,Estadio da Luz,Lisboa,Portugal,Nelson Verissimo,Jurgen Klopp,Nunez 49'; Konate 17'; Mane 34'; Diaz 87',1,3
-2021-2022,Cuartos,Vuelta,2022-04-13,Liverpool,Benfica,3-3,6-4,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Nelson Verissimo,Konate 21'; Firmino 55'; 65'; Ramos 32'; Yaremchuk 73'; Nunez 82',3,3
-2021-2022,Cuartos,Ida,2022-04-06,Chelsea,Real Madrid,1-3,4-5,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Carlo Ancelotti,Havertz 40'; Benzema 21'; 24'; 46',1,3
-2021-2022,Cuartos,Vuelta,2022-04-12,Real Madrid,Chelsea,2-3,5-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Thomas Tuchel,Rodrygo 80'; Benzema 96'; Mount 15'; Rudiger 51'; Werner 75',2,3
-2021-2022,Cuartos,Ida,2022-04-06,Villarreal,Bayern Munich,1-0,2-1,Estadio de la Ceramica,Villarreal,España,Unai Emery,Julian Nagelsmann,Danjuma 8',1,0
-2021-2022,Cuartos,Vuelta,2022-04-12,Bayern Munich,Villarreal,1-1,1-2,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Unai Emery,Lewandowski 52'; Chukwueze 88',1,1
-2021-2022,Semifinal,Ida,2022-04-26,Manchester City,Real Madrid,4-3,6-5,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,De Bruyne 2'; Jesus 11'; Foden 53'; Bernardo Silva 74'; Benzema 33'; 82'; Vinicius 55',4,3
-2021-2022,Semifinal,Vuelta,2022-05-04,Real Madrid,Manchester City,3-1,6-5,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,Rodrygo 90'; 91'; Benzema 95'; Mahrez 73',3,1
-2021-2022,Semifinal,Ida,2022-04-27,Liverpool,Villarreal,2-0,5-2,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Unai Emery,Henderson OG 53'; Mane 55',2,0
-2021-2022,Semifinal,Vuelta,2022-05-03,Villarreal,Liverpool,2-3,2-5,Estadio de la Ceramica,Villarreal,España,Unai Emery,Jurgen Klopp,Dia 3'; Coquelin 41'; Fabinho 62'; Diaz 67'; Mane 74',2,3
-2021-2022,Final,Final,2022-05-28,Liverpool,Real Madrid,0-1,,Stade de France,Paris,Francia,Jurgen Klopp,Carlo Ancelotti,Vinicius 59',0,1
-2022-2023,Octavos,Ida,2023-02-14,PSG,Bayern Munich,0-1,0-3,Parc des Princes,Paris,Francia,Christophe Galtier,Julian Nagelsmann,Coman 53',0,1
-2022-2023,Octavos,Vuelta,2023-03-08,Bayern Munich,PSG,2-0,3-0,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Christophe Galtier,Choupo-Moting 61'; Gnabry 89',2,0
-2022-2023,Octavos,Ida,2023-02-14,AC Milan,Tottenham,1-0,1-0,San Siro,Milán,Italia,Stefano Pioli,Antonio Conte,Brahim Diaz 7',1,0
-2022-2023,Octavos,Vuelta,2023-03-08,Tottenham,AC Milan,0-0,0-1,Tottenham Hotspur Stadium,Londres,Inglaterra,Antonio Conte,Stefano Pioli,,0,0
-2022-2023,Octavos,Ida,2023-02-15,Club Brugge,Benfica,0-2,1-7,Jan Breydel Stadium,Brujas,Belgica,Scott Parker,Roger Schmidt,Joao Mario 51'; Neres 88',0,2
-2022-2023,Octavos,Vuelta,2023-03-07,Benfica,Club Brugge,5-1,7-1,Estadio da Luz,Lisboa,Portugal,Roger Schmidt,Scott Parker,Ramos 38'; 57'; 67'; Joao Mario 71'; Neres 77'; Meijer 87',5,1
-2022-2023,Octavos,Ida,2023-02-15,Borussia Dortmund,Chelsea,1-0,1-2,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Graham Potter,Adeyemi 63',1,0
-2022-2023,Octavos,Vuelta,2023-03-07,Chelsea,Borussia Dortmund,2-0,2-1,Stamford Bridge,Londres,Inglaterra,Graham Potter,Edin Terzic,Sterling 43'; Havertz 53',2,0
-2022-2023,Octavos,Ida,2023-02-21,Liverpool,Real Madrid,2-5,2-6,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Carlo Ancelotti,Nunez 4'; Salah 14'; Vinicius 21'; 36'; Militao 47'; Benzema 55'; 67',2,5
-2022-2023,Octavos,Vuelta,2023-03-15,Real Madrid,Liverpool,1-0,6-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jurgen Klopp,Benzema 78',1,0
-2022-2023,Octavos,Ida,2023-02-21,Eintracht Frankfurt,Napoli,0-2,0-5,Deutsche Bank Park,Frankfurt,Alemania,Oliver Glasner,Luciano Spalletti,Osimhen 40'; Di Lorenzo 65',0,2
-2022-2023,Octavos,Vuelta,2023-03-15,Napoli,Eintracht Frankfurt,3-0,5-0,Stadio Diego Armando Maradona,Napoles,Italia,Luciano Spalletti,Oliver Glasner,Osimhen 45'; 53'; Zielinski 64',3,0
-2022-2023,Octavos,Ida,2023-02-22,Inter,Porto,1-0,1-0,San Siro,Milán,Italia,Simone Inzaghi,Sergio Conceicao,Lukaku 86',1,0
-2022-2023,Octavos,Vuelta,2023-03-14,Porto,Inter,0-0,0-1,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Simone Inzaghi,,0,0
-2022-2023,Octavos,Ida,2023-02-22,RB Leipzig,Manchester City,1-1,1-8,Red Bull Arena,Leipzig,Alemania,Marco Rose,Pep Guardiola,Gvardiol 70'; Mahrez 27',1,1
-2022-2023,Octavos,Vuelta,2023-03-14,Manchester City,RB Leipzig,7-0,8-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Marco Rose,Haaland 22'; 24'; 45'; 53'; 57'; Gundogan 49'; De Bruyne 92',7,0
-2022-2023,Cuartos,Ida,2023-04-11,Real Madrid,Chelsea,2-0,4-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Frank Lampard,Benzema 21'; Asensio 74',2,0
-2022-2023,Cuartos,Vuelta,2023-04-18,Chelsea,Real Madrid,0-2,0-4,Stamford Bridge,Londres,Inglaterra,Frank Lampard,Carlo Ancelotti,Rodrygo 58'; 80',0,2
-2022-2023,Cuartos,Ida,2023-04-11,Benfica,Inter,0-2,3-5,Estadio da Luz,Lisboa,Portugal,Roger Schmidt,Simone Inzaghi,Barella 51'; Lukaku 82',0,2
-2022-2023,Cuartos,Vuelta,2023-04-19,Inter,Benfica,3-3,5-3,San Siro,Milán,Italia,Simone Inzaghi,Roger Schmidt,Barella 14'; Lautaro 65'; Correa 78'; Aursnes 38'; Antonio Silva 86'; Musa 95',3,3
-2022-2023,Cuartos,Ida,2023-04-12,Manchester City,Bayern Munich,3-0,4-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Thomas Tuchel,Rodri 27'; Silva 70'; Haaland 76',3,0
-2022-2023,Cuartos,Vuelta,2023-04-19,Bayern Munich,Manchester City,1-1,1-4,Allianz Arena,Munich,Alemania,Thomas Tuchel,Pep Guardiola,Kimmich 83'; Haaland 57',1,1
-2022-2023,Cuartos,Ida,2023-04-12,AC Milan,Napoli,1-0,2-1,San Siro,Milán,Italia,Stefano Pioli,Luciano Spalletti,Bennacer 40',1,0
-2022-2023,Cuartos,Vuelta,2023-04-18,Napoli,AC Milan,1-1,1-2,Stadio Diego Armando Maradona,Napoles,Italia,Luciano Spalletti,Stefano Pioli,Osimhen 93'; Giroud 43',1,1
-2022-2023,Semifinal,Ida,2023-05-09,Real Madrid,Manchester City,1-1,1-5,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,Vinicius 36'; De Bruyne 67',1,1
-2022-2023,Semifinal,Vuelta,2023-05-17,Manchester City,Real Madrid,4-0,5-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,Silva 23'; 37'; Akanji 76'; Alvarez 91',4,0
-2022-2023,Semifinal,Ida,2023-05-10,AC Milan,Inter,0-2,0-3,San Siro,Milán,Italia,Stefano Pioli,Simone Inzaghi,Dzeko 8'; Mkhitaryan 11',0,2
-2022-2023,Semifinal,Vuelta,2023-05-16,Inter,AC Milan,1-0,3-0,San Siro,Milán,Italia,Simone Inzaghi,Stefano Pioli,Lautaro 74',1,0
-2022-2023,Final,Final,2023-06-10,Manchester City,Inter,1-0,,Estadio Olimpico Ataturk,Estambul,Turquia,Pep Guardiola,Simone Inzaghi,Rodri 68',1,0
-2023-2024,Octavos,Ida,2024-02-13,Copenhagen,Manchester City,1-3,2-6,Parken Stadium,Copenhague,Dinamarca,Jacob Neestrup,Pep Guardiola,Magnus Mattsson 34'; De Bruyne 10'; Silva 45'; Foden 92',1,3
-2023-2024,Octavos,Vuelta,2024-03-06,Manchester City,Copenhagen,3-1,6-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Jacob Neestrup,Akanji 5'; Alvarez 9'; Haaland 45'; Elyounoussi 29',3,1
-2023-2024,Octavos,Ida,2024-02-13,RB Leipzig,Real Madrid,0-1,1-2,Red Bull Arena,Leipzig,Alemania,Marco Rose,Carlo Ancelotti,Brahim Diaz 48',0,1
-2023-2024,Octavos,Vuelta,2024-03-06,Real Madrid,RB Leipzig,1-1,2-1,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Marco Rose,Vinicius 65'; Orban 68',1,1
-2023-2024,Octavos,Ida,2024-02-14,PSG,Real Sociedad,2-0,4-1,Parc des Princes,Paris,Francia,Luis Enrique,Imanol Alguacil,Mbappe 58'; Barcola 70',2,0
-2023-2024,Octavos,Vuelta,2024-03-05,Real Sociedad,PSG,1-2,1-4,Reale Arena,San Sebastian,España,Imanol Alguacil,Luis Enrique,Merino 89'; Mbappe 15'; 56',1,2
-2023-2024,Octavos,Ida,2024-02-14,Lazio,Bayern Munich,1-0,1-3,Stadio Olimpico,Roma,Italia,Maurizio Sarri,Thomas Tuchel,Immobile 69',1,0
-2023-2024,Octavos,Vuelta,2024-03-05,Bayern Munich,Lazio,3-0,3-1,Allianz Arena,Munich,Alemania,Thomas Tuchel,Maurizio Sarri,Kane 38'; 66'; Muller 45',3,0
-2023-2024,Octavos,Ida,2024-02-20,Inter,Atletico Madrid,1-0,2-2,San Siro,Milán,Italia,Simone Inzaghi,Diego Simeone,Arnautovic 79',1,0
-2023-2024,Octavos,Vuelta,2024-03-13,Atletico Madrid,Inter,2-1,2-2,Wanda Metropolitano,Madrid,España,Diego Simeone,Simone Inzaghi,Griezmann 35'; Depay 87'; Dimarco 33',2,1
-2023-2024,Octavos,Ida,2024-02-20,PSV,Arsenal,1-1,2-3,Philips Stadion,Eindhoven,Paises Bajos,Peter Bosz,Mikel Arteta,Bakayoko 20'; Trossard 45',1,1
-2023-2024,Octavos,Vuelta,2024-03-12,Arsenal,PSV,2-1,3-2,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Peter Bosz,Zinchenko 6'; Rice 70'; Veerman 18',2,1
-2023-2024,Octavos,Ida,2024-02-21,Porto,Arsenal,1-0,1-1,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Mikel Arteta,Galeno 94',1,0
-2023-2024,Octavos,Vuelta,2024-03-12,Arsenal,Porto,1-0,1-1,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Sergio Conceicao,Trossard 41',1,0
-2023-2024,Octavos,Ida,2024-02-21,Napoli,Barcelona,1-1,2-4,Stadio Diego Armando Maradona,Napoles,Italia,Francesco Calzona,Xavi,Lewandowski 60'; Osimhen 75',1,1
-2023-2024,Octavos,Vuelta,2024-03-12,Barcelona,Napoli,3-1,4-2,Camp Nou,Barcelona,España,Xavi,Francesco Calzona,Fermin 15'; Cancelo 17'; Lewandowski 83'; Rrahmani 30',3,1
-2023-2024,Cuartos,Ida,2024-04-09,Arsenal,Bayern Munich,2-2,2-3,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Thomas Tuchel,Saka 12'; Trossard 76'; Gnabry 18'; Kane 32',2,2
-2023-2024,Cuartos,Vuelta,2024-04-17,Bayern Munich,Arsenal,1-0,3-2,Allianz Arena,Munich,Alemania,Thomas Tuchel,Mikel Arteta,Kimmich 63',1,0
-2023-2024,Cuartos,Ida,2024-04-09,Real Madrid,Manchester City,3-3,4-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,Bernardo Silva 2'; Camavinga 12'; Rodrygo 14'; Foden 66'; Gvardiol 71'; Valverde 79',3,3
-2023-2024,Cuartos,Vuelta,2024-04-17,Manchester City,Real Madrid,1-1,4-4,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,De Bruyne 76'; Rodrygo 12',1,1
-2023-2024,Cuartos,Ida,2024-04-10,PSG,Barcelona,2-3,4-6,Parc des Princes,Paris,Francia,Luis Enrique,Xavi,Dembélé 48'; Vitinha 51'; Raphinha 37'; 62'; Christensen 77',2,3
-2023-2024,Cuartos,Vuelta,2024-04-16,Barcelona,PSG,1-4,4-6,Camp Nou,Barcelona,España,Xavi,Luis Enrique,Raphinha 12'; Dembélé 40'; Vitinha 54'; Mbappe 61'; 89',1,4
-2023-2024,Cuartos,Ida,2024-04-10,Atletico Madrid,Borussia Dortmund,2-1,4-5,Wanda Metropolitano,Madrid,España,Diego Simeone,Edin Terzic,De Paul 4'; Lino 32'; Haller 81',2,1
-2023-2024,Cuartos,Vuelta,2024-04-16,Borussia Dortmund,Atletico Madrid,4-2,5-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Diego Simeone,Brandt 34'; Maatsen 39'; Fullkrug 71'; Sabitzer 74'; Hummels OG 49'; Correa 64',4,2
-2023-2024,Semifinal,Ida,2024-04-30,Bayern Munich,Real Madrid,2-2,3-4,Allianz Arena,Munich,Alemania,Thomas Tuchel,Carlo Ancelotti,Sane 53'; Kane 57'; Vinicius 24'; 83',2,2
-2023-2024,Semifinal,Vuelta,2024-05-08,Real Madrid,Bayern Munich,2-1,4-3,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Thomas Tuchel,Joselu 88'; 91'; Davies 68',2,1
-2023-2024,Semifinal,Ida,2024-05-01,Borussia Dortmund,PSG,1-0,2-0,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Luis Enrique,Fullkrug 36',1,0
-2023-2024,Semifinal,Vuelta,2024-05-07,PSG,Borussia Dortmund,0-1,0-2,Parc des Princes,Paris,Francia,Luis Enrique,Edin Terzic,Hummels 50',0,1
-2023-2024,Final,Final,2024-06-01,Real Madrid,Borussia Dortmund,2-0,,Wembley Stadium,Londres,Inglaterra,Carlo Ancelotti,Edin Terzic,Carvajal 74'; Vinicius 83',2,0
-2024-2025,Knockout Play-offs,Ida,2025-02-11,Manchester City,Real Madrid,2-3,,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,"Haaland 19', 80' (P); Mbappé 60', Brahim 86', Bellingham 90+2'",2,3
-2024-2025,Knockout Play-offs,Ida,2025-02-11,Stade Brestois,PSG,0-3,,Stade de Roudourou,Guingamp,Francia,Eric Roy,Luis Enrique,"Vitinha 21' (P), Dembélé 45', 66'",0,3
-2024-2025,Knockout Play-offs,Ida,2025-02-11,Juventus,PSV Eindhoven,2-1,,Allianz Stadium,Turín,Italia,Thiago Motta,Peter Bosz,"Vlahovic 30', Yildiz 60'; De Jong 85'",2,1
-2024-2025,Knockout Play-offs,Ida,2025-02-11,Sporting CP,Borussia Dortmund,0-3,,José Alvalade,Lisboa,Portugal,Joao Pereira,Nuri Sahin,"NULL; Guirassy 15', Brandt 40', Adeyemi 70'",0,3
-2024-2025,Knockout Play-offs,Ida,2025-02-12,Feyenoord,AC Milan,1-0,,De Kuip,Rotterdam,Países Bajos,Brian Priske,Paulo Fonseca,Paixão 3',1,0
-2024-2025,Knockout Play-offs,Ida,2025-02-12,AS Monaco,Benfica,0-1,,Stade Louis II,Mónaco,Mónaco,Adi Hütter,Bruno Lage,Pavlidis 22',0,1
-2024-2025,Knockout Play-offs,Ida,2025-02-12,Celtic,Bayern Munich,1-2,,Celtic Park,Glasgow,Escocia,Brendan Rodgers,Vincent Kompany,"Maeda 54'; Kane 20', Musiala 75'",1,2
-2024-2025,Knockout Play-offs,Ida,2025-02-12,Club Brugge,Atalanta,2-1,,Jan Breydel,Brujas,Bélgica,Nicky Hayen,Gian Piero Gasperini,"Vanaken 30', Jutglà 60'; Retegui 45'",2,1
-2024-2025,Knockout Play-offs,Vuelta,2025-02-18,AC Milan,Feyenoord,1-1,1-2,San Siro,Milán,Italia,Paulo Fonseca,Brian Priske,Leão 55'; Gimenez 40',1,1
-2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Benfica,AS Monaco,3-3,4-3,Estádio da Luz,Lisboa,Portugal,Bruno Lage,Adi Hütter,"Pavlidis 20', Di María 45', Kokcu 80'; Embolo 10', Minamino 30', Akliouche 65'",3,3
-2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Bayern Munich,Celtic,1-1,3-2,Allianz Arena,Múnich,Alemania,Vincent Kompany,Brendan Rodgers,Kane 10'; Furuhashi 60',1,1
-2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Atalanta,Club Brugge,1-3,2-5,New Balance Arena,Bérgamo,Italia,Gian Piero Gasperini,Nicky Hayen,"De Ketelaere 15'; Talbi 40', 85', Skov Olsen 70'",1,3
-2024-2025,Knockout Play-offs,Vuelta,2025-02-19,PSG,Stade Brestois,7-0,10-0,Parc des Princes,París,Francia,Luis Enrique,Eric Roy,"Barcola (3), Mbappé (2), Dembélé 1, Doué 1",7,0
-2024-2025,Knockout Play-offs,Vuelta,2025-02-19,PSV Eindhoven,Juventus,3-1,4-3,Philips Stadion,Eindhoven,Países Bajos,Peter Bosz,Thiago Motta,"Bakayoko 20', De Jong 90+5', Tillman 105'; Vlahovic 45'",3,1
-2024-2025,Knockout Play-offs,Vuelta,2025-02-19,Real Madrid,Manchester City,3-1,6-3,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Pep Guardiola,"Mbappé 10', 50', Vinícius 80'; Haaland 15'",3,1
-2024-2025,Knockout Play-offs,Vuelta,2025-02-19,Borussia Dortmund,Sporting CP,0-0,3-0,Signal Iduna Park,Dortmund,Alemania,Niko Kovac,Rui Borges,,0,0
-2024-2025,Octavos,Ida,2025-03-04,Real Madrid,Atlético Madrid,2-1,,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Diego Simeone,"Bellingham 15', Vinícius 80'; Griezmann 60'",2,1
-2024-2025,Octavos,Ida,2025-03-04,PSV Eindhoven,Arsenal,1-7,,Philips Stadion,Eindhoven,Países Bajos,Peter Bosz,Mikel Arteta,"De Jong 55'; Saka (2), Havertz (2), Odegaard, Martinelli, Rice",1,7
-2024-2025,Octavos,Ida,2025-03-04,Borussia Dortmund,LOSC Lille,1-1,,Signal Iduna Park,Dortmund,Alemania,Nuri Sahin,Bruno Génésio,Guirassy 40'; David 65',1,1
-2024-2025,Octavos,Ida,2025-03-04,Club Brugge,Aston Villa,1-3,,Jan Breydel,Brujas,Bélgica,Nicky Hayen,Unai Emery,"Vanaken 10'; Watkins (2), Rogers 75'",1,3
-2024-2025,Octavos,Ida,2025-03-05,Feyenoord,Inter Milan,0-2,,De Kuip,Rotterdam,Países Bajos,Brian Priske,Simone Inzaghi,"Lautaro 12', Thuram 44'",0,2
-2024-2025,Octavos,Ida,2025-03-05,Bayer Leverkusen,Bayern Munich,0-2,,BayArena,Leverkusen,Alemania,Xabi Alonso,Vincent Kompany,"Kane 22', Musiala 55'",0,2
-2024-2025,Octavos,Ida,2025-03-05,S.L. Benfica,FC Barcelona,0-1,,Estádio da Luz,Lisboa,Portugal,Bruno Lage,Hansi Flick,Lewandowski 28',0,1
-2024-2025,Octavos,Ida,2025-03-05,PSG,Liverpool,0-1,,Parc des Princes,París,Francia,Luis Enrique,Arne Slot,NULL; Salah 33',0,1
-2024-2025,Octavos,Vuelta,2025-03-11,FC Barcelona,S.L. Benfica,3-1,4-1,Lluís Companys,Barcelona,España,Hansi Flick,Bruno Lage,"Yamal 15', Lewandowski 40', Raphinha 70'; Pavlidis 80'",3,1
-2024-2025,Octavos,Vuelta,2025-03-11,Inter Milan,Feyenoord,2-1,4-1,San Siro,Milán,Italia,Simone Inzaghi,Brian Priske,"Barella 30', Calhanoglu 65'; Gimenez 45'",2,1
-2024-2025,Octavos,Vuelta,2025-03-11,Liverpool,PSG,0-1,1-1 (P),Anfield,Liverpool,Inglaterra,Arne Slot,Luis Enrique,Dembélé 82',0,1
-2024-2025,Octavos,Vuelta,2025-03-11,Bayern Munich,Bayer Leverkusen,3-0,5-0,Allianz Arena,Múnich,Alemania,Vincent Kompany,Xabi Alonso,"Kane (2), Olise 70'",3,0
-2024-2025,Octavos,Vuelta,2025-03-12,LOSC Lille,Borussia Dortmund,1-2,2-3,Pierre-Mauroy,Villeneuve-d'Ascq,Francia,Bruno Génésio,Nuri Sahin,"Zhegrova 10'; Guirassy 44', Adeyemi 80'",1,2
-2024-2025,Octavos,Vuelta,2025-03-12,Aston Villa,Club Brugge,3-0,6-1,Villa Park,Birmingham,Inglaterra,Unai Emery,Nicky Hayen,"Watkins 20', Rogers 45', Ramsey 88'",3,0
-2024-2025,Octavos,Vuelta,2025-03-12,Arsenal,PSV Eindhoven,2-2,9-3,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Peter Bosz,"Jesus 40', Trossard 75'; Bakayoko 20', De Jong 85'",2,2
-2024-2025,Octavos,Vuelta,2025-03-12,Atlético Madrid,Real Madrid,1-0,2-2 (P),Metropolitano,Madrid,España,Diego Simeone,Carlo Ancelotti,Griezmann 72',1,0
-2024-2025,Cuartos,Ida,2025-04-08,Bayern Munich,Inter Milan,1-2,,Allianz Arena,Múnich,Alemania,Vincent Kompany,Simone Inzaghi,"Kane 31'; Lautaro 12', Barella 55'",1,2
-2024-2025,Cuartos,Ida,2025-04-08,Arsenal,Real Madrid,3-0,,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Carlo Ancelotti,"Saka 10', Havertz 44', Odegaard 75'",3,0
-2024-2025,Cuartos,Ida,2025-04-09,FC Barcelona,Borussia Dortmund,4-0,,Lluís Companys,Barcelona,España,Hansi Flick,Nuri Sahin,"Raphinha 15', 40', Lewandowski 60', Yamal 85'",4,0
-2024-2025,Cuartos,Ida,2025-04-09,PSG,Aston Villa,3-1,,Parc des Princes,París,Francia,Luis Enrique,Unai Emery,"Barcola 12', Mbappé 45', Vitinha 80'; Watkins 33'",3,1
-2024-2025,Cuartos,Vuelta,2025-04-15,Aston Villa,PSG,3-2,4-5,Villa Park,Birmingham,Inglaterra,Unai Emery,Luis Enrique,"Watkins (2), McGinn; Mbappé, Dembélé",3,2
-2024-2025,Cuartos,Vuelta,2025-04-15,Borussia Dortmund,FC Barcelona,3-1,3-5,Signal Iduna Park,Dortmund,Alemania,Nuri Sahin,Hansi Flick,"Guirassy (2), Brandt; Lewandowski",3,1
-2024-2025,Cuartos,Vuelta,2025-04-16,Real Madrid,Arsenal,1-2,1-5,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Mikel Arteta,"Vinícius 10'; Saka 44', Odegaard 75'",1,2
-2024-2025,Cuartos,Vuelta,2025-04-16,Inter Milan,Bayern Munich,2-2,4-3,San Siro,Milán,Italia,Simone Inzaghi,Vincent Kompany,"Lautaro, Thuram; Kane, Musiala",2,2
-2024-2025,Semis,Ida,2025-04-29,Arsenal,PSG,0-1,,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Luis Enrique,Barcola 65',0,1
-2024-2025,Semis,Ida,2025-04-30,FC Barcelona,Inter Milan,3-3,,Lluís Companys,Barcelona,España,Hansi Flick,Simone Inzaghi,"Lewandowski (2), Yamal; Lautaro (2), Thuram",3,3
-2024-2025,Semis,Vuelta,2025-05-06,Inter Milan,FC Barcelona,4-3,7-6,San Siro,Milán,Italia,Simone Inzaghi,Hansi Flick,"Lautaro 15', Barella 40', Thuram 95', Calhanoglu 110'; Raphinha (2), Lewandowski 85'",4,3
-2024-2025,Semis,Vuelta,2025-05-07,PSG,Arsenal,2-1,3-1,Parc des Princes,París,Francia,Luis Enrique,Mikel Arteta,"Mbappé 20', Doué 75'; Saka 40'",2,1
-2024-2025,Final,Final,2025-05-31,PSG,Inter Milan,5-0,5-0,Allianz Arena,Múnich,Alemania,Luis Enrique,Simone Inzaghi,Hakimi 12'; Doué 20'; 63'; Kvaratskhelia 73'; Mayulu 86',5,0
+season,fase,instancia,fecha,local,visitante,marcador,global,estadio,ciudad,pais,entrenador_local,entrenador_visitante,tiros_totales,tiros_totales_local,tiros_totales_visitante,tiros_puerta,tiros_puerta_local,tiros_puerta_visitante,posesion_local,posesion_visitante,faltas_total,faltas_local,faltas_visitante,corners_total,corners_local,corners_visitante,home_goals,away_goals
+2010-2011,Octavos,Ida,2011-02-15,Valencia,Schalke 04,1-1,2-4,Mestalla,Valencia,España,Unai Emery,Felix Magath,24.0,15.0,9.0,11.0,6.0,5.0,65%,35%,30.0,9.0,21.0,12.0,5.0,7.0,1,1
+2010-2011,Octavos,Vuelta,2011-03-09,Schalke 04,Valencia,3-1,4-2,Veltins-Arena,Gelsenkirchen,Alemania,Felix Magath,Unai Emery,25.0,13.0,12.0,10.0,6.0,4.0,41%,59%,36.0,16.0,20.0,12.0,7.0,5.0,3,1
+2010-2011,Octavos,Ida,2011-02-16,AC Milan,Tottenham,0-1,0-1,San Siro,Milan,Italia,Massimiliano Allegri,Harry Redknapp,,,,,,,,,,,,,,,0,1
+2010-2011,Octavos,Vuelta,2011-03-09,Tottenham,AC Milan,0-0,1-0,White Hart Lane,Londres,Inglaterra,Harry Redknapp,Massimiliano Allegri,24.0,8.0,16.0,5.0,1.0,4.0,38%,62%,33.0,16.0,17.0,9.0,4.0,5.0,0,0
+2010-2011,Octavos,Ida,2011-02-15,Arsenal,Barcelona,2-1,3-4,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Pep Guardiola,,,,,,,,,,,,,,,2,1
+2010-2011,Octavos,Vuelta,2011-03-08,Barcelona,Arsenal,3-1,4-3,Camp Nou,Barcelona,España,Pep Guardiola,Arsene Wenger,20.0,20.0,0.0,12.0,12.0,0.0,76%,24%,27.0,8.0,19.0,7.0,5.0,2.0,3,1
+2010-2011,Octavos,Ida,2011-02-16,Roma,Shakhtar,2-3,2-6,Olimpico,Roma,Italia,Claudio Ranieri,Mircea Lucescu,34.0,22.0,12.0,8.0,3.0,5.0,59%,41%,39.0,17.0,22.0,16.0,11.0,5.0,2,3
+2010-2011,Octavos,Vuelta,2011-03-08,Shakhtar,Roma,3-0,6-2,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Claudio Ranieri,22.0,10.0,12.0,8.0,5.0,3.0,54%,46%,32.0,18.0,14.0,11.0,7.0,4.0,3,0
+2010-2011,Octavos,Ida,2011-02-22,Inter,Bayern Munich,0-1,3-3,San Siro,Milan,Italia,Leonardo,Louis van Gaal,,,,,,,,,,,,,,,0,1
+2010-2011,Octavos,Vuelta,2011-03-15,Bayern Munich,Inter,2-3,3-3,Allianz Arena,Munich,Alemania,Louis van Gaal,Leonardo,32.0,17.0,15.0,11.0,8.0,3.0,47%,53%,36.0,17.0,19.0,10.0,7.0,3.0,2,3
+2010-2011,Octavos,Ida,2011-02-23,Marseille,Manchester United,0-0,1-2,Velodrome,Marseille,Francia,Didier Deschamps,Alex Ferguson,20.0,12.0,8.0,4.0,2.0,2.0,48%,52%,23.0,9.0,14.0,7.0,5.0,2.0,0,0
+2010-2011,Octavos,Vuelta,2011-03-15,Manchester United,Marseille,2-1,2-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Didier Deschamps,20.0,9.0,11.0,10.0,7.0,3.0,54%,46%,27.0,12.0,15.0,12.0,6.0,6.0,2,1
+2010-2011,Octavos,Ida,2011-02-22,Copenhagen,Chelsea,0-2,0-2,Parken Stadium,Copenhague,Dinamarca,Stale Solbakken,Carlo Ancelotti,37.0,15.0,22.0,12.0,5.0,7.0,55%,45%,22.0,13.0,9.0,4.0,1.0,3.0,0,2
+2010-2011,Octavos,Vuelta,2011-03-16,Chelsea,Copenhagen,0-0,2-0,Stamford Bridge,Londres,Inglaterra,Carlo Ancelotti,Stale Solbakken,37.0,29.0,8.0,9.0,7.0,2.0,46%,54%,29.0,15.0,14.0,14.0,11.0,3.0,0,0
+2010-2011,Octavos,Ida,2011-02-23,Lyon,Real Madrid,1-1,1-4,Stade Gerland,Lyon,Francia,Claude Puel,Jose Mourinho,,,,,,,,,,,,,,,1,1
+2010-2011,Octavos,Vuelta,2011-03-16,Real Madrid,Lyon,3-0,4-1,Santiago Bernabeu,Madrid,España,Jose Mourinho,Claude Puel,28.0,20.0,8.0,13.0,10.0,3.0,55%,45%,30.0,12.0,18.0,13.0,9.0,4.0,3,0
+2010-2011,Cuartos,Ida,2011-04-05,Real Madrid,Tottenham,4-0,5-0,Santiago Bernabeu,Madrid,España,Jose Mourinho,Harry Redknapp,40.0,36.0,4.0,11.0,10.0,1.0,72%,28%,20.0,10.0,10.0,12.0,9.0,3.0,4,0
+2010-2011,Cuartos,Vuelta,2011-04-13,Tottenham,Real Madrid,0-1,0-5,White Hart Lane,Londres,Inglaterra,Harry Redknapp,Jose Mourinho,29.0,17.0,12.0,6.0,2.0,4.0,44%,56%,22.0,9.0,13.0,9.0,4.0,5.0,0,1
+2010-2011,Cuartos,Ida,2011-04-05,Inter,Schalke 04,2-5,3-7,San Siro,Milan,Italia,Leonardo,Ralf Rangnick,35.0,18.0,17.0,17.0,6.0,11.0,53%,47%,27.0,8.0,19.0,8.0,4.0,4.0,2,5
+2010-2011,Cuartos,Vuelta,2011-04-13,Schalke 04,Inter,2-1,7-3,Veltins-Arena,Gelsenkirchen,Alemania,Ralf Rangnick,Leonardo,27.0,8.0,19.0,8.0,3.0,5.0,37%,63%,38.0,26.0,12.0,19.0,7.0,12.0,2,1
+2010-2011,Cuartos,Ida,2011-04-06,Barcelona,Shakhtar,5-1,6-1,Camp Nou,Barcelona,España,Pep Guardiola,Mircea Lucescu,24.0,19.0,5.0,11.0,10.0,1.0,70%,30%,29.0,9.0,20.0,7.0,4.0,3.0,5,1
+2010-2011,Cuartos,Vuelta,2011-04-12,Shakhtar,Barcelona,0-1,1-6,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Pep Guardiola,27.0,11.0,16.0,12.0,5.0,7.0,33%,67%,39.0,22.0,17.0,9.0,5.0,4.0,0,1
+2010-2011,Cuartos,Ida,2011-04-06,Chelsea,Manchester United,0-1,1-3,Stamford Bridge,Londres,Inglaterra,Carlo Ancelotti,Alex Ferguson,29.0,21.0,8.0,9.0,7.0,2.0,57%,43%,32.0,15.0,17.0,8.0,3.0,5.0,0,1
+2010-2011,Cuartos,Vuelta,2011-04-12,Manchester United,Chelsea,2-1,3-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Carlo Ancelotti,28.0,10.0,18.0,10.0,6.0,4.0,55%,45%,31.0,13.0,18.0,9.0,7.0,2.0,2,1
+2010-2011,Semifinal,Ida,2011-04-26,Real Madrid,Barcelona,0-2,1-3,Santiago Bernabeu,Madrid,España,Jose Mourinho,Pep Guardiola,,,,,,,,,,,,,,,0,2
+2010-2011,Semifinal,Vuelta,2011-05-03,Barcelona,Real Madrid,1-1,3-1,Camp Nou,Barcelona,España,Pep Guardiola,Jose Mourinho,16.0,12.0,4.0,7.0,6.0,1.0,69%,31%,40.0,10.0,30.0,5.0,3.0,2.0,1,1
+2010-2011,Semifinal,Ida,2011-04-26,Schalke 04,Manchester United,0-2,1-6,Veltins-Arena,Gelsenkirchen,Alemania,Ralf Rangnick,Alex Ferguson,29.0,10.0,19.0,15.0,5.0,10.0,33%,67%,27.0,12.0,15.0,9.0,3.0,6.0,0,2
+2010-2011,Semifinal,Vuelta,2011-05-04,Manchester United,Schalke 04,4-1,6-1,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Ralf Rangnick,25.0,10.0,15.0,12.0,8.0,4.0,46%,54%,28.0,13.0,15.0,23.0,13.0,10.0,4,1
+2010-2011,Final,Final,2011-05-28,Barcelona,Manchester United,3-1,,Wembley,Londres,Inglaterra,Pep Guardiola,Alex Ferguson,26.0,22.0,4.0,13.0,12.0,1.0,68%,32%,21.0,5.0,16.0,6.0,6.0,0.0,3,1
+2011-2012,Octavos,Ida,2012-02-14,Bayer Leverkusen,Barcelona,1-3,2-10,BayArena,Leverkusen,Alemania,,,19.0,8.0,11.0,9.0,4.0,5.0,25%,75%,23.0,14.0,9.0,7.0,0.0,7.0,1,3
+2011-2012,Octavos,Vuelta,2012-03-07,Barcelona,Bayer Leverkusen,7-1,10-2,Camp Nou,Barcelona,España,,,25.0,18.0,7.0,11.0,10.0,1.0,77%,23%,19.0,8.0,11.0,7.0,6.0,1.0,7,1
+2011-2012,Octavos,Ida,2012-02-15,AC Milan,Arsenal,4-0,4-3,San Siro,Milán,Italia,,,26.0,18.0,8.0,9.0,5.0,4.0,43%,57%,22.0,12.0,10.0,11.0,5.0,6.0,4,0
+2011-2012,Octavos,Vuelta,2012-03-06,Arsenal,AC Milan,3-0,3-4,Emirates Stadium,Londres,Inglaterra,,,22.0,9.0,13.0,12.0,7.0,5.0,45%,55%,29.0,21.0,8.0,6.0,5.0,1.0,3,0
+2011-2012,Octavos,Ida,2012-02-14,Lyon,APOEL,1-0,1-1,Stade Gerland,Lyon,Francia,,,19.0,18.0,1.0,6.0,5.0,1.0,64%,36%,27.0,15.0,12.0,11.0,7.0,4.0,1,0
+2011-2012,Octavos,Vuelta,2012-03-07,APOEL,Lyon,1-0 ,1-1,GSP Stadium,Nicosia,Chipre,,,35.0,13.0,22.0,8.0,3.0,5.0,46%,54%,47.0,20.0,27.0,13.0,2.0,11.0,1,0
+2011-2012,Octavos,Ida,2012-02-15,Zenit,Benfica,3-2,3-4,Petrovsky Stadium,San Petersburgo,Rusia,,,24.0,12.0,12.0,12.0,5.0,7.0,54%,46%,27.0,15.0,12.0,7.0,5.0,2.0,3,2
+2011-2012,Octavos,Vuelta,2012-03-06,Benfica,Zenit,2-0,4-3,Estadio da Luz,Lisboa,Portugal,,,26.0,20.0,6.0,7.0,5.0,2.0,43%,57%,24.0,11.0,13.0,4.0,4.0,0.0,2,0
+2011-2012,Octavos,Ida,2012-02-21,CSKA Moscow,Real Madrid,1-1,2-5,Luzhniki Stadium,Moscú,Rusia,,,24.0,9.0,15.0,12.0,4.0,8.0,46%,54%,25.0,15.0,10.0,9.0,1.0,8.0,1,1
+2011-2012,Octavos,Vuelta,2012-03-14,Real Madrid,CSKA Moscow,4-1,5-2,Santiago Bernabeu,Madrid,España,,,22.0,15.0,7.0,10.0,7.0,3.0,63%,37%,31.0,13.0,18.0,7.0,4.0,3.0,4,1
+2011-2012,Octavos,Ida,2012-02-21,Napoli,Chelsea,3-1,4-5,Stadio San Paolo,Napoles,Italia,,,29.0,15.0,14.0,12.0,7.0,5.0,42%,58%,25.0,7.0,18.0,8.0,4.0,4.0,3,1
+2011-2012,Octavos,Vuelta,2012-03-14,Chelsea,Napoli,4-1 ,5-4,Stamford Bridge,Londres,Inglaterra,,,45.0,22.0,23.0,13.0,8.0,5.0,56%,44%,46.0,23.0,23.0,20.0,12.0,8.0,4,1
+2011-2012,Octavos,Ida,2012-02-22,Marseille,Inter,1-0,2-2,Stade Velodrome,Marseille,Francia,,,25.0,17.0,8.0,8.0,4.0,4.0,59%,41%,39.0,18.0,21.0,6.0,5.0,1.0,1,0
+2011-2012,Octavos,Vuelta,2012-03-13,Inter,Marseille,2-1,2-2,San Siro,Milán,Italia,,,23.0,13.0,10.0,10.0,6.0,4.0,48%,52%,40.0,24.0,16.0,11.0,7.0,4.0,2,1
+2011-2012,Octavos,Ida,2012-02-22,Basel,Bayern Munich,1-0,1-7,St. Jakob-Park,Basilea,Suiza,,,29.0,8.0,21.0,13.0,6.0,7.0,39%,61%,19.0,6.0,13.0,11.0,6.0,5.0,1,0
+2011-2012,Octavos,Vuelta,2012-03-13,Bayern Munich,Basel,7-0,7-1,Allianz Arena,Munich,Alemania,,,0.0,0.0,0.0,0.0,0.0,0.0,0%,0%,0.0,0.0,0.0,0.0,0.0,0.0,7,0
+2011-2012,Cuartos,Ida,2012-03-27,APOEL,Real Madrid,0-3,2-8,GSP Stadium,Nicosia,Chipre,,,28.0,0.0,28.0,8.0,0.0,8.0,22%,78%,24.0,13.0,11.0,5.0,1.0,4.0,0,3
+2011-2012,Cuartos,Vuelta,2012-04-04,Real Madrid,APOEL,5-2,8-2,Santiago Bernabeu,Madrid,España,,,30.0,21.0,9.0,11.0,8.0,3.0,70%,30%,21.0,10.0,11.0,9.0,6.0,3.0,5,2
+2011-2012,Cuartos,Ida,2012-03-27,Benfica,Chelsea,0-1,1-3,Estadio da Luz,Lisboa,Portugal,,,37.0,25.0,12.0,11.0,8.0,3.0,56%,44%,26.0,9.0,17.0,12.0,8.0,4.0,0,1
+2011-2012,Cuartos,Vuelta,2012-04-04,Chelsea,Benfica,2-1,3-1,Stamford Bridge,Londres,Inglaterra,,,39.0,17.0,22.0,13.0,4.0,9.0,49%,51%,27.0,16.0,11.0,9.0,4.0,5.0,2,1
+2011-2012,Cuartos,Ida,2012-03-28,AC Milan,Barcelona,0-0,1-3,San Siro,Milán,Italia,,,24.0,6.0,18.0,6.0,3.0,3.0,35%,65%,23.0,14.0,9.0,2.0,0.0,2.0,0,0
+2011-2012,Cuartos,Vuelta,2012-04-03,Barcelona,AC Milan,3-1,3-1,Camp Nou,Barcelona,España,,,24.0,21.0,3.0,9.0,8.0,1.0,62%,38%,28.0,9.0,19.0,6.0,2.0,4.0,3,1
+2011-2012,Cuartos,Ida,2012-03-28,Marseille,Bayern Munich,0-2,0-4,Stade Velodrome,Marseille,Francia,,,16.0,10.0,6.0,7.0,4.0,3.0,42%,58%,35.0,18.0,17.0,12.0,6.0,6.0,0,2
+2011-2012,Cuartos,Vuelta,2012-04-03,Bayern Munich,Marseille,2-0,4-0,Allianz Arena,Munich,Alemania,,,26.0,17.0,9.0,10.0,7.0,3.0,50%,50%,18.0,8.0,10.0,11.0,9.0,2.0,2,0
+2011-2012,Semifinal,Ida,2012-04-17,Bayern Munich,Real Madrid,2-1,3-3,Allianz Arena,Munich,Alemania,,,30.0,15.0,15.0,10.0,4.0,6.0,55%,45%,34.0,20.0,14.0,10.0,6.0,4.0,2,1
+2011-2012,Semifinal,Vuelta,2012-04-25,Real Madrid,Bayern Munich,2-1 ,3-3,Santiago Bernabeu,Madrid,España,,,35.0,15.0,20.0,12.0,6.0,6.0,45%,55%,39.0,12.0,27.0,10.0,5.0,5.0,2,1
+2011-2012,Semifinal,Ida,2012-04-18,Chelsea,Barcelona,1-0,3-2,Stamford Bridge,Londres,Inglaterra,,,28.0,4.0,24.0,7.0,1.0,6.0,21%,79%,21.0,12.0,9.0,9.0,1.0,8.0,1,0
+2011-2012,Semifinal,Vuelta,2012-04-24,Barcelona,Chelsea,2-2,2-3,Camp Nou,Barcelona,España,,,30.0,23.0,7.0,9.0,6.0,3.0,82%,18%,18.0,8.0,10.0,11.0,10.0,1.0,2,2
+2011-2012,Final,Final,2012-05-19,Bayern Munich,Chelsea,1-1 ,,Allianz Arena,Munich,Alemania,,,52.0,43.0,9.0,10.0,7.0,3.0,56%,44%,40.0,14.0,26.0,21.0,20.0,1.0,1,1
+2012-2013,Octavos,Ida,2013-02-12,Celtic,Juventus,0-3,0-5,Celtic Park,Glasgow,Escocia,Neil Lennon,Antonio Conte,27.0,17.0,10.0,11.0,7.0,4.0,53%,47%,24.0,12.0,12.0,14.0,10.0,4.0,0,3
+2012-2013,Octavos,Vuelta,2013-03-06,Juventus,Celtic,2-0,5-0,Juventus Stadium,Turin,Italia,Antonio Conte,Neil Lennon,23.0,8.0,15.0,10.0,5.0,5.0,44%,56%,29.0,14.0,15.0,4.0,1.0,3.0,2,0
+2012-2013,Octavos,Ida,2013-02-12,Valencia,PSG,1-2,2-3,Mestalla,Valencia,España,Ernesto Valverde,Carlo Ancelotti,25.0,12.0,13.0,10.0,2.0,8.0,66%,34%,23.0,13.0,10.0,8.0,8.0,0.0,1,2
+2012-2013,Octavos,Vuelta,2013-03-06,PSG,Valencia,1-1,3-2,Parc des Princes,Paris,Francia,Carlo Ancelotti,Ernesto Valverde,19.0,11.0,8.0,6.0,3.0,3.0,36%,64%,30.0,11.0,19.0,17.0,4.0,13.0,1,1
+2012-2013,Octavos,Ida,2013-02-13,Real Madrid,Manchester United,1-1,3-2,Santiago Bernabeu,Madrid,España,Jose Mourinho,Alex Ferguson,41.0,28.0,13.0,14.0,8.0,6.0,61%,39%,26.0,14.0,12.0,21.0,12.0,9.0,1,1
+2012-2013,Octavos,Vuelta,2013-03-05,Manchester United,Real Madrid,1-2,2-3,Old Trafford,Manchester,Inglaterra,Alex Ferguson,Jose Mourinho,41.0,19.0,22.0,17.0,7.0,10.0,37%,63%,19.0,7.0,12.0,21.0,9.0,12.0,1,2
+2012-2013,Octavos,Ida,2013-02-13,Shakhtar,Barcelona,2-2,2-4,Donbass Arena,Donetsk,Ucrania,Mircea Lucescu,Tito Vilanova,,,,,,,,,,,,,,,2,2
+2012-2013,Octavos,Vuelta,2013-03-12,Barcelona,Shakhtar,4-0,4-3,Camp Nou,Barcelona,España,Tito Vilanova,Mircea Lucescu,23.0,14.0,9.0,9.0,7.0,2.0,67%,33%,25.0,6.0,19.0,9.0,6.0,3.0,4,0
+2012-2013,Octavos,Ida,2013-02-19,Porto,Malaga,1-0,1-2,Estadio do Dragao,Porto,Portugal,Vitor Pereira,Manuel Pellegrini,20.0,18.0,2.0,5.0,5.0,0.0,63%,37%,29.0,13.0,16.0,13.0,11.0,2.0,1,0
+2012-2013,Octavos,Vuelta,2013-03-13,Malaga,Porto,2-0,2-1,La Rosaleda,Malaga,España,Manuel Pellegrini,Vitor Pereira,19.0,10.0,9.0,6.0,5.0,1.0,51%,49%,33.0,16.0,17.0,10.0,8.0,2.0,2,0
+2012-2013,Octavos,Ida,2013-02-19,Arsenal,Bayern Munich,1-3,3-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Jupp Heynckes,27.0,10.0,17.0,9.0,3.0,6.0,58%,42%,33.0,14.0,19.0,10.0,2.0,8.0,1,3
+2012-2013,Octavos,Vuelta,2013-03-13,Bayern Munich,Arsenal,0-2,3-3,Allianz Arena,Munich,Alemania,Jupp Heynckes,Arsene Wenger,28.0,23.0,5.0,7.0,5.0,2.0,55%,45%,38.0,13.0,25.0,7.0,6.0,1.0,0,2
+2012-2013,Octavos,Ida,2013-02-20,AC Milan,Barcelona,2-0,2-4,San Siro,Milán,Italia,Massimiliano Allegri,Tito Vilanova,15.0,8.0,7.0,4.0,3.0,1.0,28%,72%,26.0,16.0,10.0,7.0,3.0,4.0,2,0
+2012-2013,Octavos,Vuelta,2013-03-12,Barcelona,AC Milan,4-0,4-2,Camp Nou,Barcelona,España,Tito Vilanova,Massimiliano Allegri,23.0,14.0,9.0,9.0,7.0,2.0,67%,33%,25.0,6.0,19.0,9.0,6.0,3.0,4,0
+2012-2013,Octavos,Ida,2013-02-20,Galatasaray,Schalke 04,1-1,3-4,Turk Telekom Arena,Estambul,Turquia,Fatih Terim,Jens Keller,27.0,12.0,15.0,8.0,6.0,2.0,43%,57%,33.0,14.0,19.0,9.0,3.0,6.0,1,1
+2012-2013,Octavos,Vuelta,2013-03-12,Schalke 04,Galatasaray,2-3,4-3,Veltins-Arena,Gelsenkirchen,Alemania,Jens Keller,Fatih Terim,41.0,26.0,15.0,20.0,12.0,8.0,60%,40%,31.0,19.0,12.0,12.0,9.0,3.0,2,3
+2012-2013,Cuartos,Ida,2013-04-02,PSG,Barcelona,2-2,3-3,Parc des Princes,Paris,Francia,Carlo Ancelotti,Tito Vilanova,29.0,14.0,15.0,10.0,5.0,5.0,32%,68%,26.0,13.0,13.0,11.0,4.0,7.0,2,2
+2012-2013,Cuartos,Vuelta,2013-04-10,Barcelona,PSG,1-1,3-3,Camp Nou,Barcelona,España,Tito Vilanova,Carlo Ancelotti,39.0,23.0,16.0,10.0,2.0,8.0,63%,37%,27.0,11.0,16.0,12.0,7.0,5.0,1,1
+2012-2013,Cuartos,Ida,2013-04-02,Bayern Munich,Juventus,2-0,4-0,Allianz Arena,Munich,Alemania,Jupp Heynckes,Antonio Conte,31.0,23.0,8.0,11.0,9.0,2.0,55%,45%,33.0,16.0,17.0,12.0,8.0,4.0,2,0
+2012-2013,Cuartos,Vuelta,2013-04-10,Juventus,Bayern Munich,0-2,0-4,Juventus Stadium,Turin,Italia,Antonio Conte,Jupp Heynckes,31.0,12.0,19.0,10.0,3.0,7.0,42%,58%,29.0,13.0,16.0,10.0,3.0,7.0,0,2
+2012-2013,Cuartos,Ida,2013-04-03,Malaga,Borussia Dortmund,0-0,2-3,La Rosaleda,Malaga,España,Manuel Pellegrini,Jurgen Klopp,23.0,10.0,13.0,9.0,3.0,6.0,50%,50%,23.0,9.0,14.0,6.0,4.0,2.0,0,0
+2012-2013,Cuartos,Vuelta,2013-04-09,Borussia Dortmund,Malaga,3-2,3-2,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Manuel Pellegrini,24.0,16.0,8.0,14.0,9.0,5.0,62%,38%,25.0,12.0,13.0,9.0,7.0,2.0,3,2
+2012-2013,Cuartos,Ida,2013-04-03,Real Madrid,Galatasaray,3-0,5-3,Santiago Bernabeu,Madrid,España,Jose Mourinho,Fatih Terim,29.0,15.0,14.0,11.0,7.0,4.0,50%,50%,35.0,16.0,19.0,6.0,2.0,4.0,3,0
+2012-2013,Cuartos,Vuelta,2013-04-09,Galatasaray,Real Madrid,3-2,3-5,Turk Telekom Arena,Estambul,Turquia,Fatih Terim,Jose Mourinho,22.0,13.0,9.0,10.0,5.0,5.0,57%,43%,36.0,21.0,15.0,7.0,4.0,3.0,3,2
+2012-2013,Semifinal,Ida,2013-04-23,Bayern Munich,Barcelona,4-0,7-0,Allianz Arena,Munich,Alemania,Jupp Heynckes,Tito Vilanova,19.0,15.0,4.0,8.0,7.0,1.0,34%,66%,26.0,16.0,10.0,15.0,11.0,4.0,4,0
+2012-2013,Semifinal,Vuelta,2013-05-01,Barcelona,Bayern Munich,0-3,0-7,Camp Nou,Barcelona,España,Tito Vilanova,Jupp Heynckes,23.0,15.0,8.0,6.0,4.0,2.0,60%,40%,26.0,13.0,13.0,4.0,4.0,0.0,0,3
+2012-2013,Semifinal,Ida,2013-04-24,Borussia Dortmund,Real Madrid,4-1,4-3,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Jose Mourinho,23.0,14.0,9.0,11.0,7.0,4.0,44%,56%,26.0,12.0,14.0,6.0,4.0,2.0,4,1
+2012-2013,Semifinal,Vuelta,2013-04-30,Real Madrid,Borussia Dortmund,2-0,3-4,Santiago Bernabeu,Madrid,España,Jose Mourinho,Jurgen Klopp,32.0,23.0,9.0,10.0,7.0,3.0,65%,35%,33.0,14.0,19.0,13.0,10.0,3.0,2,0
+2012-2013,Final,Final,2013-05-25,Bayern Munich,Borussia Dortmund,2-1,,Wembley,Londres,Inglaterra,Jupp Heynckes,Jurgen Klopp,,,,,,,,,,,,,,,2,1
+2013-2014,Octavos,Ida,2014-02-18,Manchester City,Barcelona,0-2,1-4,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Tata Martino,19.0,9.0,10.0,7.0,3.0,4.0,32%,68%,29.0,19.0,10.0,5.0,1.0,4.0,0,2
+2013-2014,Octavos,Vuelta,2014-03-12,Barcelona,Manchester City,2-1,4-1,Camp Nou,Barcelona,España,Tata Martino,Manuel Pellegrini,26.0,15.0,11.0,11.0,7.0,4.0,58%,42%,31.0,8.0,23.0,9.0,5.0,4.0,2,1
+2013-2014,Octavos,Ida,2014-02-19,Arsenal,Bayern Munich,0-2,1-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Pep Guardiola,35.0,8.0,27.0,9.0,4.0,5.0,21%,79%,24.0,8.0,16.0,11.0,2.0,9.0,0,2
+2013-2014,Octavos,Vuelta,2014-03-11,Bayern Munich,Arsenal,1-1,3-1,Allianz Arena,Munich,Alemania,Pep Guardiola,Arsene Wenger,21.0,14.0,7.0,9.0,6.0,3.0,67%,33%,29.0,14.0,15.0,11.0,6.0,5.0,1,1
+2013-2014,Octavos,Ida,2014-02-18,AC Milan,Atletico Madrid,0-1,1-5,San Siro,Milán,Italia,Clarence Seedorf,Diego Simeone,,,,,,,,,,,,,,,0,1
+2013-2014,Octavos,Vuelta,2014-03-11,Atletico Madrid,AC Milan,4-1,5-1,Vicente Calderon,Madrid,España,Diego Simeone,Clarence Seedorf,24.0,13.0,11.0,9.0,6.0,3.0,47%,53%,27.0,10.0,17.0,6.0,3.0,3.0,4,1
+2013-2014,Octavos,Ida,2014-02-19,Bayer Leverkusen,PSG,0-4,1-6,BayArena,Leverkusen,Alemania,Sami Hyypia,Laurent Blanc,,,,,,,,,,,,,,,0,4
+2013-2014,Octavos,Vuelta,2014-03-12,PSG,Bayer Leverkusen,2-1,6-1,Parc des Princes,Paris,Francia,Laurent Blanc,Sami Hyypia,23.0,14.0,9.0,12.0,6.0,6.0,62%,38%,30.0,8.0,22.0,10.0,5.0,5.0,2,1
+2013-2014,Octavos,Ida,2014-02-25,Olympiacos,Manchester United,2-0,2-3,Karaiskakis Stadium,Pireo,Grecia,Michel,David Moyes,19.0,12.0,7.0,5.0,4.0,1.0,40%,60%,20.0,10.0,10.0,5.0,1.0,4.0,2,0
+2013-2014,Octavos,Vuelta,2014-03-19,Manchester United,Olympiacos,3-0,3-2,Old Trafford,Manchester,Inglaterra,David Moyes,Michel,23.0,10.0,13.0,8.0,5.0,3.0,49%,51%,31.0,14.0,17.0,15.0,8.0,7.0,3,0
+2013-2014,Octavos,Ida,2014-02-25,Zenit,Borussia Dortmund,2-4,4-5,Petrovsky Stadium,San Petersburgo,Rusia,Luciano Spalletti,Jurgen Klopp,21.0,8.0,13.0,13.0,5.0,8.0,59%,41%,31.0,15.0,16.0,9.0,6.0,3.0,2,4
+2013-2014,Octavos,Vuelta,2014-03-19,Borussia Dortmund,Zenit,1-2,5-4,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Luciano Spalletti,21.0,12.0,9.0,8.0,3.0,5.0,48%,52%,32.0,18.0,14.0,9.0,8.0,1.0,1,2
+2013-2014,Octavos,Ida,2014-02-26,Galatasaray,Chelsea,1-1,1-3,Turk Telekom Arena,Estambul,Turquia,Roberto Mancini,Jose Mourinho,20.0,11.0,9.0,8.0,4.0,4.0,58%,42%,38.0,20.0,18.0,10.0,7.0,3.0,1,1
+2013-2014,Octavos,Vuelta,2014-03-18,Chelsea,Galatasaray,2-0,3-1,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Roberto Mancini,23.0,20.0,3.0,9.0,9.0,0.0,49%,51%,40.0,20.0,20.0,7.0,7.0,0.0,2,0
+2013-2014,Octavos,Ida,2014-02-26,Schalke 04,Real Madrid,1-6,1-9,Veltins-Arena,Gelsenkirchen,Alemania,Jens Keller,Carlo Ancelotti,31.0,10.0,21.0,15.0,4.0,11.0,43%,57%,12.0,9.0,3.0,8.0,1.0,7.0,1,6
+2013-2014,Octavos,Vuelta,2014-03-18,Real Madrid,Schalke 04,3-1,9-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jens Keller,37.0,23.0,14.0,13.0,10.0,3.0,57%,43%,15.0,7.0,8.0,11.0,9.0,2.0,3,1
+2013-2014,Cuartos,Ida,2014-04-01,Barcelona,Atletico Madrid,1-1,2-1,Camp Nou,Barcelona,España,Tata Martino,Diego Simeone,25.0,19.0,6.0,8.0,6.0,2.0,71%,29%,40.0,16.0,24.0,9.0,8.0,1.0,1,1
+2013-2014,Cuartos,Vuelta,2014-04-09,Atletico Madrid,Barcelona,1-0,2-1,Vicente Calderon,Madrid,España,Diego Simeone,Tata Martino,26.0,14.0,12.0,8.0,5.0,3.0,29%,71%,24.0,15.0,9.0,13.0,6.0,7.0,1,0
+2013-2014,Cuartos,Ida,2014-04-01,Manchester United,Bayern Munich,1-1,2-4,Old Trafford,Manchester,Inglaterra,David Moyes,Pep Guardiola,22.0,6.0,16.0,7.0,4.0,3.0,26%,74%,22.0,12.0,10.0,10.0,4.0,6.0,1,1
+2013-2014,Cuartos,Vuelta,2014-04-09,Bayern Munich,Manchester United,3-1,4-2,Allianz Arena,Munich,Alemania,Pep Guardiola,David Moyes,31.0,25.0,6.0,7.0,5.0,2.0,65%,35%,21.0,10.0,11.0,14.0,11.0,3.0,3,1
+2013-2014,Cuartos,Ida,2014-04-02,Real Madrid,Borussia Dortmund,3-0,3-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jurgen Klopp,32.0,20.0,12.0,13.0,11.0,2.0,61%,39%,16.0,7.0,9.0,13.0,6.0,7.0,3,0
+2013-2014,Cuartos,Vuelta,2014-04-08,Borussia Dortmund,Real Madrid,2-0,2-3,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Carlo Ancelotti,22.0,12.0,10.0,11.0,6.0,5.0,51%,49%,20.0,10.0,10.0,6.0,4.0,2.0,2,0
+2013-2014,Cuartos,Ida,2014-04-02,PSG,Chelsea,3-1,3-3,Parc des Princes,Paris,Francia,Laurent Blanc,Jose Mourinho,19.0,12.0,7.0,5.0,3.0,2.0,59%,41%,30.0,12.0,18.0,6.0,4.0,2.0,3,1
+2013-2014,Cuartos,Vuelta,2014-04-08,Chelsea,PSG,2-0,3-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Laurent Blanc,27.0,15.0,12.0,7.0,4.0,3.0,52%,48%,29.0,18.0,11.0,8.0,4.0,4.0,2,0
+2013-2014,Semifinal,Ida,2014-04-22,Atletico Madrid,Chelsea,0-0,3-1,Vicente Calderon,Madrid,España,Diego Simeone,Jose Mourinho,30.0,25.0,5.0,6.0,4.0,2.0,68%,32%,29.0,13.0,16.0,10.0,6.0,4.0,0,0
+2013-2014,Semifinal,Vuelta,2014-04-30,Chelsea,Atletico Madrid,1-3,1-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Diego Simeone,29.0,16.0,13.0,13.0,5.0,8.0,48%,52%,30.0,12.0,18.0,13.0,4.0,9.0,1,3
+2013-2014,Semifinal,Ida,2014-04-23,Real Madrid,Bayern Munich,1-0,5-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,27.0,9.0,18.0,9.0,5.0,4.0,28%,72%,20.0,10.0,10.0,18.0,3.0,15.0,1,0
+2013-2014,Semifinal,Vuelta,2014-04-29,Bayern Munich,Real Madrid,0-4,0-5,Allianz Arena,Munich,Alemania,Pep Guardiola,Carlo Ancelotti,32.0,19.0,13.0,9.0,4.0,5.0,69%,31%,20.0,13.0,7.0,12.0,9.0,3.0,0,4
+2013-2014,Final,Final,2014-05-24,Real Madrid,Atletico Madrid,4-1 ,,Estadio da Luz,Lisboa,Portugal,Carlo Ancelotti,Diego Simeone,31.0,20.0,11.0,13.0,9.0,4.0,62%,38%,46.0,19.0,27.0,18.0,9.0,9.0,4,1
+2014-2015,Octavos,Ida,2015-02-17,PSG,Chelsea,1-1,3-3,Parc des Princes,Paris,Francia,Laurent Blanc,Jose Mourinho,,,,,,,,,,,,,,,1,1
+2014-2015,Octavos,Vuelta,2015-03-11,Chelsea,PSG,2-2 ,3-3,Stamford Bridge,Londres,Inglaterra,Jose Mourinho,Laurent Blanc,27.0,15.0,12.0,12.0,6.0,6.0,49%,51%,41.0,24.0,17.0,18.0,7.0,11.0,2,2
+2014-2015,Octavos,Ida,2015-02-18,Manchester City,Barcelona,1-2,1-3,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Luis Enrique,,,,,,,,,,,,,,,1,2
+2014-2015,Octavos,Vuelta,2015-03-18,Barcelona,Manchester City,1-0,3-1,Camp Nou,Barcelona,España,Luis Enrique,Manuel Pellegrini,67.0,42.0,25.0,30.0,20.0,10.0,57%,42%,18.0,6.0,12.0,19.0,14.0,5.0,1,0
+2014-2015,Octavos,Ida,2015-02-24,Bayer Leverkusen,Atletico Madrid,1-0,1-1,BayArena,Leverkusen,Alemania,Roger Schmidt,Diego Simeone,,,,,,,,,,,,,,,1,0
+2014-2015,Octavos,Vuelta,2015-03-17,Atletico Madrid,Bayer Leverkusen,1-0,1-1,Vicente Calderon,Madrid,España,Diego Simeone,Roger Schmidt,36.0,22.0,14.0,15.0,8.0,7.0,48%,51%,31.0,8.0,23.0,22.0,6.0,16.0,1,0
+2014-2015,Octavos,Ida,2015-02-24,Arsenal,Monaco,1-3,3-3,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Leonardo Jardim,,,,,,,,,,,,,,,1,3
+2014-2015,Octavos,Vuelta,2015-03-17,Monaco,Arsenal,0-2,3-3,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Arsene Wenger,35.0,5.0,30.0,15.0,1.0,14.0,29%,70%,23.0,13.0,10.0,9.0,7.0,2.0,0,2
+2014-2015,Octavos,Ida,2015-02-25,Shakhtar,Bayern Munich,0-0,0-7,Arena Lviv,Lviv,Ucrania,Mircea Lucescu,Pep Guardiola,,,,,,,,,,,,,,,0,0
+2014-2015,Octavos,Vuelta,2015-03-11,Bayern Munich,Shakhtar,7-0,7-0,Allianz Arena,Munich,Alemania,Pep Guardiola,Mircea Lucescu,48.0,42.0,6.0,24.0,23.0,1.0,73%,26%,18.0,13.0,5.0,24.0,5.0,19.0,7,0
+2014-2015,Octavos,Ida,2015-02-25,Schalke 04,Real Madrid,0-2,4-5,Veltins-Arena,Gelsenkirchen,Alemania,Roberto Di Matteo,Carlo Ancelotti,,,,,,,,,,,,,,,0,2
+2014-2015,Octavos,Vuelta,2015-03-10,Real Madrid,Schalke 04,3-4,5-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Roberto Di Matteo,34.0,14.0,20.0,19.0,9.0,10.0,48%,52%,11.0,4.0,7.0,12.0,5.0,7.0,3,4
+2014-2015,Octavos,Ida,2015-02-18,Basel,Porto,1-1,1-5,St. Jakob-Park,Basilea,Suiza,Paulo Sousa,Julen Lopetegui,16.0,1.0,15.0,8.0,1.0,7.0,37%,63%,34.0,21.0,13.0,9.0,0.0,9.0,1,1
+2014-2015,Octavos,Vuelta,2015-03-10,Porto,Basel,4-0,5-1,Estadio do Dragao,Porto,Portugal,Julen Lopetegui,Paulo Sousa,30.0,20.0,10.0,14.0,10.0,4.0,51%,48%,23.0,4.0,19.0,7.0,3.0,4.0,4,0
+2014-2015,Octavos,Ida,2015-02-17,Juventus,Borussia Dortmund,2-1,5-1,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Jurgen Klopp,,,,,,,,,,,,,,,2,1
+2014-2015,Octavos,Vuelta,2015-03-18,Borussia Dortmund,Juventus,0-3,1-5,Signal Iduna Park,Dortmund,Alemania,Jurgen Klopp,Massimiliano Allegri,27.0,12.0,15.0,13.0,4.0,9.0,55%,44%,15.0,7.0,8.0,16.0,12.0,4.0,0,3
+2014-2015,Cuartos,Ida,2015-04-14,Atletico Madrid,Real Madrid,0-0,0-1,Vicente Calderon,Madrid,España,Diego Simeone,Carlo Ancelotti,25.0,8.0,17.0,10.0,2.0,8.0,39%,61%,30.0,19.0,11.0,12.0,7.0,5.0,0,0
+2014-2015,Cuartos,Vuelta,2015-04-22,Real Madrid,Atletico Madrid,1-0,1-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Diego Simeone,29.0,23.0,6.0,10.0,8.0,2.0,63%,37%,27.0,15.0,12.0,14.0,10.0,4.0,1,0
+2014-2015,Cuartos,Ida,2015-04-14,PSG,Barcelona,1-3,1-5,Parc des Princes,Paris,Francia,Laurent Blanc,Luis Enrique,,,,,,,,,,,,,,,1,3
+2014-2015,Cuartos,Vuelta,2015-04-21,Barcelona,PSG,2-0,5-1,Camp Nou,Barcelona,España,Luis Enrique,Laurent Blanc,20.0,11.0,9.0,8.0,6.0,2.0,57%,43%,27.0,11.0,16.0,6.0,5.0,1.0,2,0
+2014-2015,Cuartos,Ida,2015-04-15,Porto,Bayern Munich,3-1,4-7,Estadio do Dragao,Porto,Portugal,Julen Lopetegui,Pep Guardiola,11.0,6.0,5.0,7.0,4.0,3.0,32%,68%,38.0,16.0,22.0,9.0,3.0,6.0,3,1
+2014-2015,Cuartos,Vuelta,2015-04-21,Bayern Munich,Porto,6-1,7-4,Allianz Arena,Munich,Alemania,Pep Guardiola,Julen Lopetegui,24.0,21.0,3.0,11.0,10.0,1.0,55%,45%,38.0,19.0,19.0,5.0,4.0,1.0,6,1
+2014-2015,Cuartos,Ida,2015-04-15,Juventus,Monaco,1-0,1-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Leonardo Jardim,,,,,,,,,,,,,,,1,0
+2014-2015,Cuartos,Vuelta,2015-04-22,Monaco,Juventus,0-0,0-1,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Massimiliano Allegri,17.0,12.0,5.0,2.0,1.0,1.0,56%,44%,31.0,14.0,17.0,10.0,6.0,4.0,0,0
+2014-2015,Semifinal,Ida,2015-05-05,Juventus,Real Madrid,2-1,3-2,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Carlo Ancelotti,25.0,12.0,13.0,11.0,7.0,4.0,48%,52%,34.0,21.0,13.0,6.0,1.0,5.0,2,1
+2014-2015,Semifinal,Vuelta,2015-05-13,Real Madrid,Juventus,1-1,2-3,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Massimiliano Allegri,30.0,23.0,7.0,9.0,5.0,4.0,54%,46%,18.0,11.0,7.0,14.0,8.0,6.0,1,1
+2014-2015,Semifinal,Ida,2015-05-06,Barcelona,Bayern Munich,3-0,5-3,Camp Nou,Barcelona,España,Luis Enrique,Pep Guardiola,23.0,15.0,8.0,8.0,8.0,0.0,45%,55%,29.0,15.0,14.0,5.0,2.0,3.0,3,0
+2014-2015,Semifinal,Vuelta,2015-05-12,Bayern Munich,Barcelona,3-2,3-5,Allianz Arena,Munich,Alemania,Pep Guardiola,Luis Enrique,24.0,19.0,5.0,12.0,8.0,4.0,54%,46%,31.0,19.0,12.0,6.0,5.0,1.0,3,2
+2014-2015,Final,Final,2015-06-06,Barcelona,Juventus,3-1,,Olympiastadion,Berlin,Alemania,Luis Enrique,Massimiliano Allegri,,,,,,,,,,,,,,,3,1
+2015-2016,Octavos,Ida,2016-02-16,PSG,Chelsea,2-1,4-2,Parc des Princes,Paris,Francia,Laurent Blanc,Guus Hiddink,30.0,20.0,10.0,13.0,8.0,5.0,65%,35%,31.0,16.0,15.0,12.0,9.0,3.0,2,1
+2015-2016,Octavos,Vuelta,2016-03-09,Chelsea,PSG,1-2,2-4,Stamford Bridge,Londres,Inglaterra,Guus Hiddink,Laurent Blanc,25.0,15.0,10.0,12.0,7.0,5.0,37%,63%,29.0,16.0,13.0,9.0,5.0,4.0,1,2
+2015-2016,Octavos,Ida,2016-02-17,Roma,Real Madrid,0-2,0-4,Stadio Olimpico,Roma,Italia,Luciano Spalletti,Zinedine Zidane,30.0,11.0,19.0,7.0,2.0,5.0,39%,61%,22.0,12.0,10.0,12.0,7.0,5.0,0,2
+2015-2016,Octavos,Vuelta,2016-03-08,Real Madrid,Roma,2-0,4-0,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Luciano Spalletti,49.0,37.0,12.0,14.0,10.0,4.0,59%,41%,15.0,6.0,9.0,18.0,11.0,7.0,2,0
+2015-2016,Octavos,Ida,2016-02-23,Arsenal,Barcelona,0-2,1-5,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Luis Enrique,23.0,8.0,15.0,7.0,3.0,4.0,34%,66%,27.0,13.0,14.0,8.0,1.0,7.0,0,2
+2015-2016,Octavos,Vuelta,2016-03-16,Barcelona,Arsenal,3-1,5-1,Camp Nou,Barcelona,España,Luis Enrique,Arsene Wenger,37.0,17.0,20.0,11.0,8.0,3.0,64%,36%,19.0,8.0,11.0,15.0,7.0,8.0,3,1
+2015-2016,Octavos,Ida,2016-02-23,Juventus,Bayern Munich,2-2,4-6,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Pep Guardiola,24.0,11.0,13.0,12.0,7.0,5.0,33%,67%,31.0,13.0,18.0,7.0,3.0,4.0,2,2
+2015-2016,Octavos,Vuelta,2016-03-16,Bayern Munich,Juventus,4-2 ,6-4,Allianz Arena,Munich,Alemania,Pep Guardiola,Massimiliano Allegri,42.0,26.0,16.0,18.0,7.0,11.0,75%,25%,45.0,19.0,26.0,7.0,5.0,2.0,4,2
+2015-2016,Octavos,Ida,2016-02-24,PSV,Atletico Madrid,0-0,0-0,Philips Stadion,Eindhoven,Países Bajos,Phillip Cocu,Diego Simeone,17.0,5.0,12.0,6.0,1.0,5.0,42%,58%,16.0,8.0,8.0,11.0,1.0,10.0,0,0
+2015-2016,Octavos,Vuelta,2016-03-15,Atletico Madrid,PSV,0-0 ,0-0,Vicente Calderon,Madrid,España,Diego Simeone,Phillip Cocu,36.0,26.0,10.0,9.0,7.0,2.0,59%,41%,25.0,8.0,17.0,15.0,10.0,5.0,0,0
+2015-2016,Octavos,Ida,2016-02-24,Dynamo Kyiv,Manchester City,1-3,1-3,Olimpiyskiy Stadium,Kiev,Ucrania,Serhiy Rebrov,Manuel Pellegrini,23.0,11.0,12.0,8.0,3.0,5.0,49%,51%,24.0,14.0,10.0,9.0,6.0,3.0,1,3
+2015-2016,Octavos,Vuelta,2016-03-15,Manchester City,Dynamo Kyiv,0-0,3-1,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Serhiy Rebrov,11.0,6.0,5.0,4.0,1.0,3.0,46%,54%,22.0,11.0,11.0,3.0,2.0,1.0,0,0
+2015-2016,Octavos,Ida,2016-02-16,Benfica,Zenit,1-0,3-1,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Andre Villas-Boas,20.0,15.0,5.0,6.0,4.0,2.0,64%,36%,26.0,14.0,12.0,8.0,5.0,3.0,1,0
+2015-2016,Octavos,Vuelta,2016-03-09,Zenit,Benfica,1-2,1-3,Petrovsky Stadium,San Petersburgo,Rusia,Andre Villas-Boas,Rui Vitoria,26.0,14.0,12.0,13.0,4.0,9.0,56%,44%,36.0,14.0,22.0,12.0,7.0,5.0,1,2
+2015-2016,Octavos,Ida,2016-02-17,Gent,Wolfsburg,2-3,2-4,Ghelamco Arena,Ghent,Bélgica,Hein Vanhaezebrouck,Dieter Hecking,28.0,12.0,16.0,10.0,6.0,4.0,60%,40%,29.0,12.0,17.0,10.0,7.0,3.0,2,3
+2015-2016,Octavos,Vuelta,2016-03-08,Wolfsburg,Gent,1-0,4-2,Volkswagen Arena,Wolfsburg,Alemania,Dieter Hecking,Hein Vanhaezebrouck,24.0,17.0,7.0,7.0,5.0,2.0,47%,53%,29.0,13.0,16.0,7.0,6.0,1.0,1,0
+2015-2016,Cuartos,Ida,2016-04-05,Barcelona,Atletico Madrid,2-1,2-3,Camp Nou,Barcelona,España,Luis Enrique,Diego Simeone,28.0,21.0,7.0,7.0,5.0,2.0,74%,26%,35.0,19.0,16.0,4.0,2.0,2.0,2,1
+2015-2016,Cuartos,Vuelta,2016-04-13,Atletico Madrid,Barcelona,2-0,3-2,Vicente Calderon,Madrid,España,Diego Simeone,Luis Enrique,22.0,9.0,13.0,10.0,6.0,4.0,23%,77%,30.0,20.0,10.0,6.0,1.0,5.0,2,0
+2015-2016,Cuartos,Ida,2016-04-05,Bayern Munich,Benfica,1-0,3-2,Allianz Arena,Munich,Alemania,Pep Guardiola,Rui Vitoria,26.0,16.0,10.0,7.0,6.0,1.0,68%,32%,23.0,11.0,12.0,7.0,5.0,2.0,1,0
+2015-2016,Cuartos,Vuelta,2016-04-13,Benfica,Bayern Munich,2-2,2-3,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Pep Guardiola,24.0,9.0,15.0,12.0,5.0,7.0,26%,74%,19.0,9.0,10.0,9.0,3.0,6.0,2,2
+2015-2016,Cuartos,Ida,2016-04-06,Wolfsburg,Real Madrid,2-0,2-3,Volkswagen Arena,Wolfsburg,Alemania,Dieter Hecking,Zinedine Zidane,31.0,10.0,21.0,10.0,7.0,3.0,39%,61%,21.0,13.0,8.0,7.0,1.0,6.0,2,0
+2015-2016,Cuartos,Vuelta,2016-04-12,Real Madrid,Wolfsburg,3-0,3-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Dieter Hecking,25.0,16.0,9.0,10.0,7.0,3.0,58%,42%,19.0,10.0,9.0,16.0,12.0,4.0,3,0
+2015-2016,Cuartos,Ida,2016-04-06,PSG,Manchester City,2-2,2-3,Parc des Princes,Paris,Francia,Laurent Blanc,Manuel Pellegrini,27.0,16.0,11.0,8.0,5.0,3.0,67%,33%,21.0,6.0,15.0,8.0,4.0,4.0,2,2
+2015-2016,Cuartos,Vuelta,2016-04-12,Manchester City,PSG,1-0,3-2,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Laurent Blanc,15.0,9.0,6.0,5.0,1.0,4.0,36%,64%,31.0,18.0,13.0,11.0,6.0,5.0,1,0
+2015-2016,Semifinal,Ida,2016-04-26,Manchester City,Real Madrid,0-0,0-1,Etihad Stadium,Manchester,Inglaterra,Manuel Pellegrini,Zinedine Zidane,17.0,4.0,13.0,4.0,1.0,3.0,45%,55%,32.0,20.0,12.0,10.0,4.0,6.0,0,0
+2015-2016,Semifinal,Vuelta,2016-05-04,Real Madrid,Manchester City,1-0,1-0,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Manuel Pellegrini,,,,,,,,,,,,,,,1,0
+2015-2016,Semifinal,Ida,2016-04-27,Atletico Madrid,Bayern Munich,1-0,2-2,Vicente Calderon,Madrid,España,Diego Simeone,Pep Guardiola,,,,,,,,,,,,,,,1,0
+2015-2016,Semifinal,Vuelta,2016-05-03,Bayern Munich,Atletico Madrid,2-1,2-2,Allianz Arena,Munich,Alemania,Pep Guardiola,Diego Simeone,,,,,,,,,,,,,,,2,1
+2015-2016,Final,Final,2016-05-28,Real Madrid,Atletico Madrid,1-1 ,,San Siro,Milán,Italia,Zinedine Zidane,Diego Simeone,42.0,25.0,17.0,12.0,8.0,4.0,48%,52%,34.0,18.0,16.0,13.0,7.0,6.0,1,1
+2016-2017,Octavos,Ida,2017-02-14,PSG,Barcelona,4-0,5-6,Parc des Princes,Paris,Francia,Unai Emery,Luis Enrique,23.0,16.0,7.0,11.0,10.0,1.0,43%,57%,26.0,14.0,12.0,6.0,2.0,4.0,4,0
+2016-2017,Octavos,Vuelta,2017-03-08,Barcelona,PSG,6-1,6-5,Camp Nou,Barcelona,España,Luis Enrique,Unai Emery,28.0,20.0,8.0,13.0,10.0,3.0,71%,29%,41.0,16.0,25.0,10.0,6.0,4.0,6,1
+2016-2017,Octavos,Ida,2017-02-15,Benfica,Borussia Dortmund,1-0,1-4,Estadio da Luz,Lisboa,Portugal,Rui Vitoria,Thomas Tuchel,,,,,,,,,,,,,,,1,0
+2016-2017,Octavos,Vuelta,2017-03-08,Borussia Dortmund,Benfica,4-0,4-1,Signal Iduna Park,Dortmund,Alemania,Thomas Tuchel,Rui Vitoria,19.0,13.0,6.0,8.0,6.0,2.0,55%,45%,30.0,13.0,17.0,10.0,5.0,5.0,4,0
+2016-2017,Octavos,Ida,2017-02-14,Bayern Munich,Arsenal,5-1,10-2,Allianz Arena,Munich,Alemania,Carlo Ancelotti,Arsene Wenger,,,,,,,,,,,,,,,5,1
+2016-2017,Octavos,Vuelta,2017-03-07,Arsenal,Bayern Munich,1-5,2-10,Emirates Stadium,Londres,Inglaterra,Arsene Wenger,Carlo Ancelotti,26.0,10.0,16.0,10.0,3.0,7.0,43%,57%,23.0,13.0,10.0,13.0,5.0,8.0,1,5
+2016-2017,Octavos,Ida,2017-02-15,Real Madrid,Napoli,3-1,6-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Maurizio Sarri,28.0,20.0,8.0,8.0,6.0,2.0,50%,50%,21.0,9.0,12.0,6.0,5.0,1.0,3,1
+2016-2017,Octavos,Vuelta,2017-03-07,Napoli,Real Madrid,1-3,2-6,San Paolo,Napoles,Italia,Maurizio Sarri,Zinedine Zidane,26.0,13.0,13.0,8.0,3.0,5.0,55%,45%,25.0,17.0,8.0,13.0,9.0,4.0,1,3
+2016-2017,Octavos,Ida,2017-02-21,Manchester City,Monaco,5-3,6-6,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Leonardo Jardim,25.0,10.0,15.0,12.0,6.0,6.0,67%,33%,27.0,12.0,15.0,11.0,5.0,6.0,5,3
+2016-2017,Octavos,Vuelta,2017-03-15,Monaco,Manchester City,3-1,6-6,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Pep Guardiola,14.0,8.0,6.0,7.0,4.0,3.0,41%,59%,26.0,12.0,14.0,9.0,3.0,6.0,3,1
+2016-2017,Octavos,Ida,2017-02-21,Bayer Leverkusen,Atletico Madrid,2-4,2-8,BayArena,Leverkusen,Alemania,Tayfun Korkut,Diego Simeone,25.0,14.0,11.0,11.0,4.0,7.0,62%,38%,23.0,14.0,9.0,10.0,6.0,4.0,2,4
+2016-2017,Octavos,Vuelta,2017-03-15,Atletico Madrid,Bayer Leverkusen,0-0,8-2,Vicente Calderon,Madrid,España,Diego Simeone,Tayfun Korkut,31.0,13.0,18.0,11.0,4.0,7.0,44%,56%,14.0,6.0,8.0,11.0,7.0,4.0,0,0
+2016-2017,Octavos,Ida,2017-02-22,Porto,Juventus,0-2,0-3,Estadio do Dragao,Porto,Portugal,Nuno Espirito Santo,Massimiliano Allegri,22.0,3.0,19.0,4.0,0.0,4.0,24%,76%,25.0,12.0,13.0,9.0,1.0,8.0,0,2
+2016-2017,Octavos,Vuelta,2017-03-14,Juventus,Porto,1-0,3-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Nuno Espirito Santo,24.0,15.0,9.0,5.0,3.0,2.0,66%,34%,24.0,13.0,11.0,5.0,4.0,1.0,1,0
+2016-2017,Octavos,Ida,2017-02-22,Sevilla,Leicester City,2-1,2-3,Ramon Sanchez Pizjuan,Sevilla,España,Jorge Sampaoli,Claudio Ranieri,29.0,22.0,7.0,9.0,7.0,2.0,72%,28%,15.0,6.0,9.0,9.0,8.0,1.0,2,1
+2016-2017,Octavos,Vuelta,2017-03-14,Leicester City,Sevilla,2-0,3-2,King Power Stadium,Leicester,Inglaterra,Craig Shakespeare,Jorge Sampaoli,24.0,13.0,11.0,7.0,4.0,3.0,29%,71%,20.0,10.0,10.0,12.0,2.0,10.0,2,0
+2016-2017,Cuartos,Ida,2017-04-11,Juventus,Barcelona,3-0,3-0,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Luis Enrique,30.0,14.0,16.0,12.0,8.0,4.0,32%,68%,39.0,21.0,18.0,13.0,5.0,8.0,3,0
+2016-2017,Cuartos,Vuelta,2017-04-19,Barcelona,Juventus,0-0,0-3,Camp Nou,Barcelona,España,Luis Enrique,Massimiliano Allegri,31.0,19.0,12.0,5.0,1.0,4.0,65%,35%,29.0,10.0,19.0,17.0,13.0,4.0,0,0
+2016-2017,Cuartos,Ida,2017-04-11,Borussia Dortmund,Monaco,2-3,3-6,Signal Iduna Park,Dortmund,Alemania,Thomas Tuchel,Leonardo Jardim,,,,,,,,,,,,,,,2,3
+2016-2017,Cuartos,Vuelta,2017-04-19,Monaco,Borussia Dortmund,3-1,6-3,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Thomas Tuchel,28.0,16.0,12.0,15.0,8.0,7.0,30%,70%,23.0,15.0,8.0,8.0,5.0,3.0,3,1
+2016-2017,Cuartos,Ida,2017-04-12,Atletico Madrid,Leicester City,1-0,2-1,Vicente Calderon,Madrid,España,Diego Simeone,Craig Shakespeare,21.0,14.0,7.0,3.0,3.0,0.0,68%,32%,26.0,10.0,16.0,9.0,8.0,1.0,1,0
+2016-2017,Cuartos,Vuelta,2017-04-18,Leicester City,Atletico Madrid,1-1,1-2,King Power Stadium,Leicester,Inglaterra,Craig Shakespeare,Diego Simeone,29.0,23.0,6.0,9.0,6.0,3.0,56%,44%,16.0,9.0,7.0,8.0,7.0,1.0,1,1
+2016-2017,Cuartos,Ida,2017-04-12,Bayern Munich,Real Madrid,1-2,3-6,Allianz Arena,Munich,Alemania,Carlo Ancelotti,Zinedine Zidane,36.0,13.0,23.0,15.0,3.0,12.0,48%,52%,18.0,11.0,7.0,12.0,8.0,4.0,1,2
+2016-2017,Cuartos,Vuelta,2017-04-18,Real Madrid,Bayern Munich,4-2 ,6-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Carlo Ancelotti,50.0,30.0,20.0,13.0,11.0,2.0,48%,52%,29.0,7.0,22.0,17.0,7.0,10.0,4,2
+2016-2017,Semifinal,Ida,2017-05-02,Real Madrid,Atletico Madrid,3-0,4-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Diego Simeone,21.0,17.0,4.0,8.0,7.0,1.0,62%,38%,25.0,10.0,15.0,12.0,9.0,3.0,3,0
+2016-2017,Semifinal,Vuelta,2017-05-10,Atletico Madrid,Real Madrid,2-1,2-4,Vicente Calderon,Madrid,España,Diego Simeone,Zinedine Zidane,38.0,18.0,20.0,13.0,7.0,6.0,36%,64%,30.0,23.0,7.0,15.0,7.0,8.0,2,1
+2016-2017,Semifinal,Ida,2017-05-03,Monaco,Juventus,0-2,1-4,Stade Louis II,Monaco,Monaco,Leonardo Jardim,Massimiliano Allegri,24.0,14.0,10.0,9.0,5.0,4.0,50%,50%,24.0,11.0,13.0,10.0,7.0,3.0,0,2
+2016-2017,Semifinal,Vuelta,2017-05-09,Juventus,Monaco,2-1,4-1,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Leonardo Jardim,26.0,15.0,11.0,8.0,6.0,2.0,52%,48%,32.0,11.0,21.0,14.0,6.0,8.0,2,1
+2016-2017,Final,Final,2017-06-03,Juventus,Real Madrid,1-4,,Millennium Stadium,Cardiff,Gales,Massimiliano Allegri,Zinedine Zidane,27.0,9.0,18.0,9.0,4.0,5.0,44%,56%,41.0,23.0,18.0,2.0,1.0,1.0,1,4
+2017-2018,Octavos,Ida,2018-02-13,Juventus,Tottenham,2-2,3-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Mauricio Pochettino,21.0,9.0,12.0,11.0,5.0,6.0,34%,66%,29.0,16.0,13.0,10.0,5.0,5.0,2,2
+2017-2018,Octavos,Vuelta,2018-03-07,Tottenham,Juventus,1-2,4-3,Wembley,Londres,Inglaterra,Mauricio Pochettino,Massimiliano Allegri,31.0,23.0,8.0,9.0,6.0,3.0,54%,46%,32.0,20.0,12.0,7.0,6.0,1.0,1,2
+2017-2018,Octavos,Ida,2018-02-13,Basel,Manchester City,0-4,1-5,St. Jakob-Park,Basilea,Suiza,Raphael Wicky,Pep Guardiola,22.0,10.0,12.0,10.0,3.0,7.0,26%,74%,14.0,9.0,5.0,9.0,3.0,6.0,0,4
+2017-2018,Octavos,Vuelta,2018-03-07,Manchester City,Basel,1-2,5-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Raphael Wicky,13.0,7.0,6.0,6.0,3.0,3.0,78%,22%,16.0,5.0,11.0,5.0,5.0,0.0,1,2
+2017-2018,Octavos,Ida,2018-02-14,Porto,Liverpool,0-5,0-5,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Jurgen Klopp,22.0,8.0,14.0,9.0,3.0,6.0,45%,55%,19.0,9.0,10.0,7.0,6.0,1.0,0,5
+2017-2018,Octavos,Vuelta,2018-03-06,Liverpool,Porto,0-0,5-0,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Sergio Conceicao,22.0,12.0,10.0,6.0,5.0,1.0,66%,34%,24.0,11.0,13.0,4.0,1.0,3.0,0,0
+2017-2018,Octavos,Ida,2018-02-14,Real Madrid,PSG,3-1,5-2,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Unai Emery,29.0,17.0,12.0,12.0,8.0,4.0,50%,50%,30.0,14.0,16.0,15.0,11.0,4.0,3,1
+2017-2018,Octavos,Vuelta,2018-03-06,PSG,Real Madrid,1-2,2-5,Parc des Princes,Paris,Francia,Unai Emery,Zinedine Zidane,30.0,8.0,22.0,10.0,4.0,6.0,50%,50%,21.0,10.0,11.0,15.0,7.0,8.0,1,2
+2017-2018,Octavos,Ida,2018-02-20,Chelsea,Barcelona,1-1,1-4,Stamford Bridge,Londres,Inglaterra,Antonio Conte,Ernesto Valverde,18.0,11.0,7.0,4.0,2.0,2.0,27%,73%,30.0,17.0,13.0,7.0,3.0,4.0,1,1
+2017-2018,Octavos,Vuelta,2018-03-14,Barcelona,Chelsea,3-0,4-1,Camp Nou,Barcelona,España,Ernesto Valverde,Antonio Conte,22.0,8.0,14.0,10.0,7.0,3.0,56%,44%,28.0,11.0,17.0,10.0,4.0,6.0,3,0
+2017-2018,Octavos,Ida,2018-02-20,Bayern Munich,Besiktas,5-0,8-1,Allianz Arena,Munich,Alemania,Jupp Heynckes,Senol Gunes,41.0,35.0,6.0,13.0,12.0,1.0,69%,31%,30.0,16.0,14.0,9.0,6.0,3.0,5,0
+2017-2018,Octavos,Vuelta,2018-03-14,Besiktas,Bayern Munich,1-3,1-8,Vodafone Park,Estambul,Turquia,Senol Gunes,Jupp Heynckes,29.0,17.0,12.0,10.0,5.0,5.0,49%,51%,32.0,18.0,14.0,8.0,4.0,4.0,1,3
+2017-2018,Octavos,Ida,2018-02-21,Shakhtar,Roma,2-1,2-2,Metalist Stadium,Kharkiv,Ucrania,Paulo Fonseca,Eusebio Di Francesco,30.0,15.0,15.0,17.0,9.0,8.0,52%,48%,20.0,11.0,9.0,17.0,8.0,9.0,2,1
+2017-2018,Octavos,Vuelta,2018-03-13,Roma,Shakhtar,1-0,2-2,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Paulo Fonseca,15.0,10.0,5.0,3.0,3.0,0.0,37%,63%,25.0,14.0,11.0,8.0,2.0,6.0,1,0
+2017-2018,Octavos,Ida,2018-02-21,Sevilla,Manchester United,0-0,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Vincenzo Montella,Jose Mourinho,31.0,25.0,6.0,9.0,8.0,1.0,57%,43%,34.0,12.0,22.0,16.0,12.0,4.0,0,0
+2017-2018,Octavos,Vuelta,2018-03-13,Manchester United,Sevilla,1-2,2-1,Old Trafford,Manchester,Inglaterra,Jose Mourinho,Vincenzo Montella,38.0,17.0,21.0,9.0,3.0,6.0,51%,49%,19.0,9.0,10.0,8.0,5.0,3.0,1,2
+2017-2018,Cuartos,Ida,2018-04-03,Juventus,Real Madrid,0-3,3-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Zinedine Zidane,26.0,12.0,14.0,7.0,2.0,5.0,44%,56%,29.0,13.0,16.0,11.0,5.0,6.0,0,3
+2017-2018,Cuartos,Vuelta,2018-04-11,Real Madrid,Juventus,1-3,4-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Massimiliano Allegri,29.0,18.0,11.0,12.0,6.0,6.0,62%,38%,28.0,8.0,20.0,10.0,7.0,3.0,1,3
+2017-2018,Cuartos,Ida,2018-04-03,Sevilla,Bayern Munich,1-2,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Vincenzo Montella,Jupp Heynckes,23.0,9.0,14.0,8.0,4.0,4.0,42%,58%,21.0,12.0,9.0,9.0,3.0,6.0,1,2
+2017-2018,Cuartos,Vuelta,2018-04-11,Bayern Munich,Sevilla,0-0,2-1,Allianz Arena,Munich,Alemania,Jupp Heynckes,Vincenzo Montella,29.0,18.0,11.0,6.0,6.0,0.0,50%,50%,25.0,13.0,12.0,10.0,9.0,1.0,0,0
+2017-2018,Cuartos,Ida,2018-04-04,Barcelona,Roma,4-1,4-4,Camp Nou,Barcelona,España,Ernesto Valverde,Eusebio Di Francesco,31.0,19.0,12.0,12.0,9.0,3.0,59%,41%,16.0,8.0,8.0,17.0,10.0,7.0,4,1
+2017-2018,Cuartos,Vuelta,2018-04-10,Roma,Barcelona,3-0,4-4,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Ernesto Valverde,26.0,17.0,9.0,9.0,6.0,3.0,43%,57%,29.0,19.0,10.0,9.0,6.0,3.0,3,0
+2017-2018,Cuartos,Ida,2018-04-04,Liverpool,Manchester City,3-0,5-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Pep Guardiola,20.0,9.0,11.0,5.0,5.0,0.0,34%,66%,16.0,6.0,10.0,8.0,0.0,8.0,3,0
+2017-2018,Cuartos,Vuelta,2018-04-10,Manchester City,Liverpool,1-2,1-5,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Jurgen Klopp,25.0,20.0,5.0,6.0,3.0,3.0,68%,32%,12.0,5.0,7.0,11.0,9.0,2.0,1,2
+2017-2018,Semifinal,Ida,2018-04-24,Liverpool,Roma,5-2,7-6,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Eusebio Di Francesco,35.0,21.0,14.0,18.0,12.0,6.0,49%,51%,20.0,13.0,7.0,11.0,7.0,4.0,5,2
+2017-2018,Semifinal,Vuelta,2018-05-02,Roma,Liverpool,4-2,6-7,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Jurgen Klopp,35.0,24.0,11.0,11.0,6.0,5.0,60%,40%,24.0,10.0,14.0,10.0,7.0,3.0,4,2
+2017-2018,Semifinal,Ida,2018-04-25,Bayern Munich,Real Madrid,1-2,3-4,Allianz Arena,Munich,Alemania,Jupp Heynckes,Zinedine Zidane,24.0,17.0,7.0,9.0,5.0,4.0,60%,40%,22.0,8.0,14.0,13.0,10.0,3.0,1,2
+2017-2018,Semifinal,Vuelta,2018-05-01,Real Madrid,Bayern Munich,2-2,4-3,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Jupp Heynckes,31.0,9.0,22.0,13.0,3.0,10.0,40%,60%,20.0,10.0,10.0,17.0,6.0,11.0,2,2
+2017-2018,Final,Final,2018-05-26,Real Madrid,Liverpool,3-1,,NSC Olimpiyskiy,Kiev,Ucrania,Zinedine Zidane,Jurgen Klopp,27.0,14.0,13.0,7.0,5.0,2.0,66%,34%,23.0,5.0,18.0,14.0,9.0,5.0,3,1
+2018-2019,Octavos,Ida,2019-02-12,Manchester United,PSG,0-2,3-3,Old Trafford,Manchester,Inglaterra,Ole Gunnar Solskjaer,Thomas Tuchel,22.0,10.0,12.0,6.0,1.0,5.0,44%,56%,24.0,17.0,7.0,8.0,3.0,5.0,0,2
+2018-2019,Octavos,Vuelta,2019-03-06,PSG,Manchester United,1-3,3-3,Parc des Princes,Paris,Francia,Thomas Tuchel,Ole Gunnar Solskjaer,17.0,12.0,5.0,8.0,4.0,4.0,72%,28%,24.0,9.0,15.0,4.0,4.0,0.0,1,3
+2018-2019,Octavos,Ida,2019-02-12,Roma,Porto,2-1,3-4,Stadio Olimpico,Roma,Italia,Eusebio Di Francesco,Sergio Conceicao,21.0,14.0,7.0,11.0,9.0,2.0,43%,57%,24.0,11.0,13.0,3.0,2.0,1.0,2,1
+2018-2019,Octavos,Vuelta,2019-03-06,Porto,Roma,3-1 ,4-3,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Eusebio Di Francesco,46.0,31.0,15.0,11.0,9.0,2.0,59%,41%,39.0,19.0,20.0,18.0,10.0,8.0,3,1
+2018-2019,Octavos,Ida,2019-02-13,Ajax,Real Madrid,1-2,3-5,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Santiago Solari,32.0,19.0,13.0,15.0,7.0,8.0,50%,50%,21.0,10.0,11.0,5.0,3.0,2.0,1,2
+2018-2019,Octavos,Vuelta,2019-03-05,Real Madrid,Ajax,1-4,3-5,Santiago Bernabeu,Madrid,España,Santiago Solari,Erik ten Hag,36.0,20.0,16.0,16.0,8.0,8.0,57%,43%,23.0,12.0,11.0,9.0,6.0,3.0,1,4
+2018-2019,Octavos,Ida,2019-02-13,Tottenham,Borussia Dortmund,3-0,4-0,Wembley,Londres,Inglaterra,Mauricio Pochettino,Lucien Favre,21.0,15.0,6.0,10.0,5.0,5.0,53%,47%,18.0,13.0,5.0,7.0,6.0,1.0,3,0
+2018-2019,Octavos,Vuelta,2019-03-05,Borussia Dortmund,Tottenham,0-1,0-4,Signal Iduna Park,Dortmund,Alemania,Lucien Favre,Mauricio Pochettino,24.0,19.0,5.0,8.0,7.0,1.0,64%,36%,7.0,4.0,3.0,15.0,10.0,5.0,0,1
+2018-2019,Octavos,Ida,2019-02-19,Lyon,Barcelona,0-0,1-5,Groupama Stadium,Lyon,Francia,Bruno Genesio,Ernesto Valverde,30.0,5.0,25.0,7.0,2.0,5.0,37%,63%,24.0,13.0,11.0,8.0,2.0,6.0,0,0
+2018-2019,Octavos,Vuelta,2019-03-13,Barcelona,Lyon,5-1,5-1,Camp Nou,Barcelona,España,Ernesto Valverde,Bruno Genesio,30.0,19.0,11.0,12.0,10.0,2.0,55%,45%,29.0,11.0,18.0,12.0,6.0,6.0,5,1
+2018-2019,Octavos,Ida,2019-02-19,Liverpool,Bayern Munich,0-0,3-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Niko Kovac,24.0,15.0,9.0,2.0,2.0,0.0,49%,51%,23.0,10.0,13.0,11.0,5.0,6.0,0,0
+2018-2019,Octavos,Vuelta,2019-03-13,Bayern Munich,Liverpool,1-3,1-3,Allianz Arena,Munich,Alemania,Niko Kovac,Jurgen Klopp,17.0,7.0,10.0,8.0,2.0,6.0,58%,42%,21.0,7.0,14.0,9.0,2.0,7.0,1,3
+2018-2019,Octavos,Ida,2019-02-20,Atletico Madrid,Juventus,2-0,2-3,Wanda Metropolitano,Madrid,España,Diego Simeone,Massimiliano Allegri,27.0,13.0,14.0,7.0,5.0,2.0,37%,63%,28.0,12.0,16.0,15.0,8.0,7.0,2,0
+2018-2019,Octavos,Vuelta,2019-03-12,Juventus,Atletico Madrid,3-0,3-2,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Diego Simeone,21.0,16.0,5.0,4.0,4.0,0.0,62%,38%,29.0,12.0,17.0,5.0,5.0,0.0,3,0
+2018-2019,Octavos,Ida,2019-02-20,Schalke 04,Manchester City,2-3,3-10,Veltins-Arena,Gelsenkirchen,Alemania,Domenico Tedesco,Pep Guardiola,28.0,7.0,21.0,8.0,2.0,6.0,34%,66%,20.0,11.0,9.0,11.0,2.0,9.0,2,3
+2018-2019,Octavos,Vuelta,2019-03-12,Manchester City,Schalke 04,7-0,10-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Domenico Tedesco,17.0,15.0,2.0,12.0,11.0,1.0,72%,28%,17.0,10.0,7.0,4.0,3.0,1.0,7,0
+2018-2019,Cuartos,Ida,2019-04-09,Liverpool,Porto,2-0,6-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Sergio Conceicao,23.0,15.0,8.0,6.0,3.0,3.0,64%,36%,16.0,9.0,7.0,9.0,4.0,5.0,2,0
+2018-2019,Cuartos,Vuelta,2019-04-17,Porto,Liverpool,1-4,1-6,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Jurgen Klopp,32.0,19.0,13.0,13.0,8.0,5.0,51%,49%,29.0,16.0,13.0,9.0,6.0,3.0,1,4
+2018-2019,Cuartos,Ida,2019-04-09,Tottenham,Manchester City,1-0,4-4,Tottenham Hotspur Stadium,Londres,Inglaterra,Mauricio Pochettino,Pep Guardiola,23.0,13.0,10.0,6.0,4.0,2.0,41%,59%,19.0,8.0,11.0,6.0,3.0,3.0,1,0
+2018-2019,Cuartos,Vuelta,2019-04-17,Manchester City,Tottenham,4-3,4-4,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Mauricio Pochettino,31.0,20.0,11.0,15.0,8.0,7.0,66%,34%,20.0,8.0,12.0,7.0,4.0,3.0,4,3
+2018-2019,Cuartos,Ida,2019-04-10,Ajax,Juventus,1-1,3-2,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Massimiliano Allegri,26.0,19.0,7.0,7.0,6.0,1.0,61%,39%,25.0,15.0,10.0,7.0,4.0,3.0,1,1
+2018-2019,Cuartos,Vuelta,2019-04-16,Juventus,Ajax,1-2,2-3,Juventus Stadium,Turin,Italia,Massimiliano Allegri,Erik ten Hag,27.0,13.0,14.0,7.0,3.0,4.0,51%,49%,26.0,14.0,12.0,9.0,4.0,5.0,1,2
+2018-2019,Cuartos,Ida,2019-04-10,Manchester United,Barcelona,0-1,0-4,Old Trafford,Manchester,Inglaterra,Ole Gunnar Solskjaer,Ernesto Valverde,16.0,10.0,6.0,3.0,0.0,3.0,34%,66%,27.0,16.0,11.0,6.0,2.0,4.0,0,1
+2018-2019,Cuartos,Vuelta,2019-04-16,Barcelona,Manchester United,3-0,4-0,Camp Nou,Barcelona,España,Ernesto Valverde,Ole Gunnar Solskjaer,22.0,13.0,9.0,9.0,6.0,3.0,66%,34%,25.0,10.0,15.0,11.0,8.0,3.0,3,0
+2018-2019,Semifinal,Ida,2019-04-30,Tottenham,Ajax,0-1,3-3,Tottenham Hotspur Stadium,Londres,Inglaterra,Mauricio Pochettino,Erik ten Hag,,,,,,,,,,,,,,,0,1
+2018-2019,Semifinal,Vuelta,2019-05-08,Ajax,Tottenham,2-3,3-3,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Mauricio Pochettino,,,,,,,,,,,,,,,2,3
+2018-2019,Semifinal,Ida,2019-05-01,Barcelona,Liverpool,3-0,3-4,Camp Nou,Barcelona,España,Ernesto Valverde,Jurgen Klopp,27.0,12.0,15.0,9.0,5.0,4.0,48%,52%,26.0,11.0,15.0,8.0,3.0,5.0,3,0
+2018-2019,Semifinal,Vuelta,2019-05-07,Liverpool,Barcelona,4-0,4-3,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Ernesto Valverde,21.0,13.0,8.0,12.0,7.0,5.0,43%,57%,21.0,12.0,9.0,13.0,7.0,6.0,4,0
+2018-2019,Final,Final,2019-06-01,Tottenham,Liverpool,0-2,,Wanda Metropolitano,Madrid,España,Mauricio Pochettino,Jurgen Klopp,30.0,16.0,14.0,11.0,8.0,3.0,65%,35%,11.0,5.0,6.0,17.0,8.0,9.0,0,2
+2019-2020,Octavos,Ida,2020-02-18,Atletico Madrid,Liverpool,1-0,4-2,Wanda Metropolitano,Madrid,España,Diego Simeone,Jurgen Klopp,15.0,7.0,8.0,2.0,2.0,0.0,27%,73%,24.0,11.0,13.0,9.0,2.0,7.0,1,0
+2019-2020,Octavos,Vuelta,2020-03-11,Liverpool,Atletico Madrid,2-3 ,2-4,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Diego Simeone,44.0,34.0,10.0,17.0,11.0,6.0,71%,29%,34.0,17.0,17.0,19.0,16.0,3.0,2,3
+2019-2020,Octavos,Ida,2020-02-19,Borussia Dortmund,PSG,2-1,2-3,Signal Iduna Park,Dortmund,Alemania,Lucien Favre,Thomas Tuchel,,,,,,,,,,,,,,,2,1
+2019-2020,Octavos,Vuelta,2020-03-11,PSG,Borussia Dortmund,2-0,3-2,Parc des Princes,Paris,Francia,Thomas Tuchel,Lucien Favre,19.0,8.0,11.0,6.0,4.0,2.0,47%,53%,30.0,13.0,17.0,9.0,5.0,4.0,2,0
+2019-2020,Octavos,Ida,2020-02-25,Real Madrid,Manchester City,1-2,2-4,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Pep Guardiola,,,,,,,,,,,,,,,1,2
+2019-2020,Octavos,Vuelta,2020-08-07,Manchester City,Real Madrid,2-1,4-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Zinedine Zidane,29.0,20.0,9.0,11.0,7.0,4.0,55%,45%,11.0,8.0,3.0,10.0,7.0,3.0,2,1
+2019-2020,Octavos,Ida,2020-02-25,Lyon,Juventus,1-0,2-2,Groupama Stadium,Lyon,Francia,Rudi Garcia,Maurizio Sarri,,,,,,,,,,,,,,,1,0
+2019-2020,Octavos,Vuelta,2020-08-07,Juventus,Lyon,2-1,2-2,Allianz Stadium,Turin,Italia,Maurizio Sarri,Rudi Garcia,22.0,16.0,6.0,8.0,6.0,2.0,62%,38%,30.0,12.0,18.0,9.0,6.0,3.0,2,1
+2019-2020,Octavos,Ida,2020-02-26,Tottenham,RB Leipzig,0-1,0-4,Tottenham Hotspur Stadium,Londres,Inglaterra,Jose Mourinho,Julian Nagelsmann,,,,,,,,,,,,,,,0,1
+2019-2020,Octavos,Vuelta,2020-03-10,RB Leipzig,Tottenham,3-0,4-0,Red Bull Arena,Leipzig,Alemania,Julian Nagelsmann,Jose Mourinho,19.0,13.0,6.0,8.0,5.0,3.0,54%,46%,33.0,21.0,12.0,9.0,6.0,3.0,3,0
+2019-2020,Octavos,Ida,2020-02-18,Atalanta,Valencia,4-1,8-4,San Siro,Milán,Italia,Gian Piero Gasperini,Albert Celades,,,,,,,,,,,,,,,4,1
+2019-2020,Octavos,Vuelta,2020-03-10,Valencia,Atalanta,3-4,4-8,Mestalla,Valencia,España,Albert Celades,Gian Piero Gasperini,27.0,16.0,11.0,12.0,7.0,5.0,59%,41%,25.0,13.0,12.0,11.0,9.0,2.0,3,4
+2019-2020,Octavos,Ida,2020-02-19,Chelsea,Bayern Munich,0-3,1-7,Stamford Bridge,Londres,Inglaterra,Frank Lampard,Hansi Flick,,,,,,,,,,,,,,,0,3
+2019-2020,Octavos,Vuelta,2020-08-08,Bayern Munich,Chelsea,4-1,7-1,Allianz Arena,Munich,Alemania,Hansi Flick,Frank Lampard,28.0,18.0,10.0,11.0,7.0,4.0,63%,37%,14.0,8.0,6.0,7.0,4.0,3.0,4,1
+2019-2020,Octavos,Ida,2020-02-19,Napoli,Barcelona,1-1,2-4,San Paolo,Napoles,Italia,Gennaro Gattuso,Quique Setien,,,,,,,,,,,,,,,1,1
+2019-2020,Octavos,Vuelta,2020-08-08,Barcelona,Napoli,3-1,4-2,Camp Nou,Barcelona,España,Quique Setien,Gennaro Gattuso,25.0,7.0,18.0,7.0,4.0,3.0,51%,49%,25.0,8.0,17.0,8.0,2.0,6.0,3,1
+2019-2020,Cuartos,Unico,2020-08-12,Atalanta,PSG,1-2,1-2,Estadio da Luz,Lisboa,Portugal,Gian Piero Gasperini,Thomas Tuchel,26.0,9.0,17.0,10.0,4.0,6.0,37%,63%,42.0,29.0,13.0,7.0,4.0,3.0,1,2
+2019-2020,Cuartos,Unico,2020-08-13,RB Leipzig,Atletico Madrid,2-1,2-1,Estadio Jose Alvalade,Lisboa,Portugal,Julian Nagelsmann,Diego Simeone,19.0,10.0,9.0,7.0,4.0,3.0,57%,43%,33.0,21.0,12.0,10.0,3.0,7.0,2,1
+2019-2020,Cuartos,Unico,2020-08-14,Barcelona,Bayern Munich,2-8,2-8,Estadio da Luz,Lisboa,Portugal,Quique Setien,Hansi Flick,33.0,7.0,26.0,19.0,5.0,14.0,51%,49%,35.0,13.0,22.0,15.0,6.0,9.0,2,8
+2019-2020,Cuartos,Unico,2020-08-15,Manchester City,Lyon,1-3,1-3,Estadio Jose Alvalade,Lisboa,Portugal,Pep Guardiola,Rudi Garcia,25.0,18.0,7.0,13.0,7.0,6.0,72%,28%,28.0,13.0,15.0,14.0,11.0,3.0,1,3
+2019-2020,Semifinal,Unico,2020-08-18,RB Leipzig,PSG,0-3,0-3,Estadio da Luz,Lisboa,Portugal,Julian Nagelsmann,Thomas Tuchel,28.0,14.0,14.0,12.0,3.0,9.0,42%,58%,37.0,24.0,13.0,9.0,5.0,4.0,0,3
+2019-2020,Semifinal,Unico,2020-08-19,Lyon,Bayern Munich,0-3,0-3,Estadio Jose Alvalade,Lisboa,Portugal,Rudi Garcia,Hansi Flick,28.0,9.0,19.0,11.0,3.0,8.0,34%,66%,20.0,12.0,8.0,10.0,4.0,6.0,0,3
+2019-2020,Final,Final,2020-08-23,PSG,Bayern Munich,0-1,,Estadio da Luz,Lisboa,Portugal,Thomas Tuchel,Hansi Flick,22.0,10.0,12.0,5.0,3.0,2.0,38%,62%,38.0,16.0,22.0,8.0,4.0,4.0,0,1
+2020-2021,Octavos,Ida,2021-02-16,Barcelona,PSG,1-4,2-5,Camp Nou,Barcelona,España,Ronald Koeman,Mauricio Pochettino,28.0,12.0,16.0,13.0,4.0,9.0,52%,48%,27.0,11.0,16.0,11.0,4.0,7.0,1,4
+2020-2021,Octavos,Vuelta,2021-03-10,PSG,Barcelona,1-1,5-2,Parc des Princes,Paris,Francia,Mauricio Pochettino,Ronald Koeman,28.0,7.0,21.0,13.0,3.0,10.0,28%,72%,20.0,11.0,9.0,11.0,2.0,9.0,1,1
+2020-2021,Octavos,Ida,2021-02-17,Porto,Juventus,2-1,4-4,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Andrea Pirlo,20.0,8.0,12.0,10.0,5.0,5.0,35%,65%,28.0,14.0,14.0,12.0,6.0,6.0,2,1
+2020-2021,Octavos,Vuelta,2021-03-09,Juventus,Porto,3-2 ,4-4,Allianz Stadium,Turin,Italia,Andrea Pirlo,Sergio Conceicao,45.0,31.0,14.0,20.0,13.0,7.0,68%,32%,34.0,21.0,13.0,21.0,19.0,2.0,3,2
+2020-2021,Octavos,Ida,2021-02-16,RB Leipzig,Liverpool,0-2,0-4,Puskas Arena,Budapest,Hungria,Julian Nagelsmann,Jurgen Klopp,22.0,12.0,10.0,5.0,2.0,3.0,48%,52%,22.0,11.0,11.0,6.0,4.0,2.0,0,2
+2020-2021,Octavos,Vuelta,2021-03-10,Liverpool,RB Leipzig,2-0,4-0,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Julian Nagelsmann,23.0,12.0,11.0,9.0,7.0,2.0,40%,60%,25.0,18.0,7.0,6.0,5.0,1.0,2,0
+2020-2021,Octavos,Ida,2021-02-17,Sevilla,Borussia Dortmund,2-3,4-5,Ramon Sanchez Pizjuan,Sevilla,España,Julen Lopetegui,Edin Terzic,22.0,12.0,10.0,9.0,4.0,5.0,66%,34%,21.0,9.0,12.0,9.0,6.0,3.0,2,3
+2020-2021,Octavos,Vuelta,2021-03-09,Borussia Dortmund,Sevilla,2-2,5-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Julen Lopetegui,28.0,9.0,19.0,13.0,5.0,8.0,31%,69%,32.0,17.0,15.0,9.0,1.0,8.0,2,2
+2020-2021,Octavos,Ida,2021-02-23,Atletico Madrid,Chelsea,0-1,0-3,Arena Nationala,Bucarest,Rumania,Diego Simeone,Thomas Tuchel,17.0,6.0,11.0,5.0,0.0,5.0,37%,63%,30.0,9.0,21.0,11.0,5.0,6.0,0,1
+2020-2021,Octavos,Vuelta,2021-03-17,Chelsea,Atletico Madrid,2-0,3-0,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Diego Simeone,26.0,16.0,10.0,9.0,5.0,4.0,56%,44%,22.0,11.0,11.0,11.0,6.0,5.0,2,0
+2020-2021,Octavos,Ida,2021-02-23,Lazio,Bayern Munich,1-4,2-6,Stadio Olimpico,Roma,Italia,Simone Inzaghi,Hansi Flick,27.0,14.0,13.0,12.0,5.0,7.0,44%,56%,24.0,13.0,11.0,11.0,7.0,4.0,1,4
+2020-2021,Octavos,Vuelta,2021-03-17,Bayern Munich,Lazio,2-1,6-2,Allianz Arena,Munich,Alemania,Hansi Flick,Simone Inzaghi,0.0,0.0,0.0,0.0,0.0,0.0,0%,0%,0.0,0.0,0.0,0.0,0.0,0.0,2,1
+2020-2021,Octavos,Ida,2021-02-24,Atalanta,Real Madrid,0-1,1-4,Gewiss Stadium,Bergamo,Italia,Gian Piero Gasperini,Zinedine Zidane,21.0,2.0,19.0,4.0,0.0,4.0,31%,69%,20.0,8.0,12.0,8.0,1.0,7.0,0,1
+2020-2021,Octavos,Vuelta,2021-03-16,Real Madrid,Atalanta,3-1,4-1,Santiago Bernabeu,Madrid,España,Zinedine Zidane,Gian Piero Gasperini,25.0,12.0,13.0,11.0,6.0,5.0,53%,47%,27.0,14.0,13.0,5.0,0.0,5.0,3,1
+2020-2021,Octavos,Ida,2021-02-24,Borussia Monchengladbach,Manchester City,0-2,0-4,Puskas Arena,Budapest,Hungria,Marco Rose,Pep Guardiola,12.0,3.0,9.0,5.0,1.0,4.0,39%,61%,11.0,7.0,4.0,1.0,0.0,1.0,0,2
+2020-2021,Octavos,Vuelta,2021-03-16,Manchester City,Borussia Monchengladbach,2-0,4-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Marco Rose,16.0,10.0,6.0,9.0,6.0,3.0,67%,33%,12.0,4.0,8.0,9.0,7.0,2.0,2,0
+2020-2021,Cuartos,Ida,2021-04-06,Real Madrid,Liverpool,3-1,3-3,Alfredo Di Stefano,Madrid,España,Zinedine Zidane,Jurgen Klopp,23.0,16.0,7.0,8.0,7.0,1.0,46%,54%,17.0,6.0,11.0,8.0,5.0,3.0,3,1
+2020-2021,Cuartos,Vuelta,2021-04-14,Liverpool,Real Madrid,0-0,3-3,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Zinedine Zidane,21.0,15.0,6.0,6.0,4.0,2.0,56%,44%,15.0,10.0,5.0,14.0,11.0,3.0,0,0
+2020-2021,Cuartos,Ida,2021-04-06,Manchester City,Borussia Dortmund,2-1,4-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Edin Terzic,18.0,11.0,7.0,8.0,5.0,3.0,62%,38%,17.0,9.0,8.0,6.0,4.0,2.0,2,1
+2020-2021,Cuartos,Vuelta,2021-04-14,Borussia Dortmund,Manchester City,1-2,2-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Pep Guardiola,27.0,10.0,17.0,8.0,3.0,5.0,38%,62%,15.0,7.0,8.0,13.0,2.0,11.0,1,2
+2020-2021,Cuartos,Ida,2021-04-07,Bayern Munich,PSG,2-3,3-3,Allianz Arena,Munich,Alemania,Hansi Flick,Mauricio Pochettino,37.0,31.0,6.0,17.0,12.0,5.0,64%,36%,23.0,16.0,7.0,16.0,15.0,1.0,2,3
+2020-2021,Cuartos,Vuelta,2021-04-13,PSG,Bayern Munich,0-1,3-3,Parc des Princes,Paris,Francia,Mauricio Pochettino,Hansi Flick,23.0,10.0,13.0,8.0,3.0,5.0,44%,56%,31.0,10.0,21.0,13.0,6.0,7.0,0,1
+2020-2021,Cuartos,Ida,2021-04-07,Porto,Chelsea,0-2,1-2,Ramon Sanchez Pizjuan,Sevilla,España,Sergio Conceicao,Thomas Tuchel,18.0,12.0,6.0,8.0,5.0,3.0,40%,60%,28.0,11.0,17.0,13.0,9.0,4.0,0,2
+2020-2021,Cuartos,Vuelta,2021-04-13,Chelsea,Porto,0-1,2-1,Ramon Sanchez Pizjuan,Sevilla,España,Thomas Tuchel,Sergio Conceicao,16.0,8.0,8.0,3.0,1.0,2.0,46%,54%,34.0,14.0,20.0,15.0,6.0,9.0,0,1
+2020-2021,Semifinal,Ida,2021-04-27,Real Madrid,Chelsea,1-1,1-3,Alfredo Di Stefano,Madrid,España,Zinedine Zidane,Thomas Tuchel,20.0,9.0,11.0,6.0,1.0,5.0,51%,49%,20.0,11.0,9.0,10.0,4.0,6.0,1,1
+2020-2021,Semifinal,Vuelta,2021-05-05,Chelsea,Real Madrid,2-0,3-1,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Zinedine Zidane,22.0,15.0,7.0,10.0,5.0,5.0,32%,68%,30.0,18.0,12.0,5.0,2.0,3.0,2,0
+2020-2021,Semifinal,Ida,2021-04-28,PSG,Manchester City,1-2,1-4,Parc des Princes,Paris,Francia,Mauricio Pochettino,Pep Guardiola,21.0,10.0,11.0,10.0,4.0,6.0,41%,59%,24.0,9.0,15.0,10.0,6.0,4.0,1,2
+2020-2021,Semifinal,Vuelta,2021-05-04,Manchester City,PSG,2-0,4-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Mauricio Pochettino,26.0,12.0,14.0,5.0,5.0,0.0,44%,56%,27.0,15.0,12.0,12.0,6.0,6.0,2,0
+2020-2021,Final,Final,2021-05-29,Manchester City,Chelsea,0-1,,Estadio do Dragao,Porto,Portugal,Pep Guardiola,Thomas Tuchel,15.0,7.0,8.0,3.0,1.0,2.0,60%,40%,27.0,14.0,13.0,4.0,3.0,1.0,0,1
+2021-2022,Octavos,Ida,2022-02-15,PSG,Real Madrid,1-0,2-3,Parc des Princes,Paris,Francia,Mauricio Pochettino,Carlo Ancelotti,24.0,21.0,3.0,8.0,8.0,0.0,57%,43%,26.0,14.0,12.0,8.0,7.0,1.0,1,0
+2021-2022,Octavos,Vuelta,2022-03-09,Real Madrid,PSG,3-1,3-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Mauricio Pochettino,31.0,21.0,10.0,11.0,7.0,4.0,44%,56%,21.0,12.0,9.0,7.0,5.0,2.0,3,1
+2021-2022,Octavos,Ida,2022-02-15,Sporting CP,Manchester City,0-5,0-5,Estadio Jose Alvalade,Lisboa,Portugal,Ruben Amorim,Pep Guardiola,18.0,3.0,15.0,6.0,0.0,6.0,36%,64%,25.0,9.0,16.0,6.0,0.0,6.0,0,5
+2021-2022,Octavos,Vuelta,2022-03-09,Manchester City,Sporting CP,0-0,5-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Ruben Amorim,20.0,14.0,6.0,7.0,4.0,3.0,68%,32%,21.0,9.0,12.0,9.0,7.0,2.0,0,0
+2021-2022,Octavos,Ida,2022-02-16,Inter,Liverpool,0-2,0-2,San Siro,Milán,Italia,Simone Inzaghi,Jurgen Klopp,22.0,9.0,13.0,2.0,0.0,2.0,46%,54%,19.0,10.0,9.0,14.0,7.0,7.0,0,2
+2021-2022,Octavos,Vuelta,2022-03-08,Liverpool,Inter,0-1,2-1,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Simone Inzaghi,18.0,12.0,6.0,5.0,2.0,3.0,62%,38%,19.0,10.0,9.0,10.0,8.0,2.0,0,1
+2021-2022,Octavos,Ida,2022-02-16,Salzburg,Bayern Munich,1-1,1-8,Red Bull Arena,Salzburgo,Austria,Matthias Jaissle,Julian Nagelsmann,33.0,11.0,22.0,15.0,6.0,9.0,28%,72%,25.0,14.0,11.0,15.0,5.0,10.0,1,1
+2021-2022,Octavos,Vuelta,2022-03-08,Bayern Munich,Salzburg,7-1,8-2,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Matthias Jaissle,25.0,18.0,7.0,13.0,9.0,4.0,72%,28%,22.0,8.0,14.0,9.0,7.0,2.0,7,1
+2021-2022,Octavos,Ida,2022-02-22,Chelsea,Lille,2-0,4-1,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Jocelyn Gourvennec,24.0,9.0,15.0,6.0,4.0,2.0,51%,49%,16.0,10.0,6.0,10.0,4.0,6.0,2,0
+2021-2022,Octavos,Vuelta,2022-03-16,Lille,Chelsea,1-2,1-4,Stade Pierre-Mauroy,Lille,Francia,Jocelyn Gourvennec,Thomas Tuchel,16.0,8.0,8.0,5.0,1.0,4.0,44%,56%,35.0,15.0,20.0,5.0,4.0,1.0,1,2
+2021-2022,Octavos,Ida,2022-02-22,Villarreal,Juventus,1-1,4-1,Estadio de la Ceramica,Villarreal,España,Unai Emery,Massimiliano Allegri,16.0,9.0,7.0,5.0,3.0,2.0,54%,46%,25.0,13.0,12.0,4.0,4.0,0.0,1,1
+2021-2022,Octavos,Vuelta,2022-03-16,Juventus,Villarreal,0-3,1-4,Allianz Stadium,Turin,Italia,Massimiliano Allegri,Unai Emery,22.0,14.0,8.0,8.0,5.0,3.0,58%,42%,11.0,6.0,5.0,9.0,7.0,2.0,0,3
+2021-2022,Octavos,Ida,2022-02-23,Atletico Madrid,Manchester United,1-1,2-1,Wanda Metropolitano,Madrid,España,Diego Simeone,Ralf Rangnick,20.0,13.0,7.0,3.0,1.0,2.0,37%,63%,35.0,19.0,16.0,11.0,8.0,3.0,1,1
+2021-2022,Octavos,Vuelta,2022-03-15,Manchester United,Atletico Madrid,0-1,1-2,Old Trafford,Manchester,Inglaterra,Ralf Rangnick,Diego Simeone,19.0,11.0,8.0,8.0,5.0,3.0,60%,40%,26.0,14.0,12.0,7.0,5.0,2.0,0,1
+2021-2022,Octavos,Ida,2022-02-23,Benfica,Ajax,2-2,3-2,Estadio da Luz,Lisboa,Portugal,Nelson Verissimo,Erik ten Hag,0.0,0.0,0.0,0.0,0.0,0.0,0%,0%,0.0,0.0,0.0,0.0,0.0,0.0,2,2
+2021-2022,Octavos,Vuelta,2022-03-15,Ajax,Benfica,0-1,2-3,Johan Cruyff Arena,Amsterdam,Paises Bajos,Erik ten Hag,Nelson Verissimo,20.0,16.0,4.0,3.0,2.0,1.0,69%,31%,24.0,13.0,11.0,14.0,10.0,4.0,0,1
+2021-2022,Cuartos,Ida,2022-04-05,Manchester City,Atletico Madrid,1-0,1-0,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Diego Simeone,15.0,15.0,0.0,2.0,2.0,0.0,70%,30%,21.0,8.0,13.0,9.0,9.0,0.0,1,0
+2021-2022,Cuartos,Vuelta,2022-04-13,Atletico Madrid,Manchester City,0-0,0-1,Wanda Metropolitano,Madrid,España,Diego Simeone,Pep Guardiola,24.0,14.0,10.0,4.0,3.0,1.0,40%,60%,15.0,8.0,7.0,6.0,2.0,4.0,0,0
+2021-2022,Cuartos,Ida,2022-04-05,Benfica,Liverpool,1-3,4-6,Estadio da Luz,Lisboa,Portugal,Nelson Verissimo,Jurgen Klopp,26.0,9.0,17.0,11.0,3.0,8.0,34%,66%,22.0,7.0,15.0,8.0,2.0,6.0,1,3
+2021-2022,Cuartos,Vuelta,2022-04-13,Liverpool,Benfica,3-3,6-4,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Nelson Verissimo,23.0,17.0,6.0,10.0,6.0,4.0,66%,34%,20.0,9.0,11.0,8.0,8.0,0.0,3,3
+2021-2022,Cuartos,Ida,2022-04-06,Chelsea,Real Madrid,1-3,4-5,Stamford Bridge,Londres,Inglaterra,Thomas Tuchel,Carlo Ancelotti,28.0,20.0,8.0,10.0,5.0,5.0,57%,43%,20.0,14.0,6.0,7.0,5.0,2.0,1,3
+2021-2022,Cuartos,Vuelta,2022-04-12,Real Madrid,Chelsea,2-3 ,5-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Thomas Tuchel,38.0,10.0,28.0,11.0,4.0,7.0,43%,57%,37.0,17.0,20.0,11.0,1.0,10.0,2,3
+2021-2022,Cuartos,Ida,2022-04-06,Villarreal,Bayern Munich,1-0,2-1,Estadio de la Ceramica,Villarreal,España,Unai Emery,Julian Nagelsmann,34.0,12.0,22.0,5.0,1.0,4.0,38%,62%,19.0,10.0,9.0,9.0,3.0,6.0,1,0
+2021-2022,Cuartos,Vuelta,2022-04-12,Bayern Munich,Villarreal,1-1,1-2,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Unai Emery,27.0,23.0,4.0,5.0,4.0,1.0,68%,32%,19.0,11.0,8.0,6.0,6.0,0.0,1,1
+2021-2022,Semifinal,Ida,2022-04-26,Manchester City,Real Madrid,4-3,6-5,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,27.0,16.0,11.0,11.0,6.0,5.0,60%,40%,16.0,11.0,5.0,8.0,5.0,3.0,4,3
+2021-2022,Semifinal,Vuelta,2022-05-04,Real Madrid,Manchester City,3-1 ,6-5,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,29.0,14.0,15.0,15.0,5.0,10.0,44%,56%,32.0,14.0,18.0,13.0,3.0,10.0,3,1
+2021-2022,Semifinal,Ida,2022-04-27,Liverpool,Villarreal,2-0,5-2,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Unai Emery,20.0,19.0,1.0,5.0,5.0,0.0,73%,27%,16.0,9.0,7.0,12.0,10.0,2.0,2,0
+2021-2022,Semifinal,Vuelta,2022-05-03,Villarreal,Liverpool,2-3,2-5,Estadio de la Ceramica,Villarreal,España,Unai Emery,Jurgen Klopp,21.0,6.0,15.0,7.0,2.0,5.0,44%,56%,32.0,18.0,14.0,3.0,1.0,2.0,2,3
+2021-2022,Final,Final,2022-05-28,Liverpool,Real Madrid,0-1,,Stade de France,Paris,Francia,Jurgen Klopp,Carlo Ancelotti,28.0,24.0,4.0,11.0,9.0,2.0,54%,46%,20.0,13.0,7.0,8.0,6.0,2.0,0,1
+2022-2023,Octavos,Ida,2023-02-14,PSG,Bayern Munich,0-1,0-3,Parc des Princes,Paris,Francia,Christophe Galtier,Julian Nagelsmann,27.0,9.0,18.0,11.0,4.0,7.0,46%,54%,26.0,8.0,18.0,9.0,4.0,5.0,0,1
+2022-2023,Octavos,Vuelta,2023-03-08,Bayern Munich,PSG,2-0,3-0,Allianz Arena,Munich,Alemania,Julian Nagelsmann,Christophe Galtier,22.0,12.0,10.0,9.0,5.0,4.0,45%,55%,15.0,9.0,6.0,10.0,4.0,6.0,2,0
+2022-2023,Octavos,Ida,2023-02-14,AC Milan,Tottenham,1-0,1-0,San Siro,Milán,Italia,Stefano Pioli,Antonio Conte,20.0,9.0,11.0,7.0,4.0,3.0,47%,53%,30.0,17.0,13.0,11.0,3.0,8.0,1,0
+2022-2023,Octavos,Vuelta,2023-03-08,Tottenham,AC Milan,0-0,0-1,Tottenham Hotspur Stadium,Londres,Inglaterra,Antonio Conte,Stefano Pioli,23.0,9.0,14.0,5.0,2.0,3.0,54%,46%,30.0,18.0,12.0,6.0,6.0,0.0,0,0
+2022-2023,Octavos,Ida,2023-02-15,Club Brugge,Benfica,0-2,1-7,Jan Breydel Stadium,Brujas,Belgica,Scott Parker,Roger Schmidt,18.0,4.0,14.0,5.0,1.0,4.0,45%,55%,18.0,10.0,8.0,10.0,3.0,7.0,0,2
+2022-2023,Octavos,Vuelta,2023-03-07,Benfica,Club Brugge,5-1,7-1,Estadio da Luz,Lisboa,Portugal,Roger Schmidt,Scott Parker,33.0,20.0,13.0,10.0,8.0,2.0,60%,40%,10.0,3.0,7.0,7.0,2.0,5.0,5,1
+2022-2023,Octavos,Ida,2023-02-15,Borussia Dortmund,Chelsea,1-0,1-2,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Graham Potter,35.0,14.0,21.0,10.0,2.0,8.0,48%,52%,25.0,13.0,12.0,15.0,5.0,10.0,1,0
+2022-2023,Octavos,Vuelta,2023-03-07,Chelsea,Borussia Dortmund,2-0,2-1,Stamford Bridge,Londres,Inglaterra,Graham Potter,Edin Terzic,26.0,13.0,13.0,8.0,4.0,4.0,40%,60%,26.0,17.0,9.0,8.0,5.0,3.0,2,0
+2022-2023,Octavos,Ida,2023-02-21,Liverpool,Real Madrid,2-5,2-6,Anfield,Liverpool,Inglaterra,Jurgen Klopp,Carlo Ancelotti,18.0,9.0,9.0,11.0,5.0,6.0,52%,48%,18.0,9.0,9.0,7.0,4.0,3.0,2,5
+2022-2023,Octavos,Vuelta,2023-03-15,Real Madrid,Liverpool,1-0,6-2,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Jurgen Klopp,26.0,17.0,9.0,13.0,8.0,5.0,54%,46%,24.0,7.0,17.0,14.0,5.0,9.0,1,0
+2022-2023,Octavos,Ida,2023-02-21,Eintracht Frankfurt,Napoli,0-2,0-5,Deutsche Bank Park,Frankfurt,Alemania,Oliver Glasner,Luciano Spalletti,23.0,5.0,18.0,11.0,1.0,10.0,30%,70%,25.0,12.0,13.0,13.0,4.0,9.0,0,2
+2022-2023,Octavos,Vuelta,2023-03-15,Napoli,Eintracht Frankfurt,3-0,5-0,Stadio Diego Armando Maradona,Napoles,Italia,Luciano Spalletti,Oliver Glasner,20.0,12.0,8.0,9.0,8.0,1.0,60%,40%,28.0,13.0,15.0,7.0,4.0,3.0,3,0
+2022-2023,Octavos,Ida,2023-02-22,Inter,Porto,1-0,1-0,San Siro,Milán,Italia,Simone Inzaghi,Sergio Conceicao,28.0,18.0,10.0,8.0,4.0,4.0,60%,40%,29.0,15.0,14.0,7.0,7.0,0.0,1,0
+2022-2023,Octavos,Vuelta,2023-03-14,Porto,Inter,0-0,0-1,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Simone Inzaghi,32.0,21.0,11.0,12.0,7.0,5.0,68%,32%,29.0,11.0,18.0,10.0,6.0,4.0,0,0
+2022-2023,Octavos,Ida,2023-02-22,RB Leipzig,Manchester City,1-1,1-8,Red Bull Arena,Leipzig,Alemania,Marco Rose,Pep Guardiola,19.0,7.0,12.0,7.0,4.0,3.0,38%,62%,18.0,12.0,6.0,6.0,2.0,4.0,1,1
+2022-2023,Octavos,Vuelta,2023-03-14,Manchester City,RB Leipzig,7-0,8-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Marco Rose,27.0,23.0,4.0,17.0,16.0,1.0,66%,34%,17.0,10.0,7.0,10.0,10.0,0.0,7,0
+2022-2023,Cuartos,Ida,2023-04-11,Real Madrid,Chelsea,2-0,4-0,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Frank Lampard,,,,,,,,,,,,,,,2,0
+2022-2023,Cuartos,Vuelta,2023-04-18,Chelsea,Real Madrid,0-2,0-4,Stamford Bridge,Londres,Inglaterra,Frank Lampard,Carlo Ancelotti,28.0,19.0,9.0,12.0,6.0,6.0,54%,46%,24.0,16.0,8.0,10.0,8.0,2.0,0,2
+2022-2023,Cuartos,Ida,2023-04-11,Benfica,Inter,0-2,3-5,Estadio da Luz,Lisboa,Portugal,Roger Schmidt,Simone Inzaghi,21.0,12.0,9.0,6.0,2.0,4.0,58%,42%,20.0,11.0,9.0,10.0,4.0,6.0,0,2
+2022-2023,Cuartos,Vuelta,2023-04-19,Inter,Benfica,3-3,5-3,San Siro,Milán,Italia,Simone Inzaghi,Roger Schmidt,23.0,11.0,12.0,8.0,3.0,5.0,40%,60%,23.0,13.0,10.0,10.0,4.0,6.0,3,3
+2022-2023,Cuartos,Ida,2023-04-12,Manchester City,Bayern Munich,3-0,4-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Thomas Tuchel,,,,,,,,,,,,,,,3,0
+2022-2023,Cuartos,Vuelta,2023-04-19,Bayern Munich,Manchester City,1-1,1-4,Allianz Arena,Munich,Alemania,Thomas Tuchel,Pep Guardiola,26.0,19.0,7.0,9.0,7.0,2.0,58%,42%,23.0,12.0,11.0,7.0,5.0,2.0,1,1
+2022-2023,Cuartos,Ida,2023-04-12,AC Milan,Napoli,1-0,2-1,San Siro,Milán,Italia,Stefano Pioli,Luciano Spalletti,28.0,12.0,16.0,8.0,2.0,6.0,47%,53%,29.0,16.0,13.0,13.0,3.0,10.0,1,0
+2022-2023,Cuartos,Vuelta,2023-04-18,Napoli,AC Milan,1-1,1-2,Stadio Diego Armando Maradona,Napoles,Italia,Luciano Spalletti,Stefano Pioli,29.0,23.0,6.0,8.0,4.0,4.0,74%,26%,26.0,14.0,12.0,17.0,16.0,1.0,1,1
+2022-2023,Semifinal,Ida,2023-05-09,Real Madrid,Manchester City,1-1,1-5,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,23.0,13.0,10.0,10.0,4.0,6.0,44%,56%,22.0,11.0,11.0,15.0,8.0,7.0,1,1
+2022-2023,Semifinal,Vuelta,2023-05-17,Manchester City,Real Madrid,4-0,5-1,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,23.0,16.0,7.0,11.0,8.0,3.0,59%,41%,30.0,16.0,14.0,10.0,7.0,3.0,4,0
+2022-2023,Semifinal,Ida,2023-05-10,AC Milan,Inter,0-2,0-3,San Siro,Milán,Italia,Stefano Pioli,Simone Inzaghi,29.0,13.0,16.0,7.0,2.0,5.0,57%,43%,30.0,14.0,16.0,5.0,2.0,3.0,0,2
+2022-2023,Semifinal,Vuelta,2023-05-16,Inter,AC Milan,1-0,3-0,San Siro,Milán,Italia,Simone Inzaghi,Stefano Pioli,20.0,15.0,5.0,5.0,4.0,1.0,44%,56%,37.0,15.0,22.0,8.0,5.0,3.0,1,0
+2022-2023,Final,Final,2023-06-10,Manchester City,Inter,1-0,,Estadio Olimpico Ataturk,Estambul,Turquia,Pep Guardiola,Simone Inzaghi,21.0,7.0,14.0,10.0,4.0,6.0,56%,44%,28.0,11.0,17.0,6.0,2.0,4.0,1,0
+2023-2024,Octavos,Ida,2024-02-13,Copenhagen,Manchester City,1-3,2-6,Parken Stadium,Copenhague,Dinamarca,Jacob Neestrup,Pep Guardiola,31.0,4.0,27.0,14.0,1.0,13.0,21%,79%,16.0,13.0,3.0,8.0,2.0,6.0,1,3
+2023-2024,Octavos,Vuelta,2024-03-06,Manchester City,Copenhagen,3-1,6-2,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Jacob Neestrup,23.0,12.0,11.0,5.0,3.0,2.0,69%,31%,14.0,5.0,9.0,8.0,4.0,4.0,3,1
+2023-2024,Octavos,Ida,2024-02-13,RB Leipzig,Real Madrid,0-1,1-2,Red Bull Arena,Leipzig,Alemania,Marco Rose,Carlo Ancelotti,29.0,14.0,15.0,12.0,9.0,3.0,50%,50%,22.0,10.0,12.0,10.0,7.0,3.0,0,1
+2023-2024,Octavos,Vuelta,2024-03-06,Real Madrid,RB Leipzig,1-1,2-1,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Marco Rose,31.0,11.0,20.0,7.0,3.0,4.0,54%,46%,27.0,12.0,15.0,11.0,3.0,8.0,1,1
+2023-2024,Octavos,Ida,2024-02-14,PSG,Real Sociedad,2-0,4-1,Parc des Princes,Paris,Francia,Luis Enrique,Imanol Alguacil,23.0,14.0,9.0,6.0,6.0,0.0,62%,38%,21.0,6.0,15.0,16.0,9.0,7.0,2,0
+2023-2024,Octavos,Vuelta,2024-03-05,Real Sociedad,PSG,1-2,1-4,Reale Arena,San Sebastian,España,Imanol Alguacil,Luis Enrique,24.0,14.0,10.0,14.0,7.0,7.0,44%,56%,32.0,19.0,13.0,10.0,6.0,4.0,1,2
+2023-2024,Octavos,Ida,2024-02-14,Lazio,Bayern Munich,1-0,1-3,Stadio Olimpico,Roma,Italia,Maurizio Sarri,Thomas Tuchel,28.0,11.0,17.0,4.0,4.0,0.0,39%,61%,15.0,7.0,8.0,8.0,3.0,5.0,1,0
+2023-2024,Octavos,Vuelta,2024-03-05,Bayern Munich,Lazio,3-0,3-1,Allianz Arena,Munich,Alemania,Thomas Tuchel,Maurizio Sarri,29.0,24.0,5.0,7.0,7.0,0.0,60%,40%,23.0,14.0,9.0,9.0,6.0,3.0,3,0
+2023-2024,Octavos,Ida,2024-02-20,Inter,Atletico Madrid,1-0,2-2,San Siro,Milán,Italia,Simone Inzaghi,Diego Simeone,26.0,19.0,7.0,5.0,5.0,0.0,56%,44%,26.0,10.0,16.0,5.0,3.0,2.0,1,0
+2023-2024,Octavos,Vuelta,2024-03-13,Atletico Madrid,Inter,2-1 ,2-2,Wanda Metropolitano,Madrid,España,Diego Simeone,Simone Inzaghi,38.0,23.0,15.0,14.0,9.0,5.0,47%,53%,35.0,21.0,14.0,6.0,5.0,1.0,2,1
+2023-2024,Octavos,Ida,2024-02-20,PSV,Arsenal,1-1,2-3,Philips Stadion,Eindhoven,Paises Bajos,Peter Bosz,Mikel Arteta,,,,,,,,,,,,,,,1,1
+2023-2024,Octavos,Vuelta,2024-03-12,Arsenal,PSV,2-1,3-2,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Peter Bosz,,,,,,,,,,,,,,,2,1
+2023-2024,Octavos,Ida,2024-02-21,Porto,Arsenal,1-0,1-1,Estadio do Dragao,Porto,Portugal,Sergio Conceicao,Mikel Arteta,15.0,8.0,7.0,2.0,2.0,0.0,35%,65%,36.0,14.0,22.0,11.0,1.0,10.0,1,0
+2023-2024,Octavos,Vuelta,2024-03-12,Arsenal,Porto,1-0 ,1-1,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Sergio Conceicao,23.0,13.0,10.0,7.0,4.0,3.0,58%,42%,38.0,18.0,20.0,10.0,9.0,1.0,1,0
+2023-2024,Octavos,Ida,2024-02-21,Napoli,Barcelona,1-1,2-4,Stadio Diego Armando Maradona,Napoles,Italia,Francesco Calzona,Xavi,18.0,6.0,12.0,7.0,1.0,6.0,49%,51%,25.0,11.0,14.0,11.0,7.0,4.0,1,1
+2023-2024,Octavos,Vuelta,2024-03-12,Barcelona,Napoli,3-1,4-2,Camp Nou,Barcelona,España,Xavi,Francesco Calzona,38.0,24.0,14.0,14.0,10.0,4.0,49%,51%,23.0,7.0,16.0,9.0,7.0,2.0,3,1
+2023-2024,Cuartos,Ida,2024-04-09,Arsenal,Bayern Munich,2-2,2-3,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Thomas Tuchel,21.0,13.0,8.0,6.0,4.0,2.0,59%,41%,25.0,13.0,12.0,3.0,2.0,1.0,2,2
+2023-2024,Cuartos,Vuelta,2024-04-17,Bayern Munich,Arsenal,1-0,3-2,Allianz Arena,Munich,Alemania,Thomas Tuchel,Mikel Arteta,23.0,15.0,8.0,6.0,3.0,3.0,51%,49%,23.0,10.0,13.0,11.0,8.0,3.0,1,0
+2023-2024,Cuartos,Ida,2024-04-09,Real Madrid,Manchester City,3-3,4-4,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Pep Guardiola,26.0,14.0,12.0,11.0,5.0,6.0,38%,62%,20.0,11.0,9.0,6.0,4.0,2.0,3,3
+2023-2024,Cuartos,Vuelta,2024-04-17,Manchester City,Real Madrid,1-1 ,4-4,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,41.0,33.0,8.0,12.0,9.0,3.0,67%,33%,26.0,15.0,11.0,19.0,18.0,1.0,1,1
+2023-2024,Cuartos,Ida,2024-04-10,PSG,Barcelona,2-3,4-6,Parc des Princes,Paris,Francia,Luis Enrique,Xavi,33.0,18.0,15.0,13.0,6.0,7.0,59%,41%,22.0,14.0,8.0,12.0,7.0,5.0,2,3
+2023-2024,Cuartos,Vuelta,2024-04-16,Barcelona,PSG,1-4,4-6,Camp Nou,Barcelona,España,Xavi,Luis Enrique,28.0,7.0,21.0,12.0,3.0,9.0,33%,67%,22.0,10.0,12.0,13.0,3.0,10.0,1,4
+2023-2024,Cuartos,Ida,2024-04-10,Atletico Madrid,Borussia Dortmund,2-1,4-5,Wanda Metropolitano,Madrid,España,Diego Simeone,Edin Terzic,26.0,14.0,12.0,13.0,9.0,4.0,33%,67%,17.0,10.0,7.0,16.0,8.0,8.0,2,1
+2023-2024,Cuartos,Vuelta,2024-04-16,Borussia Dortmund,Atletico Madrid,4-2,5-4,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Diego Simeone,29.0,19.0,10.0,12.0,9.0,3.0,52%,48%,20.0,9.0,11.0,8.0,6.0,2.0,4,2
+2023-2024,Semifinal,Ida,2024-04-30,Bayern Munich,Real Madrid,2-2,3-4,Allianz Arena,Munich,Alemania,Thomas Tuchel,Carlo Ancelotti,24.0,14.0,10.0,9.0,5.0,4.0,52%,48%,21.0,11.0,10.0,11.0,6.0,5.0,2,2
+2023-2024,Semifinal,Vuelta,2024-05-08,Real Madrid,Bayern Munich,2-1,4-3,Santiago Bernabeu,Madrid,España,Carlo Ancelotti,Thomas Tuchel,27.0,19.0,8.0,12.0,7.0,5.0,57%,43%,22.0,12.0,10.0,12.0,8.0,4.0,2,1
+2023-2024,Semifinal,Ida,2024-05-01,Borussia Dortmund,PSG,1-0,2-0,Signal Iduna Park,Dortmund,Alemania,Edin Terzic,Luis Enrique,27.0,13.0,14.0,7.0,4.0,3.0,43%,57%,17.0,11.0,6.0,7.0,4.0,3.0,1,0
+2023-2024,Semifinal,Vuelta,2024-05-07,PSG,Borussia Dortmund,0-1,0-2,Parc des Princes,Paris,Francia,Luis Enrique,Edin Terzic,37.0,30.0,7.0,8.0,5.0,3.0,70%,30%,14.0,8.0,6.0,16.0,12.0,4.0,0,1
+2023-2024,Final,Final,2024-06-01,Real Madrid,Borussia Dortmund,2-0,,Wembley Stadium,Londres,Inglaterra,Carlo Ancelotti,Edin Terzic,,,,,,,,,,,,,,,2,0
+2024-2025,Knockout Play-offs,Ida,2025-02-11,Manchester City,Real Madrid,2-3,,Etihad Stadium,Manchester,Inglaterra,Pep Guardiola,Carlo Ancelotti,31.0,11.0,20.0,12.0,4.0,8.0,54%,46%,15.0,9.0,6.0,11.0,6.0,5.0,2,3
+2024-2025,Knockout Play-offs,Ida,2025-02-11,Stade Brestois,PSG,0-3,,Stade de Roudourou,Guingamp,Francia,Eric Roy,Luis Enrique,,,,,,,,,20.0,,,9.0,,,0,3
+2024-2025,Knockout Play-offs,Ida,2025-02-11,Juventus,PSV Eindhoven,2-1,,Allianz Stadium,Turín,Italia,Thiago Motta,Peter Bosz,27.0,12.0,15.0,10.0,8.0,2.0,47%,53%,26.0,14.0,12.0,9.0,5.0,4.0,2,1
+2024-2025,Knockout Play-offs,Ida,2025-02-11,Sporting CP,Borussia Dortmund,0-3,,José Alvalade,Lisboa,Portugal,Joao Pereira,Nuri Sahin,29.0,13.0,16.0,13.0,6.0,7.0,46%,54%,26.0,8.0,18.0,12.0,4.0,8.0,0,3
+2024-2025,Knockout Play-offs,Ida,2025-02-12,Feyenoord,AC Milan,1-0,,De Kuip,Rotterdam,Países Bajos,Brian Priske,Paulo Fonseca,23.0,11.0,12.0,8.0,2.0,6.0,46%,54%,17.0,8.0,9.0,11.0,5.0,6.0,1,0
+2024-2025,Knockout Play-offs,Ida,2025-02-12,AS Monaco,Benfica,0-1,,Stade Louis II,Mónaco,Mónaco,Adi Hütter,Bruno Lage,29.0,6.0,23.0,9.0,3.0,6.0,44%,56%,24.0,10.0,14.0,9.0,2.0,7.0,0,1
+2024-2025,Knockout Play-offs,Ida,2025-02-12,Celtic,Bayern Munich,1-2,,Celtic Park,Glasgow,Escocia,Brendan Rodgers,Vincent Kompany,19.0,9.0,10.0,7.0,2.0,5.0,43%,57%,8.0,4.0,4.0,14.0,7.0,7.0,1,2
+2024-2025,Knockout Play-offs,Ida,2025-02-12,Club Brugge,Atalanta,2-1,,Jan Breydel,Brujas,Bélgica,Nicky Hayen,Gian Piero Gasperini,23.0,11.0,12.0,9.0,4.0,5.0,54%,46%,18.0,7.0,11.0,6.0,4.0,2.0,2,1
+2024-2025,Knockout Play-offs,Vuelta,2025-02-18,AC Milan,Feyenoord,1-1,1-2,San Siro,Milán,Italia,Paulo Fonseca,Brian Priske,24.0,18.0,6.0,8.0,7.0,1.0,56%,44%,21.0,11.0,10.0,7.0,4.0,3.0,1,1
+2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Benfica,AS Monaco,3-3,4-3,Estádio da Luz,Lisboa,Portugal,Bruno Lage,Adi Hütter,25.0,10.0,15.0,13.0,7.0,6.0,40%,60%,23.0,14.0,9.0,5.0,2.0,3.0,3,3
+2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Bayern Munich,Celtic,1-1,3-2,Allianz Arena,Múnich,Alemania,Vincent Kompany,Brendan Rodgers,28.0,23.0,5.0,13.0,10.0,3.0,67%,33%,11.0,2.0,9.0,7.0,7.0,0.0,1,1
+2024-2025,Knockout Play-offs,Vuelta,2025-02-18,Atalanta,Club Brugge,1-3,2-5,New Balance Arena,Bérgamo,Italia,Gian Piero Gasperini,Nicky Hayen,37.0,30.0,7.0,15.0,11.0,4.0,65%,35%,15.0,8.0,7.0,14.0,14.0,0.0,1,3
+2024-2025,Knockout Play-offs,Vuelta,2025-02-19,PSG,Stade Brestois,7-0,10-0,Parc des Princes,París,Francia,Luis Enrique,Eric Roy,,,,,,,,,,,,,,,7,0
+2024-2025,Knockout Play-offs,Vuelta,2025-02-19,PSV Eindhoven,Juventus,3-1 ,4-3,Philips Stadion,Eindhoven,Países Bajos,Peter Bosz,Thiago Motta,40.0,25.0,15.0,14.0,10.0,4.0,59%,41%,34.0,14.0,20.0,11.0,6.0,5.0,3,1
+2024-2025,Knockout Play-offs,Vuelta,2025-02-19,Real Madrid,Manchester City,3-1,6-3,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Pep Guardiola,27.0,15.0,12.0,12.0,8.0,4.0,48%,52%,18.0,9.0,9.0,12.0,7.0,5.0,3,1
+2024-2025,Knockout Play-offs,Vuelta,2025-02-19,Borussia Dortmund,Sporting CP,0-0,3-0,Signal Iduna Park,Dortmund,Alemania,Niko Kovac,Rui Borges,26.0,19.0,7.0,6.0,5.0,1.0,55%,45%,19.0,14.0,5.0,8.0,6.0,2.0,0,0
+2024-2025,Octavos,Ida,2025-03-04,Real Madrid,Atlético Madrid,2-1,,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Diego Simeone,19.0,13.0,6.0,9.0,7.0,2.0,51%,49%,23.0,10.0,13.0,9.0,6.0,3.0,2,1
+2024-2025,Octavos,Ida,2025-03-04,PSV Eindhoven,Arsenal,1-7,,Philips Stadion,Eindhoven,Países Bajos,Peter Bosz,Mikel Arteta,27.0,12.0,15.0,10.0,2.0,8.0,53%,47%,19.0,9.0,10.0,8.0,5.0,3.0,1,7
+2024-2025,Octavos,Ida,2025-03-04,Borussia Dortmund,LOSC Lille,1-1,,Signal Iduna Park,Dortmund,Alemania,Nuri Sahin,Bruno Génésio,16.0,7.0,9.0,2.0,1.0,1.0,43%,57%,20.0,14.0,6.0,6.0,5.0,1.0,1,1
+2024-2025,Octavos,Ida,2025-03-04,Club Brugge,Aston Villa,1-3,,Jan Breydel,Brujas,Bélgica,Nicky Hayen,Unai Emery,18.0,11.0,7.0,7.0,3.0,4.0,56%,44%,18.0,8.0,10.0,4.0,3.0,1.0,1,3
+2024-2025,Octavos,Ida,2025-03-05,Feyenoord,Inter Milan,0-2,,De Kuip,Rotterdam,Países Bajos,Brian Priske,Simone Inzaghi,21.0,8.0,13.0,12.0,5.0,7.0,42%,58%,21.0,15.0,6.0,12.0,7.0,5.0,0,2
+2024-2025,Octavos,Ida,2025-03-05,Bayer Leverkusen,Bayern Munich,0-2,,BayArena,Leverkusen,Alemania,Xabi Alonso,Vincent Kompany,,,,,,,,,9.0,,,5.0,,,0,2
+2024-2025,Octavos,Ida,2025-03-05,S.L. Benfica,FC Barcelona,0-1,,Estádio da Luz,Lisboa,Portugal,Bruno Lage,Hansi Flick,36.0,26.0,10.0,13.0,8.0,5.0,52%,48%,23.0,18.0,5.0,17.0,13.0,4.0,0,1
+2024-2025,Octavos,Ida,2025-03-05,PSG,Liverpool,0-1,,Parc des Princes,París,Francia,Luis Enrique,Arne Slot,29.0,27.0,2.0,11.0,10.0,1.0,70%,30%,10.0,3.0,7.0,16.0,14.0,2.0,0,1
+2024-2025,Octavos,Vuelta,2025-03-11,FC Barcelona,S.L. Benfica,3-1,4-1,Lluís Companys,Barcelona,España,Hansi Flick,Bruno Lage,28.0,20.0,8.0,8.0,6.0,2.0,65%,35%,12.0,4.0,8.0,7.0,1.0,6.0,3,1
+2024-2025,Octavos,Vuelta,2025-03-11,Inter Milan,Feyenoord,2-1,4-1,San Siro,Milán,Italia,Simone Inzaghi,Brian Priske,26.0,12.0,14.0,9.0,5.0,4.0,56%,44%,18.0,10.0,8.0,9.0,6.0,3.0,2,1
+2024-2025,Octavos,Vuelta,2025-03-11,Liverpool,PSG,0-1 ,1-1 (P),Anfield,Liverpool,Inglaterra,Arne Slot,Luis Enrique,0.0,0.0,0.0,0.0,0.0,0.0,0%,0%,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2024-2025,Octavos,Vuelta,2025-03-11,Bayern Munich,Bayer Leverkusen,3-0,5-0,Allianz Arena,Múnich,Alemania,Vincent Kompany,Xabi Alonso,,,,,,,,,10.0,,,8.0,,,3,0
+2024-2025,Octavos,Vuelta,2025-03-12,LOSC Lille,Borussia Dortmund,1-2,2-3,Pierre-Mauroy,Villeneuve-d'Ascq,Francia,Bruno Génésio,Nuri Sahin,28.0,11.0,17.0,12.0,4.0,8.0,50%,50%,23.0,11.0,12.0,7.0,4.0,3.0,1,2
+2024-2025,Octavos,Vuelta,2025-03-12,Aston Villa,Club Brugge,3-0,6-1,Villa Park,Birmingham,Inglaterra,Unai Emery,Nicky Hayen,18.0,14.0,4.0,11.0,10.0,1.0,53%,47%,15.0,7.0,8.0,4.0,3.0,1.0,3,0
+2024-2025,Octavos,Vuelta,2025-03-12,Arsenal,PSV Eindhoven,2-2,9-3,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Peter Bosz,22.0,9.0,13.0,12.0,7.0,5.0,51%,49%,18.0,9.0,9.0,9.0,5.0,4.0,2,2
+2024-2025,Octavos,Vuelta,2025-03-12,Atlético Madrid,Real Madrid,1-0 ,2-2 (P),Metropolitano,Madrid,España,Diego Simeone,Carlo Ancelotti,27.0,17.0,10.0,11.0,8.0,3.0,38%,62%,27.0,11.0,16.0,20.0,10.0,10.0,1,0
+2024-2025,Cuartos,Ida,2025-04-08,Bayern Munich,Inter Milan,1-2,,Allianz Arena,Múnich,Alemania,Vincent Kompany,Simone Inzaghi,30.0,20.0,10.0,11.0,7.0,4.0,58%,42%,18.0,9.0,9.0,6.0,5.0,1.0,1,2
+2024-2025,Cuartos,Ida,2025-04-08,Arsenal,Real Madrid,3-0,,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Carlo Ancelotti,21.0,12.0,9.0,14.0,11.0,3.0,53%,47%,17.0,8.0,9.0,8.0,5.0,3.0,3,0
+2024-2025,Cuartos,Ida,2025-04-09,FC Barcelona,Borussia Dortmund,4-0,,Lluís Companys,Barcelona,España,Hansi Flick,Nuri Sahin,31.0,18.0,13.0,13.0,10.0,3.0,60%,40%,17.0,5.0,12.0,10.0,4.0,6.0,4,0
+2024-2025,Cuartos,Ida,2025-04-09,PSG,Aston Villa,3-1,,Parc des Princes,París,Francia,Luis Enrique,Unai Emery,36.0,29.0,7.0,12.0,10.0,2.0,75%,25%,17.0,9.0,8.0,11.0,10.0,1.0,3,1
+2024-2025,Cuartos,Vuelta,2025-04-15,Aston Villa,PSG,3-2,4-5,Villa Park,Birmingham,Inglaterra,Unai Emery,Luis Enrique,31.0,17.0,14.0,16.0,9.0,7.0,34%,66%,18.0,15.0,3.0,10.0,5.0,5.0,3,2
+2024-2025,Cuartos,Vuelta,2025-04-15,Borussia Dortmund,FC Barcelona,3-1,3-5,Signal Iduna Park,Dortmund,Alemania,Nuri Sahin,Hansi Flick,25.0,18.0,7.0,13.0,11.0,2.0,46%,54%,25.0,14.0,11.0,12.0,8.0,4.0,3,1
+2024-2025,Cuartos,Vuelta,2025-04-16,Real Madrid,Arsenal,1-2,1-5,Santiago Bernabéu,Madrid,España,Carlo Ancelotti,Mikel Arteta,30.0,18.0,12.0,9.0,3.0,6.0,66%,34%,33.0,18.0,15.0,14.0,10.0,4.0,1,2
+2024-2025,Cuartos,Vuelta,2025-04-16,Inter Milan,Bayern Munich,2-2,4-3,San Siro,Milán,Italia,Simone Inzaghi,Vincent Kompany,35.0,15.0,20.0,12.0,6.0,6.0,38%,62%,26.0,10.0,16.0,11.0,5.0,6.0,2,2
+2024-2025,Semis,Ida,2025-04-29,Arsenal,PSG,0-1,,Emirates Stadium,Londres,Inglaterra,Mikel Arteta,Luis Enrique,21.0,10.0,11.0,9.0,5.0,4.0,48%,52%,30.0,15.0,15.0,4.0,3.0,1.0,0,1
+2024-2025,Semis,Ida,2025-04-30,FC Barcelona,Inter Milan,3-3,,Lluís Companys,Barcelona,España,Hansi Flick,Simone Inzaghi,26.0,19.0,7.0,12.0,9.0,3.0,72%,28%,21.0,10.0,11.0,9.0,7.0,2.0,3,3
+2024-2025,Semis,Vuelta,2025-05-06,Inter Milan,FC Barcelona,4-3 ,7-6,San Siro,Milán,Italia,Simone Inzaghi,Hansi Flick,35.0,13.0,22.0,17.0,7.0,10.0,29%,71%,24.0,14.0,10.0,12.0,5.0,7.0,4,3
+2024-2025,Semis,Vuelta,2025-05-07,PSG,Arsenal,2-1,3-1,Parc des Princes,París,Francia,Luis Enrique,Mikel Arteta,30.0,11.0,19.0,10.0,6.0,4.0,46%,54%,22.0,11.0,11.0,8.0,2.0,6.0,2,1
+2024-2025,Final,Final,2025-05-31,PSG,Inter Milan,5-0,5-0,Allianz Arena,Múnich,Alemania,Luis Enrique,Simone Inzaghi,,,,,,,55%,59%,8.0,3.0,5.0,1.0,0.0,1.0,5,0
