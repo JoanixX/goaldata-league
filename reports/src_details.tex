@@ -1,0 +1,13 @@
+\section{Source Code Details (src)}
+The \texttt{src} directory is the engine of the project, containing all necessary scripts for data extraction and transformation.
+
+\subsection{File Descriptions}
+\begin{itemize}
+    \item \textbf{main.py}: Coordinates the ingestion from UEFA and ESPN APIs. It handles the logic for skipping matches already processed, ensuring efficiency.
+    \item \textbf{api\_clients.py}: Encapsulates the connection logic for external APIs, including timeout handling and JSON parsing.
+    \item \textbf{formatter.py}: Standardizes raw data strings into structured formats (dates, percentages, and team names).
+    \item \textbf{build\_dataset.py}: Responsible for the final merge of structural, tactical, and statistical data into a single CSV file.
+\end{itemize}
+
+\subsection{Enrichment Logic}
+The enrichment process uses a fuzzy-matching algorithm to link teams from different sources despite variations in naming (e.g., "Paris Saint-Germain" vs. "PSG").
