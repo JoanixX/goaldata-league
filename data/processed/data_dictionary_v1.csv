@@ -6,25 +6,25 @@ fecha,datetime64[ns],0,0.0,Match date,2011-02-15 00:00:00
 local,object,0,0.0,Home team,Valencia
 visitante,object,0,0.0,Away team,Schalke 04
 marcador,object,0,0.0,Match score,1-1
-global,object,36,8.09,Aggregate score in knockout rounds,2-4
+global,object,0,0.0,Aggregate score in knockout rounds,2-4
 estadio,object,0,0.0,Stadium name,Mestalla
 ciudad,object,0,0.0,City,Valencia
 pais,object,0,0.0,Country,España
-entrenador_local,object,29,6.52,Home coach,Unai Emery
-entrenador_visitante,object,29,6.52,Away coach,Felix Magath
-tiros_totales,float64,44,9.89,,24.0
-tiros_totales_local,float64,44,9.89,,15.0
-tiros_totales_visitante,float64,44,9.89,,9.0
-tiros_puerta,float64,44,9.89,,11.0
-tiros_puerta_local,float64,44,9.89,,6.0
-tiros_puerta_visitante,float64,44,9.89,,5.0
-posesion_local,object,43,9.66,,65%
-posesion_visitante,object,43,9.66,,35%
-faltas_total,float64,40,8.99,,30.0
-faltas_local,float64,43,9.66,,9.0
-faltas_visitante,float64,43,9.66,,21.0
-corners_total,float64,40,8.99,,12.0
-corners_local,float64,43,9.66,,5.0
-corners_visitante,float64,43,9.66,,7.0
+entrenador_local,object,0,0.0,Home coach,Unai Emery
+entrenador_visitante,object,0,0.0,Away coach,Felix Magath
+tiros_totales,float64,44,9.89,Total number of shots in the match,24.0
+tiros_totales_local,float64,44,9.89,Total shots by home team,15.0
+tiros_totales_visitante,float64,44,9.89,Total shots by away team,9.0
+tiros_puerta,float64,44,9.89,Total shots on target,11.0
+tiros_puerta_local,float64,44,9.89,Shots on target by home team,6.0
+tiros_puerta_visitante,float64,44,9.89,Shots on target by away team,5.0
+posesion_local,object,43,9.66,Home team possession (%),65%
+posesion_visitante,object,43,9.66,Away team possession (%),35%
+faltas_total,float64,40,8.99,Total fouls,30.0
+faltas_local,float64,43,9.66,Fouls by home team,9.0
+faltas_visitante,float64,43,9.66,Fouls by away team,21.0
+corners_total,float64,40,8.99,Total corners,12.0
+corners_local,float64,43,9.66,Corners by home team,5.0
+corners_visitante,float64,43,9.66,Corners by away team,7.0
 home_goals,int64,0,0.0,Goals scored by home team,1
 away_goals,int64,0,0.0,Goals scored by away team,1
