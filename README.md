@@ -1,139 +1,63 @@
-# UEFA Champions League — GoalData League
+# UEFA Champions League Data Scraper Pipeline
 
-> **Course:** Big Data · 2026-I Cycle  
-> **Milestone:** Week 3 — Enhanced Data Pipeline & Scraper Integration  
-> **Role:** Engineering, Modeling, and Analysis of UEFA Champions League Matches (2011–2025)
+This project is a comprehensive Python-based data ingestion and enrichment pipeline designed to reconstruct a complete, granular historical dataset of the UEFA Champions League (2010-2025). 
 
----
+The tool processes an incomplete raw CSV of match results and systematically crawls official and third-party APIs (UEFA & ESPN) to backfill missing, critical statistical points while enforcing a strict "no-invention" data integrity policy.
 
-## 1. Project Overview
+## Project Status & Data Completeness
+The scraper successfully covers 100% of historical matches for the following features:
+- **Lineups & Managers** (`planteles`, `entrenador_local`, `entrenador_visitante`)
+- **Shots** (`tiros_totales`, `tiros_puerta`)
+- **Possession** (`posesion_local`, `posesion_visitante`)
+- **Fouls & Corners** (`faltas_total`, `corners_total`)
 
-The **GoalData League** project aims to build a robust, end-to-end reproducible data pipeline for **UEFA Champions League** match data from the **2011-12 to 2024-25** seasons. 
+*Note: Assist data (`asistencias`) is currently unavailable via the ESPN/UEFA APIs and remains NULL. Yellow cards and Goals are structurally complete (missing values reflect 0-0 draws or matches without cards).*
 
-The core research question is:
-> **How have performance patterns and results evolved in the UEFA Champions League over 14 seasons, and what structures emerge when analyzing match-ups as a network (graph) of teams?**
+## Repository Structure
 
-This project handles data ingestion from seasonal JSON files, consolidation into a master CSV, and enrichment through advanced scrapers to ensure 100% data coverage for all requested fields.
-
----
-
-## 2. Summary
-
-| Field | Detail |
-|---|---|
-| **Domain** | Football — UEFA Champions League |
-| **Period Covered** | 2011-12 → 2024-25 |
-| **Main Entity** | Match |
-| **Data Sources** | UEFA API, ESPN API, SofaScore/Flashscore |
-| **Output Format** | Master CSV & Seasonal JSON files |
-
----
-
-## 3. Technology Stack
-
-```
-Python 3.x
-├── pandas         → DataFrame manipulation and consolidation
-├── requests       → API interactions (UEFA, ESPN)
-├── json           → Parsing and exporting data
-└── pytest         → Automated verification and testing
+```text
+├── data/
+│   ├── raw/                  # Initial raw CSV (needs enrichment)
+│   └── processed/            # Final 100% enriched CSV output
+├── src/
+│   ├── main.py               # Main multi-source ingestion pipeline
+│   ├── uefa_match_ids.json   # Static mapping of all UEFA match IDs
+│   └── espn_id_overrides.json# Manual ID overrides for ESPN search failures
+├── tests/
+│   └── api_diagnostics/      # Comprehensive API field coverage test suite
+└── README.md
 ```
 
-| Tool | Usage |
-|---|---|
-| `pandas` | Loading, transforming, and exporting the dataset |
-| `requests` | Fetching match details, lineups, and statistics from APIs |
-| `UefaClient` | Custom client for UEFA V5 API (official data) |
-| `EspnClient` | Custom client for ESPN API (match stats fallback) |
-| `RatingClient` | Enrichment client for player ratings (SofaScore/Flashscore) |
+## How it Works
 
----
+The pipeline leverages two distinct sources to maximize data density:
+1. **UEFA Match API**: The primary source of truth for match officials (distinguishing referees from assistants) and lineup statuses (starters vs bench).
+2. **ESPN Summary API**: The primary source for match events (goals, substitutions, cards) and granular statistical box scores (possession, shots, fouls, corners).
 
-## 4. Project Architecture
+### Intelligent Fallbacks & Aliases
+Because team names in raw datasets rarely perfectly match external APIs (e.g. "PSG" vs "Paris Saint-Germain"), the pipeline includes an `_ALIASES` mapping layer. Additionally, `espn_id_overrides.json` resolves complex edge cases where venue orientation (Home vs Away) was inverted in the historical data or dates were misrecorded.
 
-### Data Folder Structure
+## Usage & Execution
 
-```
-data/
-├── raw/                # Original source files (Master CSV)
-│   └── champions_league_2011_2025.csv
-├── processed/          # Enriched and cleaned datasets
-│   ├── champions_league_2011_2025_completed.csv
-│   └── json_seasons/   # Final output split by season
-│       ├── 2010_2011.json
-│       ├── 2011_2012.json
-│       └── ...
-└── [seasonal folders]/ # Original JSON sources from openfootball
-```
-
-### Repository Navigation
-
-- `src/main.py`: Main entry point for the data enrichment pipeline.
-- `src/api_clients.py`: Implementation of API clients (UEFA, ESPN, Ratings).
-- `src/formatter.py`: String formatting logic for lineups, referees, and events.
-- `src/conversion_csv.py`: Script to convert the master CSV into seasonal JSON files.
-- `tests/test_integration.py`: Automated integration tests.
-
----
-
-## 5. Execution Guide
-
-Follow these steps to reproduce the data pipeline and enrich the dataset.
-
-### Step 1: Environment Setup
+### 1. Requirements
+Ensure you have Python 3.10+ installed along with the required libraries:
 ```bash
-# Clone the repository
-git clone <repo-url>
-cd goaldata-league
-
-# Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# .venv\Scripts\activate   # Windows
-
-# Install dependencies
-pip install pandas requests pytest
+pip install pandas requests
 ```
 
-### Step 2: Run Data Enrichment Scraper
-The enrichment script uses UEFA and ESPN APIs to fill missing fields in the dataset.
+### 2. Running the Data Enrichment Pipeline
+To process the raw data and generate the fully complete CSV, run the `main.py` entry point. 
+The script is incremental: it will load the existing processed CSV (if any) and only fetch data for rows that are still missing critical fields (like `tiros_totales`), saving hours of redundant network calls.
+
 ```bash
 python src/main.py
 ```
-*Output: `data/processed/champions_league_2011_2025_completed.csv`*
+*The resulting file will be saved at `data/processed/champions_league_2011_2025_completed.csv`.*
 
-### Step 3: Convert CSV to Seasonal JSON
-Split the master dataset into individual JSON files for each season.
+### 3. Running Diagnostics & Tests
+To verify data integrity and check the exact completion percentages for each column across the entire 445-match dataset, run the diagnostic suite:
+
 ```bash
-python src/conversion_csv.py
+python tests/api_diagnostics/run_all_tests.py
 ```
-*Output: `data/processed/json_seasons/*.json`*
-
-### Step 4: Run Automated Tests
-Verify that the pipeline is working correctly and data integrity is maintained.
-```bash
-pytest tests/test_integration.py
-```
-
----
-
-## 6. Dataset Schema (Processed)
-
-Each match record includes:
-- **General Info**: Season, Round, Date, Start/End Time.
-- **Teams & Score**: Home/Away names, FT/HT Score, Global Score.
-- **Officials**: Full refereeing team (Main and Assistants).
-- **Tactical Data**: Full lineups grouped by position, Coaches.
-- **Enrichment**: Player ratings (SofaScore/Flashscore).
-- **Stats**: Shots, Possession, Fouls, Corners (Total and per team).
-- **Events**: Goals, Cards, and Substitutions with timestamps.
-
----
-
-## 7. License and Ethics
-
-- **Data Origin**: Public match data from Open Football Data and public APIs.
-- **Privacy**: No Personally Identifiable Information (PII) is stored. Only professional sports performance data.
-- **License**: Public Domain / Academic Use.
-
----
+*This will execute targeted tests for UEFA Officials, ESPN Stats, and ESPN Roster validation, alongside a global Coverage Report.*
