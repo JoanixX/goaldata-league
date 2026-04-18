@@ -1,6 +1,8 @@
 # Archivos extra
 bigData_pc1_uxxxxxxxxx.tex
 inspect_json.py
+responses.json
+.pytest_cache
 
 # Entornos
 .venv

@@ -2,43 +2,117 @@ import pandas as pd
 import numpy as np
 import os
 import sys
-from api_clients import EspnClient
-from formatter import format_score, format_percentage, format_events
+import os
+
+# Ensure local imports work regardless of where the script is run from
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from api_clients import EspnClient, UefaClient, RatingClient
+from formatter import format_score, format_percentage, format_events, format_referees, format_lineups, format_ratings
 
 def fill_missing_data(csv_path, output_path):
     print(f"Leyendo dataset original: {csv_path}")
     # Read the dataset. Maintain NA as exactly 'NULL' string where it applies or fillna with 'NULL'.
     df = pd.read_csv(csv_path, keep_default_na=False)
     
-    # Initialize client
-    client = EspnClient()
+    # Initialize clients
+    espn = EspnClient()
+    uefa = UefaClient()
+    rc = RatingClient()
     
-    # Make a copy to avoid touching the original if we do any in-place ops (though not necessary here)
     modified_df = df.copy()
 
     for idx, row in modified_df.iterrows():
-        # Check if there are some key missing indicators. E.g. tiros_totales is 'NULL' or empty
-        # In Pandas, keep_default_na=False reads empty strings as ""
+        # Condition to fill: missing lineups, referees or stats
+        missing_squads = row.get('planteles') in ['NULL', '', None]
+        missing_referees = row.get('arbitro_principal') in ['NULL', '', None]
+        missing_stats = row.get('tiros_totales') in ['NULL', '', None]
+        missing_ratings = row.get('puntuaciones_jugadores') in ['NULL', '', None]
         
-        # We define a condition to fill: if we lack match stats
-        needs_filling = row['tiros_totales'] == 'NULL' or row['tiros_totales'] == ''
-        
-        if needs_filling:
-            print(f"Llenando datos para fila {idx}: {row['local']} vs {row['visitante']} ({row['fecha']})")
-            event_id = client.find_match_id(row['fecha'], row['local'], row['visitante'])
+        if missing_squads or missing_referees or missing_stats or missing_ratings:
+            print(f"Procesando fila {idx}: {row['local']} vs {row['visitante']} ({row['fecha']})")
+            
+            # 1. UEFA DATA (Referees, Lineups, Kickoff, Coaches)
+            uefa_match_id = find_uefa_match_id(row['fecha'], row['local'], row['visitante'])
+            
+            if uefa_match_id:
+                details = uefa.get_match_details(uefa_match_id)
+                lineups = uefa.get_lineups(uefa_match_id)
+                if details and lineups:
+                    update_row_from_uefa(modified_df, idx, details, lineups)
+            
+            # 2. ESPN DATA (Stats fallback, Events)
+            event_id = espn.find_match_id(row['fecha'], row['local'], row['visitante'])
             if event_id:
-                summary = client.get_match_summary(event_id)
+                summary = espn.get_match_summary(event_id)
                 if summary:
                     update_row_from_summary(modified_df, idx, summary)
-            else:
-                print(f"  - No se encontró ID de partido en ESPN para {row['fecha']} {row['local']} vs {row['visitante']}")
-                # We can write 'NULL' explicitly on empty string spots
-                for col in modified_df.columns:
-                    if modified_df.at[idx, col] == '':
-                        modified_df.at[idx, col] = 'NULL'
+            
+            # 3. RATINGS DATA (SofaScore/Flashscore)
+            ratings = rc.get_ratings(row['fecha'], row['local'], row['visitante'])
+            if ratings:
+                modified_df.at[idx, 'puntuaciones_jugadores'] = format_ratings(ratings)
+            
+            # Final cleanup: ensure no empty strings or NaNs
+            for col in modified_df.columns:
+                val = modified_df.at[idx, col]
+                if val == '' or pd.isna(val) or val is None:
+                    modified_df.at[idx, col] = 'NULL'
 
     print(f"Guardando dataset completado en: {output_path}")
     modified_df.to_csv(output_path, index=False)
+
+def find_uefa_match_id(date, local, visitante):
+    """
+    Search for UEFA match ID. This is a heuristic/search placeholder.
+    """
+    # Demonstration: for Valencia vs Schalke 2011, we know it's 2003755 (1st leg)
+    if "Valencia" in local and "Schalke" in visitante and "15-02-2011" in date:
+        return "2003755"
+    return None
+
+def update_row_from_uefa(df, idx, details, lineups):
+    """
+    Updates DF using UEFA API data.
+    """
+    try:
+        # Referees
+        referees = details.get('referees', [])
+        df.at[idx, 'arbitro_principal'] = format_referees(referees)
+        
+        # Time
+        kickoff = details.get('kickOffTime', {}).get('dateTime')
+        if kickoff:
+            # Example: 2011-02-15T20:45:00Z -> 20:45
+            time_part = kickoff.split('T')[1][:5]
+            df.at[idx, 'hora_inicio'] = time_part
+            # Estimate end time (approx 2h later)
+            h, m = map(int, time_part.split(':'))
+            end_h = (h + 2) % 24
+            df.at[idx, 'hora_fin'] = f"{end_h:02d}:{m:02d}"
+
+        # Lineups
+        home_name = df.at[idx, 'local']
+        away_name = df.at[idx, 'visitante']
+        df.at[idx, 'planteles'] = format_lineups(home_name, lineups.get('homeTeam'), away_name, lineups.get('awayTeam'))
+        
+        # Coaches
+        home_coach_obj = lineups.get('homeTeam', {}).get('coach')
+        away_coach_obj = lineups.get('awayTeam', {}).get('coach')
+        
+        home_coach = 'NULL'
+        if home_coach_obj:
+            home_coach = home_coach_obj.get('person', {}).get('translations', {}).get('name', {}).get('EN', 'NULL')
+            
+        away_coach = 'NULL'
+        if away_coach_obj:
+            away_coach = away_coach_obj.get('person', {}).get('translations', {}).get('name', {}).get('EN', 'NULL')
+            
+        df.at[idx, 'entrenador_local'] = home_coach
+        df.at[idx, 'entrenador_visitante'] = away_coach
+        
+    except Exception as e:
+        print(f"Error actualizando desde UEFA: {e}")
 
 def update_row_from_summary(df, idx, summary):
     """
@@ -149,8 +223,9 @@ def update_row_from_summary(df, idx, summary):
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    input_csv = os.path.join(base_dir, 'champions_league_2011_2025.csv')
-    output_csv = os.path.join(base_dir, 'champions_league_2011_2025_completed.csv')
+    # New organized paths
+    input_csv = os.path.join(base_dir, 'data', 'raw', 'champions_league_2011_2025.csv')
+    output_csv = os.path.join(base_dir, 'data', 'processed', 'champions_league_2011_2025_completed.csv')
     
     if os.path.exists(input_csv):
         fill_missing_data(input_csv, output_csv)
