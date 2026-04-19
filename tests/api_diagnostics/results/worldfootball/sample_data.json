@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "venue": "Old Trafford (Manchester / England)",
+    "referee": "Olegário Benquerença (Portugal)",
+    "attendance": "74.672"
+  },
+  "lineups": {
+    "home": [
+      "Edwin van der Sar", "John O'Shea", "Rio Ferdinand", "Nemanja Vidić", "Patrice Evra",
+      "Park Ji-sung", "Michael Carrick", "Ryan Giggs", "Nani", "Wayne Rooney", "Javier Hernández"
+    ],
+    "away": [
+      "Petr Čech", "Branislav Ivanović", "Alex", "John Terry", "Ashley Cole",
+      "Ramires", "Michael Essien", "Frank Lampard", "Nicolas Anelka", "Fernando Torres", "Florent Malouda"
+    ]
+  }
+}
