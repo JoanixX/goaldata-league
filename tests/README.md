@@ -1,24 +1,59 @@
-# Testing Suite (tests)
-This directory contains the validation and diagnostic tools used to ensure the integrity of the UEFA Champions League dataset.
+# UEFA Match Data Diagnostic & Testing Suite
 
-## Subdirectories
-- **`api_diagnostics/`**: A specialized suite of scripts designed to test specific API endpoints and report on field coverage.
-  - `run_all_tests.py`: Aggregates all diagnostic checks and generates a summary report.
-  - `test_field_coverage.py`: Scans the processed CSV and calculates the percentage of missing values for every required field.
-  - `results/`: Contains raw JSON responses and the final `field_coverage.json` report.
+This directory contains the testing and diagnostic infrastructure for the UEFA Champions League data enrichment pipeline.
 
-## Test Files
-- **`test_integration.py`**: Verifies the end-to-end enrichment pipeline. It checks if a raw row can be successfully enriched with stats and saved to the output CSV.
-- **`test_api_clients.py`**: Unit tests for the UEFA and ESPN client classes, ensuring they correctly handle successful responses and API errors.
-- **`test_formatter.py`**: Validates the utility functions in `src/formatter.py`, such as team name matching and date parsing.
+## Directory Structure
 
-## Running Tests
-To execute all tests, use `pytest` from the project root:
-```bash
-pytest tests/
+The testing suite is organized by data source, following a modular architecture:
+
+```text
+tests/api_diagnostics/
+├── [source_name]/              # Subfolder for each scraper (uefa, espn, fbref, etc.)
+│   └── test_[source].py        # Diagnostic test script for the source
+└── results/
+    └── [source_name]/          # Output directory for diagnostic reports
+        ├── match_index.json    # IDs/Names of all available matches (2010-2025)
+        ├── sample_data.json    # Sample JSON response from the platform
+        ├── not_found_matches.json   # Matches in our CSV not found on this platform
+        └── missing_data_matches.json # Matches found but with missing fields
 ```
 
-To run the full diagnostic suite and generate the coverage report:
+## Data Sources (Scrapers)
+
+The pipeline utilizes five distinct scrapers to ensure 100% data density:
+
+1.  **UEFA API**: Primary source for match start times, referees, and official lineups.
+2.  **ESPN API**: Main source for match statistics (possession, shots, fouls) and event timelines.
+3.  **Flashscore**: Fallback for granular statistics and real-time event validation.
+4.  **Worldfootball**: Fallback for historical lineups and stadium metadata.
+5.  **FBref**: High-granularity performance data (assists, tackles, interceptions) with Cloudflare-bypass capabilities.
+
+## Diagnostic Reports (The 4 JSONs)
+
+Each scraper generates four critical reports in its `results/` subfolder:
+
+*   **`match_index.json`**: A comprehensive mapping of all Champions League matches available on the platform from 2010 to 2025.
+*   **`sample_data.json`**: A full raw data snapshot from the platform to verify schema integrity.
+*   **`not_found_matches.json`**: Identifies gaps where the platform does not have a record of a match present in our master dataset.
+*   **`missing_data_matches.json`**: Lists matches that exist but have incomplete data (e.g., missing possession or lineups).
+
+## How to Run Diagnostics
+
+To run the diagnostics for a specific source and update its JSON reports:
+
 ```bash
-python tests/api_diagnostics/run_all_tests.py
+python tests/api_diagnostics/[source]/test_[source].py
 ```
+
+Example for UEFA:
+```bash
+python tests/api_diagnostics/uefa/test_uefa.py
+```
+
+## Global Coverage Report
+
+The **`results/field_coverage.json`** file provides a high-level overview of the entire dataset's completeness across all 447+ rows.
+
+## Maintenance
+
+When adding new matches to the `data/raw/cl_2010_2025.csv` file, run the diagnostic tests to identify which sources need to be updated or where data gaps still exist.
