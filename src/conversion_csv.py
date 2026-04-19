@@ -35,7 +35,7 @@ def convert_csv_to_seasonal_json(input_path, output_dir):
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    input_csv = os.path.join(base_dir, 'data', 'processed', 'champions_league_2011_2025_completed.csv')
+    input_csv = os.path.join(base_dir, 'data', 'raw', 'cl_2010_2025.csv')
     output_json_dir = os.path.join(base_dir, 'data', 'processed', 'json_seasons')
     
     convert_csv_to_seasonal_json(input_csv, output_json_dir)
