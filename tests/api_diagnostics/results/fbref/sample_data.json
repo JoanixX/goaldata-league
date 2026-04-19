@@ -1,0 +1,50 @@
+{
+  "match_metadata": {
+    "match_id": "7f8835e3",
+    "teams": "Tottenham Hotspur vs Milan",
+    "date": "March 9, 2011",
+    "score": "0-0",
+    "venue": "White Hart Lane, London",
+    "attendance": 34320,
+    "officials": [
+      "Frank de Bleeckere (Referee)",
+      "Peter Hermans (Asst.)",
+      "Walter Vromans (Asst.)",
+      "Luc Wouters (4th Official)"
+    ]
+  },
+  "performance_data": {
+    "tottenham_hotspur": [
+      {"player": "Heurelho Gomes", "number": 1, "nation": "BRA", "pos": "GK", "age": "30-022", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Vedran Ćorluka", "number": 22, "nation": "CRO", "pos": "DF", "age": "25-032", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Michael Dawson", "number": 20, "nation": "ENG", "pos": "DF", "age": "27-111", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "William Gallas", "number": 13, "nation": "FRA", "pos": "DF", "age": "33-204", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Benoît Assou-Ekotto", "number": 32, "nation": "CMR", "pos": "DF", "age": "26-350", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Aaron Lennon", "number": 7, "nation": "ENG", "pos": "FW,MF", "age": "23-327", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Luka Modrić", "number": 14, "nation": "CRO", "pos": "MF", "age": "25-181", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Sandro", "number": 30, "nation": "BRA", "pos": "MF", "age": "21-359", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Steven Pienaar", "number": 40, "nation": "RSA", "pos": "MF", "age": "28-357", "min": 70, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Rafael van der Vaart", "number": 11, "nation": "NED", "pos": "MF", "age": "28-026", "min": 65, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Peter Crouch", "number": 15, "nation": "ENG", "pos": "FW", "age": "30-038", "min": 82, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Gareth Bale (Sub)", "number": 3, "nation": "WAL", "pos": "FW,MF", "age": "21-236", "min": 25, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Jermaine Jenas (Sub)", "number": 8, "nation": "ENG", "pos": "MF", "age": "28-019", "min": 20, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "R. Pavlyuchenko (Sub)", "number": 9, "nation": "RUS", "pos": "FW", "age": "29-084", "min": 8, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0}
+    ],
+    "milan": [
+      {"player": "Christian Abbiati", "number": 32, "nation": "ITA", "pos": "GK", "age": "33-244", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Ignazio Abate", "number": 20, "nation": "ITA", "pos": "DF,MF", "age": "24-117", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Alessandro Nesta", "number": 13, "nation": "ITA", "pos": "DF", "age": "34-355", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Thiago Silva", "number": 33, "nation": "BRA", "pos": "DF", "age": "26-168", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Marek Jankulovski", "number": 18, "nation": "CZE", "pos": "DF,MF", "age": "33-304", "min": 69, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 1, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Kevin-Prince Boateng", "number": 27, "nation": "GHA", "pos": "FW,MF", "age": "24-003", "min": 75, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Mathieu Flamini", "number": 16, "nation": "FRA", "pos": "MF", "age": "27-002", "min": 86, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 1, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Clarence Seedorf", "number": 10, "nation": "NED", "pos": "MF", "age": "34-342", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Robinho", "number": 70, "nation": "BRA", "pos": "FW,MF", "age": "27-043", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Alexandre Pato", "number": 7, "nation": "BRA", "pos": "FW,MF", "age": "21-188", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 1, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Zlatan Ibrahimović", "number": 11, "nation": "SWE", "pos": "FW", "age": "29-157", "min": 90, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Luca Antonini (Sub)", "number": 77, "nation": "ITA", "pos": "DF,MF", "age": "28-217", "min": 21, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Alexander Merkel (Sub)", "number": 52, "nation": "KAZ", "pos": "MF", "age": "19-015", "min": 15, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0},
+      {"player": "Rodney Strasser (Sub)", "number": 14, "nation": "SLE", "pos": "MF", "age": "20-344", "min": 4, "gls": 0, "ast": 0, "pk": 0, "pkatt": 0, "sh": 0, "sot": 0, "crdy": 0, "crdr": 0, "fls": 0, "fld": 0, "off": 0, "crs": 0, "tklw": 0, "int": 0, "og": 0, "pkwon": 0, "pkcon": 0}
+    ]
+  }
+}
