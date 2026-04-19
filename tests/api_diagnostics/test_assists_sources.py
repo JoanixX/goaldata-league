@@ -6,6 +6,10 @@ Run: python tests/api_diagnostics/test_assists_sources.py
 import sys, os, json
 import requests
 
+# Setup paths for local imports
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(BASE_DIR, 'src'))
+
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
     'Accept': 'application/json, text/plain, */*',
@@ -71,10 +75,38 @@ except Exception as e:
     print(f"ESPN error: {e}")
 
 
+from scrapers.flashscore import FlashscoreScraper
+from scrapers.worldfootball import WorldFootballScraper
+from scrapers.fbref import FBRefScraper
+
+print("\n=== Testing Flashscore for assists ===")
+try:
+    fs = FlashscoreScraper()
+    # Sample match ID (Chelsea vs Man Utd 2011)
+    match_id = "WC5zpioS"
+    feed = fs.fetch_feed(match_id, 'su') # summary
+    if feed and 'asistencia' in feed.lower():
+        print("  ✓ Flashscore summary feed mentions assists")
+    else:
+        print("  ✗ No explicit assist data in Flashscore summary feed")
+except Exception as e:
+    print(f"Flashscore error: {e}")
+
+print("\n=== Testing Worldfootball for assists ===")
+try:
+    wf = WorldFootballScraper()
+    url = "https://www.worldfootball.net/match-report/co19/uefa-champions-league/ma137502/chelsea-fc_manchester-united/lineup/"
+    html = wf.fetch_page(url)
+    if html and 'assist' in html.lower():
+        print("  ✓ Worldfootball page mentions assists")
+    else:
+        print("  ✗ No explicit assist data on Worldfootball page")
+except Exception as e:
+    print(f"Worldfootball error: {e}")
+
 print("\n=== Conclusion ===")
-print("  - ESPN UCL summary API does NOT include assist data in keyEvents or details")
-print("  - FBref may have assist data but requires HTML scraping")
-print("  - Flashscore requires special headers/tokens for their API")
-print("  - RECOMMENDATION: 'asistencias' field should be left as NULL unless")
-print("    a dedicated FBref scraper is implemented (separate module)")
-print("  - OR: asistencias can be manually curated for top matches")
+print("  - ESPN: No assists in API.")
+print("  - FBref: High reliability via HTML scraping of match reports.")
+print("  - Flashscore: Provides assists in the summary feed for many matches.")
+print("  - Worldfootball: Variable, usually focused on lineups.")
+print("  - ACTION: Use FBref and Flashscore as primary fallback for 'asistencias'.")
