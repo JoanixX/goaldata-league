@@ -69,14 +69,54 @@ def fill_missing_data(csv_path: str, output_path: str):
         if e_id:
             e_data = e_scraper.get_data(e_id, local)
 
-        # 3. External Fallbacks (To be automated via index)
+        # 3. External Fallbacks (Flashscore & Worldfootball)
         ext_data = {}
         
-        # 4. FBref Extraction (Lowest priority)
-        f_data = {}
-        # ... FBref logic ...
+        # Load indices if needed (optimally load once outside loop)
+        def _load_idx(name):
+            p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
+                             'tests', 'api_diagnostics', 'results', name, 'match_index.json')
+            if os.path.exists(p):
+                with open(p, encoding='utf-8') as f: return json.load(f)
+            return {}
+
+        fs_idx = _load_idx('flashscore')
+        wf_idx = _load_idx('worldfootball')
+        fb_idx = _load_idx('fbref')
+
+        match_key = f"{local} vs {away} | {date}"
+        
+        # Flashscore for Stats
+        if (not has_stats or is_null(e_data.get('tiros_totales'))) and match_key in fs_idx:
+            fs_mid = fs_idx[match_key]
+            print(f"    -> Flashscore fallback (ID: {fs_mid})")
+            fs_data = fs_scraper.get_match_data(fs_mid)
+            ext_data.update(fs_data.get('stats', {}))
+
+        # Worldfootball for Lineups
+        if is_null(row.get('planteles')) and is_null(u_lineups.get('planteles')) and is_null(e_data.get('planteles')):
+            if match_key in wf_idx:
+                wf_url = wf_idx[match_key]
+                print(f"    -> Worldfootball fallback (URL: {wf_url})")
+                html = wf_scraper.fetch_page(wf_url)
+                wf_res = wf_scraper.parse_match_report(html)
+                if wf_res and wf_res.get('lineups'):
+                    l, a = wf_res['lineups'].get('home', []), wf_res['lineups'].get('away', [])
+                    ext_data['planteles'] = f"{local}: {'; '.join(l)} | {away}: {'; '.join(a)}"
+
+        # 4. FBref Extraction (Lowest priority fallback)
+        fb_data = {}
+        if is_null(ext_data.get('tiros_totales')) and is_null(e_data.get('tiros_totales')) and not has_stats:
+            if match_key in fb_idx:
+                fb_url = fb_idx[match_key]
+                print(f"    -> FBref fallback (URL: {fb_url})")
+                html = f_scraper.fetch_page(fb_url)
+                fb_data = f_scraper.parse_match_data(html)
+                # Map FBref stats to schema if needed
+                # (FBref provides granular player stats, would need aggregation here)
 
         # --- Merge Logic ---
+        # Priority: UEFA (officials) > ESPN (stats) > Flashscore (stats) > Worldfootball (lineups) > FBref
         merged = {**ext_data, **e_data}
         
         # UEFA Overrides
