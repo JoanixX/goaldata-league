@@ -1,0 +1,121 @@
+[
+  {
+    "match": "AC Milan vs Tottenham",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Arsenal vs Barcelona",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Inter vs Bayern Munich",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Marseille vs Manchester United",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Manchester United vs Marseille",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Lyon vs Real Madrid",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Chelsea vs Manchester United",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Manchester United vs Chelsea",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Real Madrid vs Barcelona",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Schalke 04 vs Manchester United",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Manchester United vs Schalke 04",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Barcelona vs Manchester United",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Shakhtar vs Barcelona",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Real Madrid vs Chelsea",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Manchester City vs Bayern Munich",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "PSV vs Arsenal",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  },
+  {
+    "match": "Arsenal vs PSV",
+    "missing_fields": [
+      "arbitros_linea",
+      "hora_inicio"
+    ]
+  }
+]
