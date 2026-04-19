@@ -5,6 +5,7 @@ inspect_json.py
 scratch
 scratch/*
 uefa_match_events.csv
+match_links.json
 
 # Entornos
 .venv
