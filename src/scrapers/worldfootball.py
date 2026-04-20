@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-from .utils import HEADERS, norm_text
+from scrapers.utils import HEADERS, norm_text
 
 class WorldFootballScraper:
     def __init__(self):

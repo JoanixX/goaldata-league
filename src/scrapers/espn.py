@@ -1,5 +1,5 @@
 import requests
-from .utils import HEADERS, norm_text, teams_match, date_to_api, safe_pct, sum_int
+from scrapers.utils import HEADERS, norm_text, teams_match, date_to_api, safe_pct, sum_int
 
 ESPN_BOARD   = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard'
 ESPN_SUMMARY = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary'

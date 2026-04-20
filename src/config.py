@@ -17,7 +17,7 @@ _ALIASES: dict[str, list[str]] = {
 }
 
 def expand_aliases(name: str) -> list[str]:
-    from .scrapers.utils import norm_text
+    from scrapers.utils import norm_text
     n = norm_text(name)
     result = {n}
     for alias_key, alias_vals in _ALIASES.items():

@@ -1,6 +1,6 @@
 import requests
 import re
-from .utils import HEADERS, safe_pct, sum_int
+from scrapers.utils import HEADERS, safe_pct, sum_int
 
 class FlashscoreScraper:
     """

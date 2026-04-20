@@ -1,7 +1,7 @@
 import requests
 import os
 import json
-from .utils import HEADERS, norm_text, date_to_iso
+from scrapers.utils import HEADERS, norm_text, date_to_iso
 
 UEFA_BASE = 'https://match.uefa.com/v5/matches'
 
