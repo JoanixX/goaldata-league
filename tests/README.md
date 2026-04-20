@@ -39,11 +39,11 @@ Each scraper generates four critical reports in its `results/` subfolder:
 
 ## How to Run Diagnostics
 
-To run the diagnostics for a specific source and update its JSON reports:
-
+To run the full diagnostic suite and generate/update all JSON reports in one go:
 ```bash
-python tests/api_diagnostics/[source]/test_[source].py
+python tests/api_diagnostics/run_all_tests.py
 ```
+This script will execute the modular tests for all 5 platforms and provide a consolidated pass/fail summary.
 
 Example for UEFA:
 ```bash
