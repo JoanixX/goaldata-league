@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import json
-from .utils import HEADERS, norm_text
+from scrapers.utils import HEADERS, norm_text
 
 class FBRefScraper:
     def __init__(self):
