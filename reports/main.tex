@@ -201,32 +201,42 @@ pip install -r requirements.txt
 python src/main.py
 \end{lstlisting}
 
-\section{Source Code Details (src)}
-The \texttt{src} directory is the engine of the project, containing all necessary scripts for data extraction and transformation.
+\section{Technical Architecture (`src`)}
+The \texttt{src} directory has been refactored into a modular, production-ready architecture. It follows a "Source Priority" model to maximize data density across 14 seasons.
 
-\subsection{File Descriptions}
+\subsection{Modular Scrapers (`src/scrapers/`)}
+We transitioned from monolithic clients to a specialized package structure:
 \begin{itemize}
-    \item \textbf{main.py}: Coordinates the ingestion from UEFA and ESPN APIs. It handles the logic for skipping matches already processed, ensuring efficiency.
-    \item \textbf{api\_clients.py}: Encapsulates the connection logic for external APIs, including timeout handling and JSON parsing.
-    \item \textbf{formatter.py}: Standardizes raw data strings into structured formats (dates, percentages, and team names).
-    \item \textbf{build\_dataset.py}: Responsible for the final merge of structural, tactical, and statistical data into a single CSV file.
+    \item \textbf{uefa.py}: Primary source for official kickoff times and referee teams.
+    \item \textbf{espn.py}: Main engine for statistical events (possession, shots, fouls) and match timelines.
+    \item \textbf{flashscore.py}: High-reliability fallback for missing match statistics using internal feed APIs.
+    \item \textbf{worldfootball.py}: Specialized in historical lineup recovery (2010-2015) and stadium metadata.
+    \item \textbf{fbref.py}: Provides granular performance data (assists, tackles). Features a \textbf{Wayback Machine fallback} to bypass bot protections on historical records.
 \end{itemize}
 
-\subsection{Enrichment Logic}
-The enrichment process uses a fuzzy-matching algorithm to link teams from different sources despite variations in naming (e.g., "Paris Saint-Germain" vs. "PSG").
+\subsection{Multi-Layered Enrichment Flow}
+The pipeline implements an automated cascading lookup:
+\begin{enumerate}
+    \item \textbf{Phase 1 (API)}: UEFA and ESPN APIs are queried for structural and statistical data.
+    \item \textbf{Phase 2 (Diagnostic Index)}: If data gaps persist, the system consults the pre-built indices for Flashscore and Worldfootball.
+    \item \textbf{Phase 3 (Deep Fallback)}: The FBref scraper is triggered as a final attempt for high-granularity tactical metrics.
+    \item \textbf{Phase 4 (Normalization)}: The \texttt{config.py} module resolves naming inconsistencies using a fuzzy-alias mapping system.
+\end{enumerate}
 
-\section{Testing and Diagnostics (tests)}
-The robustness of the dataset is maintained through a comprehensive testing suite that validates both individual components and the final data output.
+\section{Testing and Diagnostics (`tests`)}
+The project features a rigorous diagnostic infrastructure designed to audit data health across all platforms.
 
-\subsection{API Diagnostics}
-The \texttt{tests/api\_diagnostics/} folder contains scripts that specifically measure the health of the data pipeline:
+\subsection{Hierarchical Diagnostic System}
+Tests are organized by source in \texttt{tests/api_diagnostics/[source]/}. Each source generates four standardized reports in \texttt{results/[source]/}:
 \begin{itemize}
-    \item \textbf{Field Coverage}: Automated scanning of the final CSV to report completion percentages for every column.
-    \item \textbf{API Health}: Tests to ensure the UEFA and ESPN endpoints are returning the expected data structures.
+    \item \textbf{match\_index.json}: Mapping of all available matches on the platform (2010-2025).
+    \item \textbf{sample\_data.json}: Raw data snapshot to verify API schema integrity.
+    \item \textbf{not\_found\_matches.json}: Identifies missing records relative to our master CSV.
+    \item \textbf{missing\_data\_matches.json}: Audits found matches for specific NULL fields.
 \end{itemize}
 
-\subsection{Integration Tests}
-Integration tests ensure that changes to one module (e.g., the formatter) do not break the overall pipeline. These tests simulate a full match enrichment cycle using mock or cached API responses.
+\subsection{Automated Validation}
+To ensure 100\% reliability, the \texttt{run\_all\_tests.py} script orchestrates the full suite, providing a consolidated health summary of the entire data pipeline.
 
 \section{Analysis and Prototyping (notebooks)}
 The \texttt{notebooks} directory contains the initial research phase of the project, focusing on Exploratory Data Analysis (EDA).
