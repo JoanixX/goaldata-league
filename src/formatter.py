@@ -1,156 +1,101 @@
-import math
+import re
 
-def format_percentage(value):
-    """
-    Rounds a decimal percentage value and adds the '%' symbol.
-    Example: 64.6 -> '65%'
-    """
-    if value is None:
-        return 'NULL'
+def norm_val(val):
+    """Basic normalization for comparison."""
+    if val is None: return "NULL"
+    s = str(val).strip()
+    if not s or s.upper() == "NULL": return "NULL"
+    return s
+
+def format_possession(val):
+    if not val or str(val).upper() == "NULL": return "NULL"
+    s = str(val).replace("%", "").strip()
     try:
-        val = float(value)
-        return f"{round(val)}%"
-    except ValueError:
-        return 'NULL'
+        return f"{int(float(s))}%"
+    except:
+        return "NULL"
 
-def format_score(home_score, away_score, status_detail=None):
-    """
-    Format score. Add '(P)' for Penalties or '(AET)' for extra-time if given in status_detail.
-    """
-    if home_score is None or away_score is None:
-        return 'NULL'
-    
-    score_str = f"{home_score}-{away_score}"
-    
-    if status_detail:
-        detail_upper = status_detail.upper()
-        if 'PEN' in detail_upper:
-            score_str += " (P)"
-        elif 'AET' in detail_upper or 'A.E.T' in detail_upper or 'EXTRA' in detail_upper:
-            score_str += " (AET)"
-            
-    return score_str
+def format_score(home, away, penalties=None):
+    if home is None or away is None: return "NULL"
+    base = f"{home}-{away}"
+    if penalties:
+        return f"{base} P({penalties})"
+    return base
 
-def format_referees(referees_list):
-    """
-    Format referees from UEFA API.
-    Format: "Principal, Assistant 1; Assistant 2"
-    """
-    if not referees_list:
-        return 'NULL'
-    
-    main = 'NULL'
-    assistants = []
-    
-    for ref in referees_list:
-        role = ref.get('role')
-        name = ref.get('person', {}).get('translations', {}).get('name', {}).get('EN', '')
-        if role == 'REFEREE':
-            main = name
-        elif role in ['ASSISTANT_REFEREE_ONE', 'ASSISTANT_REFEREE_TWO']:
-            assistants.append(name)
-            
-    if main == 'NULL' and not assistants:
-        return 'NULL'
-        
-    return f"{main}, {'; '.join(assistants)}"
+def format_list(items, sep="; "):
+    if not items: return "NULL"
+    # Filter empty and join
+    clean = [str(i).strip() for i in items if i and str(i).strip().upper() != "NULL"]
+    if not clean: return "NULL"
+    return sep.join(clean)
 
-def format_lineups(home_name, home_lineup, away_name, away_lineup):
-    """
-    Format full lineups (starters + bench) from UEFA API.
-    Format: "Home: P1, P2... | Away: P1, P2..."
-    """
-    def get_team_string(team_name, lineup_data):
-        if not lineup_data:
-            return f"{team_name}: NULL"
-            
-        # Group by position
-        pos_map = {'GOALKEEPER': [], 'DEFENDER': [], 'MIDFIELDER': [], 'FORWARD': []}
-        
-        # Combine starters and bench? The example seems to show starters mostly.
-        # "Valencia: Guaita; D. Navarro, Ricardo Costa, Mathieu, Miguel; Mehmet Topal, Banega, Domínguez; Aritz Aduriz, Soldado, Costa"
-        # This is 11 players. So starters only for the 'planteles' field.
-        starters = lineup_data.get('lineup', [])
-        for p in starters:
-            name = p.get('player', {}).get('translations', {}).get('name', {}).get('EN', '')
-            pos = p.get('player', {}).get('fieldPosition', 'FORWARD')
-            if pos in pos_map:
-                pos_map[pos].append(name)
-            else:
-                pos_map['FORWARD'].append(name)
-                
-        # Build sections
-        sections = []
-        if pos_map['GOALKEEPER']: sections.append(", ".join(pos_map['GOALKEEPER']))
-        if pos_map['DEFENDER']: sections.append(", ".join(pos_map['DEFENDER']))
-        if pos_map['MIDFIELDER']: sections.append(", ".join(pos_map['MIDFIELDER']))
-        if pos_map['FORWARD']: sections.append(", ".join(pos_map['FORWARD']))
-        
-        return f"{team_name}: {'; '.join(sections)}"
+def format_lineup(team_name, players):
+    p_str = format_list(players, sep="; ")
+    return f"{team_name}: {p_str}"
 
-    home_str = get_team_string(home_name, home_lineup)
-    away_str = get_team_string(away_name, away_lineup)
+def format_full_lineups(home_name, home_players, away_name, away_players):
+    h = format_lineup(home_name, home_players)
+    a = format_lineup(away_name, away_players)
+    return f"{h} | {a}"
+
+def format_goal(player, minute, is_penalty=False, is_own_goal=False):
+    m = str(minute).replace("'", "").strip()
+    suffix = "'"
+    if is_penalty: suffix = "' (P)"
+    elif is_own_goal: suffix = "' (OG)"
+    return f"{player} {m}{suffix}"
+
+def format_sub(minute, p_in, p_out):
+    m = str(minute).replace("'", "").strip()
+    return f"{m}' {p_in} x {p_out}"
+
+def soft_norm(s):
+    """Deep normalization to ignore accents, minor spelling, and special chars."""
+    if not s or s.upper() == "NULL": return ""
+    import unicodedata
+    # Remove accents
+    s = "".join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+    # Remove non-alpha
+    s = re.sub(r'[^a-zA-Z0-9]', '', s)
+    return s.lower()
+
+def are_equivalent(v1, v2, field=None):
+    n1, n2 = norm_val(v1), norm_val(v2)
+    if n1 == n2: return True
+    if n1 == "NULL" or n2 == "NULL": return False
+
+    # List-based fields (referees, goals, subs, players)
+    if field in ('arbitros_linea', 'goles', 'amarillas', 'rojas', 'cambios'):
+        s1 = set(soft_norm(x) for x in n1.split(';'))
+        s2 = set(soft_norm(x) for x in n2.split(';'))
+        if s1 == s2: return True
+        return False
+
+    if field == 'planteles':
+        parts1 = [p.strip() for p in n1.split('|')]
+        parts2 = [p.strip() for p in n2.split('|')]
+        if len(parts1) != len(parts2): return False
+        
+        # We need to match teams even if swapped
+        def _get_team_map(parts):
+            m = {}
+            for p in parts:
+                if ':' not in p: continue
+                t, l = p.split(':', 1)
+                m[soft_norm(t)] = set(soft_norm(x) for x in l.split(';'))
+            return m
+
+        m1, m2 = _get_team_map(parts1), _get_team_map(parts2)
+        if len(m1) != len(m2): return False
+        for t_norm, players_set in m1.items():
+            if t_norm not in m2 or m2[t_norm] != players_set:
+                return False
+        return True
+
+    if field and field.startswith('posesion'):
+        return n1.replace('%','') == n2.replace('%','')
     
-    return f"{home_str} | {away_str}"
+    if field in ('arbitro_principal', 'entrenador_local', 'entrenador_visitante'):
+        return soft_norm(n1) == soft_norm(n2)
 
-def format_ratings(ratings_list):
-    """
-    Format ratings from Flashscore.
-    Format: "Player 8.9; Player 7.2; ..."
-    """
-    if not ratings_list:
-        return 'NULL'
-    # ratings_list is expected to be a list of (name, rating) tuples or similar
-    return "; ".join([f"{name} {rating}" for name, rating in ratings_list])
-
-def format_events(events_list, event_type):
-    """
-    Given a list of events from ESPN API details, filter by event_type
-    and return formatted string.
-    Types from ESPN:
-     - 'Goal'
-     - 'Yellow Card'
-     - 'Red Card'
-     - 'Substitution'
-    
-    Returns standard string, e.g. "Soldado 17'; Raul 64'"
-    If empty, returns "NULL"
-    """
-    if not events_list:
-        return 'NULL'
-        
-    filtered = []
-    for evt in events_list:
-        # Check event type
-        t_id = evt.get('type', {}).get('text', '')
-        if event_type == 'Yellow' and t_id == 'Yellow Card':
-            filtered.append(evt)
-        elif event_type == 'Red' and t_id == 'Red Card':
-            filtered.append(evt)
-        elif event_type == 'Goal' and t_id == 'Goal':
-            filtered.append(evt)
-        elif event_type == 'Sub' and t_id == 'Substitution':
-            filtered.append(evt)
-            
-    if not filtered:
-        return 'NULL'
-        
-    formatted = []
-    for evt in filtered:
-        clock = evt.get('clock', {}).get('displayValue', '').replace("'", "")
-        # Get athletes
-        athletes = evt.get('athletesInvolved', [])
-        
-        if event_type == 'Sub' and len(athletes) >= 2:
-            # Substitution usually list 2 players: sub_in, sub_out
-            sub_in = athletes[0].get('shortName', athletes[0].get('displayName', ''))
-            sub_out = athletes[1].get('shortName', athletes[1].get('displayName', ''))
-            formatted.append(f"{clock}' {sub_in} x {sub_out}")
-            
-        elif athletes:
-            # Cards and Goals
-            player = athletes[0].get('shortName', athletes[0].get('displayName', ''))
-            # Format: Name clock'
-            formatted.append(f"{player} {clock}'")
-            
-    return "; ".join(formatted) if formatted else "NULL"
+    return False

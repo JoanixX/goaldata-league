@@ -67,6 +67,15 @@ class ESPNScraper:
             l_tid = (l_comp or {}).get('team', {}).get('id')
             v_tid = (v_comp or {}).get('team', {}).get('id')
 
+            # Penalties & Aggregate
+            shootout_score = comp.get('shootoutScoreDisplay')
+            if shootout_score:
+                result['_espn_penalties'] = shootout_score
+            
+            agg_score = comp.get('aggregateScore')
+            if agg_score:
+                result['marcador_global'] = str(agg_score)
+
             # Officials fallback
             officials = data.get('gameInfo', {}).get('officials', [])
             seen, refs = set(), []
@@ -119,20 +128,31 @@ class ESPNScraper:
             if ch and ca: result['corners_local'], result['corners_visitante'], result['corners_total'] = ch, ca, sum_int(ch, ca)
 
             # Events
+            from formatter import format_goal, format_sub, format_list
             ke = data.get('keyEvents', [])
             goals, yellows, reds, subs = [], [], [], []
             for evt in ke:
-                et, ck = evt.get('type', {}).get('text', '').lower(), evt.get('clock', {}).get('displayValue', '')
+                et = evt.get('type', {}).get('text', '').lower()
+                ck = str(evt.get('clock', {}).get('displayValue', '')).replace("'", "")
                 pts = evt.get('participants', [])
                 nms = [p.get('athlete', {}).get('displayName', '?') for p in pts]
-                if 'goal' in et and nms: goals.append(f"{nms[0]} {ck}'")
-                elif 'yellow' in et and nms: yellows.append(f"{nms[0]} {ck}'")
-                elif 'red' in et and nms: reds.append(f"{nms[0]} {ck}'")
-                elif 'substitution' in et and len(nms) >= 2: subs.append(f"{ck}' {nms[0]} x {nms[1]}")
-            if goals: result['goles'] = '; '.join(goals)
-            if yellows: result['amarillas'] = '; '.join(yellows)
-            if reds: result['rojas'] = '; '.join(reds)
-            if subs: result['cambios'] = '; '.join(subs)
+                if not nms: continue
+
+                if 'goal' in et:
+                    is_p = 'penalty' in et
+                    is_og = 'own goal' in et
+                    goals.append(format_goal(nms[0], ck, is_p, is_og))
+                elif 'yellow' in et:
+                    yellows.append(f"{nms[0]} {ck}'")
+                elif 'red' in et:
+                    reds.append(f"{nms[0]} {ck}'")
+                elif 'substitution' in et and len(nms) >= 2:
+                    subs.append(format_sub(ck, nms[0], nms[1]))
+            
+            if goals: result['goles'] = format_list(goals)
+            if yellows: result['amarillas'] = format_list(yellows)
+            if reds: result['rojas'] = format_list(reds)
+            if subs: result['cambios'] = format_list(subs)
         except Exception: pass
         return result
 

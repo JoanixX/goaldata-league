@@ -16,3 +16,7 @@ __pycache__
 
 # copias de seguridad
 copia_buena.csv
+
+# logs
+logs/*
+logs
