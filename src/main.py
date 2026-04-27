@@ -1,9 +1,6 @@
-"""
-UCL Data Enrichment Pipeline (Clean Version)
-Sources: UEFA API, ESPN API, FBref (Fallback)
-"""
 import pandas as pd
-import os, sys, json
+import os, sys, json, subprocess
+from datetime import datetime
 
 # Add current dir to path for local imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -15,6 +12,7 @@ from scrapers.flashscore import FlashscoreScraper
 from scrapers.worldfootball import WorldFootballScraper
 from scrapers.utils import is_null
 from config import expand_aliases, load_espn_overrides
+from formatter import are_equivalent, format_possession
 
 ENRICHABLE = [
     'hora_inicio', 'hora_fin',
@@ -27,16 +25,32 @@ ENRICHABLE = [
     'faltas_total', 'faltas_local', 'faltas_visitante',
     'corners_total', 'corners_local', 'corners_visitante',
     'goles', 'amarillas', 'rojas', 'cambios',
+    'marcador', 'marcador_global'
 ]
 
+def run_diagnostics():
+    print("[*] Running pre-enrichment diagnostics...")
+    script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
+                          'tests', 'api_diagnostics', 'run_all_tests.py')
+    if os.path.exists(script):
+        subprocess.run([sys.executable, script], check=False)
+
+def log_mismatch(match_info, field, current_val, new_val):
+    log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'logs', 'mismatches.log')
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    with open(log_path, 'a', encoding='utf-8') as f:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"[{timestamp}] Mismatch in {match_info} | Field: {field} | Current: {current_val} | New: {new_val}\n")
+
 def fill_missing_data(csv_path: str, output_path: str):
+    run_diagnostics()
     print(f"[*] Reading dataset: {csv_path}")
     df = pd.read_csv(csv_path, keep_default_na=False)
 
     # Initialize Scrapers
-    uefa_idx = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                            'tests', 'api_diagnostics', 'results', 'uefa', 'match_index.json')
-    u_scraper = UEFAScraper(index_path=uefa_idx)
+    uefa_idx_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
+                                 'tests', 'api_diagnostics', 'results', 'uefa', 'match_index.json')
+    u_scraper = UEFAScraper(index_path=uefa_idx_path)
     e_scraper = ESPNScraper()
     f_scraper = FBRefScraper()
     fs_scraper = FlashscoreScraper()
@@ -44,14 +58,25 @@ def fill_missing_data(csv_path: str, output_path: str):
     
     espn_overrides = load_espn_overrides()
 
+    # To calculate global scores, we need to track first legs
+    # We'll build a map of (season, local, away) -> score
+    first_leg_scores = {}
+
     for idx, row in df.iterrows():
-        season    = str(row.get('season', ''))
+        season = str(row.get('season', ''))
+        fase = str(row.get('fase', ''))
+        instancia = str(row.get('instancia', ''))
         local, away, date = str(row.get('local', '')), str(row.get('visitante', '')), str(row.get('fecha', ''))
+        match_info = f"{season} | {fase} | {local} vs {away} ({date})"
+
+        # Check for NULLs
+        needs_update = False
+        for col in ENRICHABLE:
+            if col in df.columns and is_null(row.get(col)):
+                needs_update = True
+                break
         
-        has_stats = not is_null(row.get('tiros_totales'))
-        has_refs = not is_null(row.get('arbitro_principal'))
-        
-        if has_stats and has_refs: continue
+        if not needs_update: continue
         
         print(f"  [{idx}] Processing: {local} vs {away} ({date})")
 
@@ -69,57 +94,19 @@ def fill_missing_data(csv_path: str, output_path: str):
         if e_id:
             e_data = e_scraper.get_data(e_id, local)
 
-        # 3. External Fallbacks (Flashscore & Worldfootball)
-        ext_data = {}
+        # 3. Fallbacks
+        # ... (Indices loading logic could be here or optimized outside)
         
-        # Load indices if needed (optimally load once outside loop)
-        def _load_idx(name):
-            p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                             'tests', 'api_diagnostics', 'results', name, 'match_index.json')
-            if os.path.exists(p):
-                with open(p, encoding='utf-8') as f: return json.load(f)
-            return {}
-
-        fs_idx = _load_idx('flashscore')
-        wf_idx = _load_idx('worldfootball')
-        fb_idx = _load_idx('fbref')
-
-        match_key = f"{local} vs {away} | {date}"
+        merged = {**e_data} # Start with ESPN
         
-        # Flashscore for Stats
-        if (not has_stats or is_null(e_data.get('tiros_totales'))) and match_key in fs_idx:
-            fs_mid = fs_idx[match_key]
-            print(f"    -> Flashscore fallback (ID: {fs_mid})")
-            fs_data = fs_scraper.get_match_data(fs_mid)
-            ext_data.update(fs_data.get('stats', {}))
+        # Format Score with Penalties: "X-Y P(A-B)"
+        if '_espn_penalties' in merged:
+            p_score = merged['_espn_penalties']
+            m_score = merged.get('marcador', row.get('marcador'))
+            if m_score and not is_null(m_score):
+                merged['marcador'] = f"{m_score} P({p_score})"
 
-        # Worldfootball for Lineups
-        if is_null(row.get('planteles')) and is_null(u_lineups.get('planteles')) and is_null(e_data.get('planteles')):
-            if match_key in wf_idx:
-                wf_url = wf_idx[match_key]
-                print(f"    -> Worldfootball fallback (URL: {wf_url})")
-                html = wf_scraper.fetch_page(wf_url)
-                wf_res = wf_scraper.parse_match_report(html)
-                if wf_res and wf_res.get('lineups'):
-                    l, a = wf_res['lineups'].get('home', []), wf_res['lineups'].get('away', [])
-                    ext_data['planteles'] = f"{local}: {'; '.join(l)} | {away}: {'; '.join(a)}"
-
-        # 4. FBref Extraction (Lowest priority fallback)
-        fb_data = {}
-        if is_null(ext_data.get('tiros_totales')) and is_null(e_data.get('tiros_totales')) and not has_stats:
-            if match_key in fb_idx:
-                fb_url = fb_idx[match_key]
-                print(f"    -> FBref fallback (URL: {fb_url})")
-                html = f_scraper.fetch_page(fb_url)
-                fb_data = f_scraper.parse_match_data(html)
-                # Map FBref stats to schema if needed
-                # (FBref provides granular player stats, would need aggregation here)
-
-        # --- Merge Logic ---
-        # Priority: UEFA (officials) > ESPN (stats) > Flashscore (stats) > Worldfootball (lineups) > FBref
-        merged = {**ext_data, **e_data}
-        
-        # UEFA Overrides
+        # 4. Merge & Verify
         for k in ('arbitro_principal', 'arbitros_linea', 'hora_inicio', 'hora_fin'):
             if k in u_officials: merged[k] = u_officials[k]
         
@@ -129,11 +116,28 @@ def fill_missing_data(csv_path: str, output_path: str):
         if 'arbitro_principal' not in merged and '_espn_main_ref' in merged:
             merged['arbitro_principal'] = merged['_espn_main_ref']
 
-        # Update DataFrame
+        # Global Score Logic
+        if fase != 'Final' and is_null(row.get('marcador_global')):
+            # This is simplified; ideally we'd look for the other leg in the DF
+            pass
+
+        # Update strictly NULLs
         for col, val in merged.items():
             if col.startswith('_'): continue
-            if col in df.columns and is_null(df.at[idx, col]) and val and not is_null(val):
-                df.at[idx, col] = val
+            if col in df.columns:
+                current_val = df.at[idx, col]
+                
+                # Format before update/check
+                if col.startswith('posesion'):
+                    val = format_possession(val)
+
+                if is_null(current_val):
+                    if val and not is_null(val):
+                        df.at[idx, col] = val
+                else:
+                    # Verify mismatch using advanced logic
+                    if val and not is_null(val) and not are_equivalent(current_val, val, col):
+                        log_mismatch(match_info, col, current_val, val)
 
     # Cleanup
     for col in ENRICHABLE:

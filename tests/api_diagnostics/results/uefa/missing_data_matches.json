@@ -1,121 +1,195 @@
 [
   {
-    "match": "AC Milan vs Tottenham",
+    "match": "Real Madrid vs Manchester United",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Arsenal vs Barcelona",
+    "match": "Manchester United vs Real Madrid",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Inter vs Bayern Munich",
+    "match": "AC Milan vs Atletico Madrid",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Marseille vs Manchester United",
+    "match": "Bayer Leverkusen vs PSG",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Manchester United vs Marseille",
+    "match": "Olympiacos vs Manchester United",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Lyon vs Real Madrid",
+    "match": "Manchester United vs Olympiacos",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Chelsea vs Manchester United",
+    "match": "Manchester City vs Barcelona",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Manchester United vs Chelsea",
+    "match": "Bayer Leverkusen vs Atletico Madrid",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Real Madrid vs Barcelona",
+    "match": "Arsenal vs Monaco",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Schalke 04 vs Manchester United",
+    "match": "Shakhtar vs Bayern Munich",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Manchester United vs Schalke 04",
+    "match": "Schalke 04 vs Real Madrid",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Juventus vs Borussia Dortmund",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "PSG vs Barcelona",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Juventus vs Monaco",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Benfica vs Borussia Dortmund",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Bayern Munich vs Arsenal",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Borussia Dortmund vs Monaco",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Sevilla vs Manchester United",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Manchester United vs Sevilla",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Manchester United vs PSG",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "PSG vs Manchester United",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Manchester United vs Barcelona",
+    "missing_fields": [
+      "arbitro_principal"
     ]
   },
   {
     "match": "Barcelona vs Manchester United",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Shakhtar vs Barcelona",
+    "match": "Borussia Dortmund vs PSG",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Real Madrid vs Chelsea",
+    "match": "Real Madrid vs Manchester City",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Manchester City vs Bayern Munich",
+    "match": "Lyon vs Juventus",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "PSV vs Arsenal",
+    "match": "Tottenham vs RB Leipzig",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal"
     ]
   },
   {
-    "match": "Arsenal vs PSV",
+    "match": "Atalanta vs Valencia",
     "missing_fields": [
-      "arbitros_linea",
-      "hora_inicio"
+      "arbitro_principal",
+      "arbitros_linea"
+    ]
+  },
+  {
+    "match": "Chelsea vs Bayern Munich",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Napoli vs Barcelona",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Atletico Madrid vs Manchester United",
+    "missing_fields": [
+      "arbitro_principal"
+    ]
+  },
+  {
+    "match": "Manchester United vs Atletico Madrid",
+    "missing_fields": [
+      "arbitro_principal"
     ]
   }
 ]

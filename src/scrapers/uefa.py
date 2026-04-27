@@ -57,12 +57,16 @@ class UEFAScraper:
                 result['hora_inicio'] = t
                 h, mn = map(int, t.split(':'))
                 result['hora_fin'] = f"{(h+2)%24:02d}:{mn:02d}"
+            
             refs = m.get('referees', [])
             main_ref, asst_refs = [], []
             for ref in refs:
                 role = ref.get('role', '')
-                name = ref.get('person', {}).get('translations', {}).get('name', {}).get('EN', '').strip()
+                trans = ref.get('person', {}).get('translations', {}).get('name', {})
+                # Language priority: ES -> EN -> First available
+                name = trans.get('ES') or trans.get('EN') or (list(trans.values())[0] if trans else None)
                 if not name: continue
+                name = name.strip()
                 if role == 'REFEREE': main_ref.append(name)
                 elif role in ('ASSISTANT_REFEREE_ONE', 'ASSISTANT_REFEREE_TWO'): asst_refs.append(name)
             if main_ref: result['arbitro_principal'] = main_ref[0]
@@ -83,11 +87,15 @@ class UEFAScraper:
                 if not starters: starters = starting[:11]
                 names = []
                 for p in starters:
-                    n = p.get('player', {}).get('translations', {}).get('shortName', {}).get('EN', '') or \
-                        p.get('player', {}).get('translations', {}).get('name', {}).get('EN', '')
+                    trans = p.get('player', {}).get('translations', {})
+                    # Try shortName then name, with ES -> EN priority
+                    n = trans.get('shortName', {}).get('ES') or trans.get('shortName', {}).get('EN') or \
+                        trans.get('name', {}).get('ES') or trans.get('name', {}).get('EN') or \
+                        (list(trans.get('name', {}).values())[0] if trans.get('name') else None)
                     if n: names.append(n)
                 lineup = f"{display_name}: {'; '.join(names)}" if names else ''
-                coach = team.get('coach', {}).get('person', {}).get('translations', {}).get('name', {}).get('EN', '')
+                c_trans = team.get('coach', {}).get('person', {}).get('translations', {}).get('name', {})
+                coach = c_trans.get('ES') or c_trans.get('EN') or (list(c_trans.values())[0] if c_trans else None)
                 return lineup, coach
             home_lineup, home_coach = _extract_team('homeTeam', local_name)
             away_lineup, away_coach = _extract_team('awayTeam', away_name)
