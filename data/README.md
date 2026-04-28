@@ -177,19 +177,40 @@
 
 # 1. Estructura sugerida
 
-/data
-   /core
-      players.csv
-      teams.csv
-      matches.csv
-
-   /stats
-      player_match_stats.csv
-      player_season_stats.csv
-      goalkeeper_stats.csv
-
-   /events
-      goals_events.csv
+```
+data/
+│   data_dictionary.csv
+│   README.md
+├───processed
+│   ├───core
+│   │       matches_cleaned.csv
+│   │       players_cleaned.csv
+│   │       teams_cleaned.csv
+│   │
+│   ├───events
+│   │       goals_events_cleaned.csv
+│   │
+│   └───stats
+│           goalkeeper_stats_cleaned.csv
+│           player_match_stats_cleaned.csv
+│           player_season_stats_cleaned.csv
+└───raw
+    │   cl_2010_2025.csv
+    │   cl_2010_2025_completed.csv
+    │
+    ├───core
+    │       matches.csv
+    │       players.csv
+    │       teams.csv
+    │
+    ├───events
+    │       goals_events.csv
+    │
+    └───stats
+            goalkeeper_stats.csv
+            player_match_stats.csv
+            player_season_stats.csv
+```
 
 Relaciones clave:
 
