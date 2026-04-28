@@ -6,6 +6,7 @@ scratch
 scratch/*
 uefa_match_events.csv
 match_links.json
+semester_group_assignment_brief.md
 
 # Entornos
 .venv
@@ -20,3 +21,7 @@ copia_buena.csv
 # logs
 logs/*
 logs
+
+# datasets
+cl_2010_2025_completed.csv
+cl_2010_2025.csv
