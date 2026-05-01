@@ -32,7 +32,7 @@ class FBRefScraper:
     def parse_match_data(self, html):
         if not html: return None
         soup = BeautifulSoup(html, 'html.parser')
-        data = {"metadata": {}, "stats": {}, "lineups": {}}
+        data = {"metadata": {}, "player_stats": {}, "lineups": {}}
 
         scorebox = soup.find('div', class_='scorebox')
         if scorebox:
@@ -71,13 +71,21 @@ class FBRefScraper:
                 
                 def _get(stat): return row.find('td', {'data-stat': stat}).text.strip() if row.find('td', {'data-stat': stat}) else "0"
                 stats = {
-                    "player": p_cell.text.strip(),
-                    "number": _get('shirt_number'), "nation": _get('nationality'), "pos": _get('position'),
-                    "age": _get('age'), "min": _get('minutes'), "gls": _get('goals'), "ast": _get('assists'),
-                    "sh": _get('shots'), "sot": _get('shots_on_target'), "crdy": _get('cards_yellow'),
-                    "crdr": _get('cards_red'), "fls": _get('fouls'), "fld": _get('fouled'),
-                    "off": _get('offsides'), "crs": _get('crosses'), "tklw": _get('tackles_won'), "int": _get('interceptions'),
+                    "player_name": p_cell.text.strip(),
+                    "minutes_played": int(_get('minutes')) if _get('minutes').isdigit() else 0,
+                    "goals": int(_get('goals')) if _get('goals').isdigit() else 0,
+                    "assists": int(_get('assists')) if _get('assists').isdigit() else 0,
+                    "shots": int(_get('shots')) if _get('shots').isdigit() else 0,
+                    "shots_on_target": int(_get('shots_on_target')) if _get('shots_on_target').isdigit() else 0,
+                    "yellow_cards": int(_get('cards_yellow')) if _get('cards_yellow').isdigit() else 0,
+                    "red_cards": int(_get('cards_red')) if _get('cards_red').isdigit() else 0,
+                    "fouls_committed": int(_get('fouls')) if _get('fouls').isdigit() else 0,
+                    "fouls_suffered": int(_get('fouled')) if _get('fouled').isdigit() else 0,
+                    "offsides": int(_get('offsides')) if _get('offsides').isdigit() else 0,
+                    "crosses_completed": int(_get('crosses')) if _get('crosses').isdigit() else 0,
+                    "tackles_won": int(_get('tackles_won')) if _get('tackles_won').isdigit() else 0,
+                    "interceptions": int(_get('interceptions')) if _get('interceptions').isdigit() else 0,
                 }
                 player_stats.append(stats)
-            data["stats"][team_label] = player_stats
+            data["player_stats"][team_label] = player_stats
         return data
