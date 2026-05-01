@@ -44,8 +44,13 @@ class ESPNScraper:
         except Exception: pass
         return None
 
-    def get_data(self, event_id, local_name_csv):
-        result = {}
+    def get_structured_data(self, event_id, local_name_csv):
+        """Returns match_info, player_stats, and events in a relational structure."""
+        result = {
+            'match_info': {},
+            'player_stats': [],
+            'events': []
+        }
         try:
             r = requests.get(ESPN_SUMMARY, params={'event': event_id}, headers=HEADERS, timeout=15)
             if r.status_code != 200: return result
@@ -67,92 +72,87 @@ class ESPNScraper:
             l_tid = (l_comp or {}).get('team', {}).get('id')
             v_tid = (v_comp or {}).get('team', {}).get('id')
 
-            # Penalties & Aggregate
-            shootout_score = comp.get('shootoutScoreDisplay')
-            if shootout_score:
-                result['_espn_penalties'] = shootout_score
-            
-            agg_score = comp.get('aggregateScore')
-            if agg_score:
-                result['marcador_global'] = str(agg_score)
-
-            # Officials fallback
+            # Match Info
+            info = result['match_info']
             officials = data.get('gameInfo', {}).get('officials', [])
-            seen, refs = set(), []
-            for off in officials:
-                n = off.get('displayName', '').strip()
-                if n and n not in seen: seen.add(n); refs.append(n)
-            if refs: result['_espn_main_ref'] = refs[0]
-
-            # Rosters
-            rosters = data.get('rosters', [])
-            lineup_parts, coaches = [], {}
-            for rd in rosters:
-                tid = rd.get('team', {}).get('id')
-                tn = rd.get('team', {}).get('displayName', 'Team')
-                entries = rd.get('roster', [])
-                starters = [e for e in entries if e.get('starter')]
-                if not starters: continue
-                p_order = {'G': 0, 'GK': 0, 'CD': 1, 'D': 1, 'M': 2, 'F': 3, 'FW': 3}
-                def _pk(e): return p_order.get(e.get('position', {}).get('abbreviation', 'X').split('-')[0], 2)
-                starters_sorted = sorted(starters, key=_pk)
-                names = [e.get('athlete', {}).get('displayName', '') for e in starters_sorted if e.get('athlete', {}).get('displayName')]
-                if names: lineup_parts.append((tid, tn, names))
-                c_list = rd.get('coaches', [])
-                if c_list: coaches[tid] = c_list[0].get('displayName', '')
+            if officials:
+                info['referee'] = officials[0].get('displayName', 'Unknown')
             
-            ordered = sorted(lineup_parts, key=lambda x: 0 if x[0] == l_tid else 1)
-            if ordered: result['planteles'] = ' | '.join(f"{tn}: {'; '.join(nm)}" for _, tn, nm in ordered)
-            if l_tid in coaches: result['entrenador_local'] = coaches[l_tid]
-            if v_tid in coaches: result['entrenador_visitante'] = coaches[v_tid]
-
-            # Stats
             bs_teams = data.get('boxscore', {}).get('teams', [])
-            l_stats, v_stats = {}, {}
+            l_stats_map, v_stats_map = {}, {}
             for t in bs_teams:
                 tid = t.get('team', {}).get('id')
                 s_map = {s.get('name'): s.get('displayValue') for s in t.get('statistics', [])}
-                if tid == l_tid: l_stats = s_map
-                else: v_stats = s_map
+                if tid == l_tid: l_stats_map = s_map
+                else: v_stats_map = s_map
             
-            def _gs(d, k): return d.get(k)
-            result['posesion_local'] = safe_pct(_gs(l_stats, 'possessionPct'))
-            result['posesion_visitante'] = safe_pct(_gs(v_stats, 'possessionPct'))
-            th, ta = _gs(l_stats, 'totalShots'), _gs(v_stats, 'totalShots')
-            if th and ta: result['tiros_totales_local'], result['tiros_totales_visitante'], result['tiros_totales'] = th, ta, sum_int(th, ta)
-            sth, sta = _gs(l_stats, 'shotsOnTarget'), _gs(v_stats, 'shotsOnTarget')
-            if sth and sta: result['tiros_puerta_local'], result['tiros_puerta_visitante'], result['tiros_puerta'] = sth, sta, sum_int(sth, sta)
-            fh, fa = _gs(l_stats, 'foulsCommitted'), _gs(v_stats, 'foulsCommitted')
-            if fh and fa: result['faltas_local'], result['faltas_visitante'], result['faltas_total'] = fh, fa, sum_int(fh, fa)
-            ch, ca = _gs(l_stats, 'wonCorners'), _gs(v_stats, 'wonCorners')
-            if ch and ca: result['corners_local'], result['corners_visitante'], result['corners_total'] = ch, ca, sum_int(ch, ca)
+            info['possession_home'] = safe_pct(l_stats_map.get('possessionPct'))
+            info['possession_away'] = safe_pct(v_stats_map.get('possessionPct'))
+
+            # Player Stats - Extract ALL available fields
+            rosters = data.get('rosters', [])
+            for rd in rosters:
+                tid = rd.get('team', {}).get('id')
+                team_name = rd.get('team', {}).get('displayName', 'Unknown')
+                for e in rd.get('roster', []):
+                    p_name = e.get('athlete', {}).get('displayName', 'Unknown')
+                    stats_list = e.get('stats', [])
+                    s = {s_item.get('name'): s_item.get('displayValue') for s_item in stats_list}
+                    
+                    def _int(key): 
+                        try: return int(float(s.get(key, 0)))
+                        except: return 0
+                    
+                    p_record = {
+                        'player_name': p_name,
+                        'team_name': team_name,
+                        'minutes_played': _int('minutesPlayed') or _int('appearances') * 90,
+                        'goals': _int('totalGoals'),
+                        'assists': _int('goalAssists'),
+                        'shots': _int('totalShots'),
+                        'shots_on_target': _int('shotsOnTarget'),
+                        'fouls_committed': _int('foulsCommitted'),
+                        'fouls_suffered': _int('foulsSuffered'),
+                        'yellow_cards': _int('yellowCards'),
+                        'red_cards': _int('redCards'),
+                        'saves': _int('saves'),
+                        'shots_faced': _int('shotsFaced'),
+                    }
+                    result['player_stats'].append(p_record)
+            
+            # Team-level stats (for fields ESPN only provides at team level)
+            result['team_stats'] = {}
+            for t in bs_teams:
+                tid = t.get('team', {}).get('id')
+                s_map = {s.get('name'): s.get('displayValue') for s in t.get('statistics', [])}
+                result['team_stats'][str(tid)] = {
+                    'total_shots': s_map.get('totalShots', '0'),
+                    'shots_on_target': s_map.get('shotsOnTarget', '0'),
+                    'fouls_committed': s_map.get('foulsCommitted', '0'),
+                    'offsides': s_map.get('offsides', '0'),
+                    'saves': s_map.get('saves', '0'),
+                    'passes_completed': s_map.get('accuratePasses', '0'),
+                    'passes_attempted': s_map.get('totalPasses', '0'),
+                    'tackles': s_map.get('totalTackles', '0'),
+                }
 
             # Events
-            from formatter import format_goal, format_sub, format_list
             ke = data.get('keyEvents', [])
-            goals, yellows, reds, subs = [], [], [], []
             for evt in ke:
                 et = evt.get('type', {}).get('text', '').lower()
                 ck = str(evt.get('clock', {}).get('displayValue', '')).replace("'", "")
                 pts = evt.get('participants', [])
-                nms = [p.get('athlete', {}).get('displayName', '?') for p in pts]
-                if not nms: continue
-
+                if not pts: continue
+                
+                p_name = pts[0].get('athlete', {}).get('displayName', 'Unknown')
                 if 'goal' in et:
-                    is_p = 'penalty' in et
-                    is_og = 'own goal' in et
-                    goals.append(format_goal(nms[0], ck, is_p, is_og))
-                elif 'yellow' in et:
-                    yellows.append(f"{nms[0]} {ck}'")
-                elif 'red' in et:
-                    reds.append(f"{nms[0]} {ck}'")
-                elif 'substitution' in et and len(nms) >= 2:
-                    subs.append(format_sub(ck, nms[0], nms[1]))
-            
-            if goals: result['goles'] = format_list(goals)
-            if yellows: result['amarillas'] = format_list(yellows)
-            if reds: result['rojas'] = format_list(reds)
-            if subs: result['cambios'] = format_list(subs)
+                    result['events'].append({
+                        'event_type': 'goal',
+                        'player_name': p_name,
+                        'minute': ck,
+                        'is_penalty': 'penalty' in et,
+                        'is_own_goal': 'own goal' in et
+                    })
         except Exception: pass
         return result
 
