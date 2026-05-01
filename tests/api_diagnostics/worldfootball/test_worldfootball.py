@@ -8,12 +8,29 @@ sys.path.append(os.path.join(BASE_DIR, 'src'))
 
 from scrapers.utils import is_null
 
-CSV_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'cl_2010_2025.csv')
+CSV_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'core', 'matches.csv')
 RESULTS_DIR = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'results', 'worldfootball')
 
 def test_generate_reports():
+    df = pd.read_csv(CSV_PATH)
     not_found = []
     missing_data = []
+
+    for idx, row in df.iterrows():
+        # Worldfootball is used for lineups, checking if match exists in core
+        has_wf = not is_null(row.get('match_id'))
+        
+        if not has_wf:
+            not_found.append({
+                "match": f"{row['home_team_id']} vs {row['away_team_id']}",
+                "date": row['date']
+            })
+        else:
+            if is_null(row.get('referee')):
+                missing_data.append({
+                    "match": f"{row['home_team_id']} vs {row['away_team_id']}",
+                    "date": row['date']
+                })
 
     with open(os.path.join(RESULTS_DIR, 'not_found_matches.json'), 'w', encoding='utf-8') as f:
         json.dump(not_found, f, indent=2)
