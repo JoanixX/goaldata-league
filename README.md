@@ -17,7 +17,10 @@ The project is organized into modular components:
 
 ## Quick Start
 1. Install dependencies: `pip install -r requirements.txt`
-2. Run the pipeline: `python src/main.py`
-3. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+2. Build cleaned relational datasets: `python script.py`
+3. Impute missing statistical fields without overwriting observed values: `python src/impute_missing_stats.py`
+4. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
+5. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
+6. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
 
 For detailed information about each component, refer to the README files in the respective subdirectories.
