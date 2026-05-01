@@ -1,115 +1,59 @@
 {
-  "total_rows": 445,
+  "target_records": 1500000,
+  "current_records": 890,
+  "missing_for_goal": 1499110,
+  "progress_pct": 0.06,
+  "total_matches_processed": 445,
   "coverage": {
-    "arbitro_principal": {
-      "filled": 410,
-      "missing": 35,
-      "pct": 92.1
+    "referee": {
+      "filled": 411,
+      "missing": 34,
+      "pct": 92.4
     },
-    "arbitros_linea": {
-      "filled": 393,
-      "missing": 52,
-      "pct": 88.3
-    },
-    "entrenador_local": {
-      "filled": 416,
-      "missing": 29,
-      "pct": 93.5
-    },
-    "entrenador_visitante": {
-      "filled": 416,
-      "missing": 29,
-      "pct": 93.5
-    },
-    "planteles": {
+    "stadium": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_totales": {
+    "city": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_totales_local": {
+    "country": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_totales_visitante": {
+    "possession_home": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_puerta": {
+    "possession_away": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_puerta_local": {
+    "player_stats": {
       "filled": 445,
       "missing": 0,
       "pct": 100.0
     },
-    "tiros_puerta_visitante": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
+    "stat_assists": {
+      "filled": 0,
+      "missing": 445,
+      "note": "Count of non-zero/non-null player records"
     },
-    "goles": {
-      "filled": 420,
-      "missing": 25,
-      "pct": 94.4
+    "stat_top_speed": {
+      "filled": 12474,
+      "missing": -12029,
+      "note": "Count of non-zero/non-null player records"
     },
-    "asistencias": {
-      "filled": 1,
-      "missing": 444,
-      "pct": 0.2
-    },
-    "amarillas": {
-      "filled": 321,
-      "missing": 124,
-      "pct": 72.1
-    },
-    "posesion_local": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "posesion_visitante": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "faltas_total": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "faltas_local": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "faltas_visitante": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "corners_total": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "corners_local": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
-    },
-    "corners_visitante": {
-      "filled": 445,
-      "missing": 0,
-      "pct": 100.0
+    "stat_distance_covered": {
+      "filled": 12474,
+      "missing": -12029,
+      "note": "Count of non-zero/non-null player records"
     }
   }
 }
