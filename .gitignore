@@ -24,7 +24,3 @@ copia_buena.csv
 # logs
 logs/*
 logs
-
-# datasets
-cl_2010_2025_completed.csv
-cl_2010_2025.csv
