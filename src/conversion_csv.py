@@ -2,23 +2,23 @@ import pandas as pd
 import os
 import json
 
-def convert_relational_to_json(raw_dir, output_dir):
+def convert_relational_to_json(processed_dir, output_dir):
     """
     Reads all relational CSVs and groups them into a nested JSON structure by season.
     The JSON will be hierarchical: Season -> Match -> Events & Stats.
     """
-    print(f"[*] Starting relational to JSON conversion from {raw_dir}...")
+    print(f"[*] Starting relational to JSON conversion from {processed_dir}...")
     
     # 1. Load all core tables
     try:
-        matches = pd.read_csv(os.path.join(raw_dir, 'core', 'matches.csv'), keep_default_na=False)
-        teams = pd.read_csv(os.path.join(raw_dir, 'core', 'teams.csv'), keep_default_na=False)
-        players = pd.read_csv(os.path.join(raw_dir, 'core', 'players.csv'), keep_default_na=False)
+        matches = pd.read_csv(os.path.join(processed_dir, 'core', 'matches_cleaned.csv'), keep_default_na=False)
+        teams = pd.read_csv(os.path.join(processed_dir, 'core', 'teams_cleaned.csv'), keep_default_na=False)
+        players = pd.read_csv(os.path.join(processed_dir, 'core', 'players_cleaned.csv'), keep_default_na=False)
         
         # 2. Load stats and events
-        events = pd.read_csv(os.path.join(raw_dir, 'events', 'goals_events.csv'), keep_default_na=False)
-        player_stats = pd.read_csv(os.path.join(raw_dir, 'stats', 'player_match_stats.csv'), keep_default_na=False)
-        gk_stats = pd.read_csv(os.path.join(raw_dir, 'stats', 'goalkeeper_stats.csv'), keep_default_na=False)
+        events = pd.read_csv(os.path.join(processed_dir, 'events', 'goals_events_cleaned.csv'), keep_default_na=False)
+        player_stats = pd.read_csv(os.path.join(processed_dir, 'stats', 'player_match_stats_cleaned.csv'), keep_default_na=False)
+        gk_stats = pd.read_csv(os.path.join(processed_dir, 'stats', 'goalkeeper_stats_cleaned.csv'), keep_default_na=False)
     except Exception as e:
         print(f"[!] Error loading CSV files: {e}")
         return
@@ -98,7 +98,7 @@ def convert_relational_to_json(raw_dir, output_dir):
 if __name__ == "__main__":
     # Base configuration
     base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    raw_path = os.path.join(base, 'data', 'raw')
-    json_path = os.path.join(base, 'data', 'raw', 'json_seasons')
+    processed_path = os.path.join(base, 'data', 'processed')
+    json_path = os.path.join(base, 'artifacts', 'season_exports')
     
-    convert_relational_to_json(raw_path, json_path)
+    convert_relational_to_json(processed_path, json_path)
