@@ -177,6 +177,10 @@
 
 # 1. Estructura sugerida
 
+La carpeta `data/raw/` conserva solo fuentes originales descargadas. No se debe
+crear dentro de `raw/` una estructura `core/events/stats`; esa normalización
+pertenece exclusivamente a `data/processed/`.
+
 ```
 data/
 │   data_dictionary.csv
@@ -197,19 +201,10 @@ data/
 └───raw
     │   cl_2010_2025.csv
     │   cl_2010_2025_completed.csv
-    │
-    ├───core
-    │       matches.csv
-    │       players.csv
-    │       teams.csv
-    │
-    ├───events
-    │       goals_events.csv
-    │
-    └───stats
-            goalkeeper_stats.csv
-            player_match_stats.csv
-            player_season_stats.csv
+    │   2021-2022 Football Player Stats.csv
+    │   UEFA Champions League 2016-2022 Data.xlsx
+    ├───2021 - 2022 Data
+    └───2025 Champions
 ```
 
 Relaciones clave:
