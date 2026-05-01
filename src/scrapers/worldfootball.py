@@ -31,7 +31,7 @@ class WorldFootballScraper:
                 rows = table.find_all('tr')
                 for row in rows:
                     text = row.text.strip()
-                    if "Venue" in text: data["metadata"]["venue"] = row.find_all('td')[-1].text.strip()
+                    if "Venue" in text: data["metadata"]["stadium"] = row.find_all('td')[-1].text.strip()
                     if "Referee" in text: data["metadata"]["referee"] = row.find_all('td')[-1].text.strip()
                     if "Attendance" in text: data["metadata"]["attendance"] = row.find_all('td')[-1].text.strip()
 
