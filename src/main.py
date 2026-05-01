@@ -11,6 +11,7 @@ Flow:
 """
 import pandas as pd
 import os, sys, json, subprocess
+from difflib import SequenceMatcher
 from datetime import datetime
 
 # Add current dir to path for local imports
@@ -18,7 +19,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from scrapers.uefa import UEFAScraper
 from scrapers.espn import ESPNScraper
-from scrapers.utils import is_null
+from scrapers.utils import is_null, teams_match
 from config import expand_aliases, load_espn_overrides
 from formatter import (
     are_equivalent, format_possession, generate_player_id,
@@ -27,6 +28,7 @@ from formatter import (
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DIR = os.path.join(BASE_DIR, 'data', 'raw')
+PROCESSED_DIR = os.path.join(BASE_DIR, 'data', 'processed')
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
 RESULTS_DIR = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'results')
 
@@ -34,6 +36,35 @@ ENRICHABLE = [
     'referee', 'stadium', 'city', 'country',
     'possession_home', 'possession_away'
 ]
+
+
+def table_path(raw_relative, processed_relative=None):
+    """Prefer the legacy raw/core layout, fall back to current processed layout."""
+    raw_path = os.path.join(RAW_DIR, *raw_relative)
+    if os.path.exists(raw_path) or processed_relative is None:
+        return raw_path
+    processed_path = os.path.join(PROCESSED_DIR, *processed_relative)
+    return processed_path
+
+
+def player_id_candidates(name):
+    pid = generate_player_id(name)
+    return [pid, f"player_{pid}"]
+
+
+def player_name_score(source_name, target_name):
+    source = soft_norm(source_name)
+    target = soft_norm(target_name)
+    if not source or not target:
+        return 0.0
+    if source == target:
+        return 1.0
+    source_parts = set(source.split())
+    target_parts = set(target.split())
+    overlap = len(source_parts & target_parts) / max(len(source_parts | target_parts), 1)
+    ratio = SequenceMatcher(None, source, target).ratio()
+    last_match = bool(source.split() and target.split() and source.split()[-1] == target.split()[-1])
+    return max(ratio, overlap + (0.15 if last_match else 0))
 
 
 # ============================================================
@@ -149,11 +180,11 @@ def phase_1_scraping(log):
 
 def _run_match_enrichment(log):
     """Scrape missing match-level data AND player stats per match."""
-    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
-    teams_path = os.path.join(RAW_DIR, 'core', 'teams.csv')
-    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
-    stats_path = os.path.join(RAW_DIR, 'stats', 'player_match_stats.csv')
-    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    matches_path = table_path(('core', 'matches.csv'), ('core', 'matches_cleaned.csv'))
+    teams_path = table_path(('core', 'teams.csv'), ('core', 'teams_cleaned.csv'))
+    events_path = table_path(('events', 'goals_events.csv'), ('events', 'goals_events_cleaned.csv'))
+    stats_path = table_path(('stats', 'player_match_stats.csv'), ('stats', 'player_match_stats_cleaned.csv'))
+    players_path = table_path(('core', 'players.csv'), ('core', 'players_cleaned.csv'))
 
     if not os.path.exists(matches_path):
         log.log_error(f"matches.csv not found at {matches_path}")
@@ -241,19 +272,16 @@ def _run_match_enrichment(log):
             if match_rows.empty:
                 continue
             
-            # Map: soft_norm(player_name) -> stats index
-            # We need player names from players.csv
-            name_to_idx = {}
+            # Candidate list with team context. Avoid surname-only updates unless
+            # the best match is unique and high-confidence.
+            candidates = []
             for sidx, srow in match_rows.iterrows():
                 pid = srow['player_id']
                 p_row = df_players[df_players['player_id'] == pid]
                 if not p_row.empty:
                     pname = p_row.iloc[0]['player_name']
-                    name_to_idx[soft_norm(pname)] = sidx
-                    # Also index by last word (surname)
-                    parts = soft_norm(pname).split()
-                    if parts:
-                        name_to_idx[parts[-1]] = sidx
+                    tname = team_map.get(srow.get('team_id'), '')
+                    candidates.append((sidx, pname, tname))
             
             for ps in e_struct['player_stats']:
                 p_name = ps.get('player_name', '')
@@ -265,19 +293,17 @@ def _run_match_enrichment(log):
                 espn_parts = espn_norm.split()
                 sidx = None
                 
-                # 1. Exact normalized match
-                if espn_norm in name_to_idx:
-                    sidx = name_to_idx[espn_norm]
-                # 2. Match by surname (last word)
-                elif espn_parts and espn_parts[-1] in name_to_idx:
-                    sidx = name_to_idx[espn_parts[-1]]
-                # 3. Match by any word overlap
-                else:
-                    for norm_name, idx_val in name_to_idx.items():
-                        csv_parts = set(norm_name.split())
-                        if csv_parts & set(espn_parts):
-                            sidx = idx_val
-                            break
+                scored = []
+                for idx_val, csv_name, csv_team in candidates:
+                    score = player_name_score(p_name, csv_name)
+                    if ps.get('team_name') and csv_team and not teams_match(ps.get('team_name'), csv_team):
+                        score -= 0.2
+                    scored.append((score, idx_val, csv_name))
+                scored.sort(reverse=True)
+                if scored and scored[0][0] >= 0.82:
+                    second = scored[1][0] if len(scored) > 1 else 0
+                    if scored[0][0] - second >= 0.05:
+                        sidx = scored[0][1]
                 
                 if sidx is not None:
                     for espn_key, csv_col in STAT_MAP.items():
@@ -353,9 +379,9 @@ def _ingest_uefa_dump(dump_path, log):
     with open(dump_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
-    gk_path = os.path.join(RAW_DIR, 'stats', 'goalkeeper_stats.csv')
-    ss_path = os.path.join(RAW_DIR, 'stats', 'player_season_stats.csv')
+    players_path = table_path(('core', 'players.csv'), ('core', 'players_cleaned.csv'))
+    gk_path = table_path(('stats', 'goalkeeper_stats.csv'), ('stats', 'goalkeeper_stats_cleaned.csv'))
+    ss_path = table_path(('stats', 'player_season_stats.csv'), ('stats', 'player_season_stats_cleaned.csv'))
 
     df_players = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
     df_gk = pd.read_csv(gk_path, keep_default_na=False) if os.path.exists(gk_path) else pd.DataFrame()
@@ -419,7 +445,7 @@ def _ingest_tm_dump(dump_path, log):
     with open(dump_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    players_path = table_path(('core', 'players.csv'), ('core', 'players_cleaned.csv'))
     df = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
 
     updated = 0
@@ -427,8 +453,8 @@ def _ingest_tm_dump(dump_path, log):
         name = entry.get('player_name', '')
         if not name:
             continue
-        pid = generate_player_id(name)
-        mask = df['player_id'] == pid
+        candidates = player_id_candidates(name)
+        mask = df['player_id'].isin(candidates)
         if mask.any():
             idx = df[mask].index[0]
             for field in ['height_cm', 'position', 'nationality', 'birth_date', 'birth_place']:
@@ -446,9 +472,9 @@ def _ingest_tm_dump(dump_path, log):
 
 def _fill_goals_events(log):
     """Fill gaps in goals_events.csv using existing data + ESPN event data."""
-    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
-    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
-    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
+    events_path = table_path(('events', 'goals_events.csv'), ('events', 'goals_events_cleaned.csv'))
+    players_path = table_path(('core', 'players.csv'), ('core', 'players_cleaned.csv'))
+    matches_path = table_path(('core', 'matches.csv'), ('core', 'matches_cleaned.csv'))
 
     if not os.path.exists(events_path):
         log.log("  No goals_events.csv found, skipping")
@@ -485,7 +511,7 @@ def _fill_goals_events(log):
             filled += 1
 
     # 4. Fill assist_player_id from ESPN events where available
-    teams_path = os.path.join(RAW_DIR, 'core', 'teams.csv')
+    teams_path = table_path(('core', 'teams.csv'), ('core', 'teams_cleaned.csv'))
     df_te = pd.read_csv(teams_path, keep_default_na=False) if os.path.exists(teams_path) else pd.DataFrame()
     team_map = dict(zip(df_te['team_id'], df_te['team_name'])) if not df_te.empty else {}
 
@@ -527,14 +553,12 @@ def _fill_goals_events(log):
             for eidx, erow in match_events.iterrows():
                 ev_minute = str(erow.get('minute', ''))
                 if ev_minute == espn_minute and is_null(erow.get('assist_player_id', '')):
-                    # Look for assist info in ESPN player_stats
-                    for ps in e_data.get('player_stats', []):
-                        if ps.get('assists', 0) > 0:
-                            assist_pid = generate_player_id(ps['player_name'])
-                            if assist_pid != erow.get('player_id', ''):
-                                df_ev.at[eidx, 'assist_player_id'] = assist_pid
-                                assist_filled += 1
-                                break
+                    assist_name = espn_ev.get('assist_player_name') or espn_ev.get('assist_name')
+                    if assist_name:
+                        assist_pid = player_id_candidates(assist_name)[-1]
+                        if assist_pid != erow.get('player_id', ''):
+                            df_ev.at[eidx, 'assist_player_id'] = assist_pid
+                            assist_filled += 1
                     break
 
     df_ev.to_csv(events_path, index=False, encoding='utf-8')
@@ -546,11 +570,10 @@ def _fill_goals_events(log):
 
 def _cross_validate(log):
     """Cross-validate data consistency across all CSVs using are_equivalent()."""
-    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
-    stats_path = os.path.join(RAW_DIR, 'stats', 'player_match_stats.csv')
-    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
-    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
-    season_path = os.path.join(RAW_DIR, 'stats', 'player_season_stats.csv')
+    matches_path = table_path(('core', 'matches.csv'), ('core', 'matches_cleaned.csv'))
+    stats_path = table_path(('stats', 'player_match_stats.csv'), ('stats', 'player_match_stats_cleaned.csv'))
+    events_path = table_path(('events', 'goals_events.csv'), ('events', 'goals_events_cleaned.csv'))
+    players_path = table_path(('core', 'players.csv'), ('core', 'players_cleaned.csv'))
 
     df_matches = pd.read_csv(matches_path, keep_default_na=False) if os.path.exists(matches_path) else pd.DataFrame()
     df_stats = pd.read_csv(stats_path, keep_default_na=False) if os.path.exists(stats_path) else pd.DataFrame()

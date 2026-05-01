@@ -35,6 +35,13 @@ FORMULA_REFERENCES = [
     },
 ]
 
+# Conservative default for PC2: do not turn population medians into apparent
+# observations. Exact player-season rates and algebraic identities are still
+# used, but global/group medians are reported as unavailable instead of being
+# written into the processed CSVs.
+USE_GLOBAL_RATE_FALLBACK = False
+USE_GROUPED_MEDIAN_FALLBACK = False
+
 NUMERIC_FIELDS = [
     "minutes_played",
     "goals",
@@ -166,7 +173,9 @@ def impute_player_match_stats():
                 df[field] = "NULL"
             if not is_missing(df.at[idx, field]):
                 continue
-            rate = exact_rates.get((key[0], key[1], field), global_rates.get(field))
+            rate = exact_rates.get((key[0], key[1], field))
+            if rate is None and USE_GLOBAL_RATE_FALLBACK:
+                rate = global_rates.get(field)
             if pd.isna(rate):
                 continue
             estimate = rate * minutes_now.at[idx] / 90
@@ -214,6 +223,8 @@ def impute_player_match_stats():
         minutes = pd.Series([90] * len(df), index=df.index)
 
     for col in ["dribbles", "offsides", "crosses_completed", "crosses_attempted", "clearances", "fouls_suffered", "touches"]:
+        if not USE_GROUPED_MEDIAN_FALLBACK:
+            continue
         if col not in df.columns:
             df[col] = "NULL"
         values = numeric(df[col]) if col in df.columns else pd.Series([pd.NA] * len(df), index=df.index)
@@ -249,7 +260,14 @@ def impute_player_match_stats():
     drop_cols = [c for c in df.columns if c.startswith("__")] + ["position", "season"]
     df = df.drop(columns=drop_cols, errors="ignore")
     df.to_csv(PLAYER_MATCH_PATH, index=False, encoding="utf-8")
-    return {"path": str(PLAYER_MATCH_PATH), "changes": changes}
+    return {
+        "path": str(PLAYER_MATCH_PATH),
+        "changes": changes,
+        "policy": {
+            "use_global_rate_fallback": USE_GLOBAL_RATE_FALLBACK,
+            "use_grouped_median_fallback": USE_GROUPED_MEDIAN_FALLBACK,
+        },
+    }
 
 
 def impute_player_season_stats():

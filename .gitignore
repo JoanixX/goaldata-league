@@ -2,6 +2,9 @@
 bigData_pc1_uxxxxxxxxx.tex
 inspect_json.py
 .pytest_cache
+.tmp_pytest/
+.tmp_pytest_run/
+pytest-cache-files-*/
 scratch
 scratch/*
 uefa_match_events.csv

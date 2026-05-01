@@ -37,13 +37,13 @@ home_goals,int64,0,0.0,Goals scored by home team,1
 away_goals,int64,0,0.0,Goals scored by away team,1
 expected_threat_total,float64,9681,100.0,Processed player-match proxy for expected threat; calculated only when passes_completed and dribbles are available,1.64
 vaep_rating,float64,9681,100.0,Processed player-match proxy for net action value; calculated only when passes_completed dribbles tackles_won interceptions and fouls_committed are available,34.0
-expected_assists,float64,0,0.0,Processed player-match proxy equal to passes_attempted times pass_accuracy times 0.1,3.400014
+expected_assists,float64,9529,98.4299,Processed player-match proxy equal to passes_attempted times pass_accuracy times 0.1; calculated only for rows with player-season evidence,3.400014
 progressive_pass_dist,float64,9681,100.0,Processed player-match proxy equal to distance_covered times pass completion ratio; NULL when distance_covered is missing,250.0
 defensive_action_height,float64,9681,100.0,Processed player-match proxy equal to defensive actions divided by distance_covered; NULL when distance_covered or clearances are missing,0.45
-pressing_intensity,float64,2706,27.9517,Processed player-match PPDA-inspired proxy equal to opponent possession rate divided by defensive actions,0.062978
+pressing_intensity,float64,9569,98.8431,Processed player-match PPDA-inspired proxy equal to opponent possession rate divided by defensive actions,0.062978
 acwr_index,float64,9681,100.0,Processed player-match workload ratio; NULL when match distance and season distance are unavailable,1.08
 metabolic_power,float64,9681,100.0,Processed player-match metabolic power proxy; NULL when top_speed or distance_covered are missing,4.2
-foul_severity_index,float64,0,0.0,Processed player-match disciplinary severity index equal to fouls_committed plus 3 yellow_cards plus 6 red_cards,4.0
+foul_severity_index,float64,9544,98.5849,Processed player-match disciplinary severity index equal to fouls_committed plus 3 yellow_cards plus 6 red_cards,4.0
 possession_involvement,float64,9681,100.0,Processed player-match possession-normalized involvement proxy; NULL when dribbles or possession inputs are missing,0.75
 xg_probability,float64,3506,100.0,Processed goal-event xG probability placeholder; NULL until a calibrated shot-level xG model and shot population are available,0.12
 shot_quality_index,float64,3506,100.0,Processed goal-event goals divided by xg_probability; NULL while xg_probability is unavailable,8.33

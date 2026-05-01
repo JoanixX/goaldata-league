@@ -5,6 +5,36 @@ ESPN_BOARD   = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champi
 ESPN_SUMMARY = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary'
 
 class ESPNScraper:
+    @staticmethod
+    def _stat_map(stats_list):
+        mapped = {}
+        for item in stats_list or []:
+            keys = {
+                item.get('name'),
+                item.get('abbreviation'),
+                item.get('label'),
+                item.get('displayName'),
+            }
+            for key in keys:
+                if key:
+                    mapped[str(key)] = item.get('displayValue', item.get('value'))
+        return mapped
+
+    @staticmethod
+    def _number_from_stat(stats, *keys):
+        for key in keys:
+            raw = stats.get(key)
+            if raw in (None, '', 'NULL'):
+                continue
+            text = str(raw).strip().replace('%', '')
+            if '/' in text:
+                text = text.split('/', 1)[0]
+            try:
+                return int(float(text))
+            except Exception:
+                continue
+        return 0
+
     def find_event(self, date_csv, local, away, aliases_func, overrides=None):
         overrides = overrides or {}
         override_key = f"{local}|{away}|{date_csv}"
@@ -82,7 +112,7 @@ class ESPNScraper:
             l_stats_map, v_stats_map = {}, {}
             for t in bs_teams:
                 tid = t.get('team', {}).get('id')
-                s_map = {s.get('name'): s.get('displayValue') for s in t.get('statistics', [])}
+                s_map = self._stat_map(t.get('statistics', []))
                 if tid == l_tid: l_stats_map = s_map
                 else: v_stats_map = s_map
             
@@ -96,27 +126,22 @@ class ESPNScraper:
                 team_name = rd.get('team', {}).get('displayName', 'Unknown')
                 for e in rd.get('roster', []):
                     p_name = e.get('athlete', {}).get('displayName', 'Unknown')
-                    stats_list = e.get('stats', [])
-                    s = {s_item.get('name'): s_item.get('displayValue') for s_item in stats_list}
-                    
-                    def _int(key): 
-                        try: return int(float(s.get(key, 0)))
-                        except: return 0
+                    s = self._stat_map(e.get('stats', []))
                     
                     p_record = {
                         'player_name': p_name,
                         'team_name': team_name,
-                        'minutes_played': _int('minutesPlayed') or _int('appearances') * 90,
-                        'goals': _int('totalGoals'),
-                        'assists': _int('goalAssists'),
-                        'shots': _int('totalShots'),
-                        'shots_on_target': _int('shotsOnTarget'),
-                        'fouls_committed': _int('foulsCommitted'),
-                        'fouls_suffered': _int('foulsSuffered'),
-                        'yellow_cards': _int('yellowCards'),
-                        'red_cards': _int('redCards'),
-                        'saves': _int('saves'),
-                        'shots_faced': _int('shotsFaced'),
+                        'minutes_played': self._number_from_stat(s, 'minutesPlayed', 'minutes', 'MIN') or self._number_from_stat(s, 'appearances') * 90,
+                        'goals': self._number_from_stat(s, 'totalGoals', 'goals', 'G'),
+                        'assists': self._number_from_stat(s, 'goalAssists', 'assists', 'A'),
+                        'shots': self._number_from_stat(s, 'totalShots', 'shots', 'SH'),
+                        'shots_on_target': self._number_from_stat(s, 'shotsOnTarget', 'shots on target', 'SOT'),
+                        'fouls_committed': self._number_from_stat(s, 'foulsCommitted', 'fouls committed', 'FC'),
+                        'fouls_suffered': self._number_from_stat(s, 'foulsSuffered', 'fouls suffered', 'FS'),
+                        'yellow_cards': self._number_from_stat(s, 'yellowCards', 'yellow cards', 'YC'),
+                        'red_cards': self._number_from_stat(s, 'redCards', 'red cards', 'RC'),
+                        'saves': self._number_from_stat(s, 'saves', 'SV'),
+                        'shots_faced': self._number_from_stat(s, 'shotsFaced'),
                     }
                     result['player_stats'].append(p_record)
             
@@ -124,7 +149,7 @@ class ESPNScraper:
             result['team_stats'] = {}
             for t in bs_teams:
                 tid = t.get('team', {}).get('id')
-                s_map = {s.get('name'): s.get('displayValue') for s in t.get('statistics', [])}
+                s_map = self._stat_map(t.get('statistics', []))
                 result['team_stats'][str(tid)] = {
                     'total_shots': s_map.get('totalShots', '0'),
                     'shots_on_target': s_map.get('shotsOnTarget', '0'),
