@@ -19,8 +19,14 @@ The project is organized into modular components:
 1. Install dependencies: `pip install -r requirements.txt`
 2. Build cleaned relational datasets: `python script.py`
 3. Impute missing statistical fields without overwriting observed values: `python src/impute_missing_stats.py`
-4. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
-5. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
-6. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+4. Add documented advanced metrics to processed CSVs: `python src/enrich_advanced_metrics.py`
+5. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
+6. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
+7. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+
+Advanced metric enrichment writes only to `data/processed`. It does not modify
+`data/raw`. Metrics whose cited methods require missing event locations, shot
+populations, tracking data, or fitted model coefficients remain `NULL` and are
+explained in `data/processed/metadata/advanced_metric_coverage.csv`.
 
 For detailed information about each component, refer to the README files in the respective subdirectories.
