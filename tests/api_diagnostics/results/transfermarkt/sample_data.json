@@ -1,0 +1,42 @@
+[
+  {
+    "player_name": "Guaita",
+    "birth_date": "NULL",
+    "height_cm": "NULL",
+    "position": "NULL",
+    "nationality": "NULL",
+    "birth_place": "NULL"
+  },
+  {
+    "player_name": "Ricardo Costa",
+    "birth_date": "NULL",
+    "height_cm": "NULL",
+    "position": "NULL",
+    "nationality": "NULL",
+    "birth_place": "NULL"
+  },
+  {
+    "player_name": "Mathieu",
+    "birth_date": "NULL",
+    "height_cm": "NULL",
+    "position": "NULL",
+    "nationality": "NULL",
+    "birth_place": "NULL"
+  },
+  {
+    "player_name": "Miguel",
+    "birth_date": "NULL",
+    "height_cm": "NULL",
+    "position": "NULL",
+    "nationality": "NULL",
+    "birth_place": "NULL"
+  },
+  {
+    "player_name": "Mehmet Topal",
+    "birth_date": "NULL",
+    "height_cm": "NULL",
+    "position": "NULL",
+    "nationality": "NULL",
+    "birth_place": "NULL"
+  }
+]
