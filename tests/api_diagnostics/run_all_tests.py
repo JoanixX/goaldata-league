@@ -46,7 +46,7 @@ print("\n" + "=" * 65)
 print("CONSOLIDATED SUMMARY")
 print("=" * 65)
 for name, status in results_summary.items():
-    icon = "✓" if status == 'PASS' else "✗"
+    icon = "V" if status == 'PASS' else "X"
     if status == 'MISSING': icon = "!"
     print(f"  {icon} {name:30}: {status}")
 
