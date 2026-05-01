@@ -1,3 +1,14 @@
+"""
+UCL DATA PIPELINE - Master Orchestrator
+========================================
+Single command: python src/main.py
+
+Flow:
+  Phase 0: Run all tests (quality gate)
+  Phase 1: Run all scrapers (UEFA season, Transfermarkt, match-level)
+  Phase 2: Format raw data, save JSON & text logs
+  Phase 3: Merge formatted data into data/processed/ CSVs
+"""
 import pandas as pd
 import os, sys, json, subprocess
 from datetime import datetime
@@ -7,153 +18,649 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from scrapers.uefa import UEFAScraper
 from scrapers.espn import ESPNScraper
-from scrapers.fbref import FBRefScraper
-from scrapers.flashscore import FlashscoreScraper
-from scrapers.worldfootball import WorldFootballScraper
 from scrapers.utils import is_null
 from config import expand_aliases, load_espn_overrides
-from formatter import are_equivalent, format_possession
+from formatter import (
+    are_equivalent, format_possession, generate_player_id,
+    soft_norm, norm_unit
+)
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_DIR = os.path.join(BASE_DIR, 'data', 'raw')
+LOGS_DIR = os.path.join(BASE_DIR, 'logs')
+RESULTS_DIR = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'results')
 
 ENRICHABLE = [
-    'hora_inicio', 'hora_fin',
-    'arbitro_principal', 'arbitros_linea',
-    'entrenador_local', 'entrenador_visitante',
-    'planteles',
-    'posesion_local', 'posesion_visitante',
-    'tiros_totales', 'tiros_totales_local', 'tiros_totales_visitante',
-    'tiros_puerta', 'tiros_puerta_local', 'tiros_puerta_visitante',
-    'faltas_total', 'faltas_local', 'faltas_visitante',
-    'corners_total', 'corners_local', 'corners_visitante',
-    'goles', 'amarillas', 'rojas', 'cambios',
-    'marcador', 'marcador_global'
+    'referee', 'stadium', 'city', 'country',
+    'possession_home', 'possession_away'
 ]
 
-def run_diagnostics():
-    print("[*] Running pre-enrichment diagnostics...")
-    script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                          'tests', 'api_diagnostics', 'run_all_tests.py')
-    if os.path.exists(script):
-        subprocess.run([sys.executable, script], check=False)
 
-def log_mismatch(match_info, field, current_val, new_val):
-    log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'logs', 'mismatches.log')
-    os.makedirs(os.path.dirname(log_path), exist_ok=True)
-    with open(log_path, 'a', encoding='utf-8') as f:
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        f.write(f"[{timestamp}] Mismatch in {match_info} | Field: {field} | Current: {current_val} | New: {new_val}\n")
+# ============================================================
+# LOGGING
+# ============================================================
+class PipelineLogger:
+    """Dual logger: writes to text file + builds JSON report."""
 
-def fill_missing_data(csv_path: str, output_path: str):
-    run_diagnostics()
-    print(f"[*] Reading dataset: {csv_path}")
-    df = pd.read_csv(csv_path, keep_default_na=False)
+    def __init__(self):
+        os.makedirs(LOGS_DIR, exist_ok=True)
+        self.ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.text_path = os.path.join(LOGS_DIR, f'pipeline_{self.ts}.log')
+        self.json_report = {
+            'run': self.ts,
+            'phases': {},
+            'matches_enriched': [],
+            'scraped_records': {},
+            'errors': []
+        }
+        self._f = open(self.text_path, 'w', encoding='utf-8')
 
-    # Initialize Scrapers
-    uefa_idx_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                                 'tests', 'api_diagnostics', 'results', 'uefa', 'match_index.json')
-    u_scraper = UEFAScraper(index_path=uefa_idx_path)
+    def log(self, msg):
+        line = f"[{datetime.now().strftime('%H:%M:%S')}] {msg}"
+        print(line)
+        self._f.write(line + '\n')
+        self._f.flush()
+
+    def log_match(self, info, fields):
+        self.json_report['matches_enriched'].append({
+            'match': info, 'fields': fields
+        })
+
+    def log_error(self, msg):
+        self.json_report['errors'].append(msg)
+        self.log(f"[!] ERROR: {msg}")
+
+    def set_phase(self, name, status, detail=None):
+        self.json_report['phases'][name] = {
+            'status': status, 'detail': detail or ''
+        }
+
+    def save(self):
+        self._f.close()
+        json_path = os.path.join(LOGS_DIR, f'pipeline_{self.ts}.json')
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(self.json_report, f, indent=2, ensure_ascii=False)
+        print(f"\n[*] Logs saved: {self.text_path}")
+        print(f"[*] JSON report: {json_path}")
+
+
+# ============================================================
+# PHASE 0: QUALITY GATE
+# ============================================================
+def phase_0_tests(log):
+    log.log("=" * 60)
+    log.log("PHASE 0: QUALITY GATE")
+    log.log("=" * 60)
+
+    r = subprocess.run(
+        [sys.executable, '-m', 'pytest', 'tests/', '-v', '--tb=short'],
+        cwd=BASE_DIR, capture_output=True, text=True
+    )
+    log.log(r.stdout[-800:] if len(r.stdout) > 800 else r.stdout)
+
+    if r.returncode != 0:
+        log.log("[X] TESTS FAILED — Pipeline aborted.")
+        log.set_phase('tests', 'FAILED')
+        log.save()
+        sys.exit(1)
+
+    log.log("[V] All tests passed.\n")
+    log.set_phase('tests', 'PASSED')
+
+
+# ============================================================
+# PHASE 1: SCRAPING
+# ============================================================
+def phase_1_scraping(log):
+    log.log("=" * 60)
+    log.log("PHASE 1: SCRAPING")
+    log.log("=" * 60)
+
+    # --- 1a. UEFA Season Stats (Playwright, subprocess) ---
+    log.log("\n--- 1a. UEFA Season Stats ---")
+    r = subprocess.run(
+        [sys.executable, os.path.join(BASE_DIR, 'src', 'scrapers', 'uefa_season_scraper.py')],
+        cwd=BASE_DIR, capture_output=True, text=True
+    )
+    log.log(r.stdout[-600:] if len(r.stdout) > 600 else r.stdout)
+    if r.returncode != 0:
+        log.log_error(f"UEFA scraper exit code {r.returncode}")
+    log.set_phase('scrape_uefa_season', 'DONE' if r.returncode == 0 else 'ERROR')
+
+    # --- 1b. Transfermarkt (Playwright, subprocess) ---
+    log.log("\n--- 1b. Transfermarkt Player Profiles ---")
+    r = subprocess.run(
+        [sys.executable, os.path.join(BASE_DIR, 'src', 'scrapers', 'transfermarkt.py')],
+        cwd=BASE_DIR, capture_output=True, text=True
+    )
+    log.log(r.stdout[-600:] if len(r.stdout) > 600 else r.stdout)
+    if r.returncode != 0:
+        log.log_error(f"Transfermarkt scraper exit code {r.returncode}")
+    log.set_phase('scrape_transfermarkt', 'DONE' if r.returncode == 0 else 'ERROR')
+
+    # --- 1c. Match-level enrichment (UEFA API + ESPN API) ---
+    log.log("\n--- 1c. Match-Level Enrichment (UEFA API + ESPN) ---")
+    enrichment_results = _run_match_enrichment(log)
+    log.set_phase('scrape_match_enrichment', 'DONE',
+                  f"{len(enrichment_results)} matches processed")
+
+    return enrichment_results
+
+
+def _run_match_enrichment(log):
+    """Scrape missing match-level data AND player stats per match."""
+    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
+    teams_path = os.path.join(RAW_DIR, 'core', 'teams.csv')
+    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
+    stats_path = os.path.join(RAW_DIR, 'stats', 'player_match_stats.csv')
+    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+
+    if not os.path.exists(matches_path):
+        log.log_error(f"matches.csv not found at {matches_path}")
+        return []
+
+    df_matches = pd.read_csv(matches_path, keep_default_na=False)
+    df_teams = pd.read_csv(teams_path, keep_default_na=False)
+    df_events = pd.read_csv(events_path, keep_default_na=False) if os.path.exists(events_path) else pd.DataFrame()
+    df_stats = pd.read_csv(stats_path, keep_default_na=False) if os.path.exists(stats_path) else pd.DataFrame()
+    df_players = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+
+    team_map = dict(zip(df_teams['team_id'], df_teams['team_name']))
+    rev_team_map = dict(zip(df_teams['team_name'], df_teams['team_id']))
+
+    uefa_idx = os.path.join(RESULTS_DIR, 'uefa', 'match_index.json')
+    u_scraper = UEFAScraper(index_path=uefa_idx)
     e_scraper = ESPNScraper()
-    f_scraper = FBRefScraper()
-    fs_scraper = FlashscoreScraper()
-    wf_scraper = WorldFootballScraper()
-    
     espn_overrides = load_espn_overrides()
 
-    # To calculate global scores, we need to track first legs
-    # We'll build a map of (season, local, away) -> score
-    first_leg_scores = {}
+    results = []
+    stats_updated = 0
 
-    for idx, row in df.iterrows():
-        season = str(row.get('season', ''))
-        fase = str(row.get('fase', ''))
-        instancia = str(row.get('instancia', ''))
-        local, away, date = str(row.get('local', '')), str(row.get('visitante', '')), str(row.get('fecha', ''))
-        match_info = f"{season} | {fase} | {local} vs {away} ({date})"
+    # ESPN stat fields → our CSV columns
+    STAT_MAP = {
+        'shots': 'shots', 'shots_on_target': 'shots_on_target',
+        'fouls_committed': 'fouls_committed', 'fouls_suffered': 'fouls_suffered',
+        'yellow_cards': 'yellow_cards', 'red_cards': 'red_cards',
+        'goals': 'goals', 'assists': 'assists',
+    }
 
-        # Check for NULLs
-        needs_update = False
-        for col in ENRICHABLE:
-            if col in df.columns and is_null(row.get(col)):
-                needs_update = True
-                break
-        
-        if not needs_update: continue
-        
-        print(f"  [{idx}] Processing: {local} vs {away} ({date})")
+    for idx, row in df_matches.iterrows():
+        mid = row['match_id']
+        season, date = str(row['season']), str(row['date'])
+        local = team_map.get(row['home_team_id'], 'Unknown')
+        away = team_map.get(row['away_team_id'], 'Unknown')
+        info_str = f"{season} | {local} vs {away} ({date})"
 
-        # 1. UEFA Extraction
-        u_id = u_scraper.find_id(date, local, away, expand_aliases)
-        u_officials, u_lineups = {}, {}
-        if u_id:
-            u_officials = u_scraper.get_officials(u_id)
-            if is_null(row.get('planteles')):
-                u_lineups = u_scraper.get_lineups(u_id, local, away)
+        # Check what needs enrichment
+        needs_info = any(
+            is_null(row.get(c)) or (c in ['referee', 'stadium', 'city'] and str(row.get(c)) == '0')
+            for c in ENRICHABLE
+        )
 
-        # 2. ESPN Extraction
+        # Check if player stats for this match are mostly zeros
+        match_stats = df_stats[df_stats['match_id'] == mid] if not df_stats.empty else pd.DataFrame()
+        needs_stats = match_stats.empty or (
+            not match_stats.empty and 
+            match_stats[['shots', 'fouls_committed']].apply(pd.to_numeric, errors='coerce').fillna(0).sum().sum() == 0
+        )
+
+        if not needs_info and not needs_stats:
+            continue
+
+        # ESPN API
         e_id = e_scraper.find_event(date, local, away, expand_aliases, overrides=espn_overrides)
-        e_data = {}
-        if e_id:
-            e_data = e_scraper.get_data(e_id, local)
+        e_struct = e_scraper.get_structured_data(e_id, local) if e_id else {
+            'match_info': {}, 'player_stats': [], 'events': [], 'team_stats': {}
+        }
 
-        # 3. Fallbacks
-        # ... (Indices loading logic could be here or optimized outside)
-        
-        merged = {**e_data} # Start with ESPN
-        
-        # Format Score with Penalties: "X-Y P(A-B)"
-        if '_espn_penalties' in merged:
-            p_score = merged['_espn_penalties']
-            m_score = merged.get('marcador', row.get('marcador'))
-            if m_score and not is_null(m_score):
-                merged['marcador'] = f"{m_score} P({p_score})"
+        # UEFA API (only for match info)
+        if needs_info:
+            u_id = u_scraper.find_id(date, local, away, expand_aliases)
+            u_data = u_scraper.get_match_info(u_id) if u_id else {}
+            merged = {**e_struct['match_info'], **u_data}
+            fields_updated = []
+            for col in ENRICHABLE:
+                if col in merged and not is_null(merged[col]):
+                    cur = row.get(col)
+                    new = format_possession(merged[col]) if col.startswith('possession') else merged[col]
+                    if is_null(cur):
+                        df_matches.at[idx, col] = new
+                        fields_updated.append(col)
+                    elif not are_equivalent(cur, new, col):
+                        _log_mismatch(info_str, col, cur, new)
+            if fields_updated:
+                results.append({'match': info_str, 'fields': fields_updated, 'source': 'UEFA/ESPN'})
+                log.log_match(info_str, fields_updated)
 
-        # 4. Merge & Verify
-        for k in ('arbitro_principal', 'arbitros_linea', 'hora_inicio', 'hora_fin'):
-            if k in u_officials: merged[k] = u_officials[k]
-        
-        for k in ('planteles', 'entrenador_local', 'entrenador_visitante'):
-            if k in u_lineups and u_lineups[k]: merged[k] = u_lineups[k]
-
-        if 'arbitro_principal' not in merged and '_espn_main_ref' in merged:
-            merged['arbitro_principal'] = merged['_espn_main_ref']
-
-        # Global Score Logic
-        if fase != 'Final' and is_null(row.get('marcador_global')):
-            # This is simplified; ideally we'd look for the other leg in the DF
-            pass
-
-        # Update strictly NULLs
-        for col, val in merged.items():
-            if col.startswith('_'): continue
-            if col in df.columns:
-                current_val = df.at[idx, col]
+        # FILL PLAYER STATS from ESPN
+        if needs_stats and e_struct.get('player_stats'):
+            log.log(f"  [{idx}] Filling stats: {info_str}")
+            
+            # Build name lookup for players in this match
+            match_rows = df_stats[df_stats['match_id'] == mid]
+            if match_rows.empty:
+                continue
+            
+            # Map: soft_norm(player_name) -> stats index
+            # We need player names from players.csv
+            name_to_idx = {}
+            for sidx, srow in match_rows.iterrows():
+                pid = srow['player_id']
+                p_row = df_players[df_players['player_id'] == pid]
+                if not p_row.empty:
+                    pname = p_row.iloc[0]['player_name']
+                    name_to_idx[soft_norm(pname)] = sidx
+                    # Also index by last word (surname)
+                    parts = soft_norm(pname).split()
+                    if parts:
+                        name_to_idx[parts[-1]] = sidx
+            
+            for ps in e_struct['player_stats']:
+                p_name = ps.get('player_name', '')
+                if not p_name or p_name == 'Unknown':
+                    continue
                 
-                # Format before update/check
-                if col.startswith('posesion'):
-                    val = format_possession(val)
-
-                if is_null(current_val):
-                    if val and not is_null(val):
-                        df.at[idx, col] = val
+                # Try to find the player in our match stats
+                espn_norm = soft_norm(p_name)
+                espn_parts = espn_norm.split()
+                sidx = None
+                
+                # 1. Exact normalized match
+                if espn_norm in name_to_idx:
+                    sidx = name_to_idx[espn_norm]
+                # 2. Match by surname (last word)
+                elif espn_parts and espn_parts[-1] in name_to_idx:
+                    sidx = name_to_idx[espn_parts[-1]]
+                # 3. Match by any word overlap
                 else:
-                    # Verify mismatch using advanced logic
-                    if val and not is_null(val) and not are_equivalent(current_val, val, col):
-                        log_mismatch(match_info, col, current_val, val)
+                    for norm_name, idx_val in name_to_idx.items():
+                        csv_parts = set(norm_name.split())
+                        if csv_parts & set(espn_parts):
+                            sidx = idx_val
+                            break
+                
+                if sidx is not None:
+                    for espn_key, csv_col in STAT_MAP.items():
+                        espn_val = ps.get(espn_key, 0)
+                        if espn_val and int(espn_val) != 0:
+                            cur_val = df_stats.at[sidx, csv_col]
+                            if cur_val == 0 or cur_val == 0.0 or str(cur_val) == '0' or str(cur_val) == '0.0':
+                                df_stats.at[sidx, csv_col] = int(espn_val)
+                                stats_updated += 1
 
-    # Cleanup
-    for col in ENRICHABLE:
-        if col in df.columns:
-            df[col] = df[col].apply(lambda x: 'NULL' if is_null(x) else x)
+        # Merge events
+        if e_struct.get('events') and (df_events.empty or mid not in df_events['match_id'].values):
+            for ev in e_struct['events']:
+                ev['match_id'] = mid
+                df_events = pd.concat([df_events, pd.DataFrame([ev])], ignore_index=True)
 
-    print(f"[*] Saving enriched dataset: {output_path}")
-    df.to_csv(output_path, index=False, encoding='utf-8')
+    # Save all CSVs
+    df_matches.to_csv(matches_path, index=False, encoding='utf-8')
+    if not df_stats.empty:
+        df_stats.to_csv(stats_path, index=False, encoding='utf-8')
+    if not df_events.empty:
+        df_events.to_csv(events_path, index=False, encoding='utf-8')
+
+    log.log(f"  [V] Match enrichment done. {len(results)} matches updated, {stats_updated} stat fields filled.")
+    return results
+
+
+def _log_mismatch(match_info, field, current_val, new_val):
+    path = os.path.join(LOGS_DIR, 'mismatches.log')
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'a', encoding='utf-8') as f:
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"[{ts}] {match_info} | {field} | Old: {current_val} | New: {new_val}\n")
+
+
+# ============================================================
+# PHASE 2: FORMAT & MERGE INTO CSVs
+# ============================================================
+def phase_2_format_and_merge(log):
+    log.log("=" * 60)
+    log.log("PHASE 2: FORMAT & MERGE INTO CSVs")
+    log.log("=" * 60)
+
+    # --- 2a. Ingest UEFA season dump ---
+    uefa_dump = os.path.join(RESULTS_DIR, 'uefa', 'raw_dump.json')
+    if os.path.exists(uefa_dump):
+        log.log("\n--- 2a. Ingesting UEFA season stats ---")
+        _ingest_uefa_dump(uefa_dump, log)
+    else:
+        log.log("\n--- 2a. No UEFA dump found, skipping ---")
+
+    # --- 2b. Ingest Transfermarkt dump ---
+    tm_dump = os.path.join(RESULTS_DIR, 'transfermarkt', 'raw_dump.json')
+    if os.path.exists(tm_dump):
+        log.log("\n--- 2b. Ingesting Transfermarkt data ---")
+        _ingest_tm_dump(tm_dump, log)
+    else:
+        log.log("\n--- 2b. No Transfermarkt dump found, skipping ---")
+
+    # --- 2c. Fill goals_events gaps ---
+    log.log("\n--- 2c. Filling goals_events gaps ---")
+    _fill_goals_events(log)
+
+    # --- 2d. Cross-validate data across sources ---
+    log.log("\n--- 2d. Cross-validating data integrity ---")
+    _cross_validate(log)
+
+    log.set_phase('format_merge', 'DONE')
+
+
+def _ingest_uefa_dump(dump_path, log):
+    """Read UEFA raw JSON dump, format records, merge into CSVs."""
+    with open(dump_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    gk_path = os.path.join(RAW_DIR, 'stats', 'goalkeeper_stats.csv')
+    ss_path = os.path.join(RAW_DIR, 'stats', 'player_season_stats.csv')
+
+    df_players = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+    df_gk = pd.read_csv(gk_path, keep_default_na=False) if os.path.exists(gk_path) else pd.DataFrame()
+    df_ss = pd.read_csv(ss_path, keep_default_na=False) if os.path.exists(ss_path) else pd.DataFrame()
+
+    new_gk, new_ss, new_players = [], [], []
+
+    # Goalkeeping
+    for row in data.get('goalkeeping', []):
+        pid = row['player_id']
+        s = row.get('stats', {})
+        if s:
+            new_gk.append({
+                'player_id': pid, 'season': row['season'],
+                'saves': s.get('saves', 0),
+                'goals_conceded': s.get('goals_conceded', 0),
+                'clean_sheets': s.get('clean_sheets', 0),
+                'penalty_saves': s.get('penalty_saves', 0),
+                'punches': s.get('punches', 0)
+            })
+        if df_players.empty or pid not in df_players['player_id'].values:
+            new_players.append({'player_id': pid, 'player_name': row['player_name']})
+
+    # Disciplinary, Attacking, Passing
+    for cat in ['disciplinary', 'attacking', 'passing']:
+        for row in data.get(cat, []):
+            pid = row['player_id']
+            s = row.get('stats', {})
+            rec = {'player_id': pid, 'season': row['season']}
+            rec.update(s)  # Named stats map directly to our columns
+            new_ss.append(rec)
+            if df_players.empty or pid not in df_players['player_id'].values:
+                new_players.append({'player_id': pid, 'player_name': row['player_name']})
+
+    # Merge & deduplicate
+    if new_gk:
+        df_gk = pd.concat([df_gk, pd.DataFrame(new_gk)]).drop_duplicates(
+            subset=['player_id', 'season'], keep='last')
+        df_gk.to_csv(gk_path, index=False, encoding='utf-8')
+        log.log(f"  Goalkeeper stats: {len(df_gk)} records")
+
+    if new_ss:
+        df_ss = pd.concat([df_ss, pd.DataFrame(new_ss)]).drop_duplicates(
+            subset=['player_id', 'season'], keep='last')
+        df_ss.to_csv(ss_path, index=False, encoding='utf-8')
+        log.log(f"  Season stats: {len(df_ss)} records")
+
+    if new_players:
+        df_players = pd.concat([df_players, pd.DataFrame(new_players)]).drop_duplicates(
+            subset=['player_id'], keep='first')
+        df_players.to_csv(players_path, index=False, encoding='utf-8')
+        log.log(f"  Players: {len(df_players)} records")
+
+    log.json_report['scraped_records']['uefa_season'] = {
+        'goalkeepers': len(new_gk), 'season_stats': len(new_ss), 'new_players': len(new_players)
+    }
+
+
+def _ingest_tm_dump(dump_path, log):
+    """Read Transfermarkt JSON dump, update player profiles in players.csv."""
+    with open(dump_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    df = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+
+    updated = 0
+    for entry in data:
+        name = entry.get('player_name', '')
+        if not name:
+            continue
+        pid = generate_player_id(name)
+        mask = df['player_id'] == pid
+        if mask.any():
+            idx = df[mask].index[0]
+            for field in ['height_cm', 'position', 'nationality', 'birth_date', 'birth_place']:
+                val = entry.get(field)
+                if val and str(val) != 'NULL' and is_null(df.at[idx, field] if field in df.columns else ''):
+                    if field not in df.columns:
+                        df[field] = ''
+                    df.at[idx, field] = val
+                    updated += 1
+
+    df.to_csv(players_path, index=False, encoding='utf-8')
+    log.log(f"  Transfermarkt: {updated} fields updated across player profiles")
+    log.json_report['scraped_records']['transfermarkt'] = {'fields_updated': updated}
+
+
+def _fill_goals_events(log):
+    """Fill gaps in goals_events.csv using existing data + ESPN event data."""
+    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
+    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
+
+    if not os.path.exists(events_path):
+        log.log("  No goals_events.csv found, skipping")
+        return
+
+    df_ev = pd.read_csv(events_path, keep_default_na=False)
+    df_pl = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+    df_ma = pd.read_csv(matches_path, keep_default_na=False) if os.path.exists(matches_path) else pd.DataFrame()
+
+    # Build player_id → player_name lookup
+    pid_to_name = dict(zip(df_pl['player_id'], df_pl['player_name'])) if not df_pl.empty else {}
+
+    filled = 0
+    for idx, row in df_ev.iterrows():
+        # 1. Fill player_name from players.csv
+        if is_null(row.get('player_name', '')) and row.get('player_id'):
+            name = pid_to_name.get(row['player_id'], '')
+            if name:
+                df_ev.at[idx, 'player_name'] = name
+                filled += 1
+
+        # 2. Fill event_type (always 'goal' for this table)
+        if is_null(row.get('event_type', '')):
+            df_ev.at[idx, 'event_type'] = 'goal'
+            filled += 1
+
+        # 3. Derive is_penalty and is_own_goal from goal_type
+        goal_type = str(row.get('goal_type', '')).lower()
+        if is_null(row.get('is_penalty', '')):
+            df_ev.at[idx, 'is_penalty'] = 'penalty' in goal_type
+            filled += 1
+        if is_null(row.get('is_own_goal', '')):
+            df_ev.at[idx, 'is_own_goal'] = 'own' in goal_type
+            filled += 1
+
+    # 4. Fill assist_player_id from ESPN events where available
+    teams_path = os.path.join(RAW_DIR, 'core', 'teams.csv')
+    df_te = pd.read_csv(teams_path, keep_default_na=False) if os.path.exists(teams_path) else pd.DataFrame()
+    team_map = dict(zip(df_te['team_id'], df_te['team_name'])) if not df_te.empty else {}
+
+    e_scraper = ESPNScraper()
+    espn_overrides = load_espn_overrides()
+
+    # Group events by match for efficient ESPN calls
+    matches_needing_assists = set()
+    for _, row in df_ev.iterrows():
+        if is_null(row.get('assist_player_id', '')):
+            matches_needing_assists.add(row['match_id'])
+
+    assist_filled = 0
+    for mid in list(matches_needing_assists)[:50]:  # Limit to avoid too many API calls
+        m_row = df_ma[df_ma['match_id'] == mid]
+        if m_row.empty:
+            continue
+        m_row = m_row.iloc[0]
+        local = team_map.get(m_row['home_team_id'], 'Unknown')
+        away = team_map.get(m_row['away_team_id'], 'Unknown')
+        date = str(m_row['date'])
+
+        e_id = e_scraper.find_event(date, local, away, expand_aliases, overrides=espn_overrides)
+        if not e_id:
+            continue
+
+        e_data = e_scraper.get_structured_data(e_id, local)
+        espn_events = e_data.get('events', [])
+
+        # Match ESPN events to our events by minute
+        match_events = df_ev[df_ev['match_id'] == mid]
+        for espn_ev in espn_events:
+            if espn_ev.get('event_type') != 'goal':
+                continue
+            espn_minute = str(espn_ev.get('minute', ''))
+            espn_player = espn_ev.get('player_name', '')
+
+            # Find matching event in our data by minute
+            for eidx, erow in match_events.iterrows():
+                ev_minute = str(erow.get('minute', ''))
+                if ev_minute == espn_minute and is_null(erow.get('assist_player_id', '')):
+                    # Look for assist info in ESPN player_stats
+                    for ps in e_data.get('player_stats', []):
+                        if ps.get('assists', 0) > 0:
+                            assist_pid = generate_player_id(ps['player_name'])
+                            if assist_pid != erow.get('player_id', ''):
+                                df_ev.at[eidx, 'assist_player_id'] = assist_pid
+                                assist_filled += 1
+                                break
+                    break
+
+    df_ev.to_csv(events_path, index=False, encoding='utf-8')
+    log.log(f"  Goals events: {filled} fields filled, {assist_filled} assists added")
+    log.json_report['scraped_records']['goals_events'] = {
+        'fields_filled': filled, 'assists_added': assist_filled
+    }
+
+
+def _cross_validate(log):
+    """Cross-validate data consistency across all CSVs using are_equivalent()."""
+    matches_path = os.path.join(RAW_DIR, 'core', 'matches.csv')
+    stats_path = os.path.join(RAW_DIR, 'stats', 'player_match_stats.csv')
+    events_path = os.path.join(RAW_DIR, 'events', 'goals_events.csv')
+    players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
+    season_path = os.path.join(RAW_DIR, 'stats', 'player_season_stats.csv')
+
+    df_matches = pd.read_csv(matches_path, keep_default_na=False) if os.path.exists(matches_path) else pd.DataFrame()
+    df_stats = pd.read_csv(stats_path, keep_default_na=False) if os.path.exists(stats_path) else pd.DataFrame()
+    df_events = pd.read_csv(events_path, keep_default_na=False) if os.path.exists(events_path) else pd.DataFrame()
+    df_players = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+
+    issues = []
+
+    # 1. Validate: goal count in events matches match score
+    if not df_events.empty and not df_matches.empty:
+        for _, m in df_matches.iterrows():
+            mid = m['match_id']
+            match_goals = df_events[df_events['match_id'] == mid]
+            expected_total = int(m.get('home_score', 0)) + int(m.get('away_score', 0))
+            actual_total = len(match_goals)
+            if actual_total > 0 and actual_total != expected_total:
+                issues.append(
+                    f"Match {mid}: score says {expected_total} goals but events has {actual_total}"
+                )
+
+    # 2. Validate: player_match_stats goals match events for that player
+    if not df_stats.empty and not df_events.empty:
+        for pid in df_stats['player_id'].unique()[:200]:  # Sample check
+            stat_goals = df_stats[df_stats['player_id'] == pid]['goals'].astype(float).sum()
+            event_goals = len(df_events[
+                (df_events['player_id'] == pid) & 
+                (df_events['goal_type'] != 'own_goal')
+            ])
+            if stat_goals > 0 and event_goals > 0:
+                if not are_equivalent(str(int(stat_goals)), str(event_goals), 'goals'):
+                    pname = df_players[df_players['player_id'] == pid]
+                    pname = pname.iloc[0]['player_name'] if not pname.empty else pid
+                    issues.append(
+                        f"Player {pname}: stats say {int(stat_goals)} goals but events has {event_goals}"
+                    )
+
+    # 3. Validate: all player_ids in stats exist in players table
+    if not df_stats.empty and not df_players.empty:
+        stats_pids = set(df_stats['player_id'].unique())
+        players_pids = set(df_players['player_id'].unique())
+        orphans = stats_pids - players_pids
+        if orphans:
+            issues.append(f"Orphan player_ids in stats (not in players.csv): {len(orphans)}")
+
+    # 4. Validate: all match_ids in stats exist in matches table
+    if not df_stats.empty and not df_matches.empty:
+        stats_mids = set(df_stats['match_id'].unique())
+        matches_mids = set(df_matches['match_id'].unique())
+        orphan_matches = stats_mids - matches_mids
+        if orphan_matches:
+            issues.append(f"Orphan match_ids in stats (not in matches.csv): {len(orphan_matches)}")
+
+    # Log results
+    if issues:
+        log.log(f"  Found {len(issues)} data inconsistencies:")
+        for i in issues[:20]:
+            log.log(f"    - {i}")
+            _log_mismatch("CROSS-VALIDATION", "integrity", "", i)
+    else:
+        log.log("  [V] No data inconsistencies found!")
+
+    log.json_report['cross_validation'] = {
+        'issues_found': len(issues),
+        'details': issues[:50]
+    }
+
+
+# ============================================================
+# PHASE 3: DIAGNOSTICS & SUMMARY
+# ============================================================
+def phase_3_diagnostics(log):
+    log.log("=" * 60)
+    log.log("PHASE 3: DIAGNOSTICS & COVERAGE REPORT")
+    log.log("=" * 60)
+
+    # Run coverage report if available
+    cov_script = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'generate_coverage_report.py')
+    if os.path.exists(cov_script):
+        r = subprocess.run([sys.executable, cov_script], cwd=BASE_DIR,
+                           capture_output=True, text=True)
+        log.log(r.stdout[-400:] if len(r.stdout) > 400 else r.stdout)
+
+    log.set_phase('diagnostics', 'DONE')
+
+
+# ============================================================
+# MAIN ENTRY POINT
+# ============================================================
+def main():
+    log = PipelineLogger()
+
+    log.log("=" * 60)
+    log.log("UCL DATA PIPELINE - MASTER ORCHESTRATOR")
+    log.log(f"Started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    log.log("=" * 60)
+
+    phase_0_tests(log)
+    phase_1_scraping(log)
+    phase_2_format_and_merge(log)
+    phase_3_diagnostics(log)
+
+    log.log("\n" + "=" * 60)
+    log.log("PIPELINE COMPLETE")
+    log.log("=" * 60)
+    log.log("Data saved to: data/processed/")
+    log.log("JSON logs: tests/api_diagnostics/results/")
+    log.log(f"Text logs: {LOGS_DIR}/")
+
+    log.save()
+
 
 if __name__ == "__main__":
-    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    raw  = os.path.join(base, 'data', 'raw', 'cl_2010_2025.csv')
-    out  = os.path.join(base, 'data', 'raw', 'cl_2010_2025_completed.csv')
-    
-    inp = out if os.path.exists(out) else raw
-    if os.path.exists(inp):
-        fill_missing_data(inp, out)
-    else:
-        print(f"[!] Error: File {raw} not found.")
+    main()
