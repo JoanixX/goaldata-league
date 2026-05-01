@@ -1,19 +1,13 @@
 import unicodedata
 import re
 import pandas as pd
+from formatter import soft_norm as norm_text
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
-def norm_text(s: str) -> str:
-    if not s: return ""
-    s = s.lower()
-    s = unicodedata.normalize('NFKD', s)
-    s = ''.join(c for c in s if not unicodedata.combining(c))
-    s = re.sub(r'[^a-z0-9 ]', ' ', s)
-    return ' '.join(s.split())
-
+# norm_text now uses the centralized soft_norm from formatter.py
 def teams_match(a: str, b: str) -> bool:
     na, nb = norm_text(a), norm_text(b)
     if na == nb or na in nb or nb in na:
