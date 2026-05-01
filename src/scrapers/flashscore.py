@@ -68,11 +68,10 @@ class FlashscoreScraper:
                 visitor = raw_stats.get(f"{fs_name}_visitor")
                 if local and visitor:
                     if "posesion" in our_name:
-                        data["stats"][f"{our_name}_local"] = local
-                        data["stats"][f"{our_name}_visitante"] = visitor
+                        data["stats"]["possession_home"] = local
+                        data["stats"]["possession_away"] = visitor
                     else:
-                        data["stats"][f"{our_name}_local"] = local
-                        data["stats"][f"{our_name}_visitante"] = visitor
-                        data["stats"][our_name] = sum_int(local, visitor)
+                        data["stats"][f"{our_name}_home"] = local
+                        data["stats"][f"{our_name}_away"] = visitor
         
         return data
