@@ -44,64 +44,58 @@ class UEFAScraper:
                 if 1 > best_score: best_score = 1; best = mid
         return best
 
-    def get_officials(self, match_id):
+    def get_match_info(self, match_id):
         result = {}
         try:
             r = requests.get(UEFA_BASE, params={'matchId': match_id}, headers=HEADERS, timeout=12)
             if r.status_code != 200: return result
             data = r.json()
             m = data[0] if isinstance(data, list) and data else {}
+            
+            # Basic info for matches.csv
+            result['stadium'] = m.get('stadium', {}).get('translations', {}).get('name', {}).get('EN', 'Unknown')
+            result['city'] = m.get('stadium', {}).get('translations', {}).get('city', {}).get('EN', 'Unknown')
+            result['country'] = m.get('stadium', {}).get('countryCode', 'Unknown')
+            
             ko = m.get('kickOffTime', {}).get('dateTime', '')
             if ko:
                 t = ko.split('T')[1][:5]
-                result['hora_inicio'] = t
-                h, mn = map(int, t.split(':'))
-                result['hora_fin'] = f"{(h+2)%24:02d}:{mn:02d}"
+                result['start_time'] = t # Not in matches.csv but useful for logs
             
             refs = m.get('referees', [])
-            main_ref, asst_refs = [], []
             for ref in refs:
-                role = ref.get('role', '')
-                trans = ref.get('person', {}).get('translations', {}).get('name', {})
-                # Language priority: ES -> EN -> First available
-                name = trans.get('ES') or trans.get('EN') or (list(trans.values())[0] if trans else None)
-                if not name: continue
-                name = name.strip()
-                if role == 'REFEREE': main_ref.append(name)
-                elif role in ('ASSISTANT_REFEREE_ONE', 'ASSISTANT_REFEREE_TWO'): asst_refs.append(name)
-            if main_ref: result['arbitro_principal'] = main_ref[0]
-            if asst_refs: result['arbitros_linea'] = '; '.join(asst_refs)
+                if ref.get('role') == 'REFEREE':
+                    trans = ref.get('person', {}).get('translations', {}).get('name', {})
+                    name = trans.get('ES') or trans.get('EN') or (list(trans.values())[0] if trans else 'Unknown')
+                    result['referee'] = name.strip()
+                    break
         except Exception: pass
         return result
 
-    def get_lineups(self, match_id, local_name, away_name):
-        result = {}
+    def get_player_stats(self, match_id):
+        """Returns a list of player stats records for the match."""
+        players_data = []
         try:
             r = requests.get(f"{UEFA_BASE}/{match_id}/lineups", headers=HEADERS, timeout=12)
-            if r.status_code != 200: return result
+            if r.status_code != 200: return []
             data = r.json()
-            def _extract_team(team_key, display_name):
+            
+            for team_key in ['homeTeam', 'awayTeam']:
                 team = data.get(team_key, {})
-                starting = team.get('players', [])
-                starters = [p for p in starting if p.get('status') == 'STARTING_LINEUP']
-                if not starters: starters = starting[:11]
-                names = []
-                for p in starters:
+                for p in team.get('players', []):
                     trans = p.get('player', {}).get('translations', {})
-                    # Try shortName then name, with ES -> EN priority
-                    n = trans.get('shortName', {}).get('ES') or trans.get('shortName', {}).get('EN') or \
-                        trans.get('name', {}).get('ES') or trans.get('name', {}).get('EN') or \
-                        (list(trans.get('name', {}).values())[0] if trans.get('name') else None)
-                    if n: names.append(n)
-                lineup = f"{display_name}: {'; '.join(names)}" if names else ''
-                c_trans = team.get('coach', {}).get('person', {}).get('translations', {}).get('name', {})
-                coach = c_trans.get('ES') or c_trans.get('EN') or (list(c_trans.values())[0] if c_trans else None)
-                return lineup, coach
-            home_lineup, home_coach = _extract_team('homeTeam', local_name)
-            away_lineup, away_coach = _extract_team('awayTeam', away_name)
-            parts = [p for p in [home_lineup, away_lineup] if p]
-            if parts: result['planteles'] = ' | '.join(parts)
-            if home_coach: result['entrenador_local'] = home_coach
-            if away_coach: result['entrenador_visitante'] = away_coach
+                    name = trans.get('name', {}).get('EN') or (list(trans.get('name', {}).values())[0] if trans.get('name') else 'Unknown')
+                    
+                    # Basic presence record
+                    p_record = {
+                        'player_name': name,
+                        'team_name': team.get('team', {}).get('translations', {}).get('name', {}).get('EN', 'Unknown'),
+                        'minutes_played': 90 if p.get('status') == 'STARTING_LINEUP' else 0, # Rough estimate
+                        'yellow_cards': 0, # Lineups don't usually have stats but we can initialize
+                        'red_cards': 0,
+                        'goals': 0,
+                        'assists': 0
+                    }
+                    players_data.append(p_record)
         except Exception: pass
-        return result
+        return players_data
