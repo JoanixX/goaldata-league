@@ -34,4 +34,4 @@ explained in `data/processed/metadata/advanced_metric_coverage.csv`.
 For detailed information about each component, refer to the README files in the respective subdirectories.
 
 ## Data Quality Policy
-Rows must come from observed sources. The 1.5M-record requirement is enforced as a gate and must not be met by duplicating or fabricating records. See `docs/DATA_PIPELINE_FLOW.md` and `docs/MISSING_DATA_POLICY.md` for the source discovery, cleaning, imputation, EDA, and ML-readiness flow.
+Rows must come from observed sources. The 1.5M-record requirement is enforced per processed dataset and must not be met by duplicating or fabricating records. See `reports/data_pipeline_flow.md` and `reports/missing_data_policies.md` for the source discovery, cleaning, imputation, EDA, and ML-readiness flow.

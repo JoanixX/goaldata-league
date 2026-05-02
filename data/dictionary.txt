@@ -1,0 +1,59 @@
+Ok, todo bien pero ahora necesito que llenes los otros csv, si hay más de 1.5 millones de datos en goals_event_cleaned entonces los otros csv tienen que tener más datos también. Para poder llenarlo, necesito que tomes en cuenta algunas cosas:
+1. Toma en cuenta todas las ligas posibles de todo el mundo, pero con restricciones y pautas:
+	* NO DEBE DE HABER SEGUNDA DIVISIÓN NI DIVISIONES MÁS BAJAS
+	* Debes de priorizar si o si las ligas más grandes y que estén ubicadas en Europa y sudamerica, aunque obviamente si puedes tomar liga asiática y así también
+	* La línea de tiempo de los datos debe ser de 2004-2005 a 2025-2026
+
+Antes de pasar al siguiente punto, debo de explicarte que para este caso en específico, "Imputación" significa que siempre se debe de buscar la información en Google o hacer scraping o de los datasets que se tienen, en caso aún así hayan nulos, se rellenará con valores al azar con porcentajes de aparición.
+
+2. Hay varias columnas que están vacías en los distintos datasets, te voy a intentar pasar una especie de guía de cómo llenarlos (NO TOQUES DATOS QUE YA ESTÉN LLENOS, ESTO SOLO APLICA A LOS NULOS):
+    * player_id / player_name: identificador único y nombre del jugador. Puede repetirse en múltiples datasets ya que un jugador participa en varios partidos, temporadas y eventos.
+    * match_id / date: identificador del partido y fecha del encuentro. Se repite para agrupar a todos los registros relacionados a ese partido.
+    * team_id / team_name / logo: identificador del equipo, nombre y recurso visual. Se repite porque un equipo participa en múltiples partidos y tiene varios jugadores.
+    * season: temporada en la que se registra el dato. Permite análisis históricos y segmentación temporal.
+    * competition: torneo o competición en la que participa el jugador o equipo. Puede repetirse ya que un mismo actor participa en múltiples competiciones.
+    * stadium: estadio donde se juega el partido.
+    * home_team_id / away_team_id: identificadores de los equipos local y visitante respectivamente.
+    * minutes_played: minutos jugados por partido. Depende de la posición (titulares como GK y DEF tienden a jugar más minutos, delanteros pueden ser sustituidos con mayor frecuencia). Imputación: 5% (1-15 min), 10% (15-45 min), 75% (45-90 min), 10% (90-120 min).
+    * matches_played: cantidad de partidos jugados por jugador en una temporada. Imputación: conteo total de apariciones únicas de match_id.
+    * goals: goles anotados por partido. Depende fuertemente de la posición (FW > MID > DEF > GK). Imputación: 75% (0 goles), 18% (1 gol), 5% (2 goles), 2% (3+ goles), ajustando la probabilidad hacia 0 en defensores y porteros.
+    * assists: asistencias realizadas por partido. Mayor frecuencia en MID y FW, baja en DEF y casi nula en GK. Imputación: 80% (0), 15% (1), 4% (2), 1% (3+).
+    * shots / shots_on_target / shots_off_target / shots_blocked: intentos de gol totales y desglosados. Depende de la posición (FW y MID generan más tiros). Imputación: 40% (0 tiros), 30% (1 tiro), 20% (2 tiros), 10% (3+ tiros). Restricción: shots = shots_on_target + shots_off_target + shots_blocked.
+    * passes_attempted / passes_completed: volumen de pases intentados y completados. MID suele tener mayor volumen, DEF también alto, FW menor. Imputación: 10% (<20), 60% (20-50), 30% (>50).
+    * pass_accuracy: precisión de pases. Imputación: pass_accuracy = passes_completed / passes_attempted. Puede variar según posición (DEF mayor precisión, FW menor).
+    * crosses_attempted / crosses_completed: centros realizados. Más comunes en laterales y extremos. Imputación: 70% (0), 20% (1-3), 10% (4+).
+    * dribbles: regates exitosos. Alta frecuencia en extremos y atacantes, baja en DEF y GK. Imputación: 50% (0), 30% (1-2), 20% (3+).
+    * offsides: veces en fuera de juego. Frecuente en delanteros, raro en defensores. Imputación: 80% (0), 15% (1), 5% (2+).
+    * tackles / tackles_won / tackles_lost: entradas totales y resultado. DEF y MID defensivos tienen mayor frecuencia. Imputación: 40% (0), 40% (1-3), 20% (4+).
+    * interceptions: intercepciones sin disputa directa. Más frecuentes en DEF y MID defensivos. Imputación: 50% (0), 35% (1-3), 15% (4+).
+    * clearances: despejes defensivos. Principalmente en DEF. Imputación: 60% (0), 30% (1-4), 10% (5+).
+    * fouls_committed / fouls_suffered: faltas cometidas y recibidas. DEF comete más, FW recibe más. Imputación: 30% (0), 50% (1-2), 20% (3+).
+    * yellow_cards: tarjetas amarillas. Más probables en DEF y MID defensivos. Imputación: P(YC = fouls_committed / 4 * FactorPosicion). Si es nulo: 85% (0), 14% (1), 1% (2).
+    * red_cards: tarjetas rojas. Más frecuentes en DEF. Imputación: probabilidad 0.0266 si matches_played < 20, 0.0041 si matches_played > 100, 0.0007 si matches_played > 300. Si es nulo: 99% (0), 1% (1).
+    * distance_covered: distancia recorrida en metros. MID suele recorrer más distancia. Imputación: distance_covered = (minutes_played * ConstantePosicion) * FactorEdad. Si es nulo: 1000-4000 (suplentes), 8000-12000 (titulares).
+    * top_speed: velocidad máxima alcanzada. FW y extremos suelen tener mayor velocidad. Imputación: top_speed = BasePosicion - (0.1 * (age - 20)) - (0.05 * (weight_kg - 75)). Rango: 25-36.
+    * touches: número de contactos con el balón. MID tiene mayor volumen. Imputación: touches = passes_attempted * 1.4.
+    * saves: atajadas realizadas por portero. Solo aplica a GK. Imputación: 10% (0), 60% (1-4), 30% (5+).
+    * goals_conceded: goles recibidos por portero. Imputación: 60% (1-3), 20% (4-7), 15% (7-10), 5% (10+).
+    * clean_sheets: partidos sin goles recibidos. Imputación: 1 si goals_conceded = 0, de lo contrario 0.
+    * penalty_saves: penales atajados. Imputación: 95% (0), 5% (1+).
+    * punches: despejes con puños del portero. Imputación: 70% (0), 25% (1-2), 5% (3+).
+    * goal_id: identificador único de gol.
+    * minute: minuto del evento. Imputación: P(min = min / total_min) / minuto de cambio. Imputación: 60% (60-90), 30% (45-60), 10% (1-45) / minuto de tarjeta roja. Imputación: probabilidad creciente conforme avanza el partido.
+    * goal_type: tipo de gol.
+    * assist_player_id: identificador del jugador que asiste. Puede ser nulo si no aplica.
+    * event_type: tipo de evento registrado.
+    * is_penalty / is_own_goal: indicadores booleanos. Imputación: is_penalty = 1 si goal_type corresponde / is_own_goal = 1 si aplica.
+    * country: país del equipo.
+    * nationality: nacionalidad del jugador.
+    * age: edad del jugador.
+    * height_cm: altura del jugador en cm.
+    * weight_kg: peso del jugador en kg.
+    * position: posición en el campo.
+    * data_scope: alcance del dataset o tipo de datos incluidos.
+    * source: fuente de donde se obtuvo el dato.
+
+3. Crea al menos 50 features nuevas en los datasets matches_cleaned, goals_events_cleaned, players_cleaned, player_match_stats_cleaned, player_season_stats_cleaned, goalkeeper_stats_cleaned en base a todos los otros datasets de processed, que por ejemplo nos permitan hacer algo como:
+    - ¿Qué equipos tienen mayor probabilidad de ganar un partido si ambos equipos son de la liga inglesa?
+    - ¿Cuál es la probabilidad de que un jugador de 25 años con 1.80m y 80kg meta un gol de cabeza?
+    - ¿Qué equipos tienen mayor probabilidad de ganar un partido si ambos equipos son de la liga inglesa?

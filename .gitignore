@@ -27,3 +27,4 @@ logs
 
 # csv
 data/processed/*/*.csv
+data/raw/
