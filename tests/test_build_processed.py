@@ -15,6 +15,15 @@ def test_parse_score_and_goal_events():
     assert events[2]["goal_type"] == "own_goal"
 
 
+def test_required_domestic_league_coverage_configuration():
+    assert build_processed.FOOTBALL_DATA_LEAGUES["P1"]["competition"] == "Primeira Liga"
+    assert build_processed.FOOTBALL_DATA_LEAGUES["N1"]["competition"] == "Eredivisie"
+
+
+def test_fbref_top_league_coverage_configuration():
+    assert {"Premier League", "La Liga", "Ligue 1", "Bundesliga", "Serie A"} <= build_processed.TOP_LEAGUE_NAMES
+
+
 def test_frame_enforces_schema_and_deduplicates():
     rows = [
         {"team_id": "team_1", "team_name": "A"},
@@ -34,7 +43,8 @@ def test_parquet_ready_frame_converts_null_markers_to_nullable_types():
     ready = build_processed.parquet_ready_frame("matches", df)
 
     assert pd.isna(ready.loc[1, "home_score"])
-    assert pd.isna(ready.loc[0, "possession_home"])
+    assert ready.loc[0, "possession_home"] == "55%"
+    assert pd.isna(ready.loc[1, "possession_home"])
 
 
 def test_normalize_invalid_missing_values_reclassifies_failed_possession_parse():

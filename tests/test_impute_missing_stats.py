@@ -32,6 +32,7 @@ def test_imputation_preserves_observed_values_and_fills_formulas(tmp_path: Path,
     monkeypatch.setattr(impute_missing_stats, "PLAYERS_PATH", players_path)
     monkeypatch.setattr(impute_missing_stats, "PLAYER_SEASON_PATH", tmp_path / "missing_season_stats.csv")
     monkeypatch.setattr(impute_missing_stats, "MATCHES_PATH", tmp_path / "missing_matches.csv")
+    monkeypatch.setattr(impute_missing_stats, "TOP_LEAGUES_STATS_PATH", tmp_path / "missing_top_leagues.csv")
 
     report = impute_missing_stats.impute_player_match_stats()
     df = pd.read_csv(stats_path, keep_default_na=False)
