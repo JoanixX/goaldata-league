@@ -35,8 +35,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-PLAYER_SEASON_PATH = PROCESSED_DIR / "stats" / "player_season_stats_cleaned.csv"
-PLAYERS_PATH = PROCESSED_DIR / "core" / "players_cleaned.csv"
+PLAYER_SEASON_PATH = PROCESSED_DIR / "stats" / "player_season_stats_cleaned.parquet"
+PLAYERS_PATH = PROCESSED_DIR / "core" / "players_cleaned.parquet"
 FEATURE_MATRIX_PATH = FEATURES_DIR / "player_season_feature_matrix.csv"
 PCA_TRANSFORMED_PATH = ARTIFACTS_DIR / "pca_player_season_2d.csv"
 PCA_VARIANCE_PATH = ARTIFACTS_DIR / "pca_explained_variance.csv"
@@ -131,9 +131,10 @@ def load_player_season_dataset() -> pd.DataFrame:
     if not PLAYER_SEASON_PATH.exists():
         raise FileNotFoundError(f"Missing input: {PLAYER_SEASON_PATH}")
 
-    stats = null_to_na(pd.read_csv(PLAYER_SEASON_PATH, keep_default_na=False))
-    players = null_to_na(pd.read_csv(PLAYERS_PATH, keep_default_na=False)) if PLAYERS_PATH.exists() else pd.DataFrame()
-    stats = to_numeric(stats, BASE_NUMERIC_COLUMNS)
+    # Parquet preserves column dtypes, so no null-string cleanup or manual
+    # to_numeric coercion is needed.
+    stats = pd.read_parquet(PLAYER_SEASON_PATH)
+    players = pd.read_parquet(PLAYERS_PATH) if PLAYERS_PATH.exists() else pd.DataFrame()
 
     if not players.empty:
         player_meta = players[["player_id", "player_name", "position", "nationality", "team_id"]].drop_duplicates("player_id")
@@ -392,7 +393,7 @@ Generated at: `{report['generated_at']}`
 ## Unit of Analysis
 
 The feature matrix uses one row per `player_id` and `season` from
-`data/processed/stats/player_season_stats_cleaned.csv`. This level was chosen
+`data/processed/stats/player_season_stats_cleaned.parquet`. This level was chosen
 because player-season aggregates are denser and more stable than player-match
 rows, which still contain many source-limited `NULL` values for tracking and
 event-detail columns.

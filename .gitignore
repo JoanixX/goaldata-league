@@ -10,6 +10,7 @@ semester_group_assignment_brief.md
 skills/
 Dataset.txt
 matches_test.csv
+.matplotlib-cache
 
 # Entornos
 .venv
