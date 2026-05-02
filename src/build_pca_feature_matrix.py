@@ -12,6 +12,7 @@ import os
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
+from statistics import variance
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
@@ -305,6 +306,22 @@ def plot_pca_2d(transformed: pd.DataFrame) -> None:
     plt.savefig(PCA_PLOT_PATH, dpi=160)
     plt.close()
 
+def plot_variance(variance: pd.DataFrame) -> None:
+    plt.figure(figsize=(8,5))
+    
+    plt.plot(
+    range(1, len(variance) + 1),
+    variance["cumulative_explained_variance"]
+)
+    plt.xticks(range(1, len(variance) + 1))
+
+    plt.title("Cumulative Explained Variance")
+    plt.xlabel("Component")
+    plt.ylabel("Variance")
+    plt.tight_layout()
+
+    plt.savefig(ARTIFACTS_DIR / "pca_cumulative_variance.png")
+    plt.close()
 
 def top_loadings(loadings: pd.DataFrame, component: str, n: int = 8) -> pd.DataFrame:
     temp = loadings[["feature", component]].copy()
@@ -340,6 +357,7 @@ def write_outputs(result: PCAResult) -> None:
     result.variance.to_csv(PCA_VARIANCE_PATH, index=False, encoding="utf-8")
     result.loadings.to_csv(PCA_LOADINGS_PATH, index=False, encoding="utf-8")
     plot_pca_2d(result.transformed)
+    plot_variance(result.variance)
 
     pc1_top = top_loadings(result.loadings, "PC1")
     pc2_top = top_loadings(result.loadings, "PC2")

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:13:38",
+  "generated_at": "2026-05-02T10:36:51",
   "input": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\data\\processed\\stats\\player_season_stats_cleaned.csv",
   "feature_matrix": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\data\\processed\\features\\player_season_feature_matrix.csv",
   "rows": 1458,
