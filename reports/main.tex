@@ -47,7 +47,7 @@
 \maketitle
 
 \begin{abstract}
-This document presents the dataset charter and the first processed version for the sports performance analysis project. The objective is to map the tactical evolution and results of the UEFA Champions League between 2011 and 2025 by integrating data from Open Football with advanced statistics from the ESPN API through data engineering and normalization techniques.
+This document presents the dataset charter and the first processed version for the sports performance analysis project. The objective is to map the tactical evolution and results of the UEFA Champions League between 2011 and 2025 by integrating data from Open Football with advanced statistics from the ESPN API. The project now leverages \textbf{Parquet} for high-performance data handling and implements \textbf{Principal Component Analysis (PCA)} to reduce 33 tactical features into latent embeddings, identifying 19 components that explain 90\% of the statistical variance across 4,065 player-season profiles.
 \end{abstract}
 
 \section{Project Proposal}
@@ -55,7 +55,7 @@ This document presents the dataset charter and the first processed version for t
 The domain is elite European professional football. The central problem is the fragmentation of historical data; although basic results exist, it is difficult to find a consolidated dataset that includes possession metrics and events (goals/cards) in a standardized manner for 14 consecutive seasons. 
 
 \subsection{Expected Product Question}
-"How have possession patterns and shooting effectiveness evolved in the Champions League across decades, and which teams show a dominant centrality in the historical match network?"
+"How have possession patterns and shooting effectiveness evolved in the Champions League across decades, and can we identify distinct tactical 'archetypes' by reducing the dimensionality of 4,000+ player-season performance profiles?"
 
 \subsection{Course Suitability}
 The project is ideal for the course because:
@@ -75,8 +75,8 @@ The project is ideal for the course because:
         Primary Source& Open Football Data (GitHub) / ESPN API\\
         Source URL& \url{https://github.com/openfootball/champions-league}\\
         License& Public Domain / Academic Use\\
-        Original Format& JSON / API Response\\
-        Estimated Size& ~5 MB (Processed V1)\\
+        Original Format& JSON / API Response / Parquet\\
+        Estimated Size& ~12 MB (Processed V1 - Parquet \& CSV)\\
         \bottomrule
     \end{tabular}
     \caption{Data Source Inventory .}
@@ -152,10 +152,9 @@ We calculated the missingness ratio (Fig. \ref{fig:missingness}) to identify col
     \label{fig:missingness}
 \end{figure}
 
-\begin{itemize}
-    \item \textbf{Feature Engineering:} We integrated the \textbf{UEFA Official API} for match officials and \textbf{ESPN Summary API} for statistical events.
+    \item \textbf{Feature Engineering:} We integrated the \textbf{UEFA Official API} for match officials and \textbf{ESPN Summary API} for statistical events. Furthermore, categorical variables (position, age groups) were encoded for PCA.
     \item \textbf{Data Normalization:} \texttt{fecha} was converted to standardized \textit{DD-MM-YYYY} and teams were normalized using a fuzzy-alias mapping system.
-    \item \textbf{Imputation:} Statistical fields were fully backfilled using API discovery; only structural impossibilities (like assist data for older seasons) remain as \textit{NULL}.
+    \item \textbf{Imputation:} Statistical fields were fully backfilled using API discovery. The project migrated to \textbf{Parquet} storage to preserve schema integrity (e.g., Int64/Float64 types) during high-dimensional analysis.
 \end{itemize}
 
 \subsection{Imputation and Normalization}
@@ -193,12 +192,14 @@ As a result of this execution, the processed files were organized within the pro
 
 \section{Technical Execution (Reproducibility)}
 The repository features an automated pipeline. To build the V1 dataset:
-\begin{lstlisting}[language=bash]
-# 1. Install dependencies
+# 1. Install dependencies (requires pyarrow)
 pip install -r requirements.txt
 
 # 2. Execute automated ingestion and enrichment pipeline
 python src/main.py
+
+# 3. Build PCA feature matrix from Parquet stats
+python src/build_pca_feature_matrix.py
 \end{lstlisting}
 
 \section{Technical Architecture (`src`)}
@@ -247,7 +248,7 @@ The primary notebook, \texttt{eda\_explorer.ipynb}, served as the diagnostic fou
     \item \textbf{Initial Sparsity Analysis}: The raw dataset was found to have a sparsity of approximately \textbf{62.64\%}, with critical columns like \textit{arbitro\_principal} and \textit{tiros\_totales} showing near-total nullity.
     \item \textbf{Data Integrity}: Verified that the dataset contains 445 unique rows with \textbf{no duplicated entries}, ensuring a solid baseline for enrichment.
     \item \textbf{Normalization Strategy}: Identified the need to convert \texttt{fecha} from string to \texttt{datetime} objects and to split the \texttt{marcador} into numerical \textit{home\_goals} and \textit{away\_goals}.
-    \item \textbf{Feature Selection}: Decisions were made to drop dispensable columns such as \textit{hora\_inicio} and \textit{hora\_fin} to reduce noise while maintaining 100\% of the match records.
+    \item \textbf{Dimensionality Reduction}: The PCA pipeline identifies that \textbf{19 components} are required to capture 90\% of the variance in the 33-feature space. The first two components (PC1 and PC2) account for approximately \textbf{28.07\%} of the variance, providing a clear visualization of tactical clusters.
 \end{itemize}
 These insights were instrumental in defining the automated ingestion rules now implemented in the core \texttt{src} pipeline.
 

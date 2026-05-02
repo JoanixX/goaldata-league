@@ -15,16 +15,18 @@ The project is organized into modular components:
 - **Extensible Source Ingestion**: Reads structured files, directories, and ZIP archives through `src/source_ingestion.py` for CSV, TSV, Excel, JSON, JSONL, HTML, Parquet, and text inputs while skipping audio/video.
 - **Fuzzy Matching**: Resolves team name inconsistencies across different data providers.
 - **Diagnostic Reporting**: Automated field coverage reports to ensure data integrity.
-- **Quality Gates + Parquet**: Cleaned datasets are written as CSV and Parquet, with a generated `logs/data_quality_report.json` that flags null ratios, formula anomalies, and the 1.5M-record requirement before ML use.
+- **Quality Gates + Parquet**: Cleaned datasets are written as CSV and Parquet formats. Parquet is utilized for high-performance analytical queries and dimensionality reduction (PCA), preserving native data types. A generated `logs/data_quality_report.json` flags null ratios, formula anomalies, and the 1.5M-record requirement before ML use.
+- **Dimensionality Reduction (PCA)**: Automated pipeline to transform multi-dimensional player statistics (4,000+ player-season profiles) into latent tactical embeddings for style-of-play clustering.
 
 ## Quick Start
-1. Install dependencies: `pip install -r requirements.txt`
+1. Install dependencies: `pip install -r requirements.txt` (includes `pyarrow` for Parquet support).
 2. Build cleaned relational datasets: `python script.py`
 3. Impute missing statistical fields without overwriting observed values: `python src/impute_missing_stats.py`
-4. Add documented advanced metrics to processed CSVs: `python src/enrich_advanced_metrics.py`
-5. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
-6. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
-7. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+4. Add documented advanced metrics to processed datasets: `python src/enrich_advanced_metrics.py`
+5. Generate PCA feature matrix and 2D tactical maps: `python src/build_pca_feature_matrix.py`
+6. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
+7. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
+8. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
 
 Advanced metric enrichment writes only to `data/processed`. It does not modify
 `data/raw`. Metrics whose cited methods require missing event locations, shot

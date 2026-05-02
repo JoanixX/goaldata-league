@@ -16,6 +16,8 @@ quality gates.
    `python -m src.eda_report`
 5. Run tests:
    `python -m pytest tests -q`
+6. Build PCA feature matrix and tactical clusters:
+   `python src/build_pca_feature_matrix.py`
 
 The legacy master orchestrator `python src/main.py` was also executed on
 `2026-05-02`. Its pytest quality gate passed, and it now completes without

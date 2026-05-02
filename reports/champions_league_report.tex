@@ -52,8 +52,9 @@ The pipeline is designed to be incremental and robust, merging data from multipl
     \item \textbf{UEFA Official API:} Used for match officials, kickoff times, and official lineups.
     \item \textbf{ESPN Summary API:} Used for granular match statistics (possession, shots, fouls) and event timelines.
     \item \textbf{Candidate enrichment sources:} BALLDONTLIE UCL, football-data.org, openfootball, API-Football, Statorium, and Data Sports Group are tracked as source candidates for missing-field cross-reference. Sources that require credentials or commercial licensing are not used unless access is explicitly available.
-    \item \textbf{Generic file ingestion:} Local source drops can be read from CSV, TSV, Excel, JSON, JSONL, HTML tables, Parquet, ZIP archives, directories, and plain text. Audio and video files are skipped.
-    \item \textbf{Manual Overrides:} A JSON-based cache handles edge cases where automated discovery fails due to team name variations or historical discrepancies.
+    \item \textbf{Generic file ingestion:} Local source drops can be read from CSV, TSV, Excel, JSON, JSONL, HTML tables, Parquet, ZIP archives, directories, and plain text.
+    \item \textbf{Storage Strategy:} The pipeline outputs cleaned datasets in both \textbf{CSV} (for accessibility) and \textbf{Parquet} (for high-dimensional analysis). Parquet is the primary input for the PCA tactical engine.
+    \item \textbf{Manual Overrides:} A JSON-based cache handles edge cases where automated discovery fails due to team name variations.
 \end{itemize}
 
 \subsection{Data Fields}
@@ -88,6 +89,6 @@ Assists & 0.2\% (Limitation) \\
 \end{table}
 
 \section{Conclusion}
-The ingestion pipeline is operational and now writes both CSV and Parquet outputs. The current local data does not yet satisfy the 1.5M-record gate or the 0.25\% null threshold for every column. The next milestone is source expansion and documented imputation, following missing-data literature such as Little and Rubin, van Buuren, SICE, high-dimensional multiple imputation, hot-deck donor pools, and football-specific interpolation/per-90 normalization methods.
+The ingestion pipeline is operational and now writes both CSV and Parquet outputs. The project has expanded to include a \textbf{Principal Component Analysis (PCA)} module that processes 4,065 player-season records across 33 tactical features. The next milestone is source expansion to satisfy the 1.5M-record gate and documented imputation, following missing-data literature such as Little and Rubin, van Buuren, and football-specific per-90 normalization methods.
 
 \end{document}

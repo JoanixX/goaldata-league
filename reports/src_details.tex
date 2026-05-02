@@ -19,3 +19,11 @@ The pipeline implements an automated cascading lookup:
     \item \textbf{Phase 3 (Deep Fallback)}: The FBref scraper is triggered as a final attempt for high-granularity tactical metrics.
     \item \textbf{Phase 4 (Normalization)}: The \texttt{config.py} module resolves naming inconsistencies using a fuzzy-alias mapping system.
 \end{enumerate}
+
+\subsection{Dimensionality Reduction Module (`src/build_pca_feature_matrix.py`)}
+A new analytical layer has been added to process seasonal statistics:
+\begin{itemize}
+    \item \textbf{Input Processing}: Loads \textbf{Parquet} datasets for players and seasonal stats, merging 4,065 records.
+    \item \textbf{Feature Matrix}: Performs One-Hot Encoding on categorical attributes (positions, age groups) and scales 33 numerical features using \texttt{StandardScaler}.
+    \item \textbf{PCA Execution}: Identifies 19 principal components to reach a 90\% variance threshold. Outputs a compressed feature matrix (\texttt{player\_season\_feature\_matrix.csv}) and tactical cluster visualizations.
+\end{itemize}

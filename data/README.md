@@ -194,17 +194,25 @@ data/
 ├───processed
 │   ├───core
 │   │       matches_cleaned.csv
+│   │       matches_cleaned.parquet
 │   │       players_cleaned.csv
+│   │       players_cleaned.parquet
 │   │       teams_cleaned.csv
+│   │       teams_cleaned.parquet
 │   │
 │   ├───events
 │   │       goals_events_cleaned.csv
+│   │       goals_events_cleaned.parquet
 │   │
 │   └───stats
 │           goalkeeper_stats_cleaned.csv
+│           goalkeeper_stats_cleaned.parquet
 │           player_match_stats_cleaned.csv
+│           player_match_stats_cleaned.parquet
 │           player_season_stats_cleaned.csv
+│           player_season_stats_cleaned.parquet
 └───raw
+```
     │   cl_2010_2025.csv
     │   cl_2010_2025_completed.csv
     │   2021-2022 Football Player Stats.csv
