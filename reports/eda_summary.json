@@ -1,0 +1,322 @@
+{
+  "generated_at": "2026-05-02T09:19:28",
+  "datasets": {
+    "matches": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\matches_cleaned.parquet",
+      "rows": 169964,
+      "columns": 16,
+      "failing_columns": [
+        "stadium",
+        "city",
+        "country",
+        "referee",
+        "possession_home",
+        "possession_away"
+      ],
+      "numeric_summary": {
+        "home_score": {
+          "count": 169962,
+          "mean": 1.4801,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "away_score": {
+          "count": 169962,
+          "mean": 1.158,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 13.0
+        },
+        "possession_home": {
+          "count": 441,
+          "mean": 0.5058,
+          "median": 0.51,
+          "min": 0.21,
+          "max": 0.82
+        },
+        "possession_away": {
+          "count": 441,
+          "mean": 0.4939,
+          "median": 0.49,
+          "min": 0.18,
+          "max": 0.79
+        }
+      }
+    },
+    "players": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\players_cleaned.parquet",
+      "rows": 6109,
+      "columns": 8,
+      "failing_columns": [
+        "nationality",
+        "age",
+        "height_cm",
+        "weight_kg",
+        "position"
+      ],
+      "numeric_summary": {
+        "age": {
+          "count": 2508,
+          "mean": 25.116,
+          "median": 25.0,
+          "min": 16.0,
+          "max": 41.0
+        },
+        "height_cm": {
+          "count": 1303,
+          "mean": 182.6186,
+          "median": 183.0,
+          "min": 162.0,
+          "max": 202.0
+        },
+        "weight_kg": {
+          "count": 1149,
+          "mean": 75.5875,
+          "median": 75.0,
+          "min": 54.0,
+          "max": 101.0
+        }
+      }
+    },
+    "teams": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\teams_cleaned.parquet",
+      "rows": 831,
+      "columns": 4,
+      "failing_columns": [
+        "country",
+        "logo"
+      ],
+      "numeric_summary": {}
+    },
+    "goals": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\events\\goals_events_cleaned.parquet",
+      "rows": 3506,
+      "columns": 10,
+      "failing_columns": [
+        "goal_type",
+        "assist_player_id",
+        "player_name"
+      ],
+      "numeric_summary": {
+        "minute": {
+          "count": 3506,
+          "mean": 50.5864,
+          "median": 53.0,
+          "min": 0.0,
+          "max": 120.0
+        },
+        "is_penalty": {
+          "count": 3506,
+          "mean": 0.0639,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_own_goal": {
+          "count": 3506,
+          "mean": 0.0203,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      }
+    },
+    "gk": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\goalkeeper_stats_cleaned.parquet",
+      "rows": 960,
+      "columns": 7,
+      "failing_columns": [
+        "saves",
+        "goals_conceded",
+        "clean_sheets",
+        "penalty_saves",
+        "punches"
+      ],
+      "numeric_summary": {
+        "saves": {
+          "count": 779,
+          "mean": 1.5109,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 61.0
+        },
+        "goals_conceded": {
+          "count": 779,
+          "mean": 0.7702,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 20.0
+        },
+        "clean_sheets": {
+          "count": 779,
+          "mean": 1.285,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 5.0
+        },
+        "penalty_saves": {
+          "count": 779,
+          "mean": 0.0167,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "punches": {
+          "count": 779,
+          "mean": 0.2465,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 12.0
+        }
+      }
+    },
+    "match_stats": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\player_match_stats_cleaned.parquet",
+      "rows": 9678,
+      "columns": 29,
+      "failing_columns": [
+        "minutes_played",
+        "goals",
+        "assists",
+        "shots",
+        "shots_on_target",
+        "shots_off_target",
+        "shots_blocked",
+        "passes_completed",
+        "passes_attempted",
+        "pass_accuracy",
+        "crosses_completed",
+        "crosses_attempted",
+        "dribbles",
+        "offsides",
+        "tackles",
+        "tackles_won",
+        "tackles_lost",
+        "interceptions",
+        "clearances",
+        "fouls_committed",
+        "fouls_suffered",
+        "yellow_cards",
+        "red_cards",
+        "distance_covered",
+        "top_speed",
+        "touches"
+      ],
+      "numeric_summary": {}
+    },
+    "season_stats": {
+      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
+      "rows": 4246,
+      "columns": 15,
+      "failing_columns": [
+        "matches_played",
+        "minutes_played",
+        "goals",
+        "assists",
+        "shots",
+        "shots_on_target",
+        "passes_completed",
+        "passes_attempted",
+        "tackles",
+        "interceptions",
+        "fouls_committed",
+        "yellow_cards",
+        "red_cards"
+      ],
+      "numeric_summary": {
+        "matches_played": {
+          "count": 4064,
+          "mean": 13.5736,
+          "median": 8.0,
+          "min": 1.0,
+          "max": 38.0
+        },
+        "minutes_played": {
+          "count": 4064,
+          "mean": 889.8438,
+          "median": 450.0,
+          "min": 1.0,
+          "max": 3420.0
+        },
+        "goals": {
+          "count": 4064,
+          "mean": 0.2078,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 15.0
+        },
+        "assists": {
+          "count": 4064,
+          "mean": 0.1642,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "shots": {
+          "count": 3885,
+          "mean": 2.0632,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 45.0
+        },
+        "shots_on_target": {
+          "count": 3885,
+          "mean": 0.7014,
+          "median": 0.18,
+          "min": 0.0,
+          "max": 23.0
+        },
+        "passes_completed": {
+          "count": 3937,
+          "mean": 61.9868,
+          "median": 36.0,
+          "min": 0.0,
+          "max": 760.0
+        },
+        "passes_attempted": {
+          "count": 3937,
+          "mean": 74.5897,
+          "median": 45.8,
+          "min": 0.0,
+          "max": 814.0
+        },
+        "tackles": {
+          "count": 3956,
+          "mean": 2.3439,
+          "median": 1.73,
+          "min": 0.0,
+          "max": 35.0
+        },
+        "interceptions": {
+          "count": 3956,
+          "mean": 4.8189,
+          "median": 1.73,
+          "min": 0.0,
+          "max": 76.0
+        },
+        "fouls_committed": {
+          "count": 3915,
+          "mean": 2.0703,
+          "median": 1.41,
+          "min": 0.0,
+          "max": 23.0
+        },
+        "yellow_cards": {
+          "count": 4096,
+          "mean": 0.2203,
+          "median": 0.05,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "red_cards": {
+          "count": 4096,
+          "mean": 0.1269,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 4.0
+        }
+      }
+    }
+  }
+}

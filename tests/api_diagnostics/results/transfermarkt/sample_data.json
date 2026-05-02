@@ -1,42 +1,42 @@
 [
   {
     "player_name": "Guaita",
-    "birth_date": "NULL",
-    "height_cm": "NULL",
-    "position": "NULL",
-    "nationality": "NULL",
-    "birth_place": "NULL"
+    "birth_date": "15/07/1910",
+    "height_cm": 172,
+    "position": "Extremo derecho",
+    "nationality": "Argentina",
+    "birth_place": "Lucas"
   },
   {
     "player_name": "Ricardo Costa",
-    "birth_date": "NULL",
-    "height_cm": "NULL",
-    "position": "NULL",
-    "nationality": "NULL",
-    "birth_place": "NULL"
+    "birth_date": "16/05/1981",
+    "height_cm": 184,
+    "position": "Defensa central",
+    "nationality": "Portugal",
+    "birth_place": "Vila Nova de Gaia"
   },
   {
     "player_name": "Mathieu",
-    "birth_date": "NULL",
-    "height_cm": "NULL",
-    "position": "NULL",
-    "nationality": "NULL",
-    "birth_place": "NULL"
+    "birth_date": "29/10/1983",
+    "height_cm": 189,
+    "position": "Lateral izquierdo",
+    "nationality": "Francia",
+    "birth_place": "Luxeuil-les-Bains"
   },
   {
     "player_name": "Miguel",
-    "birth_date": "NULL",
-    "height_cm": "NULL",
-    "position": "NULL",
-    "nationality": "NULL",
-    "birth_place": "NULL"
+    "birth_date": "08/09/1994",
+    "height_cm": 179,
+    "position": "Mediocentro ofensivo",
+    "nationality": "Portugal",
+    "birth_place": "Maia"
   },
   {
     "player_name": "Mehmet Topal",
-    "birth_date": "NULL",
-    "height_cm": "NULL",
-    "position": "NULL",
-    "nationality": "NULL",
-    "birth_place": "NULL"
+    "birth_date": "03/03/1986",
+    "height_cm": 187,
+    "position": "Pivote",
+    "nationality": "Turquía",
+    "birth_place": "Malatya"
   }
 ]
