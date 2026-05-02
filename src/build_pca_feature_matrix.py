@@ -37,7 +37,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 PLAYER_SEASON_PATH = PROCESSED_DIR / "stats" / "player_season_stats_cleaned.parquet"
 PLAYERS_PATH = PROCESSED_DIR / "core" / "players_cleaned.parquet"
-FEATURE_MATRIX_PATH = FEATURES_DIR / "player_season_feature_matrix.csv"
+FEATURE_MATRIX_PATH = PROCESSED_DIR / "player_season_feature_matrix.csv"
 PCA_TRANSFORMED_PATH = ARTIFACTS_DIR / "pca_player_season_2d.csv"
 PCA_VARIANCE_PATH = ARTIFACTS_DIR / "pca_explained_variance.csv"
 PCA_LOADINGS_PATH = ARTIFACTS_DIR / "pca_component_loadings.csv"

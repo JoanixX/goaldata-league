@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-02T12:23:11",
   "input": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
-  "feature_matrix": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\features\\player_season_feature_matrix.csv",
+  "feature_matrix": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\player_season_feature_matrix.csv",
   "rows": 4065,
   "numeric_columns": [
     "matches_played",
