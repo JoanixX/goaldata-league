@@ -1,13 +1,14 @@
 import requests
 import os
 import json
-from scrapers.utils import HEADERS, norm_text, date_to_iso
+from scrapers.utils import HEADERS, norm_text, date_to_iso, get_scraper_logger
 
 UEFA_BASE = 'https://match.uefa.com/v5/matches'
 
 class UEFAScraper:
     def __init__(self, index_path=None):
         self.index = {}
+        self.logger = get_scraper_logger("uefa")
         if index_path and os.path.exists(index_path):
             self._load_index(index_path)
 
@@ -42,13 +43,20 @@ class UEFAScraper:
                 if 2 > best_score: best_score = 2; best = mid
             elif _any_match(local_forms, nat) and _any_match(away_forms, nht):
                 if 1 > best_score: best_score = 1; best = mid
+        if not best:
+            self.logger.info("match_id_not_found date=%s local=%s away=%s", date_csv, local, away)
         return best
 
     def get_match_info(self, match_id):
         result = {}
+        if not match_id:
+            self.logger.warning("get_match_info skipped empty match_id")
+            return result
         try:
             r = requests.get(UEFA_BASE, params={'matchId': match_id}, headers=HEADERS, timeout=12)
-            if r.status_code != 200: return result
+            if r.status_code != 200:
+                self.logger.warning("match_info_http_error match_id=%s status=%s", match_id, r.status_code)
+                return result
             data = r.json()
             m = data[0] if isinstance(data, list) and data else {}
             
@@ -69,15 +77,24 @@ class UEFAScraper:
                     name = trans.get('ES') or trans.get('EN') or (list(trans.values())[0] if trans else 'Unknown')
                     result['referee'] = name.strip()
                     break
-        except Exception: pass
+            self.logger.info("match_info_ok match_id=%s fields=%s", match_id, sorted(result.keys()))
+        except requests.RequestException:
+            self.logger.exception("match_info_request_failed match_id=%s", match_id)
+        except (ValueError, KeyError, TypeError):
+            self.logger.exception("match_info_parse_failed match_id=%s", match_id)
         return result
 
     def get_player_stats(self, match_id):
         """Returns a list of player stats records for the match."""
         players_data = []
+        if not match_id:
+            self.logger.warning("get_player_stats skipped empty match_id")
+            return players_data
         try:
             r = requests.get(f"{UEFA_BASE}/{match_id}/lineups", headers=HEADERS, timeout=12)
-            if r.status_code != 200: return []
+            if r.status_code != 200:
+                self.logger.warning("lineups_http_error match_id=%s status=%s", match_id, r.status_code)
+                return []
             data = r.json()
             
             for team_key in ['homeTeam', 'awayTeam']:
@@ -97,5 +114,9 @@ class UEFAScraper:
                         'assists': 0
                     }
                     players_data.append(p_record)
-        except Exception: pass
+            self.logger.info("lineups_ok match_id=%s players=%s", match_id, len(players_data))
+        except requests.RequestException:
+            self.logger.exception("lineups_request_failed match_id=%s", match_id)
+        except (ValueError, KeyError, TypeError):
+            self.logger.exception("lineups_parse_failed match_id=%s", match_id)
         return players_data
