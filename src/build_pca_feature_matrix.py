@@ -16,7 +16,7 @@ from statistics import variance
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
-FEATURES_DIR = PROCESSED_DIR / "features"
+FEATURES_DIR = BASE_DIR / "data" / "features"
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 REPORTS_DIR = BASE_DIR / "reports"
 
@@ -37,7 +37,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 PLAYER_SEASON_PATH = PROCESSED_DIR / "stats" / "player_season_stats_cleaned.parquet"
 PLAYERS_PATH = PROCESSED_DIR / "core" / "players_cleaned.parquet"
-FEATURE_MATRIX_PATH = PROCESSED_DIR / "player_season_feature_matrix.csv"
+FEATURE_MATRIX_PATH = FEATURES_DIR / "player_season_feature_matrix.csv"
 PCA_TRANSFORMED_PATH = ARTIFACTS_DIR / "pca_player_season_2d.csv"
 PCA_VARIANCE_PATH = ARTIFACTS_DIR / "pca_explained_variance.csv"
 PCA_LOADINGS_PATH = ARTIFACTS_DIR / "pca_component_loadings.csv"
@@ -315,6 +315,8 @@ def plot_variance(variance: pd.DataFrame) -> None:
     variance["cumulative_explained_variance"]
 )
     plt.xticks(range(1, len(variance) + 1))
+    plt.axhline(y=0.9, linestyle="--")
+    plt.xticks(rotation=90)
 
     plt.title("Cumulative Explained Variance")
     plt.xlabel("Component")
