@@ -28,6 +28,25 @@ def test_frame_enforces_schema_and_deduplicates():
     assert df.iloc[0]["country"] == "NULL"
 
 
+def test_parquet_ready_frame_converts_null_markers_to_nullable_types():
+    df = pd.DataFrame({"home_score": [1, "NULL"], "possession_home": ["55%", "NULL"]})
+
+    ready = build_processed.parquet_ready_frame("matches", df)
+
+    assert pd.isna(ready.loc[1, "home_score"])
+    assert pd.isna(ready.loc[0, "possession_home"])
+
+
+def test_normalize_invalid_missing_values_reclassifies_failed_possession_parse():
+    df = pd.DataFrame({"possession_home": [0.0, 0.55], "possession_away": [0.0, 0.45]})
+
+    cleaned = build_processed.normalize_invalid_missing_values(df)
+
+    assert cleaned.loc[0, "possession_home"] == "NULL"
+    assert cleaned.loc[0, "possession_away"] == "NULL"
+    assert cleaned.loc[1, "possession_home"] == 0.55
+
+
 def test_write_outputs_creates_cleaned_structure(tmp_path: Path, monkeypatch):
     outputs = {
         "matches": pd.DataFrame(columns=build_processed.MATCH_COLUMNS),
@@ -56,4 +75,7 @@ def test_write_outputs_creates_cleaned_structure(tmp_path: Path, monkeypatch):
     report = build_processed.write_outputs(outputs)
 
     assert (tmp_path / "processed" / "core" / "matches_cleaned.csv").exists()
+    assert (tmp_path / "processed" / "core" / "matches_cleaned.parquet").exists()
+    assert (tmp_path / "logs" / "data_quality_report.json").exists()
     assert report["outputs"]["matches"]["rows"] == 0
+    assert report["outputs"]["matches"]["parquet_path"].endswith(".parquet")
