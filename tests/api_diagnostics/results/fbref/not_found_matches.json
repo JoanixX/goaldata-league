@@ -1,1782 +1,4758 @@
 [
   {
-    "match": "bddfcdfa742c vs 09231e49e8f9",
+    "match": "team_e45c3160715a vs team_b72cd3ffa1d1",
     "date": "15-02-2011"
   },
   {
-    "match": "09231e49e8f9 vs bddfcdfa742c",
+    "match": "team_b72cd3ffa1d1 vs team_e45c3160715a",
     "date": "09-03-2011"
   },
   {
-    "match": "088d5f86b6f2 vs 6edafb11d82f",
+    "match": "team_3ce98d8f2aba vs team_5e0fb1614a5f",
     "date": "16-02-2011"
   },
   {
-    "match": "6edafb11d82f vs 088d5f86b6f2",
+    "match": "team_5e0fb1614a5f vs team_3ce98d8f2aba",
     "date": "09-03-2011"
   },
   {
-    "match": "4fc9baf21034 vs 550d05ab240e",
+    "match": "team_1c5442c0461e vs team_dea56e47f1c6",
     "date": "15-02-2011"
   },
   {
-    "match": "550d05ab240e vs 4fc9baf21034",
+    "match": "team_dea56e47f1c6 vs team_1c5442c0461e",
     "date": "08-03-2011"
   },
   {
-    "match": "e82fd46b0550 vs 0fe76b7fe2ce",
+    "match": "team_2e92d188dbdb vs team_c8257652cf16",
     "date": "16-02-2011"
   },
   {
-    "match": "0fe76b7fe2ce vs e82fd46b0550",
+    "match": "team_c8257652cf16 vs team_2e92d188dbdb",
     "date": "08-03-2011"
   },
   {
-    "match": "db41658ae019 vs 240dd2121e44",
+    "match": "team_7ec8336709bf vs team_005131c0e2cb",
     "date": "22-02-2011"
   },
   {
-    "match": "240dd2121e44 vs db41658ae019",
+    "match": "team_005131c0e2cb vs team_7ec8336709bf",
     "date": "15-03-2011"
   },
   {
-    "match": "8377de0f1845 vs 9ff48521032a",
+    "match": "team_6a5b4d7eaece vs team_2cd2088171b7",
     "date": "23-02-2011"
   },
   {
-    "match": "9ff48521032a vs 8377de0f1845",
+    "match": "team_2cd2088171b7 vs team_6a5b4d7eaece",
     "date": "15-03-2011"
   },
   {
-    "match": "2da3c827ccab vs 8056df088208",
+    "match": "team_12fff1be2f11 vs team_91cb315a6405",
     "date": "22-02-2011"
   },
   {
-    "match": "8056df088208 vs 2da3c827ccab",
+    "match": "team_91cb315a6405 vs team_12fff1be2f11",
     "date": "16-03-2011"
   },
   {
-    "match": "debecab907cc vs 93330b415214",
+    "match": "team_10b53d95e2d3 vs team_bd172eeb9d96",
     "date": "23-02-2011"
   },
   {
-    "match": "93330b415214 vs debecab907cc",
+    "match": "team_bd172eeb9d96 vs team_10b53d95e2d3",
     "date": "16-03-2011"
   },
   {
-    "match": "93330b415214 vs 6edafb11d82f",
+    "match": "team_bd172eeb9d96 vs team_5e0fb1614a5f",
     "date": "05-04-2011"
   },
   {
-    "match": "6edafb11d82f vs 93330b415214",
+    "match": "team_5e0fb1614a5f vs team_bd172eeb9d96",
     "date": "13-04-2011"
   },
   {
-    "match": "db41658ae019 vs 09231e49e8f9",
+    "match": "team_7ec8336709bf vs team_b72cd3ffa1d1",
     "date": "05-04-2011"
   },
   {
-    "match": "09231e49e8f9 vs db41658ae019",
+    "match": "team_b72cd3ffa1d1 vs team_7ec8336709bf",
     "date": "13-04-2011"
   },
   {
-    "match": "550d05ab240e vs 0fe76b7fe2ce",
+    "match": "team_dea56e47f1c6 vs team_c8257652cf16",
     "date": "06-04-2011"
   },
   {
-    "match": "0fe76b7fe2ce vs 550d05ab240e",
+    "match": "team_c8257652cf16 vs team_dea56e47f1c6",
     "date": "12-04-2011"
   },
   {
-    "match": "8056df088208 vs 9ff48521032a",
+    "match": "team_91cb315a6405 vs team_2cd2088171b7",
     "date": "06-04-2011"
   },
   {
-    "match": "9ff48521032a vs 8056df088208",
+    "match": "team_2cd2088171b7 vs team_91cb315a6405",
     "date": "12-04-2011"
   },
   {
-    "match": "93330b415214 vs 550d05ab240e",
+    "match": "team_bd172eeb9d96 vs team_dea56e47f1c6",
     "date": "26-04-2011"
   },
   {
-    "match": "550d05ab240e vs 93330b415214",
+    "match": "team_dea56e47f1c6 vs team_bd172eeb9d96",
     "date": "03-05-2011"
   },
   {
-    "match": "09231e49e8f9 vs 9ff48521032a",
+    "match": "team_b72cd3ffa1d1 vs team_2cd2088171b7",
     "date": "26-04-2011"
   },
   {
-    "match": "9ff48521032a vs 09231e49e8f9",
+    "match": "team_2cd2088171b7 vs team_b72cd3ffa1d1",
     "date": "04-05-2011"
   },
   {
-    "match": "550d05ab240e vs 9ff48521032a",
+    "match": "team_dea56e47f1c6 vs team_2cd2088171b7",
     "date": "28-05-2011"
   },
   {
-    "match": "e1e2b54b5c32 vs 550d05ab240e",
+    "match": "team_099f7fbab1ee vs team_dea56e47f1c6",
     "date": "14-02-2012"
   },
   {
-    "match": "550d05ab240e vs e1e2b54b5c32",
+    "match": "team_dea56e47f1c6 vs team_099f7fbab1ee",
     "date": "07-03-2012"
   },
   {
-    "match": "088d5f86b6f2 vs 4fc9baf21034",
+    "match": "team_3ce98d8f2aba vs team_1c5442c0461e",
     "date": "15-02-2012"
   },
   {
-    "match": "4fc9baf21034 vs 088d5f86b6f2",
+    "match": "team_1c5442c0461e vs team_3ce98d8f2aba",
     "date": "06-03-2012"
   },
   {
-    "match": "debecab907cc vs 780e35ea5cda",
+    "match": "team_10b53d95e2d3 vs team_a617f924ca75",
     "date": "14-02-2012"
   },
   {
-    "match": "780e35ea5cda vs debecab907cc",
+    "match": "team_a617f924ca75 vs team_10b53d95e2d3",
     "date": "07-03-2012"
   },
   {
-    "match": "479bf0803cf7 vs e4bbc3bef62e",
+    "match": "team_d1a8e0ed2ef9 vs team_41d823ab960e",
     "date": "15-02-2012"
   },
   {
-    "match": "e4bbc3bef62e vs 479bf0803cf7",
+    "match": "team_41d823ab960e vs team_d1a8e0ed2ef9",
     "date": "06-03-2012"
   },
   {
-    "match": "8d7f8b2497f7 vs 93330b415214",
+    "match": "team_6e1e0ff9b9b5 vs team_bd172eeb9d96",
     "date": "21-02-2012"
   },
   {
-    "match": "93330b415214 vs 8d7f8b2497f7",
+    "match": "team_bd172eeb9d96 vs team_6e1e0ff9b9b5",
     "date": "14-03-2012"
   },
   {
-    "match": "c600c031a1ea vs 8056df088208",
+    "match": "team_81bd8fe38f89 vs team_91cb315a6405",
     "date": "21-02-2012"
   },
   {
-    "match": "8056df088208 vs c600c031a1ea",
+    "match": "team_91cb315a6405 vs team_81bd8fe38f89",
     "date": "14-03-2012"
   },
   {
-    "match": "8377de0f1845 vs db41658ae019",
+    "match": "team_6a5b4d7eaece vs team_7ec8336709bf",
     "date": "22-02-2012"
   },
   {
-    "match": "db41658ae019 vs 8377de0f1845",
+    "match": "team_7ec8336709bf vs team_6a5b4d7eaece",
     "date": "13-03-2012"
   },
   {
-    "match": "aea93afdf4be vs 240dd2121e44",
+    "match": "team_7aaf6c53e9fe vs team_005131c0e2cb",
     "date": "22-02-2012"
   },
   {
-    "match": "240dd2121e44 vs aea93afdf4be",
+    "match": "team_005131c0e2cb vs team_7aaf6c53e9fe",
     "date": "13-03-2012"
   },
   {
-    "match": "780e35ea5cda vs 93330b415214",
+    "match": "team_a617f924ca75 vs team_bd172eeb9d96",
     "date": "27-03-2012"
   },
   {
-    "match": "93330b415214 vs 780e35ea5cda",
+    "match": "team_bd172eeb9d96 vs team_a617f924ca75",
     "date": "04-04-2012"
   },
   {
-    "match": "e4bbc3bef62e vs 8056df088208",
+    "match": "team_41d823ab960e vs team_91cb315a6405",
     "date": "27-03-2012"
   },
   {
-    "match": "8056df088208 vs e4bbc3bef62e",
+    "match": "team_91cb315a6405 vs team_41d823ab960e",
     "date": "04-04-2012"
   },
   {
-    "match": "088d5f86b6f2 vs 550d05ab240e",
+    "match": "team_3ce98d8f2aba vs team_dea56e47f1c6",
     "date": "28-03-2012"
   },
   {
-    "match": "550d05ab240e vs 088d5f86b6f2",
+    "match": "team_dea56e47f1c6 vs team_3ce98d8f2aba",
     "date": "03-04-2012"
   },
   {
-    "match": "8377de0f1845 vs 240dd2121e44",
+    "match": "team_6a5b4d7eaece vs team_005131c0e2cb",
     "date": "28-03-2012"
   },
   {
-    "match": "240dd2121e44 vs 8377de0f1845",
+    "match": "team_005131c0e2cb vs team_6a5b4d7eaece",
     "date": "03-04-2012"
   },
   {
-    "match": "240dd2121e44 vs 93330b415214",
+    "match": "team_005131c0e2cb vs team_bd172eeb9d96",
     "date": "17-04-2012"
   },
   {
-    "match": "93330b415214 vs 240dd2121e44",
+    "match": "team_bd172eeb9d96 vs team_005131c0e2cb",
     "date": "25-04-2012"
   },
   {
-    "match": "8056df088208 vs 550d05ab240e",
+    "match": "team_91cb315a6405 vs team_dea56e47f1c6",
     "date": "18-04-2012"
   },
   {
-    "match": "550d05ab240e vs 8056df088208",
+    "match": "team_dea56e47f1c6 vs team_91cb315a6405",
     "date": "24-04-2012"
   },
   {
-    "match": "240dd2121e44 vs 8056df088208",
+    "match": "team_005131c0e2cb vs team_91cb315a6405",
     "date": "19-05-2012"
   },
   {
-    "match": "84f918364fcc vs fdb4b66db097",
+    "match": "team_1d01384154bc vs team_b89dc80fb627",
     "date": "12-02-2013"
   },
   {
-    "match": "fdb4b66db097 vs 84f918364fcc",
+    "match": "team_b89dc80fb627 vs team_1d01384154bc",
     "date": "06-03-2013"
   },
   {
-    "match": "bddfcdfa742c vs bdec8a408440",
+    "match": "team_e45c3160715a vs team_268fb4595b07",
     "date": "12-02-2013"
   },
   {
-    "match": "bdec8a408440 vs bddfcdfa742c",
+    "match": "team_268fb4595b07 vs team_e45c3160715a",
     "date": "06-03-2013"
   },
   {
-    "match": "93330b415214 vs 9ff48521032a",
+    "match": "team_bd172eeb9d96 vs team_2cd2088171b7",
     "date": "13-02-2013"
   },
   {
-    "match": "9ff48521032a vs 93330b415214",
+    "match": "team_2cd2088171b7 vs team_bd172eeb9d96",
     "date": "05-03-2013"
   },
   {
-    "match": "0fe76b7fe2ce vs 9457f1ba26ee",
+    "match": "team_c8257652cf16 vs team_97ee5474801c",
     "date": "13-02-2013"
   },
   {
-    "match": "9457f1ba26ee vs 0fe76b7fe2ce",
+    "match": "team_97ee5474801c vs team_c8257652cf16",
     "date": "12-03-2013"
   },
   {
-    "match": "8493f398f200 vs c555476e6381",
+    "match": "team_71d6c631e36a vs team_3292248cf512",
     "date": "19-02-2013"
   },
   {
-    "match": "c555476e6381 vs 8493f398f200",
+    "match": "team_3292248cf512 vs team_71d6c631e36a",
     "date": "13-03-2013"
   },
   {
-    "match": "4fc9baf21034 vs 240dd2121e44",
+    "match": "team_1c5442c0461e vs team_005131c0e2cb",
     "date": "19-02-2013"
   },
   {
-    "match": "240dd2121e44 vs 4fc9baf21034",
+    "match": "team_005131c0e2cb vs team_1c5442c0461e",
     "date": "13-03-2013"
   },
   {
-    "match": "088d5f86b6f2 vs 550d05ab240e",
+    "match": "team_3ce98d8f2aba vs team_dea56e47f1c6",
     "date": "20-02-2013"
   },
   {
-    "match": "550d05ab240e vs 088d5f86b6f2",
+    "match": "team_dea56e47f1c6 vs team_3ce98d8f2aba",
     "date": "12-03-2013"
   },
   {
-    "match": "bd35d091e000 vs 09231e49e8f9",
+    "match": "team_c6728117c52b vs team_b72cd3ffa1d1",
     "date": "20-02-2013"
   },
   {
-    "match": "09231e49e8f9 vs bd35d091e000",
+    "match": "team_b72cd3ffa1d1 vs team_c6728117c52b",
     "date": "12-03-2013"
   },
   {
-    "match": "bdec8a408440 vs 550d05ab240e",
+    "match": "team_268fb4595b07 vs team_dea56e47f1c6",
     "date": "02-04-2013"
   },
   {
-    "match": "550d05ab240e vs bdec8a408440",
+    "match": "team_dea56e47f1c6 vs team_268fb4595b07",
     "date": "10-04-2013"
   },
   {
-    "match": "240dd2121e44 vs fdb4b66db097",
+    "match": "team_005131c0e2cb vs team_b89dc80fb627",
     "date": "02-04-2013"
   },
   {
-    "match": "fdb4b66db097 vs 240dd2121e44",
+    "match": "team_b89dc80fb627 vs team_005131c0e2cb",
     "date": "10-04-2013"
   },
   {
-    "match": "c555476e6381 vs 9457f1ba26ee",
+    "match": "team_3292248cf512 vs team_97ee5474801c",
     "date": "03-04-2013"
   },
   {
-    "match": "9457f1ba26ee vs c555476e6381",
+    "match": "team_97ee5474801c vs team_3292248cf512",
     "date": "09-04-2013"
   },
   {
-    "match": "93330b415214 vs bd35d091e000",
+    "match": "team_bd172eeb9d96 vs team_c6728117c52b",
     "date": "03-04-2013"
   },
   {
-    "match": "bd35d091e000 vs 93330b415214",
+    "match": "team_c6728117c52b vs team_bd172eeb9d96",
     "date": "09-04-2013"
   },
   {
-    "match": "240dd2121e44 vs 550d05ab240e",
+    "match": "team_005131c0e2cb vs team_dea56e47f1c6",
     "date": "23-04-2013"
   },
   {
-    "match": "550d05ab240e vs 240dd2121e44",
+    "match": "team_dea56e47f1c6 vs team_005131c0e2cb",
     "date": "01-05-2013"
   },
   {
-    "match": "9457f1ba26ee vs 93330b415214",
+    "match": "team_97ee5474801c vs team_bd172eeb9d96",
     "date": "24-04-2013"
   },
   {
-    "match": "93330b415214 vs 9457f1ba26ee",
+    "match": "team_bd172eeb9d96 vs team_97ee5474801c",
     "date": "30-04-2013"
   },
   {
-    "match": "240dd2121e44 vs 9457f1ba26ee",
+    "match": "team_005131c0e2cb vs team_97ee5474801c",
     "date": "25-05-2013"
   },
   {
-    "match": "ebf2d2f5d61d vs 550d05ab240e",
+    "match": "team_13d462033389 vs team_dea56e47f1c6",
     "date": "18-02-2014"
   },
   {
-    "match": "550d05ab240e vs ebf2d2f5d61d",
+    "match": "team_dea56e47f1c6 vs team_13d462033389",
     "date": "12-03-2014"
   },
   {
-    "match": "4fc9baf21034 vs 240dd2121e44",
+    "match": "team_1c5442c0461e vs team_005131c0e2cb",
     "date": "19-02-2014"
   },
   {
-    "match": "240dd2121e44 vs 4fc9baf21034",
+    "match": "team_005131c0e2cb vs team_1c5442c0461e",
     "date": "11-03-2014"
   },
   {
-    "match": "088d5f86b6f2 vs 216584413ea9",
+    "match": "team_3ce98d8f2aba vs team_7c96c6c75fa1",
     "date": "18-02-2014"
   },
   {
-    "match": "216584413ea9 vs 088d5f86b6f2",
+    "match": "team_7c96c6c75fa1 vs team_3ce98d8f2aba",
     "date": "11-03-2014"
   },
   {
-    "match": "e1e2b54b5c32 vs bdec8a408440",
+    "match": "team_099f7fbab1ee vs team_268fb4595b07",
     "date": "19-02-2014"
   },
   {
-    "match": "bdec8a408440 vs e1e2b54b5c32",
+    "match": "team_268fb4595b07 vs team_099f7fbab1ee",
     "date": "12-03-2014"
   },
   {
-    "match": "d95852bfc168 vs 9ff48521032a",
+    "match": "team_0af179e1e85f vs team_2cd2088171b7",
     "date": "25-02-2014"
   },
   {
-    "match": "9ff48521032a vs d95852bfc168",
+    "match": "team_2cd2088171b7 vs team_0af179e1e85f",
     "date": "19-03-2014"
   },
   {
-    "match": "479bf0803cf7 vs 9457f1ba26ee",
+    "match": "team_d1a8e0ed2ef9 vs team_97ee5474801c",
     "date": "25-02-2014"
   },
   {
-    "match": "9457f1ba26ee vs 479bf0803cf7",
+    "match": "team_97ee5474801c vs team_d1a8e0ed2ef9",
     "date": "19-03-2014"
   },
   {
-    "match": "bd35d091e000 vs 8056df088208",
+    "match": "team_c6728117c52b vs team_91cb315a6405",
     "date": "26-02-2014"
   },
   {
-    "match": "8056df088208 vs bd35d091e000",
+    "match": "team_91cb315a6405 vs team_c6728117c52b",
     "date": "18-03-2014"
   },
   {
-    "match": "09231e49e8f9 vs 93330b415214",
+    "match": "team_b72cd3ffa1d1 vs team_bd172eeb9d96",
     "date": "26-02-2014"
   },
   {
-    "match": "93330b415214 vs 09231e49e8f9",
+    "match": "team_bd172eeb9d96 vs team_b72cd3ffa1d1",
     "date": "18-03-2014"
   },
   {
-    "match": "550d05ab240e vs 216584413ea9",
+    "match": "team_dea56e47f1c6 vs team_7c96c6c75fa1",
     "date": "01-04-2014"
   },
   {
-    "match": "216584413ea9 vs 550d05ab240e",
+    "match": "team_7c96c6c75fa1 vs team_dea56e47f1c6",
     "date": "09-04-2014"
   },
   {
-    "match": "9ff48521032a vs 240dd2121e44",
+    "match": "team_2cd2088171b7 vs team_005131c0e2cb",
     "date": "01-04-2014"
   },
   {
-    "match": "240dd2121e44 vs 9ff48521032a",
+    "match": "team_005131c0e2cb vs team_2cd2088171b7",
     "date": "09-04-2014"
   },
   {
-    "match": "93330b415214 vs 9457f1ba26ee",
+    "match": "team_bd172eeb9d96 vs team_97ee5474801c",
     "date": "02-04-2014"
   },
   {
-    "match": "9457f1ba26ee vs 93330b415214",
+    "match": "team_97ee5474801c vs team_bd172eeb9d96",
     "date": "08-04-2014"
   },
   {
-    "match": "bdec8a408440 vs 8056df088208",
+    "match": "team_268fb4595b07 vs team_91cb315a6405",
     "date": "02-04-2014"
   },
   {
-    "match": "8056df088208 vs bdec8a408440",
+    "match": "team_91cb315a6405 vs team_268fb4595b07",
     "date": "08-04-2014"
   },
   {
-    "match": "216584413ea9 vs 8056df088208",
+    "match": "team_7c96c6c75fa1 vs team_91cb315a6405",
     "date": "22-04-2014"
   },
   {
-    "match": "8056df088208 vs 216584413ea9",
+    "match": "team_91cb315a6405 vs team_7c96c6c75fa1",
     "date": "30-04-2014"
   },
   {
-    "match": "93330b415214 vs 240dd2121e44",
+    "match": "team_bd172eeb9d96 vs team_005131c0e2cb",
     "date": "23-04-2014"
   },
   {
-    "match": "240dd2121e44 vs 93330b415214",
+    "match": "team_005131c0e2cb vs team_bd172eeb9d96",
     "date": "29-04-2014"
   },
   {
-    "match": "93330b415214 vs 216584413ea9",
+    "match": "team_bd172eeb9d96 vs team_7c96c6c75fa1",
     "date": "24-05-2014"
   },
   {
-    "match": "bdec8a408440 vs 8056df088208",
+    "match": "team_268fb4595b07 vs team_91cb315a6405",
     "date": "17-02-2015"
   },
   {
-    "match": "8056df088208 vs bdec8a408440",
+    "match": "team_91cb315a6405 vs team_268fb4595b07",
     "date": "11-03-2015"
   },
   {
-    "match": "ebf2d2f5d61d vs 550d05ab240e",
+    "match": "team_13d462033389 vs team_dea56e47f1c6",
     "date": "18-02-2015"
   },
   {
-    "match": "550d05ab240e vs ebf2d2f5d61d",
+    "match": "team_dea56e47f1c6 vs team_13d462033389",
     "date": "18-03-2015"
   },
   {
-    "match": "e1e2b54b5c32 vs 216584413ea9",
+    "match": "team_099f7fbab1ee vs team_7c96c6c75fa1",
     "date": "24-02-2015"
   },
   {
-    "match": "216584413ea9 vs e1e2b54b5c32",
+    "match": "team_7c96c6c75fa1 vs team_099f7fbab1ee",
     "date": "17-03-2015"
   },
   {
-    "match": "4fc9baf21034 vs d6a297c6193f",
+    "match": "team_1c5442c0461e vs team_77f09e122946",
     "date": "24-02-2015"
   },
   {
-    "match": "d6a297c6193f vs 4fc9baf21034",
+    "match": "team_77f09e122946 vs team_1c5442c0461e",
     "date": "17-03-2015"
   },
   {
-    "match": "0fe76b7fe2ce vs 240dd2121e44",
+    "match": "team_c8257652cf16 vs team_005131c0e2cb",
     "date": "25-02-2015"
   },
   {
-    "match": "240dd2121e44 vs 0fe76b7fe2ce",
+    "match": "team_005131c0e2cb vs team_c8257652cf16",
     "date": "11-03-2015"
   },
   {
-    "match": "09231e49e8f9 vs 93330b415214",
+    "match": "team_b72cd3ffa1d1 vs team_bd172eeb9d96",
     "date": "25-02-2015"
   },
   {
-    "match": "93330b415214 vs 09231e49e8f9",
+    "match": "team_bd172eeb9d96 vs team_b72cd3ffa1d1",
     "date": "10-03-2015"
   },
   {
-    "match": "aea93afdf4be vs 8493f398f200",
+    "match": "team_7aaf6c53e9fe vs team_71d6c631e36a",
     "date": "18-02-2015"
   },
   {
-    "match": "8493f398f200 vs aea93afdf4be",
+    "match": "team_71d6c631e36a vs team_7aaf6c53e9fe",
     "date": "10-03-2015"
   },
   {
-    "match": "fdb4b66db097 vs 9457f1ba26ee",
+    "match": "team_b89dc80fb627 vs team_97ee5474801c",
     "date": "17-02-2015"
   },
   {
-    "match": "9457f1ba26ee vs fdb4b66db097",
+    "match": "team_97ee5474801c vs team_b89dc80fb627",
     "date": "18-03-2015"
   },
   {
-    "match": "216584413ea9 vs 93330b415214",
+    "match": "team_7c96c6c75fa1 vs team_bd172eeb9d96",
     "date": "14-04-2015"
   },
   {
-    "match": "93330b415214 vs 216584413ea9",
+    "match": "team_bd172eeb9d96 vs team_7c96c6c75fa1",
     "date": "22-04-2015"
   },
   {
-    "match": "bdec8a408440 vs 550d05ab240e",
+    "match": "team_268fb4595b07 vs team_dea56e47f1c6",
     "date": "14-04-2015"
   },
   {
-    "match": "550d05ab240e vs bdec8a408440",
+    "match": "team_dea56e47f1c6 vs team_268fb4595b07",
     "date": "21-04-2015"
   },
   {
-    "match": "8493f398f200 vs 240dd2121e44",
+    "match": "team_71d6c631e36a vs team_005131c0e2cb",
     "date": "15-04-2015"
   },
   {
-    "match": "240dd2121e44 vs 8493f398f200",
+    "match": "team_005131c0e2cb vs team_71d6c631e36a",
     "date": "21-04-2015"
   },
   {
-    "match": "fdb4b66db097 vs d6a297c6193f",
+    "match": "team_b89dc80fb627 vs team_77f09e122946",
     "date": "15-04-2015"
   },
   {
-    "match": "d6a297c6193f vs fdb4b66db097",
+    "match": "team_77f09e122946 vs team_b89dc80fb627",
     "date": "22-04-2015"
   },
   {
-    "match": "fdb4b66db097 vs 93330b415214",
+    "match": "team_b89dc80fb627 vs team_bd172eeb9d96",
     "date": "05-05-2015"
   },
   {
-    "match": "93330b415214 vs fdb4b66db097",
+    "match": "team_bd172eeb9d96 vs team_b89dc80fb627",
     "date": "13-05-2015"
   },
   {
-    "match": "550d05ab240e vs 240dd2121e44",
+    "match": "team_dea56e47f1c6 vs team_005131c0e2cb",
     "date": "06-05-2015"
   },
   {
-    "match": "240dd2121e44 vs 550d05ab240e",
+    "match": "team_005131c0e2cb vs team_dea56e47f1c6",
     "date": "12-05-2015"
   },
   {
-    "match": "550d05ab240e vs fdb4b66db097",
+    "match": "team_dea56e47f1c6 vs team_b89dc80fb627",
     "date": "06-06-2015"
   },
   {
-    "match": "bdec8a408440 vs 8056df088208",
+    "match": "team_268fb4595b07 vs team_91cb315a6405",
     "date": "16-02-2016"
   },
   {
-    "match": "8056df088208 vs bdec8a408440",
+    "match": "team_91cb315a6405 vs team_268fb4595b07",
     "date": "09-03-2016"
   },
   {
-    "match": "e82fd46b0550 vs 93330b415214",
+    "match": "team_2e92d188dbdb vs team_bd172eeb9d96",
     "date": "17-02-2016"
   },
   {
-    "match": "93330b415214 vs e82fd46b0550",
+    "match": "team_bd172eeb9d96 vs team_2e92d188dbdb",
     "date": "08-03-2016"
   },
   {
-    "match": "4fc9baf21034 vs 550d05ab240e",
+    "match": "team_1c5442c0461e vs team_dea56e47f1c6",
     "date": "23-02-2016"
   },
   {
-    "match": "550d05ab240e vs 4fc9baf21034",
+    "match": "team_dea56e47f1c6 vs team_1c5442c0461e",
     "date": "16-03-2016"
   },
   {
-    "match": "fdb4b66db097 vs 240dd2121e44",
+    "match": "team_b89dc80fb627 vs team_005131c0e2cb",
     "date": "23-02-2016"
   },
   {
-    "match": "240dd2121e44 vs fdb4b66db097",
+    "match": "team_005131c0e2cb vs team_b89dc80fb627",
     "date": "16-03-2016"
   },
   {
-    "match": "ea7d100031c0 vs 216584413ea9",
+    "match": "team_b5e74fe2a6a3 vs team_7c96c6c75fa1",
     "date": "24-02-2016"
   },
   {
-    "match": "216584413ea9 vs ea7d100031c0",
+    "match": "team_7c96c6c75fa1 vs team_b5e74fe2a6a3",
     "date": "15-03-2016"
   },
   {
-    "match": "9608110853ee vs ebf2d2f5d61d",
+    "match": "team_46a7f9bf80a8 vs team_13d462033389",
     "date": "24-02-2016"
   },
   {
-    "match": "ebf2d2f5d61d vs 9608110853ee",
+    "match": "team_13d462033389 vs team_46a7f9bf80a8",
     "date": "15-03-2016"
   },
   {
-    "match": "e4bbc3bef62e vs 479bf0803cf7",
+    "match": "team_41d823ab960e vs team_d1a8e0ed2ef9",
     "date": "16-02-2016"
   },
   {
-    "match": "479bf0803cf7 vs e4bbc3bef62e",
+    "match": "team_d1a8e0ed2ef9 vs team_41d823ab960e",
     "date": "09-03-2016"
   },
   {
-    "match": "bc1f8a8dc753 vs 27df84194517",
+    "match": "team_4a09693dd492 vs team_43ce4c528499",
     "date": "17-02-2016"
   },
   {
-    "match": "27df84194517 vs bc1f8a8dc753",
+    "match": "team_43ce4c528499 vs team_4a09693dd492",
     "date": "08-03-2016"
   },
   {
-    "match": "550d05ab240e vs 216584413ea9",
+    "match": "team_dea56e47f1c6 vs team_7c96c6c75fa1",
     "date": "05-04-2016"
   },
   {
-    "match": "216584413ea9 vs 550d05ab240e",
+    "match": "team_7c96c6c75fa1 vs team_dea56e47f1c6",
     "date": "13-04-2016"
   },
   {
-    "match": "240dd2121e44 vs e4bbc3bef62e",
+    "match": "team_005131c0e2cb vs team_41d823ab960e",
     "date": "05-04-2016"
   },
   {
-    "match": "e4bbc3bef62e vs 240dd2121e44",
+    "match": "team_41d823ab960e vs team_005131c0e2cb",
     "date": "13-04-2016"
   },
   {
-    "match": "27df84194517 vs 93330b415214",
+    "match": "team_43ce4c528499 vs team_bd172eeb9d96",
     "date": "06-04-2016"
   },
   {
-    "match": "93330b415214 vs 27df84194517",
+    "match": "team_bd172eeb9d96 vs team_43ce4c528499",
     "date": "12-04-2016"
   },
   {
-    "match": "bdec8a408440 vs ebf2d2f5d61d",
+    "match": "team_268fb4595b07 vs team_13d462033389",
     "date": "06-04-2016"
   },
   {
-    "match": "ebf2d2f5d61d vs bdec8a408440",
+    "match": "team_13d462033389 vs team_268fb4595b07",
     "date": "12-04-2016"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "26-04-2016"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "04-05-2016"
   },
   {
-    "match": "216584413ea9 vs 240dd2121e44",
+    "match": "team_7c96c6c75fa1 vs team_005131c0e2cb",
     "date": "27-04-2016"
   },
   {
-    "match": "240dd2121e44 vs 216584413ea9",
+    "match": "team_005131c0e2cb vs team_7c96c6c75fa1",
     "date": "03-05-2016"
   },
   {
-    "match": "93330b415214 vs 216584413ea9",
+    "match": "team_bd172eeb9d96 vs team_7c96c6c75fa1",
     "date": "28-05-2016"
   },
   {
-    "match": "bdec8a408440 vs 550d05ab240e",
+    "match": "team_268fb4595b07 vs team_dea56e47f1c6",
     "date": "14-02-2017"
   },
   {
-    "match": "550d05ab240e vs bdec8a408440",
+    "match": "team_dea56e47f1c6 vs team_268fb4595b07",
     "date": "08-03-2017"
   },
   {
-    "match": "e4bbc3bef62e vs 9457f1ba26ee",
+    "match": "team_41d823ab960e vs team_97ee5474801c",
     "date": "15-02-2017"
   },
   {
-    "match": "9457f1ba26ee vs e4bbc3bef62e",
+    "match": "team_97ee5474801c vs team_41d823ab960e",
     "date": "08-03-2017"
   },
   {
-    "match": "240dd2121e44 vs 4fc9baf21034",
+    "match": "team_005131c0e2cb vs team_1c5442c0461e",
     "date": "14-02-2017"
   },
   {
-    "match": "4fc9baf21034 vs 240dd2121e44",
+    "match": "team_1c5442c0461e vs team_005131c0e2cb",
     "date": "07-03-2017"
   },
   {
-    "match": "93330b415214 vs c600c031a1ea",
+    "match": "team_bd172eeb9d96 vs team_81bd8fe38f89",
     "date": "15-02-2017"
   },
   {
-    "match": "c600c031a1ea vs 93330b415214",
+    "match": "team_81bd8fe38f89 vs team_bd172eeb9d96",
     "date": "07-03-2017"
   },
   {
-    "match": "ebf2d2f5d61d vs d6a297c6193f",
+    "match": "team_13d462033389 vs team_77f09e122946",
     "date": "21-02-2017"
   },
   {
-    "match": "d6a297c6193f vs ebf2d2f5d61d",
+    "match": "team_77f09e122946 vs team_13d462033389",
     "date": "15-03-2017"
   },
   {
-    "match": "e1e2b54b5c32 vs 216584413ea9",
+    "match": "team_099f7fbab1ee vs team_7c96c6c75fa1",
     "date": "21-02-2017"
   },
   {
-    "match": "216584413ea9 vs e1e2b54b5c32",
+    "match": "team_7c96c6c75fa1 vs team_099f7fbab1ee",
     "date": "15-03-2017"
   },
   {
-    "match": "8493f398f200 vs fdb4b66db097",
+    "match": "team_71d6c631e36a vs team_b89dc80fb627",
     "date": "22-02-2017"
   },
   {
-    "match": "fdb4b66db097 vs 8493f398f200",
+    "match": "team_b89dc80fb627 vs team_71d6c631e36a",
     "date": "14-03-2017"
   },
   {
-    "match": "b2118d2ca017 vs 684362f02c12",
+    "match": "team_ba5feb35eabd vs team_c235bea0695a",
     "date": "22-02-2017"
   },
   {
-    "match": "684362f02c12 vs b2118d2ca017",
+    "match": "team_c235bea0695a vs team_ba5feb35eabd",
     "date": "14-03-2017"
   },
   {
-    "match": "fdb4b66db097 vs 550d05ab240e",
+    "match": "team_b89dc80fb627 vs team_dea56e47f1c6",
     "date": "11-04-2017"
   },
   {
-    "match": "550d05ab240e vs fdb4b66db097",
+    "match": "team_dea56e47f1c6 vs team_b89dc80fb627",
     "date": "19-04-2017"
   },
   {
-    "match": "9457f1ba26ee vs d6a297c6193f",
+    "match": "team_97ee5474801c vs team_77f09e122946",
     "date": "11-04-2017"
   },
   {
-    "match": "d6a297c6193f vs 9457f1ba26ee",
+    "match": "team_77f09e122946 vs team_97ee5474801c",
     "date": "19-04-2017"
   },
   {
-    "match": "216584413ea9 vs 684362f02c12",
+    "match": "team_7c96c6c75fa1 vs team_c235bea0695a",
     "date": "12-04-2017"
   },
   {
-    "match": "684362f02c12 vs 216584413ea9",
+    "match": "team_c235bea0695a vs team_7c96c6c75fa1",
     "date": "18-04-2017"
   },
   {
-    "match": "240dd2121e44 vs 93330b415214",
+    "match": "team_005131c0e2cb vs team_bd172eeb9d96",
     "date": "12-04-2017"
   },
   {
-    "match": "93330b415214 vs 240dd2121e44",
+    "match": "team_bd172eeb9d96 vs team_005131c0e2cb",
     "date": "18-04-2017"
   },
   {
-    "match": "93330b415214 vs 216584413ea9",
+    "match": "team_bd172eeb9d96 vs team_7c96c6c75fa1",
     "date": "02-05-2017"
   },
   {
-    "match": "216584413ea9 vs 93330b415214",
+    "match": "team_7c96c6c75fa1 vs team_bd172eeb9d96",
     "date": "10-05-2017"
   },
   {
-    "match": "d6a297c6193f vs fdb4b66db097",
+    "match": "team_77f09e122946 vs team_b89dc80fb627",
     "date": "03-05-2017"
   },
   {
-    "match": "fdb4b66db097 vs d6a297c6193f",
+    "match": "team_b89dc80fb627 vs team_77f09e122946",
     "date": "09-05-2017"
   },
   {
-    "match": "fdb4b66db097 vs 93330b415214",
+    "match": "team_b89dc80fb627 vs team_bd172eeb9d96",
     "date": "03-06-2017"
   },
   {
-    "match": "fdb4b66db097 vs 6edafb11d82f",
+    "match": "team_b89dc80fb627 vs team_5e0fb1614a5f",
     "date": "13-02-2018"
   },
   {
-    "match": "6edafb11d82f vs fdb4b66db097",
+    "match": "team_5e0fb1614a5f vs team_b89dc80fb627",
     "date": "07-03-2018"
   },
   {
-    "match": "aea93afdf4be vs ebf2d2f5d61d",
+    "match": "team_7aaf6c53e9fe vs team_13d462033389",
     "date": "13-02-2018"
   },
   {
-    "match": "ebf2d2f5d61d vs aea93afdf4be",
+    "match": "team_13d462033389 vs team_7aaf6c53e9fe",
     "date": "07-03-2018"
   },
   {
-    "match": "8493f398f200 vs afce84ff2264",
+    "match": "team_71d6c631e36a vs team_d177b4d1d9e6",
     "date": "14-02-2018"
   },
   {
-    "match": "afce84ff2264 vs 8493f398f200",
+    "match": "team_d177b4d1d9e6 vs team_71d6c631e36a",
     "date": "06-03-2018"
   },
   {
-    "match": "93330b415214 vs bdec8a408440",
+    "match": "team_bd172eeb9d96 vs team_268fb4595b07",
     "date": "14-02-2018"
   },
   {
-    "match": "bdec8a408440 vs 93330b415214",
+    "match": "team_268fb4595b07 vs team_bd172eeb9d96",
     "date": "06-03-2018"
   },
   {
-    "match": "8056df088208 vs 550d05ab240e",
+    "match": "team_91cb315a6405 vs team_dea56e47f1c6",
     "date": "20-02-2018"
   },
   {
-    "match": "550d05ab240e vs 8056df088208",
+    "match": "team_dea56e47f1c6 vs team_91cb315a6405",
     "date": "14-03-2018"
   },
   {
-    "match": "240dd2121e44 vs 97518921fea5",
+    "match": "team_005131c0e2cb vs team_599c5fbdfcd4",
     "date": "20-02-2018"
   },
   {
-    "match": "97518921fea5 vs 240dd2121e44",
+    "match": "team_599c5fbdfcd4 vs team_005131c0e2cb",
     "date": "14-03-2018"
   },
   {
-    "match": "0fe76b7fe2ce vs e82fd46b0550",
+    "match": "team_c8257652cf16 vs team_2e92d188dbdb",
     "date": "21-02-2018"
   },
   {
-    "match": "e82fd46b0550 vs 0fe76b7fe2ce",
+    "match": "team_2e92d188dbdb vs team_c8257652cf16",
     "date": "13-03-2018"
   },
   {
-    "match": "b2118d2ca017 vs 9ff48521032a",
+    "match": "team_ba5feb35eabd vs team_2cd2088171b7",
     "date": "21-02-2018"
   },
   {
-    "match": "9ff48521032a vs b2118d2ca017",
+    "match": "team_2cd2088171b7 vs team_ba5feb35eabd",
     "date": "13-03-2018"
   },
   {
-    "match": "fdb4b66db097 vs 93330b415214",
+    "match": "team_b89dc80fb627 vs team_bd172eeb9d96",
     "date": "03-04-2018"
   },
   {
-    "match": "93330b415214 vs fdb4b66db097",
+    "match": "team_bd172eeb9d96 vs team_b89dc80fb627",
     "date": "11-04-2018"
   },
   {
-    "match": "b2118d2ca017 vs 240dd2121e44",
+    "match": "team_ba5feb35eabd vs team_005131c0e2cb",
     "date": "03-04-2018"
   },
   {
-    "match": "240dd2121e44 vs b2118d2ca017",
+    "match": "team_005131c0e2cb vs team_ba5feb35eabd",
     "date": "11-04-2018"
   },
   {
-    "match": "550d05ab240e vs e82fd46b0550",
+    "match": "team_dea56e47f1c6 vs team_2e92d188dbdb",
     "date": "04-04-2018"
   },
   {
-    "match": "e82fd46b0550 vs 550d05ab240e",
+    "match": "team_2e92d188dbdb vs team_dea56e47f1c6",
     "date": "10-04-2018"
   },
   {
-    "match": "afce84ff2264 vs ebf2d2f5d61d",
+    "match": "team_d177b4d1d9e6 vs team_13d462033389",
     "date": "04-04-2018"
   },
   {
-    "match": "ebf2d2f5d61d vs afce84ff2264",
+    "match": "team_13d462033389 vs team_d177b4d1d9e6",
     "date": "10-04-2018"
   },
   {
-    "match": "afce84ff2264 vs e82fd46b0550",
+    "match": "team_d177b4d1d9e6 vs team_2e92d188dbdb",
     "date": "24-04-2018"
   },
   {
-    "match": "e82fd46b0550 vs afce84ff2264",
+    "match": "team_2e92d188dbdb vs team_d177b4d1d9e6",
     "date": "02-05-2018"
   },
   {
-    "match": "240dd2121e44 vs 93330b415214",
+    "match": "team_005131c0e2cb vs team_bd172eeb9d96",
     "date": "25-04-2018"
   },
   {
-    "match": "93330b415214 vs 240dd2121e44",
+    "match": "team_bd172eeb9d96 vs team_005131c0e2cb",
     "date": "01-05-2018"
   },
   {
-    "match": "93330b415214 vs afce84ff2264",
+    "match": "team_bd172eeb9d96 vs team_d177b4d1d9e6",
     "date": "26-05-2018"
   },
   {
-    "match": "9ff48521032a vs bdec8a408440",
+    "match": "team_2cd2088171b7 vs team_268fb4595b07",
     "date": "12-02-2019"
   },
   {
-    "match": "bdec8a408440 vs 9ff48521032a",
+    "match": "team_268fb4595b07 vs team_2cd2088171b7",
     "date": "06-03-2019"
   },
   {
-    "match": "e82fd46b0550 vs 8493f398f200",
+    "match": "team_2e92d188dbdb vs team_71d6c631e36a",
     "date": "12-02-2019"
   },
   {
-    "match": "8493f398f200 vs e82fd46b0550",
+    "match": "team_71d6c631e36a vs team_2e92d188dbdb",
     "date": "06-03-2019"
   },
   {
-    "match": "3eb7106c3477 vs 93330b415214",
+    "match": "team_2705a83a5a06 vs team_bd172eeb9d96",
     "date": "13-02-2019"
   },
   {
-    "match": "93330b415214 vs 3eb7106c3477",
+    "match": "team_bd172eeb9d96 vs team_2705a83a5a06",
     "date": "05-03-2019"
   },
   {
-    "match": "6edafb11d82f vs 9457f1ba26ee",
+    "match": "team_5e0fb1614a5f vs team_97ee5474801c",
     "date": "13-02-2019"
   },
   {
-    "match": "9457f1ba26ee vs 6edafb11d82f",
+    "match": "team_97ee5474801c vs team_5e0fb1614a5f",
     "date": "05-03-2019"
   },
   {
-    "match": "debecab907cc vs 550d05ab240e",
+    "match": "team_10b53d95e2d3 vs team_dea56e47f1c6",
     "date": "19-02-2019"
   },
   {
-    "match": "550d05ab240e vs debecab907cc",
+    "match": "team_dea56e47f1c6 vs team_10b53d95e2d3",
     "date": "13-03-2019"
   },
   {
-    "match": "afce84ff2264 vs 240dd2121e44",
+    "match": "team_d177b4d1d9e6 vs team_005131c0e2cb",
     "date": "19-02-2019"
   },
   {
-    "match": "240dd2121e44 vs afce84ff2264",
+    "match": "team_005131c0e2cb vs team_d177b4d1d9e6",
     "date": "13-03-2019"
   },
   {
-    "match": "216584413ea9 vs fdb4b66db097",
+    "match": "team_7c96c6c75fa1 vs team_b89dc80fb627",
     "date": "20-02-2019"
   },
   {
-    "match": "fdb4b66db097 vs 216584413ea9",
+    "match": "team_b89dc80fb627 vs team_7c96c6c75fa1",
     "date": "12-03-2019"
   },
   {
-    "match": "09231e49e8f9 vs ebf2d2f5d61d",
+    "match": "team_b72cd3ffa1d1 vs team_13d462033389",
     "date": "20-02-2019"
   },
   {
-    "match": "ebf2d2f5d61d vs 09231e49e8f9",
+    "match": "team_13d462033389 vs team_b72cd3ffa1d1",
     "date": "12-03-2019"
   },
   {
-    "match": "afce84ff2264 vs 8493f398f200",
+    "match": "team_d177b4d1d9e6 vs team_71d6c631e36a",
     "date": "09-04-2019"
   },
   {
-    "match": "8493f398f200 vs afce84ff2264",
+    "match": "team_71d6c631e36a vs team_d177b4d1d9e6",
     "date": "17-04-2019"
   },
   {
-    "match": "6edafb11d82f vs ebf2d2f5d61d",
+    "match": "team_5e0fb1614a5f vs team_13d462033389",
     "date": "09-04-2019"
   },
   {
-    "match": "ebf2d2f5d61d vs 6edafb11d82f",
+    "match": "team_13d462033389 vs team_5e0fb1614a5f",
     "date": "17-04-2019"
   },
   {
-    "match": "3eb7106c3477 vs fdb4b66db097",
+    "match": "team_2705a83a5a06 vs team_b89dc80fb627",
     "date": "10-04-2019"
   },
   {
-    "match": "fdb4b66db097 vs 3eb7106c3477",
+    "match": "team_b89dc80fb627 vs team_2705a83a5a06",
     "date": "16-04-2019"
   },
   {
-    "match": "9ff48521032a vs 550d05ab240e",
+    "match": "team_2cd2088171b7 vs team_dea56e47f1c6",
     "date": "10-04-2019"
   },
   {
-    "match": "550d05ab240e vs 9ff48521032a",
+    "match": "team_dea56e47f1c6 vs team_2cd2088171b7",
     "date": "16-04-2019"
   },
   {
-    "match": "6edafb11d82f vs 3eb7106c3477",
+    "match": "team_5e0fb1614a5f vs team_2705a83a5a06",
     "date": "30-04-2019"
   },
   {
-    "match": "3eb7106c3477 vs 6edafb11d82f",
+    "match": "team_2705a83a5a06 vs team_5e0fb1614a5f",
     "date": "08-05-2019"
   },
   {
-    "match": "550d05ab240e vs afce84ff2264",
+    "match": "team_dea56e47f1c6 vs team_d177b4d1d9e6",
     "date": "01-05-2019"
   },
   {
-    "match": "afce84ff2264 vs 550d05ab240e",
+    "match": "team_d177b4d1d9e6 vs team_dea56e47f1c6",
     "date": "07-05-2019"
   },
   {
-    "match": "6edafb11d82f vs afce84ff2264",
+    "match": "team_5e0fb1614a5f vs team_d177b4d1d9e6",
     "date": "01-06-2019"
   },
   {
-    "match": "216584413ea9 vs afce84ff2264",
+    "match": "team_7c96c6c75fa1 vs team_d177b4d1d9e6",
     "date": "18-02-2020"
   },
   {
-    "match": "afce84ff2264 vs 216584413ea9",
+    "match": "team_d177b4d1d9e6 vs team_7c96c6c75fa1",
     "date": "11-03-2020"
   },
   {
-    "match": "9457f1ba26ee vs bdec8a408440",
+    "match": "team_97ee5474801c vs team_268fb4595b07",
     "date": "19-02-2020"
   },
   {
-    "match": "bdec8a408440 vs 9457f1ba26ee",
+    "match": "team_268fb4595b07 vs team_97ee5474801c",
     "date": "11-03-2020"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "25-02-2020"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "07-08-2020"
   },
   {
-    "match": "debecab907cc vs fdb4b66db097",
+    "match": "team_10b53d95e2d3 vs team_b89dc80fb627",
     "date": "25-02-2020"
   },
   {
-    "match": "fdb4b66db097 vs debecab907cc",
+    "match": "team_b89dc80fb627 vs team_10b53d95e2d3",
     "date": "07-08-2020"
   },
   {
-    "match": "6edafb11d82f vs 91a12d209484",
+    "match": "team_5e0fb1614a5f vs team_fbe82ec72c3b",
     "date": "26-02-2020"
   },
   {
-    "match": "91a12d209484 vs 6edafb11d82f",
+    "match": "team_fbe82ec72c3b vs team_5e0fb1614a5f",
     "date": "10-03-2020"
   },
   {
-    "match": "e341c0b20802 vs bddfcdfa742c",
+    "match": "team_9d68edb3a129 vs team_e45c3160715a",
     "date": "18-02-2020"
   },
   {
-    "match": "bddfcdfa742c vs e341c0b20802",
+    "match": "team_e45c3160715a vs team_9d68edb3a129",
     "date": "10-03-2020"
   },
   {
-    "match": "8056df088208 vs 240dd2121e44",
+    "match": "team_91cb315a6405 vs team_005131c0e2cb",
     "date": "19-02-2020"
   },
   {
-    "match": "240dd2121e44 vs 8056df088208",
+    "match": "team_005131c0e2cb vs team_91cb315a6405",
     "date": "08-08-2020"
   },
   {
-    "match": "c600c031a1ea vs 550d05ab240e",
+    "match": "team_81bd8fe38f89 vs team_dea56e47f1c6",
     "date": "19-02-2020"
   },
   {
-    "match": "550d05ab240e vs c600c031a1ea",
+    "match": "team_dea56e47f1c6 vs team_81bd8fe38f89",
     "date": "08-08-2020"
   },
   {
-    "match": "e341c0b20802 vs bdec8a408440",
+    "match": "team_9d68edb3a129 vs team_268fb4595b07",
     "date": "12-08-2020"
   },
   {
-    "match": "91a12d209484 vs 216584413ea9",
+    "match": "team_fbe82ec72c3b vs team_7c96c6c75fa1",
     "date": "13-08-2020"
   },
   {
-    "match": "550d05ab240e vs 240dd2121e44",
+    "match": "team_dea56e47f1c6 vs team_005131c0e2cb",
     "date": "14-08-2020"
   },
   {
-    "match": "ebf2d2f5d61d vs debecab907cc",
+    "match": "team_13d462033389 vs team_10b53d95e2d3",
     "date": "15-08-2020"
   },
   {
-    "match": "91a12d209484 vs bdec8a408440",
+    "match": "team_fbe82ec72c3b vs team_268fb4595b07",
     "date": "18-08-2020"
   },
   {
-    "match": "debecab907cc vs 240dd2121e44",
+    "match": "team_10b53d95e2d3 vs team_005131c0e2cb",
     "date": "19-08-2020"
   },
   {
-    "match": "bdec8a408440 vs 240dd2121e44",
+    "match": "team_268fb4595b07 vs team_005131c0e2cb",
     "date": "23-08-2020"
   },
   {
-    "match": "550d05ab240e vs bdec8a408440",
+    "match": "team_dea56e47f1c6 vs team_268fb4595b07",
     "date": "16-02-2021"
   },
   {
-    "match": "bdec8a408440 vs 550d05ab240e",
+    "match": "team_268fb4595b07 vs team_dea56e47f1c6",
     "date": "10-03-2021"
   },
   {
-    "match": "8493f398f200 vs fdb4b66db097",
+    "match": "team_71d6c631e36a vs team_b89dc80fb627",
     "date": "17-02-2021"
   },
   {
-    "match": "fdb4b66db097 vs 8493f398f200",
+    "match": "team_b89dc80fb627 vs team_71d6c631e36a",
     "date": "09-03-2021"
   },
   {
-    "match": "91a12d209484 vs afce84ff2264",
+    "match": "team_fbe82ec72c3b vs team_d177b4d1d9e6",
     "date": "16-02-2021"
   },
   {
-    "match": "afce84ff2264 vs 91a12d209484",
+    "match": "team_d177b4d1d9e6 vs team_fbe82ec72c3b",
     "date": "10-03-2021"
   },
   {
-    "match": "b2118d2ca017 vs 9457f1ba26ee",
+    "match": "team_ba5feb35eabd vs team_97ee5474801c",
     "date": "17-02-2021"
   },
   {
-    "match": "9457f1ba26ee vs b2118d2ca017",
+    "match": "team_97ee5474801c vs team_ba5feb35eabd",
     "date": "09-03-2021"
   },
   {
-    "match": "216584413ea9 vs 8056df088208",
+    "match": "team_7c96c6c75fa1 vs team_91cb315a6405",
     "date": "23-02-2021"
   },
   {
-    "match": "8056df088208 vs 216584413ea9",
+    "match": "team_91cb315a6405 vs team_7c96c6c75fa1",
     "date": "17-03-2021"
   },
   {
-    "match": "84d0447bddc0 vs 240dd2121e44",
+    "match": "team_86026961dc19 vs team_005131c0e2cb",
     "date": "23-02-2021"
   },
   {
-    "match": "240dd2121e44 vs 84d0447bddc0",
+    "match": "team_005131c0e2cb vs team_86026961dc19",
     "date": "17-03-2021"
   },
   {
-    "match": "e341c0b20802 vs 93330b415214",
+    "match": "team_9d68edb3a129 vs team_bd172eeb9d96",
     "date": "24-02-2021"
   },
   {
-    "match": "93330b415214 vs e341c0b20802",
+    "match": "team_bd172eeb9d96 vs team_9d68edb3a129",
     "date": "16-03-2021"
   },
   {
-    "match": "900d891b5d20 vs ebf2d2f5d61d",
+    "match": "team_481fd21575ce vs team_13d462033389",
     "date": "24-02-2021"
   },
   {
-    "match": "ebf2d2f5d61d vs 900d891b5d20",
+    "match": "team_13d462033389 vs team_481fd21575ce",
     "date": "16-03-2021"
   },
   {
-    "match": "93330b415214 vs afce84ff2264",
+    "match": "team_bd172eeb9d96 vs team_d177b4d1d9e6",
     "date": "06-04-2021"
   },
   {
-    "match": "afce84ff2264 vs 93330b415214",
+    "match": "team_d177b4d1d9e6 vs team_bd172eeb9d96",
     "date": "14-04-2021"
   },
   {
-    "match": "ebf2d2f5d61d vs 9457f1ba26ee",
+    "match": "team_13d462033389 vs team_97ee5474801c",
     "date": "06-04-2021"
   },
   {
-    "match": "9457f1ba26ee vs ebf2d2f5d61d",
+    "match": "team_97ee5474801c vs team_13d462033389",
     "date": "14-04-2021"
   },
   {
-    "match": "240dd2121e44 vs bdec8a408440",
+    "match": "team_005131c0e2cb vs team_268fb4595b07",
     "date": "07-04-2021"
   },
   {
-    "match": "bdec8a408440 vs 240dd2121e44",
+    "match": "team_268fb4595b07 vs team_005131c0e2cb",
     "date": "13-04-2021"
   },
   {
-    "match": "8493f398f200 vs 8056df088208",
+    "match": "team_71d6c631e36a vs team_91cb315a6405",
     "date": "07-04-2021"
   },
   {
-    "match": "8056df088208 vs 8493f398f200",
+    "match": "team_91cb315a6405 vs team_71d6c631e36a",
     "date": "13-04-2021"
   },
   {
-    "match": "93330b415214 vs 8056df088208",
+    "match": "team_bd172eeb9d96 vs team_91cb315a6405",
     "date": "27-04-2021"
   },
   {
-    "match": "8056df088208 vs 93330b415214",
+    "match": "team_91cb315a6405 vs team_bd172eeb9d96",
     "date": "05-05-2021"
   },
   {
-    "match": "bdec8a408440 vs ebf2d2f5d61d",
+    "match": "team_268fb4595b07 vs team_13d462033389",
     "date": "28-04-2021"
   },
   {
-    "match": "ebf2d2f5d61d vs bdec8a408440",
+    "match": "team_13d462033389 vs team_268fb4595b07",
     "date": "04-05-2021"
   },
   {
-    "match": "ebf2d2f5d61d vs 8056df088208",
+    "match": "team_13d462033389 vs team_91cb315a6405",
     "date": "29-05-2021"
   },
   {
-    "match": "bdec8a408440 vs 93330b415214",
+    "match": "team_268fb4595b07 vs team_bd172eeb9d96",
     "date": "15-02-2022"
   },
   {
-    "match": "93330b415214 vs bdec8a408440",
+    "match": "team_bd172eeb9d96 vs team_268fb4595b07",
     "date": "09-03-2022"
   },
   {
-    "match": "49a73cc8acd2 vs ebf2d2f5d61d",
+    "match": "team_f41954d1272f vs team_13d462033389",
     "date": "15-02-2022"
   },
   {
-    "match": "ebf2d2f5d61d vs 49a73cc8acd2",
+    "match": "team_13d462033389 vs team_f41954d1272f",
     "date": "09-03-2022"
   },
   {
-    "match": "db41658ae019 vs afce84ff2264",
+    "match": "team_7ec8336709bf vs team_d177b4d1d9e6",
     "date": "16-02-2022"
   },
   {
-    "match": "afce84ff2264 vs db41658ae019",
+    "match": "team_d177b4d1d9e6 vs team_7ec8336709bf",
     "date": "08-03-2022"
   },
   {
-    "match": "ea6515eca27a vs 240dd2121e44",
+    "match": "team_f2646aa02d03 vs team_005131c0e2cb",
     "date": "16-02-2022"
   },
   {
-    "match": "240dd2121e44 vs ea6515eca27a",
+    "match": "team_005131c0e2cb vs team_f2646aa02d03",
     "date": "08-03-2022"
   },
   {
-    "match": "8056df088208 vs c56e94a98504",
+    "match": "team_91cb315a6405 vs team_964a8bed31d6",
     "date": "22-02-2022"
   },
   {
-    "match": "c56e94a98504 vs 8056df088208",
+    "match": "team_964a8bed31d6 vs team_91cb315a6405",
     "date": "16-03-2022"
   },
   {
-    "match": "27ac674b21d2 vs fdb4b66db097",
+    "match": "team_7e22e34a1550 vs team_b89dc80fb627",
     "date": "22-02-2022"
   },
   {
-    "match": "fdb4b66db097 vs 27ac674b21d2",
+    "match": "team_b89dc80fb627 vs team_7e22e34a1550",
     "date": "16-03-2022"
   },
   {
-    "match": "216584413ea9 vs 9ff48521032a",
+    "match": "team_7c96c6c75fa1 vs team_2cd2088171b7",
     "date": "23-02-2022"
   },
   {
-    "match": "9ff48521032a vs 216584413ea9",
+    "match": "team_2cd2088171b7 vs team_7c96c6c75fa1",
     "date": "15-03-2022"
   },
   {
-    "match": "e4bbc3bef62e vs 3eb7106c3477",
+    "match": "team_41d823ab960e vs team_2705a83a5a06",
     "date": "23-02-2022"
   },
   {
-    "match": "3eb7106c3477 vs e4bbc3bef62e",
+    "match": "team_2705a83a5a06 vs team_41d823ab960e",
     "date": "15-03-2022"
   },
   {
-    "match": "ebf2d2f5d61d vs 216584413ea9",
+    "match": "team_13d462033389 vs team_7c96c6c75fa1",
     "date": "05-04-2022"
   },
   {
-    "match": "216584413ea9 vs ebf2d2f5d61d",
+    "match": "team_7c96c6c75fa1 vs team_13d462033389",
     "date": "13-04-2022"
   },
   {
-    "match": "e4bbc3bef62e vs afce84ff2264",
+    "match": "team_41d823ab960e vs team_d177b4d1d9e6",
     "date": "05-04-2022"
   },
   {
-    "match": "afce84ff2264 vs e4bbc3bef62e",
+    "match": "team_d177b4d1d9e6 vs team_41d823ab960e",
     "date": "13-04-2022"
   },
   {
-    "match": "8056df088208 vs 93330b415214",
+    "match": "team_91cb315a6405 vs team_bd172eeb9d96",
     "date": "06-04-2022"
   },
   {
-    "match": "93330b415214 vs 8056df088208",
+    "match": "team_bd172eeb9d96 vs team_91cb315a6405",
     "date": "12-04-2022"
   },
   {
-    "match": "27ac674b21d2 vs 240dd2121e44",
+    "match": "team_7e22e34a1550 vs team_005131c0e2cb",
     "date": "06-04-2022"
   },
   {
-    "match": "240dd2121e44 vs 27ac674b21d2",
+    "match": "team_005131c0e2cb vs team_7e22e34a1550",
     "date": "12-04-2022"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "26-04-2022"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "04-05-2022"
   },
   {
-    "match": "afce84ff2264 vs 27ac674b21d2",
+    "match": "team_d177b4d1d9e6 vs team_7e22e34a1550",
     "date": "27-04-2022"
   },
   {
-    "match": "27ac674b21d2 vs afce84ff2264",
+    "match": "team_7e22e34a1550 vs team_d177b4d1d9e6",
     "date": "03-05-2022"
   },
   {
-    "match": "afce84ff2264 vs 93330b415214",
+    "match": "team_d177b4d1d9e6 vs team_bd172eeb9d96",
     "date": "28-05-2022"
   },
   {
-    "match": "bdec8a408440 vs 240dd2121e44",
+    "match": "team_268fb4595b07 vs team_005131c0e2cb",
     "date": "14-02-2023"
   },
   {
-    "match": "240dd2121e44 vs bdec8a408440",
+    "match": "team_005131c0e2cb vs team_268fb4595b07",
     "date": "08-03-2023"
   },
   {
-    "match": "088d5f86b6f2 vs 6edafb11d82f",
+    "match": "team_3ce98d8f2aba vs team_5e0fb1614a5f",
     "date": "14-02-2023"
   },
   {
-    "match": "6edafb11d82f vs 088d5f86b6f2",
+    "match": "team_5e0fb1614a5f vs team_3ce98d8f2aba",
     "date": "08-03-2023"
   },
   {
-    "match": "1775173b4ba8 vs e4bbc3bef62e",
+    "match": "team_51f4e76f9644 vs team_41d823ab960e",
     "date": "15-02-2023"
   },
   {
-    "match": "e4bbc3bef62e vs 1775173b4ba8",
+    "match": "team_41d823ab960e vs team_51f4e76f9644",
     "date": "07-03-2023"
   },
   {
-    "match": "9457f1ba26ee vs 8056df088208",
+    "match": "team_97ee5474801c vs team_91cb315a6405",
     "date": "15-02-2023"
   },
   {
-    "match": "8056df088208 vs 9457f1ba26ee",
+    "match": "team_91cb315a6405 vs team_97ee5474801c",
     "date": "07-03-2023"
   },
   {
-    "match": "afce84ff2264 vs 93330b415214",
+    "match": "team_d177b4d1d9e6 vs team_bd172eeb9d96",
     "date": "21-02-2023"
   },
   {
-    "match": "93330b415214 vs afce84ff2264",
+    "match": "team_bd172eeb9d96 vs team_d177b4d1d9e6",
     "date": "15-03-2023"
   },
   {
-    "match": "48199c3e87ac vs c600c031a1ea",
+    "match": "team_ede1e8d0a0f1 vs team_81bd8fe38f89",
     "date": "21-02-2023"
   },
   {
-    "match": "c600c031a1ea vs 48199c3e87ac",
+    "match": "team_81bd8fe38f89 vs team_ede1e8d0a0f1",
     "date": "15-03-2023"
   },
   {
-    "match": "db41658ae019 vs 8493f398f200",
+    "match": "team_7ec8336709bf vs team_71d6c631e36a",
     "date": "22-02-2023"
   },
   {
-    "match": "8493f398f200 vs db41658ae019",
+    "match": "team_71d6c631e36a vs team_7ec8336709bf",
     "date": "14-03-2023"
   },
   {
-    "match": "91a12d209484 vs ebf2d2f5d61d",
+    "match": "team_fbe82ec72c3b vs team_13d462033389",
     "date": "22-02-2023"
   },
   {
-    "match": "ebf2d2f5d61d vs 91a12d209484",
+    "match": "team_13d462033389 vs team_fbe82ec72c3b",
     "date": "14-03-2023"
   },
   {
-    "match": "93330b415214 vs 8056df088208",
+    "match": "team_bd172eeb9d96 vs team_91cb315a6405",
     "date": "11-04-2023"
   },
   {
-    "match": "8056df088208 vs 93330b415214",
+    "match": "team_91cb315a6405 vs team_bd172eeb9d96",
     "date": "18-04-2023"
   },
   {
-    "match": "e4bbc3bef62e vs db41658ae019",
+    "match": "team_41d823ab960e vs team_7ec8336709bf",
     "date": "11-04-2023"
   },
   {
-    "match": "db41658ae019 vs e4bbc3bef62e",
+    "match": "team_7ec8336709bf vs team_41d823ab960e",
     "date": "19-04-2023"
   },
   {
-    "match": "ebf2d2f5d61d vs 240dd2121e44",
+    "match": "team_13d462033389 vs team_005131c0e2cb",
     "date": "12-04-2023"
   },
   {
-    "match": "240dd2121e44 vs ebf2d2f5d61d",
+    "match": "team_005131c0e2cb vs team_13d462033389",
     "date": "19-04-2023"
   },
   {
-    "match": "088d5f86b6f2 vs c600c031a1ea",
+    "match": "team_3ce98d8f2aba vs team_81bd8fe38f89",
     "date": "12-04-2023"
   },
   {
-    "match": "c600c031a1ea vs 088d5f86b6f2",
+    "match": "team_81bd8fe38f89 vs team_3ce98d8f2aba",
     "date": "18-04-2023"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "09-05-2023"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "17-05-2023"
   },
   {
-    "match": "088d5f86b6f2 vs db41658ae019",
+    "match": "team_3ce98d8f2aba vs team_7ec8336709bf",
     "date": "10-05-2023"
   },
   {
-    "match": "db41658ae019 vs 088d5f86b6f2",
+    "match": "team_7ec8336709bf vs team_3ce98d8f2aba",
     "date": "16-05-2023"
   },
   {
-    "match": "ebf2d2f5d61d vs db41658ae019",
+    "match": "team_13d462033389 vs team_7ec8336709bf",
     "date": "10-06-2023"
   },
   {
-    "match": "2da3c827ccab vs ebf2d2f5d61d",
+    "match": "team_12fff1be2f11 vs team_13d462033389",
     "date": "13-02-2024"
   },
   {
-    "match": "ebf2d2f5d61d vs 2da3c827ccab",
+    "match": "team_13d462033389 vs team_12fff1be2f11",
     "date": "06-03-2024"
   },
   {
-    "match": "91a12d209484 vs 93330b415214",
+    "match": "team_fbe82ec72c3b vs team_bd172eeb9d96",
     "date": "13-02-2024"
   },
   {
-    "match": "93330b415214 vs 91a12d209484",
+    "match": "team_bd172eeb9d96 vs team_fbe82ec72c3b",
     "date": "06-03-2024"
   },
   {
-    "match": "bdec8a408440 vs 782246eac004",
+    "match": "team_268fb4595b07 vs team_b0ac758a64fc",
     "date": "14-02-2024"
   },
   {
-    "match": "782246eac004 vs bdec8a408440",
+    "match": "team_b0ac758a64fc vs team_268fb4595b07",
     "date": "05-03-2024"
   },
   {
-    "match": "84d0447bddc0 vs 240dd2121e44",
+    "match": "team_86026961dc19 vs team_005131c0e2cb",
     "date": "14-02-2024"
   },
   {
-    "match": "240dd2121e44 vs 84d0447bddc0",
+    "match": "team_005131c0e2cb vs team_86026961dc19",
     "date": "05-03-2024"
   },
   {
-    "match": "db41658ae019 vs 216584413ea9",
+    "match": "team_7ec8336709bf vs team_7c96c6c75fa1",
     "date": "20-02-2024"
   },
   {
-    "match": "216584413ea9 vs db41658ae019",
+    "match": "team_7c96c6c75fa1 vs team_7ec8336709bf",
     "date": "13-03-2024"
   },
   {
-    "match": "ea7d100031c0 vs 9457f1ba26ee",
+    "match": "team_b5e74fe2a6a3 vs team_97ee5474801c",
     "date": "20-02-2024"
   },
   {
-    "match": "9457f1ba26ee vs ea7d100031c0",
+    "match": "team_97ee5474801c vs team_b5e74fe2a6a3",
     "date": "12-03-2024"
   },
   {
-    "match": "8493f398f200 vs 4fc9baf21034",
+    "match": "team_71d6c631e36a vs team_1c5442c0461e",
     "date": "21-02-2024"
   },
   {
-    "match": "4fc9baf21034 vs 8493f398f200",
+    "match": "team_1c5442c0461e vs team_71d6c631e36a",
     "date": "12-03-2024"
   },
   {
-    "match": "c600c031a1ea vs 550d05ab240e",
+    "match": "team_81bd8fe38f89 vs team_dea56e47f1c6",
     "date": "21-02-2024"
   },
   {
-    "match": "550d05ab240e vs c600c031a1ea",
+    "match": "team_dea56e47f1c6 vs team_81bd8fe38f89",
     "date": "12-03-2024"
   },
   {
-    "match": "4fc9baf21034 vs 240dd2121e44",
+    "match": "team_1c5442c0461e vs team_005131c0e2cb",
     "date": "09-04-2024"
   },
   {
-    "match": "240dd2121e44 vs 4fc9baf21034",
+    "match": "team_005131c0e2cb vs team_1c5442c0461e",
     "date": "17-04-2024"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "09-04-2024"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "17-04-2024"
   },
   {
-    "match": "bdec8a408440 vs 550d05ab240e",
+    "match": "team_268fb4595b07 vs team_dea56e47f1c6",
     "date": "10-04-2024"
   },
   {
-    "match": "550d05ab240e vs bdec8a408440",
+    "match": "team_dea56e47f1c6 vs team_268fb4595b07",
     "date": "16-04-2024"
   },
   {
-    "match": "216584413ea9 vs 9457f1ba26ee",
+    "match": "team_7c96c6c75fa1 vs team_97ee5474801c",
     "date": "10-04-2024"
   },
   {
-    "match": "9457f1ba26ee vs 216584413ea9",
+    "match": "team_97ee5474801c vs team_7c96c6c75fa1",
     "date": "16-04-2024"
   },
   {
-    "match": "240dd2121e44 vs 93330b415214",
+    "match": "team_005131c0e2cb vs team_bd172eeb9d96",
     "date": "30-04-2024"
   },
   {
-    "match": "93330b415214 vs 240dd2121e44",
+    "match": "team_bd172eeb9d96 vs team_005131c0e2cb",
     "date": "08-05-2024"
   },
   {
-    "match": "9457f1ba26ee vs bdec8a408440",
+    "match": "team_97ee5474801c vs team_268fb4595b07",
     "date": "01-05-2024"
   },
   {
-    "match": "bdec8a408440 vs 9457f1ba26ee",
+    "match": "team_268fb4595b07 vs team_97ee5474801c",
     "date": "07-05-2024"
   },
   {
-    "match": "93330b415214 vs 9457f1ba26ee",
+    "match": "team_bd172eeb9d96 vs team_97ee5474801c",
     "date": "01-06-2024"
   },
   {
-    "match": "ebf2d2f5d61d vs 93330b415214",
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
     "date": "11-02-2025"
   },
   {
-    "match": "ed501eaf91a9 vs bdec8a408440",
+    "match": "team_f8d4a58a3da6 vs team_268fb4595b07",
     "date": "11-02-2025"
   },
   {
-    "match": "fdb4b66db097 vs f711ec7a2ed3",
+    "match": "team_b89dc80fb627 vs team_7b081adf1f58",
     "date": "11-02-2025"
   },
   {
-    "match": "49a73cc8acd2 vs 9457f1ba26ee",
+    "match": "team_f41954d1272f vs team_97ee5474801c",
     "date": "11-02-2025"
   },
   {
-    "match": "cdae7c289430 vs 088d5f86b6f2",
+    "match": "team_0784f8c02461 vs team_3ce98d8f2aba",
     "date": "12-02-2025"
   },
   {
-    "match": "d2c242b776f7 vs e4bbc3bef62e",
+    "match": "team_7ade9ad71a41 vs team_41d823ab960e",
     "date": "12-02-2025"
   },
   {
-    "match": "84f918364fcc vs 240dd2121e44",
+    "match": "team_1d01384154bc vs team_005131c0e2cb",
     "date": "12-02-2025"
   },
   {
-    "match": "1775173b4ba8 vs e341c0b20802",
+    "match": "team_51f4e76f9644 vs team_9d68edb3a129",
     "date": "12-02-2025"
   },
   {
-    "match": "088d5f86b6f2 vs cdae7c289430",
+    "match": "team_3ce98d8f2aba vs team_0784f8c02461",
     "date": "18-02-2025"
   },
   {
-    "match": "e4bbc3bef62e vs d2c242b776f7",
+    "match": "team_41d823ab960e vs team_7ade9ad71a41",
     "date": "18-02-2025"
   },
   {
-    "match": "240dd2121e44 vs 84f918364fcc",
+    "match": "team_005131c0e2cb vs team_1d01384154bc",
     "date": "18-02-2025"
   },
   {
-    "match": "e341c0b20802 vs 1775173b4ba8",
+    "match": "team_9d68edb3a129 vs team_51f4e76f9644",
     "date": "18-02-2025"
   },
   {
-    "match": "bdec8a408440 vs ed501eaf91a9",
+    "match": "team_268fb4595b07 vs team_f8d4a58a3da6",
     "date": "19-02-2025"
   },
   {
-    "match": "f711ec7a2ed3 vs fdb4b66db097",
+    "match": "team_7b081adf1f58 vs team_b89dc80fb627",
     "date": "19-02-2025"
   },
   {
-    "match": "93330b415214 vs ebf2d2f5d61d",
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
     "date": "19-02-2025"
   },
   {
-    "match": "9457f1ba26ee vs 49a73cc8acd2",
+    "match": "team_97ee5474801c vs team_f41954d1272f",
     "date": "19-02-2025"
   },
   {
-    "match": "93330b415214 vs f53424f05135",
+    "match": "team_bd172eeb9d96 vs team_c4911f9718b4",
     "date": "04-03-2025"
   },
   {
-    "match": "f711ec7a2ed3 vs 4fc9baf21034",
+    "match": "team_7b081adf1f58 vs team_1c5442c0461e",
     "date": "04-03-2025"
   },
   {
-    "match": "9457f1ba26ee vs bbb5244b71d6",
+    "match": "team_97ee5474801c vs team_f0d84dbf7bfc",
     "date": "04-03-2025"
   },
   {
-    "match": "1775173b4ba8 vs 568cd44a200f",
+    "match": "team_51f4e76f9644 vs team_2cd6924b9173",
     "date": "04-03-2025"
   },
   {
-    "match": "cdae7c289430 vs 8c5830f24228",
+    "match": "team_0784f8c02461 vs team_8fd1a6671fb3",
     "date": "05-03-2025"
   },
   {
-    "match": "e1e2b54b5c32 vs 240dd2121e44",
+    "match": "team_099f7fbab1ee vs team_005131c0e2cb",
     "date": "05-03-2025"
   },
   {
-    "match": "95adec7330c0 vs 6096c6fc3b0f",
+    "match": "team_a09d29720489 vs team_e0bf03ddb298",
     "date": "05-03-2025"
   },
   {
-    "match": "bdec8a408440 vs afce84ff2264",
+    "match": "team_268fb4595b07 vs team_d177b4d1d9e6",
     "date": "05-03-2025"
   },
   {
-    "match": "6096c6fc3b0f vs 95adec7330c0",
+    "match": "team_e0bf03ddb298 vs team_a09d29720489",
     "date": "11-03-2025"
   },
   {
-    "match": "8c5830f24228 vs cdae7c289430",
+    "match": "team_8fd1a6671fb3 vs team_0784f8c02461",
     "date": "11-03-2025"
   },
   {
-    "match": "afce84ff2264 vs bdec8a408440",
+    "match": "team_d177b4d1d9e6 vs team_268fb4595b07",
     "date": "11-03-2025"
   },
   {
-    "match": "240dd2121e44 vs e1e2b54b5c32",
+    "match": "team_005131c0e2cb vs team_099f7fbab1ee",
     "date": "11-03-2025"
   },
   {
-    "match": "bbb5244b71d6 vs 9457f1ba26ee",
+    "match": "team_f0d84dbf7bfc vs team_97ee5474801c",
     "date": "12-03-2025"
   },
   {
-    "match": "568cd44a200f vs 1775173b4ba8",
+    "match": "team_2cd6924b9173 vs team_51f4e76f9644",
     "date": "12-03-2025"
   },
   {
-    "match": "4fc9baf21034 vs f711ec7a2ed3",
+    "match": "team_1c5442c0461e vs team_7b081adf1f58",
     "date": "12-03-2025"
   },
   {
-    "match": "f53424f05135 vs 93330b415214",
+    "match": "team_c4911f9718b4 vs team_bd172eeb9d96",
     "date": "12-03-2025"
   },
   {
-    "match": "240dd2121e44 vs 8c5830f24228",
+    "match": "team_005131c0e2cb vs team_8fd1a6671fb3",
     "date": "08-04-2025"
   },
   {
-    "match": "4fc9baf21034 vs 93330b415214",
+    "match": "team_1c5442c0461e vs team_bd172eeb9d96",
     "date": "08-04-2025"
   },
   {
-    "match": "6096c6fc3b0f vs 9457f1ba26ee",
+    "match": "team_e0bf03ddb298 vs team_97ee5474801c",
     "date": "09-04-2025"
   },
   {
-    "match": "bdec8a408440 vs 568cd44a200f",
+    "match": "team_268fb4595b07 vs team_2cd6924b9173",
     "date": "09-04-2025"
   },
   {
-    "match": "568cd44a200f vs bdec8a408440",
+    "match": "team_2cd6924b9173 vs team_268fb4595b07",
     "date": "15-04-2025"
   },
   {
-    "match": "9457f1ba26ee vs 6096c6fc3b0f",
+    "match": "team_97ee5474801c vs team_e0bf03ddb298",
     "date": "15-04-2025"
   },
   {
-    "match": "93330b415214 vs 4fc9baf21034",
+    "match": "team_bd172eeb9d96 vs team_1c5442c0461e",
     "date": "16-04-2025"
   },
   {
-    "match": "8c5830f24228 vs 240dd2121e44",
+    "match": "team_8fd1a6671fb3 vs team_005131c0e2cb",
     "date": "16-04-2025"
   },
   {
-    "match": "4fc9baf21034 vs bdec8a408440",
+    "match": "team_1c5442c0461e vs team_268fb4595b07",
     "date": "29-04-2025"
   },
   {
-    "match": "6096c6fc3b0f vs 8c5830f24228",
+    "match": "team_e0bf03ddb298 vs team_8fd1a6671fb3",
     "date": "30-04-2025"
   },
   {
-    "match": "8c5830f24228 vs 6096c6fc3b0f",
+    "match": "team_8fd1a6671fb3 vs team_e0bf03ddb298",
     "date": "06-05-2025"
   },
   {
-    "match": "bdec8a408440 vs 4fc9baf21034",
+    "match": "team_268fb4595b07 vs team_1c5442c0461e",
     "date": "07-05-2025"
   },
   {
-    "match": "bdec8a408440 vs 8c5830f24228",
+    "match": "team_268fb4595b07 vs team_8fd1a6671fb3",
     "date": "31-05-2025"
+  },
+  {
+    "match": "team_13d462033389 vs team_fbe82ec72c3b",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_8fe1c826dd62",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_13d462033389",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_c501d8ac0847",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_13d462033389",
+    "date": "19-OCT-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_fbe82ec72c3b",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_8fe1c826dd62",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_c501d8ac0847",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_8fe1c826dd62",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_fbe82ec72c3b",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_13d462033389",
+    "date": "07-DEC-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_c501d8ac0847",
+    "date": "07-DEC-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_fe306f4c3de6",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_3ce98d8f2aba",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b98e453936a7",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3ce98d8f2aba vs team_c4911f9718b4",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b98e453936a7",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_3ce98d8f2aba",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3ce98d8f2aba vs team_fe306f4c3de6",
+    "date": "03-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_c4911f9718b4",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_fe306f4c3de6",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_3ce98d8f2aba",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_c4911f9718b4",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3ce98d8f2aba vs team_b98e453936a7",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_97ee5474801c",
+    "date": "15-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_767d527f7321",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_73b5797d5e2a",
+    "date": "28-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_f41954d1272f",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_f41954d1272f",
+    "date": "19-OCT-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_97ee5474801c",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_767d527f7321",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_73b5797d5e2a",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_767d527f7321",
+    "date": "24-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_97ee5474801c",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_f41954d1272f",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_73b5797d5e2a",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4822e950385c vs team_78886873716a",
+    "date": "15-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_bd172eeb9d96",
+    "date": "15-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_7ec8336709bf",
+    "date": "28-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_4822e950385c",
+    "date": "28-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_bd172eeb9d96",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_4822e950385c",
+    "date": "19-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_78886873716a",
+    "date": "03-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_4822e950385c vs team_7ec8336709bf",
+    "date": "03-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_78886873716a",
+    "date": "24-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_4822e950385c vs team_bd172eeb9d96",
+    "date": "24-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_7ec8336709bf",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_4822e950385c",
+    "date": "07-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_677a6e031e93",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_ffbe79140f35",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_e0bf03ddb298",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_4556fff6e2ba",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_4556fff6e2ba",
+    "date": "20-OCT-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_677a6e031e93",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_ffbe79140f35",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_e0bf03ddb298",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_677a6e031e93",
+    "date": "23-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_ffbe79140f35",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_e0bf03ddb298",
+    "date": "08-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_4556fff6e2ba",
+    "date": "08-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_2cd2088171b7",
+    "date": "14-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_9d68edb3a129",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_32b4caa41c27",
+    "date": "29-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_3e0ef33c950b",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_9d68edb3a129",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_3e0ef33c950b",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_2cd2088171b7",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_32b4caa41c27",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_2cd2088171b7",
+    "date": "23-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_9d68edb3a129",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_32b4caa41c27",
+    "date": "08-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_3e0ef33c950b",
+    "date": "09-DEC-21 06.00.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_c61a5e47bd85",
+    "date": "14-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_bdfd899b7367",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_c178a4d03d9c",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bdfd899b7367 vs team_06db06c8d841",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_bdfd899b7367",
+    "date": "20-OCT-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_06db06c8d841",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bdfd899b7367 vs team_c61a5e47bd85",
+    "date": "02-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_c178a4d03d9c",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_c61a5e47bd85",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_bdfd899b7367",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_06db06c8d841",
+    "date": "08-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bdfd899b7367 vs team_c178a4d03d9c",
+    "date": "08-DEC-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_64208223658a",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d0b29bc7087a vs team_b89dc80fb627",
+    "date": "14-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_d0b29bc7087a",
+    "date": "29-SEP-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_b3caca4a5baf",
+    "date": "29-SEP-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_b89dc80fb627",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_d0b29bc7087a",
+    "date": "20-OCT-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d0b29bc7087a vs team_b3caca4a5baf",
+    "date": "02-NOV-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_64208223658a",
+    "date": "02-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_b89dc80fb627",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d0b29bc7087a vs team_64208223658a",
+    "date": "23-NOV-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_b3caca4a5baf",
+    "date": "08-DEC-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_d0b29bc7087a",
+    "date": "08-DEC-21 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_13d462033389",
+    "date": "15-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_bd172eeb9d96",
+    "date": "15-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_677a6e031e93",
+    "date": "16-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_b98e453936a7",
+    "date": "16-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_c178a4d03d9c",
+    "date": "22-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_b89dc80fb627",
+    "date": "22-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_767d527f7321",
+    "date": "23-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_2cd2088171b7",
+    "date": "23-FEB-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_c61a5e47bd85",
+    "date": "08-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_7ec8336709bf",
+    "date": "08-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_f41954d1272f",
+    "date": "09-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_8fe1c826dd62",
+    "date": "09-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_ffbe79140f35",
+    "date": "15-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_c4911f9718b4",
+    "date": "15-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_b3caca4a5baf",
+    "date": "16-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_3e0ef33c950b",
+    "date": "16-MAR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_c4911f9718b4",
+    "date": "05-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_b98e453936a7",
+    "date": "05-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_bd172eeb9d96",
+    "date": "06-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_677a6e031e93",
+    "date": "06-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_b3caca4a5baf",
+    "date": "12-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_3e0ef33c950b",
+    "date": "12-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_13d462033389",
+    "date": "13-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_ffbe79140f35",
+    "date": "13-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
+    "date": "26-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_3e0ef33c950b",
+    "date": "27-APR-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3e0ef33c950b vs team_b98e453936a7",
+    "date": "03-MAY-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
+    "date": "04-MAY-22 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_bd172eeb9d96",
+    "date": "28-MAY-22 08.35.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_25f36d590dfb",
+    "date": "21-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_c4911f9718b4",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_677a6e031e93",
+    "date": "27-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_c61a5e47bd85",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_c4911f9718b4",
+    "date": "03-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_677a6e031e93",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_25f36d590dfb",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_c61a5e47bd85",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_c61a5e47bd85",
+    "date": "01-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_677a6e031e93",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_25f36d590dfb",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_c4911f9718b4",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_78886873716a",
+    "date": "21-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_371140b8ed4d",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_7ec8336709bf",
+    "date": "27-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_bd172eeb9d96",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_371140b8ed4d",
+    "date": "03-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_7ec8336709bf",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_78886873716a",
+    "date": "25-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_bd172eeb9d96",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_bd172eeb9d96",
+    "date": "01-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_7ec8336709bf",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_78886873716a",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_371140b8ed4d",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_fe306f4c3de6",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_5ae079f1e271",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_a395e47777ff",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_5ae079f1e271 vs team_13d462033389",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_5ae079f1e271",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_a395e47777ff",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_13d462033389",
+    "date": "25-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_5ae079f1e271 vs team_fe306f4c3de6",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_13d462033389",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_5ae079f1e271 vs team_a395e47777ff",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_5ae079f1e271",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_fe306f4c3de6",
+    "date": "09-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_b98e453936a7",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4a1d81b025e6 vs team_9d68edb3a129",
+    "date": "21-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_767d527f7321",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_4a1d81b025e6",
+    "date": "27-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_b98e453936a7",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4a1d81b025e6 vs team_767d527f7321",
+    "date": "03-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_4a1d81b025e6",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_9d68edb3a129",
+    "date": "25-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_4a1d81b025e6",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_767d527f7321",
+    "date": "01-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_9d68edb3a129",
+    "date": "09-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_4a1d81b025e6 vs team_b98e453936a7",
+    "date": "09-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_06db06c8d841",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d87f70657c47 vs team_0a8a083d87a2",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_0a8a083d87a2 vs team_b3caca4a5baf",
+    "date": "28-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_d87f70657c47",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_d87f70657c47",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_0a8a083d87a2",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d87f70657c47 vs team_b3caca4a5baf",
+    "date": "24-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_0a8a083d87a2 vs team_06db06c8d841",
+    "date": "24-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_0a8a083d87a2 vs team_d87f70657c47",
+    "date": "02-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_b3caca4a5baf",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_0a8a083d87a2",
+    "date": "08-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d87f70657c47 vs team_06db06c8d841",
+    "date": "08-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_c501d8ac0847",
+    "date": "20-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_ca1655b33ed6 vs team_97ee5474801c",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_64208223658a",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_ca1655b33ed6",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_ca1655b33ed6",
+    "date": "04-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_97ee5474801c",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_c501d8ac0847",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ca1655b33ed6 vs team_64208223658a",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_ca1655b33ed6",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_64208223658a",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_97ee5474801c",
+    "date": "08-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_ca1655b33ed6 vs team_c501d8ac0847",
+    "date": "08-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_b89dc80fb627",
+    "date": "20-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_e3e2fbe2a982",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e3e2fbe2a982 vs team_4556fff6e2ba",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_e0bf03ddb298",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_4556fff6e2ba",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e3e2fbe2a982 vs team_b89dc80fb627",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_e0bf03ddb298",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_e3e2fbe2a982",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_4556fff6e2ba",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e3e2fbe2a982 vs team_e0bf03ddb298",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_e3e2fbe2a982",
+    "date": "08-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_b89dc80fb627",
+    "date": "08-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_100c78fd1d5d",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_2cd2088171b7",
+    "date": "20-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_100c78fd1d5d vs team_8fe1c826dd62",
+    "date": "28-OCT-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_fbe82ec72c3b",
+    "date": "28-OCT-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_100c78fd1d5d vs team_2cd2088171b7",
+    "date": "04-NOV-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_8fe1c826dd62",
+    "date": "04-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_100c78fd1d5d",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_fbe82ec72c3b",
+    "date": "24-NOV-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_100c78fd1d5d vs team_fbe82ec72c3b",
+    "date": "02-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_8fe1c826dd62",
+    "date": "02-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_2cd2088171b7",
+    "date": "08-DEC-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_100c78fd1d5d",
+    "date": "09-DEC-20 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_b98e453936a7",
+    "date": "16-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_8fe1c826dd62",
+    "date": "16-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b89dc80fb627",
+    "date": "17-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_97ee5474801c",
+    "date": "17-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ca1655b33ed6 vs team_677a6e031e93",
+    "date": "23-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b3caca4a5baf",
+    "date": "23-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_13d462033389",
+    "date": "24-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_bd172eeb9d96",
+    "date": "24-FEB-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_fe306f4c3de6",
+    "date": "09-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_06db06c8d841",
+    "date": "09-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_fbe82ec72c3b",
+    "date": "10-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_e0bf03ddb298",
+    "date": "10-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_371140b8ed4d",
+    "date": "16-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_9d68edb3a129",
+    "date": "16-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_ca1655b33ed6",
+    "date": "17-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_c4911f9718b4",
+    "date": "17-MAR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_97ee5474801c",
+    "date": "06-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_b98e453936a7",
+    "date": "06-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b3caca4a5baf",
+    "date": "07-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_8fe1c826dd62",
+    "date": "07-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_fe306f4c3de6",
+    "date": "13-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_677a6e031e93",
+    "date": "13-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_13d462033389",
+    "date": "14-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_bd172eeb9d96",
+    "date": "14-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_b3caca4a5baf",
+    "date": "27-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_13d462033389",
+    "date": "28-APR-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_8fe1c826dd62",
+    "date": "04-MAY-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_bd172eeb9d96",
+    "date": "05-MAY-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_b3caca4a5baf",
+    "date": "29-MAY-21 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_c6728117c52b",
+    "date": "18-SEP-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_bd172eeb9d96",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_c501d8ac0847",
+    "date": "01-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_8fe1c826dd62",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_8fe1c826dd62",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_bd172eeb9d96",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_c501d8ac0847",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_c6728117c52b",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_c501d8ac0847",
+    "date": "26-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_8fe1c826dd62",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_c6728117c52b",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_bd172eeb9d96",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_9d6195a1b56d",
+    "date": "18-SEP-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_f53563ec3186",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_677a6e031e93",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_a395e47777ff",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_f53563ec3186",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_677a6e031e93",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_a395e47777ff",
+    "date": "06-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_9d6195a1b56d",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_a395e47777ff",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_677a6e031e93",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_9d6195a1b56d",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_f53563ec3186",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_13d462033389",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_9d68edb3a129",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_78886873716a",
+    "date": "01-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_0a0663fb0294",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_0a0663fb0294",
+    "date": "22-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_9d68edb3a129",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_78886873716a",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_13d462033389",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_78886873716a",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_0a0663fb0294",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_9d68edb3a129",
+    "date": "11-DEC-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_13d462033389",
+    "date": "11-DEC-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b89dc80fb627",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_25f36d590dfb",
+    "date": "18-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_099f7fbab1ee",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_c4911f9718b4",
+    "date": "01-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_099f7fbab1ee",
+    "date": "22-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_25f36d590dfb",
+    "date": "22-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_b89dc80fb627",
+    "date": "06-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_c4911f9718b4",
+    "date": "06-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_099f7fbab1ee",
+    "date": "26-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_c4911f9718b4",
+    "date": "26-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_25f36d590dfb",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_b89dc80fb627",
+    "date": "11-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_b98e453936a7",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_5a2e1fb43c58",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_5a2e1fb43c58 vs team_1b38e8de004a",
+    "date": "02-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_c61a5e47bd85",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_1b38e8de004a",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_5a2e1fb43c58 vs team_b98e453936a7",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_5a2e1fb43c58",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_c61a5e47bd85",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_1b38e8de004a",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_5a2e1fb43c58 vs team_c61a5e47bd85",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_5a2e1fb43c58",
+    "date": "10-DEC-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c61a5e47bd85 vs team_b98e453936a7",
+    "date": "10-DEC-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_3a417dd52b43",
+    "date": "17-SEP-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_e0bf03ddb298",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3a417dd52b43 vs team_97ee5474801c",
+    "date": "02-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_7ec8336709bf",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_97ee5474801c",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3a417dd52b43 vs team_e0bf03ddb298",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_3a417dd52b43",
+    "date": "05-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_7ec8336709bf",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_97ee5474801c",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_3a417dd52b43 vs team_7ec8336709bf",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_3a417dd52b43",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_e0bf03ddb298",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_64208223658a",
+    "date": "17-SEP-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_fbe82ec72c3b",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_ffbe79140f35",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_747b48d12714",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_64208223658a",
+    "date": "23-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_747b48d12714",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_fbe82ec72c3b",
+    "date": "05-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_ffbe79140f35",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_64208223658a vs team_747b48d12714",
+    "date": "27-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_ffbe79140f35",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_64208223658a",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_fbe82ec72c3b",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_706539404554",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_c178a4d03d9c",
+    "date": "17-SEP-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_767d527f7321",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_b3caca4a5baf",
+    "date": "02-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_b3caca4a5baf",
+    "date": "23-OCT-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_706539404554",
+    "date": "23-OCT-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_767d527f7321",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_c178a4d03d9c",
+    "date": "05-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_b3caca4a5baf",
+    "date": "27-NOV-19 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c178a4d03d9c vs team_767d527f7321",
+    "date": "27-NOV-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_c178a4d03d9c",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_706539404554",
+    "date": "10-DEC-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_8fe1c826dd62",
+    "date": "18-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b98e453936a7",
+    "date": "18-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_706539404554",
+    "date": "19-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_fbe82ec72c3b",
+    "date": "19-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_677a6e031e93",
+    "date": "25-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_e0bf03ddb298",
+    "date": "25-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_13d462033389",
+    "date": "26-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_b89dc80fb627",
+    "date": "26-FEB-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_9d68edb3a129",
+    "date": "10-MAR-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_9d6195a1b56d",
+    "date": "10-MAR-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_97ee5474801c",
+    "date": "11-MAR-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_c4911f9718b4",
+    "date": "11-MAR-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_bd172eeb9d96",
+    "date": "07-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_747b48d12714",
+    "date": "07-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_b3caca4a5baf",
+    "date": "08-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_1b38e8de004a",
+    "date": "08-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d68edb3a129 vs team_8fe1c826dd62",
+    "date": "12-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_c4911f9718b4",
+    "date": "13-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_677a6e031e93",
+    "date": "14-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_747b48d12714",
+    "date": "15-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_8fe1c826dd62",
+    "date": "18-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_677a6e031e93",
+    "date": "19-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_677a6e031e93",
+    "date": "23-AUG-20 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_c4911f9718b4",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_97ee5474801c",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_7ade9ad71a41",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_c501d8ac0847",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_7ade9ad71a41",
+    "date": "24-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_c4911f9718b4",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_c501d8ac0847",
+    "date": "06-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_97ee5474801c",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_7ade9ad71a41",
+    "date": "28-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_c501d8ac0847",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_97ee5474801c",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_c4911f9718b4",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_7b081adf1f58",
+    "date": "18-SEP-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_9d6195a1b56d",
+    "date": "18-SEP-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_e0bf03ddb298",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_7ec8336709bf",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_9d6195a1b56d",
+    "date": "24-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_7ec8336709bf",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_7b081adf1f58",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_e0bf03ddb298",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_e0bf03ddb298",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_7ec8336709bf",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_9d6195a1b56d",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ec8336709bf vs team_7b081adf1f58",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_8fe1c826dd62",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_1b38e8de004a",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_f53563ec3186",
+    "date": "03-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_b98e453936a7",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_1b38e8de004a",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_f53563ec3186",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_b98e453936a7",
+    "date": "06-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_8fe1c826dd62",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_b98e453936a7",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_f53563ec3186",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_1b38e8de004a",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_f53563ec3186 vs team_8fe1c826dd62",
+    "date": "11-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2e9130a8ac4b vs team_fe306f4c3de6",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_25f36d590dfb",
+    "date": "18-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_2e9130a8ac4b",
+    "date": "03-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_c6728117c52b",
+    "date": "03-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_fe306f4c3de6",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_2e9130a8ac4b",
+    "date": "24-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_25f36d590dfb",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2e9130a8ac4b vs team_c6728117c52b",
+    "date": "06-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_25f36d590dfb vs team_c6728117c52b",
+    "date": "28-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_2e9130a8ac4b",
+    "date": "28-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2e9130a8ac4b vs team_25f36d590dfb",
+    "date": "11-DEC-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_c6728117c52b vs team_fe306f4c3de6",
+    "date": "11-DEC-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_b09fa8a8cd48",
+    "date": "19-SEP-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_677a6e031e93",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_767d527f7321",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b09fa8a8cd48 vs team_ffbe79140f35",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b09fa8a8cd48 vs team_677a6e031e93",
+    "date": "23-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_ffbe79140f35",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_767d527f7321",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_b09fa8a8cd48",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b09fa8a8cd48 vs team_767d527f7321",
+    "date": "27-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_ffbe79140f35",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_677a6e031e93",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_b09fa8a8cd48",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_de332469ca2a",
+    "date": "19-SEP-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_747b48d12714",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_de332469ca2a vs team_13d462033389",
+    "date": "02-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_78886873716a",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_13d462033389",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_de332469ca2a vs team_747b48d12714",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_78886873716a",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_de332469ca2a",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_13d462033389",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_de332469ca2a vs team_78886873716a",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_747b48d12714",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_de332469ca2a",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_97a70624a456",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_71773ab35248 vs team_d345c3dd7ff8",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_bd172eeb9d96",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_71773ab35248",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_d345c3dd7ff8",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_71773ab35248",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_97a70624a456",
+    "date": "07-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_71773ab35248 vs team_bd172eeb9d96",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_71773ab35248",
+    "date": "27-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_bd172eeb9d96",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_d345c3dd7ff8",
+    "date": "12-DEC-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_71773ab35248 vs team_97a70624a456",
+    "date": "12-DEC-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_b89dc80fb627",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_2cd2088171b7",
+    "date": "19-SEP-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_32b4caa41c27",
+    "date": "02-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_706539404554",
+    "date": "02-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_706539404554",
+    "date": "23-OCT-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_b89dc80fb627",
+    "date": "23-OCT-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_32b4caa41c27",
+    "date": "07-NOV-18 05.55.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_2cd2088171b7",
+    "date": "07-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_706539404554",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_32b4caa41c27",
+    "date": "27-NOV-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_706539404554 vs team_2cd2088171b7",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_32b4caa41c27 vs team_b89dc80fb627",
+    "date": "12-DEC-18 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_8fe1c826dd62",
+    "date": "12-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_fe306f4c3de6",
+    "date": "12-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_97ee5474801c",
+    "date": "13-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_bd172eeb9d96",
+    "date": "13-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_e0bf03ddb298",
+    "date": "19-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_677a6e031e93",
+    "date": "19-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2e9130a8ac4b vs team_13d462033389",
+    "date": "20-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b89dc80fb627",
+    "date": "20-FEB-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_9d6195a1b56d",
+    "date": "05-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_767d527f7321",
+    "date": "05-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_2cd2088171b7",
+    "date": "06-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_97a70624a456",
+    "date": "06-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_2e9130a8ac4b",
+    "date": "12-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_c4911f9718b4",
+    "date": "12-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_747b48d12714",
+    "date": "13-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_b98e453936a7",
+    "date": "13-MAR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_fe306f4c3de6",
+    "date": "09-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_13d462033389",
+    "date": "09-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_b89dc80fb627",
+    "date": "10-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_e0bf03ddb298",
+    "date": "10-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_767d527f7321",
+    "date": "16-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_2cd2088171b7",
+    "date": "16-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b98e453936a7",
+    "date": "17-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_9d6195a1b56d",
+    "date": "17-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_767d527f7321",
+    "date": "30-APR-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_b98e453936a7",
+    "date": "01-MAY-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_e0bf03ddb298",
+    "date": "07-MAY-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_767d527f7321 vs team_9d6195a1b56d",
+    "date": "08-MAY-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_b98e453936a7",
+    "date": "01-JUN-19 08.00.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_d5170e5ae66e",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_d345c3dd7ff8",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_ffbe79140f35",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_2cd2088171b7",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_2cd2088171b7",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_d5170e5ae66e",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_ffbe79140f35",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_d345c3dd7ff8",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_ffbe79140f35",
+    "date": "22-NOV-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_2cd2088171b7",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_d5170e5ae66e",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_d345c3dd7ff8",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_9d86c9d46201",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_8fe1c826dd62",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_677a6e031e93",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d86c9d46201 vs team_77f99e28c524",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d86c9d46201 vs team_8fe1c826dd62",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_77f99e28c524",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_9d86c9d46201",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_677a6e031e93",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d86c9d46201 vs team_677a6e031e93",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_77f99e28c524",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_8fe1c826dd62",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_9d86c9d46201",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_c4911f9718b4",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_f22a1768a9f8",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f22a1768a9f8 vs team_97a70624a456",
+    "date": "27-SEP-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_b3caca4a5baf",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f22a1768a9f8 vs team_c4911f9718b4",
+    "date": "18-OCT-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_97a70624a456",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_b3caca4a5baf",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_f22a1768a9f8",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f22a1768a9f8 vs team_b3caca4a5baf",
+    "date": "22-NOV-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_97a70624a456",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_c4911f9718b4",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_f22a1768a9f8",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_b89dc80fb627",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_f41954d1272f",
+    "date": "12-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_a395e47777ff",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_e0bf03ddb298",
+    "date": "27-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_a395e47777ff",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_f41954d1272f",
+    "date": "18-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_e0bf03ddb298",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_b89dc80fb627",
+    "date": "31-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_e0bf03ddb298",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_a395e47777ff",
+    "date": "22-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_f41954d1272f",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a395e47777ff vs team_b89dc80fb627",
+    "date": "05-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_06db06c8d841",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_6667ed628667 vs team_12531b139a4d",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_12531b139a4d vs team_b98e453936a7",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_6667ed628667",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_12531b139a4d vs team_06db06c8d841",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_6667ed628667 vs team_b98e453936a7",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_12531b139a4d",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_6667ed628667",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_12531b139a4d vs team_6667ed628667",
+    "date": "21-NOV-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_b98e453936a7",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_12531b139a4d",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_6667ed628667 vs team_06db06c8d841",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_1b38e8de004a",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0784f8c02461 vs team_13d462033389",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_78886873716a",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_0784f8c02461",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_1b38e8de004a",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0784f8c02461 vs team_78886873716a",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_13d462033389",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_0784f8c02461",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_78886873716a",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_0784f8c02461",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_13d462033389",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0784f8c02461 vs team_1b38e8de004a",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_73b5797d5e2a",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_7ade9ad71a41",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_fe306f4c3de6",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_fbe82ec72c3b",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_73b5797d5e2a",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_fe306f4c3de6",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_7ade9ad71a41",
+    "date": "01-NOV-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_fbe82ec72c3b",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_fe306f4c3de6",
+    "date": "21-NOV-17 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_fbe82ec72c3b",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_7ade9ad71a41",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fbe82ec72c3b vs team_73b5797d5e2a",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_97ee5474801c",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_a0aa12047d6b",
+    "date": "13-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_bd172eeb9d96",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a0aa12047d6b vs team_9d6195a1b56d",
+    "date": "26-SEP-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_9d6195a1b56d",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a0aa12047d6b vs team_97ee5474801c",
+    "date": "17-OCT-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_bd172eeb9d96",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_a0aa12047d6b",
+    "date": "01-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_9d6195a1b56d",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a0aa12047d6b vs team_bd172eeb9d96",
+    "date": "21-NOV-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_97ee5474801c",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_a0aa12047d6b",
+    "date": "06-DEC-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_9d6195a1b56d",
+    "date": "13-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_13d462033389",
+    "date": "13-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b98e453936a7",
+    "date": "14-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_8fe1c826dd62",
+    "date": "14-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b3caca4a5baf vs team_e0bf03ddb298",
+    "date": "20-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_73b5797d5e2a",
+    "date": "20-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_2cd2088171b7",
+    "date": "21-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_78886873716a vs team_97a70624a456",
+    "date": "21-FEB-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_fe306f4c3de6",
+    "date": "06-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_bd172eeb9d96",
+    "date": "06-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_b89dc80fb627",
+    "date": "07-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_d5170e5ae66e",
+    "date": "07-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_2cd2088171b7 vs team_06db06c8d841",
+    "date": "13-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_78886873716a",
+    "date": "13-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_677a6e031e93",
+    "date": "14-MAR-18 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_b3caca4a5baf",
+    "date": "14-MAR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_677a6e031e93",
+    "date": "03-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_bd172eeb9d96",
+    "date": "03-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_97a70624a456",
+    "date": "04-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_13d462033389",
+    "date": "04-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_e0bf03ddb298",
+    "date": "10-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_b98e453936a7",
+    "date": "10-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_06db06c8d841",
+    "date": "11-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_b89dc80fb627",
+    "date": "11-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b98e453936a7 vs team_97a70624a456",
+    "date": "24-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_bd172eeb9d96",
+    "date": "25-APR-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_677a6e031e93",
+    "date": "01-MAY-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97a70624a456 vs team_b98e453936a7",
+    "date": "02-MAY-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_b98e453936a7",
+    "date": "26-MAY-18 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_a84d42fb5277",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_f9ed5c325e83",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f9ed5c325e83 vs team_d5170e5ae66e",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a84d42fb5277 vs team_8fe1c826dd62",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f9ed5c325e83 vs team_a84d42fb5277",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_d5170e5ae66e",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_8fe1c826dd62",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a84d42fb5277 vs team_f9ed5c325e83",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f9ed5c325e83 vs team_8fe1c826dd62",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_a84d42fb5277 vs team_d5170e5ae66e",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d5170e5ae66e vs team_f9ed5c325e83",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_a84d42fb5277",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_1b38e8de004a",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_73b5797d5e2a",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_4556fff6e2ba",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_ffbe79140f35",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_ffbe79140f35",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_73b5797d5e2a",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_1b38e8de004a",
+    "date": "01-NOV-16 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_4556fff6e2ba",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_73b5797d5e2a vs team_ffbe79140f35",
+    "date": "23-NOV-16 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_4556fff6e2ba",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_4556fff6e2ba vs team_73b5797d5e2a",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_1b38e8de004a",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_77f99e28c524",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_371140b8ed4d",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_e0bf03ddb298",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_13d462033389",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_371140b8ed4d",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_13d462033389",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_77f99e28c524",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_e0bf03ddb298",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_371140b8ed4d vs team_13d462033389",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_77f99e28c524 vs team_e0bf03ddb298",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_371140b8ed4d",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_77f99e28c524",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_9eeeb716a393",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_c4911f9718b4",
+    "date": "13-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_677a6e031e93",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9eeeb716a393 vs team_7b081adf1f58",
+    "date": "28-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_7b081adf1f58",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9eeeb716a393 vs team_c4911f9718b4",
+    "date": "19-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_9eeeb716a393",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_677a6e031e93",
+    "date": "01-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9eeeb716a393 vs team_677a6e031e93",
+    "date": "23-NOV-16 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_7b081adf1f58",
+    "date": "23-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_c4911f9718b4",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7b081adf1f58 vs team_9eeeb716a393",
+    "date": "06-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_d345c3dd7ff8",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_7ade9ad71a41",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_099f7fbab1ee",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_9d6195a1b56d",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_9d6195a1b56d",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_7ade9ad71a41",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_d345c3dd7ff8",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_099f7fbab1ee",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_d345c3dd7ff8 vs team_099f7fbab1ee",
+    "date": "22-NOV-16 05.00.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_9d6195a1b56d",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_7ade9ad71a41",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_9d6195a1b56d vs team_d345c3dd7ff8",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_80f123c7efcc vs team_97ee5474801c",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_f41954d1272f",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_bd172eeb9d96",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_80f123c7efcc",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_80f123c7efcc",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_97ee5474801c",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_f41954d1272f",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_80f123c7efcc vs team_bd172eeb9d96",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_80f123c7efcc",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f41954d1272f vs team_bd172eeb9d96",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_80f123c7efcc vs team_f41954d1272f",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_97ee5474801c",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_c235bea0695a",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_713c922d7942",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_713c922d7942 vs team_c501d8ac0847",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c235bea0695a vs team_fe306f4c3de6",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_fe306f4c3de6",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c235bea0695a vs team_713c922d7942",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_713c922d7942 vs team_c235bea0695a",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_c501d8ac0847",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_713c922d7942 vs team_fe306f4c3de6",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c235bea0695a vs team_c501d8ac0847",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c501d8ac0847 vs team_713c922d7942",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_c235bea0695a",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_06db06c8d841",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_0a0663fb0294",
+    "date": "14-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_b89dc80fb627",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_747b48d12714",
+    "date": "27-SEP-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_06db06c8d841",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_b89dc80fb627",
+    "date": "18-OCT-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_747b48d12714",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_0a0663fb0294",
+    "date": "02-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_0a0663fb0294 vs team_747b48d12714",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_b89dc80fb627",
+    "date": "22-NOV-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_0a0663fb0294",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_747b48d12714 vs team_06db06c8d841",
+    "date": "07-DEC-16 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_ffbe79140f35 vs team_97ee5474801c",
+    "date": "14-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_8fe1c826dd62 vs team_e0bf03ddb298",
+    "date": "14-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_1b38e8de004a",
+    "date": "15-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_f9ed5c325e83",
+    "date": "15-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_13d462033389 vs team_7ade9ad71a41",
+    "date": "21-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_099f7fbab1ee vs team_c4911f9718b4",
+    "date": "21-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_fe306f4c3de6 vs team_b89dc80fb627",
+    "date": "22-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_06db06c8d841 vs team_c235bea0695a",
+    "date": "22-FEB-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_1b38e8de004a vs team_bd172eeb9d96",
+    "date": "07-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_f9ed5c325e83 vs team_677a6e031e93",
+    "date": "07-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_ffbe79140f35",
+    "date": "08-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_8fe1c826dd62",
+    "date": "08-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_fe306f4c3de6",
+    "date": "14-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c235bea0695a vs team_06db06c8d841",
+    "date": "14-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_13d462033389",
+    "date": "15-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_099f7fbab1ee",
+    "date": "15-MAR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_e0bf03ddb298",
+    "date": "11-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_97ee5474801c vs team_7ade9ad71a41",
+    "date": "12-APR-17 05.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_c235bea0695a",
+    "date": "12-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_677a6e031e93 vs team_bd172eeb9d96",
+    "date": "12-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c235bea0695a vs team_c4911f9718b4",
+    "date": "18-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_677a6e031e93",
+    "date": "18-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_e0bf03ddb298 vs team_b89dc80fb627",
+    "date": "19-APR-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_97ee5474801c",
+    "date": "19-APR-17 07.50.00.000000000 PM"
+  },
+  {
+    "match": "team_bd172eeb9d96 vs team_c4911f9718b4",
+    "date": "02-MAY-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_7ade9ad71a41 vs team_b89dc80fb627",
+    "date": "03-MAY-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_7ade9ad71a41",
+    "date": "09-MAY-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_c4911f9718b4 vs team_bd172eeb9d96",
+    "date": "10-MAY-17 07.45.00.000000000 PM"
+  },
+  {
+    "match": "team_b89dc80fb627 vs team_bd172eeb9d96",
+    "date": "03-JUN-17 07.45.00.000000000 PM"
   }
 ]
