@@ -20,13 +20,19 @@ The project is organized into modular components:
 2. Build cleaned relational datasets: `python script.py`
 3. Impute missing statistical fields without overwriting observed values: `python src/impute_missing_stats.py`
 4. Add documented advanced metrics to processed CSVs: `python src/enrich_advanced_metrics.py`
-5. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
-6. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
-7. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+5. Build PCA feature matrix and dimensionality artifacts: `python src/build_pca_feature_matrix.py`
+6. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
+7. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
+8. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
 
 Advanced metric enrichment writes only to `data/processed`. It does not modify
 `data/raw`. Metrics whose cited methods require missing event locations, shot
 populations, tracking data, or fitted model coefficients remain `NULL` and are
 explained in `data/processed/metadata/advanced_metric_coverage.csv`.
+
+The PCA workflow builds a player-season feature matrix, applies median/null
+handling, one-hot encoding, `StandardScaler`, and scikit-learn PCA. Outputs are
+saved under `data/processed/features/`, `artifacts/`, and
+`reports/pca_feature_matrix_report.md`.
 
 For detailed information about each component, refer to the README files in the respective subdirectories.

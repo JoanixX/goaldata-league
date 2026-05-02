@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-05-01T22:13:38",
+  "input": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\data\\processed\\stats\\player_season_stats_cleaned.csv",
+  "feature_matrix": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\data\\processed\\features\\player_season_feature_matrix.csv",
+  "rows": 1458,
+  "numeric_columns": [
+    "matches_played",
+    "minutes_played",
+    "goals",
+    "assists",
+    "shots",
+    "shots_on_target",
+    "passes_completed",
+    "passes_attempted",
+    "tackles",
+    "interceptions",
+    "fouls_committed",
+    "yellow_cards",
+    "red_cards",
+    "minutes_per_match",
+    "goals_per90",
+    "assists_per90",
+    "shots_per90",
+    "shots_on_target_per90",
+    "passes_completed_per90",
+    "passes_attempted_per90",
+    "tackles_per90",
+    "interceptions_per90",
+    "fouls_committed_per90",
+    "cards_per90",
+    "shot_accuracy",
+    "pass_accuracy",
+    "goal_conversion_rate",
+    "defensive_actions_per90",
+    "discipline_points_per90"
+  ],
+  "categorical_columns": [
+    "season",
+    "position_group"
+  ],
+  "encoded_feature_count": 37,
+  "optimal_components_90": 18,
+  "cumulative_variance_at_optimal": 0.9035778464336047,
+  "first_two_components_variance": 0.30271015510411137,
+  "outputs": {
+    "pca_2d": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\pca_player_season_2d.csv",
+    "variance": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\pca_explained_variance.csv",
+    "loadings": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\pca_component_loadings.csv",
+    "plot": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\pca_player_season_2d.png",
+    "report": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\reports\\pca_feature_matrix_report.md"
+  }
+}

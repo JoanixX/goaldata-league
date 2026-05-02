@@ -20,6 +20,7 @@ matches_test.csv
 
 # cache
 __pycache__
+artifacts/.matplotlib-cache/
 
 # copias de seguridad
 copia_buena.csv

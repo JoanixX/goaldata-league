@@ -31,6 +31,7 @@ To solve the "Entity Resolution" problem (e.g., "Paris Saint-Germain" vs "PSG" v
 *   **`conversion_csv.py`**: A specialized tool to export the final enriched dataset into seasonal JSON files for easier consumption by frontend applications or data analysts.
 *   **`enrich_advanced_metrics.py`**: Adds documented xT/VAEP/xA/pressing/load/discipline proxy columns to processed CSVs. It writes formula provenance and coverage reports under `data/processed/metadata/`.
 *   **`advanced_metric_formulas.py`**: Central catalog of required columns, formulas, references, and "not computable from current schema" notes for advanced metrics.
+*   **`build_pca_feature_matrix.py`**: Builds the player-season feature matrix, applies preprocessing, one-hot encoding, scaling, PCA, and saves dimensionality artifacts plus a technical report.
 
 ## Enrichment Flow
 
