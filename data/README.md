@@ -181,6 +181,12 @@ La carpeta `data/raw/` conserva solo fuentes originales descargadas. No se debe
 crear dentro de `raw/` una estructura `core/events/stats`; esa normalización
 pertenece exclusivamente a `data/processed/`.
 
+Los datasets finales deben existir en CSV y Parquet. CSV se mantiene para
+compatibilidad y Parquet es obligatorio para rendimiento. El reporte
+`logs/data_quality_report.json` decide si cada tabla está lista para EDA/ML.
+No se deben duplicar filas ni inventar registros para cumplir el umbral de
+1.5M; ese requisito se cumple solo con fuentes reales integradas.
+
 ```
 data/
 │   data_dictionary.csv
