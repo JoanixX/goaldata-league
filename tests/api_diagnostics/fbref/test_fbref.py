@@ -8,10 +8,13 @@ sys.path.append(os.path.join(BASE_DIR, 'src'))
 
 from scrapers.utils import is_null
 
-CSV_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'core', 'matches.csv')
+RAW_MATCHES_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'core', 'matches.csv')
+PROCESSED_MATCHES_PATH = os.path.join(BASE_DIR, 'data', 'processed', 'core', 'matches_cleaned.csv')
+CSV_PATH = RAW_MATCHES_PATH if os.path.exists(RAW_MATCHES_PATH) else PROCESSED_MATCHES_PATH
 RESULTS_DIR = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'results', 'fbref')
 
 def test_generate_reports():
+    os.makedirs(RESULTS_DIR, exist_ok=True)
     df = pd.read_csv(CSV_PATH)
     # Placeholder for FBref diagnostics
     not_found = []
