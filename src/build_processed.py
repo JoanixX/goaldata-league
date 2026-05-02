@@ -104,15 +104,32 @@ PLAYER_SEASON_COLUMNS = [
 ]
 GOALKEEPER_COLUMNS = ["player_id", "season", "saves", "goals_conceded", "clean_sheets", "penalty_saves", "punches"]
 FOOTBALL_DATA_LEAGUES = {
+    "B1": {"competition": "Belgian Pro League", "country": "Belgium"},
     "E0": {"competition": "Premier League", "country": "England"},
     "SP1": {"competition": "La Liga", "country": "Spain"},
     "D1": {"competition": "Bundesliga", "country": "Germany"},
     "I1": {"competition": "Serie A", "country": "Italy"},
     "F1": {"competition": "Ligue 1", "country": "France"},
+    "G1": {"competition": "Super League Greece", "country": "Greece"},
+    "N1": {"competition": "Eredivisie", "country": "Netherlands"},
     "P1": {"competition": "Primeira Liga", "country": "Portugal"},
+    "SC0": {"competition": "Scottish Premiership", "country": "Scotland"},
+    "T1": {"competition": "Super Lig", "country": "Turkey"},
 }
 FOOTBALL_DATA_COLUMNS = {"Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "Referee"}
-TOP_LEAGUE_NAMES = {"Premier League", "La Liga", "Ligue 1", "Bundesliga", "Serie A"}
+TOP_LEAGUE_NAMES = {
+    "Premier League",
+    "La Liga",
+    "Ligue 1",
+    "Bundesliga",
+    "Serie A",
+    "Primeira Liga",
+    "Eredivisie",
+    "Belgian Pro League",
+    "Scottish Premiership",
+    "Super Lig",
+    "Super League Greece",
+}
 COUNTRY_CODES = {
     "ARG": "Argentina",
     "BRA": "Brazil",

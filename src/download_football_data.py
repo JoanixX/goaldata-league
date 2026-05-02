@@ -12,12 +12,17 @@ RAW_DIR = BASE_DIR / "data" / "raw" / "football-data"
 LOGS_DIR = BASE_DIR / "logs"
 
 LEAGUES = {
+    "B1": {"competition": "Belgian Pro League", "country": "Belgium"},
     "E0": {"competition": "Premier League", "country": "England"},
     "SP1": {"competition": "La Liga", "country": "Spain"},
     "D1": {"competition": "Bundesliga", "country": "Germany"},
     "I1": {"competition": "Serie A", "country": "Italy"},
     "F1": {"competition": "Ligue 1", "country": "France"},
+    "G1": {"competition": "Super League Greece", "country": "Greece"},
+    "N1": {"competition": "Eredivisie", "country": "Netherlands"},
     "P1": {"competition": "Primeira Liga", "country": "Portugal"},
+    "SC0": {"competition": "Scottish Premiership", "country": "Scotland"},
+    "T1": {"competition": "Super Lig", "country": "Turkey"},
 }
 SEASONS = list(range(2004, 2026))
 BASE_URL = "https://www.football-data.co.uk/mmz4281/{season_code}/{league_code}.csv"
