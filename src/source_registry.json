@@ -1,0 +1,69 @@
+{
+  "policy": "Use these sources to cross-reference missing values. Do not synthesize rows when access is unavailable, licensing blocks extraction, or the source does not contain the needed fields.",
+  "sources": [
+    {
+      "name": "UEFA official match API",
+      "url": "https://match.uefa.com/v5/matches",
+      "formats": ["json"],
+      "priority": 1,
+      "fields": ["match metadata", "stadium", "city", "country", "officials", "lineups"],
+      "notes": "Already integrated; official source preferred for match metadata."
+    },
+    {
+      "name": "ESPN soccer scoreboard and summary APIs",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/",
+      "formats": ["json"],
+      "priority": 2,
+      "fields": ["scoreboard", "team stats", "key events", "some player stats"],
+      "notes": "Already integrated; useful fallback for match events and stats."
+    },
+    {
+      "name": "BALLDONTLIE UEFA Champions League API",
+      "url": "https://ucl.balldontlie.io/",
+      "formats": ["json", "openapi"],
+      "priority": 3,
+      "fields": ["matches", "players", "teams", "player match stats"],
+      "notes": "Requires API key. Candidate for filling player_match_stats without inference."
+    },
+    {
+      "name": "football-data.org",
+      "url": "https://www.football-data.org/documentation/quickstart",
+      "formats": ["json"],
+      "priority": 4,
+      "fields": ["competitions", "matches", "teams", "players", "standings"],
+      "notes": "Requires API key; useful for team/player cross-reference and schedules."
+    },
+    {
+      "name": "openfootball champions-league",
+      "url": "https://github.com/openfootball/champions-league",
+      "formats": ["txt", "csv-like"],
+      "priority": 5,
+      "fields": ["historical fixtures", "groups", "scores"],
+      "notes": "CC0 public-domain historical fixture data; useful for match coverage validation."
+    },
+    {
+      "name": "API-Football",
+      "url": "https://www.api-football.com/documentation-v3",
+      "formats": ["json"],
+      "priority": 6,
+      "fields": ["fixtures", "events", "lineups", "statistics", "players", "teams", "venues"],
+      "notes": "Requires API key; broad historical coverage candidate."
+    },
+    {
+      "name": "Statorium Champions League API",
+      "url": "https://statorium.com/champions-league-api",
+      "formats": ["json", "xml"],
+      "priority": 7,
+      "fields": ["fixtures", "results", "teams", "venues", "tables"],
+      "notes": "Commercial/requires credentials; useful for reliable match metadata."
+    },
+    {
+      "name": "Data Sports Group soccer feeds",
+      "url": "https://datasportsgroup.com/coverage/soccer/",
+      "formats": ["json", "xml"],
+      "priority": 8,
+      "fields": ["matches", "players", "teams", "competitions", "live scores"],
+      "notes": "Commercial/requires credentials; very large coverage, but licensing must be respected."
+    }
+  ]
+}
