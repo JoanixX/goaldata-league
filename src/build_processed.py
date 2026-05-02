@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.data_quality import write_quality_report
+
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 RAW_DIR = BASE_DIR / "data" / "raw"
@@ -21,6 +23,8 @@ OUTPUTS = {
     "match_stats": PROCESSED_DIR / "stats" / "player_match_stats_cleaned.csv",
     "season_stats": PROCESSED_DIR / "stats" / "player_season_stats_cleaned.csv",
 }
+MIN_RECORDS_REQUIRED = 1_500_000
+NULL_THRESHOLD = 0.0025
 
 MATCH_COLUMNS = [
     "match_id",
@@ -89,6 +93,58 @@ PLAYER_SEASON_COLUMNS = [
     "red_cards",
 ]
 GOALKEEPER_COLUMNS = ["player_id", "season", "saves", "goals_conceded", "clean_sheets", "penalty_saves", "punches"]
+NUMERIC_COLUMNS_BY_OUTPUT = {
+    "matches": ["home_score", "away_score", "possession_home", "possession_away"],
+    "players": ["age", "height_cm", "weight_kg"],
+    "goals": ["minute"],
+    "gk": ["saves", "goals_conceded", "clean_sheets", "penalty_saves", "punches"],
+    "match_stats": [
+        "minutes_played",
+        "goals",
+        "assists",
+        "shots",
+        "shots_on_target",
+        "shots_off_target",
+        "shots_blocked",
+        "passes_completed",
+        "passes_attempted",
+        "pass_accuracy",
+        "crosses_completed",
+        "crosses_attempted",
+        "dribbles",
+        "offsides",
+        "tackles",
+        "tackles_won",
+        "tackles_lost",
+        "interceptions",
+        "clearances",
+        "fouls_committed",
+        "fouls_suffered",
+        "yellow_cards",
+        "red_cards",
+        "distance_covered",
+        "top_speed",
+        "touches",
+    ],
+    "season_stats": [
+        "matches_played",
+        "minutes_played",
+        "goals",
+        "assists",
+        "shots",
+        "shots_on_target",
+        "passes_completed",
+        "passes_attempted",
+        "tackles",
+        "interceptions",
+        "fouls_committed",
+        "yellow_cards",
+        "red_cards",
+    ],
+}
+BOOLEAN_COLUMNS_BY_OUTPUT = {
+    "goals": ["is_penalty", "is_own_goal"],
+}
 
 
 def clean_text(value):
@@ -507,15 +563,61 @@ def frame(rows, columns, subset):
             df[column] = "NULL"
     if df.empty:
         return pd.DataFrame(columns=columns)
-    return df[columns].drop_duplicates(subset=subset, keep="first")
+    df = df[columns].drop_duplicates(subset=subset, keep="first")
+    return normalize_invalid_missing_values(df)
+
+
+def normalize_invalid_missing_values(df):
+    df = df.copy()
+    if {"possession_home", "possession_away"}.issubset(df.columns):
+        df[["possession_home", "possession_away"]] = df[["possession_home", "possession_away"]].astype("object")
+        home = pd.to_numeric(df["possession_home"].replace("NULL", pd.NA), errors="coerce")
+        away = pd.to_numeric(df["possession_away"].replace("NULL", pd.NA), errors="coerce")
+        invalid_pair = home.notna() & away.notna() & (home == 0) & (away == 0)
+        df.loc[invalid_pair, ["possession_home", "possession_away"]] = "NULL"
+    if {"passes_completed", "passes_attempted"}.issubset(df.columns):
+        completed = pd.to_numeric(df["passes_completed"].replace("NULL", pd.NA), errors="coerce")
+        attempted = pd.to_numeric(df["passes_attempted"].replace("NULL", pd.NA), errors="coerce")
+        invalid = completed.notna() & attempted.notna() & (completed > attempted)
+        columns = [column for column in ["passes_completed", "passes_attempted", "pass_accuracy"] if column in df.columns]
+        df.loc[invalid, columns] = "NULL"
+    if {"shots", "shots_on_target"}.issubset(df.columns):
+        shots = pd.to_numeric(df["shots"].replace("NULL", pd.NA), errors="coerce")
+        on_target = pd.to_numeric(df["shots_on_target"].replace("NULL", pd.NA), errors="coerce")
+        invalid = shots.notna() & on_target.notna() & (on_target > shots)
+        columns = [column for column in ["shots", "shots_on_target", "shots_off_target"] if column in df.columns]
+        df.loc[invalid, columns] = "NULL"
+    return df
+
+
+def parquet_ready_frame(name, df):
+    out = df.replace("NULL", pd.NA).copy()
+    for column in NUMERIC_COLUMNS_BY_OUTPUT.get(name, []):
+        if column in out.columns:
+            out[column] = pd.to_numeric(out[column], errors="coerce")
+    for column in BOOLEAN_COLUMNS_BY_OUTPUT.get(name, []):
+        if column in out.columns:
+            out[column] = out[column].map(lambda value: pd.NA if pd.isna(value) else bool(value)).astype("boolean")
+    return out.convert_dtypes()
 
 
 def write_outputs(outputs):
     for path in OUTPUTS.values():
         path.parent.mkdir(parents=True, exist_ok=True)
+    parquet_outputs = {}
     for name, df in outputs.items():
-        df.to_csv(OUTPUTS[name], index=False, encoding="utf-8")
+        csv_path = OUTPUTS[name]
+        parquet_path = csv_path.with_suffix(".parquet")
+        df.to_csv(csv_path, index=False, encoding="utf-8")
+        parquet_ready_frame(name, df).to_parquet(parquet_path, index=False)
+        parquet_outputs[name] = str(parquet_path)
     LOGS_DIR.mkdir(exist_ok=True)
+    quality_report = write_quality_report(
+        outputs,
+        LOGS_DIR / "data_quality_report.json",
+        null_threshold=NULL_THRESHOLD,
+        min_records=MIN_RECORDS_REQUIRED,
+    )
     report = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "sources": [
@@ -525,7 +627,18 @@ def write_outputs(outputs):
             "UEFA Champions League 2016-2022 Data.xlsx",
             "2021-2022 Football Player Stats.csv",
         ],
-        "outputs": {name: {"path": str(OUTPUTS[name]), "rows": int(len(df)), "columns": int(len(df.columns))} for name, df in outputs.items()},
+        "outputs": {
+            name: {
+                "path": str(OUTPUTS[name]),
+                "parquet_path": parquet_outputs[name],
+                "rows": int(len(df)),
+                "columns": int(len(df.columns)),
+                "passes_quality_gate": quality_report["datasets"][name]["passes_quality_gate"],
+            }
+            for name, df in outputs.items()
+        },
+        "quality_report": str(LOGS_DIR / "data_quality_report.json"),
+        "passes_all_quality_gates": quality_report["passes_all_quality_gates"],
     }
     with (LOGS_DIR / "build_processed_report.json").open("w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
