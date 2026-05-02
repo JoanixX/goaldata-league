@@ -16,6 +16,7 @@ def test_fill_missing_data_integration(tmp_path):
     """
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     mock_matches_path = os.path.join(base_dir, 'data', 'raw', 'core', 'matches_test.csv')
+    os.makedirs(os.path.dirname(mock_matches_path), exist_ok=True)
     
     # 1. Create mock matches data
     data = {
