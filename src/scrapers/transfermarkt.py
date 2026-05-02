@@ -12,11 +12,27 @@ from formatter import generate_player_id, soft_norm
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RESULTS_DIR = os.path.join(BASE_DIR, 'tests', 'api_diagnostics', 'results', 'transfermarkt')
+RAW_PLAYERS_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'core', 'players.csv')
+PROCESSED_PLAYERS_PATH = os.path.join(BASE_DIR, 'data', 'processed', 'core', 'players_cleaned.csv')
 
 
-def search_player(page, player_name):
+def is_missing(value):
+    return str(value).strip().upper() in {
+        '',
+        'NULL',
+        'NAN',
+        'NONE',
+        'NA',
+        'UNKNOWN',
+        'NOT_AVAILABLE_IN_SOURCE',
+        'NO_ASSIST_OR_NOT_RECORDED',
+    }
+
+
+def search_player(page, player_name, team_name=''):
     """Search Transfermarkt for a player and return their profile URL slug + ID."""
-    search_url = f"https://www.transfermarkt.pe/schnellsuche/ergebnis/schnellsuche?query={player_name}"
+    query = f"{player_name} {team_name}".strip()
+    search_url = f"https://www.transfermarkt.pe/schnellsuche/ergebnis/schnellsuche?query={query}"
     try:
         page.goto(search_url, timeout=30000, wait_until='domcontentloaded')
         time.sleep(1)
@@ -107,23 +123,30 @@ def run_transfermarkt_scraper():
     """Scrape Transfermarkt for all players with missing profile data."""
     os.makedirs(RESULTS_DIR, exist_ok=True)
     
-    players_path = os.path.join(BASE_DIR, 'data', 'raw', 'core', 'players.csv')
+    players_path = RAW_PLAYERS_PATH if os.path.exists(RAW_PLAYERS_PATH) else PROCESSED_PLAYERS_PATH
     if not os.path.exists(players_path):
-        print("[!] players.csv not found")
+        print("[!] players.csv / players_cleaned.csv not found")
         return
     
     df = pd.read_csv(players_path, keep_default_na=False)
+    teams_path = os.path.join(BASE_DIR, 'data', 'processed', 'core', 'teams_cleaned.csv')
+    if os.path.exists(teams_path) and 'team_id' in df.columns:
+        teams = pd.read_csv(teams_path, keep_default_na=False)
+        team_names = dict(zip(teams.get('team_id', []), teams.get('team_name', [])))
+    else:
+        team_names = {}
     
     # Find players with missing data
     needs_data = df[
-        (df['nationality'].isin(['Unknown', '', 'NULL'])) | 
-        (df['position'].isin(['Unknown', '', 'NULL'])) |
-        (df['height_cm'].isin(['', 'NULL', 0, '0']))
+        (df['nationality'].map(is_missing)) |
+        (df['position'].map(is_missing)) |
+        (df['height_cm'].map(is_missing))
     ]
     
     print(f"[*] Found {len(needs_data)} players with missing profile data")
     
-    batch = needs_data.head(100)
+    batch_size = int(os.environ.get('TRANSFERMARKT_BATCH_SIZE', '100'))
+    batch = needs_data.head(batch_size)
     print(f"[*] Scraping batch of {len(batch)} players from Transfermarkt...")
     
     results = []
@@ -139,10 +162,11 @@ def run_transfermarkt_scraper():
             name = row['player_name']
             if not name or name == 'Unknown':
                 continue
+            team_name = team_names.get(row.get('team_id'), '')
             
             print(f"  [{i+1}/{len(batch)}] Searching: {name}")
             
-            slug, tm_id = search_player(page, name)
+            slug, tm_id = search_player(page, name, team_name)
             if not slug:
                 print(f"    Not found on Transfermarkt")
                 continue
