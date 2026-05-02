@@ -26,4 +26,4 @@ logs/*
 logs
 
 # csv
-data/processed/*.csv
+data/processed/*/*.csv
