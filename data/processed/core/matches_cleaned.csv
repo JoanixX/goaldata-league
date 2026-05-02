@@ -43,7 +43,7 @@ match_c8eba28b6ae1,2011-2012,14-03-2012,team_91cb315a6405,team_81bd8fe38f89,Stam
 match_72d78720ca4c,2011-2012,22-02-2012,team_6a5b4d7eaece,team_7ec8336709bf,Stade Velodrome,Marseille,Francia,Cüneyt Çakır,1,0,0.59,0.41
 match_83cf409345a8,2011-2012,13-03-2012,team_7ec8336709bf,team_6a5b4d7eaece,San Siro,Milán,Italia,Pedro Proença,2,1,0.48,0.52
 match_41f1127d8fba,2011-2012,22-02-2012,team_7aaf6c53e9fe,team_005131c0e2cb,St. Jakob-Park,Basilea,Suiza,Nicola Rizzoli,1,0,0.39,0.61
-match_de7f0a4540f3,2011-2012,13-03-2012,team_005131c0e2cb,team_7aaf6c53e9fe,Allianz Arena,Munich,Alemania,Mark Clattenburg,7,0,0.0,0.0
+match_de7f0a4540f3,2011-2012,13-03-2012,team_005131c0e2cb,team_7aaf6c53e9fe,Allianz Arena,Munich,Alemania,Mark Clattenburg,7,0,NULL,NULL
 match_186f6225b816,2011-2012,27-03-2012,team_a617f924ca75,team_bd172eeb9d96,GSP Stadium,Nicosia,Chipre,Felix Brych,0,3,0.22,0.78
 match_84cab05cff63,2011-2012,04-04-2012,team_bd172eeb9d96,team_a617f924ca75,Santiago Bernabeu,Madrid,España,Gianluca Rocchi,5,2,0.7,0.3
 match_e0bc27f50a6a,2011-2012,27-03-2012,team_41d823ab960e,team_91cb315a6405,Estadio da Luz,Lisboa,Portugal,Paolo Tagliavento,0,1,0.56,0.44
@@ -294,7 +294,7 @@ match_b63de750600f,2020-2021,09-03-2021,team_97ee5474801c,team_ba5feb35eabd,Sign
 match_8e781df9ee3e,2020-2021,23-02-2021,team_7c96c6c75fa1,team_91cb315a6405,Arena Nationala,Bucarest,Rumania,Felix Brych,0,1,0.37,0.63
 match_6781ee0dbfec,2020-2021,17-03-2021,team_91cb315a6405,team_7c96c6c75fa1,Stamford Bridge,Londres,Inglaterra,Daniele Orsato,2,0,0.56,0.44
 match_e42e6d0e8f6d,2020-2021,23-02-2021,team_86026961dc19,team_005131c0e2cb,Stadio Olimpico,Roma,Italia,Orel Grinfeeld,1,4,0.44,0.56
-match_5fc95fda45a4,2020-2021,17-03-2021,team_005131c0e2cb,team_86026961dc19,Allianz Arena,Munich,Alemania,István Kovács,2,1,0.0,0.0
+match_5fc95fda45a4,2020-2021,17-03-2021,team_005131c0e2cb,team_86026961dc19,Allianz Arena,Munich,Alemania,István Kovács,2,1,NULL,NULL
 match_694d2a230418,2020-2021,24-02-2021,team_9d68edb3a129,team_bd172eeb9d96,Gewiss Stadium,Bergamo,Italia,Tobias Stieler,0,1,0.31,0.69
 match_d659e5caf033,2020-2021,16-03-2021,team_bd172eeb9d96,team_9d68edb3a129,Santiago Bernabeu,Madrid,España,Danny Makkelie,3,1,0.53,0.47
 match_e64436bd970e,2020-2021,24-02-2021,team_481fd21575ce,team_13d462033389,Puskas Arena,Budapest,Hungria,Artur Soares Dias,0,2,0.39,0.61
@@ -326,7 +326,7 @@ match_a70a1b4e4cc4,2021-2022,22-02-2022,team_7e22e34a1550,team_b89dc80fb627,Esta
 match_8d2a81b10edb,2021-2022,16-03-2022,team_b89dc80fb627,team_7e22e34a1550,Allianz Stadium,Turin,Italia,Szymon Marciniak,0,3,0.58,0.42
 match_8ab11e64ada7,2021-2022,23-02-2022,team_7c96c6c75fa1,team_2cd2088171b7,Wanda Metropolitano,Madrid,España,NULL,1,1,0.37,0.63
 match_bc47f69efe2b,2021-2022,15-03-2022,team_2cd2088171b7,team_7c96c6c75fa1,Old Trafford,Manchester,Inglaterra,NULL,0,1,0.6,0.4
-match_1907a8ee3896,2021-2022,23-02-2022,team_41d823ab960e,team_2705a83a5a06,Estadio da Luz,Lisboa,Portugal,Slavko Vinčić,2,2,0.0,0.0
+match_1907a8ee3896,2021-2022,23-02-2022,team_41d823ab960e,team_2705a83a5a06,Estadio da Luz,Lisboa,Portugal,Slavko Vinčić,2,2,NULL,NULL
 match_65eae976a7cc,2021-2022,15-03-2022,team_2705a83a5a06,team_41d823ab960e,Johan Cruyff Arena,Amsterdam,Paises Bajos,Carlos del Cerro Grande,0,1,0.69,0.31
 match_eeba8fe152f8,2021-2022,05-04-2022,team_13d462033389,team_7c96c6c75fa1,Etihad Stadium,Manchester,Inglaterra,István Kovács,1,0,0.7,0.3
 match_ecf2a7f9a9f6,2021-2022,13-04-2022,team_7c96c6c75fa1,team_13d462033389,Wanda Metropolitano,Madrid,España,Daniel Siebert,0,0,0.4,0.6
@@ -425,7 +425,7 @@ match_96590cb79d95,2024-2025,05-03-2025,team_a09d29720489,team_e0bf03ddb298,Est�
 match_cc10d9a11dd2,2024-2025,05-03-2025,team_268fb4595b07,team_d177b4d1d9e6,Parc des Princes,París,Francia,Davide Massa,0,1,0.3,0.7
 match_0ed2ae72d063,2024-2025,11-03-2025,team_e0bf03ddb298,team_a09d29720489,Lluís Companys,Barcelona,España,François Letexier,3,1,0.65,0.35
 match_673e88c5a275,2024-2025,11-03-2025,team_8fd1a6671fb3,team_0784f8c02461,San Siro,Milán,Italia,Ivan Kružliak,2,1,0.44,0.56
-match_04d2cfd940dc,2024-2025,11-03-2025,team_d177b4d1d9e6,team_268fb4595b07,Anfield,Liverpool,Inglaterra,István Kovács,0,1,0.0,0.0
+match_04d2cfd940dc,2024-2025,11-03-2025,team_d177b4d1d9e6,team_268fb4595b07,Anfield,Liverpool,Inglaterra,István Kovács,0,1,NULL,NULL
 match_2969e7747e7a,2024-2025,11-03-2025,team_005131c0e2cb,team_099f7fbab1ee,Allianz Arena,Múnich,Alemania,Slavko Vinčić,3,0,0.47,0.53
 match_2744cb0106ae,2024-2025,12-03-2025,team_f0d84dbf7bfc,team_97ee5474801c,Pierre-Mauroy,Villeneuve-d'Ascq,Francia,Sandro Schärer,1,2,0.5,0.5
 match_7a78f6c3c8f2,2024-2025,12-03-2025,team_2cd6924b9173,team_51f4e76f9644,Villa Park,Birmingham,Inglaterra,Daniel Siebert,3,0,0.53,0.47
