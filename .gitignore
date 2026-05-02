@@ -24,3 +24,6 @@ copia_buena.csv
 # logs
 logs/*
 logs
+
+# csv
+data/processed/*.csv
