@@ -16,12 +16,30 @@
 \usepackage{amssymb}
 \usepackage{grffile}
 
+\graphicspath{{./}{figures/}{reports/}{reports/figures/}{artifacts/}{reports/artifacts/}}
+
 \let\Oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[2][]{%
-    \IfFileExists{\detokenize{#2}}{%
-        \Oldincludegraphics[#1]{\detokenize{#2}}%
+    \IfFileExists{#2}{%
+        \Oldincludegraphics[#1]{#2}%
     }{%
-        \fbox{\parbox{0.72\linewidth}{\centering Missing figure: \texttt{\detokenize{#2}}}}%
+        \IfFileExists{figures/#2}{%
+            \Oldincludegraphics[#1]{figures/#2}%
+        }{%
+            \IfFileExists{reports/#2}{%
+                \Oldincludegraphics[#1]{reports/#2}%
+            }{%
+                \IfFileExists{reports/figures/#2}{%
+                    \Oldincludegraphics[#1]{reports/figures/#2}%
+                }{%
+                    \IfFileExists{artifacts/#2}{%
+                        \Oldincludegraphics[#1]{artifacts/#2}%
+                    }{%
+                        \fbox{\parbox{0.72\linewidth}{\centering Missing figure: \texttt{\detokenize{#2}}}}%
+                    }%
+                }%
+            }%
+        }%
     }%
 }
 
@@ -420,14 +438,14 @@ We applied PCA to reduce the multidimensional space while retaining the maximum 
     \centering
     \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{pca_player_season_2d.png} % Your player distribution image
+        \includegraphics[width=\textwidth]{figures/pca_player_season_generated.png}
         \caption{PCA Scatter Plot: Player Roles.}
         \label{fig:pca_scatter}
     \end{minipage}
     \hfill
     \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{pca_cumulative_variance.png} % Your variance image
+        \includegraphics[width=\textwidth]{figures/pca_cumulative_variance_generated.png}
         \caption{Scree Plot: Explained Variance.}
         \label{fig:scree_plot}
     \end{minipage}
