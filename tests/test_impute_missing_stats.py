@@ -36,7 +36,7 @@ def test_imputation_preserves_observed_values_and_fills_formulas(tmp_path: Path,
     report = impute_missing_stats.impute_player_match_stats()
     df = pd.read_csv(stats_path, keep_default_na=False)
 
-    assert df.loc[0, "shots_off_target"] == "2"
+    assert str(df.loc[0, "shots_off_target"]) == "2"
     assert float(df.loc[0, "pass_accuracy"]) == 0.8
-    assert df.loc[0, "touches"] == "70"
+    assert str(df.loc[0, "touches"]) == "70"
     assert len(report["changes"]) == 2
