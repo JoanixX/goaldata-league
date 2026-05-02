@@ -57,6 +57,7 @@ class TestESPNScraper(unittest.TestCase):
         # Check player_stats
         self.assertEqual(len(data['player_stats']), 1)
         self.assertEqual(data['player_stats'][0]['player_name'], 'Vinicius Jr')
+        self.assertEqual(data['player_stats'][0]['minutes_played'], 90)
         
         # Check events
         self.assertEqual(len(data['events']), 1)
