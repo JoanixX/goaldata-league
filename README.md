@@ -12,8 +12,10 @@ The project is organized into modular components:
 ## Key Features
 - **Incremental Enrichment**: The pipeline only processes rows with missing data, saving bandwidth and time.
 - **Multi-Source Validation**: Merges UEFA (official lineups/officials) with ESPN (match events/stats).
+- **Extensible Source Ingestion**: Reads structured files, directories, and ZIP archives through `src/source_ingestion.py` for CSV, TSV, Excel, JSON, JSONL, HTML, Parquet, and text inputs while skipping audio/video.
 - **Fuzzy Matching**: Resolves team name inconsistencies across different data providers.
 - **Diagnostic Reporting**: Automated field coverage reports to ensure data integrity.
+- **Quality Gates + Parquet**: Cleaned datasets are written as CSV and Parquet, with a generated `logs/data_quality_report.json` that flags null ratios, formula anomalies, and the 1.5M-record requirement before ML use.
 
 ## Quick Start
 1. Install dependencies: `pip install -r requirements.txt`
@@ -30,3 +32,6 @@ populations, tracking data, or fitted model coefficients remain `NULL` and are
 explained in `data/processed/metadata/advanced_metric_coverage.csv`.
 
 For detailed information about each component, refer to the README files in the respective subdirectories.
+
+## Data Quality Policy
+Rows must come from observed sources. The 1.5M-record requirement is enforced as a gate and must not be met by duplicating or fabricating records. See `docs/DATA_PIPELINE_FLOW.md` and `docs/MISSING_DATA_POLICY.md` for the source discovery, cleaning, imputation, EDA, and ML-readiness flow.
