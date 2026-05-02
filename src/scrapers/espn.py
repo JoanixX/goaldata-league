@@ -1,19 +1,28 @@
 import requests
-from scrapers.utils import HEADERS, norm_text, teams_match, date_to_api, safe_pct, sum_int
+from scrapers.utils import HEADERS, norm_text, teams_match, date_to_api, safe_pct, get_scraper_logger
 
 ESPN_BOARD   = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard'
 ESPN_SUMMARY = 'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary'
 
 class ESPNScraper:
+    def __init__(self):
+        self.logger = get_scraper_logger("espn")
+
     def find_event(self, date_csv, local, away, aliases_func, overrides=None):
         overrides = overrides or {}
         override_key = f"{local}|{away}|{date_csv}"
-        if override_key in overrides: return overrides[override_key]
+        if override_key in overrides:
+            self.logger.info("event_override_hit key=%s", override_key)
+            return overrides[override_key]
         override_key_rev = f"{away}|{local}|{date_csv}"
-        if override_key_rev in overrides: return overrides[override_key_rev]
+        if override_key_rev in overrides:
+            self.logger.info("event_override_hit key=%s", override_key_rev)
+            return overrides[override_key_rev]
 
         date_api = date_to_api(date_csv)
-        if not date_api: return None
+        if not date_api:
+            self.logger.warning("event_lookup_bad_date date=%s local=%s away=%s", date_csv, local, away)
+            return None
         stop = {'fc', 'cf', 'ac', 'sc', 'rb', 'as', 'sl', 'ss', 'sb', 'at', 'vs', 'bv', 'de'}
         local_forms = aliases_func(local)
         away_forms  = aliases_func(away)
@@ -28,7 +37,9 @@ class ESPNScraper:
 
         try:
             r = requests.get(ESPN_BOARD, params={'dates': date_api}, headers=HEADERS, timeout=10)
-            if r.status_code != 200: return None
+            if r.status_code != 200:
+                self.logger.warning("scoreboard_http_error date=%s status=%s", date_api, r.status_code)
+                return None
             for evt in r.json().get('events', []):
                 comps = evt.get('competitions', [])
                 if not comps: continue
@@ -40,8 +51,13 @@ class ESPNScraper:
                     else: a_name = n
                 if (_any_word_match(local_forms, h_name) and _any_word_match(away_forms, a_name)) or \
                    (_any_word_match(local_forms, a_name) and _any_word_match(away_forms, h_name)):
+                    self.logger.info("event_found date=%s local=%s away=%s event_id=%s", date_csv, local, away, evt.get('id'))
                     return str(evt.get('id'))
-        except Exception: pass
+        except requests.RequestException:
+            self.logger.exception("scoreboard_request_failed date=%s local=%s away=%s", date_csv, local, away)
+        except (ValueError, KeyError, TypeError):
+            self.logger.exception("scoreboard_parse_failed date=%s local=%s away=%s", date_csv, local, away)
+        self.logger.info("event_not_found date=%s local=%s away=%s", date_csv, local, away)
         return None
 
     def get_structured_data(self, event_id, local_name_csv):
@@ -51,9 +67,14 @@ class ESPNScraper:
             'player_stats': [],
             'events': []
         }
+        if not event_id:
+            self.logger.warning("structured_data skipped empty event_id")
+            return result
         try:
             r = requests.get(ESPN_SUMMARY, params={'event': event_id}, headers=HEADERS, timeout=15)
-            if r.status_code != 200: return result
+            if r.status_code != 200:
+                self.logger.warning("summary_http_error event_id=%s status=%s", event_id, r.status_code)
+                return result
             data = r.json()
             comp = (data.get('header', {}).get('competitions') or [{}])[0]
             competitors = comp.get('competitors', [])
@@ -106,7 +127,7 @@ class ESPNScraper:
                     p_record = {
                         'player_name': p_name,
                         'team_name': team_name,
-                        'minutes_played': _int('minutesPlayed') or _int('appearances') * 90,
+                        'minutes_played': _int('minutesPlayed') or _int('minutes') or _int('appearances') * 90,
                         'goals': _int('totalGoals'),
                         'assists': _int('goalAssists'),
                         'shots': _int('totalShots'),
@@ -151,9 +172,19 @@ class ESPNScraper:
                         'player_name': p_name,
                         'minute': ck,
                         'is_penalty': 'penalty' in et,
-                        'is_own_goal': 'own goal' in et
+                    'is_own_goal': 'own goal' in et
                     })
-        except Exception: pass
+            self.logger.info(
+                "summary_ok event_id=%s match_info=%s player_stats=%s events=%s",
+                event_id,
+                sorted(result["match_info"].keys()),
+                len(result["player_stats"]),
+                len(result["events"]),
+            )
+        except requests.RequestException:
+            self.logger.exception("summary_request_failed event_id=%s", event_id)
+        except (ValueError, KeyError, TypeError):
+            self.logger.exception("summary_parse_failed event_id=%s", event_id)
         return result
 
     def build_match_index(self, seasons_range: list[int]):
