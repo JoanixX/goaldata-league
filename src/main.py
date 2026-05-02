@@ -421,6 +421,16 @@ def _ingest_tm_dump(dump_path, log):
 
     players_path = os.path.join(RAW_DIR, 'core', 'players.csv')
     df = pd.read_csv(players_path, keep_default_na=False) if os.path.exists(players_path) else pd.DataFrame()
+    if df.empty or 'player_id' not in df.columns:
+        log.log_error(
+            f"Transfermarkt ingest skipped: expected player_id in {players_path}. "
+            "Run the processed builder or provide raw/core/players.csv before profile merging."
+        )
+        log.json_report['scraped_records']['transfermarkt'] = {
+            'fields_updated': 0,
+            'skipped': 'missing raw players.csv player_id schema'
+        }
+        return
 
     updated = 0
     for entry in data:
