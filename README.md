@@ -25,9 +25,10 @@ The project is organized into modular components:
 4. Expand top-division rosters, fill processed tables, and add 50+ ML features: `python src/enrich_processed_features.py`
 5. Add documented advanced metrics to processed datasets: `python src/enrich_advanced_metrics.py`
 6. Generate PCA feature matrix and 2D tactical maps: `python src/build_pca_feature_matrix.py`
-7. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
-8. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
-9. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+7. Run Week 7 clustering validation: `python src/build_clustering_analysis.py`
+8. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
+9. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
+10. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
 
 Advanced metric enrichment writes only to `data/processed`. It does not modify
 `data/raw`. Metrics whose cited methods require missing event locations, shot
@@ -38,6 +39,11 @@ explained in `data/processed/metadata/advanced_metric_coverage.csv`.
 available top-division source priors for team-season rosters, fills remaining
 statistical gaps with deterministic probability rules, and writes both CSV and
 Parquet outputs plus `logs/processed_feature_enrichment_report.json`.
+
+`src/build_clustering_analysis.py` satisfies the Week 7 clustering milestone by
+running K-Means and DBSCAN parameter sweeps on the PCA player-season embedding.
+It writes validation tables, cluster labels, 2D cluster plots, and
+`reports/clustering_validation_report.md`.
 
 For detailed information about each component, refer to the README files in the respective subdirectories.
 
