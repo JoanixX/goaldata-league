@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-05-13T21:35:23",
+  "input": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\pca_player_season_2d.csv",
+  "rows": 4065,
+  "selected_kmeans_k": 4,
+  "selected_dbscan_eps": 0.75,
+  "selected_dbscan_min_samples": 5,
+  "outputs": {
+    "kmeans_sweep": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_kmeans_sweep.csv",
+    "dbscan_sweep": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_dbscan_sweep.csv",
+    "labels": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\player_season_cluster_labels.csv",
+    "kmeans_profiles": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_kmeans_profiles.csv",
+    "dbscan_profiles": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_dbscan_profiles.csv",
+    "kmeans_plot": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_kmeans_2d.png",
+    "dbscan_plot": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_dbscan_2d.png",
+    "silhouette_plot": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\artifacts\\clustering_kmeans_silhouette.png",
+    "report": "C:\\Cursos\\BigData\\PC2\\goaldata-league\\reports\\clustering_validation_report.md"
+  }
+}
