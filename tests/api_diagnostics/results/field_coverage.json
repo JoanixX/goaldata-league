@@ -1,0 +1,59 @@
+{
+  "target_records": 1500000,
+  "current_records": 890,
+  "missing_for_goal": 1499110,
+  "progress_pct": 0.06,
+  "total_matches_processed": 445,
+  "coverage": {
+    "referee": {
+      "filled": 411,
+      "missing": 34,
+      "pct": 92.4
+    },
+    "stadium": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "city": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "country": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "possession_home": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "possession_away": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "player_stats": {
+      "filled": 445,
+      "missing": 0,
+      "pct": 100.0
+    },
+    "stat_assists": {
+      "filled": 0,
+      "missing": 445,
+      "note": "Count of non-zero/non-null player records"
+    },
+    "stat_top_speed": {
+      "filled": 12474,
+      "missing": -12029,
+      "note": "Count of non-zero/non-null player records"
+    },
+    "stat_distance_covered": {
+      "filled": 12474,
+      "missing": -12029,
+      "note": "Count of non-zero/non-null player records"
+    }
+  }
+}

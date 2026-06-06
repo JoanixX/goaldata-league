@@ -1,7 +1,31 @@
 # Archivos extra
 bigData_pc1_uxxxxxxxxx.tex
 inspect_json.py
+.pytest_cache
+scratch
+scratch/*
+uefa_match_events.csv
+match_links.json
+semester_group_assignment_brief.md
+skills/
+Dataset.txt
+matches_test.csv
+.matplotlib-cache
 
 # Entornos
 .venv
 .env
+
+# cache
+__pycache__
+
+# copias de seguridad
+copia_buena.csv
+
+# logs
+logs/*
+logs
+
+# csv
+data/processed/*/*.csv
+data/raw/

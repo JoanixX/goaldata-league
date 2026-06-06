@@ -1,0 +1,14 @@
+\section{Testing and Diagnostics (`tests`)}
+The project features a rigorous diagnostic infrastructure designed to audit data health across all platforms.
+
+\subsection{Hierarchical Diagnostic System}
+Tests are organized by source in \texttt{tests/api_diagnostics/[source]/}. Each source generates four standardized reports in \texttt{results/[source]/}:
+\begin{itemize}
+    \item \textbf{match\_index.json}: Mapping of all available matches on the platform (2010-2025).
+    \item \textbf{sample\_data.json}: Raw data snapshot to verify API schema integrity.
+    \item \textbf{not\_found\_matches.json}: Identifies missing records relative to our master CSV.
+    \item \textbf{missing\_data\_matches.json}: Audits found matches for specific NULL fields.
+\end{itemize}
+
+\subsection{Automated Validation}
+To ensure 100\% reliability, the \texttt{run\_all\_tests.py} script orchestrates the full suite, providing a consolidated health summary of the entire data pipeline.

@@ -1,0 +1,74 @@
+[
+  {
+    "player_name": "Guaita",
+    "birth_date": "15/07/1910",
+    "height_cm": 172,
+    "position": "Extremo derecho",
+    "nationality": "Argentina",
+    "birth_place": "Lucas"
+  },
+  {
+    "player_name": "Ricardo Costa",
+    "birth_date": "16/05/1981",
+    "height_cm": 184,
+    "position": "Defensa central",
+    "nationality": "Portugal",
+    "birth_place": "Vila Nova de Gaia"
+  },
+  {
+    "player_name": "Mathieu",
+    "birth_date": "29/10/1983",
+    "height_cm": 189,
+    "position": "Lateral izquierdo",
+    "nationality": "Francia",
+    "birth_place": "Luxeuil-les-Bains"
+  },
+  {
+    "player_name": "Miguel",
+    "birth_date": "08/09/1994",
+    "height_cm": 179,
+    "position": "Mediocentro ofensivo",
+    "nationality": "Portugal",
+    "birth_place": "Maia"
+  },
+  {
+    "player_name": "Mehmet Topal",
+    "birth_date": "03/03/1986",
+    "height_cm": 187,
+    "position": "Pivote",
+    "nationality": "Turquía",
+    "birth_place": "Malatya"
+  },
+  {
+    "player_name": "Banega",
+    "birth_date": "29/06/1988",
+    "height_cm": 174,
+    "position": "Mediocentro",
+    "nationality": "Argentina",
+    "birth_place": "Rosario"
+  },
+  {
+    "player_name": "Domínguez",
+    "birth_date": "09/03/1931",
+    "height_cm": 190,
+    "position": "Portero",
+    "nationality": "Argentina",
+    "birth_place": "Buenos Aires"
+  },
+  {
+    "player_name": "Aritz Aduriz",
+    "birth_date": "11/02/1981",
+    "height_cm": 181,
+    "position": "Delantero centro",
+    "nationality": "España",
+    "birth_place": "Donostia-San ..."
+  },
+  {
+    "player_name": "Soldado",
+    "birth_date": "27/05/1985",
+    "height_cm": 180,
+    "position": "Delantero centro",
+    "nationality": "España",
+    "birth_place": "Valencia"
+  }
+]

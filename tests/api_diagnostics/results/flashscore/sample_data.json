@@ -1,0 +1,24 @@
+{
+  "match_id": "WC5zpioS",
+  "metadata": {
+    "date": "12.04.2011",
+    "venue": "Old Trafford (Manchester)",
+    "referee": "Benquerenca O. (Por)"
+  },
+  "stats": {
+    "posesion_local": "55%",
+    "posesion_visitante": "45%",
+    "tiros_totales_local": "10",
+    "tiros_totales_visitante": "18",
+    "tiros_totales": "28",
+    "tiros_puerta_local": "6",
+    "tiros_puerta_visitante": "4",
+    "tiros_puerta": "10",
+    "faltas_local": "13",
+    "faltas_visitante": "18",
+    "faltas_total": "31",
+    "corners_local": "7",
+    "corners_visitante": "2",
+    "corners_total": "9"
+  }
+}
