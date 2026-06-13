@@ -1,5 +1,5 @@
 cluster,size,pc1_mean,pc2_mean,pc1_median,pc2_median,top_positions,top_seasons,example_players
-0,3195,-1.0189313231781454,-0.025830947431578585,-1.2373217286419662,-0.1129142122717473,Other: 65.7%; Unknown: 24.6%; Midfielder: 3.0%,2021-2022: 86.7%; 2025-2026: 13.3%,Jović; Marcelo; E. Hazard; Miguel Gutiérrez; Ceballos
-1,717,4.104440529411291,-1.360372924897957,3.451072338585907,-1.1691900932802668,Unknown: 39.3%; Midfielder: 22.6%; Defender: 21.1%,2021-2022: 59.4%; 2025-2026: 40.6%,Courtois; Vinícius Júnior; Benzema; Modrić; Éder Militão
-2,10,10.183690858747351,27.250504322377292,11.230654562398993,24.054857380908302,Other: 90.0%; Unknown: 10.0%,2021-2022: 100.0%,Luca Pellegrini; Morgan Gibbs-White; Gori; Yanis Guermouche; Carlos Martín
-3,143,1.4738797858660584,5.492393153650024,0.9411346225088082,4.452833422128816,Other: 86.0%; Unknown: 10.5%; Midfielder: 2.8%,2021-2022: 92.3%; 2025-2026: 7.7%,Blanco; Knauff; Dentinho; Fabio Miretti; Zesiger
+0,29372,-2.1839037244261936,3.199886709807593,-2.0363694389761218,2.9709487551508738,Forward: 67.5%; Midfielder: 28.9%; Defender: 3.6%,2025-2026: 8.4%; 2024-2025: 7.9%; 2021-2022: 4.4%,Benzema; Asensio; Jović; E. Hazard; Luis Díaz
+1,73694,2.47472627964326,1.1516018722605124,2.5294594787475653,1.0877838523239691,Midfielder: 52.5%; Forward: 46.9%; Defender: 0.6%,2024-2025: 4.8%; 2015-2016: 4.8%; 2020-2021: 4.5%,Rodrygo; Ceballos; Mohamed Salah; Mané; Diogo Jota
+2,40524,-4.523236310665585,-1.217870945677369,-4.313738323253319,-1.2438437103146163,Defender: 39.5%; Goalkeeper: 36.9%; Midfielder: 17.1%,2021-2022: 8.6%; 2025-2026: 7.7%; 2024-2025: 6.6%,Thibaut Courtois; Lucas Vázquez; Marcelo; Miguel Gutiérrez; Blanco
+3,47389,1.373161915111711,-2.732706294967312,1.492360570365991,-2.851726120034416,Defender: 89.0%; Midfielder: 10.8%; Goalkeeper: 0.1%,2021-2022: 4.9%; 2024-2025: 4.9%; 2015-2016: 4.6%,Vinícius Júnior; Luka Modric; Éder Militão; David Alaba; Carvajal
