@@ -1,13 +1,13 @@
 target_player,target_season,target_cluster,target_position,rec_1_name,rec_1_season,rec_1_position,rec_1_similarity,rec_2_name,rec_2_season,rec_2_position,rec_2_similarity,rec_3_name,rec_3_season,rec_3_position,rec_3_similarity,rec_4_name,rec_4_season,rec_4_position,rec_4_similarity,rec_5_name,rec_5_season,rec_5_position,rec_5_similarity
-Jović,2021-2022,0,Forward,D'Ambrosio,2021-2022,Defender,1.0,António Silva,2025-2026,Unknown,0.9999,Lukáš Haraslín,2025-2026,Other,0.9999,Youngwoo Seol,2025-2026,Other,0.9999,E. Hazard,2021-2022,Forward,0.9999
+Jović,2021-2022,0,Forward,António Silva,2025-2026,Unknown,0.9999,Lukáš Haraslín,2025-2026,Other,0.9999,Youngwoo Seol,2025-2026,Other,0.9999,E. Hazard,2021-2022,Forward,0.9999,Hugo Bueno,2025-2026,Unknown,0.9998
 Marcelo,2021-2022,0,Unknown,Emil Ceide,2021-2022,Other,1.0,Jonathan Silva,2021-2022,Other,1.0,Nordine Kandil,2021-2022,Other,1.0,Mouhamadou Diarra,2021-2022,Other,1.0,Luis Palma,2025-2026,Unknown,1.0
-E. Hazard,2021-2022,0,Forward,Lukáš Haraslín,2025-2026,Other,1.0,António Silva,2025-2026,Unknown,1.0,Hugo Bueno,2025-2026,Unknown,1.0,Viktor Tsygankov,2025-2026,Forward,1.0,Elias Cobbaut,2025-2026,Defender,1.0
+E. Hazard,2021-2022,0,Forward,Lukáš Haraslín,2025-2026,Other,1.0,António Silva,2025-2026,Unknown,1.0,Hugo Bueno,2025-2026,Unknown,1.0,Viktor Tsygankov,2025-2026,Forward,1.0,Timi Elšnik,2025-2026,Other,0.9999
 Miguel Gutiérrez,2021-2022,0,Defender,Darian Males,2025-2026,Forward,0.9999,Cavani,2021-2022,Forward,0.9999,Javi Serrano,2025-2026,Midfielder,0.9998,Marko Rog,2025-2026,Other,0.9997,Arthur Vermeeren,2025-2026,Other,0.9997
 Ceballos,2021-2022,0,Midfielder,Hyunjun,2025-2026,Unknown,1.0,Javier Serrano,2021-2022,Other,1.0,Andy Robertson,2025-2026,Other,1.0,Jon Gorenc Stanković,2025-2026,Other,1.0,Giuliano Simeone,2025-2026,Unknown,1.0
 Mariano Díaz,2021-2022,0,Forward,Marco John,2021-2022,Other,1.0,Naouirou Ahamada,2021-2022,Other,1.0,Samuel Umtiti,2021-2022,Unknown,1.0,Nico O’Reilly,2025-2026,Unknown,1.0,Lukáš Pauschek,2025-2026,Other,1.0
 Vallejo,2021-2022,0,Defender,Gregory Wüthrich,2025-2026,Defender,1.0,Matias Fernandez-Pardo,2025-2026,Unknown,1.0,De Winter,2021-2022,Defender,1.0,Soungoutou Magassa,2025-2026,Other,1.0,Luka Stojković,2025-2026,Unknown,1.0
 Bale,2021-2022,0,Forward,Ricardo Pepi,2025-2026,Other,1.0,Shola Shoretire,2021-2022,Other,1.0,Martín,2021-2022,Other,1.0,Aleksandar Katai,2025-2026,Forward,1.0,Panagiotis Retsos,2021-2022,Other,1.0
-Minamino,2021-2022,0,Forward,Schulz,2021-2022,Defender,1.0,Gosens,2021-2022,Midfielder,1.0,Corona,2021-2022,Forward,1.0,Jahmai Simpson-Pusey,2025-2026,Unknown,1.0,Palmer,2021-2022,Midfielder,0.9999
+Minamino,2021-2022,0,Forward,Gosens,2021-2022,Midfielder,1.0,Corona,2021-2022,Forward,1.0,Jahmai Simpson-Pusey,2025-2026,Unknown,1.0,Palmer,2021-2022,Midfielder,0.9999,Dan Ndoye,2025-2026,Other,0.9999
 Tyler Morton,2021-2022,0,Other,Bradarić,2021-2022,Defender,1.0,Julien,2021-2022,Defender,1.0,Krépin Diatta,2025-2026,Unknown,1.0,Julian Baumgartlinger,2021-2022,Unknown,1.0,Anrie Chase,2025-2026,Other,1.0
 Phillips,2021-2022,0,Defender,George Ilenikhena,2025-2026,Other,1.0,Marc Roca,2021-2022,Defender,1.0,Bakayoko,2021-2022,Defender,0.9999,Erokhin,2021-2022,Midfielder,0.9999,Ranocchia,2021-2022,Defender,0.9999
 Elliott,2021-2022,0,Midfielder,Maignan,2021-2022,Goalkeeper,1.0,Lionel Messi,2021-2022,Unknown,1.0,Konrad Laimer,2021-2022,Unknown,1.0,Kylian Mbappé,2021-2022,Unknown,0.9999,Stanislav Lobotka,2021-2022,Unknown,0.9998
@@ -28,7 +28,7 @@ Pasveer,2021-2022,0,Goalkeeper,Timon Wellenreuther,2025-2026,Unknown,1.0,Mehmet 
 Grbić,2021-2022,0,Goalkeeper,Abdou Diallo,2021-2022,Unknown,1.0,Ángel Di María,2021-2022,Unknown,1.0,Kingsley Coman,2021-2022,Unknown,1.0,Jürgen Locadia,2021-2022,Unknown,1.0,Nabil Bentaleb,2021-2022,Unknown,1.0
 Diogo Costa,2021-2022,0,Unknown,Ridle Baku,2021-2022,Other,0.9999,Mehmet Topal,2021-2022,Unknown,0.9998,Pasveer,2021-2022,Goalkeeper,0.9997,Timon Wellenreuther,2025-2026,Unknown,0.9997,Nuno Santos,2021-2022,Forward,0.9996
 Ter Stegen,2021-2022,0,Goalkeeper,Dmytro Riznyk,2025-2026,Goalkeeper,1.0,Kike Hermoso,2021-2022,Other,0.9997,Diogo Costa,2021-2022,Unknown,0.9995,Ridle Baku,2021-2022,Other,0.9991,Mehmet Topal,2021-2022,Unknown,0.9987
-Carrasco,2021-2022,0,Forward,Egan-Riley,2021-2022,Defender,1.0,Ruben Loftus-Cheek,2025-2026,Unknown,1.0,Gudmundsson,2021-2022,Defender,1.0,Evanilson,2021-2022,Unknown,0.9999,Bailly,2021-2022,Defender,0.9999
+Carrasco,2021-2022,0,Forward,Ruben Loftus-Cheek,2025-2026,Unknown,1.0,Evanilson,2021-2022,Unknown,0.9999,Kenan Yıldız,2025-2026,Other,0.9999,Munir,2021-2022,Forward,0.9998,Nicolás González,2025-2026,Unknown,0.9998
 Casteels,2021-2022,0,Goalkeeper,Kieran Trippier,2021-2022,Unknown,1.0,Marvin Keller,2025-2026,Unknown,0.9996,Jimmy Briand,2021-2022,Unknown,0.9995,Mattia Zaccagni,2021-2022,Unknown,0.9995,Gianluigi Donnarumma,2025-2026,Unknown,0.9989
 Ersin Destanoğlu,2021-2022,0,Goalkeeper,Tătăruşanu,2021-2022,Goalkeeper,1.0,Navas,2021-2022,Goalkeeper,1.0,Ander Herrera,2021-2022,Unknown,1.0,Jesse Lingard,2021-2022,Unknown,0.9997,Jason Denayer,2021-2022,Unknown,0.9986
 Donnarumma,2021-2022,0,Unknown,Kobel,2021-2022,Goalkeeper,1.0,Gulácsi,2021-2022,Goalkeeper,1.0,Bushchan,2021-2022,Goalkeeper,0.9996,Adán,2021-2022,Goalkeeper,0.9991,Asger Sørensen,2025-2026,Defender,0.9981
@@ -51,7 +51,7 @@ Evanilson,2021-2022,0,Unknown,Bailly,2021-2022,Defender,1.0,Gudmundsson,2021-202
 Bruno,2021-2022,0,Unknown,Piotr Zielinski,2025-2026,Unknown,1.0,Kryvtsov,2021-2022,Defender,1.0,Jeff Hendrick,2021-2022,Other,1.0,Matteo Darmian,2025-2026,Unknown,1.0,Bernardo Silva,2025-2026,Unknown,0.9999
 Lukebakio,2021-2022,0,Forward,Sandra,2021-2022,Midfielder,1.0,Michele Di Gregorio,2025-2026,Unknown,1.0,Weah,2021-2022,Forward,0.9999,Yansané,2021-2022,Forward,0.9992,Kolovos,2021-2022,Midfielder,0.9984
 M. Olsson,2021-2022,0,Defender,Munir,2021-2022,Forward,1.0,Nicolás González,2025-2026,Unknown,1.0,Kyogo Furuhashi,2025-2026,Other,1.0,Bailly,2021-2022,Defender,1.0,Evanilson,2021-2022,Unknown,1.0
-Dzyuba,2021-2022,0,Forward,Péter Gulácsi,2025-2026,Unknown,1.0,Neuer,2025-2026,Unknown,1.0,Umut Meraş,2021-2022,Defender,0.9996,Kolovos,2021-2022,Midfielder,0.9995,Yansané,2021-2022,Forward,0.9989
+Dzyuba,2021-2022,0,Forward,Péter Gulácsi,2025-2026,Unknown,1.0,Neuer,2025-2026,Unknown,1.0,Kolovos,2021-2022,Midfielder,0.9995,Yansané,2021-2022,Forward,0.9989,Yann Sommer,2025-2026,Unknown,0.9985
 Faivre,2021-2022,0,Goalkeeper,David Raya,2025-2026,Unknown,1.0,De Gea,2021-2022,Goalkeeper,0.9997,Leandro Paredes,2021-2022,Unknown,0.9996,Sergio Ramos,2021-2022,Unknown,0.9993,Dani Alves,2021-2022,Unknown,0.9989
 Tătăruşanu,2021-2022,0,Goalkeeper,Ersin Destanoğlu,2021-2022,Goalkeeper,1.0,Navas,2021-2022,Goalkeeper,1.0,Ander Herrera,2021-2022,Unknown,1.0,Jesse Lingard,2021-2022,Unknown,0.9997,Jason Denayer,2021-2022,Unknown,0.9986
 Maignan,2021-2022,0,Goalkeeper,Elliott,2021-2022,Midfielder,1.0,Lionel Messi,2021-2022,Unknown,1.0,Konrad Laimer,2021-2022,Unknown,1.0,Kylian Mbappé,2021-2022,Unknown,0.9999,Stanislav Lobotka,2021-2022,Unknown,0.9999
@@ -59,9 +59,9 @@ Trubin,2021-2022,0,Goalkeeper,Karim Bellarabi,2021-2022,Unknown,1.0,Paul Pogba,2
 Navas,2021-2022,0,Goalkeeper,Ersin Destanoğlu,2021-2022,Goalkeeper,1.0,Tătăruşanu,2021-2022,Goalkeeper,1.0,Ander Herrera,2021-2022,Unknown,1.0,Jesse Lingard,2021-2022,Unknown,0.9997,Jason Denayer,2021-2022,Unknown,0.9987
 Von Ballmoos,2021-2022,0,Goalkeeper,Japhet Tanganga,2021-2022,Unknown,1.0,Moussa Sissoko,2021-2022,Unknown,1.0,Jérôme Boateng,2021-2022,Unknown,1.0,Rick Karsdorp,2021-2022,Unknown,1.0,Robin Knoche,2021-2022,Unknown,1.0
 Pyatov,2021-2022,0,Goalkeeper,Oleksandr Zinchenko,2021-2022,Unknown,0.9999,Stefan Ortega,2025-2026,Unknown,0.9998,Martín Montoya,2021-2022,Unknown,0.9998,Corentin Tolisso,2021-2022,Unknown,0.9997,Marco Carnesecchi,2025-2026,Unknown,0.9996
-Kenan Karaman,2021-2022,0,Forward,Eguinaldo,2025-2026,Other,1.0,Fábio Vieira,2021-2022,Midfielder,1.0,Vitão,2021-2022,Defender,1.0,Mika Biereth,2025-2026,Unknown,1.0,Kean,2021-2022,Forward,1.0
+Kenan Karaman,2021-2022,0,Forward,Eguinaldo,2025-2026,Other,1.0,Fábio Vieira,2021-2022,Midfielder,1.0,Mika Biereth,2025-2026,Unknown,1.0,Kean,2021-2022,Forward,1.0,Ousmane Diomande,2025-2026,Unknown,1.0
 Mehmet Topal,2021-2022,0,Unknown,Pasveer,2021-2022,Goalkeeper,1.0,Timon Wellenreuther,2025-2026,Unknown,1.0,Nuno Santos,2021-2022,Forward,1.0,Ridle Baku,2021-2022,Other,1.0,Handanovič,2021-2022,Goalkeeper,0.9999
-Dia,2021-2022,0,Forward,Sobol,2021-2022,Defender,1.0,Calabria,2021-2022,Defender,1.0,De Pena,2021-2022,Midfielder,1.0,Mirko Ivanić,2025-2026,Midfielder,1.0,Ferran Jutglà,2025-2026,Unknown,0.9999
+Dia,2021-2022,0,Forward,De Pena,2021-2022,Midfielder,1.0,Mirko Ivanić,2025-2026,Midfielder,1.0,Ferran Jutglà,2025-2026,Unknown,0.9999,Yakhshiboev,2021-2022,Forward,0.9999,Victor Boniface,2025-2026,Unknown,0.9997
 Onana,2021-2022,0,Midfielder,Konrad Laimer,2025-2026,Unknown,1.0,Rıdvan Yılmaz,2021-2022,Defender,1.0,Marcus Thuram,2025-2026,Unknown,0.9999,Lingard,2021-2022,Midfielder,0.9999,Kyriakos Savvidis,2025-2026,Other,0.9999
 Weah,2021-2022,0,Forward,Michele Di Gregorio,2025-2026,Unknown,1.0,Lukebakio,2021-2022,Forward,0.9999,Sandra,2021-2022,Midfielder,0.9998,Yansané,2021-2022,Forward,0.9985,Rebić,2021-2022,Forward,0.9984
 Umut Meraş,2021-2022,0,Defender,Kolovos,2021-2022,Midfielder,1.0,Yansané,2021-2022,Forward,0.9998,Neuer,2025-2026,Unknown,0.9997,Dzyuba,2021-2022,Forward,0.9996,Péter Gulácsi,2025-2026,Unknown,0.9996
@@ -74,11 +74,11 @@ Moi Gómez,2021-2022,0,Midfielder,Ousmane Diomande,2025-2026,Unknown,1.0,Dan Ndo
 Trippier,2021-2022,0,Defender,Victor Boniface,2025-2026,Unknown,0.9999,Ismaily,2021-2022,Unknown,0.9998,Julián Álvarez,2025-2026,Unknown,0.9996,Mirko Ivanić,2025-2026,Midfielder,0.9996,De Pena,2021-2022,Midfielder,0.9995
 Bozdoğan,2021-2022,0,Midfielder,Šeško,2021-2022,Forward,1.0,Kean,2021-2022,Forward,1.0,Marlos,2021-2022,Unknown,1.0,Rodrygo,2025-2026,Unknown,1.0,Kasper Schmeichel,2025-2026,Unknown,1.0
 Nuno Santos,2021-2022,0,Forward,Timon Wellenreuther,2025-2026,Unknown,1.0,Pasveer,2021-2022,Goalkeeper,1.0,Handanovič,2021-2022,Goalkeeper,1.0,Mehmet Topal,2021-2022,Unknown,1.0,Vlachodimos,2021-2022,Goalkeeper,1.0
-Corona,2021-2022,0,Forward,Gosens,2021-2022,Midfielder,1.0,Schulz,2021-2022,Defender,1.0,Jahmai Simpson-Pusey,2025-2026,Unknown,1.0,Minamino,2021-2022,Forward,1.0,Palmer,2021-2022,Midfielder,1.0
+Corona,2021-2022,0,Forward,Gosens,2021-2022,Midfielder,1.0,Jahmai Simpson-Pusey,2025-2026,Unknown,1.0,Minamino,2021-2022,Forward,1.0,Palmer,2021-2022,Midfielder,1.0,Dan Ndoye,2025-2026,Other,0.9999
 Koopmeiners,2021-2022,0,Midfielder,Tigran Barseghyan,2025-2026,Forward,1.0,Hutchinson,2021-2022,Midfielder,1.0,Darmian,2021-2022,Defender,1.0,Samy Mmaee,2025-2026,Defender,1.0,Isco,2021-2022,Unknown,1.0
 Marlos,2021-2022,0,Unknown,Šeško,2021-2022,Forward,1.0,Rodrygo,2025-2026,Unknown,1.0,Kasper Schmeichel,2025-2026,Unknown,1.0,Bozdoğan,2021-2022,Midfielder,1.0,Ibrahimović,2021-2022,Forward,1.0
-Yakhshiboev,2021-2022,0,Forward,Ferran Jutglà,2025-2026,Unknown,1.0,Calabria,2021-2022,Defender,0.9999,Solomon,2021-2022,Midfielder,0.9999,Takumi Minamino,2021-2022,Unknown,0.9999,Dia,2021-2022,Forward,0.9999
-Munir,2021-2022,0,Forward,M. Olsson,2021-2022,Defender,1.0,Nicolás González,2025-2026,Unknown,1.0,Kyogo Furuhashi,2025-2026,Other,1.0,Bailly,2021-2022,Defender,1.0,Evanilson,2021-2022,Unknown,1.0
+Yakhshiboev,2021-2022,0,Forward,Ferran Jutglà,2025-2026,Unknown,1.0,Solomon,2021-2022,Midfielder,0.9999,Takumi Minamino,2021-2022,Unknown,0.9999,Dia,2021-2022,Forward,0.9999,Birmančević,2021-2022,Midfielder,0.9999
+Munir,2021-2022,0,Forward,Nicolás González,2025-2026,Unknown,1.0,Kyogo Furuhashi,2025-2026,Other,1.0,Evanilson,2021-2022,Unknown,1.0,Marko Arnautović,2025-2026,Forward,0.9998,Carrasco,2021-2022,Forward,0.9998
 Sebastiaan Bornauw,2021-2022,0,Other,Eliesse Ben Seghir,2025-2026,Unknown,1.0,Pablo Barrios,2025-2026,Unknown,1.0,Juan Cabal,2025-2026,Unknown,0.9999,Angelo Preciado,2025-2026,Other,0.9999,Tomáš Wiesner,2025-2026,Defender,0.9999
 Darmian,2021-2022,0,Defender,Hutchinson,2021-2022,Midfielder,1.0,Isco,2021-2022,Unknown,1.0,Tigran Barseghyan,2025-2026,Forward,1.0,Gonçalo Inacio,2025-2026,Unknown,1.0,Koopmeiners,2021-2022,Midfielder,1.0
 Schulz,2021-2022,0,Defender,Gosens,2021-2022,Midfielder,1.0,Minamino,2021-2022,Forward,1.0,Corona,2021-2022,Forward,1.0,Jahmai Simpson-Pusey,2025-2026,Unknown,1.0,Palmer,2021-2022,Midfielder,1.0
@@ -100,7 +100,7 @@ Paulo Otávio,2021-2022,0,Defender,Niklas Geyrhofer,2025-2026,Unknown,1.0,Frenki
 Wolf,2021-2022,0,Midfielder,Fabián Ruiz,2025-2026,Unknown,1.0,Daley Blind,2025-2026,Unknown,1.0,Kevin Kampl,2025-2026,Unknown,1.0,Zagadou,2021-2022,Defender,1.0,Andrija Maksimović,2025-2026,Unknown,1.0
 Pongračić,2021-2022,0,Defender,Lewicki,2021-2022,Midfielder,1.0,Samuel Lino,2025-2026,Unknown,1.0,Jones,2025-2026,Midfielder,1.0,Amine Adli,2025-2026,Unknown,1.0,Sabitzer,2021-2022,Midfielder,0.9999
 Sergi Roberto,2021-2022,0,Unknown,Aaron Ramsey,2021-2022,Unknown,1.0,Lorenzo Torriani,2025-2026,Unknown,1.0,Vincent Vermeij,2021-2022,Other,1.0,Kiliann Sildillia,2021-2022,Other,1.0,Nicolas Jackson,2021-2022,Other,1.0
-Kean,2021-2022,0,Forward,Bozdoğan,2021-2022,Midfielder,1.0,Vitão,2021-2022,Defender,1.0,Fábio Vieira,2021-2022,Midfielder,1.0,Šeško,2021-2022,Forward,1.0,Kenan Karaman,2021-2022,Forward,1.0
+Kean,2021-2022,0,Forward,Bozdoğan,2021-2022,Midfielder,1.0,Fábio Vieira,2021-2022,Midfielder,1.0,Šeško,2021-2022,Forward,1.0,Kenan Karaman,2021-2022,Forward,1.0,Marlos,2021-2022,Unknown,1.0
 Gomes,2021-2022,0,Midfielder,Alex Teixeira,2021-2022,Unknown,1.0,Serdar Saatçı,2021-2022,Defender,0.9999,Xavi Simons,2025-2026,Unknown,0.9999,Malick Thiaw,2025-2026,Unknown,0.9998,Birmančević,2021-2022,Midfielder,0.9998
 Óliver Torres,2021-2022,0,Unknown,Saúl Ñíguez,2021-2022,Unknown,1.0,Chiquinho,2021-2022,Unknown,1.0,Cherif Ndiaye,2025-2026,Other,1.0,Timi Elšnik,2025-2026,Other,1.0,Tiago Tomás,2021-2022,Forward,1.0
 Lefort,2021-2022,0,Defender,Bryan Gil,2025-2026,Forward,1.0,Łukasz Łakomy,2025-2026,Unknown,1.0,Bobby Clark,2025-2026,Other,1.0,Ansu Fati,2021-2022,Other,1.0,Lukas Hradecky,2025-2026,Unknown,1.0
@@ -114,12 +114,12 @@ Pedri,2021-2022,0,Unknown,Aster Vranckx,2021-2022,Other,1.0,Veljko Birmančević
 Pizzi,2021-2022,0,Unknown,Nils Seufert,2021-2022,Other,1.0,Lee Dongjun,2021-2022,Other,1.0,Julian Chabot,2021-2022,Other,1.0,Kristoffer Klaesson,2021-2022,Other,1.0,José Mari,2021-2022,Other,1.0
 Vormer,2021-2022,0,Midfielder,Slimani,2021-2022,Forward,1.0,Mitchel Bakker,2025-2026,Unknown,1.0,Josha Vagnoman,2025-2026,Other,1.0,Nicolò Fagioli,2025-2026,Other,1.0,Massadio Haidara,2025-2026,Unknown,1.0
 Hutchinson,2021-2022,0,Midfielder,Tigran Barseghyan,2025-2026,Forward,1.0,Koopmeiners,2021-2022,Midfielder,1.0,Darmian,2021-2022,Defender,1.0,Isco,2021-2022,Unknown,1.0,Gonçalo Inacio,2025-2026,Unknown,1.0
-Yansané,2021-2022,0,Forward,Kolovos,2021-2022,Midfielder,0.9999,Umut Meraş,2021-2022,Defender,0.9998,Sandra,2021-2022,Midfielder,0.9993,Lukebakio,2021-2022,Forward,0.9992,Neuer,2025-2026,Unknown,0.9991
+Yansané,2021-2022,0,Forward,Kolovos,2021-2022,Midfielder,0.9999,Sandra,2021-2022,Midfielder,0.9993,Lukebakio,2021-2022,Forward,0.9992,Neuer,2025-2026,Unknown,0.9991,Michele Di Gregorio,2025-2026,Unknown,0.9989
 Meite,2021-2022,0,Midfielder,Kyle Walker,2025-2026,Unknown,1.0,Maier,2021-2022,Midfielder,1.0,Róbert Mak,2025-2026,Forward,1.0,Nino Marcelli,2025-2026,Unknown,1.0,Strahinja Pavlovic,2025-2026,Unknown,1.0
 Fábio Cardoso,2021-2022,0,Unknown,Johan Vásquez,2021-2022,Other,1.0,Sebastian Polter,2021-2022,Other,1.0,Nacho Vidal,2021-2022,Other,1.0,Leander Dendoncker,2021-2022,Other,1.0,Stefano Sturaro,2021-2022,Unknown,1.0
 Ansu Fati,2021-2022,0,Other,Lukas Hradecky,2025-2026,Unknown,1.0,Ben White,2025-2026,Unknown,1.0,Lefort,2021-2022,Defender,1.0,Bryan Gil,2025-2026,Forward,1.0,Łukasz Łakomy,2025-2026,Unknown,1.0
 Mostovoy,2021-2022,0,Midfielder,Chris-Kévin Nadje,2025-2026,Unknown,1.0,Benjamin Mendy,2021-2022,Unknown,1.0,Julien Le Cardinal,2025-2026,Unknown,1.0,El Bilal Touré,2025-2026,Other,1.0,Bruno Duarte,2025-2026,Forward,1.0
-Poulsen,2021-2022,0,Forward,Rıdvan Yılmaz,2021-2022,Defender,0.9999,Bojan Miovski,2025-2026,Other,0.9999,Konrad Laimer,2025-2026,Unknown,0.9999,Onana,2021-2022,Midfielder,0.9998,Lustenberger,2021-2022,Defender,0.9997
+Poulsen,2021-2022,0,Forward,Bojan Miovski,2025-2026,Other,0.9999,Konrad Laimer,2025-2026,Unknown,0.9999,Onana,2021-2022,Midfielder,0.9998,Youngwoo Seol,2025-2026,Other,0.9997,Marcus Thuram,2025-2026,Unknown,0.9996
 D'Ambrosio,2021-2022,0,Defender,Jović,2021-2022,Forward,1.0,Youngwoo Seol,2025-2026,Other,0.9999,Lustenberger,2021-2022,Defender,0.9999,António Silva,2025-2026,Unknown,0.9999,Lukáš Haraslín,2025-2026,Other,0.9998
 Toni Martínez,2021-2022,0,Forward,Adam Ounas,2021-2022,Other,1.0,Enzo Crivelli,2021-2022,Other,1.0,Dion Moise Sahi,2021-2022,Other,1.0,Felix Kalu Nmecha,2021-2022,Other,1.0,Noah Joel Sarenren Bazee,2021-2022,Other,1.0
 Matheus Cunha,2021-2022,0,Forward,James Mcatee,2025-2026,Other,1.0,Olmo,2021-2022,Forward,1.0,Nordi Mukiele,2025-2026,Unknown,1.0,Paulo Bernardo,2025-2026,Midfielder,1.0,Joey Veerman,2025-2026,Unknown,1.0
@@ -149,7 +149,7 @@ Messias Junior,2021-2022,0,Forward,Mike Maignan,2025-2026,Unknown,1.0,Vlahović,
 Lázaro,2021-2022,0,Midfielder,Timothy Weah,2025-2026,Unknown,1.0,Sudakov,2021-2022,Midfielder,1.0,Loris Benito,2025-2026,Other,1.0,Cesc Fàbregas,2021-2022,Unknown,0.9999,Guindo,2021-2022,Defender,0.9999
 Maceiras,2021-2022,0,Defender,Dálcio Gomes,2025-2026,Other,1.0,Loris Benito,2025-2026,Other,1.0,Seferović,2021-2022,Forward,1.0,Tiago Santos,2025-2026,Other,1.0,Sudakov,2021-2022,Midfielder,0.9999
 Salih Uçan,2021-2022,0,Midfielder,Matteo Gabbia,2025-2026,Other,1.0,Riccardo Orsolini,2025-2026,Other,1.0,Wendell,2021-2022,Unknown,0.9999,Barkley,2021-2022,Midfielder,0.9999,Mateo Kovacic,2025-2026,Unknown,0.9999
-Coutinho,2021-2022,0,Forward,Gavi,2025-2026,Unknown,1.0,Anthony Ralston,2025-2026,Defender,1.0,Conrad Harder,2025-2026,Unknown,1.0,Lazar Samardzic,2025-2026,Other,0.9999,De Winter,2021-2022,Defender,0.9999
+Coutinho,2021-2022,0,Forward,Gavi,2025-2026,Unknown,1.0,Conrad Harder,2025-2026,Unknown,1.0,Lazar Samardzic,2025-2026,Other,0.9999,Matias Fernandez-Pardo,2025-2026,Unknown,0.9998,Al. Miranchuk,2021-2022,Forward,0.9998
 Erokhin,2021-2022,0,Midfielder,Bakayoko,2021-2022,Defender,1.0,Cuadrado,2025-2026,Midfielder,1.0,Marc Roca,2021-2022,Defender,1.0,George Ilenikhena,2025-2026,Other,0.9999,Phillips,2021-2022,Defender,0.9999
 Shkurin,2021-2022,0,Forward,Barcia,2021-2022,Other,1.0,Aimen Moueffek,2021-2022,Other,1.0,Javi López,2021-2022,Other,1.0,Mario Hernández,2021-2022,Other,1.0,Jan Morávek,2021-2022,Other,1.0
 Slimani,2021-2022,0,Forward,Josha Vagnoman,2025-2026,Other,1.0,Vormer,2021-2022,Midfielder,1.0,Nicolò Fagioli,2025-2026,Other,1.0,Ferran Torres,2025-2026,Unknown,1.0,Mitchel Bakker,2025-2026,Unknown,1.0
@@ -223,7 +223,7 @@ Shepeliev,2021-2022,0,Midfielder,Adam Idah,2025-2026,Other,1.0,Ebrima Colley,202
 Richards,2021-2022,0,Defender,Ngal'ayel Mukau,2025-2026,Unknown,1.0,Kenedy,2021-2022,Unknown,1.0,Nicolas Seiwald,2025-2026,Unknown,0.9999,Diogo Jota,2025-2026,Unknown,0.9998,Randal Kolo Muani,2025-2026,Unknown,0.9998
 Julien,2021-2022,0,Defender,Krépin Diatta,2025-2026,Unknown,1.0,Julian Baumgartlinger,2021-2022,Unknown,1.0,Bradarić,2021-2022,Defender,1.0,Anrie Chase,2025-2026,Other,1.0,Couhaib Driouech,2025-2026,Unknown,1.0
 Oguzhan Özyakup,2021-2022,0,Unknown,Bjarki Bjarkason,2021-2022,Other,1.0,Baptiste Santamaria,2021-2022,Other,1.0,Martin Adeline,2021-2022,Other,1.0,Yegor Prutsev,2025-2026,Other,1.0,Tony Springett,2021-2022,Other,1.0
-Daramy,2021-2022,0,Forward,Ander Martin,2021-2022,Other,1.0,Lilian Egloff,2021-2022,Other,1.0,Zakaria,2021-2022,Midfielder,1.0,Dário Essugo,2021-2022,Midfielder,1.0,Conor Bradley,2025-2026,Unknown,0.9999
+Daramy,2021-2022,0,Forward,Ander Martin,2021-2022,Other,1.0,Lilian Egloff,2021-2022,Other,1.0,Dário Essugo,2021-2022,Midfielder,1.0,Zakaria,2021-2022,Midfielder,1.0,Conor Bradley,2025-2026,Unknown,0.9999
 Henrichs,2021-2022,0,Defender,Nathan Tella,2025-2026,Other,1.0,Paulo Gazzaniga,2025-2026,Other,1.0,Aleksa Terzić,2025-2026,Other,1.0,Germán Valera,2021-2022,Other,1.0,Vanja Drkušić,2025-2026,Other,1.0
 Choupo-Moting,2021-2022,0,Midfielder,Raúl Torrente,2025-2026,Other,1.0,Jurriën Timber,2025-2026,Unknown,1.0,Kyriakos Savvidis,2025-2026,Other,0.9999,Lingard,2021-2022,Midfielder,0.9999,Marcus Thuram,2025-2026,Unknown,0.9999
 Yusuf Yazıcı,2021-2022,0,Midfielder,Janis Blaswich,2025-2026,Unknown,1.0,Edouard Michut,2021-2022,Other,1.0,Héctor Fort,2025-2026,Unknown,1.0,Michał Skóraś,2025-2026,Forward,1.0,Fredrik Oppegård,2025-2026,Defender,0.9999
@@ -236,7 +236,7 @@ Taylor,2021-2022,0,Midfielder,Bonnah,2021-2022,Midfielder,1.0,Flávio Nazinho,20
 Francisco Conceição,2021-2022,0,Unknown,Keanan Bennetts,2021-2022,Other,1.0,Kacper Urbanski,2021-2022,Other,1.0,Facundo Gonzalez,2025-2026,Unknown,1.0,Leandro Morgalla,2025-2026,Other,1.0,Erencan Yardımcı,2025-2026,Other,1.0
 F. Nmecha,2021-2022,0,Midfielder,Sydney van Hooijdonk,2021-2022,Other,1.0,Tommaso Pobega,2025-2026,Other,1.0,Matondo-Merveille Papela,2021-2022,Other,1.0,Charlie Cresswell,2021-2022,Other,1.0,Liam McCarron,2021-2022,Other,1.0
 Al. Miranchuk,2021-2022,0,Forward,Lazar Samardzic,2025-2026,Other,1.0,Simone Pafundi,2021-2022,Other,1.0,Eric García,2025-2026,Unknown,1.0,Conrad Harder,2025-2026,Unknown,0.9999,Strahinja Pavlovic,2025-2026,Unknown,0.9999
-Edwards,2021-2022,0,Forward,Alexandre Letellier,2021-2022,Other,1.0,Benjamin Rollheiser,2025-2026,Unknown,1.0,Radeljić,2021-2022,Defender,1.0,Sergi Dominguez,2025-2026,Other,1.0,Simone Zaza,2021-2022,Other,1.0
+Edwards,2021-2022,0,Forward,Alexandre Letellier,2021-2022,Other,1.0,Benjamin Rollheiser,2025-2026,Unknown,1.0,Sergi Dominguez,2025-2026,Other,1.0,Simone Zaza,2021-2022,Other,1.0,Torben Müsel,2021-2022,Other,1.0
 Radonjić,2021-2022,0,Forward,Redwan Bourles,2021-2022,Other,1.0,Abdu Conté,2025-2026,Other,1.0,Luca Waldschmidt,2021-2022,Other,1.0,Myziane Maolida,2021-2022,Other,1.0,Diego Farias,2021-2022,Other,1.0
 Mengi,2021-2022,0,Defender,Myles Lewis-Skelly,2025-2026,Unknown,1.0,Rafiki Said Ahamada,2021-2022,Other,1.0,Jarell Quansah,2025-2026,Unknown,1.0,Aleksandr Kokorin,2021-2022,Unknown,1.0,Nelson Sissoko,2021-2022,Other,1.0
 Wesley,2021-2022,0,Forward,Xavi Simons,2021-2022,Unknown,1.0,Thibault Klidje,2021-2022,Other,1.0,Mahame Siby,2021-2022,Other,1.0,Baptiste Mouazan,2021-2022,Other,1.0,Dele Alli,2021-2022,Unknown,1.0
@@ -274,7 +274,7 @@ Bonnah,2021-2022,0,Midfielder,Flávio Nazinho,2021-2022,Defender,1.0,Javier Onti
 Stefano Sensi,2021-2022,0,Other,Justin Che,2021-2022,Other,1.0,Ramiz Zerrouki,2025-2026,Other,1.0,Andres Cuenca,2025-2026,Other,1.0,Adrian Fein,2021-2022,Other,1.0,Vladyslav Supriaha,2021-2022,Other,1.0
 Lednev,2021-2022,0,Midfielder,Luka Romero,2021-2022,Other,1.0,Jon Bautista,2021-2022,Other,1.0,Martin Ødegaard,2025-2026,Unknown,1.0,Min-su Kim,2025-2026,Unknown,1.0,Spielmann,2021-2022,Midfielder,1.0
 Zhegrova,2021-2022,0,Midfielder,Anderson Lima,2021-2022,Other,1.0,Mamadou Camara,2021-2022,Other,1.0,Patrik Schick,2025-2026,Unknown,1.0,Hannibal Mejbri,2021-2022,Other,0.9999,Chiellini,2021-2022,Defender,0.9999
-Seferović,2021-2022,0,Forward,Tiago Santos,2025-2026,Other,1.0,Dálcio Gomes,2025-2026,Other,1.0,Colin Dagba,2021-2022,Unknown,1.0,Maceiras,2021-2022,Defender,1.0,Loris Benito,2025-2026,Other,0.9999
+Seferović,2021-2022,0,Forward,Tiago Santos,2025-2026,Other,1.0,Dálcio Gomes,2025-2026,Other,1.0,Colin Dagba,2021-2022,Unknown,1.0,Loris Benito,2025-2026,Other,0.9999,Ilaix Moriba,2021-2022,Other,0.9999
 Zakaria,2021-2022,0,Midfielder,Dário Essugo,2021-2022,Midfielder,1.0,Lilian Egloff,2021-2022,Other,1.0,Diego Falcinelli,2021-2022,Other,1.0,Raheem Sterling,2025-2026,Unknown,1.0,Bondarenko,2021-2022,Midfielder,1.0
 Dário Essugo,2021-2022,0,Midfielder,Zakaria,2021-2022,Midfielder,1.0,Lilian Egloff,2021-2022,Other,1.0,Diego Falcinelli,2021-2022,Other,1.0,Raheem Sterling,2025-2026,Unknown,1.0,Bondarenko,2021-2022,Midfielder,1.0
 Spielmann,2021-2022,0,Midfielder,Jon Bautista,2021-2022,Other,1.0,Luka Romero,2021-2022,Other,1.0,Sulejmani,2021-2022,Midfielder,1.0,Lednev,2021-2022,Midfielder,1.0,Martin Ødegaard,2025-2026,Unknown,1.0
@@ -285,7 +285,7 @@ Sulejmani,2021-2022,0,Midfielder,Spielmann,2021-2022,Midfielder,1.0,Jon Bautista
 Delap,2021-2022,0,Forward,Markus Solbakken,2025-2026,Unknown,1.0,Eric Dier,2025-2026,Unknown,1.0,Moussa Yeo,2025-2026,Unknown,1.0,Issa Kaboré,2025-2026,Other,1.0,Renato Sanches,2025-2026,Unknown,1.0
 Mbete,2021-2022,0,Defender,Patrick Roberts,2021-2022,Other,1.0,Yussuf Poulsen,2025-2026,Unknown,1.0,Gianluca Frabotta,2021-2022,Other,1.0,Bouna Sarr,2021-2022,Other,1.0,Kolarov,2021-2022,Defender,1.0
 Kolarov,2021-2022,0,Defender,Javi Serrano,2021-2022,Midfielder,1.0,Bouna Sarr,2021-2022,Other,1.0,Gianluca Frabotta,2021-2022,Other,1.0,Yussuf Poulsen,2025-2026,Unknown,1.0,Mbete,2021-2022,Defender,1.0
-Šimić,2021-2022,0,Forward,Javi Serrano,2021-2022,Midfielder,1.0,Eile,2021-2022,Defender,1.0,Luca Gagliano,2021-2022,Other,1.0,Kolarov,2021-2022,Defender,1.0,Bouna Sarr,2021-2022,Other,1.0
+Šimić,2021-2022,0,Forward,Javi Serrano,2021-2022,Midfielder,1.0,Luca Gagliano,2021-2022,Other,1.0,Bouna Sarr,2021-2022,Other,1.0,Gianluca Frabotta,2021-2022,Other,1.0,Yussuf Poulsen,2025-2026,Unknown,1.0
 Guindo,2021-2022,0,Defender,Cesc Fàbregas,2021-2022,Unknown,1.0,Ronaël Pierre-Gabriel,2025-2026,Other,1.0,Tijani,2021-2022,Midfielder,0.9999,Lázaro,2021-2022,Midfielder,0.9999,Timothy Weah,2025-2026,Unknown,0.9999
 Oleksiy Shevchenko,2021-2022,0,Goalkeeper,Daniele Baselli,2021-2022,Other,1.0,Diego Lainez,2021-2022,Other,1.0,William Smallbone,2021-2022,Other,1.0,Cristhian Mosquera,2021-2022,Other,1.0,Francesco Rossi,2021-2022,Other,1.0
 Maier,2021-2022,0,Midfielder,Kyle Walker,2025-2026,Unknown,1.0,Strahinja Pavlovic,2025-2026,Unknown,1.0,Meite,2021-2022,Midfielder,1.0,Eric García,2025-2026,Unknown,1.0,Simone Pafundi,2021-2022,Other,1.0
@@ -2793,7 +2793,7 @@ Kasper Schmeichel,2025-2026,0,Unknown,Rodrygo,2025-2026,Unknown,1.0,Ibrahimović
 ?ukasz Skorupski,2025-2026,0,Other,Gareth Bale,2021-2022,Unknown,1.0,Mario Lemina,2021-2022,Other,1.0,Kyle Walker-Peters,2021-2022,Other,1.0,Fidel,2021-2022,Other,1.0,Kevin Vogt,2021-2022,Other,1.0
 Anatoliy Trubin,2025-2026,0,Unknown,Köhn,2021-2022,Goalkeeper,1.0,Eric Maxim Choupo-Moting,2021-2022,Unknown,0.9999,Oblak,2021-2022,Goalkeeper,0.9998,Bounou,2021-2022,Goalkeeper,0.9998,Szczęsny,2021-2022,Goalkeeper,0.9995
 Paulo Gazzaniga,2025-2026,0,Other,Vanja Drkušić,2025-2026,Other,1.0,Nathan Tella,2025-2026,Other,1.0,Henrichs,2021-2022,Defender,1.0,Rubén Peña,2021-2022,Other,1.0,Bondarenko,2021-2022,Midfielder,1.0
-Tigran Barseghyan,2025-2026,0,Forward,Koopmeiners,2021-2022,Midfielder,1.0,Hutchinson,2021-2022,Midfielder,1.0,Darmian,2021-2022,Defender,1.0,Isco,2021-2022,Unknown,1.0,Samy Mmaee,2025-2026,Defender,1.0
+Tigran Barseghyan,2025-2026,0,Forward,Koopmeiners,2021-2022,Midfielder,1.0,Hutchinson,2021-2022,Midfielder,1.0,Isco,2021-2022,Unknown,1.0,Gonçalo Inacio,2025-2026,Unknown,1.0,Matheus Reis,2025-2026,Unknown,1.0
 Dan Ndoye,2025-2026,0,Other,Mohamed Ali Camara,2025-2026,Defender,1.0,Moi Gómez,2021-2022,Midfielder,1.0,Ousmane Diomande,2025-2026,Unknown,1.0,Jaroslav Zelený,2025-2026,Defender,1.0,Chilwell,2021-2022,Defender,1.0
 Dávid Strelec,2025-2026,0,Other,Berget,2021-2022,Midfielder,1.0,Elanga,2021-2022,Forward,1.0,Rebić,2021-2022,Forward,1.0,Julián Álvarez,2025-2026,Unknown,0.9999,Ismaily,2021-2022,Unknown,0.9997
 Mike Maignan,2025-2026,0,Unknown,Messias Junior,2021-2022,Forward,1.0,Vlahović,2021-2022,Forward,0.9988,Yann Sommer,2025-2026,Unknown,0.9987,Ayase Ueda,2025-2026,Unknown,0.9972,Alexander Nübel,2025-2026,Unknown,0.9964
@@ -2846,7 +2846,7 @@ Andreas Skov Olsen,2025-2026,0,Other,Mario Gaspar,2021-2022,Defender,1.0,Jordan 
 Bernardo Silva,2025-2026,0,Unknown,Kyriani Sabbe,2025-2026,Unknown,1.0,Anis Hadj Moussa,2025-2026,Unknown,1.0,Kryvtsov,2021-2022,Defender,1.0,Piotr Zielinski,2025-2026,Unknown,1.0,Bruno,2021-2022,Unknown,0.9999
 Ben White,2025-2026,0,Unknown,Aïssa Mandi,2025-2026,Other,1.0,Lukas Hradecky,2025-2026,Unknown,1.0,Ansu Fati,2021-2022,Other,1.0,Marcos Llorente,2025-2026,Unknown,1.0,Geny Catamo,2025-2026,Other,1.0
 Riccardo Orsolini,2025-2026,0,Other,Salih Uçan,2021-2022,Midfielder,1.0,Barkley,2021-2022,Midfielder,1.0,Mateo Kovacic,2025-2026,Unknown,1.0,Matteo Gabbia,2025-2026,Other,0.9999,Wendell,2021-2022,Unknown,0.9999
-Bryan Gil,2025-2026,0,Forward,Łukasz Łakomy,2025-2026,Unknown,1.0,Lefort,2021-2022,Defender,1.0,Bobby Clark,2025-2026,Other,1.0,Ansu Fati,2021-2022,Other,1.0,Edoardo Bove,2021-2022,Other,1.0
+Bryan Gil,2025-2026,0,Forward,Łukasz Łakomy,2025-2026,Unknown,1.0,Bobby Clark,2025-2026,Other,1.0,Ansu Fati,2021-2022,Other,1.0,Edoardo Bove,2021-2022,Other,1.0,Lukas Hradecky,2025-2026,Unknown,1.0
 Antonio Nusa,2025-2026,0,Other,Yan Couto,2025-2026,Unknown,1.0,Krugovoi,2021-2022,Defender,1.0,Ethan Nwaneri,2025-2026,Unknown,1.0,Orbelín Pineda,2021-2022,Other,1.0,Erencan Yardımcı,2025-2026,Other,0.9999
 Victor Boniface,2025-2026,0,Unknown,Mirko Ivanić,2025-2026,Midfielder,0.9999,Trippier,2021-2022,Defender,0.9999,De Pena,2021-2022,Midfielder,0.9999,Sobol,2021-2022,Defender,0.9998,Dia,2021-2022,Forward,0.9997
 Zachary Athekame,2025-2026,0,Unknown,Mario Gaspar,2021-2022,Defender,1.0,Andreas Skov Olsen,2025-2026,Other,1.0,Jaouen Hadjam,2025-2026,Other,1.0,Jordan Lotomba,2025-2026,Other,1.0,Sarr,2021-2022,Defender,1.0
@@ -2941,7 +2941,7 @@ Nicolas Seiwald,2025-2026,0,Unknown,Randal Kolo Muani,2025-2026,Unknown,1.0,Mata
 Stefan Bajcetic,2025-2026,0,Unknown,Aurier,2021-2022,Defender,1.0,Sarr,2021-2022,Defender,1.0,Jaouen Hadjam,2025-2026,Other,0.9999,Mikel Merino,2025-2026,Unknown,0.9999,Zachary Athekame,2025-2026,Unknown,0.9999
 Asensio,2025-2026,0,Forward,Fabian Rieder,2025-2026,Midfielder,1.0,Lucas Gourna-Douath,2025-2026,Other,1.0,Sharani Zuberu,2025-2026,Unknown,1.0,Davide Frattesi,2025-2026,Unknown,1.0,Danylo Sikan,2025-2026,Forward,1.0
 Mama Baldé,2025-2026,0,Unknown,Draxler,2021-2022,Forward,1.0,Dorgeles Nene,2025-2026,Other,1.0,Alexander Sørloth,2025-2026,Other,0.9999,Bart Nieuwkoop,2025-2026,Defender,0.9999,Joel Monteiro,2025-2026,Other,0.9999
-Marko Arnautović,2025-2026,0,Forward,Carlos Augusto,2025-2026,Unknown,0.9999,Kyogo Furuhashi,2025-2026,Other,0.9999,Nicolás González,2025-2026,Unknown,0.9999,Munir,2021-2022,Forward,0.9998,M. Olsson,2021-2022,Defender,0.9998
+Marko Arnautović,2025-2026,0,Forward,Carlos Augusto,2025-2026,Unknown,0.9999,Kyogo Furuhashi,2025-2026,Other,0.9999,Nicolás González,2025-2026,Unknown,0.9999,Munir,2021-2022,Forward,0.9998,Evanilson,2021-2022,Unknown,0.9996
 Lazar Samardzic,2025-2026,0,Other,Al. Miranchuk,2021-2022,Forward,1.0,Conrad Harder,2025-2026,Unknown,1.0,Simone Pafundi,2021-2022,Other,1.0,Eric García,2025-2026,Unknown,1.0,Anthony Ralston,2025-2026,Defender,0.9999
 Kamory Doumbia,2025-2026,0,Other,Kehrer,2021-2022,Defender,1.0,Selvi Clua,2025-2026,Unknown,1.0,Verbič,2021-2022,Midfielder,1.0,El Bilal Touré,2025-2026,Other,1.0,Moriba,2021-2022,Midfielder,0.9999
 Robert Andrich,2025-2026,0,Other,Paulo Otávio,2021-2022,Defender,0.9999,Niklas Geyrhofer,2025-2026,Unknown,0.9999,Giovanni Fabbian,2025-2026,Other,0.9999,Thomas Meunier,2025-2026,Unknown,0.9999,Frenkie de Jong,2025-2026,Unknown,0.9998
@@ -2956,7 +2956,7 @@ Samuel Iling-Junior,2025-2026,0,Other,Gijs Smal,2025-2026,Unknown,1.0,Waniss Tai
 Amine Adli,2025-2026,0,Unknown,Andrija Maksimović,2025-2026,Unknown,1.0,Zagadou,2021-2022,Defender,1.0,Samuel Lino,2025-2026,Unknown,1.0,Kevin Kampl,2025-2026,Unknown,1.0,Lewicki,2021-2022,Midfielder,1.0
 Adam Idah,2025-2026,0,Other,Shepeliev,2021-2022,Midfielder,1.0,Santiago Castro,2025-2026,Unknown,1.0,Chukwueze,2025-2026,Midfielder,0.9998,Arthur Vermeeren,2025-2026,Other,0.9998,Marko Rog,2025-2026,Other,0.9997
 Matias Fernandez-Pardo,2025-2026,0,Unknown,Soungoutou Magassa,2025-2026,Other,1.0,Vallejo,2021-2022,Defender,1.0,Gregory Wüthrich,2025-2026,Defender,1.0,De Winter,2021-2022,Defender,1.0,Luka Stojković,2025-2026,Unknown,1.0
-Viktor Tsygankov,2025-2026,0,Forward,Hugo Bueno,2025-2026,Unknown,1.0,Elias Cobbaut,2025-2026,Defender,1.0,E. Hazard,2021-2022,Forward,1.0,Timi Elšnik,2025-2026,Other,1.0,Lukáš Haraslín,2025-2026,Other,1.0
+Viktor Tsygankov,2025-2026,0,Forward,Hugo Bueno,2025-2026,Unknown,1.0,E. Hazard,2021-2022,Forward,1.0,Timi Elšnik,2025-2026,Other,1.0,Lukáš Haraslín,2025-2026,Other,1.0,António Silva,2025-2026,Unknown,1.0
 Sharani Zuberu,2025-2026,0,Unknown,Bruno Duarte,2025-2026,Forward,1.0,Julien Le Cardinal,2025-2026,Unknown,1.0,Asensio,2025-2026,Forward,1.0,Fabian Rieder,2025-2026,Midfielder,1.0,Benjamin Mendy,2021-2022,Unknown,1.0
 Mikel Merino,2025-2026,0,Unknown,Aurier,2021-2022,Defender,1.0,Jonas Hofmann,2025-2026,Unknown,1.0,Van Der Brempt,2021-2022,Defender,1.0,Stefan Bajcetic,2025-2026,Unknown,0.9999,Sarr,2021-2022,Defender,0.9997
 Tiago Santos,2025-2026,0,Other,Seferović,2021-2022,Forward,1.0,Colin Dagba,2021-2022,Unknown,1.0,Dálcio Gomes,2025-2026,Other,1.0,Maceiras,2021-2022,Defender,1.0,Ilaix Moriba,2021-2022,Other,0.9999
@@ -2988,7 +2988,7 @@ Jack Grealish,2025-2026,0,Unknown,Eduardo Quaresma,2025-2026,Defender,1.0,Richar
 Patrik Schick,2025-2026,0,Unknown,Mamadou Camara,2021-2022,Other,1.0,Hannibal Mejbri,2021-2022,Other,1.0,Zhegrova,2021-2022,Midfielder,1.0,Anderson Lima,2021-2022,Other,1.0,Chiellini,2021-2022,Defender,1.0
 Gerard Martín,2025-2026,0,Unknown,Christoph Baumgartner,2025-2026,Other,1.0,Kastriot Imeri,2025-2026,Other,1.0,Yunus Musah,2025-2026,Unknown,1.0,Mateo Kovacic,2025-2026,Unknown,0.9998,Barkley,2021-2022,Midfielder,0.9998
 Ferran Torres,2025-2026,0,Unknown,Gonzalo Montiel,2021-2022,Other,1.0,Nicolò Fagioli,2025-2026,Other,1.0,Josha Vagnoman,2025-2026,Other,1.0,Slimani,2021-2022,Forward,1.0,Tagliafico,2021-2022,Defender,1.0
-Darian Males,2025-2026,0,Forward,Cavani,2021-2022,Forward,1.0,Javi Serrano,2025-2026,Midfielder,0.9999,Miguel Gutiérrez,2021-2022,Defender,0.9999,Marko Rog,2025-2026,Other,0.9999,Arthur Vermeeren,2025-2026,Other,0.9999
+Darian Males,2025-2026,0,Forward,Cavani,2021-2022,Forward,1.0,Javi Serrano,2025-2026,Midfielder,0.9999,Marko Rog,2025-2026,Other,0.9999,Arthur Vermeeren,2025-2026,Other,0.9999,Chukwueze,2025-2026,Midfielder,0.9999
 Bruno Duarte,2025-2026,0,Forward,Julien Le Cardinal,2025-2026,Unknown,1.0,Sharani Zuberu,2025-2026,Unknown,1.0,Benjamin Mendy,2021-2022,Unknown,1.0,Mostovoy,2021-2022,Midfielder,1.0,Chris-Kévin Nadje,2025-2026,Unknown,1.0
 Angel Gomes,2025-2026,0,Other,Marlon Gomes,2025-2026,Unknown,1.0,Ilaix Moriba,2021-2022,Other,1.0,Colin Dagba,2021-2022,Unknown,0.9998,Edouard Michut,2021-2022,Other,0.9998,Yusuf Yazıcı,2021-2022,Midfielder,0.9998
 Issa Kaboré,2025-2026,0,Other,Renato Sanches,2025-2026,Unknown,1.0,Milan Rodić,2025-2026,Defender,1.0,Meschack Elia,2025-2026,Forward,1.0,Moussa Yeo,2025-2026,Unknown,1.0,Eric Dier,2025-2026,Unknown,1.0
@@ -3033,7 +3033,7 @@ Marc-André ter Stegen,2025-2026,0,Unknown,Fali,2021-2022,Other,1.0,Paul Bernard
 Marlon Gomes,2025-2026,0,Unknown,Angel Gomes,2025-2026,Other,1.0,Edouard Michut,2021-2022,Other,0.9999,Yusuf Yazıcı,2021-2022,Midfielder,0.9999,Janis Blaswich,2025-2026,Unknown,0.9999,Héctor Fort,2025-2026,Unknown,0.9999
 Vanja Drkušić,2025-2026,0,Other,Paulo Gazzaniga,2025-2026,Other,1.0,Rubén Peña,2021-2022,Other,1.0,Bondarenko,2021-2022,Midfielder,1.0,Raheem Sterling,2025-2026,Unknown,1.0,Diego Falcinelli,2021-2022,Other,1.0
 Guélor Kanga,2025-2026,0,Midfielder,Coke,2021-2022,Other,1.0,Mata,2021-2022,Midfielder,1.0,Randal Kolo Muani,2025-2026,Unknown,1.0,Jeremy Doku,2025-2026,Other,1.0,Jan-Niklas Beste,2025-2026,Other,1.0
-Meschack Elia,2025-2026,0,Forward,Milan Rodić,2025-2026,Defender,1.0,Renato Sanches,2025-2026,Unknown,1.0,Issa Kaboré,2025-2026,Other,1.0,Iborra,2021-2022,Midfielder,1.0,Ricardo Esgaio,2025-2026,Unknown,1.0
+Meschack Elia,2025-2026,0,Forward,Renato Sanches,2025-2026,Unknown,1.0,Issa Kaboré,2025-2026,Other,1.0,Iborra,2021-2022,Midfielder,1.0,Ricardo Esgaio,2025-2026,Unknown,1.0,Moussa Yeo,2025-2026,Unknown,1.0
 Romain Faivre,2025-2026,0,Unknown,Eliot Matazo,2025-2026,Other,1.0,Mohamed Sankoh,2021-2022,Other,1.0,Cedric Itten,2025-2026,Other,1.0,Jhon Solís,2025-2026,Other,1.0,Bjorn Meijer,2025-2026,Unknown,1.0
 Cedric Itten,2025-2026,0,Other,Bjorn Meijer,2025-2026,Unknown,1.0,Giorgio Cittadini,2021-2022,Other,1.0,Eliot Matazo,2025-2026,Other,1.0,Romain Faivre,2025-2026,Unknown,1.0,Mohamed Sankoh,2021-2022,Other,1.0
 Juraj Kucka,2025-2026,0,Other,Matteo Lovato,2021-2022,Other,1.0,Marten Winkler,2021-2022,Other,1.0,Jastin García,2025-2026,Unknown,1.0,Julián Carranza,2025-2026,Unknown,1.0,Christian Oliva,2021-2022,Other,1.0
@@ -3071,7 +3071,7 @@ Cuadrado,2025-2026,0,Midfielder,Erokhin,2021-2022,Midfielder,1.0,Bakayoko,2021-2
 Moussa Yeo,2025-2026,0,Unknown,Eric Dier,2025-2026,Unknown,1.0,Delap,2021-2022,Forward,1.0,Markus Solbakken,2025-2026,Unknown,1.0,Issa Kaboré,2025-2026,Other,1.0,Renato Sanches,2025-2026,Unknown,1.0
 Folarin Balogun,2025-2026,0,Other,Désiré Doué,2025-2026,Unknown,1.0,Ibrahim Salah,2025-2026,Other,1.0,Supryaha,2021-2022,Forward,1.0,Michel Aebischer,2025-2026,Other,0.9999,Mbamba-Muanda,2021-2022,Defender,0.9999
 Alexander Schlager,2025-2026,0,Goalkeeper,Thijs Dallinga,2025-2026,Other,1.0,Javier Galán,2025-2026,Other,1.0,Jofre,2021-2022,Other,1.0,Ermedin Demirović,2025-2026,Other,1.0,Josip Brekalo,2021-2022,Other,0.9999
-Michał Skóraś,2025-2026,0,Forward,Fredrik Oppegård,2025-2026,Defender,1.0,Héctor Fort,2025-2026,Unknown,1.0,Janis Blaswich,2025-2026,Unknown,1.0,Yusuf Yazıcı,2021-2022,Midfielder,1.0,Edouard Michut,2021-2022,Other,1.0
+Michał Skóraś,2025-2026,0,Forward,Héctor Fort,2025-2026,Unknown,1.0,Janis Blaswich,2025-2026,Unknown,1.0,Yusuf Yazıcı,2021-2022,Midfielder,1.0,Edouard Michut,2021-2022,Other,1.0,Cojocaru,2021-2022,Midfielder,1.0
 Yan Couto,2025-2026,0,Unknown,Antonio Nusa,2025-2026,Other,1.0,Krugovoi,2021-2022,Defender,1.0,Ethan Nwaneri,2025-2026,Unknown,1.0,Orbelín Pineda,2021-2022,Other,1.0,Ermal Krasniqi,2025-2026,Other,0.9999
 Mohamed Bayo,2025-2026,0,Other,Magnus Warming,2021-2022,Other,1.0,Agüero,2021-2022,Forward,1.0,José Fontán,2021-2022,Other,1.0,Aleksandar Katai,2025-2026,Forward,1.0,Marcelo Saracchi,2021-2022,Other,1.0
 Gustaf Nilsson,2025-2026,0,Other,Evann Guessand,2021-2022,Other,1.0,Lewis Bate,2021-2022,Other,1.0,Jamal Lewis,2021-2022,Other,1.0,Christoph Zimmermann,2021-2022,Other,1.0,Álvaro Jiménez,2021-2022,Other,1.0
@@ -3091,7 +3091,7 @@ Luka Stojković,2025-2026,0,Unknown,Soungoutou Magassa,2025-2026,Other,1.0,Matia
 Federico Dimarco,2025-2026,0,Unknown,Cojocaru,2021-2022,Midfielder,1.0,Fredrik Oppegård,2025-2026,Defender,0.9999,Michał Skóraś,2025-2026,Forward,0.9999,Héctor Fort,2025-2026,Unknown,0.9998,Ben Arfa,2021-2022,Midfielder,0.9998
 Dani Olmo,2025-2026,0,Unknown,Da Graca,2021-2022,Forward,1.0,Rodrigo Ribeiro,2021-2022,Forward,1.0,Alex Sola,2021-2022,Other,1.0,Newertton,2025-2026,Other,1.0,Samuel Mbangula,2025-2026,Other,1.0
 Jens Odgaard,2025-2026,0,Other,Cody Drameh,2021-2022,Other,1.0,Riccardo Calafiori,2021-2022,Other,1.0,Miguel Baeza,2021-2022,Other,1.0,Romain Philippoteaux,2021-2022,Other,1.0,Junior Mwanga,2021-2022,Other,1.0
-Lassina Traoré,2025-2026,0,Forward,Javier Ontiveros,2021-2022,Other,1.0,Flávio Nazinho,2021-2022,Defender,1.0,Bonnah,2021-2022,Midfielder,1.0,Taylor,2021-2022,Midfielder,1.0,Luka Stojković,2025-2026,Unknown,1.0
+Lassina Traoré,2025-2026,0,Forward,Javier Ontiveros,2021-2022,Other,1.0,Bonnah,2021-2022,Midfielder,1.0,Taylor,2021-2022,Midfielder,1.0,Luka Stojković,2025-2026,Unknown,1.0,Soungoutou Magassa,2025-2026,Other,1.0
 Javi Serrano,2025-2026,0,Midfielder,Marko Rog,2025-2026,Other,1.0,Arthur Vermeeren,2025-2026,Other,1.0,Chukwueze,2025-2026,Midfielder,1.0,Cavani,2021-2022,Forward,1.0,Darian Males,2025-2026,Forward,0.9999
 John Mellberg,2025-2026,0,Other,Tomi Horvat,2025-2026,Other,1.0,Davide Calabria,2025-2026,Unknown,1.0,Zeki Amdouni,2025-2026,Other,1.0,Daniel Wass,2021-2022,Unknown,1.0,Kuznetsov,2021-2022,Forward,1.0
 Alaa Ghram,2025-2026,0,Unknown,Dost,2021-2022,Forward,1.0,Jonas Martin,2025-2026,Other,1.0,Julien Duranville,2025-2026,Other,1.0,Ousmane Toure,2025-2026,Unknown,0.9999,Anthony Ujah,2021-2022,Other,0.9998
@@ -3141,7 +3141,7 @@ Aleksandar Katai,2025-2026,0,Forward,Agüero,2021-2022,Forward,1.0,Shola Shoreti
 Vasilije Adžić,2025-2026,0,Other,Rhodri Smith,2025-2026,Unknown,1.0,Korniienko,2021-2022,Defender,1.0,Lovro Zvonarek,2025-2026,Other,1.0,Mattia Perin,2025-2026,Other,1.0,Kassoum Ouattara,2025-2026,Other,1.0
 Eric Dier,2025-2026,0,Unknown,Delap,2021-2022,Forward,1.0,Markus Solbakken,2025-2026,Unknown,1.0,Moussa Yeo,2025-2026,Unknown,1.0,Issa Kaboré,2025-2026,Other,1.0,Renato Sanches,2025-2026,Unknown,1.0
 Ricardo Pepi,2025-2026,0,Other,Bale,2021-2022,Forward,1.0,Shola Shoretire,2021-2022,Other,1.0,Martín,2021-2022,Other,1.0,Aleksandar Katai,2025-2026,Forward,1.0,Panagiotis Retsos,2021-2022,Other,1.0
-Nemanja Radonjić,2025-2026,0,Forward,Tomás Rincón,2021-2022,Other,1.0,Aleix Febas,2021-2022,Other,1.0,Dídac Vilà,2021-2022,Other,1.0,Laurens Serpe,2021-2022,Other,1.0,Tommaso De Nipoti,2021-2022,Other,1.0
+Nemanja Radonjić,2025-2026,0,Forward,Tomás Rincón,2021-2022,Other,1.0,Aleix Febas,2021-2022,Other,1.0,Dídac Vilà,2021-2022,Other,1.0,Laurens Serpe,2021-2022,Other,1.0,Damir Ceter,2021-2022,Other,1.0
 Arbër Hoxha,2025-2026,0,Other,Lucas Copado,2021-2022,Other,1.0,Keita Endo,2021-2022,Other,1.0,Gökhan Töre,2021-2022,Midfielder,1.0,Afimico Pululu,2021-2022,Other,1.0,Izquierdo,2021-2022,Forward,1.0
 Romeo Vermant,2025-2026,0,Other,Nicolò Casale,2025-2026,Other,1.0,Dale Stephens,2021-2022,Other,1.0,Mijat Ga?inovi?,2021-2022,Other,1.0,Arthur Cabral,2025-2026,Forward,1.0,Loris Benito,2021-2022,Other,1.0
 Myles Lewis-Skelly,2025-2026,0,Unknown,Mengi,2021-2022,Defender,1.0,Rafiki Said Ahamada,2021-2022,Other,1.0,Jarell Quansah,2025-2026,Unknown,1.0,Aleksandr Kokorin,2021-2022,Unknown,1.0,Pedro Benito,2021-2022,Other,1.0
@@ -3209,7 +3209,7 @@ Nacho,2021-2022,1,Unknown,Hudson-Odoi,2021-2022,Midfielder,1.0,Perišić,2021-20
 Rodrygo,2021-2022,1,Unknown,L. Nielsen,2021-2022,Defender,1.0,Siebatcheu,2021-2022,Forward,1.0,Rafa Silva,2021-2022,Unknown,1.0,Diego Carlos,2021-2022,Unknown,1.0,Brorsson,2021-2022,Defender,1.0
 Lucas Vázquez,2021-2022,1,Unknown,Dumfries,2021-2022,Unknown,1.0,J. Timber,2021-2022,Midfielder,1.0,Neres,2021-2022,Forward,1.0,Florian Wirtz,2025-2026,Unknown,1.0,Larsson,2021-2022,Defender,1.0
 Camavinga,2021-2022,1,Midfielder,Guram Kashia,2025-2026,Defender,1.0,Kang-in Lee,2025-2026,Forward,1.0,Felipe,2021-2022,Unknown,1.0,John Brooks,2021-2022,Other,1.0,Francisco Conceição,2025-2026,Unknown,1.0
-Asensio,2021-2022,1,Forward,Tomori,2021-2022,Defender,1.0,Renato Sanches,2021-2022,Unknown,1.0,Botman,2021-2022,Defender,1.0,Claudinho,2021-2022,Midfielder,1.0,Jerdy Schouten,2025-2026,Unknown,1.0
+Asensio,2021-2022,1,Forward,Renato Sanches,2021-2022,Unknown,1.0,Claudinho,2021-2022,Midfielder,1.0,Jerdy Schouten,2025-2026,Unknown,1.0,Arnold,2021-2022,Midfielder,1.0,Leandro Trossard,2025-2026,Unknown,1.0
 Alisson Becker,2021-2022,1,Unknown,Neuer,2021-2022,Unknown,0.9999,Ederson,2021-2022,Unknown,0.9996,Rafael Leão,2021-2022,Unknown,0.9996,Morato,2021-2022,Unknown,0.9987,Rulli,2021-2022,Goalkeeper,0.9979
 Salah,2021-2022,1,Forward,Raphinha,2025-2026,Unknown,1.0,Berghuis,2021-2022,Forward,1.0,Marquinhos,2021-2022,Unknown,1.0,Fassnacht,2021-2022,Midfielder,1.0,Pulišić,2021-2022,Midfielder,1.0
 Fabinho,2021-2022,1,Unknown,Witsel,2021-2022,Midfielder,1.0,Piqué,2021-2022,Defender,1.0,Hefti,2021-2022,Defender,1.0,Lo Celso,2021-2022,Midfielder,1.0,Angeliño,2021-2022,Unknown,1.0
@@ -3254,7 +3254,7 @@ Weigl,2021-2022,1,Midfielder,Maycon,2021-2022,Midfielder,1.0,Lamine Yamal,2025-2
 Otamendi,2021-2022,1,Defender,Kévin Théophile-Catherine,2025-2026,Defender,1.0,Castañeda,2021-2022,Midfielder,1.0,Ryan Gravenberch,2025-2026,Unknown,1.0,L. Hernández,2021-2022,Defender,1.0,Camara,2021-2022,Midfielder,1.0
 Sané,2021-2022,1,Midfielder,Nuno Santos,2025-2026,Forward,1.0,Hakimi,2021-2022,Unknown,1.0,Bernardo Silva,2021-2022,Unknown,1.0,Harry Kane,2025-2026,Unknown,1.0,Messi,2021-2022,Forward,1.0
 Laporte,2021-2022,1,Defender,Škriniar,2021-2022,Defender,1.0,Alaba,2021-2022,Defender,1.0,João Cancelo,2021-2022,Unknown,1.0,Azpilicueta,2021-2022,Defender,1.0,Matip,2021-2022,Unknown,1.0
-Müller,2021-2022,1,Forward,Daizen Maeda,2025-2026,Unknown,1.0,Mendy,2021-2022,Defender,1.0,Haller,2021-2022,Forward,1.0,Giménez,2021-2022,Defender,1.0,Malcom,2021-2022,Forward,1.0
+Müller,2021-2022,1,Forward,Daizen Maeda,2025-2026,Unknown,1.0,Haller,2021-2022,Forward,1.0,Malcom,2021-2022,Forward,1.0,Modrić,2021-2022,Midfielder,1.0,Edon Zhegrova,2025-2026,Other,1.0
 Pavard,2021-2022,1,Unknown,Leandro Trossard,2025-2026,Unknown,1.0,Arnold,2021-2022,Midfielder,1.0,Meunier,2021-2022,Defender,1.0,Dodô,2021-2022,Defender,1.0,Larin,2021-2022,Forward,1.0
 Thiago Silva,2021-2022,1,Unknown,Pedrinho,2021-2022,Midfielder,1.0,Jesus,2021-2022,Forward,1.0,Firmino,2021-2022,Midfielder,1.0,Lovren,2021-2022,Defender,1.0,Rakitskyy,2021-2022,Defender,1.0
 De Bruyne,2021-2022,1,Midfielder,Demiral,2021-2022,Defender,1.0,Kylian Mbappé,2025-2026,Unknown,1.0,Declan Rice,2025-2026,Unknown,1.0,Sydorchuk,2021-2022,Midfielder,1.0,Dominik Szoboszlai,2025-2026,Unknown,1.0
@@ -3272,11 +3272,11 @@ Gravenberch,2021-2022,1,Midfielder,André,2021-2022,Unknown,1.0,Xeka,2021-2022,U
 Kimmich,2021-2022,1,Midfielder,Weston McKennie,2025-2026,Unknown,1.0,Pino,2021-2022,Forward,1.0,Ryan Flamingo,2025-2026,Unknown,1.0,Sterling,2021-2022,Forward,1.0,Marcos Llorente,2021-2022,Unknown,1.0
 Marcos Llorente,2021-2022,1,Unknown,Cesar Blackman,2025-2026,Unknown,1.0,Christensen,2021-2022,Defender,1.0,Konaté,2021-2022,Defender,1.0,Kimmich,2021-2022,Midfielder,1.0,Weston McKennie,2025-2026,Unknown,1.0
 Azpilicueta,2021-2022,1,Defender,João Cancelo,2021-2022,Unknown,1.0,Alaba,2021-2022,Defender,1.0,Maxence Lacroix,2021-2022,Other,1.0,Raphaël Guerreiro,2025-2026,Unknown,1.0,Škriniar,2021-2022,Defender,1.0
-David,2021-2022,1,Forward,Greenwood,2021-2022,Forward,1.0,Arboleda,2021-2022,Defender,1.0,De Ketelaere,2021-2022,Forward,1.0,Sutormin,2021-2022,Midfielder,1.0,Lukaku,2021-2022,Forward,0.9999
+David,2021-2022,1,Forward,Greenwood,2021-2022,Forward,1.0,De Ketelaere,2021-2022,Forward,1.0,Sutormin,2021-2022,Midfielder,1.0,Lukaku,2021-2022,Forward,0.9999,Luis Suárez,2021-2022,Unknown,0.9999
 Mbappé,2021-2022,1,Forward,Morata,2021-2022,Forward,1.0,Malen,2021-2022,Forward,1.0,Rits,2021-2022,Midfielder,1.0,Vanaken,2021-2022,Midfielder,1.0,Lewandowski,2021-2022,Forward,1.0
 Havertz,2021-2022,1,Midfielder,Qazim Laçi,2025-2026,Midfielder,1.0,Kenan Bajrić,2025-2026,Defender,1.0,James,2021-2022,Defender,1.0,Kjær,2021-2022,Defender,1.0,Grimaldo,2025-2026,Defender,1.0
 Camara,2021-2022,1,Midfielder,Ryan Gravenberch,2025-2026,Unknown,1.0,Shaparenko,2021-2022,Midfielder,1.0,Joel Ordóñez,2025-2026,Unknown,1.0,Giroud,2021-2022,Forward,1.0,Locatelli,2021-2022,Midfielder,1.0
-Haller,2021-2022,1,Forward,Mendy,2021-2022,Defender,1.0,Daizen Maeda,2025-2026,Unknown,1.0,Müller,2021-2022,Forward,1.0,Giménez,2021-2022,Defender,1.0,Malcom,2021-2022,Forward,1.0
+Haller,2021-2022,1,Forward,Daizen Maeda,2025-2026,Unknown,1.0,Müller,2021-2022,Forward,1.0,Malcom,2021-2022,Forward,1.0,Modrić,2021-2022,Midfielder,1.0,Edon Zhegrova,2025-2026,Other,1.0
 Bastoni,2021-2022,1,Unknown,Larin,2021-2022,Forward,1.0,Mykola Matviyenko,2025-2026,Defender,1.0,Ulmer,2021-2022,Defender,1.0,Pavard,2021-2022,Unknown,1.0,Leandro Trossard,2025-2026,Unknown,1.0
 Koke,2021-2022,1,Unknown,Brandt,2021-2022,Midfielder,1.0,Gnabry,2021-2022,Forward,1.0,Montero,2021-2022,Defender,1.0,Jorginho,2021-2022,Unknown,1.0,Akanji,2021-2022,Defender,1.0
 Rúben Dias,2021-2022,1,Unknown,Guus Til,2025-2026,Unknown,1.0,Kimpembe,2021-2022,Defender,1.0,Musiala,2021-2022,Midfielder,1.0,Danilo,2021-2022,Unknown,1.0,Blind,2021-2022,Defender,1.0
@@ -3288,22 +3288,22 @@ Seiwald,2021-2022,1,Midfielder,Mbemba,2021-2022,Defender,1.0,Oleksandr Zubkov,20
 Estupiñán,2021-2022,1,Defender,Mazraoui,2021-2022,Defender,1.0,Lindelöf,2021-2022,Defender,1.0,Hakan Çalhanoglu,2021-2022,Unknown,1.0,Theo Hernández,2025-2026,Unknown,1.0,Angeliño,2021-2022,Unknown,1.0
 Stones,2021-2022,1,Defender,Albiol,2021-2022,Defender,1.0,Georgiy Sudakov,2025-2026,Midfielder,1.0,Raphaël Guerreiro,2025-2026,Unknown,1.0,Maxence Lacroix,2021-2022,Other,1.0,Azpilicueta,2021-2022,Defender,1.0
 Brozović,2021-2022,1,Midfielder,Upamecano,2021-2022,Defender,1.0,Mukiele,2021-2022,Defender,1.0,Lamine Yamal,2025-2026,Unknown,1.0,Weigl,2021-2022,Midfielder,1.0,Maycon,2021-2022,Midfielder,1.0
-Coman,2021-2022,1,Forward,Grimaldo,2021-2022,Defender,1.0,Edon Zhegrova,2025-2026,Other,1.0,Matheus Reis,2021-2022,Unknown,1.0,Modrić,2021-2022,Midfielder,1.0,Vertonghen,2021-2022,Defender,1.0
+Coman,2021-2022,1,Forward,Edon Zhegrova,2025-2026,Other,1.0,Matheus Reis,2021-2022,Unknown,1.0,Modrić,2021-2022,Midfielder,1.0,Müller,2021-2022,Forward,1.0,Daizen Maeda,2025-2026,Unknown,1.0
 Messi,2021-2022,1,Forward,Sancho,2021-2022,Midfielder,1.0,Hakimi,2021-2022,Unknown,1.0,Matheus Nunes,2021-2022,Unknown,1.0,Nuno Santos,2025-2026,Forward,1.0,Pedro Porro,2021-2022,Unknown,1.0
-Tadić,2021-2022,1,Forward,Daniel Parejo,2021-2022,Other,1.0,Jesús Navas,2021-2022,Unknown,1.0,Batshuayi,2021-2022,Forward,1.0,Jamie Gittens,2025-2026,Unknown,1.0,Mykolenko,2021-2022,Defender,1.0
+Tadić,2021-2022,1,Forward,Daniel Parejo,2021-2022,Other,1.0,Jesús Navas,2021-2022,Unknown,1.0,Batshuayi,2021-2022,Forward,1.0,Jamie Gittens,2025-2026,Unknown,1.0,Diego Carlos,2021-2022,Unknown,1.0
 André,2021-2022,1,Unknown,Gravenberch,2021-2022,Midfielder,1.0,Xeka,2021-2022,Unknown,1.0,Zinchenko,2021-2022,Defender,1.0,Alphonso Davies,2025-2026,Unknown,1.0,N'Sakala,2021-2022,Defender,1.0
 Kimpembe,2021-2022,1,Defender,Rúben Dias,2021-2022,Unknown,1.0,Guus Til,2025-2026,Unknown,1.0,Musiala,2021-2022,Midfielder,1.0,Blind,2021-2022,Defender,1.0,Danilo,2021-2022,Unknown,1.0
 Berghuis,2021-2022,1,Forward,Raphinha,2025-2026,Unknown,1.0,Salah,2021-2022,Forward,1.0,Marquinhos,2021-2022,Unknown,1.0,Fassnacht,2021-2022,Midfielder,1.0,Pulišić,2021-2022,Midfielder,1.0
 De Ligt,2021-2022,1,Defender,Bradley Barcola,2025-2026,Unknown,1.0,André Silva,2021-2022,Unknown,1.0,Takumi Minamino,2025-2026,Unknown,1.0,Maguire,2021-2022,Defender,1.0,Alexander-Arnold,2021-2022,Defender,1.0
 Núñez,2021-2022,1,Forward,Danjuma,2021-2022,Midfielder,1.0,Sandro Kulenović,2025-2026,Forward,1.0,Aaronson,2021-2022,Midfielder,1.0,Chiesa,2021-2022,Forward,1.0,Benzema,2021-2022,Forward,1.0
 Matheus Reis,2021-2022,1,Unknown,Coman,2021-2022,Forward,1.0,Grimaldo,2021-2022,Defender,1.0,Edon Zhegrova,2025-2026,Other,1.0,Modrić,2021-2022,Midfielder,1.0,Vertonghen,2021-2022,Defender,1.0
-Ronaldo,2021-2022,1,Forward,Coates,2021-2022,Defender,1.0,João Félix,2021-2022,Unknown,1.0,Elia,2021-2022,Forward,1.0,Iličić,2021-2022,Midfielder,1.0,Kerem Aktürkoglu,2025-2026,Unknown,1.0
+Ronaldo,2021-2022,1,Forward,João Félix,2021-2022,Unknown,1.0,Elia,2021-2022,Forward,1.0,Iličić,2021-2022,Midfielder,1.0,Kerem Aktürkoglu,2025-2026,Unknown,1.0,Haaland,2021-2022,Forward,1.0
 Adeyemi,2021-2022,1,Forward,Ocampos,2021-2022,Midfielder,1.0,Nicolas Kühn,2025-2026,Unknown,1.0,Filip Panák,2025-2026,Unknown,1.0,Neymar,2021-2022,Unknown,1.0,Reus,2021-2022,Midfielder,1.0
 Christensen,2021-2022,1,Defender,Cesar Blackman,2025-2026,Unknown,1.0,Marcos Llorente,2021-2022,Unknown,1.0,Konaté,2021-2022,Defender,1.0,Gonçalo Ramos,2021-2022,Unknown,1.0,Alex Sandro,2021-2022,Unknown,1.0
 Zeki Çelik,2021-2022,1,Unknown,Taremi,2021-2022,Forward,1.0,Takumi Minamino,2025-2026,Unknown,1.0,André Silva,2021-2022,Unknown,1.0,De Ligt,2021-2022,Defender,1.0,Bradley Barcola,2025-2026,Unknown,1.0
 Giménez,2021-2022,1,Defender,Malcom,2021-2022,Forward,1.0,Haller,2021-2022,Forward,1.0,Mendy,2021-2022,Defender,1.0,Daizen Maeda,2025-2026,Unknown,1.0,Müller,2021-2022,Forward,1.0
 Paulinho,2021-2022,1,Unknown,Azmoun,2021-2022,Forward,1.0,Tijjani Reijnders,2025-2026,Unknown,1.0,Džeko,2021-2022,Forward,1.0,Werner,2021-2022,Forward,1.0,Chukwueze,2021-2022,Midfielder,1.0
-Sterling,2021-2022,1,Forward,Ryan Flamingo,2025-2026,Unknown,1.0,Pino,2021-2022,Forward,1.0,Weston McKennie,2025-2026,Unknown,1.0,Kimmich,2021-2022,Midfielder,1.0,Foyth,2021-2022,Defender,1.0
+Sterling,2021-2022,1,Forward,Ryan Flamingo,2025-2026,Unknown,1.0,Pino,2021-2022,Forward,1.0,Weston McKennie,2025-2026,Unknown,1.0,Kimmich,2021-2022,Midfielder,1.0,Christiansen,2021-2022,Midfielder,1.0
 Nuno Mendes,2021-2022,1,Unknown,S. Thill,2021-2022,Midfielder,1.0,Zapata,2021-2022,Forward,1.0,Vinícius Júnior,2021-2022,Unknown,1.0,Nkunku,2021-2022,Midfielder,1.0,Traore,2021-2022,Midfielder,1.0
 Bonucci,2021-2022,1,Defender,Matip,2021-2022,Unknown,1.0,Maghnes Akliouche,2025-2026,Unknown,1.0,Phil Foden,2025-2026,Unknown,1.0,Igor Paixão,2025-2026,Unknown,1.0,Laporte,2021-2022,Defender,1.0
 Kondogbia,2021-2022,1,Midfielder,Trigueros,2021-2022,Midfielder,1.0,Christos Tzolis,2025-2026,Unknown,1.0,Deniz Undav,2025-2026,Unknown,1.0,Tsimikas,2021-2022,Defender,1.0,Trent Alexander-Arnold,2025-2026,Unknown,1.0
@@ -3359,7 +3359,7 @@ Lo Celso,2021-2022,1,Midfielder,Hefti,2021-2022,Defender,1.0,Piqué,2021-2022,De
 F. de Jong,2021-2022,1,Midfielder,Moumi Ngamaleu,2021-2022,Midfielder,1.0,L. Nmecha,2021-2022,Forward,1.0,Koundé,2021-2022,Defender,1.0,Iñigo Martínez,2025-2026,Unknown,1.0,Éder Militão,2021-2022,Unknown,1.0
 Morata,2021-2022,1,Forward,Mbappé,2021-2022,Forward,1.0,Malen,2021-2022,Forward,1.0,Rits,2021-2022,Midfielder,1.0,Vanaken,2021-2022,Midfielder,1.0,Lewandowski,2021-2022,Forward,1.0
 Bruno Fernandes,2021-2022,1,Unknown,Jesus,2021-2022,Forward,1.0,Thiago Silva,2021-2022,Unknown,1.0,Pedrinho,2021-2022,Midfielder,1.0,Sérgio Oliveira,2021-2022,Unknown,1.0,Miguel Gutiérrez,2025-2026,Defender,1.0
-Griezmann,2021-2022,1,Forward,Reinildo,2021-2022,Defender,1.0,Nsoki,2021-2022,Defender,1.0,Lenglet,2021-2022,Defender,1.0,Casemiro,2021-2022,Unknown,1.0,Alonso,2021-2022,Defender,1.0
+Griezmann,2021-2022,1,Forward,Casemiro,2021-2022,Unknown,1.0,Davies,2021-2022,Midfielder,1.0,De Paul,2021-2022,Midfielder,1.0,Emre Can,2025-2026,Unknown,1.0,Pjanic,2021-2022,Midfielder,1.0
 Sučić,2021-2022,1,Midfielder,Alexander-Arnold,2021-2022,Defender,1.0,Maguire,2021-2022,Defender,1.0,Bradley Barcola,2025-2026,Unknown,1.0,De Ligt,2021-2022,Defender,1.0,Antony,2021-2022,Unknown,1.0
 Süle,2021-2022,1,Defender,Matviyenko,2021-2022,Defender,1.0,Pierre Kalulu,2025-2026,Unknown,1.0,Arne Engels,2025-2026,Unknown,1.0,Zappacosta,2021-2022,Defender,1.0,Capoue,2021-2022,Midfielder,1.0
 Yaremchuk,2021-2022,1,Forward,Erling Haaland,2025-2026,Unknown,1.0,Chukwueze,2021-2022,Midfielder,1.0,Džeko,2021-2022,Forward,1.0,Lewandowski,2021-2022,Forward,1.0,Azmoun,2021-2022,Forward,1.0
@@ -3369,17 +3369,17 @@ James,2021-2022,1,Defender,Kenan Bajrić,2025-2026,Defender,1.0,Grimaldo,2025-20
 Aebischer,2021-2022,1,Midfielder,Zeno Debast,2025-2026,Unknown,1.0,Wöber,2021-2022,Defender,1.0,Valentin Rosier,2021-2022,Defender,1.0,Thiago Alcantara,2021-2022,Unknown,1.0,Kai Havertz,2025-2026,Unknown,1.0
 Bellingham,2021-2022,1,Midfielder,Nicolás Otamendi,2025-2026,Unknown,1.0,Rabiot,2021-2022,Midfielder,1.0,Barrios,2021-2022,Midfielder,1.0,Fred,2021-2022,Unknown,1.0,Pepe,2021-2022,Unknown,1.0
 Zinchenko,2021-2022,1,Defender,Xeka,2021-2022,Unknown,1.0,Rodri,2021-2022,Unknown,1.0,Gravenberch,2021-2022,Midfielder,1.0,André,2021-2022,Unknown,1.0,Fermín López,2025-2026,Unknown,1.0
-De Ketelaere,2021-2022,1,Forward,Sutormin,2021-2022,Midfielder,1.0,Greenwood,2021-2022,Forward,1.0,David,2021-2022,Forward,1.0,Arboleda,2021-2022,Defender,1.0,Lukaku,2021-2022,Forward,0.9998
-Čolak,2021-2022,1,Forward,Tsygankov,2021-2022,Midfielder,1.0,Hendry,2021-2022,Defender,1.0,Everton,2021-2022,Unknown,1.0,Rico Lewis,2025-2026,Unknown,1.0,Zeki Çelik,2021-2022,Unknown,1.0
+De Ketelaere,2021-2022,1,Forward,Sutormin,2021-2022,Midfielder,1.0,Greenwood,2021-2022,Forward,1.0,David,2021-2022,Forward,1.0,Lukaku,2021-2022,Forward,0.9998,Luis Suárez,2021-2022,Unknown,0.9998
+Čolak,2021-2022,1,Forward,Tsygankov,2021-2022,Midfielder,1.0,Everton,2021-2022,Unknown,1.0,Rico Lewis,2025-2026,Unknown,1.0,Zeki Çelik,2021-2022,Unknown,1.0,Taremi,2021-2022,Forward,1.0
 Reus,2021-2022,1,Midfielder,Karavaev,2021-2022,Defender,1.0,Filip Panák,2025-2026,Unknown,1.0,Nicolas Kühn,2025-2026,Unknown,1.0,Ocampos,2021-2022,Midfielder,1.0,Adeyemi,2021-2022,Forward,1.0
 Rakitskyy,2021-2022,1,Defender,Lovren,2021-2022,Defender,1.0,Firmino,2021-2022,Midfielder,1.0,Kjær,2021-2022,Defender,1.0,Pedrinho,2021-2022,Midfielder,1.0,Thiago Silva,2021-2022,Unknown,1.0
 Barella,2021-2022,1,Unknown,Álvarez,2021-2022,Midfielder,1.0,Mbemba,2021-2022,Defender,1.0,Seiwald,2021-2022,Midfielder,1.0,Oleksandr Zubkov,2025-2026,Midfielder,1.0,Gueye,2021-2022,Midfielder,1.0
 Innocent,2021-2022,1,Midfielder,Julian Brandt,2025-2026,Unknown,1.0,Trincão,2025-2026,Forward,1.0,Vidal,2021-2022,Midfielder,1.0,Luis Díaz,2021-2022,Unknown,1.0,Virgil van Dijk,2025-2026,Unknown,1.0
-Taremi,2021-2022,1,Forward,Zeki Çelik,2021-2022,Unknown,1.0,Takumi Minamino,2025-2026,Unknown,1.0,André Silva,2021-2022,Unknown,1.0,De Ligt,2021-2022,Defender,1.0,Bradley Barcola,2025-2026,Unknown,1.0
+Taremi,2021-2022,1,Forward,Zeki Çelik,2021-2022,Unknown,1.0,Takumi Minamino,2025-2026,Unknown,1.0,André Silva,2021-2022,Unknown,1.0,Bradley Barcola,2025-2026,Unknown,1.0,Sučić,2021-2022,Midfielder,1.0
 João Mário,2021-2022,1,Unknown,Orkun Kökçü,2025-2026,Unknown,1.0,Dávid Hancko,2025-2026,Unknown,1.0,N'Sakala,2021-2022,Defender,1.0,Alphonso Davies,2025-2026,Unknown,1.0,Maxim De Cuyper,2025-2026,Unknown,1.0
 Addo,2021-2022,1,Midfielder,Matheus Nunes,2025-2026,Unknown,1.0,Manuel Akanji,2025-2026,Unknown,1.0,Garmash,2021-2022,Midfielder,1.0,Adams,2021-2022,Midfielder,1.0,Kampl,2021-2022,Midfielder,1.0
 Tsygankov,2021-2022,1,Midfielder,Čolak,2021-2022,Forward,1.0,Everton,2021-2022,Unknown,1.0,Rico Lewis,2025-2026,Unknown,1.0,Hendry,2021-2022,Defender,1.0,Robertson,2021-2022,Defender,1.0
-Elia,2021-2022,1,Forward,João Félix,2021-2022,Unknown,1.0,Coates,2021-2022,Defender,1.0,Ronaldo,2021-2022,Forward,1.0,Kerem Aktürkoglu,2025-2026,Unknown,1.0,Kuzyaev,2021-2022,Midfielder,1.0
+Elia,2021-2022,1,Forward,João Félix,2021-2022,Unknown,1.0,Ronaldo,2021-2022,Forward,1.0,Kerem Aktürkoglu,2025-2026,Unknown,1.0,Kuzyaev,2021-2022,Midfielder,1.0,Gerard Moreno,2021-2022,Unknown,1.0
 De Vrij,2021-2022,1,Defender,Gündoğan,2021-2022,Midfielder,1.0,Vlahović,2025-2026,Forward,1.0,Ronald Araújo,2021-2022,Unknown,1.0,Kroos,2021-2022,Midfielder,1.0,T. Hernández,2021-2022,Defender,1.0
 Sergio Busquets,2021-2022,1,Unknown,Correa,2021-2022,Forward,1.0,Angelo Stiller,2025-2026,Other,1.0,Loftus-Cheek,2021-2022,Forward,1.0,McTominay,2021-2022,Midfielder,1.0,Hermoso,2021-2022,Defender,1.0
 Shaparenko,2021-2022,1,Midfielder,Camara,2021-2022,Midfielder,1.0,Ryan Gravenberch,2025-2026,Unknown,1.0,Joel Ordóñez,2025-2026,Unknown,1.0,Giroud,2021-2022,Forward,1.0,Locatelli,2021-2022,Midfielder,1.0
@@ -3429,7 +3429,7 @@ Buyalskiy,2021-2022,1,Midfielder,Christian Pulisic,2025-2026,Unknown,1.0,Pau Tor
 Xeka,2021-2022,1,Unknown,Gravenberch,2021-2022,Midfielder,1.0,André,2021-2022,Unknown,1.0,Zinchenko,2021-2022,Defender,1.0,Rodri,2021-2022,Unknown,1.0,Alphonso Davies,2025-2026,Unknown,1.0
 Mæhle,2021-2022,1,Defender,Pessina,2021-2022,Midfielder,1.0,Brorsson,2021-2022,Defender,1.0,Rafa Silva,2021-2022,Unknown,1.0,Malcom,2021-2022,Forward,1.0,Giménez,2021-2022,Defender,1.0
 Garcia,2021-2022,1,Defender,Locatelli,2021-2022,Midfielder,1.0,Giroud,2021-2022,Forward,1.0,Joel Ordóñez,2025-2026,Unknown,1.0,Lauper,2021-2022,Midfielder,1.0,Shaparenko,2021-2022,Midfielder,1.0
-Malcom,2021-2022,1,Forward,Giménez,2021-2022,Defender,1.0,Haller,2021-2022,Forward,1.0,Mendy,2021-2022,Defender,1.0,Daizen Maeda,2025-2026,Unknown,1.0,Müller,2021-2022,Forward,1.0
+Malcom,2021-2022,1,Forward,Haller,2021-2022,Forward,1.0,Daizen Maeda,2025-2026,Unknown,1.0,Müller,2021-2022,Forward,1.0,Modrić,2021-2022,Midfielder,1.0,Edon Zhegrova,2025-2026,Other,1.0
 Fred,2021-2022,1,Unknown,Barrios,2021-2022,Midfielder,1.0,Rabiot,2021-2022,Midfielder,1.0,McKennie,2021-2022,Midfielder,1.0,Bellingham,2021-2022,Midfielder,1.0,Fermín López,2025-2026,Unknown,1.0
 Angeliño,2021-2022,1,Unknown,Lindelöf,2021-2022,Defender,1.0,Fabinho,2021-2022,Unknown,1.0,Witsel,2021-2022,Midfielder,1.0,Piqué,2021-2022,Defender,1.0,Hefti,2021-2022,Defender,1.0
 Pedraza,2021-2022,1,Midfielder,Herrera,2021-2022,Midfielder,1.0,C. Martins Pereira,2021-2022,Midfielder,1.0,Zaidu,2021-2022,Defender,1.0,Warren Zaïre-Emery,2025-2026,Unknown,1.0,Sergio Busquets,2021-2022,Unknown,1.0
@@ -3454,22 +3454,22 @@ Renato Sanches,2021-2022,1,Unknown,Botman,2021-2022,Defender,1.0,Claudinho,2021-
 Zappacosta,2021-2022,1,Defender,Capoue,2021-2022,Midfielder,1.0,Arne Engels,2025-2026,Unknown,1.0,Süle,2021-2022,Defender,1.0,Matviyenko,2021-2022,Defender,1.0,Pierre Kalulu,2025-2026,Unknown,1.0
 Laimer,2021-2022,1,Midfielder,De Sciglio,2021-2022,Defender,1.0,Alan Patrick,2021-2022,Midfielder,1.0,Tonali,2021-2022,Midfielder,1.0,Thomas Partey,2025-2026,Unknown,1.0,Manuel Akanji,2025-2026,Unknown,1.0
 Valentin Rosier,2021-2022,1,Defender,Wöber,2021-2022,Defender,1.0,Zeno Debast,2025-2026,Unknown,1.0,Aebischer,2021-2022,Midfielder,1.0,Bernardeschi,2021-2022,Midfielder,1.0,Thiago Alcantara,2021-2022,Unknown,1.0
-Correa,2021-2022,1,Forward,Angelo Stiller,2025-2026,Other,1.0,Loftus-Cheek,2021-2022,Forward,1.0,Sergio Busquets,2021-2022,Unknown,1.0,McTominay,2021-2022,Midfielder,1.0,Hermoso,2021-2022,Defender,1.0
+Correa,2021-2022,1,Forward,Angelo Stiller,2025-2026,Other,1.0,Loftus-Cheek,2021-2022,Forward,1.0,Sergio Busquets,2021-2022,Unknown,1.0,McTominay,2021-2022,Midfielder,1.0,Malinovskyi,2021-2022,Midfielder,1.0
 Gueye,2021-2022,1,Midfielder,Virgil van Dijk,2025-2026,Unknown,1.0,Álvarez,2021-2022,Midfielder,1.0,Barella,2021-2022,Unknown,1.0,Luis Díaz,2021-2022,Unknown,1.0,Vidal,2021-2022,Midfielder,1.0
 McTominay,2021-2022,1,Midfielder,Loftus-Cheek,2021-2022,Forward,1.0,Angelo Stiller,2025-2026,Other,1.0,Correa,2021-2022,Forward,1.0,Hermoso,2021-2022,Defender,1.0,Malinovskyi,2021-2022,Midfielder,1.0
 Gavi,2021-2022,1,Unknown,Abdallah Sima,2025-2026,Unknown,1.0,Kevin Wimmer,2025-2026,Defender,1.0,Josip Mišić,2025-2026,Midfielder,1.0,Vangelis Pavlidis,2025-2026,Unknown,1.0,Jérôme Roussillon,2021-2022,Other,1.0
-Weghorst,2021-2022,1,Forward,Willi Orbán,2025-2026,Unknown,1.0,Lo Celso,2021-2022,Midfielder,1.0,Hefti,2021-2022,Defender,1.0,Piqué,2021-2022,Defender,1.0,Witsel,2021-2022,Midfielder,1.0
+Weghorst,2021-2022,1,Forward,Willi Orbán,2025-2026,Unknown,1.0,Lo Celso,2021-2022,Midfielder,1.0,Witsel,2021-2022,Midfielder,1.0,Fabinho,2021-2022,Unknown,1.0,Pepe,2021-2022,Unknown,1.0
 Shaw,2021-2022,1,Defender,Djimsiti,2025-2026,Defender,1.0,Davies,2021-2022,Midfielder,1.0,Casemiro,2021-2022,Unknown,1.0,Lenglet,2021-2022,Defender,1.0,Reinildo,2021-2022,Defender,1.0
 Brandt,2021-2022,1,Midfielder,Gnabry,2021-2022,Forward,1.0,Montero,2021-2022,Defender,1.0,Koke,2021-2022,Unknown,1.0,Jorginho,2021-2022,Unknown,1.0,Vlahović,2025-2026,Forward,1.0
 Sancho,2021-2022,1,Midfielder,Messi,2021-2022,Forward,1.0,Matheus Nunes,2021-2022,Unknown,1.0,Pedro Porro,2021-2022,Unknown,1.0,Hakimi,2021-2022,Unknown,1.0,Nuno Santos,2025-2026,Forward,1.0
 Piqué,2021-2022,1,Defender,Hefti,2021-2022,Defender,1.0,Lo Celso,2021-2022,Midfielder,1.0,Witsel,2021-2022,Midfielder,1.0,Fabinho,2021-2022,Unknown,1.0,Willi Orbán,2025-2026,Unknown,1.0
 Malen,2021-2022,1,Forward,Rits,2021-2022,Midfielder,1.0,Morata,2021-2022,Forward,1.0,Vanaken,2021-2022,Midfielder,1.0,Mbappé,2021-2022,Forward,1.0,Lewandowski,2021-2022,Forward,1.0
 Romagnoli,2021-2022,1,Defender,Benjamin Sesko,2025-2026,Unknown,1.0,Marten de Roon,2025-2026,Unknown,1.0,Oxlade-Chamberlain,2021-2022,Midfielder,1.0,Suso,2021-2022,Unknown,1.0,Sierro,2021-2022,Midfielder,1.0
-Gnabry,2021-2022,1,Forward,Montero,2021-2022,Defender,1.0,Brandt,2021-2022,Midfielder,1.0,Koke,2021-2022,Unknown,1.0,Vlahović,2025-2026,Forward,1.0,Jorginho,2021-2022,Unknown,1.0
+Gnabry,2021-2022,1,Forward,Brandt,2021-2022,Midfielder,1.0,Koke,2021-2022,Unknown,1.0,Vlahović,2025-2026,Forward,1.0,Jorginho,2021-2022,Unknown,1.0,Gündoğan,2021-2022,Midfielder,1.0
 Zaidu,2021-2022,1,Defender,Herrera,2021-2022,Midfielder,1.0,Pedraza,2021-2022,Midfielder,1.0,C. Martins Pereira,2021-2022,Midfielder,1.0,Warren Zaïre-Emery,2025-2026,Unknown,1.0,Bentancur,2021-2022,Midfielder,1.0
 McKennie,2021-2022,1,Midfielder,Fermín López,2025-2026,Unknown,1.0,Fred,2021-2022,Unknown,1.0,Rodri,2021-2022,Unknown,1.0,Barrios,2021-2022,Midfielder,1.0,Zinchenko,2021-2022,Defender,1.0
 Hefti,2021-2022,1,Defender,Piqué,2021-2022,Defender,1.0,Lo Celso,2021-2022,Midfielder,1.0,Witsel,2021-2022,Midfielder,1.0,Willi Orbán,2025-2026,Unknown,1.0,Weghorst,2021-2022,Forward,1.0
-Forsberg,2021-2022,1,Forward,Antoine Griezmann,2025-2026,Unknown,1.0,Pašalić,2021-2022,Midfielder,1.0,Georgiy Sudakov,2025-2026,Midfielder,1.0,Albiol,2021-2022,Defender,1.0,Stones,2021-2022,Defender,1.0
+Forsberg,2021-2022,1,Forward,Antoine Griezmann,2025-2026,Unknown,1.0,Pašalić,2021-2022,Midfielder,1.0,Georgiy Sudakov,2025-2026,Midfielder,1.0,Karim Adeyemi,2025-2026,Unknown,1.0,Freuler,2021-2022,Midfielder,1.0
 Batshuayi,2021-2022,1,Forward,Jesús Navas,2021-2022,Unknown,1.0,Daniel Parejo,2021-2022,Other,1.0,Tadić,2021-2022,Forward,1.0,Jamie Gittens,2025-2026,Unknown,1.0,Traore,2021-2022,Midfielder,1.0
 Bentancur,2021-2022,1,Midfielder,Antonio Rüdiger,2025-2026,Unknown,1.0,Warren Zaïre-Emery,2025-2026,Unknown,1.0,Ziyech,2021-2022,Midfielder,1.0,Goretzka,2021-2022,Midfielder,1.0,Bukayo Saka,2025-2026,Unknown,1.0
 Ricardo Esgaio,2021-2022,1,Unknown,Sierro,2021-2022,Midfielder,1.0,Suso,2021-2022,Unknown,1.0,Oxlade-Chamberlain,2021-2022,Midfielder,1.0,Piero Hincapié,2025-2026,Unknown,1.0,Solet,2021-2022,Defender,1.0
@@ -3487,24 +3487,24 @@ Kędziora,2021-2022,1,Defender,Tiago Djaló,2021-2022,Unknown,1.0,Rashford,2021-
 Jérôme Roussillon,2021-2022,1,Other,Vinícius Júnior,2025-2026,Unknown,1.0,Teun Koopmeiners,2025-2026,Unknown,1.0,Dest,2021-2022,Defender,1.0,Paredes,2021-2022,Midfielder,1.0,Dahoud,2021-2022,Midfielder,1.0
 Tolói,2021-2022,1,Defender,Tsimikas,2021-2022,Defender,1.0,Deniz Undav,2025-2026,Unknown,1.0,Christos Tzolis,2025-2026,Unknown,1.0,Rade Krunic,2025-2026,Unknown,1.0,Trigueros,2021-2022,Midfielder,1.0
 Matviyenko,2021-2022,1,Defender,Süle,2021-2022,Defender,1.0,Pierre Kalulu,2025-2026,Unknown,1.0,Arne Engels,2025-2026,Unknown,1.0,Zappacosta,2021-2022,Defender,1.0,Capoue,2021-2022,Midfielder,1.0
-Loftus-Cheek,2021-2022,1,Forward,Angelo Stiller,2025-2026,Other,1.0,Correa,2021-2022,Forward,1.0,Sergio Busquets,2021-2022,Unknown,1.0,McTominay,2021-2022,Midfielder,1.0,Hermoso,2021-2022,Defender,1.0
+Loftus-Cheek,2021-2022,1,Forward,Angelo Stiller,2025-2026,Other,1.0,Correa,2021-2022,Forward,1.0,Sergio Busquets,2021-2022,Unknown,1.0,McTominay,2021-2022,Midfielder,1.0,Malinovskyi,2021-2022,Midfielder,1.0
 Hummels,2021-2022,1,Defender,Wan-Bissaka,2021-2022,Defender,1.0,Dayot Upamecano,2025-2026,Unknown,1.0,Núñez,2025-2026,Forward,1.0,Jamal Musiala,2025-2026,Unknown,1.0,Gabriel,2025-2026,Defender,1.0
 Castañeda,2021-2022,1,Midfielder,Kévin Théophile-Catherine,2025-2026,Defender,1.0,Otamendi,2021-2022,Defender,1.0,L. Hernández,2021-2022,Defender,1.0,De Roon,2021-2022,Midfielder,1.0,Achraf Hakimi,2025-2026,Unknown,1.0
 Klostermann,2021-2022,1,Defender,Pepe,2021-2022,Unknown,1.0,Weghorst,2021-2022,Forward,1.0,Willi Orbán,2025-2026,Unknown,1.0,Lo Celso,2021-2022,Midfielder,1.0,Nicolás Otamendi,2025-2026,Unknown,1.0
-Larin,2021-2022,1,Forward,Pavard,2021-2022,Unknown,1.0,Leandro Trossard,2025-2026,Unknown,1.0,Arnold,2021-2022,Midfielder,1.0,Bastoni,2021-2022,Unknown,1.0,Meunier,2021-2022,Defender,1.0
+Larin,2021-2022,1,Forward,Pavard,2021-2022,Unknown,1.0,Leandro Trossard,2025-2026,Unknown,1.0,Arnold,2021-2022,Midfielder,1.0,Bastoni,2021-2022,Unknown,1.0,Renato Steffen,2021-2022,Other,1.0
 Varane,2021-2022,1,Defender,Aké,2021-2022,Defender,1.0,De Paul,2021-2022,Midfielder,1.0,Kristensen,2021-2022,Defender,1.0,Emre Can,2025-2026,Unknown,1.0,Alonso,2021-2022,Defender,1.0
-Jesus,2021-2022,1,Forward,Thiago Silva,2021-2022,Unknown,1.0,Pedrinho,2021-2022,Midfielder,1.0,Firmino,2021-2022,Midfielder,1.0,Lovren,2021-2022,Defender,1.0,Rakitskyy,2021-2022,Defender,1.0
+Jesus,2021-2022,1,Forward,Thiago Silva,2021-2022,Unknown,1.0,Pedrinho,2021-2022,Midfielder,1.0,Firmino,2021-2022,Midfielder,1.0,Bruno Fernandes,2021-2022,Unknown,1.0,Qazim Laçi,2025-2026,Midfielder,1.0
 Brahim Díaz,2021-2022,1,Unknown,Alex Telles,2021-2022,Unknown,1.0,Nahuel Molina,2025-2026,Unknown,1.0,Depay,2021-2022,Forward,1.0,Luis Suárez,2021-2022,Unknown,0.9999,Sarabia,2021-2022,Forward,0.9999
 Pepe,2021-2022,1,Unknown,Klostermann,2021-2022,Defender,1.0,Weghorst,2021-2022,Forward,1.0,Willi Orbán,2025-2026,Unknown,1.0,Nicolás Otamendi,2025-2026,Unknown,1.0,Lo Celso,2021-2022,Midfielder,1.0
 Fernandinho,2021-2022,1,Unknown,Bukayo Saka,2025-2026,Unknown,1.0,Goretzka,2021-2022,Midfielder,1.0,Ziyech,2021-2022,Midfielder,1.0,Antonio Rüdiger,2025-2026,Unknown,1.0,Alexsandro,2025-2026,Unknown,1.0
 Luis Suárez,2021-2022,1,Unknown,Lukaku,2021-2022,Forward,1.0,Depay,2021-2022,Forward,1.0,Brahim Díaz,2021-2022,Unknown,0.9999,Alex Telles,2021-2022,Unknown,0.9999,Nahuel Molina,2025-2026,Unknown,0.9999
 Pogba,2021-2022,1,Midfielder,Maximiliano Araújo,2025-2026,Unknown,1.0,Pau Cubarsí,2025-2026,Unknown,1.0,Dahoud,2021-2022,Midfielder,1.0,Paredes,2021-2022,Midfielder,1.0,Dest,2021-2022,Defender,1.0
 Okafor,2021-2022,1,Midfielder,William Bøving,2025-2026,Forward,1.0,Mohamed Salah,2025-2026,Unknown,1.0,Karavaev,2021-2022,Defender,1.0,Reus,2021-2022,Midfielder,1.0,Cristiano,2021-2022,Defender,1.0
-Rachid Ghezzal,2021-2022,1,Forward,Liam Scales,2025-2026,Other,1.0,Danilo,2021-2022,Unknown,1.0,Verissimo,2021-2022,Defender,1.0,Musiala,2021-2022,Midfielder,1.0,Guus Til,2025-2026,Unknown,1.0
+Rachid Ghezzal,2021-2022,1,Forward,Liam Scales,2025-2026,Other,1.0,Danilo,2021-2022,Unknown,1.0,Musiala,2021-2022,Midfielder,1.0,Guus Til,2025-2026,Unknown,1.0,Rúben Dias,2021-2022,Unknown,1.0
 Lenglet,2021-2022,1,Defender,Casemiro,2021-2022,Unknown,1.0,Reinildo,2021-2022,Defender,1.0,Shaw,2021-2022,Defender,1.0,Djimsiti,2025-2026,Defender,1.0,Griezmann,2021-2022,Forward,1.0
 Taarabt,2021-2022,1,Midfielder,Vida,2021-2022,Defender,1.0,Thomas Partey,2025-2026,Unknown,1.0,Bennacer,2021-2022,Midfielder,1.0,Tonali,2021-2022,Midfielder,1.0,Alan Patrick,2021-2022,Midfielder,1.0
 Pedrinho,2021-2022,1,Midfielder,Thiago Silva,2021-2022,Unknown,1.0,Firmino,2021-2022,Midfielder,1.0,Jesus,2021-2022,Forward,1.0,Lovren,2021-2022,Defender,1.0,Rakitskyy,2021-2022,Defender,1.0
-Siebatcheu,2021-2022,1,Forward,L. Nielsen,2021-2022,Defender,1.0,Diego Carlos,2021-2022,Unknown,1.0,Rodrygo,2021-2022,Unknown,1.0,Rafa Silva,2021-2022,Unknown,1.0,Brorsson,2021-2022,Defender,1.0
+Siebatcheu,2021-2022,1,Forward,Diego Carlos,2021-2022,Unknown,1.0,Rodrygo,2021-2022,Unknown,1.0,Rafa Silva,2021-2022,Unknown,1.0,Pessina,2021-2022,Midfielder,1.0,Jamie Gittens,2025-2026,Unknown,1.0
 Chiesa,2021-2022,1,Forward,Aaronson,2021-2022,Midfielder,1.0,Benzema,2021-2022,Forward,1.0,Núñez,2021-2022,Forward,1.0,Serhou Guirassy,2025-2026,Unknown,1.0,Danjuma,2021-2022,Midfielder,1.0
 Gvardiol,2021-2022,1,Defender,Gabriel Gudmundsson,2025-2026,Unknown,1.0,Gabriel,2025-2026,Defender,1.0,Jamal Musiala,2025-2026,Unknown,1.0,Silas,2025-2026,Unknown,1.0,Núñez,2025-2026,Forward,1.0
 Tonali,2021-2022,1,Midfielder,Alan Patrick,2021-2022,Midfielder,1.0,Thomas Partey,2025-2026,Unknown,1.0,Laimer,2021-2022,Midfielder,1.0,De Sciglio,2021-2022,Defender,1.0,Taarabt,2021-2022,Midfielder,1.0
@@ -3519,9 +3519,9 @@ Jordán,2021-2022,1,Midfielder,Loïs Openda,2025-2026,Unknown,1.0,Gomez,2021-202
 Herrera,2021-2022,1,Midfielder,Pedraza,2021-2022,Midfielder,1.0,Zaidu,2021-2022,Defender,1.0,C. Martins Pereira,2021-2022,Midfielder,1.0,Warren Zaïre-Emery,2025-2026,Unknown,1.0,Sergio Busquets,2021-2022,Unknown,1.0
 Garmash,2021-2022,1,Midfielder,Adams,2021-2022,Midfielder,1.0,Kampl,2021-2022,Midfielder,1.0,Karim Konaté,2025-2026,Other,1.0,Addo,2021-2022,Midfielder,1.0,Matheus Nunes,2025-2026,Unknown,1.0
 Aké,2021-2022,1,Defender,Varane,2021-2022,Defender,1.0,De Paul,2021-2022,Midfielder,1.0,Kristensen,2021-2022,Defender,1.0,Alonso,2021-2022,Defender,1.0,Nsoki,2021-2022,Defender,1.0
-L. Nmecha,2021-2022,1,Forward,F. de Jong,2021-2022,Midfielder,1.0,Moumi Ngamaleu,2021-2022,Midfielder,1.0,Iñigo Martínez,2025-2026,Unknown,1.0,Mount,2021-2022,Midfielder,1.0,Koundé,2021-2022,Defender,1.0
+L. Nmecha,2021-2022,1,Forward,F. de Jong,2021-2022,Midfielder,1.0,Moumi Ngamaleu,2021-2022,Midfielder,1.0,Iñigo Martínez,2025-2026,Unknown,1.0,Mount,2021-2022,Midfielder,1.0,Bamba,2021-2022,Forward,1.0
 Franck Kessié,2021-2022,1,Other,Isak Hien,2025-2026,Unknown,1.0,Inbeom Hwang,2025-2026,Other,1.0,Mahdi Camara,2025-2026,Other,1.0,Luuk de Jong,2025-2026,Unknown,1.0,Khephren Thuram,2025-2026,Midfielder,1.0
-Lukaku,2021-2022,1,Forward,Luis Suárez,2021-2022,Unknown,1.0,Depay,2021-2022,Forward,1.0,Arboleda,2021-2022,Defender,0.9999,David,2021-2022,Forward,0.9999,Greenwood,2021-2022,Forward,0.9999
+Lukaku,2021-2022,1,Forward,Luis Suárez,2021-2022,Unknown,1.0,Depay,2021-2022,Forward,1.0,David,2021-2022,Forward,0.9999,Greenwood,2021-2022,Forward,0.9999,Brahim Díaz,2021-2022,Unknown,0.9999
 Grujić,2021-2022,1,Midfielder,Ilkay Gündogan,2025-2026,Unknown,1.0,Soumaula Coulibaly,2025-2026,Other,1.0,Joshua Kimmich,2025-2026,Unknown,1.0,João Palhinha,2021-2022,Unknown,1.0,Benjamin Pavard,2025-2026,Unknown,1.0
 Paredes,2021-2022,1,Midfielder,Dahoud,2021-2022,Midfielder,1.0,Dest,2021-2022,Defender,1.0,Teun Koopmeiners,2025-2026,Unknown,1.0,Vinícius Júnior,2025-2026,Unknown,1.0,Jérôme Roussillon,2021-2022,Other,1.0
 Orbán,2021-2022,1,Defender,Malinovskyi,2021-2022,Midfielder,1.0,Hermoso,2021-2022,Defender,1.0,McTominay,2021-2022,Midfielder,1.0,Marten de Roon,2025-2026,Unknown,1.0,Benjamin Sesko,2025-2026,Unknown,1.0
@@ -3530,7 +3530,7 @@ Welinton,2021-2022,1,Defender,Van de Beek,2021-2022,Midfielder,1.0,Uroš Spajić
 Moreno,2021-2022,1,Defender,Henderson,2021-2022,Midfielder,1.0,Kai Havertz,2025-2026,Unknown,1.0,Thiago Alcantara,2021-2022,Unknown,1.0,Maycon,2021-2022,Midfielder,1.0,Weigl,2021-2022,Midfielder,1.0
 Montero,2021-2022,1,Defender,Gnabry,2021-2022,Forward,1.0,Brandt,2021-2022,Midfielder,1.0,Koke,2021-2022,Unknown,1.0,Vlahović,2025-2026,Forward,1.0,De Vrij,2021-2022,Defender,1.0
 Vrsaljko,2021-2022,1,Defender,Donny van de Beek,2025-2026,Unknown,1.0,Diallo,2021-2022,Defender,1.0,Reo Hatate,2025-2026,Unknown,1.0,Savinho,2025-2026,Unknown,1.0,Koke,2025-2026,Unknown,1.0
-Greenwood,2021-2022,1,Forward,David,2021-2022,Forward,1.0,Arboleda,2021-2022,Defender,1.0,De Ketelaere,2021-2022,Forward,1.0,Sutormin,2021-2022,Midfielder,1.0,Lukaku,2021-2022,Forward,0.9999
+Greenwood,2021-2022,1,Forward,David,2021-2022,Forward,1.0,De Ketelaere,2021-2022,Forward,1.0,Sutormin,2021-2022,Midfielder,1.0,Lukaku,2021-2022,Forward,0.9999,Luis Suárez,2021-2022,Unknown,0.9999
 Azmoun,2021-2022,1,Forward,Paulinho,2021-2022,Unknown,1.0,Džeko,2021-2022,Forward,1.0,Tijjani Reijnders,2025-2026,Unknown,1.0,Chukwueze,2021-2022,Midfielder,1.0,Werner,2021-2022,Forward,1.0
 Malinovskyi,2021-2022,1,Midfielder,Hermoso,2021-2022,Defender,1.0,Orbán,2021-2022,Defender,1.0,McTominay,2021-2022,Midfielder,1.0,Loftus-Cheek,2021-2022,Forward,1.0,Angelo Stiller,2025-2026,Other,1.0
 Sérgio Oliveira,2021-2022,1,Unknown,Miguel Gutiérrez,2025-2026,Defender,1.0,Fonte,2021-2022,Defender,1.0,Wendel,2021-2022,Midfielder,1.0,Walker,2021-2022,Defender,1.0,Bruno Fernandes,2021-2022,Unknown,1.0
@@ -3568,10 +3568,10 @@ Pjanic,2021-2022,1,Midfielder,Nico Schlotterbeck,2025-2026,Unknown,1.0,Fernando 
 Di María,2021-2022,1,Forward,Jones,2021-2022,Midfielder,1.0,Guilavogui,2021-2022,Midfielder,1.0,Jeff Chabot,2025-2026,Unknown,1.0,Kulusevski,2021-2022,Midfielder,1.0,Raoul Bellanova,2025-2026,Unknown,1.0
 Djimsiti,2021-2022,1,Defender,Carvajal,2025-2026,Defender,1.0,Francisco Conceição,2025-2026,Unknown,1.0,Valeriy Bondar,2025-2026,Defender,1.0,John Brooks,2021-2022,Other,1.0,Atakan Karazor,2025-2026,Other,1.0
 Renato Steffen,2021-2022,1,Other,Ulmer,2021-2022,Defender,1.0,Mykola Matviyenko,2025-2026,Defender,1.0,Bastoni,2021-2022,Unknown,1.0,Larin,2021-2022,Forward,1.0,Pavard,2021-2022,Unknown,1.0
-Rashford,2021-2022,1,Forward,Alex Sandro,2021-2022,Unknown,1.0,Gonçalo Ramos,2021-2022,Unknown,1.0,Konaté,2021-2022,Defender,1.0,Christensen,2021-2022,Defender,1.0,Cesar Blackman,2025-2026,Unknown,1.0
+Rashford,2021-2022,1,Forward,Alex Sandro,2021-2022,Unknown,1.0,Gonçalo Ramos,2021-2022,Unknown,1.0,Cesar Blackman,2025-2026,Unknown,1.0,Marcos Llorente,2021-2022,Unknown,1.0,Tiago Djaló,2021-2022,Unknown,1.0
 Kuzyaev,2021-2022,1,Midfielder,Gerard Moreno,2021-2022,Unknown,1.0,Pedro Gonçalves,2021-2022,Unknown,1.0,Werner,2021-2022,Forward,1.0,Kerem Aktürkoglu,2025-2026,Unknown,1.0,Tijjani Reijnders,2025-2026,Unknown,1.0
 Marcos Antônio,2021-2022,1,Midfielder,Arthur,2021-2022,Unknown,1.0,Breel Embolo,2025-2026,Unknown,1.0,Minjae Kim,2025-2026,Other,1.0,Hugo Magnetti,2025-2026,Other,1.0,Mateo Retegui,2025-2026,Unknown,1.0
-Dybala,2021-2022,1,Forward,Fernando,2021-2022,Unknown,1.0,Dulanto,2021-2022,Defender,1.0,Douglas Santos,2021-2022,Defender,1.0,Vanaken,2025-2026,Midfielder,1.0,Rüdiger,2021-2022,Defender,1.0
+Dybala,2021-2022,1,Forward,Fernando,2021-2022,Unknown,1.0,Vanaken,2025-2026,Midfielder,1.0,Wendel,2021-2022,Midfielder,1.0,Rúben Dias,2021-2022,Unknown,1.0,Guus Til,2025-2026,Unknown,1.0
 Iličić,2021-2022,1,Midfielder,Haaland,2021-2022,Forward,1.0,Ronaldo,2021-2022,Forward,1.0,Coates,2021-2022,Defender,1.0,Serhou Guirassy,2025-2026,Unknown,1.0,João Félix,2021-2022,Unknown,1.0
 Nico González,2021-2022,1,Unknown,Rafael Leão,2025-2026,Unknown,1.0,Mateo Retegui,2025-2026,Unknown,1.0,Hugo Magnetti,2025-2026,Other,1.0,Breel Embolo,2025-2026,Unknown,1.0,Marcos Antônio,2021-2022,Midfielder,1.0
 Eric García,2021-2022,1,Unknown,Mykhaylo Mudryk,2021-2022,Midfielder,1.0,Balde,2025-2026,Defender,1.0,Morten Hjulmand,2025-2026,Midfielder,1.0,Delaney,2021-2022,Midfielder,1.0,Kjærgaard,2021-2022,Midfielder,1.0
@@ -3580,7 +3580,7 @@ Sierro,2021-2022,1,Midfielder,Ricardo Esgaio,2021-2022,Unknown,1.0,Suso,2021-202
 Tolisso,2021-2022,1,Midfielder,Josko Gvardiol,2025-2026,Unknown,1.0,Bruno Petković,2025-2026,Forward,1.0,Minjae Kim,2025-2026,Other,1.0,Nuno Mendes,2025-2026,Unknown,1.0,Arthur,2021-2022,Unknown,1.0
 Dalot,2021-2022,1,Defender,Renan Lodi,2021-2022,Unknown,1.0,Ousmane Dembélé,2025-2026,Unknown,1.0,Kovačić,2021-2022,Midfielder,1.0,Petar Sučić,2025-2026,Other,1.0,Dimarco,2021-2022,Unknown,1.0
 Klaassen,2021-2022,1,Midfielder,Antony,2021-2022,Unknown,1.0,Ángel Di María,2025-2026,Unknown,1.0,Van Dijk,2021-2022,Defender,1.0,Sučić,2021-2022,Midfielder,1.0,Alexander-Arnold,2021-2022,Defender,1.0
-Adamu,2021-2022,1,Forward,Maximilian Mittelstädt,2025-2026,Other,1.0,Aleksandr Golovin,2025-2026,Unknown,1.0,Martin Vitík,2025-2026,Defender,1.0,Leroy Sané,2025-2026,Unknown,1.0,Milner,2021-2022,Midfielder,1.0
+Adamu,2021-2022,1,Forward,Maximilian Mittelstädt,2025-2026,Other,1.0,Aleksandr Golovin,2025-2026,Unknown,1.0,Leroy Sané,2025-2026,Unknown,1.0,Milner,2021-2022,Midfielder,1.0,Capaldo,2021-2022,Midfielder,1.0
 Dest,2021-2022,1,Defender,Teun Koopmeiners,2025-2026,Unknown,1.0,Paredes,2021-2022,Midfielder,1.0,Dahoud,2021-2022,Midfielder,1.0,Vinícius Júnior,2025-2026,Unknown,1.0,Jérôme Roussillon,2021-2022,Other,1.0
 Suso,2021-2022,1,Unknown,Oxlade-Chamberlain,2021-2022,Midfielder,1.0,Sierro,2021-2022,Midfielder,1.0,Ricardo Esgaio,2021-2022,Unknown,1.0,Piero Hincapié,2025-2026,Unknown,1.0,Solet,2021-2022,Defender,1.0
 Stepanenko,2021-2022,1,Midfielder,Ugarte,2021-2022,Midfielder,1.0,Aleksandar Pavlovic,2025-2026,Unknown,1.0,Pierre Lees-Melou,2025-2026,Unknown,1.0,Lang,2025-2026,Forward,1.0,Khephren Thuram,2025-2026,Midfielder,1.0
@@ -3595,8 +3595,8 @@ Pessina,2021-2022,1,Midfielder,Brorsson,2021-2022,Defender,1.0,Rafa Silva,2021-2
 Szoboszlai,2021-2022,1,Midfielder,Sarabia,2021-2022,Forward,1.0,Antoni Milambo,2025-2026,Unknown,1.0,Rieks,2021-2022,Midfielder,1.0,Burak Yılmaz,2021-2022,Forward,0.9999,Mehdi Taremi,2025-2026,Unknown,0.9999
 Ugarte,2021-2022,1,Midfielder,Aleksandar Pavlovic,2025-2026,Unknown,1.0,Pierre Lees-Melou,2025-2026,Unknown,1.0,Stepanenko,2021-2022,Midfielder,1.0,Maxime Bernauer,2025-2026,Defender,1.0,Matić,2021-2022,Midfielder,1.0
 Van de Beek,2021-2022,1,Midfielder,Aurélien Tchouaméni,2025-2026,Unknown,1.0,Welinton,2021-2022,Defender,1.0,Freuler,2025-2026,Midfielder,1.0,Uroš Spajić,2025-2026,Defender,1.0,Jude Bellingham,2025-2026,Unknown,1.0
-Neres,2021-2022,1,Forward,Lucas Vázquez,2021-2022,Unknown,1.0,Dumfries,2021-2022,Unknown,1.0,J. Timber,2021-2022,Midfielder,1.0,Larsson,2021-2022,Defender,1.0,Trent Alexander-Arnold,2025-2026,Unknown,1.0
-Haaland,2021-2022,1,Forward,Iličić,2021-2022,Midfielder,1.0,Serhou Guirassy,2025-2026,Unknown,1.0,Ronaldo,2021-2022,Forward,1.0,Benzema,2021-2022,Forward,1.0,Coates,2021-2022,Defender,1.0
+Neres,2021-2022,1,Forward,Lucas Vázquez,2021-2022,Unknown,1.0,Dumfries,2021-2022,Unknown,1.0,J. Timber,2021-2022,Midfielder,1.0,Trent Alexander-Arnold,2025-2026,Unknown,1.0,Florian Wirtz,2025-2026,Unknown,1.0
+Haaland,2021-2022,1,Forward,Iličić,2021-2022,Midfielder,1.0,Serhou Guirassy,2025-2026,Unknown,1.0,Ronaldo,2021-2022,Forward,1.0,Benzema,2021-2022,Forward,1.0,João Félix,2021-2022,Unknown,1.0
 Bruno Tabata,2021-2022,1,Unknown,Saelemaekers,2021-2022,Midfielder,1.0,Chalobah,2021-2022,Defender,1.0,Lemar,2021-2022,Midfielder,1.0,Pedri,2025-2026,Unknown,1.0,Zappacosta,2025-2026,Defender,1.0
 Delaney,2021-2022,1,Midfielder,Florentino,2025-2026,Unknown,1.0,Alexis Mac Allister,2025-2026,Unknown,1.0,Mykhaylo Mudryk,2021-2022,Midfielder,1.0,Eric García,2021-2022,Unknown,1.0,Balde,2025-2026,Defender,1.0
 Matić,2021-2022,1,Midfielder,Rugani,2021-2022,Defender,1.0,Ardon Jashari,2025-2026,Unknown,1.0,Maxime Bernauer,2025-2026,Defender,1.0,N. Williams,2021-2022,Defender,1.0,Pierre Lees-Melou,2025-2026,Unknown,1.0
@@ -3610,7 +3610,7 @@ Chalobah,2021-2022,1,Defender,Bruno Tabata,2021-2022,Unknown,1.0,Lemar,2021-2022
 Diallo,2021-2022,1,Defender,Vrsaljko,2021-2022,Defender,1.0,Donny van de Beek,2025-2026,Unknown,1.0,Jhon Lucumi,2025-2026,Defender,1.0,Reo Hatate,2025-2026,Unknown,1.0,Quinten Timber,2025-2026,Midfielder,1.0
 Alexis Sánchez,2021-2022,1,Unknown,Thomas Beelen,2025-2026,Unknown,1.0,Sandro Lauper,2025-2026,Defender,1.0,Rakip,2021-2022,Midfielder,1.0,David López,2025-2026,Other,1.0,Marc Casado,2025-2026,Other,1.0
 Schuurs,2021-2022,1,Defender,Benjamin André,2025-2026,Unknown,1.0,Mingueza,2021-2022,Defender,1.0,Pedro Gonçalves,2025-2026,Unknown,1.0,Arnau Martínez,2025-2026,Unknown,1.0,Odilon Kossounou,2025-2026,Defender,1.0
-Muriel,2021-2022,1,Forward,Marquinhos,2025-2026,Unknown,1.0,Peña,2021-2022,Midfielder,1.0,Felício Milson,2025-2026,Unknown,1.0,Ahmedhodžić,2021-2022,Defender,1.0,Origi,2021-2022,Forward,1.0
+Muriel,2021-2022,1,Forward,Marquinhos,2025-2026,Unknown,1.0,Peña,2021-2022,Midfielder,1.0,Felício Milson,2025-2026,Unknown,1.0,Origi,2021-2022,Forward,1.0,João Neves,2025-2026,Unknown,1.0
 Lamela,2021-2022,1,Midfielder,Samson Baidoo,2025-2026,Other,1.0,Pascal Gross,2025-2026,Other,1.0,Malick Yalcouye,2025-2026,Unknown,1.0,Dimitri Lavalée,2025-2026,Defender,1.0,Kamil Piątkowski,2025-2026,Other,0.9999
 En-Nesyri,2021-2022,1,Forward,Danylo Ihnatenko,2025-2026,Other,0.9999,Luka Modric,2025-2026,Unknown,0.9999,Ángel Correa,2025-2026,Unknown,0.9998,Delano Burgzorg,2021-2022,Other,0.9997,Fernando Forestieri,2021-2022,Other,0.9997
 Kulusevski,2021-2022,1,Midfielder,Sead Kolasinac,2025-2026,Unknown,1.0,Guilavogui,2021-2022,Midfielder,1.0,Jones,2021-2022,Midfielder,1.0,Oscar Gloukh,2025-2026,Midfielder,1.0,Uribe,2021-2022,Midfielder,1.0
@@ -3716,7 +3716,7 @@ Oscar Gloukh,2025-2026,1,Midfielder,Uribe,2021-2022,Midfielder,1.0,Sead Kolasina
 Quinten Timber,2025-2026,1,Midfielder,Jhon Lucumi,2025-2026,Defender,1.0,Diallo,2021-2022,Defender,1.0,Kang-in Lee,2025-2026,Forward,1.0,Guram Kashia,2025-2026,Defender,1.0,Vrsaljko,2021-2022,Defender,1.0
 Ludovic Ajorque,2025-2026,1,Other,Emanuel Aiwu,2025-2026,Other,1.0,Denzel Dumfries,2025-2026,Unknown,1.0,Fredrik Aursnes,2025-2026,Unknown,1.0,Haidara,2021-2022,Midfielder,0.9999,Castello Lukeba,2025-2026,Unknown,0.9999
 Mehdi Taremi,2025-2026,1,Unknown,Burak Yılmaz,2021-2022,Forward,1.0,Rieks,2021-2022,Midfielder,1.0,Buyalskiy,2021-2022,Midfielder,1.0,Christian Pulisic,2025-2026,Unknown,1.0,Antoni Milambo,2025-2026,Unknown,1.0
-William Bøving,2025-2026,1,Forward,Okafor,2021-2022,Midfielder,1.0,Mohamed Salah,2025-2026,Unknown,1.0,Karavaev,2021-2022,Defender,1.0,Reus,2021-2022,Midfielder,1.0,Cristiano,2021-2022,Defender,1.0
+William Bøving,2025-2026,1,Forward,Okafor,2021-2022,Midfielder,1.0,Mohamed Salah,2025-2026,Unknown,1.0,Reus,2021-2022,Midfielder,1.0,Harry Kane,2025-2026,Unknown,1.0,Filip Panák,2025-2026,Unknown,1.0
 Minjae Kim,2025-2026,1,Other,Arthur,2021-2022,Unknown,1.0,Marcos Antônio,2021-2022,Midfielder,1.0,Breel Embolo,2025-2026,Unknown,1.0,Hugo Magnetti,2025-2026,Other,1.0,Tolisso,2021-2022,Midfielder,1.0
 Warren Zaïre-Emery,2025-2026,1,Unknown,Zaidu,2021-2022,Defender,1.0,Bentancur,2021-2022,Midfielder,1.0,Herrera,2021-2022,Midfielder,1.0,Pedraza,2021-2022,Midfielder,1.0,C. Martins Pereira,2021-2022,Midfielder,1.0
 Jude Bellingham,2025-2026,1,Unknown,Freuler,2025-2026,Midfielder,1.0,Edmond Tapsoba,2025-2026,Other,1.0,Aurélien Tchouaméni,2025-2026,Unknown,1.0,Van de Beek,2021-2022,Midfielder,1.0,Welinton,2021-2022,Defender,1.0
@@ -3743,7 +3743,7 @@ Christos Tzolis,2025-2026,1,Unknown,Deniz Undav,2025-2026,Unknown,1.0,Tsimikas,2
 Trent Alexander-Arnold,2025-2026,1,Unknown,Larsson,2021-2022,Defender,1.0,Kondogbia,2021-2022,Midfielder,1.0,Trigueros,2021-2022,Midfielder,1.0,Christos Tzolis,2025-2026,Unknown,1.0,Neres,2021-2022,Forward,1.0
 Robert Lewandowski,2025-2026,1,Unknown,Sandro Kulenović,2025-2026,Forward,1.0,Danjuma,2021-2022,Midfielder,1.0,Núñez,2021-2022,Forward,1.0,Aaronson,2021-2022,Midfielder,1.0,Pau Torres,2021-2022,Unknown,1.0
 Rafael Leão,2025-2026,1,Unknown,Nico González,2021-2022,Unknown,1.0,Mateo Retegui,2025-2026,Unknown,1.0,Hugo Magnetti,2025-2026,Other,1.0,Breel Embolo,2025-2026,Unknown,1.0,Marcos Antônio,2021-2022,Midfielder,1.0
-Vlahović,2025-2026,1,Forward,De Vrij,2021-2022,Defender,1.0,Gündoğan,2021-2022,Midfielder,1.0,Ronald Araújo,2021-2022,Unknown,1.0,Kroos,2021-2022,Midfielder,1.0,Montero,2021-2022,Defender,1.0
+Vlahović,2025-2026,1,Forward,Gündoğan,2021-2022,Midfielder,1.0,Ronald Araújo,2021-2022,Unknown,1.0,Kroos,2021-2022,Midfielder,1.0,Gnabry,2021-2022,Forward,1.0,Dominik Szoboszlai,2025-2026,Unknown,1.0
 Djimsiti,2025-2026,1,Defender,Shaw,2021-2022,Defender,1.0,Davies,2021-2022,Midfielder,1.0,Casemiro,2021-2022,Unknown,1.0,Lenglet,2021-2022,Defender,1.0,Reinildo,2021-2022,Defender,1.0
 Valverde,2025-2026,1,Midfielder,Luuk de Jong,2025-2026,Unknown,1.0,Mahdi Camara,2025-2026,Other,1.0,Isak Hien,2025-2026,Unknown,1.0,Franck Kessié,2021-2022,Other,1.0,Benjamin Henrichs,2025-2026,Unknown,1.0
 Raphinha,2025-2026,1,Unknown,Berghuis,2021-2022,Forward,1.0,Salah,2021-2022,Forward,1.0,Marquinhos,2021-2022,Unknown,1.0,Fassnacht,2021-2022,Midfielder,1.0,Pulišić,2021-2022,Midfielder,1.0
@@ -3834,7 +3834,7 @@ Samson Baidoo,2025-2026,1,Other,Lamela,2021-2022,Midfielder,1.0,Pascal Gross,202
 Julian Ryerson,2025-2026,1,Unknown,Alistair Johnston,2025-2026,Unknown,1.0,Amar Dedić,2025-2026,Other,1.0,Gernot Trauner,2025-2026,Defender,1.0,Odilon Kossounou,2025-2026,Defender,1.0,Stefan Ristovski,2025-2026,Defender,1.0
 Koke,2025-2026,1,Unknown,Savinho,2025-2026,Unknown,1.0,Takuya Ogiwara,2025-2026,Unknown,1.0,Reo Hatate,2025-2026,Unknown,1.0,Donny van de Beek,2025-2026,Unknown,1.0,Hummels,2021-2022,Defender,1.0
 Bukayo Saka,2025-2026,1,Unknown,Goretzka,2021-2022,Midfielder,1.0,Ziyech,2021-2022,Midfielder,1.0,Fernandinho,2021-2022,Unknown,1.0,Antonio Rüdiger,2025-2026,Unknown,1.0,Bentancur,2021-2022,Midfielder,1.0
-Peter Olayinka,2025-2026,1,Forward,Raphael Onyedika,2025-2026,Unknown,1.0,Fikayo Tomori,2025-2026,Unknown,1.0,Ahmedhodžić,2021-2022,Defender,1.0,Felício Milson,2025-2026,Unknown,1.0,Auston Trusty,2025-2026,Unknown,1.0
+Peter Olayinka,2025-2026,1,Forward,Raphael Onyedika,2025-2026,Unknown,1.0,Fikayo Tomori,2025-2026,Unknown,1.0,Felício Milson,2025-2026,Unknown,1.0,Auston Trusty,2025-2026,Unknown,1.0,Sowah,2021-2022,Forward,1.0
 Michael Olise,2025-2026,1,Unknown,Jamie Leweling,2025-2026,Other,1.0,Ismael Saibari,2025-2026,Unknown,1.0,Nasser Djiga,2025-2026,Other,1.0,Otávio,2021-2022,Unknown,1.0,Luis Díaz,2025-2026,Unknown,1.0
 Nahuel Molina,2025-2026,1,Unknown,Alex Telles,2021-2022,Unknown,1.0,Brahim Díaz,2021-2022,Unknown,1.0,Depay,2021-2022,Forward,1.0,Sarabia,2021-2022,Forward,0.9999,Luis Suárez,2021-2022,Unknown,0.9999
 Vitinha,2025-2026,1,Unknown,Mohammed Salisu,2025-2026,Unknown,1.0,Nuno Mendes,2025-2026,Unknown,1.0,Ladislav Krejčí,2025-2026,Forward,1.0,Bruno Petković,2025-2026,Forward,1.0,Josko Gvardiol,2025-2026,Unknown,1.0
@@ -3869,7 +3869,7 @@ Ilkay Gündogan,2025-2026,1,Unknown,Grujić,2021-2022,Midfielder,1.0,Soumaula Co
 Luis Díaz,2025-2026,1,Unknown,Keïta,2021-2022,Midfielder,1.0,Otávio,2021-2022,Unknown,1.0,Cody Gakpo,2025-2026,Unknown,1.0,Nasser Djiga,2025-2026,Other,1.0,Petar Sučić,2025-2026,Other,1.0
 Alexander Bah,2025-2026,1,Unknown,Coquelin,2021-2022,Midfielder,1.0,Brendan Chardonnet,2025-2026,Unknown,1.0,Willian Pacho,2025-2026,Unknown,1.0,Karim Konaté,2025-2026,Other,1.0,Amadou Haidara,2025-2026,Unknown,1.0
 Aurélien Tchouaméni,2025-2026,1,Unknown,Van de Beek,2021-2022,Midfielder,1.0,Freuler,2025-2026,Midfielder,1.0,Jude Bellingham,2025-2026,Unknown,1.0,Welinton,2021-2022,Defender,1.0,Edmond Tapsoba,2025-2026,Other,1.0
-Kang-in Lee,2025-2026,1,Forward,Guram Kashia,2025-2026,Defender,1.0,Camavinga,2021-2022,Midfielder,1.0,Felipe,2021-2022,Unknown,1.0,John Brooks,2021-2022,Other,1.0,Francisco Conceição,2025-2026,Unknown,1.0
+Kang-in Lee,2025-2026,1,Forward,Camavinga,2021-2022,Midfielder,1.0,Felipe,2021-2022,Unknown,1.0,John Brooks,2021-2022,Other,1.0,Francisco Conceição,2025-2026,Unknown,1.0,Quinten Timber,2025-2026,Midfielder,1.0
 Nicolò Barella,2025-2026,1,Unknown,Cameron Carter-Vickers,2025-2026,Unknown,1.0,Lamine Camara,2025-2026,Unknown,1.0,Éder Militão,2025-2026,Unknown,1.0,Nikola Moro,2025-2026,Midfielder,1.0,Matteo Dams,2025-2026,Other,1.0
 Mamady Diambou,2025-2026,1,Other,Ángel Correa,2025-2026,Unknown,0.9999,Luka Modric,2025-2026,Unknown,0.9999,Danylo Ihnatenko,2025-2026,Other,0.9998,En-Nesyri,2021-2022,Forward,0.9996,Mauro Júnior,2025-2026,Unknown,0.9994
 Ángel Correa,2025-2026,1,Unknown,Luka Modric,2025-2026,Unknown,1.0,Danylo Ihnatenko,2025-2026,Other,1.0,Mamady Diambou,2025-2026,Other,0.9999,En-Nesyri,2021-2022,Forward,0.9998,Delano Burgzorg,2021-2022,Other,0.9991
@@ -3892,7 +3892,7 @@ Henrikh Mkhitaryan,2025-2026,1,Unknown,Mauro Júnior,2025-2026,Unknown,0.9999,Al
 Maximiliano Araújo,2025-2026,1,Unknown,Pogba,2021-2022,Midfielder,1.0,Pau Cubarsí,2025-2026,Unknown,1.0,Konaté,2025-2026,Defender,1.0,Dahoud,2021-2022,Midfielder,1.0,Paredes,2021-2022,Midfielder,1.0
 Pašalić,2025-2026,1,Midfielder,Daniel Bragança,2025-2026,Midfielder,1.0,Jeremie Frimpong,2025-2026,Unknown,1.0,Pedro Henrique,2025-2026,Other,1.0,Ramy Bensebaini,2025-2026,Unknown,1.0,João Palhinha,2025-2026,Unknown,1.0
 Daniel Bragança,2025-2026,1,Midfielder,Pašalić,2025-2026,Midfielder,1.0,Pedro Henrique,2025-2026,Other,1.0,Ramy Bensebaini,2025-2026,Unknown,1.0,Jeremie Frimpong,2025-2026,Unknown,1.0,João Palhinha,2025-2026,Unknown,1.0
-Núñez,2025-2026,1,Forward,Dayot Upamecano,2025-2026,Unknown,1.0,Jamal Musiala,2025-2026,Unknown,1.0,Wan-Bissaka,2021-2022,Defender,1.0,Hummels,2021-2022,Defender,1.0,Gabriel,2025-2026,Defender,1.0
+Núñez,2025-2026,1,Forward,Dayot Upamecano,2025-2026,Unknown,1.0,Jamal Musiala,2025-2026,Unknown,1.0,Gabriel Gudmundsson,2025-2026,Unknown,1.0,Takuya Ogiwara,2025-2026,Unknown,1.0,Silas,2025-2026,Unknown,1.0
 Raphaël Guerreiro,2025-2026,1,Unknown,Maxence Lacroix,2021-2022,Other,1.0,Azpilicueta,2021-2022,Defender,1.0,João Cancelo,2021-2022,Unknown,1.0,Alaba,2021-2022,Defender,1.0,Škriniar,2021-2022,Defender,1.0
 Aleksandar Pavlovic,2025-2026,1,Unknown,Pierre Lees-Melou,2025-2026,Unknown,1.0,Ugarte,2021-2022,Midfielder,1.0,Stepanenko,2021-2022,Midfielder,1.0,Maxime Bernauer,2025-2026,Defender,1.0,Matić,2021-2022,Midfielder,1.0
 João Palhinha,2025-2026,1,Unknown,Ramy Bensebaini,2025-2026,Unknown,1.0,Pedro Henrique,2025-2026,Other,1.0,Stefan Posch,2025-2026,Unknown,1.0,Danjuma,2025-2026,Midfielder,1.0,Daniel Bragança,2025-2026,Midfielder,1.0

@@ -1,0 +1,15 @@
+{
+    "evaluation_timestamp": "2026-06-13T15:52:05",
+    "metrics": {
+        "stronger_system": {
+            "precision_at_1": 0.2197,
+            "precision_at_5": 0.1997,
+            "catalog_coverage": 38.56
+        },
+        "baseline_popularity": {
+            "precision_at_1": 0.2183,
+            "precision_at_5": 0.0907,
+            "catalog_coverage": 0.96
+        }
+    }
+}
