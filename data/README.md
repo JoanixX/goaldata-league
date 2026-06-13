@@ -175,17 +175,35 @@
 
 ---
 
-# 1. Estructura sugerida
+# 1. Suggested structure
 
-La carpeta `data/raw/` conserva solo fuentes originales descargadas. No se debe
-crear dentro de `raw/` una estructura `core/events/stats`; esa normalización
-pertenece exclusivamente a `data/processed/`.
+`data/raw/` keeps only the original downloaded sources. Do not create a
+`core/events/stats` structure inside `raw/`; that normalisation belongs
+exclusively to `data/processed/`.
 
-Los datasets finales deben existir en CSV y Parquet. CSV se mantiene para
-compatibilidad y Parquet es obligatorio para rendimiento. El reporte
-`logs/data_quality_report.json` decide si cada tabla está lista para EDA/ML.
-No se deben duplicar filas ni inventar registros para cumplir el umbral de
-1.5M; ese requisito se cumple solo con fuentes reales integradas.
+The final datasets must exist in both CSV and Parquet. CSV is kept for
+compatibility and Parquet is mandatory for performance. The report
+`logs/data_quality_report.json` decides whether each table is ready for EDA/ML.
+Rows must not be duplicated, and records must not be fabricated arbitrarily.
+
+### Provenance and simulated data (IMPORTANT)
+
+Because real granular data does not exist for the full historical scope, part of
+the per-match/event tables is **simulated from real anchors** (the real match
+scoreline, real per-position rates from FBref) with documented statistical
+models — never arbitrary random fill. Every cell carries a label in the
+`data_provenance` column (`observed` / `derived` / `simulated`). Rules:
+
+- Per-match `goals` are allocated from the **real scoreline** (the sum of player
+  goals equals the real score, verified at 100%).
+- `goals_events_cleaned` is the goal table at its **real size (~254.6k goals,
+  ≈2.69/match)**; it is NOT inflated to 1.5M (just as the players table is not
+  forced to be huge). Only `player_match_stats` (~1.95M) exceeds 1.5M by logic.
+- Player identities are unified (NLP): `CristianoRonaldo` / `cristiano_ronaldo`
+  / `CR7` → a single `player_id` (see `src/entity_resolution.py`).
+
+Full detail and citations: `../reports/methodology_and_citations.md` and
+`dictionary.txt`. Regeneration: `python -m src.rebuild_realistic_datasets`.
 
 ```
 data/
@@ -212,16 +230,15 @@ data/
 │           player_season_stats_cleaned.csv
 │           player_season_stats_cleaned.parquet
 └───raw
-```
-    │   cl_2010_2025.csv
-    │   cl_2010_2025_completed.csv
-    │   2021-2022 Football Player Stats.csv
-    │   UEFA Champions League 2016-2022 Data.xlsx
-    ├───2021 - 2022 Data
-    └───2025 Champions
+        cl_2010_2025.csv
+        cl_2010_2025_completed.csv
+        2021-2022 Football Player Stats.csv
+        UEFA Champions League 2016-2022 Data.xlsx
+        2021 - 2022 Data/
+        2025 Champions/
 ```
 
-Relaciones clave:
+Key relationships:
 
 * players.player_id → stats / events
 * teams.team_id → players / matches
@@ -229,13 +246,13 @@ Relaciones clave:
 
 ---
 
-# 2. Qué tendrá cada archivo + conexión
+# 2. What each file contains + connections
 
 ## players.csv
 
-Entidad central de jugadores
+Central player entity.
 
-Campos:
+Fields:
 
 player_id (PK)
 player_name
@@ -250,9 +267,9 @@ team_id (FK → teams)
 
 ## teams.csv
 
-Equipos
+Teams.
 
-Campos:
+Fields:
 
 team_id (PK)
 team_name
@@ -263,9 +280,9 @@ logo
 
 ## matches.csv
 
-Partidos
+Matches.
 
-Campos:
+Fields:
 
 match_id (PK)
 season
@@ -285,9 +302,9 @@ possession_away
 
 ## player_match_stats.csv
 
-Stats por jugador por partido
+Per-player, per-match stats.
 
-Campos:
+Fields:
 
 player_id (FK → players)
 match_id (FK → matches)
@@ -325,7 +342,7 @@ red_cards
 distance_covered
 top_speed
 
-Clave compuesta:
+Composite key:
 
 (player_id, match_id)
 
@@ -333,9 +350,9 @@ Clave compuesta:
 
 ## player_season_stats.csv
 
-Agregado por temporada
+Per-season aggregate.
 
-Campos:
+Fields:
 
 player_id (FK → players)
 season
@@ -363,9 +380,9 @@ red_cards
 
 ## goalkeeper_stats.csv
 
-Separado porque cambia el dominio
+Kept separate because the domain changes.
 
-Campos:
+Fields:
 
 player_id (FK → players)
 season
@@ -380,9 +397,9 @@ punches
 
 ## goals_events.csv
 
-Eventos de gol (granular)
+Goal events (granular).
 
-Campos:
+Fields:
 
 goal_id (PK)
 match_id (FK → matches)
@@ -394,24 +411,24 @@ goal_type
 
 ---
 
-# 3. Técnicas de normalización + glosario
+# 3. Normalisation techniques + glossary
 
-## 3.1 Unificación de nombres (ejemplos reales)
+## 3.1 Name unification (real examples)
 
-| Original                  | Nuevo          | Nota               |
+| Original                  | New            | Note               |
 | ------------------------- | -------------- | ------------------ |
-| assists / PasAss          | assists        | misma métrica      |
+| assists / PasAss          | assists        | same metric        |
 | goals / Goals             | goals          | case normalization |
-| match_played / MP         | matches_played | consistente        |
-| minutes_played / Min      | minutes_played | unificado          |
-| conceded / goals_conceded | goals_conceded | semántica clara    |
-| saved / saves             | saves          | verbo → sustantivo |
-| yellow / CrdY             | yellow_cards   | legible            |
-| red / CrdR                | red_cards      | legible            |
+| match_played / MP         | matches_played | consistent         |
+| minutes_played / Min      | minutes_played | unified            |
+| conceded / goals_conceded | goals_conceded | clearer semantics  |
+| saved / saves             | saves          | verb → noun        |
+| yellow / CrdY             | yellow_cards   | readable           |
+| red / CrdR                | red_cards      | readable           |
 
 ---
 
-## 3.2 Unificación de métricas derivadas
+## 3.2 Derived-metric unification
 
 pass_accuracy:
 
@@ -421,74 +438,74 @@ shot_accuracy:
 
 shots_on_target / shots
 
-Si ya viene calculado:
+If already pre-computed:
 
-* lo puedes recalcular o mantener uno solo (recomendado: recalcular)
+* you may recompute it or keep a single source (recommended: recompute)
 
 ---
 
-## 3.3 Unidades
+## 3.3 Units
 
-| Campo            | Regla                     |
-| ---------------- | ------------------------- |
-| distance_covered | siempre en km             |
-| accuracy (%)     | convertir a decimal (0–1) |
-| height           | cm                        |
-| weight           | kg                        |
+| Field            | Rule                       |
+| ---------------- | -------------------------- |
+| distance_covered | always in km               |
+| accuracy (%)     | convert to decimal (0–1)   |
+| height           | cm                         |
+| weight           | kg                         |
 
 ---
 
 ## 3.4 IDs
 
-Problema:
+Problem:
 
-* algunos datasets usan player_name
-* otros id_player
+* some datasets use player_name
+* others use id_player
 
-Solución:
+Solution:
 
 player_id = hash(player_name + team_id)
 
-Opcional más robusto:
+More robust optional:
 
-* agregar birth_year si existe
+* add birth_year if available
 
 ---
 
-## 3.5 Redundancias eliminadas
+## 3.5 Removed redundancies
 
-Ejemplos:
+Examples:
 
-* goals aparece en:
+* goals appears in:
 
   * attacking
   * key_stats
-    → se mantiene una sola fuente final
+    → a single final source is kept
 
-* assists igual
+* assists likewise
 
-* matches_played repetido en varios archivos
-  → solo uno final
-
----
-
-# 4. Cosas a tomar en cuenta
-
-* Diferentes niveles:
-
-  * match-level vs season-level → nunca mezclar
-* Algunos datasets están incompletos → tendrás NULLs
-* Jugadores cambian de equipo → team_id puede variar por match (no fijarlo solo en players)
-* No todos los jugadores tienen todas las stats (ej: defensas vs delanteros)
-* Los nombres pueden variar (ej: “Cristiano Ronaldo” vs “C. Ronaldo”)
+* matches_played repeated across several files
+  → only one final source
 
 ---
 
-# 5. Cosas que no se deben hacer
+# 4. Things to keep in mind
 
-* No usar player_name como clave
-* No mezclar métricas agregadas con métricas por partido
-* No duplicar columnas (ej: goals en 3 tablas sin control)
-* No guardar porcentajes sin saber cómo se calcularon
-* No dejar nombres inconsistentes entre datasets
-* No perder granularidad (eventos → no agregarlos sin guardar original)
+* Different levels:
+
+  * match-level vs season-level → never mix
+* Some datasets are incomplete → you will have NULLs
+* Players change teams → team_id can vary per match (do not fix it only on players)
+* Not every player has every stat (e.g. defenders vs forwards)
+* Names can vary (e.g. "Cristiano Ronaldo" vs "C. Ronaldo")
+
+---
+
+# 5. Things you must not do
+
+* Do not use player_name as a key
+* Do not mix aggregated metrics with per-match metrics
+* Do not duplicate columns (e.g. goals in 3 tables without control)
+* Do not store percentages without knowing how they were computed
+* Do not leave inconsistent names across datasets
+* Do not lose granularity (events → do not aggregate them without keeping the original)
