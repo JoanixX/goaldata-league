@@ -4,6 +4,20 @@ The project uses missing-value imputation only as a last step after source
 cross-reference. The goal is not to make the tables look complete; the goal is
 to make them true enough for analysis.
 
+> **Update — anchored simulation + provenance (supersedes the "never create rows"
+> stance for the granular tables).** Real granular event data does not exist for
+> the full historical scope, so the per-match and goal-event tables are produced
+> by a **documented, literature-anchored simulation** rather than left empty or
+> padded with cloned rows. Critically, simulation is anchored on REAL quantities
+> (e.g. per-match goals are allocated from the real scoreline, verified to sum
+> exactly) and every value is tagged `observed` / `derived` / `simulated` in the
+> `data_provenance` column. This is the opposite of the forbidden behaviour
+> (arbitrary random fill / row cloning). `goals_events_cleaned` is kept at its
+> real size (~254.6k goals), not inflated to 1.5M. Full method + citations:
+> `reports/methodology_and_citations.md`; rebuild: `src/rebuild_realistic_datasets.py`.
+> (The "Latest executed quality report" figures below predate the rebuild and are
+> kept only as a historical record of the raw-source-only build.)
+
 ## References Used
 
 - Little and Rubin, *Statistical Analysis with Missing Data*.
