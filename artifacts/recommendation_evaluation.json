@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-13T10:41:43",
+  "protocol": "leave-one-out same-player cross-season retrieval (leakage-safe)",
+  "player_seasons": 190979,
+  "retained_pcs": 12,
+  "results": [
+    {
+      "representation": "baseline (PC1-PC2, 2 dims)",
+      "n_queries": 4374,
+      "MRR": 0.0008,
+      "MAP": 0.0002,
+      "recall@5": 0.0,
+      "recall@10": 0.0001,
+      "hit@5": 0.0005,
+      "hit@10": 0.0007,
+      "ndcg@5": 0.0001,
+      "ndcg@10": 0.0001,
+      "pos_purity@5": 0.5147,
+      "pos_purity@10": 0.514
+    },
+    {
+      "representation": "stronger (standardized 12 PCs)",
+      "n_queries": 4374,
+      "MRR": 0.0018,
+      "MAP": 0.0004,
+      "recall@5": 0.0004,
+      "recall@10": 0.0007,
+      "hit@5": 0.0014,
+      "hit@10": 0.003,
+      "ndcg@5": 0.0004,
+      "ndcg@10": 0.0006,
+      "pos_purity@5": 0.9068,
+      "pos_purity@10": 0.8941
+    }
+  ]
+}
