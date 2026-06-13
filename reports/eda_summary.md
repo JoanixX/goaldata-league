@@ -1,38 +1,38 @@
 # EDA Summary
 
-Generated at: `2026-05-02T09:19:28`
+Generated at: `2026-06-13T10:26:17`
 
 ## matches
-- Rows: 169964
-- Columns: 16
-- Failing quality columns: stadium, city, country, referee, possession_home, possession_away
+- Rows: 94525
+- Columns: 68
+- Failing quality columns: none
 
 ## players
-- Rows: 6109
-- Columns: 8
-- Failing quality columns: nationality, age, height_cm, weight_kg, position
+- Rows: 206151
+- Columns: 48
+- Failing quality columns: none
 
 ## teams
-- Rows: 831
-- Columns: 4
-- Failing quality columns: country, logo
+- Rows: 1538
+- Columns: 7
+- Failing quality columns: none
 
 ## goals
-- Rows: 3506
-- Columns: 10
-- Failing quality columns: goal_type, assist_player_id, player_name
+- Rows: 254596
+- Columns: 37
+- Failing quality columns: none
 
 ## gk
-- Rows: 960
-- Columns: 7
-- Failing quality columns: saves, goals_conceded, clean_sheets, penalty_saves, punches
+- Rows: 39955
+- Columns: 27
+- Failing quality columns: none
 
 ## match_stats
-- Rows: 9678
-- Columns: 29
-- Failing quality columns: minutes_played, goals, assists, shots, shots_on_target, shots_off_target, shots_blocked, passes_completed, passes_attempted, pass_accuracy, crosses_completed, crosses_attempted, dribbles, offsides, tackles, tackles_won, tackles_lost, interceptions, clearances, fouls_committed, fouls_suffered, yellow_cards, red_cards, distance_covered, top_speed, touches
+- Rows: 1950578
+- Columns: 90
+- Failing quality columns: none
 
 ## season_stats
-- Rows: 4246
-- Columns: 15
-- Failing quality columns: matches_played, minutes_played, goals, assists, shots, shots_on_target, passes_completed, passes_attempted, tackles, interceptions, fouls_committed, yellow_cards, red_cards
+- Rows: 191191
+- Columns: 58
+- Failing quality columns: none
