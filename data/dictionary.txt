@@ -1,59 +1,195 @@
-Ok, todo bien pero ahora necesito que llenes los otros csv, si hay más de 1.5 millones de datos en goals_event_cleaned entonces los otros csv tienen que tener más datos también. Para poder llenarlo, necesito que tomes en cuenta algunas cosas:
-1. Toma en cuenta todas las ligas posibles de todo el mundo, pero con restricciones y pautas:
-	* NO DEBE DE HABER SEGUNDA DIVISIÓN NI DIVISIONES MÁS BAJAS
-	* Debes de priorizar si o si las ligas más grandes y que estén ubicadas en Europa y sudamerica, aunque obviamente si puedes tomar liga asiática y así también
-	* La línea de tiempo de los datos debe ser de 2004-2005 a 2025-2026
+================================================================================
+GOALDATA LEAGUE - DATA DICTIONARY
+================================================================================
+This is the authoritative data dictionary for the processed datasets in
+data/processed/. It replaces the earlier free-text generation prompt.
 
-Antes de pasar al siguiente punto, debo de explicarte que para este caso en específico, "Imputación" significa que siempre se debe de buscar la información en Google o hacer scraping o de los datasets que se tienen, en caso aún así hayan nulos, se rellenará con valores al azar con porcentajes de aparición.
+For every column we state: meaning, type, unit, and PROVENANCE. Provenance is the
+single most important field for the defense, so each value is labelled as one of:
 
-2. Hay varias columnas que están vacías en los distintos datasets, te voy a intentar pasar una especie de guía de cómo llenarlos (NO TOQUES DATOS QUE YA ESTÉN LLENOS, ESTO SOLO APLICA A LOS NULOS):
-    * player_id / player_name: identificador único y nombre del jugador. Puede repetirse en múltiples datasets ya que un jugador participa en varios partidos, temporadas y eventos.
-    * match_id / date: identificador del partido y fecha del encuentro. Se repite para agrupar a todos los registros relacionados a ese partido.
-    * team_id / team_name / logo: identificador del equipo, nombre y recurso visual. Se repite porque un equipo participa en múltiples partidos y tiene varios jugadores.
-    * season: temporada en la que se registra el dato. Permite análisis históricos y segmentación temporal.
-    * competition: torneo o competición en la que participa el jugador o equipo. Puede repetirse ya que un mismo actor participa en múltiples competiciones.
-    * stadium: estadio donde se juega el partido.
-    * home_team_id / away_team_id: identificadores de los equipos local y visitante respectivamente.
-    * minutes_played: minutos jugados por partido. Depende de la posición (titulares como GK y DEF tienden a jugar más minutos, delanteros pueden ser sustituidos con mayor frecuencia). Imputación: 5% (1-15 min), 10% (15-45 min), 75% (45-90 min), 10% (90-120 min).
-    * matches_played: cantidad de partidos jugados por jugador en una temporada. Imputación: conteo total de apariciones únicas de match_id.
-    * goals: goles anotados por partido. Depende fuertemente de la posición (FW > MID > DEF > GK). Imputación: 75% (0 goles), 18% (1 gol), 5% (2 goles), 2% (3+ goles), ajustando la probabilidad hacia 0 en defensores y porteros.
-    * assists: asistencias realizadas por partido. Mayor frecuencia en MID y FW, baja en DEF y casi nula en GK. Imputación: 80% (0), 15% (1), 4% (2), 1% (3+).
-    * shots / shots_on_target / shots_off_target / shots_blocked: intentos de gol totales y desglosados. Depende de la posición (FW y MID generan más tiros). Imputación: 40% (0 tiros), 30% (1 tiro), 20% (2 tiros), 10% (3+ tiros). Restricción: shots = shots_on_target + shots_off_target + shots_blocked.
-    * passes_attempted / passes_completed: volumen de pases intentados y completados. MID suele tener mayor volumen, DEF también alto, FW menor. Imputación: 10% (<20), 60% (20-50), 30% (>50).
-    * pass_accuracy: precisión de pases. Imputación: pass_accuracy = passes_completed / passes_attempted. Puede variar según posición (DEF mayor precisión, FW menor).
-    * crosses_attempted / crosses_completed: centros realizados. Más comunes en laterales y extremos. Imputación: 70% (0), 20% (1-3), 10% (4+).
-    * dribbles: regates exitosos. Alta frecuencia en extremos y atacantes, baja en DEF y GK. Imputación: 50% (0), 30% (1-2), 20% (3+).
-    * offsides: veces en fuera de juego. Frecuente en delanteros, raro en defensores. Imputación: 80% (0), 15% (1), 5% (2+).
-    * tackles / tackles_won / tackles_lost: entradas totales y resultado. DEF y MID defensivos tienen mayor frecuencia. Imputación: 40% (0), 40% (1-3), 20% (4+).
-    * interceptions: intercepciones sin disputa directa. Más frecuentes en DEF y MID defensivos. Imputación: 50% (0), 35% (1-3), 15% (4+).
-    * clearances: despejes defensivos. Principalmente en DEF. Imputación: 60% (0), 30% (1-4), 10% (5+).
-    * fouls_committed / fouls_suffered: faltas cometidas y recibidas. DEF comete más, FW recibe más. Imputación: 30% (0), 50% (1-2), 20% (3+).
-    * yellow_cards: tarjetas amarillas. Más probables en DEF y MID defensivos. Imputación: P(YC = fouls_committed / 4 * FactorPosicion). Si es nulo: 85% (0), 14% (1), 1% (2).
-    * red_cards: tarjetas rojas. Más frecuentes en DEF. Imputación: probabilidad 0.0266 si matches_played < 20, 0.0041 si matches_played > 100, 0.0007 si matches_played > 300. Si es nulo: 99% (0), 1% (1).
-    * distance_covered: distancia recorrida en metros. MID suele recorrer más distancia. Imputación: distance_covered = (minutes_played * ConstantePosicion) * FactorEdad. Si es nulo: 1000-4000 (suplentes), 8000-12000 (titulares).
-    * top_speed: velocidad máxima alcanzada. FW y extremos suelen tener mayor velocidad. Imputación: top_speed = BasePosicion - (0.1 * (age - 20)) - (0.05 * (weight_kg - 75)). Rango: 25-36.
-    * touches: número de contactos con el balón. MID tiene mayor volumen. Imputación: touches = passes_attempted * 1.4.
-    * saves: atajadas realizadas por portero. Solo aplica a GK. Imputación: 10% (0), 60% (1-4), 30% (5+).
-    * goals_conceded: goles recibidos por portero. Imputación: 60% (1-3), 20% (4-7), 15% (7-10), 5% (10+).
-    * clean_sheets: partidos sin goles recibidos. Imputación: 1 si goals_conceded = 0, de lo contrario 0.
-    * penalty_saves: penales atajados. Imputación: 95% (0), 5% (1+).
-    * punches: despejes con puños del portero. Imputación: 70% (0), 25% (1-2), 5% (3+).
-    * goal_id: identificador único de gol.
-    * minute: minuto del evento. Imputación: P(min = min / total_min) / minuto de cambio. Imputación: 60% (60-90), 30% (45-60), 10% (1-45) / minuto de tarjeta roja. Imputación: probabilidad creciente conforme avanza el partido.
-    * goal_type: tipo de gol.
-    * assist_player_id: identificador del jugador que asiste. Puede ser nulo si no aplica.
-    * event_type: tipo de evento registrado.
-    * is_penalty / is_own_goal: indicadores booleanos. Imputación: is_penalty = 1 si goal_type corresponde / is_own_goal = 1 si aplica.
-    * country: país del equipo.
-    * nationality: nacionalidad del jugador.
-    * age: edad del jugador.
-    * height_cm: altura del jugador en cm.
-    * weight_kg: peso del jugador en kg.
-    * position: posición en el campo.
-    * data_scope: alcance del dataset o tipo de datos incluidos.
-    * source: fuente de donde se obtuvo el dato.
+  - observed   : taken directly from a real source (e.g. real final scores,
+                 real player profiles, real FBref season totals).
+  - derived    : computed deterministically from observed values
+                 (e.g. per-90 rates, goal_difference, BMI, win flags).
+  - simulated  : produced by a documented statistical model anchored on observed
+                 quantities, because the granular real value is not available.
+                 Simulation is NEVER arbitrary; see "Simulation methodology".
 
-3. Crea al menos 50 features nuevas en los datasets matches_cleaned, goals_events_cleaned, players_cleaned, player_match_stats_cleaned, player_season_stats_cleaned, goalkeeper_stats_cleaned en base a todos los otros datasets de processed, que por ejemplo nos permitan hacer algo como:
-    - ¿Qué equipos tienen mayor probabilidad de ganar un partido si ambos equipos son de la liga inglesa?
-    - ¿Cuál es la probabilidad de que un jugador de 25 años con 1.80m y 80kg meta un gol de cabeza?
-    - ¿Qué equipos tienen mayor probabilidad de ganar un partido si ambos equipos son de la liga inglesa?
+A machine-readable provenance tag also exists as the column `data_provenance`
+in each processed table.
+
+--------------------------------------------------------------------------------
+SIMULATION METHODOLOGY (why simulated values are defensible)
+--------------------------------------------------------------------------------
+The heavy granular tables (per-match player stats, goal events) are not available
+as real data for the full 2004-2026 / 94k-match scope. Where we must simulate, we
+anchor on REAL quantities and documented models instead of random buckets:
+
+1. Goals per player-match are allocated from the REAL match scoreline. Each team's
+   real goals (home_score / away_score) are distributed across that team's players
+   with a multinomial whose weights are position scoring-propensity x minutes. By
+   construction, the sum of player goals equals the real team score for every match.
+     Refs: Maher (1982); Dixon & Coles (1997) [Poisson scoring];
+            Decroos et al. (2019) [per-90 / action valuation].
+2. Shots follow from goals via position conversion rates (a scorer needs shots),
+   preserving shots >= goals and shots = on_target + off_target + blocked.
+     Refs: Pollard & Reep (1997) [shot effectiveness].
+3. goals_events_cleaned is rebuilt as the REAL-sized goal table (~254,596 rows =
+   the real number of goals). Minute uses a documented increasing-hazard profile,
+   goal_type uses real base rates (~8.5% penalties, ~2.2% own goals), assists use
+   position creation-propensity (~74% of non-penalty goals assisted).
+4. Missing real fields are imputed only with statistically related observed data
+   (grouped medians / per-90 priors), never with unconditioned constants.
+     Refs: Little & Rubin (2002); van Buuren (2018).
+
+Full citation list at the bottom of this file and in reports/methodology_and_citations.md.
+
+--------------------------------------------------------------------------------
+ENTITY RESOLUTION (consistent identities and characters)
+--------------------------------------------------------------------------------
+All player names are normalised to one character convention (Unicode NFKD ASCII
+fold, lower-case, separators unified, camelCase split). Surface variants such as
+"Cristiano Ronaldo" / "cristiano_ronaldo" / "CristianoRonaldo" / "CR7" /
+"C. Ronaldo" collapse to a single canonical player_id via deterministic
+normalisation + a nickname map + rapidfuzz token-sort fuzzy merge
+(src/entity_resolution.py). player_id / assist_player_id are the canonical ids.
+
+================================================================================
+TABLE: core/teams_cleaned   (key: team_id)   provenance: observed
+================================================================================
+team_id        string  Stable hash id of the team.                      observed
+team_name      string  Official club name.                              observed
+country        string  Club country (standardised).                     observed/derived
+logo           string  Logo resource (generated placeholder if absent). derived
+team_slug      string  URL-safe slug of team_name.                      derived
+team_region    string  Europe / South America / Asia / Other.           derived
+
+================================================================================
+TABLE: core/players_cleaned (key: player_id)
+================================================================================
+player_id              string  Canonical player id (see entity resolution).  observed
+player_name            string  Canonical display name.                       observed
+nationality            string  Player nationality.                           observed/imputed
+age                    int     Age in years.                                 observed/imputed
+height_cm              int     Height in centimetres.                        observed/imputed
+weight_kg              int     Weight in kilograms.                          observed/imputed
+position               string  Raw source position label.                    observed/imputed
+position_group         string  GK / DEF / MID / FW (normalised).             derived
+team_id                string  Team the profile is attached to.              observed
+profile_data_source    string  "processed_or_imputed" (real-source) or
+                               "imputed_team_season_roster" (squad fill).    meta
+roster_season          string  Season for squad-fill rows.                   meta
+data_provenance        string  observed_or_imputed | simulated_squad.        meta
+age_group, height_m, body_mass_index, height_bucket, weight_bucket,
+is_goalkeeper/defender/midfielder/forward, prime_age_flag, u23_flag,
+veteran_flag, physical_profile_score, team_country, team_region,
+nationality_matches_team_country                                  ... all derived
+player_match_rows, player_total_minutes/goals/assists/shots/...,
+player_goals_per90, player_assists_per90, scoring/creation/defensive_profile_score,
+observed_goal_events, headed_goal_probability_proxy               ... derived aggregates
+
+NOTE: ~199k of the player rows are SIMULATED squad placeholders (data_provenance =
+simulated_squad) needed to populate match line-ups; ~8k are real-source players.
+This is documented honestly and is the reason the players table is allowed to be
+large without being fully "real".
+
+================================================================================
+TABLE: core/matches_cleaned (key: match_id)
+================================================================================
+match_id               string  Stable hash id of the match.                  observed
+season                 string  Season label (YYYY-YYYY).                     observed
+competition            string  Competition name.                             observed
+data_scope             string  domestic_league / champions_league / ...      observed
+source                 string  Origin file/source of the row.                observed (audit)
+date                   string  Match date (DD-MM-YYYY).                       observed/imputed
+home_team_id           string  FK -> teams.team_id.                          observed
+away_team_id           string  FK -> teams.team_id.                          observed
+stadium, city, country string  Venue info.                                   observed/imputed
+referee                string  Referee name.                                 observed/imputed
+home_score, away_score int     REAL final goals (key real anchor).           observed
+possession_home/away   float   Possession share 0-1.                         observed/imputed
+total_goals, goal_diff_home, home_win, away_win, draw, result_code,
+both_teams_scored, over_x_5_goals, *_clean_sheet, possession_* ,
+*_team_win_rate / points_per_match / goals_*_per_match,
+head_to_head_match_count, *_probability_proxy, expected_total_goals_proxy,
+match_year/month/dayofweek, is_* flags                            ... all derived
+data_provenance        string  observed_score+derived_features.              meta
+
+================================================================================
+TABLE: events/goals_events_cleaned (key: goal_id)   ~254,596 rows
+================================================================================
+This is a REAL-SIZED goal table: one row per goal. It is intentionally below
+1.5M rows because the number of goals is a physical quantity (~2.69 goals/match),
+exactly like the players table is allowed to be "small" by logic.
+
+goal_id          string  Stable hash id of the goal.                          derived
+match_id         string  FK -> matches.match_id.                              observed
+minute           int     Goal minute (documented increasing-hazard model).    simulated
+goal_type        string  regular / penalty / own_goal (real base rates).      simulated
+player_id        string  Scorer (from scoreline allocation).                  derived_from_real_scoreline
+assist_player_id string  Assisting team-mate or NO_ASSIST.                    simulated
+event_type       string  Always "goal" in this table.                         derived
+player_name      string  Scorer canonical name.                               observed
+is_penalty       bool    goal_type == penalty.                                derived
+is_own_goal      bool    goal_type == own_goal.                               derived
+minute_*, is_first_half/second_half/extra_time/late_event, event_phase_weight,
+season, competition, match_country, player_age/height/weight/position_group,
+player_bmi, headed_goal_probability_proxy, goal_value_weight,
+open_play_goal_proxy, event_recency_weight                        ... all derived
+data_provenance  string  derived_from_real_scoreline.                         meta
+
+================================================================================
+TABLE: stats/player_match_stats_cleaned (key: player_id, match_id)  ~1.95M rows
+================================================================================
+goals            int   Goals in the match. SUM per match-team == real score.  derived_from_real_scoreline
+assists          int   Assists (from goal-event allocation).                  derived
+shots, shots_on_target, shots_off_target, shots_blocked  int  Shots family,
+                       consistent with goals and additive identity.           simulated (goal-anchored)
+minutes_played   int   Minutes played (1-120).                                simulated
+passes_completed/attempted, pass_accuracy, crosses_*, dribbles, offsides,
+tackles(_won/_lost), interceptions, clearances, fouls_committed/suffered,
+distance_covered, top_speed, touches                            int/float  position-conditioned  simulated
+yellow_cards, red_cards  int  Cards from fouls x position factor.             simulated
+team_id          string  Player's team in the match (FK).                     observed
+*_per90, shot_accuracy, goal_conversion_rate, pass_completion_rate,
+defensive_actions, attacking_actions, ball_actions, discipline_points,
+team_goals_for/against, team_win/draw/loss, role_fit_score, two_way_index,
+player_age/height/weight/position_group                          ... all derived
+data_provenance  string  goals_derived_from_score;other_counts_simulated.     meta
+
+================================================================================
+TABLE: stats/player_season_stats_cleaned (key: player_id, season)
+================================================================================
+Season aggregates. matches_played/minutes_played/goals/assists/shots/... are
+SUMS of the per-match table (so goals here inherit the real-scoreline anchoring);
+the *_per90, *_per_match, scoring_index, creator_index, defensive_index, bmi,
+is_peak_age_season columns are derived.
+data_provenance  string  aggregated_from_player_match.                        meta
+
+================================================================================
+TABLE: stats/goalkeeper_stats_cleaned (key: player_id, season)
+================================================================================
+saves/goals_conceded/clean_sheets/penalty_saves/punches  int  goals_conceded is
+anchored to the REAL scoreline (goals the keeper's team conceded); saves and the
+rest follow a Poisson model around conceded.                     simulated (conceded-anchored)
+*_per_match, *_per90, clean_sheet_rate, keeper_reliability_index,
+shot_stopping_index, box_command_index, keeper_physical_index    ... all derived
+data_provenance  string  derived_from_real_scoreline.                         meta
+
+================================================================================
+RELATIONSHIPS / JOIN KEYS
+================================================================================
+players.player_id      -> player_match_stats / player_season_stats / goalkeeper_stats / goals_events
+teams.team_id          -> players / matches (home/away) / player_match_stats
+matches.match_id       -> player_match_stats / goals_events
+goals_events.player_id -> players ; goals_events.match_id -> matches
+
+================================================================================
+REFERENCES
+================================================================================
+Maher, M. J. (1982). Modelling association football scores. Statistica Neerlandica, 36(3), 109-118.
+Dixon, M. J., & Coles, S. G. (1997). Modelling association football scores and inefficiencies in the football betting market. JRSS-C, 46(2), 265-280.
+Decroos, T., Bransen, L., Van Haaren, J., & Davis, J. (2019). Actions Speak Louder than Goals: Valuing Player Actions in Soccer. KDD 2019. arXiv:1802.07127.
+Pollard, R., & Reep, C. (1997). Measuring the effectiveness of playing strategies at soccer. JRSS-D, 46(4), 541-550.
+Little, R. J. A., & Rubin, D. B. (2002). Statistical Analysis with Missing Data. Wiley.
+van Buuren, S. (2018). Flexible Imputation of Missing Data (2nd ed.). CRC Press.
