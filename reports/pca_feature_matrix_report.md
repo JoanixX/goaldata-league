@@ -1,6 +1,6 @@
 # PCA Feature Matrix Report
 
-Generated at: `2026-05-02T12:46:15`
+Generated at: `2026-06-13T10:35:53`
 
 ## Unit of Analysis
 
@@ -43,13 +43,30 @@ and competition-period differences.
 - Raw player-match advanced metrics with 100% missingness are excluded from this
   PCA matrix because they would add no signal.
 
+## Data Treatment and Outliers (justified)
+
+Before PCA the feature matrix receives a principled, documented treatment so the
+components reflect real structure rather than a few extreme tails:
+
+1. **Invalid-row removal.** Player-season rows with no `player_id`/`player_name`
+   are aggregation artefacts (one "Unknown" bucket that collapses thousands of
+   unmatched records into a single row with minutes in the millions). They are
+   dropped because they are not real player-seasons and would otherwise dominate
+   every scaled component.
+2. **Winsorization at the 1st/99th percentile.** Per-90 rates explode for
+   tiny-minute players (e.g. one goal in a few minutes -> 200+ goals/90), which
+   is small-sample noise, not skill. Capping at robust quantiles keeps each
+   feature's range even. PCA is variance-based and very sensitive to such tails.
+3. **log1p transform** (inside the pipeline). Count and per-90 stats are heavily
+   right-skewed; the log compresses high-volume tails so variance reflects
+   structure, not a handful of high-usage players. All features are non-negative,
+   so `log1p` is well defined.
+
 ## Missing Values
 
-Numeric missing values are imputed with the median. Median imputation is robust
-to skewed football statistics, where a few elite players can have very high
-values. Categorical missing values are imputed with the most frequent category
-inside the preprocessing pipeline. No missing values are replaced with invented
-football events or source data.
+Numeric missing values are imputed with the median (robust to skew). Categorical
+missing values use the most frequent category. No missing values are replaced
+with invented football events or source data.
 
 ## Feature Engineering
 
@@ -60,22 +77,24 @@ assists.
 
 ## Scaling
 
-`StandardScaler` is applied before PCA. PCA is variance-based: without scaling,
-large-scale variables such as minutes or passes would dominate the principal
-components simply because their units are larger. Scaling gives each feature
-mean 0 and standard deviation 1, so PCA reflects correlation structure instead
-of raw measurement scale.
+`RobustScaler` (median centring, IQR scaling) is applied instead of
+`StandardScaler` because, even after winsorization and `log1p`, football features
+contain outliers; the IQR scale is not distorted by them the way mean/standard
+deviation would be. This is scikit-learn's recommended scaler for data with
+outliers. Scaling is necessary because PCA is variance-based: without it,
+large-scale variables such as minutes or passes would dominate the components
+simply because their units are larger.
 
 ## PCA Results
 
-- Rows in feature matrix: `4065`
-- Encoded feature count after One-Hot Encoding: `37`
+- Rows in feature matrix: `190979`
+- Encoded feature count after One-Hot Encoding: `74`
 - Components needed to reach at least 90% cumulative explained variance:
-  `19`
+  `46`
 - Cumulative explained variance at that point:
-  `0.9113`
+  `0.9045`
 - Explained variance captured by PC1 + PC2:
-  `0.2807`
+  `0.2148`
 
 The full cumulative explained variance table is saved to:
 `artifacts\pca_explained_variance.csv`
@@ -86,27 +105,27 @@ Top absolute loadings for PC1:
 
 | feature | PC1 | abs_loading |
 | --- | --- | --- |
-| passes_attempted | 0.326330 | 0.326330 |
-| passes_completed | 0.323548 | 0.323548 |
-| interceptions | 0.314009 | 0.314009 |
-| fouls_committed | 0.284171 | 0.284171 |
-| shots | 0.255080 | 0.255080 |
-| tackles | 0.248703 | 0.248703 |
-| shots_on_target | 0.223353 | 0.223353 |
-| red_cards | 0.221213 | 0.221213 |
+| fouls_committed | 0.277601 | 0.277601 |
+| shots | 0.276227 | 0.276227 |
+| shots_on_target | 0.267492 | 0.267492 |
+| tackles | 0.264305 | 0.264305 |
+| interceptions | 0.246607 | 0.246607 |
+| passes_completed | 0.246595 | 0.246595 |
+| passes_attempted | 0.243166 | 0.243166 |
+| assists | 0.232422 | 0.232422 |
 
 Top absolute loadings for PC2:
 
 | feature | PC2 | abs_loading |
 | --- | --- | --- |
-| discipline_points_per90 | 0.337489 | 0.337489 |
-| fouls_committed_per90 | 0.325246 | 0.325246 |
-| passes_attempted_per90 | 0.319768 | 0.319768 |
-| passes_completed_per90 | 0.305064 | 0.305064 |
-| cards_per90 | 0.301043 | 0.301043 |
-| minutes_per_match | -0.254461 | 0.254461 |
-| defensive_actions_per90 | 0.246558 | 0.246558 |
-| tackles_per90 | 0.237442 | 0.237442 |
+| shots_on_target_per90 | 0.330954 | 0.330954 |
+| shots_per90 | 0.313358 | 0.313358 |
+| goals_per90 | 0.309917 | 0.309917 |
+| position_group_Forward | 0.291210 | 0.291210 |
+| position_group_Defender | -0.279434 | 0.279434 |
+| minutes_per_match | -0.275082 | 0.275082 |
+| minutes_played | -0.208665 | 0.208665 |
+| goals | 0.193796 | 0.193796 |
 
 PC1 and PC2 are weighted combinations of the original scaled features. They do
 not represent one original statistic; instead, they summarize dominant patterns
