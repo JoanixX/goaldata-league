@@ -1,11 +1,12 @@
-# Notebooks (notebooks)
-Exploratory Data Analysis (EDA) and prototyping area for the Champions League project.
+# Notebooks
 
-## Key Files
-- **`eda_explorer.ipynb`**: This is the primary notebook used for:
-  - **Sparsity Analysis**: Visualizing the amount of missing data in the raw 2011-2025 dataset.
-  - **Tactical Trends**: Initial plotting of possession and goal trends across seasons.
-  - **Pipeline Prototyping**: Developing the logic for team name fuzzy matching and API integration before formalizing it in the `src/` directory.
+Este directorio se usa para notebooks interactivos de EDA y visualización.
 
-## Usage
-These notebooks are intended for interactive analysis using Jupyter or VS Code. They serve as a bridge between raw data discovery and the automated engineering pipeline.
+Sugerencias:
+- notebook_01_build_and_inspect.ipynb: cargar graphs/*.gpickle, ejecutar analysis_report.py, mostrar distribuciones y redes.
+- notebook_02_comparison.ipynb: comparar centralities vs goles/asistencias.
+
+Commands quick-start:
+- python graph/build_graph.py --lineups processed/lineups.csv --out graphs/player_graph.gpickle
+- python graph/analysis_report.py --graph graphs/player_graph.gpickle --out-prefix reports/player
+- python graph/compare_rankings.py --graph-centralities reports/player_centralities.csv --baseline data/baseline_goals.csv --out reports/compare.csv
