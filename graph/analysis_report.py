@@ -6,7 +6,7 @@ Exporta CSVs con resultados que luego se pueden usar para comparar.
 import argparse
 import networkx as nx
 import pandas as pd
-
+import pickle
 
 def compute_basic_stats(G: nx.Graph) -> dict:
     n = G.number_of_nodes()
@@ -69,7 +69,9 @@ if __name__ == '__main__':
     parser.add_argument('--approx-betweenness-k', type=int, default=200, help='k para betweenness approx (opcional)')
     args = parser.parse_args()
 
-    G = nx.read_gpickle(args.graph)
+    #G = nx.read_gpickle(args.graph)
+    with open(args.graph, 'rb') as f:
+        G = pickle.load(f)
     stats = compute_basic_stats(G)
     central = compute_centralities(G, approx_betweenness_k=args.approx_betweenness_k)
 

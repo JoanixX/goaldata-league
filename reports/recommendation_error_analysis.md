@@ -1,6 +1,6 @@
 # Week 10 - Recommendation Error Analysis
 
-Generated: `2026-06-13T10:41:43`
+Generated: `2026-06-13T13:04:49`
 System analysed: stronger (standardized 12-PC similarity).
 
 ### Strong cases (relevant comparable retrieved in top-5)

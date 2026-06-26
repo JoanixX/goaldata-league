@@ -1,6 +1,6 @@
 # Week 10 - Offline Evaluation Report (Recommendation / Ranking)
 
-Generated: `2026-06-13T10:41:43`
+Generated: `2026-06-13T13:04:49`
 
 ## Task framing
 Content-based **item-item similarity / ranking** for scouting: given a

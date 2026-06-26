@@ -43,7 +43,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from src.recommendation_engine import load_data, pc_columns, _standardized_matrix
+from recommendation_engine import load_data, pc_columns, _standardized_matrix
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 ARTIFACTS_DIR = BASE_DIR / "artifacts"

@@ -6,6 +6,7 @@ Escribe grafos en formato gpickle.
 import argparse
 import pandas as pd
 import networkx as nx
+import pickle
 
 
 def build_co_participation_graph(df_lineups: pd.DataFrame, min_shared_minutes: int = 1) -> nx.Graph:
@@ -71,11 +72,15 @@ if __name__ == '__main__':
     if args.lineups and args.out_co:
         df_lineups = pd.read_csv(args.lineups)
         Gco = build_co_participation_graph(df_lineups, min_shared_minutes=args.min_shared_minutes)
-        nx.write_gpickle(Gco, args.out_co)
+        #nx.write_gpickle(Gco, args.out_co)
+        with open(args.out_co, 'wb') as f:
+            pickle.dump(Gco, f)
         print(f'Wrote co-participation graph to {args.out_co} (nodes={Gco.number_of_nodes()}, edges={Gco.number_of_edges()})')
 
     if args.events and args.out_inter:
         df_events = pd.read_csv(args.events)
         Gint = build_interaction_graph(df_events, event_types=args.event_types)
-        nx.write_gpickle(Gint, args.out_inter)
+        #nx.write_gpickle(Gint, args.out_inter)
+        with open(args.out_inter, 'wb') as f:
+            pickle.dump(Gco, f)
         print(f'Wrote interaction graph to {args.out_inter} (nodes={Gint.number_of_nodes()}, edges={Gint.number_of_edges()})')
