@@ -32,17 +32,32 @@ if __name__ == '__main__':
     parser.add_argument('--out', help='CSV de salida con resultados (single-row)')
     args = parser.parse_args()
 
-    dfg = pd.read_csv(args.graph_centralities, index_col=0)
-    dfb = pd.read_csv(args.baseline, index_col=0)
+    #dfg = pd.read_csv(args.graph_centralities, index_col=0)
+    #dfb = pd.read_csv(args.baseline, index_col=0)
+    # 1. Leer los archivos CSV de forma plana sin índices restrictivos
+    dfg = pd.read_csv(args.graph_centralities)
+    dfb = pd.read_csv(args.baseline)
+    
+    # 2. Validar que las columnas que solicitas existan en la data
     if args.graph_col not in dfg.columns:
         raise ValueError(f"graph column {args.graph_col} no encontrada en {args.graph_centralities}")
     if args.baseline_col not in dfb.columns:
         raise ValueError(f"baseline column {args.baseline_col} no encontrada en {args.baseline}")
+        
+    # 3. Limpieza estricta: asegurar ordenación idéntica por ID del jugador
+    dfg = dfg.sort_values(by=['player_id']).reset_index(drop=True)
+    dfb = dfb.sort_values(by=['player_id']).reset_index(drop=True)
+
+    # 4. Extraer las series alineadas posicionalmente
     graph_scores = dfg[args.graph_col]
     baseline_scores = dfb[args.baseline_col]
+    
+    # 5. Ejecutar la comparación estadística
     res = compare_rankings(graph_scores, baseline_scores)
+    
+    # 6. Escribir los resultados en el archivo de salida
     if args.out:
         pd.DataFrame([res]).to_csv(args.out, index=False)
-        print(f'Wrote comparison to {args.out}')
+        print(f'¡Éxito! Archivo guardado con datos en: {args.out}')
     else:
         print(res)

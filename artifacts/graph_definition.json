@@ -1,0 +1,8 @@
+{
+  "node_entity": "Player",
+  "edge_definition": "Cosine similarity",
+  "similarity_metric": "cosine",
+  "threshold": 0.75,
+  "directionality": "undirected",
+  "is_weighted": true
+}
