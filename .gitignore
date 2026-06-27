@@ -1,2 +1,65 @@
-artifacts/graph_networkx.pkl
-data/processed.zip
+# ===========================================================================
+# Internal prep / course materials (not part of the graded deliverable)
+# ===========================================================================
+preguntas.md
+bigData_pc1_uxxxxxxxxx.tex
+inspect_json.py
+semester_group_assignment_brief.md
+semester_group_assignment_rubric.md
+Dataset.txt
+skills/
+.claude/
+ANALISIS_GOALDATA_2026-06-27.md
+CAMBIOS_2026-06-27.md
+IMPLEMENTATION_PLAN_2026-06-27.md
+
+# ===========================================================================
+# Python / tooling caches
+# ===========================================================================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.matplotlib-cache/
+artifacts/.matplotlib-cache/
+
+# ===========================================================================
+# Environments
+# ===========================================================================
+.venv
+.env
+
+# ===========================================================================
+# Backups / archives
+# ===========================================================================
+copia_buena.csv
+
+# ===========================================================================
+# Logs
+# ===========================================================================
+logs/
+
+# ===========================================================================
+# Generated binary artifacts (large, reproducible model/graph dumps)
+# ===========================================================================
+*.pkl
+*.pickle
+
+# ===========================================================================
+# Raw data — not versioned (rebuild via src/download_*.py; see source inventory)
+# ===========================================================================
+data/raw/
+
+# ===========================================================================
+# Generated CSV outputs (reproducible). Processed datasets are kept as
+# Parquet via Git LFS (see .gitattributes); only the CSV mirrors are ignored.
+# ===========================================================================
+data/processed/*/*.csv
+
+# ===========================================================================
+# Stray scratch / test files
+# ===========================================================================
+scratch
+scratch/*
+uefa_match_events.csv
+match_links.json
+matches_test.csv
