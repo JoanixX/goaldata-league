@@ -19,9 +19,14 @@ def build_feature_similarity_graph(csv_path: str, max_k_neighbors: int = 5, simi
     print(" Cargando archivo de clusters...")
     df = pd.read_csv(csv_path)
     
-    # Extraer variables latentes (PC1 a PC12)
-    pc_cols = [f'PC{i}' for i in range(1, 13)]
-    features = df[pc_cols].to_numpy().astype(np.float32) # Forzar float32 para reducir consumo de memoria
+    # Extraer las variables latentes PCx disponibles (robusto: el PCA puede
+    # retener menos de 12 componentes sobre el catalogo real limpio).
+    pc_cols = sorted([c for c in df.columns if c.startswith('PC') and c[2:].isdigit()],
+                     key=lambda c: int(c[2:]))
+    if not pc_cols:
+        raise ValueError("no PC columns found in input (expected PC1, PC2, ...)")
+    print(f" Usando {len(pc_cols)} componentes: {pc_cols}")
+    features = df[pc_cols].to_numpy().astype(np.float32) # float32 para reducir memoria
     player_ids = df['player_id'].tolist()
     
     G = nx.Graph()

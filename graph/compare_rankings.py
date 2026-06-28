@@ -44,16 +44,22 @@ if __name__ == '__main__':
     if args.baseline_col not in dfb.columns:
         raise ValueError(f"baseline column {args.baseline_col} no encontrada en {args.baseline}")
         
-    # 3. Limpieza estricta: asegurar ordenación idéntica por ID del jugador
-    dfg = dfg.sort_values(by=['player_id']).reset_index(drop=True)
-    dfb = dfb.sort_values(by=['player_id']).reset_index(drop=True)
+    # 3. Alinear por player_id con un merge (NO posicionalmente). El código previo
+    #    ordenaba cada CSV por separado y tomaba las columnas por posición de fila;
+    #    si los conjuntos de jugadores difieren, eso compara jugadores distintos.
+    if 'player_id' not in dfg.columns or 'player_id' not in dfb.columns:
+        raise ValueError("ambos archivos deben tener columna 'player_id' para alinear por id")
+    merged = dfg[['player_id', args.graph_col]].merge(
+        dfb[['player_id', args.baseline_col]], on='player_id', how='inner'
+    )
+    # Indexar por player_id para que el top-k overlap use ids, no posiciones.
+    merged = merged.set_index('player_id')
+    graph_scores = merged[args.graph_col]
+    baseline_scores = merged[args.baseline_col]
 
-    # 4. Extraer las series alineadas posicionalmente
-    graph_scores = dfg[args.graph_col]
-    baseline_scores = dfb[args.baseline_col]
-    
     # 5. Ejecutar la comparación estadística
     res = compare_rankings(graph_scores, baseline_scores)
+    res['n_compared'] = int(len(merged))
     
     # 6. Escribir los resultados en el archivo de salida
     if args.out:
