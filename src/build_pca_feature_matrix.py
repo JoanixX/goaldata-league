@@ -83,7 +83,11 @@ ENGINEERED_NUMERIC_COLUMNS = [
     "discipline_points_per90",
 ]
 
-CATEGORICAL_COLUMNS = ["season", "position_group"]
+# P1-1: `season` was dropped from the PCA one-hot. Encoding ~40 seasons created
+# sparse era-axes that described the competition period instead of the player's
+# role/performance and inflated the encoded feature count. Only `position_group`
+# (tactical role) is kept as a categorical input.
+CATEGORICAL_COLUMNS = ["position_group"]
 
 
 @dataclass
@@ -139,10 +143,24 @@ def load_player_season_dataset() -> pd.DataFrame:
 
     if not players.empty:
         meta_cols = ["player_id", "player_name", "position", "nationality", "team_id"]
-        if "position_group" in players.columns:
-            meta_cols.append("position_group")
+        for optional in ("position_group", "profile_data_source", "data_provenance"):
+            if optional in players.columns:
+                meta_cols.append(optional)
         player_meta = players[meta_cols].drop_duplicates("player_id")
         stats = stats.merge(player_meta, on="player_id", how="left", suffixes=("", "_players"))
+
+        # P0-2: exclude fabricated "{team} {season} Squad NN" entities from the
+        # analytical catalog. They are RNG draws from per-position templates, so
+        # they are near-identical and saturate every similarity/ranking layer
+        # (they dominated recommendation top-k and graph centralities). They stay
+        # in the stored tables but never enter PCA / clustering / recsys / graph.
+        src_col = stats.get("profile_data_source", stats.get("profile_data_source_players"))
+        if src_col is not None:
+            is_synthetic = src_col.astype(str).str.contains("roster", case=False, na=False)
+            kept = int((~is_synthetic).sum())
+            print(f"[P0-2] excluding {int(is_synthetic.sum()):,} synthetic player-seasons; "
+                  f"keeping {kept:,} real player-seasons for PCA.")
+            stats = stats[~is_synthetic].reset_index(drop=True)
     else:
         stats["player_name"] = pd.NA
         stats["position"] = pd.NA
@@ -217,7 +235,9 @@ def winsorize_columns(frame: pd.DataFrame, columns: list[str], lower: float = 0.
     for column in columns:
         if column not in out.columns:
             continue
-        values = pd.to_numeric(out[column], errors="coerce")
+        # Cast to numpy float64 first: clip() is implemented via .where(), which
+        # raises on nullable/pyarrow Int64 columns when the bounds are floats.
+        values = pd.to_numeric(out[column], errors="coerce").astype("float64")
         low, high = values.quantile(lower), values.quantile(upper)
         if pd.notna(low) and pd.notna(high) and high > low:
             out[column] = values.clip(low, high)
