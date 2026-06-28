@@ -21,6 +21,7 @@ __pycache__/
 .pytest_cache/
 .matplotlib-cache/
 artifacts/.matplotlib-cache/
+driver_fixing.lock
 
 # ===========================================================================
 # Environments
