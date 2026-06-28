@@ -10,8 +10,10 @@ recommender on top.
 > **Data honesty note.** Real granular event data is not available for the full
 > historical scope, so part of the per-match/event data is **simulated from real
 > anchors** (real scorelines, real position rates) using documented statistical
-> models, not arbitrary fabrication. Every cell is tagged in a `data_provenance`
-> column. See `reports/methodology_and_citations.md` and `data/dictionary.txt`.
+> models, not arbitrary fabrication. Every table carries a `data_provenance`
+> column (per-table/per-column granularity, e.g. `goals_derived_from_score;`
+> `other_counts_simulated`), not per-cell. See
+> `reports/methodology_and_citations.md` and `data/dictionary.txt`.
 
 ## Project Architecture
 The project is organized into modular components:
