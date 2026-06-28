@@ -59,6 +59,7 @@ import numpy as np
 import pandas as pd
 
 from src.entity_resolution import resolve_players, apply_identity_map
+from src.position_resolution import resolve_position_groups
 from src.enrich_processed_features import (
     OUTPUTS,
     add_goal_event_features,
@@ -315,7 +316,26 @@ def main() -> None:
     players["player_id"] = players["player_id"].map(lambda v: id_map.get(v, v))
     players = players.drop_duplicates("player_id", keep="first").reset_index(drop=True)
 
-    positions = position_series(player_match, players)
+    # P0-1: authoritative, deterministic position resolution (replaces the old
+    # random fallback). Goalkeeper evidence + first-token code parsing +
+    # behavioural fallback (see src/position_resolution.py). This is what stops
+    # goalkeepers from being weighted as scorers in the goal allocation below.
+    from src.position_resolution import build_position_map
+    fbref_pos = build_position_map(BASE_DIR)
+    print(f"  loaded {len(fbref_pos):,} authoritative FBref positions (by name)", flush=True)
+    resolved = resolve_position_groups(players, goalkeepers, player_season, name_position_map=fbref_pos)
+    players["position_group"] = resolved.to_numpy()
+    players["position"] = resolved.to_numpy()
+    print("Resolving authoritative positions (no RNG)...", flush=True)
+    print("  real-player position counts: "
+          + str(players.loc[players.get('profile_data_source', '') != 'imputed_team_season_roster', 'position_group'].value_counts().to_dict()), flush=True)
+    pos_map = dict(zip(players["player_id"].astype(str), players["position_group"].astype(str)))
+    positions = player_match["player_id"].astype(str).map(pos_map)
+    positions = positions.where(positions.isin(["GK", "DEF", "MID", "FW"]), "UNK").reset_index(drop=True)
+    # Keep the per-match position column consistent so downstream feature
+    # functions use the corrected groups too.
+    player_match = player_match.reset_index(drop=True)
+    player_match["player_position_group"] = positions.to_numpy()
 
     print("Allocating goals to real scorelines...", flush=True)
     goals_arr = allocate_goals_to_scoreline(player_match, matches, positions, rng)
@@ -350,8 +370,46 @@ def main() -> None:
     player_match_base["assists"] = pd.Series(assist_counts.reindex(key).to_numpy(), index=player_match_base.index).fillna(0).astype("int64")
 
     print("Recomputing derived features (reusing enrich functions)...", flush=True)
+    # Possession has no real source (it was simulated with a flat uniform prior);
+    # null it so add_match_features re-draws it from the realistic Beta prior.
+    for _poss_col in ("possession_home", "possession_away"):
+        if _poss_col in matches.columns:
+            matches[_poss_col] = pd.NA
     matches = add_match_features(matches, teams)
     player_season_base = build_player_season_stats(player_match_base, matches, player_season)
+    # P0-1 (season-level correction): a real goalkeeper's open-play offensive
+    # season totals were imputed with a WRONG outfield (forward) position median
+    # before the position fix, which produced absurd values (e.g. a keeper at
+    # 3.26 goals/90). Goalkeepers have no open-play scoring role, so force their
+    # offensive season counts to ~0; per-90 features are derived afterwards.
+    gk_ids = set(players.loc[players["position_group"].eq("GK"), "player_id"].astype(str))
+    gk_rows = player_season_base["player_id"].astype(str).isin(gk_ids)
+    for col in ("goals", "shots", "shots_on_target"):
+        if col in player_season_base.columns:
+            player_season_base.loc[gk_rows, col] = 0
+    print(f"  zeroed open-play offensive season stats for {int(gk_rows.sum()):,} goalkeeper rows", flush=True)
+
+    # P-real overlay: replace imputed season counts of REAL players with their
+    # actual FBref season totals (by canonical name + season). This gives each
+    # real player an individual fingerprint instead of a position-median profile,
+    # which is what was making the PCA/recommender unable to tell players apart.
+    # Only existing values are overwritten -> no NULLs are introduced.
+    from src.ingest_real_player_data import load_real_season_stats
+    from src.position_resolution import _canonical_name
+    real_stats = load_real_season_stats(BASE_DIR / "data" / "raw" / "fbref_big5_multiseason.csv")
+    if not real_stats.empty:
+        name_by_id = players.drop_duplicates("player_id").set_index("player_id")["player_name"]
+        cn = player_season_base["player_id"].map(name_by_id).map(_canonical_name)
+        key = pd.MultiIndex.from_arrays([cn.to_numpy(), player_season_base["season"].astype(str).to_numpy()])
+        n_overlaid = 0
+        for col in real_stats.columns:
+            if col in player_season_base.columns:
+                rv = pd.Series(real_stats[col].reindex(key).to_numpy(), index=player_season_base.index)
+                mask = rv.notna()
+                player_season_base.loc[mask, col] = rv[mask].to_numpy()
+                n_overlaid = max(n_overlaid, int(mask.sum()))
+        print(f"  overlaid REAL FBref season stats onto {n_overlaid:,} real player-seasons "
+              f"(cols: {list(real_stats.columns)})", flush=True)
     goalkeepers_base = build_goalkeeper_stats(player_match_base, matches, players, goalkeepers)
     goals = add_goal_event_features(goals_base, matches, players)
     players = add_player_features(players, teams, player_match_base, player_season_base, goals)
@@ -385,6 +443,26 @@ def main() -> None:
     for name, df in outputs.items():
         print(f"Writing {name}: {len(df):,} rows x {len(df.columns)} cols", flush=True)
         write_cleaned(name, df)
+
+    # ---- no-NULL guarantee (post-write) -------------------------------------
+    # write_cleaned -> parquet_ready_frame converts "NULL" markers into typed NaN,
+    # so the only reliable place to enforce "no missing data" is on the written
+    # files. Re-read each table, fill residual NaN in numeric columns with 0
+    # (counts/scores with no recorded value), and rewrite both parquet and CSV.
+    total_filled = 0
+    for name in outputs:
+        ppath = OUTPUTS[name].with_suffix(".parquet")
+        d = pd.read_parquet(ppath)
+        changed = False
+        for col in d.columns:
+            if pd.api.types.is_numeric_dtype(d[col]) and d[col].isna().any():
+                total_filled += int(d[col].isna().sum())
+                d[col] = d[col].fillna(0)
+                changed = True
+        if changed:
+            d.to_parquet(ppath, index=False)
+            d.to_csv(OUTPUTS[name], index=False, encoding="utf-8")
+    print(f"  filled {total_filled:,} residual numeric NaN cells with 0 (no-NULL guarantee)", flush=True)
 
     # ---- verification + methodology report ---------------------------------
     pm_goal_sum = int(numeric(player_match["goals"]).fillna(0).sum())
