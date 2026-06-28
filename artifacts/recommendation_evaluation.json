@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-13T13:04:49",
+  "generated_at": "2026-06-27T17:02:21",
   "protocol": "leave-one-out same-player cross-season retrieval (leakage-safe)",
-  "player_seasons": 190979,
+  "player_seasons": 7257,
   "retained_pcs": 12,
   "results": [
     {
       "representation": "baseline (PC1-PC2, 2 dims)",
-      "n_queries": 4374,
-      "MRR": 0.0008,
-      "MAP": 0.0002,
-      "recall@5": 0.0,
-      "recall@10": 0.0001,
-      "hit@5": 0.0005,
-      "hit@10": 0.0007,
-      "ndcg@5": 0.0001,
-      "ndcg@10": 0.0001,
-      "pos_purity@5": 0.5147,
-      "pos_purity@10": 0.514
+      "n_queries": 4438,
+      "MRR": 0.0143,
+      "MAP": 0.005,
+      "recall@5": 0.0033,
+      "recall@10": 0.0049,
+      "hit@5": 0.0137,
+      "hit@10": 0.0225,
+      "ndcg@5": 0.0038,
+      "ndcg@10": 0.0042,
+      "pos_purity@5": 0.3909,
+      "pos_purity@10": 0.3883
     },
     {
       "representation": "stronger (standardized 12 PCs)",
-      "n_queries": 4374,
-      "MRR": 0.0018,
-      "MAP": 0.0004,
-      "recall@5": 0.0004,
-      "recall@10": 0.0007,
-      "hit@5": 0.0014,
-      "hit@10": 0.003,
-      "ndcg@5": 0.0004,
-      "ndcg@10": 0.0006,
-      "pos_purity@5": 0.9068,
-      "pos_purity@10": 0.8941
+      "n_queries": 4438,
+      "MRR": 0.0422,
+      "MAP": 0.0138,
+      "recall@5": 0.011,
+      "recall@10": 0.0194,
+      "hit@5": 0.0554,
+      "hit@10": 0.0872,
+      "ndcg@5": 0.0146,
+      "ndcg@10": 0.0165,
+      "pos_purity@5": 0.9886,
+      "pos_purity@10": 0.9833
     }
   ]
 }

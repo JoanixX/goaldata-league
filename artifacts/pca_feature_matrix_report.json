@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-13T10:35:53",
+  "generated_at": "2026-06-27T17:01:51",
   "input": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
   "feature_matrix": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\features\\player_season_feature_matrix.csv",
-  "rows": 190979,
+  "rows": 7257,
   "numeric_columns": [
     "matches_played",
     "minutes_played",
@@ -35,13 +35,12 @@
     "discipline_points_per90"
   ],
   "categorical_columns": [
-    "season",
     "position_group"
   ],
-  "encoded_feature_count": 74,
-  "optimal_components_90": 46,
-  "cumulative_variance_at_optimal": 0.9045158321439362,
-  "first_two_components_variance": 0.21475548314719164,
+  "encoded_feature_count": 33,
+  "optimal_components_90": 14,
+  "cumulative_variance_at_optimal": 0.9051523797793174,
+  "first_two_components_variance": 0.3988833278142834,
   "outputs": {
     "pca_2d": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_player_season_2d.csv",
     "variance": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_explained_variance.csv",

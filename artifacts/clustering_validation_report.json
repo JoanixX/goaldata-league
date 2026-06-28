@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-13T10:36:53",
+  "generated_at": "2026-06-27T17:02:10",
   "input": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_player_season_2d.csv",
-  "rows": 190979,
-  "selected_kmeans_k": 4,
-  "selected_dbscan_eps": 0.15,
-  "selected_dbscan_min_samples": 10,
+  "rows": 7257,
+  "selected_kmeans_k": 3,
+  "selected_dbscan_eps": 0.25,
+  "selected_dbscan_min_samples": 20,
   "outputs": {
     "kmeans_sweep": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\clustering_kmeans_sweep.csv",
     "dbscan_sweep": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\clustering_dbscan_sweep.csv",
