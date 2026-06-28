@@ -22,6 +22,8 @@ __pycache__/
 .matplotlib-cache/
 artifacts/.matplotlib-cache/
 driver_fixing.lock
+recommendation_error_analysis.md
+recommendation_evaluation_report.md
 
 # ===========================================================================
 # Environments
