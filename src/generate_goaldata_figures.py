@@ -105,7 +105,7 @@ def plot_possession_distribution(matches: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(9, 5.5))
     ax.hist(possession * 100, bins=24, color="#7f5539", edgecolor="#fff8f0", linewidth=0.7)
     ax.axvline((possession * 100).mean(), color="#1f2933", linestyle="--", linewidth=1.2, label="Mean")
-    ax.set_title("Distribution of Team Possession")
+    ax.set_title("Distribution of Team Possession (simulated — Beta prior, mean ~51%, realistic tails)")
     ax.set_xlabel("Possession (%)")
     ax.set_ylabel("Team-match observations")
     ax.grid(axis="y", alpha=0.25)
@@ -116,16 +116,45 @@ def plot_possession_distribution(matches: pd.DataFrame) -> None:
 
 
 def plot_matches_by_season(matches: pd.DataFrame) -> None:
-    counts = matches["season"].astype(str).value_counts().sort_index()
+    # Chronological view by season_start_year (numeric), so split-year leagues
+    # ("2004-2005") and calendar-year leagues/tournaments ("2004") line up on one
+    # clean timeline instead of fragmenting the axis with two label formats.
+    year = pd.to_numeric(matches.get("season_start_year"), errors="coerce").dropna().astype(int)
+    counts = year.value_counts().sort_index()
+    counts.index = counts.index.astype(str)
     save_bar(
         counts,
         FIGURES_DIR / "matches_by_season.png",
-        "Matches by Season",
-        "Season",
+        "Matches by Season-Start Year (chronological)",
+        "Season start year",
         "Matches",
         color="#476a2a",
         figsize=(12, 5.8),
     )
+
+
+def plot_season_trajectory(matches: pd.DataFrame) -> None:
+    """Goals-per-match trajectory over time (history / improvement-or-decline)."""
+    df = matches.copy()
+    df["year"] = pd.to_numeric(df.get("season_start_year"), errors="coerce")
+    df["tg"] = pd.to_numeric(df.get("total_goals"), errors="coerce")
+    df = df.dropna(subset=["year", "tg"])
+    df["year"] = df["year"].astype(int)
+    grp = df.groupby("year").agg(matches=("tg", "size"), goals_per_match=("tg", "mean"))
+    grp = grp[grp["matches"] >= 50]  # ignore sparse edge years
+
+    fig, ax1 = plt.subplots(figsize=(12, 5.8))
+    ax1.bar(grp.index, grp["matches"], color="#cdd8c2", label="matches")
+    ax1.set_xlabel("Season start year")
+    ax1.set_ylabel("matches", color="#7a8a6a")
+    ax2 = ax1.twinx()
+    ax2.plot(grp.index, grp["goals_per_match"], "o-", color="#b5651d", linewidth=2, label="goals/match")
+    ax2.set_ylabel("goals per match", color="#b5651d")
+    ax2.set_ylim(grp["goals_per_match"].min() - 0.2, grp["goals_per_match"].max() + 0.2)
+    ax1.set_title("Season trajectory: volume and scoring rate over time")
+    fig.tight_layout()
+    fig.savefig(FIGURES_DIR / "season_goals_trajectory.png", dpi=170)
+    plt.close(fig)
 
 
 def plot_match_field_coverage(matches: pd.DataFrame) -> None:
@@ -213,6 +242,7 @@ def main() -> None:
     plot_table_completeness(completeness_tables)
     plot_possession_distribution(matches)
     plot_matches_by_season(matches)
+    plot_season_trajectory(matches)
     plot_match_field_coverage(matches)
     ensure_pca_figures()
     plot_top_network_teams(matches, teams)
