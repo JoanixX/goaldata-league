@@ -4,54 +4,59 @@ Auto-generated from pipeline artifacts by `src/build_metrics_report.py`. All val
 
 ## 1. Dataset & provenance (exact counts)
 
-- matches: **94,525** (all observed scorelines)
-- teams: **1,538** (all observed)
-- goal events: **254,596** (anchored to real scorelines)
-- players: **206,151** = 7,121 real + 199,030 synthetic squad fillers
-- player-season rows: **191,150** | player-match rows: **1,950,578**
+_(dataset read failed: No match for FieldRef.Name(goal_id) in player_id: large_string
+match_id: int64
+season: large_string
+competition: large_string
+team: large_string
+goals: int32
+__fragment_index: int32
+__batch_index: int32
+__last_in_fragment: bool
+__filename: string)_
 
 ## 2. Representation / PCA (Week 5)
 
 - rows (real player-seasons): **7257**
 - encoded feature count: **33**
-- components for >=90% variance: **14** (cumulative variance = **0.9052**)
-- PC1+PC2 explained variance: **0.3989**
+- components for >=90% variance: **13** (cumulative variance = **0.9069**)
+- PC1+PC2 explained variance: **0.4075**
 
 First 13 components:
 
 | component | explained_variance_ratio | cumulative_explained_variance |
 | --- | --- | --- |
-| PC1 | 0.2259 | 0.2259 |
-| PC2 | 0.1730 | 0.3989 |
-| PC3 | 0.1067 | 0.5056 |
-| PC4 | 0.0646 | 0.5701 |
-| PC5 | 0.0495 | 0.6196 |
-| PC6 | 0.0434 | 0.6630 |
-| PC7 | 0.0417 | 0.7047 |
-| PC8 | 0.0378 | 0.7426 |
-| PC9 | 0.0342 | 0.7768 |
-| PC10 | 0.0310 | 0.8078 |
-| PC11 | 0.0289 | 0.8367 |
-| PC12 | 0.0240 | 0.8607 |
-| PC13 | 0.0223 | 0.8830 |
+| PC1 | 0.2417 | 0.2417 |
+| PC2 | 0.1658 | 0.4075 |
+| PC3 | 0.1165 | 0.5240 |
+| PC4 | 0.0815 | 0.6055 |
+| PC5 | 0.0493 | 0.6548 |
+| PC6 | 0.0432 | 0.6979 |
+| PC7 | 0.0399 | 0.7379 |
+| PC8 | 0.0352 | 0.7731 |
+| PC9 | 0.0295 | 0.8026 |
+| PC10 | 0.0290 | 0.8316 |
+| PC11 | 0.0281 | 0.8597 |
+| PC12 | 0.0255 | 0.8852 |
+| PC13 | 0.0217 | 0.9069 |
 
 ## 3. Clustering (Week 7)
 
-- rows: **7257** | selected K-Means k: **3** | selected DBSCAN eps/min_samples: **0.25/20**
+- rows: **7257** | selected K-Means k: **4** | selected DBSCAN eps/min_samples: **0.25/10**
 
 K-Means parameter sweep:
 
 | algorithm | k | inertia | silhouette | calinski_harabasz | davies_bouldin | cluster_count | noise_ratio |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| kmeans | 2 | 8715.2132 | 0.4110 | 4827.2335 | 1.0137 | 2 | 0.0000 |
-| kmeans | 3 | 4940.0463 | 0.4475 | 7029.2621 | 0.7717 | 3 | 0.0000 |
-| kmeans | 4 | 3842.1818 | 0.4190 | 6715.2920 | 0.7973 | 4 | 0.0000 |
-| kmeans | 5 | 2845.0822 | 0.4061 | 7436.0673 | 0.8288 | 5 | 0.0000 |
-| kmeans | 6 | 2351.1342 | 0.4021 | 7502.2340 | 0.7919 | 6 | 0.0000 |
-| kmeans | 7 | 2008.6875 | 0.3795 | 7522.6421 | 0.8412 | 7 | 0.0000 |
-| kmeans | 8 | 1791.1233 | 0.3692 | 7356.0445 | 0.8524 | 8 | 0.0000 |
-| kmeans | 9 | 1627.2184 | 0.3665 | 7175.2197 | 0.8612 | 9 | 0.0000 |
-| kmeans | 10 | 1481.7234 | 0.3734 | 7082.4491 | 0.8331 | 10 | 0.0000 |
+| kmeans | 2 | 8940.9752 | 0.3789 | 4522.1773 | 1.1269 | 2 | 0.0000 |
+| kmeans | 3 | 5408.3080 | 0.4098 | 6106.6403 | 0.8166 | 3 | 0.0000 |
+| kmeans | 4 | 3652.4432 | 0.4283 | 7189.7339 | 0.7614 | 4 | 0.0000 |
+| kmeans | 5 | 3052.4471 | 0.3972 | 6807.7013 | 0.8180 | 5 | 0.0000 |
+| kmeans | 6 | 2528.4911 | 0.3728 | 6874.4395 | 0.8588 | 6 | 0.0000 |
+| kmeans | 7 | 2234.0614 | 0.3673 | 6641.9537 | 0.8688 | 7 | 0.0000 |
+| kmeans | 8 | 1989.8530 | 0.3707 | 6517.9291 | 0.8464 | 8 | 0.0000 |
+| kmeans | 9 | 1754.6959 | 0.3507 | 6588.1818 | 0.8950 | 9 | 0.0000 |
+| kmeans | 10 | 1561.8566 | 0.3656 | 6677.5699 | 0.8412 | 10 | 0.0000 |
 
 ## 4. Recommendation / ranking (Week 10)
 
@@ -60,47 +65,47 @@ K-Means parameter sweep:
 
 | representation | n_queries | MRR | MAP | recall@5 | recall@10 | hit@5 | hit@10 | ndcg@5 | ndcg@10 | pos_purity@5 | pos_purity@10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline (PC1-PC2, 2 dims) | 4438 | 0.0143 | 0.0050 | 0.0033 | 0.0049 | 0.0137 | 0.0225 | 0.0038 | 0.0042 | 0.3909 | 0.3883 |
-| stronger (standardized 12 PCs) | 4438 | 0.0422 | 0.0138 | 0.0110 | 0.0194 | 0.0554 | 0.0872 | 0.0146 | 0.0165 | 0.9886 | 0.9833 |
+| baseline (PC1-PC2, 2 dims) | 4438 | 0.0580 | 0.0200 | 0.0184 | 0.0290 | 0.0757 | 0.1106 | 0.0235 | 0.0259 | 0.4694 | 0.4641 |
+| stronger (standardized 12 PCs) | 4438 | 0.1492 | 0.0567 | 0.0556 | 0.0762 | 0.1913 | 0.2359 | 0.0746 | 0.0754 | 0.9849 | 0.9781 |
 
 ## 5. Graph analytics (Week 12)
 
-- nodes: **4065** | edges: **37969** | connected components: **1** | eigenvector non-zero: **True**
-- pagerank_vs_goals_per90: Spearman r=**0.2123** (p=1.2e-42), Kendall tau=**0.1591**, top50_overlap=0.0
-- pagerank_vs_minutes_played: Spearman r=**0.2848** (p=9.8e-77), Kendall tau=**0.1847**, top50_overlap=0.0
+- nodes: **4065** | edges: **35365** | connected components: **1** | eigenvector non-zero: **True**
+- pagerank_vs_goals_per90: Spearman r=**0.1764** (p=9.4e-30), Kendall tau=**0.1322**, top50_overlap=0.0
+- pagerank_vs_minutes_played: Spearman r=**0.1877** (p=1.5e-33), Kendall tau=**0.1230**, top50_overlap=0.0
 
 Top 10 by PageRank:
 
 | player_name | position_group | pagerank |
 | --- | --- | --- |
-| Mats Seiler | Midfielder | 0.0011 |
-| Fran González | Midfielder | 0.0011 |
-| Francisco Silva | Midfielder | 0.0011 |
-| Kjell Wätjen | Midfielder | 0.0011 |
-| Dennis Seimen | Midfielder | 0.0011 |
-| Francis Onyeka | Midfielder | 0.0011 |
-| Miguel Chaiwa | Midfielder | 0.0011 |
+| Fernandinho | Midfielder | 0.0013 |
+| Wojciech Szczesny | Goalkeeper | 0.0013 |
+| Lucas Moura | Midfielder | 0.0012 |
+| Raphaël Varane | Defender | 0.0011 |
+| Zaid Romero | Midfielder | 0.0011 |
 | Noah Jauny | Midfielder | 0.0011 |
-| Gianluca Prestianni | Midfielder | 0.0011 |
-| Nicolás Otamendi | Defender | 0.0011 |
+| Younes Lachaab | Midfielder | 0.0011 |
+| Luca Raimund | Midfielder | 0.0011 |
+| Isaac Cossier | Midfielder | 0.0011 |
+| Juan Córdoba | Midfielder | 0.0011 |
 
 ## 6. Decision layer (P2)
 
-Optimal XI (`optimal_xi_2021-2022_4-3-3.csv`), total rating = **42.816**:
+Optimal XI (`optimal_xi_2021-2022_4-3-3.csv`), total rating = **28.294**:
 
 | player_name | position_group | minutes_played | rating |
 | --- | --- | --- | --- |
-| Jan Vertonghen | DEF | 900 | 7.1712 |
-| Carvajal | DEF | 959 | 7.1148 |
-| Dani Parejo | DEF | 1055 | 6.9211 |
-| Oleksandr Zinchenko | DEF | 1047 | 4.1995 |
-| Wissam Ben Yedder | FW | 2529 | 2.9902 |
-| Max Kruse | FW | 2398 | 1.9903 |
-| Martin Terrier | FW | 2779 | 1.9239 |
-| Vlachodimos | GK | 900 | 0.1389 |
-| Capoue | MID | 1046 | 4.9058 |
-| Thiago Alcantara | MID | 1534 | 2.7356 |
-| Luka Modric | MID | 2032 | 2.7248 |
+| Dani Parejo | DEF | 1055 | 3.1984 |
+| Benjamin Henrichs | DEF | 1143 | 2.9731 |
+| Ricardo Pereira | DEF | 991 | 2.7384 |
+| Alex Ferrari | DEF | 1643 | 2.6182 |
+| Benzema | FW | 1106 | 3.5627 |
+| Robert Lewandowski | FW | 2946 | 3.2293 |
+| Patrik Schick | FW | 2076 | 3.0190 |
+| Vlachodimos | GK | 900 | 0.4751 |
+| Exequiel Palacios | MID | 1097 | 2.2360 |
+| Marco Verratti | MID | 1937 | 2.1569 |
+| Kevin De Bruyne | MID | 2201 | 2.0864 |
 
 Real per-player xG (`player_xg_22912.csv`), top 8:
 
@@ -114,3 +119,22 @@ Real per-player xG (`player_xg_22912.csv`), top 8:
 | Tottenham Hotspur | Christian Dannemann Eriksen | 0.0764 | 0 | 3 |
 | Liverpool | Virgil van Dijk | 0.0620 | 0 | 1 |
 | Tottenham Hotspur | Jan Vertonghen | 0.0571 | 0 | 1 |
+
+## 7. Supervised evaluation — position classification
+
+Task: player position-group classification (GK/DEF/MID/FW) | full catalog n=7257 | real-feature subset n=2327
+
+| model | accuracy | macro_f1 | weighted_f1 |
+| --- | --- | --- | --- |
+| baseline (majority class) | 0.4033 | 0.1437 | 0.2318 |
+| RandomForest | 0.6474 | 0.6759 | 0.6485 |
+| GradientBoosting | 0.6364 | 0.6688 | 0.6377 |
+
+
+Real-feature subset (StatsBomb-covered players) — where high scores are legitimate:
+
+| model | accuracy | macro_f1 | weighted_f1 |
+| --- | --- | --- | --- |
+| baseline (majority class) | 0.3952 | 0.1416 | 0.2239 |
+| RandomForest | 0.7921 | 0.8154 | 0.7911 |
+| GradientBoosting | 0.7887 | 0.8094 | 0.7879 |

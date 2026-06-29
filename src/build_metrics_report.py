@@ -133,9 +133,23 @@ def main() -> None:
         lines.append(f"Real per-player xG (`{xg_files[-1].name}`), top 8:\n")
         lines.append(_md_table(xg.head(8)))
 
+    # ---- Supervised evaluation ----
+    sup = _json(ART / "supervised_evaluation.json")
+    lines.append("## 7. Supervised evaluation — position classification\n")
+    if sup:
+        lines.append(f"Task: {sup.get('task')} | full catalog n={sup.get('n_full')} | "
+                     f"real-feature subset n={sup.get('n_real_subset')}\n")
+        rows = [{"model": k, **v} for k, v in sup.get("results", {}).items()]
+        lines.append(_md_table(pd.DataFrame(rows)))
+        rr = sup.get("results_real_subset")
+        if rr:
+            lines.append("\nReal-feature subset (StatsBomb-covered players) — where high scores are legitimate:\n")
+            lines.append(_md_table(pd.DataFrame([{"model": k, **v} for k, v in rr.items()])))
+
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {OUT}")
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("build_metrics_report", main)

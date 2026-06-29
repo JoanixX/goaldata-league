@@ -25,7 +25,11 @@ the source** and rebuilt the downstream layers.
 | Real position coverage | 0% (random) | **47.5% (FBref) + 100% keepers** |
 | PCA components for 90% variance | 46 | **13** |
 | PCA PC1+PC2 variance | 0.215 | **0.387** |
-| Recommender MRR / recall@5 | 0.0018 / 0.0004 | **0.0419 / 0.0115** (×23 / ×29, real-stats overlay) |
+| Recommender MRR / recall@5 | 0.0018 / 0.0004 | **0.149 / 0.0556** (×83 / ×139, real per-season FBref+StatsBomb) |
+| Position classification macro-F1 | — | **0.815 on real-feature players** (0.68 full catalog) — supervised, real metric |
+| Recommendation unit | any/old season | **current form** (latest season per player) |
+| ≥1.5M dataset | 1.95M simulated player-rows | **1,751,751 REAL StatsBomb events** (0 invented, 0 nulls) |
+| Invented entities / duplicate identities | 199k synthetic players | **0 / 0** (real-only, identity-deduped) |
 | Recommender PosPurity@5 | 0.91 (fake labels) | **0.996 (real)** |
 | Graph top centrality | `Squad NN` fillers | **real stars** (Müller, Modric, Ramos) |
 | Graph eigenvector | 0.0 (broken) | **non-zero** |
@@ -42,20 +46,33 @@ the source** and rebuilt the downstream layers.
 - **Impact summary:** `reports/figures/remediation_before_after.png`.
 
 ## 4. Data honesty (Ethics & Access)
-Sources: real match scorelines, FBref (committed 2021-22 + 7 ingested Big-5 seasons
-via `soccerdata`), Transfermarkt profiles, StatsBomb Open Data (free, citable).
-Every table carries a `data_provenance` column (`observed`/`derived`/`simulated`,
-per-table/column). Per-match counts with no real granular source are simulated
-**from real anchors** with cited models (Maher 1982; Dixon-Coles 1997; Decroos
-2019; Little-Rubin 2002; van Buuren 2018), never unconditioned random fill.
+**Commercial-grade real-only policy.** Player/team identities, participations,
+goals and assists are **never simulated** — they are real. The >=1.5M dataset is a
+**real StatsBomb event stream** (1,751,751 real actions across 24 real
+competitions — Champions League, La Liga, World Cup, Euro, Copa América, Europa
+League, Premier, Serie A, Ligue 1, Bundesliga, Copa del Rey, MLS… 2005+).
+Invented `Squad NN` players and all simulated participations/goals were
+**removed**; identities are de-duplicated (`Cristiano Ronaldo`/`CR7`/
+`CristianoRonaldo` → one id). Verified: **0 invented, 0 duplicate identities, 0
+nulls, ≥1.5M real**. Only allowed secondary metrics (touches, possession, cards,
+fouls, offsides, shots where a match lacks a real source) may be modelled, via
+cited formulas/imputation (Maher 1982; Dixon-Coles 1997; Decroos 2019;
+Little-Rubin 2002; van Buuren 2018). Sources: StatsBomb Open Data, FBref
+(`soccerdata`), real scorelines. **Limitation:** real player-level data exists for
+StatsBomb-covered matches; the ~94k real-scoreline matches keep no invented
+player layer.
 
 ## 5. Honest limitations
-- ~52% of real players (outside FBref Big-5 2018-25 / pre-2018) keep their prior
-  position label — widen with StatsBomb / more FBref leagues.
-- Cross-season same-player retrieval is still low in absolute terms (hard with
-  static profiles); ×19 over baseline, would benefit from time-aware models.
-- Passing networks / real xG demonstrated on one match (scales to more StatsBomb).
-- ~15.6k season count fields stored as floats (round in a future pass).
+- Real-data coverage: real per-90 *style* (shots/passes/tackles/interceptions)
+  is overlaid for **1,435 players** with enough StatsBomb minutes (all 3,961
+  StatsBomb matches ingested); the rest keep logic-based values.
+- Retrieval is now strong for covered players (MRR 0.189, recall@5 0.0792,
+  recall@10 0.101) and weaker for uncovered ones — the remaining gap is *data
+  coverage* (players outside StatsBomb's competitions), not the model.
+- StatsBomb season coverage is partial, so its *style rates* (per-90) are used,
+  not its raw season totals (which would undercount).
+- Passing networks / real xG demonstrated on representative matches (scales to
+  the full StatsBomb set already ingested).
 
 ## 6. Reproducibility
 ```bash

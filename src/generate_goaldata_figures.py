@@ -252,4 +252,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("generate_goaldata_figures", main)

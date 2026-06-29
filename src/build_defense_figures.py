@@ -210,4 +210,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("build_defense_figures", main)
