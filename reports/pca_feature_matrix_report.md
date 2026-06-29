@@ -1,6 +1,6 @@
 # PCA Feature Matrix Report
 
-Generated at: `2026-06-27T17:01:51`
+Generated at: `2026-06-29T17:49:43`
 
 ## Unit of Analysis
 
@@ -90,11 +90,11 @@ simply because their units are larger.
 - Rows in feature matrix: `7257`
 - Encoded feature count after One-Hot Encoding: `33`
 - Components needed to reach at least 90% cumulative explained variance:
-  `14`
+  `13`
 - Cumulative explained variance at that point:
-  `0.9052`
+  `0.9069`
 - Explained variance captured by PC1 + PC2:
-  `0.3989`
+  `0.4075`
 
 The full cumulative explained variance table is saved to:
 `artifacts\pca_explained_variance.csv`
@@ -105,27 +105,27 @@ Top absolute loadings for PC1:
 
 | feature | PC1 | abs_loading |
 | --- | --- | --- |
-| passes_completed_per90 | 0.318574 | 0.318574 |
-| passes_attempted_per90 | 0.316249 | 0.316249 |
-| defensive_actions_per90 | 0.310084 | 0.310084 |
-| fouls_committed_per90 | 0.277182 | 0.277182 |
-| tackles_per90 | 0.271693 | 0.271693 |
-| interceptions_per90 | 0.256763 | 0.256763 |
-| matches_played | -0.254000 | 0.254000 |
-| shots_per90 | 0.229344 | 0.229344 |
+| shots | 0.327567 | 0.327567 |
+| shots_on_target | 0.316180 | 0.316180 |
+| fouls_committed | 0.312220 | 0.312220 |
+| matches_played | 0.284241 | 0.284241 |
+| minutes_played | 0.281010 | 0.281010 |
+| goals | 0.276772 | 0.276772 |
+| yellow_cards | 0.252163 | 0.252163 |
+| assists | 0.248672 | 0.248672 |
 
 Top absolute loadings for PC2:
 
 | feature | PC2 | abs_loading |
 | --- | --- | --- |
-| minutes_played | 0.296155 | 0.296155 |
-| passes_attempted | 0.280671 | 0.280671 |
-| passes_completed | 0.280262 | 0.280262 |
-| goals | 0.279716 | 0.279716 |
-| shots | 0.271575 | 0.271575 |
-| shots_on_target | 0.271379 | 0.271379 |
-| fouls_committed | 0.264191 | 0.264191 |
-| assists | 0.260577 | 0.260577 |
+| defensive_actions_per90 | 0.372660 | 0.372660 |
+| passes_completed_per90 | 0.346599 | 0.346599 |
+| tackles_per90 | 0.339174 | 0.339174 |
+| passes_attempted_per90 | 0.335309 | 0.335309 |
+| interceptions_per90 | 0.314026 | 0.314026 |
+| interceptions | 0.283547 | 0.283547 |
+| tackles | 0.278742 | 0.278742 |
+| passes_completed | 0.246224 | 0.246224 |
 
 PC1 and PC2 are weighted combinations of the original scaled features. They do
 not represent one original statistic; instead, they summarize dominant patterns
