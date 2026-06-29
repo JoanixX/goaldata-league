@@ -64,18 +64,26 @@ def build_feature_similarity_graph(csv_path: str, max_k_neighbors: int = 5, simi
                 
     return G
 
-if __name__ == '__main__':
+def _cli():
     parser = argparse.ArgumentParser(description='Construir Grafo de Similitud por Componentes de PCA sin fallos de Memoria')
     parser.add_argument('--input-csv', required=True, help='Ruta al archivo player_season_cluster_labels.csv')
     parser.add_argument('--out-graph', required=True, help='Ruta de salida para el archivo .pickle del grafo')
     parser.add_argument('--k-neighbors', type=int, default=5, help='Vecinos cercanos por nodo')
     parser.add_argument('--threshold', type=float, default=0.15, help='Umbral de corte de similitud')
     args = parser.parse_args()
-    
+
     G = build_feature_similarity_graph(args.input_csv, max_k_neighbors=args.k_neighbors, similarity_threshold=args.threshold)
-    
+
     print(f" Guardando grafo binario en {args.out_graph}...")
     with open(args.out_graph, 'wb') as f:
         pickle.dump(G, f)
-        
+
     print(f" ¡Éxito! Grafo construido con {G.number_of_nodes()} nodos y {G.number_of_edges()} aristas.")
+
+
+if __name__ == '__main__':
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).resolve().parents[1]))
+    from src.logging_utils import run_logged
+    run_logged("graph_build_similarity", _cli)
