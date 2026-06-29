@@ -74,6 +74,27 @@ def load_real_season_stats(path: str | Path) -> pd.DataFrame:
     return agg
 
 
+# soccerdata Big-5 *combined* only exposes these stat types (no passing/defense),
+# but they are reliable (no Selenium hang). We pull standard + shooting + misc and
+# merge per player-team-season to get real full-season shots/SoT/fouls too.
+_STD_MAP = {
+    "player": "player_name", "team": "team", "pos": "pos", "nation": "nation", "age": "age",
+    "Playing Time|Min": "minutes", "Playing Time|MP": "matches",
+    "Performance|Gls": "goals", "Performance|Ast": "assists",
+    "Performance|CrdY": "yellow_cards", "Performance|CrdR": "red_cards",
+}
+_SHOOT_MAP = {"player": "player_name", "team": "team",
+              "Standard|Sh": "shots", "Standard|SoT": "shots_on_target"}
+_MISC_MAP = {"player": "player_name", "team": "team", "Performance|Fls": "fouls_committed"}
+
+
+def _read(fb, stat: str, colmap: dict) -> pd.DataFrame:
+    df = fb.read_player_season_stats(stat_type=stat).reset_index()
+    df.columns = _flat(df.columns)
+    cols = {k: v for k, v in colmap.items() if k in df.columns}
+    return df[list(cols)].rename(columns=cols)
+
+
 def fetch() -> pd.DataFrame:
     import soccerdata as sd
 
@@ -81,20 +102,16 @@ def fetch() -> pd.DataFrame:
     for season in SEASONS:
         try:
             fb = sd.FBref(leagues="Big 5 European Leagues Combined", seasons=season)
-            df = fb.read_player_season_stats(stat_type="standard").reset_index()
-            df.columns = _flat(df.columns)
-            keep = {
-                "player": "player_name", "season": "season", "team": "team",
-                "pos": "pos", "nation": "nation", "age": "age",
-                "Playing Time|Min": "minutes", "Playing Time|MP": "matches",
-                "Performance|Gls": "goals", "Performance|Ast": "assists",
-                "Performance|CrdY": "yellow_cards", "Performance|CrdR": "red_cards",
-            }
-            cols = {k: v for k, v in keep.items() if k in df.columns}
-            tidy = df[list(cols)].rename(columns=cols)
+            tidy = _read(fb, "standard", _STD_MAP)
+            for stat, cmap in (("shooting", _SHOOT_MAP), ("misc", _MISC_MAP)):
+                try:
+                    extra = _read(fb, stat, cmap)
+                    tidy = tidy.merge(extra, on=["player_name", "team"], how="left")
+                except Exception as exc:  # one stat type failing must not lose the season
+                    print(f"  {season}/{stat}: skip ({type(exc).__name__})", flush=True)
             tidy["season"] = season
             frames.append(tidy)
-            print(f"  {season}: {len(tidy)} players", flush=True)
+            print(f"  {season}: {len(tidy)} players (cols: {[c for c in tidy.columns if c not in ('player_name','team','season')]})", flush=True)
         except Exception as exc:  # keep going if one season fails (rate limit etc.)
             print(f"  {season}: FAILED ({type(exc).__name__}: {str(exc)[:80]})", flush=True)
     if not frames:
@@ -112,4 +129,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("ingest_real_player_data", main)

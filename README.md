@@ -7,13 +7,19 @@ matches, ~1.95M player-match rows, and ~254.6k real-sized goal events, then buil
 a representation (PCA), segmentation (clustering) and a player-similarity
 recommender on top.
 
-> **Data honesty note.** Real granular event data is not available for the full
-> historical scope, so part of the per-match/event data is **simulated from real
-> anchors** (real scorelines, real position rates) using documented statistical
-> models, not arbitrary fabrication. Every table carries a `data_provenance`
-> column (per-table/per-column granularity, e.g. `goals_derived_from_score;`
-> `other_counts_simulated`), not per-cell. See
-> `reports/methodology_and_citations.md` and `data/dictionary.txt`.
+> **Data policy (real-only / commercial-grade).** Player and team identities,
+> participations, goals and assists are **always real, never simulated**. The
+> >=1.5M dataset is a **real StatsBomb event stream** — `data/processed/events/`
+> `statsbomb_events_real.parquet`, **1,751,751 real actions** across **24 real
+> competitions** (Champions League, La Liga, FIFA World Cup, UEFA Euro, Copa
+> América, Europa League, Premier League, Serie A, Ligue 1, Bundesliga, Copa del
+> Rey, MLS, … from 2005 onward). Invented placeholder players were removed and
+> identities de-duplicated (Cristiano Ronaldo / CR7 / CristianoRonaldo → one id).
+> Only allowed **secondary** metrics (touches, possession, cards, fouls, offsides,
+> shots where a match has no real source) may be modelled via cited formulas /
+> imputation. Real ingestion: `python -m src.ingest_statsbomb_full` then
+> `python -m src.build_real_only_datasets`. See `reports/methodology_and_citations.md`,
+> `reports/DEFENSE_BRIEF.md` and `data/dictionary.txt`.
 
 ## Project Architecture
 The project is organized into modular components:
