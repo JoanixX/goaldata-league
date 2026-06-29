@@ -1,4 +1,4 @@
 cluster,size,pc1_mean,pc2_mean,pc1_median,pc2_median,top_positions,top_seasons,example_players
--1,106,4.333122537122049,-0.4926852891131976,5.573425409719228,-0.894919913754912,Midfielder: 53.8%; Forward: 27.4%; Defender: 17.9%,2021-2022: 48.1%; 2025-2026: 8.5%; 2015-2016: 6.6%,Vinícius Júnior; Toni Kroos; Benjamin Mendy; Blanco; Mané
-0,7107,-0.04640620996632332,0.043058650984753644,-0.4341893484432627,0.1161117504051455,Midfielder: 40.2%; Defender: 32.9%; Forward: 18.3%,2021-2022: 40.5%; 2025-2026: 12.1%; 2024-2025: 4.7%,Thibaut Courtois; Benzema; Luka Modric; Éder Militão; David Alaba
-1,44,-2.943228516006038,-5.7680270886956935,-2.945420132294214,-5.950698748163514,Midfielder: 40.9%; Forward: 34.1%; Defender: 15.9%,2021-2022: 88.6%; 2025-2026: 11.4%,Woltman; Bradley; Wesley; Lihadji; Heaton
+-1,21,-1.1254519255884023,0.7578745389692003,-3.162955665970509,2.215575703007881,Midfielder: 38.1%; Defender: 33.3%; Forward: 23.8%,2021-2022: 61.9%; 2025-2026: 14.3%; 2011-2012: 4.8%,Pablo Sarabia; Edinson Cavani; Paco Alcácer; Mauro Icardi; Daniel Ginczek
+0,7190,0.03620933537302802,0.02864194236200719,-0.1768089206660277,0.20050913320102695,Midfielder: 40.3%; Defender: 32.7%; Forward: 18.4%,2021-2022: 40.5%; 2025-2026: 12.1%; 2024-2025: 4.7%,Thibaut Courtois; Vinícius Júnior; Benzema; Luka Modric; Éder Militão
+1,46,-5.14588328031989,-4.822846323938736,-5.296711194484777,-4.774866411233379,Midfielder: 43.5%; Forward: 34.8%; Defender: 13.0%,2021-2022: 87.0%; 2025-2026: 10.9%; 2014-2015: 2.2%,Woltman; Bradley; Rúben Vinagre; Wesley; Lihadji

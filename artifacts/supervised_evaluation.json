@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-06-29T17:50:25",
+  "task": "player position-group classification (GK/DEF/MID/FW)",
+  "n_full": 7257,
+  "n_real_subset": 2327,
+  "features": [
+    "minutes_per_match",
+    "goals_per90",
+    "assists_per90",
+    "shots_per90",
+    "shots_on_target_per90",
+    "passes_completed_per90",
+    "passes_attempted_per90",
+    "tackles_per90",
+    "interceptions_per90",
+    "fouls_committed_per90",
+    "cards_per90",
+    "shot_accuracy",
+    "pass_accuracy",
+    "goal_conversion_rate",
+    "defensive_actions_per90",
+    "discipline_points_per90"
+  ],
+  "results": {
+    "baseline (majority class)": {
+      "accuracy": 0.4033,
+      "macro_f1": 0.1437,
+      "weighted_f1": 0.2318
+    },
+    "RandomForest": {
+      "accuracy": 0.6474,
+      "macro_f1": 0.6759,
+      "weighted_f1": 0.6485
+    },
+    "GradientBoosting": {
+      "accuracy": 0.6364,
+      "macro_f1": 0.6688,
+      "weighted_f1": 0.6377
+    }
+  },
+  "results_real_subset": {
+    "baseline (majority class)": {
+      "accuracy": 0.3952,
+      "macro_f1": 0.1416,
+      "weighted_f1": 0.2239
+    },
+    "RandomForest": {
+      "accuracy": 0.7921,
+      "macro_f1": 0.8154,
+      "weighted_f1": 0.7911
+    },
+    "GradientBoosting": {
+      "accuracy": 0.7887,
+      "macro_f1": 0.8094,
+      "weighted_f1": 0.7879
+    }
+  },
+  "best_model": "RandomForest"
+}

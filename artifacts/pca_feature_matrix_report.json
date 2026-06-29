@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T17:01:51",
+  "generated_at": "2026-06-29T17:49:43",
   "input": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
   "feature_matrix": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\features\\player_season_feature_matrix.csv",
   "rows": 7257,
@@ -38,9 +38,9 @@
     "position_group"
   ],
   "encoded_feature_count": 33,
-  "optimal_components_90": 14,
-  "cumulative_variance_at_optimal": 0.9051523797793174,
-  "first_two_components_variance": 0.3988833278142834,
+  "optimal_components_90": 13,
+  "cumulative_variance_at_optimal": 0.9069491656771057,
+  "first_two_components_variance": 0.40752319840793627,
   "outputs": {
     "pca_2d": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_player_season_2d.csv",
     "variance": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_explained_variance.csv",
