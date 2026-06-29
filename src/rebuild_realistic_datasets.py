@@ -410,6 +410,33 @@ def main() -> None:
                 n_overlaid = max(n_overlaid, int(mask.sum()))
         print(f"  overlaid REAL FBref season stats onto {n_overlaid:,} real player-seasons "
               f"(cols: {list(real_stats.columns)})", flush=True)
+
+    # StatsBomb real STYLE overlay: inject real per-90 style (shots, passes,
+    # tackles, interceptions, fouls) for covered players by scaling their real
+    # StatsBomb per-90 rate to their full-season minutes. This replaces the
+    # position-median imputation of those columns -> real role/style signal
+    # (what separates a holding midfielder from a winger). No NULLs introduced.
+    from src.ingest_statsbomb import load_statsbomb_style_rates, match_catalog_to_statsbomb
+    sb_rates = load_statsbomb_style_rates(BASE_DIR / "data" / "raw" / "statsbomb_player_season.csv", min_minutes=450)
+    if not sb_rates.empty:
+        real_names = players.loc[players["profile_data_source"] != "imputed_team_season_roster", "player_name"].dropna().unique()
+        name_to_sb = match_catalog_to_statsbomb(real_names, sb_rates)
+        id_to_name = players.drop_duplicates("player_id").set_index("player_id")["player_name"]
+        sbkey = player_season_base["player_id"].map(id_to_name).map(lambda n: name_to_sb.get(n))
+        minutes = pd.to_numeric(player_season_base["minutes_played"], errors="coerce").fillna(0)
+        # Only the columns FBref cannot provide via soccerdata (passes/tackles/
+        # interceptions). Shots/SoT/fouls come from FBref full-season totals above.
+        style_map = {c: f"{c}_rate90" for c in
+                     ["passes_completed", "passes_attempted", "tackles", "interceptions"]}
+        n_sb = 0
+        for col, ratecol in style_map.items():
+            if col in player_season_base.columns and ratecol in sb_rates.columns:
+                rate = pd.to_numeric(sbkey.map(lambda k: sb_rates[ratecol].get(k) if k is not None else None), errors="coerce")
+                mask = rate.notna() & (minutes > 0)
+                player_season_base.loc[mask, col] = (rate[mask] * minutes[mask] / 90.0).round()
+                n_sb = max(n_sb, int(mask.sum()))
+        print(f"  overlaid REAL StatsBomb per-90 style onto {n_sb:,} real player-seasons "
+              f"({len(name_to_sb):,} players matched)", flush=True)
     goalkeepers_base = build_goalkeeper_stats(player_match_base, matches, players, goalkeepers)
     goals = add_goal_event_features(goals_base, matches, players)
     players = add_player_features(players, teams, player_match_base, player_season_base, goals)
@@ -493,4 +520,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("rebuild_realistic_datasets", main)
