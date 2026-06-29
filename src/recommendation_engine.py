@@ -86,7 +86,14 @@ def find_target(df: pd.DataFrame, player_name: str, season: str | None = None) -
         season_hit = hit[hit["season"].astype(str) == str(season)]
         if not season_hit.empty:
             return season_hit.iloc[0]
-    return hit.iloc[0]
+    # No season given -> use the player's MOST RECENT season (current form), not
+    # an arbitrary/old one. History is context, not the basis of the query.
+    return hit.loc[hit["season"].map(season_start_year).idxmax()]
+
+
+def season_start_year(season: object) -> int:
+    s = str(season)
+    return int(s[:4]) if s[:4].isdigit() else -1
 
 
 def recommend(
@@ -95,6 +102,7 @@ def recommend(
     method: str = "stronger",
     top_n: int = 5,
     same_cluster: bool = False,
+    current_only: bool = True,
 ) -> pd.DataFrame:
     """Return the top-N most similar player-seasons to the query.
 
@@ -126,6 +134,14 @@ def recommend(
         if same_cluster and "kmeans_cluster" in df.columns:
             pool_mask &= df["kmeans_cluster"] == target["kmeans_cluster"]
         score_name, ascending = "distance", True
+
+    if current_only:
+        # Recommend players in their CURRENT form: keep only each candidate
+        # player's most recent season, so results are "Modric 2024-25", never
+        # "Modric 2011". History stays available but is not what we surface.
+        yr = df["season"].map(season_start_year)
+        latest_idx = set(yr.groupby(df["player_name"]).idxmax().to_numpy())
+        pool_mask = pool_mask & df.index.isin(latest_idx)
 
     out = df.loc[pool_mask, ["player_name", "season", "position_group"]].copy()
     out[score_name] = dist[pool_mask.to_numpy()]

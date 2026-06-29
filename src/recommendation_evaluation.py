@@ -230,4 +230,5 @@ System analysed: stronger (standardized {len(all_pcs)}-PC similarity).
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("recommendation_evaluation", main)
