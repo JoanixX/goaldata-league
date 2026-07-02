@@ -53,8 +53,28 @@ JSON_REPORT_PATH = ARTIFACTS_DIR / "clustering_validation_report.json"
 
 RANDOM_STATE = 42
 K_RANGE = range(2, 11)
+# silhouette_score is O(n^2); subsample for large player-season tables so the
+# sweep stays tractable (the embedding can hold ~190k+ rows after the rebuild).
+SILHOUETTE_SAMPLE_SIZE = 10000
+# DBSCAN radius queries do not scale to ~190k dense points; cap its working set.
+DBSCAN_MAX_POINTS = 20000
 DBSCAN_EPS_VALUES = [0.15, 0.25, 0.35, 0.5, 0.75, 1.0, 1.25, 1.5]
 DBSCAN_MIN_SAMPLES = [5, 10, 20]
+
+
+def safe_silhouette(features: np.ndarray, labels: np.ndarray) -> float:
+    """Silhouette with subsampling for large n; returns NaN if undefined.
+
+    On very imbalanced clusterings a random subsample can end up with a single
+    label, which silhouette_score rejects. We treat that as "not computable"
+    (NaN) instead of crashing the whole sweep.
+    """
+    n = len(features)
+    sample = min(SILHOUETTE_SAMPLE_SIZE, n) if n > SILHOUETTE_SAMPLE_SIZE else None
+    try:
+        return float(silhouette_score(features, labels, sample_size=sample, random_state=RANDOM_STATE))
+    except ValueError:
+        return float("nan")
 
 
 @dataclass
@@ -99,7 +119,8 @@ def valid_silhouette(features: np.ndarray, labels: np.ndarray) -> float | None:
     mask = labels != -1
     if mask.sum() <= len(unique_labels):
         return None
-    return float(silhouette_score(features[mask], labels[mask]))
+    value = safe_silhouette(features[mask], labels[mask])
+    return None if value != value else value  # NaN -> None
 
 
 def run_kmeans_sweep(features: np.ndarray) -> pd.DataFrame:
@@ -112,7 +133,7 @@ def run_kmeans_sweep(features: np.ndarray) -> pd.DataFrame:
                 "algorithm": "kmeans",
                 "k": k,
                 "inertia": float(model.inertia_),
-                "silhouette": float(silhouette_score(features, labels)),
+                "silhouette": safe_silhouette(features, labels),
                 "calinski_harabasz": float(calinski_harabasz_score(features, labels)),
                 "davies_bouldin": float(davies_bouldin_score(features, labels)),
                 "cluster_count": int(len(set(labels))),
@@ -123,7 +144,13 @@ def run_kmeans_sweep(features: np.ndarray) -> pd.DataFrame:
 
 
 def choose_kmeans_model(features: np.ndarray, sweep: pd.DataFrame) -> tuple[int, np.ndarray]:
-    selected = sweep.sort_values(["silhouette", "calinski_harabasz"], ascending=[False, False]).iloc[0]
+    # Prefer the highest silhouette; if silhouette is undefined for every k
+    # (extreme cluster imbalance), fall back to the Calinski-Harabasz score.
+    valid = sweep[sweep["silhouette"].notna()]
+    if not valid.empty:
+        selected = valid.sort_values(["silhouette", "calinski_harabasz"], ascending=[False, False]).iloc[0]
+    else:
+        selected = sweep.sort_values("calinski_harabasz", ascending=False).iloc[0]
     k = int(selected["k"])
     model = KMeans(n_clusters=k, init="k-means++", n_init=20, random_state=RANDOM_STATE)
     labels = model.fit_predict(features)
@@ -214,6 +241,11 @@ def plot_clusters(data: pd.DataFrame, label_column: str, title: str, output_path
         plt.scatter(subset["PC1"], subset["PC2"], s=24, alpha=alpha, marker=marker, color=color, label=name)
     plt.axhline(0, color="#d0d0d0", linewidth=0.8)
     plt.axvline(0, color="#d0d0d0", linewidth=0.8)
+    # Robust axis limits so a few far-out profiles do not squash the plot.
+    for setter, col in ((plt.xlim, "PC1"), (plt.ylim, "PC2")):
+        lo, hi = data[col].quantile(0.01), data[col].quantile(0.99)
+        pad = (hi - lo) * 0.08 or 1.0
+        setter(lo - pad, hi + pad)
     plt.title(title)
     plt.xlabel("PC1")
     plt.ylabel("PC2")
@@ -410,8 +442,21 @@ def run_clustering() -> ClusteringResult:
     features_scaled = scale_embedding(data)
     kmeans_sweep = run_kmeans_sweep(features_scaled)
     selected_k, kmeans_labels = choose_kmeans_model(features_scaled, kmeans_sweep)
-    dbscan_sweep = run_dbscan_sweep(features_scaled)
-    selected_eps, selected_min_samples, dbscan_labels = choose_dbscan_model(features_scaled, dbscan_sweep)
+
+    # DBSCAN's radius_neighbors does not scale to ~190k dense points (it can OOM),
+    # so the density sweep runs on a capped random subsample; rows outside the
+    # subsample are left as noise (-1). DBSCAN here is a density probe, not the
+    # production segmentation (K-Means provides the cluster labels used downstream).
+    if len(features_scaled) > DBSCAN_MAX_POINTS:
+        rng = np.random.default_rng(RANDOM_STATE)
+        sub_idx = rng.choice(len(features_scaled), size=DBSCAN_MAX_POINTS, replace=False)
+    else:
+        sub_idx = np.arange(len(features_scaled))
+    features_db = features_scaled[sub_idx]
+    dbscan_sweep = run_dbscan_sweep(features_db)
+    selected_eps, selected_min_samples, sub_labels = choose_dbscan_model(features_db, dbscan_sweep)
+    dbscan_labels = np.full(len(features_scaled), -1, dtype="int64")
+    dbscan_labels[sub_idx] = sub_labels
 
     labels = data.copy()
     labels["kmeans_cluster"] = kmeans_labels
@@ -489,4 +534,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("build_clustering_analysis", main)

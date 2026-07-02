@@ -244,11 +244,14 @@ def fill_existing_missing_profiles(players: pd.DataFrame, teams: pd.DataFrame) -
     team_country = teams.set_index("team_id")["country"].to_dict() if {"team_id", "country"}.issubset(teams.columns) else {}
     team_name = teams.set_index("team_id")["team_name"].to_dict() if {"team_id", "team_name"}.issubset(teams.columns) else {}
     position_group = players["position"].map(normalize_position)
-    unknown = position_group == "UNK"
-    fallback_positions = np.array(["GK", "DEF", "MID", "FW"])
-    fallback_probs = np.array([0.08, 0.32, 0.35, 0.25])
-    generated_positions = rng.choice(fallback_positions, size=len(players), p=fallback_probs)
-    position_group = position_group.mask(unknown, generated_positions)
+    # Deterministic fallback (NO RNG). Previously, unparsed positions were filled
+    # with a RANDOM group (rng.choice over GK/DEF/MID/FW) and persisted into the
+    # `position` column, which mislabelled real players (e.g. the keeper Courtois
+    # became "FW" and then "scored" like a forward). Unresolved positions now
+    # default to MID (the modal outfield role) and are corrected authoritatively
+    # later in `rebuild_realistic_datasets` using goalkeeper evidence + behaviour
+    # (see src/position_resolution.py).
+    position_group = position_group.mask(position_group == "UNK", "MID")
 
     fill_missing_column(players, "position", position_group)
     country_values = players["team_id"].map(team_country).fillna(pd.Series(rng.choice(COUNTRIES, len(players)), index=players.index))
@@ -865,7 +868,12 @@ def add_match_features(matches: pd.DataFrame, teams: pd.DataFrame) -> pd.DataFra
     both_poss_missing = home_poss.isna() & away_poss.isna()
     if both_poss_missing.any():
         rng = np.random.default_rng(RNG_SEED + 4)
-        imputed_home = pd.Series(rng.uniform(0.38, 0.62, len(df)).round(4), index=df.index)
+        # Realistic possession ~ Beta (bell-shaped with natural tails and a slight
+        # home tilt), instead of a flat uniform prior. Beta(8.2, 7.8) has mean
+        # ~0.5125 and std ~0.12, so most values sit in 0.38-0.64 but extremes near
+        # 0.25/0.75 occur, matching real possession distributions. Clipped to a
+        # plausible [0.20, 0.80] range.
+        imputed_home = pd.Series(np.clip(rng.beta(8.2, 7.8, len(df)), 0.20, 0.80).round(4), index=df.index)
         home_poss = home_poss.mask(both_poss_missing, imputed_home)
         away_poss = away_poss.mask(both_poss_missing, 1 - imputed_home)
         fill_missing_column(df, "possession_home", home_poss.round(4))
@@ -881,7 +889,17 @@ def add_match_features(matches: pd.DataFrame, teams: pd.DataFrame) -> pd.DataFra
 
     parsed_date = pd.to_datetime(df["date"], errors="coerce", dayfirst=True)
     df["season_start_year"] = df["season"].map(season_start_year)
-    df["season_end_year"] = df["season_start_year"] + 1
+    # Season-format flag (non-destructive normalisation): split-year competitions
+    # ("2004-2005", European domestic leagues / UEFA) vs calendar-year ones
+    # ("2004", South-American leagues, World Cup, Copa America). These are two
+    # *legitimate* conventions and must NOT be merged; the flag makes the
+    # convention explicit and keeps `season_start_year` as the clean numeric key
+    # for time-series / trajectory analysis.
+    df["season_format"] = np.where(
+        df["season"].astype(str).str.contains("-", na=False), "split", "calendar")
+    df["season_end_year"] = df["season_start_year"].where(
+        df["season_format"].eq("split"), df["season_start_year"]) + np.where(
+        df["season_format"].eq("split"), 1, 0)
     df["match_year"] = parsed_date.dt.year.fillna(df["season_start_year"]).astype(int)
     df["match_month"] = parsed_date.dt.month.fillna(7).astype(int)
     df["match_dayofweek"] = parsed_date.dt.dayofweek.fillna(5).astype(int)

@@ -161,6 +161,35 @@ def detect_numeric_anomalies(df: pd.DataFrame, dataset_name: str) -> list[dict[s
             "shots_on_target exceeds shots.",
         )
 
+        # P1-3: physical, position-aware sanity gates. These catch the class of
+        # bugs that motivated the audit (a goalkeeper "scoring like a striker",
+        # impossible per-90 rates, more minutes than matches can hold).
+        pos_col = "player_position_group" if "player_position_group" in df.columns else (
+            "position_group" if "position_group" in df.columns else None)
+        goals = numeric("goals")
+        if pos_col is not None:
+            is_gk = df[pos_col].astype(str).str.upper().eq("GK")
+            add_masked(
+                is_gk & goals.notna() & (goals > 0),
+                "gk_open_play_goals",
+                "goalkeeper has non-zero open-play season goals.",
+            )
+        minutes = numeric("minutes_played")
+        matches = numeric("matches_played")
+        # Only flag implausible per-90 rates with a meaningful minutes sample, so
+        # tiny-minute small-sample noise (1 goal in a few minutes) is not counted.
+        goals_per90 = numeric("goals_per90")
+        add_masked(
+            goals_per90.notna() & (goals_per90 > 3.0) & minutes.notna() & (minutes >= 450),
+            "goals_per90_implausible",
+            "goals_per90 exceeds a plausible season maximum (3.0) over >=450 minutes.",
+        )
+        add_masked(
+            minutes.notna() & matches.notna() & (matches > 0) & (minutes > matches * 120),
+            "minutes_exceed_matches",
+            "minutes_played exceed matches_played * 120 (impossible playing time).",
+        )
+
     return anomalies
 
 

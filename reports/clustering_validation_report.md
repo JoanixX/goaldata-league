@@ -1,6 +1,6 @@
 # Week 7 Clustering and Validation Report
 
-Generated at: `2026-05-13T21:35:23`
+Generated at: `2026-06-29T17:50:04`
 
 ## Objective
 
@@ -54,7 +54,7 @@ Rows with missing `PC1` or `PC2` are dropped. No values are invented.
 
 ## PCA Context
 
-PC1 + PC2 explained variance: `0.2807`.
+PC1 + PC2 explained variance: `0.4075`.
 
 This means the 2D clustering is interpretable and visual, but it does not
 preserve all information from the full feature matrix. That limitation is
@@ -64,23 +64,23 @@ discussed in the failure analysis.
 
 | algorithm | k | inertia | silhouette | calinski_harabasz | davies_bouldin | cluster_count | noise_ratio |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| kmeans | 2 | 5252.6463 | 0.6104 | 2225.6781 | 0.7908 | 2 | 0.0000 |
-| kmeans | 3 | 3158.5824 | 0.6136 | 3196.6747 | 0.5880 | 3 | 0.0000 |
-| kmeans | 4 | 2377.6710 | 0.6307 | 3274.9472 | 0.5885 | 4 | 0.0000 |
-| kmeans | 5 | 1782.3521 | 0.5736 | 3614.8429 | 0.5931 | 5 | 0.0000 |
-| kmeans | 6 | 1336.6962 | 0.4680 | 4125.7209 | 0.6723 | 6 | 0.0000 |
-| kmeans | 7 | 1037.2037 | 0.4430 | 4625.0599 | 0.6565 | 7 | 0.0000 |
-| kmeans | 8 | 861.1837 | 0.4345 | 4892.0948 | 0.6515 | 8 | 0.0000 |
-| kmeans | 9 | 753.8133 | 0.4229 | 4961.1013 | 0.6757 | 9 | 0.0000 |
-| kmeans | 10 | 653.7307 | 0.3950 | 5152.8243 | 0.6853 | 10 | 0.0000 |
+| kmeans | 2 | 8940.9752 | 0.3789 | 4522.1773 | 1.1269 | 2 | 0.0000 |
+| kmeans | 3 | 5408.3080 | 0.4098 | 6106.6403 | 0.8166 | 3 | 0.0000 |
+| kmeans | 4 | 3652.4432 | 0.4283 | 7189.7339 | 0.7614 | 4 | 0.0000 |
+| kmeans | 5 | 3052.4471 | 0.3972 | 6807.7013 | 0.8180 | 5 | 0.0000 |
+| kmeans | 6 | 2528.4911 | 0.3728 | 6874.4395 | 0.8588 | 6 | 0.0000 |
+| kmeans | 7 | 2234.0614 | 0.3673 | 6641.9537 | 0.8688 | 7 | 0.0000 |
+| kmeans | 8 | 1989.8530 | 0.3707 | 6517.9291 | 0.8464 | 8 | 0.0000 |
+| kmeans | 9 | 1754.6959 | 0.3507 | 6588.1818 | 0.8950 | 9 | 0.0000 |
+| kmeans | 10 | 1561.8566 | 0.3656 | 6677.5699 | 0.8412 | 10 | 0.0000 |
 
 Selected K-Means model:
 
 - `k`: `4`
-- silhouette: `0.6307`
-- inertia: `2377.6710`
-- Calinski-Harabasz: `3274.9472`
-- Davies-Bouldin: `0.5885`
+- silhouette: `0.4283`
+- inertia: `3652.4432`
+- Calinski-Harabasz: `7189.7339`
+- Davies-Bouldin: `0.7614`
 
 Selection rule: choose the `k` with the highest silhouette score. Inertia is
 reported because it is the K-Means objective, but it always tends to decrease as
@@ -90,34 +90,34 @@ reported because it is the K-Means objective, but it always tends to decrease as
 
 | algorithm | eps | min_samples | cluster_count | noise_count | noise_ratio | silhouette_non_noise | non_noise_count |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| dbscan | 0.1500 | 5 | 7 | 137 | 0.0337 | 0.1005 | 3928 |
-| dbscan | 0.1500 | 10 | 4 | 240 | 0.0590 | 0.4098 | 3825 |
-| dbscan | 0.1500 | 20 | 1 | 415 | 0.1021 | nan | 3650 |
-| dbscan | 0.2500 | 5 | 2 | 80 | 0.0197 | 0.6631 | 3985 |
-| dbscan | 0.2500 | 10 | 2 | 100 | 0.0246 | 0.7016 | 3965 |
-| dbscan | 0.2500 | 20 | 1 | 188 | 0.0462 | nan | 3877 |
-| dbscan | 0.3500 | 5 | 2 | 47 | 0.0116 | 0.7152 | 4018 |
-| dbscan | 0.3500 | 10 | 1 | 77 | 0.0189 | nan | 3988 |
-| dbscan | 0.3500 | 20 | 1 | 101 | 0.0248 | nan | 3964 |
-| dbscan | 0.5000 | 5 | 1 | 30 | 0.0074 | nan | 4035 |
-| dbscan | 0.5000 | 10 | 1 | 55 | 0.0135 | nan | 4010 |
-| dbscan | 0.5000 | 20 | 1 | 71 | 0.0175 | nan | 3994 |
-| dbscan | 0.7500 | 5 | 2 | 14 | 0.0034 | 0.8087 | 4051 |
-| dbscan | 0.7500 | 10 | 1 | 26 | 0.0064 | nan | 4039 |
-| dbscan | 0.7500 | 20 | 1 | 41 | 0.0101 | nan | 4024 |
-| dbscan | 1.0000 | 5 | 1 | 12 | 0.0030 | nan | 4053 |
-| dbscan | 1.0000 | 10 | 1 | 23 | 0.0057 | nan | 4042 |
-| dbscan | 1.0000 | 20 | 1 | 25 | 0.0062 | nan | 4040 |
-| dbscan | 1.2500 | 5 | 1 | 11 | 0.0027 | nan | 4054 |
-| dbscan | 1.2500 | 10 | 1 | 11 | 0.0027 | nan | 4054 |
+| dbscan | 0.1500 | 5 | 3 | 55 | 0.0076 | 0.1426 | 7202 |
+| dbscan | 0.1500 | 10 | 5 | 158 | 0.0218 | -0.1591 | 7099 |
+| dbscan | 0.1500 | 20 | 3 | 545 | 0.0751 | -0.0289 | 6712 |
+| dbscan | 0.2500 | 5 | 1 | 9 | 0.0012 | nan | 7248 |
+| dbscan | 0.2500 | 10 | 2 | 21 | 0.0029 | 0.3430 | 7236 |
+| dbscan | 0.2500 | 20 | 2 | 44 | 0.0061 | 0.3411 | 7213 |
+| dbscan | 0.3500 | 5 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.3500 | 10 | 1 | 2 | 0.0003 | nan | 7255 |
+| dbscan | 0.3500 | 20 | 1 | 8 | 0.0011 | nan | 7249 |
+| dbscan | 0.5000 | 5 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.5000 | 10 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.5000 | 20 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.7500 | 5 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.7500 | 10 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 0.7500 | 20 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 1.0000 | 5 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 1.0000 | 10 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 1.0000 | 20 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 1.2500 | 5 | 1 | 0 | 0.0000 | nan | 7257 |
+| dbscan | 1.2500 | 10 | 1 | 0 | 0.0000 | nan | 7257 |
 
 Selected DBSCAN model:
 
-- `eps`: `0.75`
-- `min_samples`: `5`
+- `eps`: `0.25`
+- `min_samples`: `10`
 - clusters excluding noise: `2`
-- noise ratio: `0.0034`
-- silhouette on non-noise points: `0.8087`
+- noise ratio: `0.0029`
+- silhouette on non-noise points: `0.3430`
 
 Selection rule: prefer a valid silhouette score, at least two non-noise
 clusters, at least 20% of observations assigned to clusters, and noise ratio no
@@ -128,10 +128,10 @@ labels too many observations as noise.
 
 | cluster | size | pc1_mean | pc2_mean | pc1_median | pc2_median | top_positions | top_seasons | example_players |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 3195 | -1.0189 | -0.0258 | -1.2373 | -0.1129 | Other: 65.7%; Unknown: 24.6%; Midfielder: 3.0% | 2021-2022: 86.7%; 2025-2026: 13.3% | Jović; Marcelo; E. Hazard; Miguel Gutiérrez; Ceballos |
-| 1 | 717 | 4.1044 | -1.3604 | 3.4511 | -1.1692 | Unknown: 39.3%; Midfielder: 22.6%; Defender: 21.1% | 2021-2022: 59.4%; 2025-2026: 40.6% | Courtois; Vinícius Júnior; Benzema; Modrić; Éder Militão |
-| 2 | 10 | 10.1837 | 27.2505 | 11.2307 | 24.0549 | Other: 90.0%; Unknown: 10.0% | 2021-2022: 100.0% | Luca Pellegrini; Morgan Gibbs-White; Gori; Yanis Guermouche; Carlos Martín |
-| 3 | 143 | 1.4739 | 5.4924 | 0.9411 | 4.4528 | Other: 86.0%; Unknown: 10.5%; Midfielder: 2.8% | 2021-2022: 92.3%; 2025-2026: 7.7% | Blanco; Knauff; Dentinho; Fabio Miretti; Zesiger |
+| 0 | 1783 | 2.3390 | -2.4350 | 2.1712 | -2.4629 | Midfielder: 41.6%; Defender: 29.4%; Forward: 29.0% | 2021-2022: 64.6%; 2024-2025: 6.2%; 2023-2024: 4.5% | Rodrygo; Lucas Vázquez; Marcelo; Luis Díaz; Gareth Bale |
+| 1 | 2489 | -1.3621 | 1.8621 | -1.3196 | 1.8533 | Midfielder: 43.1%; Defender: 41.7%; Forward: 12.1% | 2021-2022: 21.1%; 2025-2026: 19.2%; 2013-2014: 6.8% | Benjamin Mendy; Valverde; Camavinga; Asensio; Miguel Gutiérrez |
+| 2 | 1665 | -2.9735 | -1.8230 | -2.9616 | -1.6257 | Goalkeeper: 32.4%; Midfielder: 25.9%; Defender: 21.6% | 2021-2022: 49.5%; 2025-2026: 21.1%; 2010-2011: 3.0% | Thibaut Courtois; Jović; E. Hazard; Ceballos; Vallejo |
+| 3 | 1320 | 3.1595 | 2.0775 | 2.9850 | 2.3162 | Midfielder: 51.6%; Defender: 33.7%; Forward: 14.7% | 2021-2022: 35.5%; 2018-2019: 7.5%; 2020-2021: 7.5% | Vinícius Júnior; Benzema; Luka Modric; Éder Militão; David Alaba |
 
 Interpretation: clusters with high positive PC1 generally represent
 high-volume/high-involvement player-seasons because PC1 in the PCA report loads
@@ -143,9 +143,9 @@ loadings for goals, shots on target, goals per 90, and shot efficiency.
 
 | cluster | size | pc1_mean | pc2_mean | pc1_median | pc2_median | top_positions | top_seasons | example_players |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| -1 | 14 | 10.3532 | 21.1070 | 10.4124 | 18.8407 | Other: 78.6%; Unknown: 14.3%; Forward: 7.1% | 2021-2022: 100.0% | Benzema; Luca Pellegrini; Morgan Gibbs-White; Kaide Gordon; Gori |
-| 0 | 4042 | -0.0500 | -0.1019 | -0.9430 | -0.2352 | Other: 55.9%; Unknown: 26.8%; Midfielder: 6.4% | 2021-2022: 82.0%; 2025-2026: 18.0% | Courtois; Vinícius Júnior; Modrić; Éder Militão; Alaba |
-| 1 | 9 | 6.3381 | 12.9123 | 6.4246 | 12.6413 | Other: 88.9%; Midfielder: 11.1% | 2021-2022: 100.0% | Blanco; Filip Benkovi?; Solomon Bonnah; Lohann Doucet; Estanis |
+| -1 | 21 | -1.1255 | 0.7579 | -3.1630 | 2.2156 | Midfielder: 38.1%; Defender: 33.3%; Forward: 23.8% | 2021-2022: 61.9%; 2025-2026: 14.3%; 2011-2012: 4.8% | Pablo Sarabia; Edinson Cavani; Paco Alcácer; Mauro Icardi; Daniel Ginczek |
+| 0 | 7190 | 0.0362 | 0.0286 | -0.1768 | 0.2005 | Midfielder: 40.3%; Defender: 32.7%; Forward: 18.4% | 2021-2022: 40.5%; 2025-2026: 12.1%; 2024-2025: 4.7% | Thibaut Courtois; Vinícius Júnior; Benzema; Luka Modric; Éder Militão |
+| 1 | 46 | -5.1459 | -4.8228 | -5.2967 | -4.7749 | Midfielder: 43.5%; Forward: 34.8%; Defender: 13.0% | 2021-2022: 87.0%; 2025-2026: 10.9%; 2014-2015: 2.2% | Woltman; Bradley; Rúben Vinagre; Wesley; Lihadji |
 
 DBSCAN should be interpreted as a density test rather than a replacement for
 K-Means. It can identify dense regions and noise/outlier player-seasons, but it

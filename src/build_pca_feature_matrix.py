@@ -27,12 +27,13 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, RobustScaler, StandardScaler
 
 
 PLAYER_SEASON_PATH = PROCESSED_DIR / "stats" / "player_season_stats_cleaned.parquet"
@@ -82,7 +83,11 @@ ENGINEERED_NUMERIC_COLUMNS = [
     "discipline_points_per90",
 ]
 
-CATEGORICAL_COLUMNS = ["season", "position_group"]
+# P1-1: `season` was dropped from the PCA one-hot. Encoding ~40 seasons created
+# sparse era-axes that described the competition period instead of the player's
+# role/performance and inflated the encoded feature count. Only `position_group`
+# (tactical role) is kept as a categorical input.
+CATEGORICAL_COLUMNS = ["position_group"]
 
 
 @dataclass
@@ -137,16 +142,54 @@ def load_player_season_dataset() -> pd.DataFrame:
     players = pd.read_parquet(PLAYERS_PATH) if PLAYERS_PATH.exists() else pd.DataFrame()
 
     if not players.empty:
-        player_meta = players[["player_id", "player_name", "position", "nationality", "team_id"]].drop_duplicates("player_id")
-        stats = stats.merge(player_meta, on="player_id", how="left")
+        meta_cols = ["player_id", "player_name", "position", "nationality", "team_id"]
+        for optional in ("position_group", "profile_data_source", "data_provenance"):
+            if optional in players.columns:
+                meta_cols.append(optional)
+        player_meta = players[meta_cols].drop_duplicates("player_id")
+        stats = stats.merge(player_meta, on="player_id", how="left", suffixes=("", "_players"))
+
+        # P0-2: exclude fabricated "{team} {season} Squad NN" entities from the
+        # analytical catalog. They are RNG draws from per-position templates, so
+        # they are near-identical and saturate every similarity/ranking layer
+        # (they dominated recommendation top-k and graph centralities). They stay
+        # in the stored tables but never enter PCA / clustering / recsys / graph.
+        src_col = stats.get("profile_data_source", stats.get("profile_data_source_players"))
+        if src_col is not None:
+            is_synthetic = src_col.astype(str).str.contains("roster", case=False, na=False)
+            kept = int((~is_synthetic).sum())
+            print(f"[P0-2] excluding {int(is_synthetic.sum()):,} synthetic player-seasons; "
+                  f"keeping {kept:,} real player-seasons for PCA.")
+            stats = stats[~is_synthetic].reset_index(drop=True)
     else:
         stats["player_name"] = pd.NA
         stats["position"] = pd.NA
         stats["nationality"] = pd.NA
         stats["team_id"] = pd.NA
 
-    stats["position_group"] = stats["position"].map(normalize_position)
+    # Prefer the already-normalised position_group from the players table
+    # (GK/DEF/MID/FW); fall back to parsing the raw position text. This avoids
+    # mislabelling short position codes (DEF/MID/FW/GK) as "Other".
+    code_map = {"GK": "Goalkeeper", "DEF": "Defender", "MID": "Midfielder", "FW": "Forward"}
+    source_group = stats.get("position_group_players", stats.get("position_group"))
+    if source_group is not None:
+        mapped = source_group.astype(str).str.upper().map(code_map)
+        stats["position_group"] = mapped.fillna(stats["position"].map(normalize_position))
+    else:
+        stats["position_group"] = stats["position"].map(normalize_position)
     stats["season"] = stats["season"].fillna("Unknown").astype(str)
+
+    # Drop invalid aggregation artefacts: rows with no player_id / player_name are
+    # "Unknown" buckets that collapse thousands of unmatched records into one row
+    # (minutes in the millions), which would dominate scaling and wreck the PCA plot.
+    def _blank(series):
+        return series.isna() | series.astype(str).str.strip().str.upper().isin(
+            {"", "NULL", "NA", "NAN", "NONE"}
+        )
+
+    invalid = _blank(stats["player_id"]) | _blank(stats.get("player_name", pd.Series(index=stats.index)))
+    if invalid.any():
+        stats = stats[~invalid].reset_index(drop=True)
     return stats
 
 
@@ -180,6 +223,27 @@ def add_engineered_features(frame: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def winsorize_columns(frame: pd.DataFrame, columns: list[str], lower: float = 0.01, upper: float = 0.99) -> pd.DataFrame:
+    """Clip each numeric feature to robust [lower, upper] quantiles.
+
+    Engineered per-90 rates explode for tiny-minute players (e.g. 1 goal in a few
+    minutes -> goals_per90 of 200+). Winsorizing keeps the feature ranges even so
+    PCA reflects real structure instead of a handful of extreme tails, which also
+    makes every downstream CSV and plot readable.
+    """
+    out = frame.copy()
+    for column in columns:
+        if column not in out.columns:
+            continue
+        # Cast to numpy float64 first: clip() is implemented via .where(), which
+        # raises on nullable/pyarrow Int64 columns when the bounds are floats.
+        values = pd.to_numeric(out[column], errors="coerce").astype("float64")
+        low, high = values.quantile(lower), values.quantile(upper)
+        if pd.notna(low) and pd.notna(high) and high > low:
+            out[column] = values.clip(low, high)
+    return out
+
+
 def build_feature_matrix(frame: pd.DataFrame) -> pd.DataFrame:
     keep_columns = [
         "player_id",
@@ -191,6 +255,7 @@ def build_feature_matrix(frame: pd.DataFrame) -> pd.DataFrame:
     ]
     matrix = frame[keep_columns].copy()
     matrix = matrix.dropna(subset=["minutes_played"], how="all")
+    matrix = winsorize_columns(matrix, BASE_NUMERIC_COLUMNS + ENGINEERED_NUMERIC_COLUMNS)
     return matrix
 
 
@@ -198,6 +263,14 @@ def fit_pca(feature_matrix: pd.DataFrame) -> PCAResult:
     numeric_columns = BASE_NUMERIC_COLUMNS + ENGINEERED_NUMERIC_COLUMNS
     categorical_columns = CATEGORICAL_COLUMNS
 
+    # Numeric treatment (each step justified):
+    #  1. median imputation - robust central value for skewed football counts.
+    #  2. log1p - count/per-90 stats are heavily right-skewed; the log compresses
+    #     high-volume tails so PCA variance reflects structure, not a few extremes
+    #     (all features here are non-negative, so log1p is well defined).
+    #  3. RobustScaler - centres on the median and scales by the IQR, so any
+    #     residual outliers do not dominate the variance the way StandardScaler
+    #     (mean/std) would. Recommended by scikit-learn for data with outliers.
     preprocessor = ColumnTransformer(
         transformers=[
             (
@@ -205,7 +278,8 @@ def fit_pca(feature_matrix: pd.DataFrame) -> PCAResult:
                 Pipeline(
                     steps=[
                         ("imputer", SimpleImputer(strategy="median")),
-                        ("scaler", StandardScaler()),
+                        ("log1p", FunctionTransformer(np.log1p, feature_names_out="one-to-one")),
+                        ("scaler", RobustScaler()),
                     ]
                 ),
                 numeric_columns,
@@ -238,16 +312,20 @@ def fit_pca(feature_matrix: pd.DataFrame) -> PCAResult:
     cumulative = pca.explained_variance_ratio_.cumsum()
     optimal_components_90 = int((cumulative >= 0.90).argmax() + 1)
 
+    # Retain enough components to reach ~90% variance (capped for tractability) so
+    # downstream similarity/recommendation can use the full retained space, not
+    # just the 2 plotting axes. PC1/PC2 are always kept for plots and clustering.
+    retained = int(min(max(optimal_components_90, 2), components.shape[1], 12))
     transformed = pd.DataFrame(
         {
             "player_id": feature_matrix["player_id"].values,
             "player_name": feature_matrix["player_name"].fillna("Unknown").values,
             "season": feature_matrix["season"].values,
             "position_group": feature_matrix["position_group"].values,
-            "PC1": components[:, 0],
-            "PC2": components[:, 1],
         }
     )
+    for i in range(retained):
+        transformed[f"PC{i + 1}"] = components[:, i]
 
     variance = pd.DataFrame(
         {
@@ -299,6 +377,12 @@ def plot_pca_2d(transformed: pd.DataFrame) -> None:
         )
     plt.axhline(0, color="#d0d0d0", linewidth=0.8)
     plt.axvline(0, color="#d0d0d0", linewidth=0.8)
+    # Robust axis limits (1st-99th percentile + padding) so the bulk of points is
+    # visible even if a few profiles sit far out, instead of collapsing into a dot.
+    for axis, col in (("x", "PC1"), ("y", "PC2")):
+        lo, hi = transformed[col].quantile(0.01), transformed[col].quantile(0.99)
+        pad = (hi - lo) * 0.08 or 1.0
+        (plt.xlim if axis == "x" else plt.ylim)(lo - pad, hi + pad)
     plt.title("PCA 2D - UCL Player-Season Profiles")
     plt.xlabel("PC1")
     plt.ylabel("PC2")
@@ -433,13 +517,30 @@ and competition-period differences.
 - Raw player-match advanced metrics with 100% missingness are excluded from this
   PCA matrix because they would add no signal.
 
+## Data Treatment and Outliers (justified)
+
+Before PCA the feature matrix receives a principled, documented treatment so the
+components reflect real structure rather than a few extreme tails:
+
+1. **Invalid-row removal.** Player-season rows with no `player_id`/`player_name`
+   are aggregation artefacts (one "Unknown" bucket that collapses thousands of
+   unmatched records into a single row with minutes in the millions). They are
+   dropped because they are not real player-seasons and would otherwise dominate
+   every scaled component.
+2. **Winsorization at the 1st/99th percentile.** Per-90 rates explode for
+   tiny-minute players (e.g. one goal in a few minutes -> 200+ goals/90), which
+   is small-sample noise, not skill. Capping at robust quantiles keeps each
+   feature's range even. PCA is variance-based and very sensitive to such tails.
+3. **log1p transform** (inside the pipeline). Count and per-90 stats are heavily
+   right-skewed; the log compresses high-volume tails so variance reflects
+   structure, not a handful of high-usage players. All features are non-negative,
+   so `log1p` is well defined.
+
 ## Missing Values
 
-Numeric missing values are imputed with the median. Median imputation is robust
-to skewed football statistics, where a few elite players can have very high
-values. Categorical missing values are imputed with the most frequent category
-inside the preprocessing pipeline. No missing values are replaced with invented
-football events or source data.
+Numeric missing values are imputed with the median (robust to skew). Categorical
+missing values use the most frequent category. No missing values are replaced
+with invented football events or source data.
 
 ## Feature Engineering
 
@@ -450,11 +551,13 @@ assists.
 
 ## Scaling
 
-`StandardScaler` is applied before PCA. PCA is variance-based: without scaling,
-large-scale variables such as minutes or passes would dominate the principal
-components simply because their units are larger. Scaling gives each feature
-mean 0 and standard deviation 1, so PCA reflects correlation structure instead
-of raw measurement scale.
+`RobustScaler` (median centring, IQR scaling) is applied instead of
+`StandardScaler` because, even after winsorization and `log1p`, football features
+contain outliers; the IQR scale is not distorted by them the way mean/standard
+deviation would be. This is scikit-learn's recommended scaler for data with
+outliers. Scaling is necessary because PCA is variance-based: without it,
+large-scale variables such as minutes or passes would dominate the components
+simply because their units are larger.
 
 ## PCA Results
 
@@ -523,4 +626,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from src.logging_utils import run_logged
+    run_logged("build_pca_feature_matrix", main)

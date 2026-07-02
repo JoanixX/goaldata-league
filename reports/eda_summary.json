@@ -1,320 +1,1983 @@
 {
-  "generated_at": "2026-05-02T09:19:28",
+  "generated_at": "2026-06-13T10:26:17",
   "datasets": {
     "matches": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\matches_cleaned.parquet",
-      "rows": 169964,
-      "columns": 16,
-      "failing_columns": [
-        "stadium",
-        "city",
-        "country",
-        "referee",
-        "possession_home",
-        "possession_away"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\core\\matches_cleaned.parquet",
+      "rows": 94525,
+      "columns": 68,
+      "failing_columns": [],
       "numeric_summary": {
+        "season": {
+          "count": 11182,
+          "mean": 2020.6099,
+          "median": 2021.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
         "home_score": {
-          "count": 169962,
-          "mean": 1.4801,
+          "count": 94523,
+          "mean": 1.5295,
           "median": 1.0,
           "min": 0.0,
-          "max": 10.0
+          "max": 13.0
         },
         "away_score": {
-          "count": 169962,
-          "mean": 1.158,
+          "count": 94523,
+          "mean": 1.1639,
           "median": 1.0,
           "min": 0.0,
           "max": 13.0
         },
         "possession_home": {
-          "count": 441,
-          "mean": 0.5058,
-          "median": 0.51,
+          "count": 94525,
+          "mean": 0.4996,
+          "median": 0.4993,
           "min": 0.21,
           "max": 0.82
         },
         "possession_away": {
-          "count": 441,
-          "mean": 0.4939,
-          "median": 0.49,
+          "count": 94525,
+          "mean": 0.5004,
+          "median": 0.5007,
           "min": 0.18,
           "max": 0.79
+        },
+        "season_start_year": {
+          "count": 94525,
+          "mean": 2015.5736,
+          "median": 2016.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "season_end_year": {
+          "count": 94525,
+          "mean": 2016.5736,
+          "median": 2017.0,
+          "min": 2005.0,
+          "max": 2026.0
+        },
+        "match_year": {
+          "count": 94525,
+          "mean": 2015.9873,
+          "median": 2016.0,
+          "min": 2004.0,
+          "max": 2026.0
+        },
+        "match_month": {
+          "count": 94525,
+          "mean": 6.5432,
+          "median": 7.0,
+          "min": 1.0,
+          "max": 12.0
+        },
+        "match_dayofweek": {
+          "count": 94525,
+          "mean": 4.8498,
+          "median": 5.0,
+          "min": 0.0,
+          "max": 6.0
+        },
+        "is_weekend": {
+          "count": 94525,
+          "mean": 0.8402,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_2004_2026_window": {
+          "count": 94525,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "is_domestic_league": {
+          "count": 94525,
+          "mean": 0.8952,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_international_competition": {
+          "count": 94525,
+          "mean": 0.0921,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_european_competition": {
+          "count": 94525,
+          "mean": 0.8761,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_south_american_competition": {
+          "count": 94525,
+          "mean": 0.071,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_english_league": {
+          "count": 94525,
+          "mean": 0.092,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "total_goals": {
+          "count": 94525,
+          "mean": 2.6934,
+          "median": 3.0,
+          "min": 0.0,
+          "max": 25.0
+        },
+        "goal_diff_home": {
+          "count": 94525,
+          "mean": 0.3656,
+          "median": 0.0,
+          "min": -13.0,
+          "max": 10.0
+        },
+        "abs_goal_diff": {
+          "count": 94525,
+          "mean": 1.3655,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 13.0
+        },
+        "home_win": {
+          "count": 94525,
+          "mean": 0.4566,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "away_win": {
+          "count": 94525,
+          "mean": 0.2919,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "draw": {
+          "count": 94525,
+          "mean": 0.2515,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "both_teams_scored": {
+          "count": 94525,
+          "mean": 0.5088,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "over_1_5_goals": {
+          "count": 94525,
+          "mean": 0.7457,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "over_2_5_goals": {
+          "count": 94525,
+          "mean": 0.5029,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "over_3_5_goals": {
+          "count": 94525,
+          "mean": 0.2859,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "home_clean_sheet": {
+          "count": 94525,
+          "mean": 0.3353,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "away_clean_sheet": {
+          "count": 94525,
+          "mean": 0.2326,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "possession_diff_home": {
+          "count": 94525,
+          "mean": -0.0008,
+          "median": -0.0014,
+          "min": -0.58,
+          "max": 0.64
+        },
+        "home_possession_advantage": {
+          "count": 94525,
+          "mean": 0.497,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "possession_balance_index": {
+          "count": 94525,
+          "mean": 0.8796,
+          "median": 0.88,
+          "min": 0.36,
+          "max": 1.0
+        },
+        "same_country_match": {
+          "count": 94525,
+          "mean": 0.6943,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "same_region_match": {
+          "count": 94525,
+          "mean": 0.7271,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "country_derby_proxy": {
+          "count": 94525,
+          "mean": 0.6591,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "home_team_match_count": {
+          "count": 94525,
+          "mean": 504.3739,
+          "median": 543.0,
+          "min": 1.0,
+          "max": 1508.0
+        },
+        "home_team_win_rate": {
+          "count": 94525,
+          "mean": 0.3745,
+          "median": 0.3333,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "home_team_points_per_match": {
+          "count": 94525,
+          "mean": 1.375,
+          "median": 1.2704,
+          "min": 0.0,
+          "max": 3.0
+        },
+        "home_team_goals_for_per_match": {
+          "count": 94525,
+          "mean": 1.3472,
+          "median": 1.2637,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "home_team_goals_against_per_match": {
+          "count": 94525,
+          "mean": 1.346,
+          "median": 1.3621,
+          "min": 0.0,
+          "max": 6.5
+        },
+        "home_team_goal_diff_per_match": {
+          "count": 94525,
+          "mean": 0.0012,
+          "median": -0.14,
+          "min": -6.5,
+          "max": 7.0
+        },
+        "away_team_match_count": {
+          "count": 94525,
+          "mean": 504.1965,
+          "median": 543.0,
+          "min": 1.0,
+          "max": 1508.0
+        },
+        "away_team_win_rate": {
+          "count": 94525,
+          "mean": 0.374,
+          "median": 0.3333,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "away_team_points_per_match": {
+          "count": 94525,
+          "mean": 1.3735,
+          "median": 1.2704,
+          "min": 0.0,
+          "max": 3.0
+        },
+        "away_team_goals_for_per_match": {
+          "count": 94525,
+          "mean": 1.3462,
+          "median": 1.2637,
+          "min": 0.0,
+          "max": 5.0
+        },
+        "away_team_goals_against_per_match": {
+          "count": 94525,
+          "mean": 1.3474,
+          "median": 1.364,
+          "min": 0.0,
+          "max": 6.5
+        },
+        "away_team_goal_diff_per_match": {
+          "count": 94525,
+          "mean": -0.0012,
+          "median": -0.1419,
+          "min": -6.5,
+          "max": 2.0
+        },
+        "head_to_head_match_count": {
+          "count": 94525,
+          "mean": 20.3943,
+          "median": 17.0,
+          "min": 1.0,
+          "max": 80.0
+        },
+        "home_win_probability_proxy": {
+          "count": 94525,
+          "mean": 0.4581,
+          "median": 0.4532,
+          "min": 0.0447,
+          "max": 0.8333
+        },
+        "draw_probability_proxy": {
+          "count": 94525,
+          "mean": 0.1981,
+          "median": 0.2004,
+          "min": 0.1204,
+          "max": 0.2075
+        },
+        "away_win_probability_proxy": {
+          "count": 94525,
+          "mean": 0.3439,
+          "median": 0.3398,
+          "min": 0.0439,
+          "max": 0.8333
+        },
+        "win_probability_edge_home": {
+          "count": 94525,
+          "mean": 0.1142,
+          "median": 0.1134,
+          "min": -0.787,
+          "max": 0.787
+        },
+        "expected_total_goals_proxy": {
+          "count": 94525,
+          "mean": 2.6934,
+          "median": 2.6731,
+          "min": 0.0,
+          "max": 9.0
         }
       }
     },
     "players": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\players_cleaned.parquet",
-      "rows": 6109,
-      "columns": 8,
-      "failing_columns": [
-        "nationality",
-        "age",
-        "height_cm",
-        "weight_kg",
-        "position"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\core\\players_cleaned.parquet",
+      "rows": 206151,
+      "columns": 48,
+      "failing_columns": [],
       "numeric_summary": {
         "age": {
-          "count": 2508,
-          "mean": 25.116,
-          "median": 25.0,
+          "count": 206151,
+          "mean": 25.7725,
+          "median": 26.0,
           "min": 16.0,
-          "max": 41.0
+          "max": 44.0
         },
         "height_cm": {
-          "count": 1303,
-          "mean": 182.6186,
-          "median": 183.0,
-          "min": 162.0,
-          "max": 202.0
+          "count": 206151,
+          "mean": 180.9131,
+          "median": 181.0,
+          "min": 160.0,
+          "max": 205.0
         },
         "weight_kg": {
-          "count": 1149,
-          "mean": 75.5875,
-          "median": 75.0,
+          "count": 206151,
+          "mean": 75.8618,
+          "median": 76.0,
           "min": 54.0,
-          "max": 101.0
+          "max": 102.0
+        },
+        "roster_season": {
+          "count": 54470,
+          "mean": 2017.9165,
+          "median": 2019.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "height_m": {
+          "count": 206151,
+          "mean": 1.8091,
+          "median": 1.81,
+          "min": 1.6,
+          "max": 2.05
+        },
+        "body_mass_index": {
+          "count": 206151,
+          "mean": 23.2439,
+          "median": 23.1481,
+          "min": 14.5,
+          "max": 38.6719
+        },
+        "is_goalkeeper": {
+          "count": 206151,
+          "mean": 0.0777,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_defender": {
+          "count": 206151,
+          "mean": 0.3111,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_midfielder": {
+          "count": 206151,
+          "mean": 0.307,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_forward": {
+          "count": 206151,
+          "mean": 0.3042,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "prime_age_flag": {
+          "count": 206151,
+          "mean": 0.523,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "u23_flag": {
+          "count": 206151,
+          "mean": 0.294,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "veteran_flag": {
+          "count": 206151,
+          "mean": 0.084,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "physical_profile_score": {
+          "count": 206151,
+          "mean": 1.1553,
+          "median": 1.2286,
+          "min": 0.0,
+          "max": 2.8857
+        },
+        "nationality_matches_team_country": {
+          "count": 206151,
+          "mean": 0.9819,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "player_match_rows": {
+          "count": 206151,
+          "mean": 9.4619,
+          "median": 10.0,
+          "min": 0.0,
+          "max": 69.0
+        },
+        "player_total_minutes": {
+          "count": 206151,
+          "mean": 694.7406,
+          "median": 696.0,
+          "min": 0.0,
+          "max": 5926.0
+        },
+        "player_total_goals": {
+          "count": 206151,
+          "mean": 1.235,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 23.0
+        },
+        "player_total_assists": {
+          "count": 206151,
+          "mean": 0.8153,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 21.0
+        },
+        "player_total_shots": {
+          "count": 206151,
+          "mean": 19.5588,
+          "median": 13.0,
+          "min": 0.0,
+          "max": 234.0
+        },
+        "player_total_passes_attempted": {
+          "count": 206151,
+          "mean": 430.357,
+          "median": 442.0,
+          "min": 0.0,
+          "max": 3108.0
+        },
+        "player_total_defensive_actions": {
+          "count": 206151,
+          "mean": 17.0955,
+          "median": 12.0,
+          "min": 0.0,
+          "max": 169.0
+        },
+        "player_total_interceptions": {
+          "count": 206151,
+          "mean": 13.7386,
+          "median": 9.0,
+          "min": 0.0,
+          "max": 136.0
+        },
+        "player_goal_involvements": {
+          "count": 206151,
+          "mean": 2.0503,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 35.0
+        },
+        "player_goals_per90": {
+          "count": 206151,
+          "mean": 0.1643,
+          "median": 0.0565,
+          "min": 0.0,
+          "max": 45.0
+        },
+        "player_assists_per90": {
+          "count": 206151,
+          "mean": 0.1186,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 180.0
+        },
+        "player_shots_per90": {
+          "count": 206151,
+          "mean": 2.5856,
+          "median": 1.8469,
+          "min": 0.0,
+          "max": 315.0
+        },
+        "player_defensive_actions_per90": {
+          "count": 206151,
+          "mean": 3.8509,
+          "median": 3.8654,
+          "min": 0.0,
+          "max": 1170.0
+        },
+        "player_seasons_count": {
+          "count": 206151,
+          "mean": 0.9272,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 15.0
+        },
+        "observed_goal_events": {
+          "count": 206151,
+          "mean": 1.235,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 23.0
+        },
+        "observed_header_events": {
+          "count": 206151,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "headed_goal_probability_proxy": {
+          "count": 206151,
+          "mean": 0.1775,
+          "median": 0.1771,
+          "min": 0.0251,
+          "max": 0.3497
+        },
+        "scoring_profile_score": {
+          "count": 206151,
+          "mean": 0.7043,
+          "median": 0.462,
+          "min": 0.0,
+          "max": 92.25
+        },
+        "creation_profile_score": {
+          "count": 206151,
+          "mean": 0.2691,
+          "median": 0.1456,
+          "min": 0.0,
+          "max": 180.0041
+        },
+        "defensive_profile_score": {
+          "count": 206151,
+          "mean": 3.9909,
+          "median": 4.05,
+          "min": 0.0,
+          "max": 1170.0
         }
       }
     },
     "teams": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\core\\teams_cleaned.parquet",
-      "rows": 831,
-      "columns": 4,
-      "failing_columns": [
-        "country",
-        "logo"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\core\\teams_cleaned.parquet",
+      "rows": 1538,
+      "columns": 7,
+      "failing_columns": [],
       "numeric_summary": {}
     },
     "goals": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\events\\goals_events_cleaned.parquet",
-      "rows": 3506,
-      "columns": 10,
-      "failing_columns": [
-        "goal_type",
-        "assist_player_id",
-        "player_name"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\events\\goals_events_cleaned.parquet",
+      "rows": 254596,
+      "columns": 37,
+      "failing_columns": [],
       "numeric_summary": {
         "minute": {
-          "count": 3506,
-          "mean": 50.5864,
-          "median": 53.0,
-          "min": 0.0,
-          "max": 120.0
+          "count": 254596,
+          "mean": 51.2068,
+          "median": 54.0,
+          "min": 1.0,
+          "max": 95.0
         },
         "is_penalty": {
-          "count": 3506,
-          "mean": 0.0639,
+          "count": 254596,
+          "mean": 0.0843,
           "median": 0.0,
           "min": 0.0,
           "max": 1.0
         },
         "is_own_goal": {
-          "count": 3506,
-          "mean": 0.0203,
+          "count": 254596,
+          "mean": 0.0219,
           "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_goal_event": {
+          "count": 254596,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "is_shot_event": {
+          "count": 254596,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "is_header_event": {
+          "count": 254596,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "is_penalty_goal": {
+          "count": 254596,
+          "mean": 0.0843,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_own_goal_event": {
+          "count": 254596,
+          "mean": 0.0219,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "minute_normalized": {
+          "count": 254596,
+          "mean": 0.4267,
+          "median": 0.45,
+          "min": 0.0083,
+          "max": 0.7917
+        },
+        "is_first_half": {
+          "count": 254596,
+          "mean": 0.409,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_second_half": {
+          "count": 254596,
+          "mean": 0.5752,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_extra_time": {
+          "count": 254596,
+          "mean": 0.0158,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_late_event": {
+          "count": 254596,
+          "mean": 0.2392,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "event_phase_weight": {
+          "count": 254596,
+          "mean": 0.9634,
+          "median": 1.0,
+          "min": 0.8,
+          "max": 1.2
+        },
+        "season": {
+          "count": 27155,
+          "mean": 2020.5014,
+          "median": 2021.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "is_english_league_event": {
+          "count": 254596,
+          "mean": 0.0934,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_south_american_event": {
+          "count": 254596,
+          "mean": 0.0603,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "player_age": {
+          "count": 254596,
+          "mean": 25.1809,
+          "median": 25.0,
+          "min": 16.0,
+          "max": 42.0
+        },
+        "player_height_cm": {
+          "count": 254596,
+          "mean": 179.7873,
+          "median": 180.0,
+          "min": 160.0,
+          "max": 205.0
+        },
+        "player_weight_kg": {
+          "count": 254596,
+          "mean": 74.8665,
+          "median": 75.0,
+          "min": 58.0,
+          "max": 102.0
+        },
+        "player_bmi": {
+          "count": 254596,
+          "mean": 23.2361,
+          "median": 23.1241,
+          "min": 14.5,
+          "max": 38.6719
+        },
+        "headed_goal_probability_proxy": {
+          "count": 254596,
+          "mean": 0.1896,
+          "median": 0.2025,
+          "min": 0.01,
+          "max": 0.3616
+        },
+        "goal_value_weight": {
+          "count": 254596,
+          "mean": 0.9377,
+          "median": 1.0,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "open_play_goal_proxy": {
+          "count": 254596,
+          "mean": 0.8939,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "event_recency_weight": {
+          "count": 254596,
+          "mean": 0.5562,
+          "median": 0.5714,
           "min": 0.0,
           "max": 1.0
         }
       }
     },
     "gk": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\goalkeeper_stats_cleaned.parquet",
-      "rows": 960,
-      "columns": 7,
-      "failing_columns": [
-        "saves",
-        "goals_conceded",
-        "clean_sheets",
-        "penalty_saves",
-        "punches"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\stats\\goalkeeper_stats_cleaned.parquet",
+      "rows": 39955,
+      "columns": 27,
+      "failing_columns": [],
       "numeric_summary": {
+        "season": {
+          "count": 3578,
+          "mean": 2018.45,
+          "median": 2019.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
         "saves": {
-          "count": 779,
-          "mean": 1.5109,
+          "count": 39955,
+          "mean": 33.654,
+          "median": 25.0,
+          "min": 0.0,
+          "max": 187.0
+        },
+        "goals_conceded": {
+          "count": 39955,
+          "mean": 12.8119,
+          "median": 9.0,
+          "min": 0.0,
+          "max": 93.0
+        },
+        "clean_sheets": {
+          "count": 39955,
+          "mean": 2.7201,
+          "median": 2.0,
+          "min": 0.0,
+          "max": 28.0
+        },
+        "penalty_saves": {
+          "count": 39955,
+          "mean": 0.4693,
           "median": 0.0,
+          "min": 0.0,
+          "max": 6.0
+        },
+        "punches": {
+          "count": 39955,
+          "mean": 5.4634,
+          "median": 4.0,
+          "min": 0.0,
+          "max": 44.0
+        },
+        "matches_played_proxy": {
+          "count": 39955,
+          "mean": 5.4222,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 55.0
+        },
+        "minutes_played_proxy": {
+          "count": 39955,
+          "mean": 466.1835,
+          "median": 90.0,
+          "min": 1.0,
+          "max": 4606.0
+        },
+        "saves_per_match": {
+          "count": 39955,
+          "mean": 18.1569,
+          "median": 5.0,
+          "min": 0.0,
+          "max": 174.0
+        },
+        "saves_per90": {
+          "count": 39955,
+          "mean": 18.2291,
+          "median": 5.0,
+          "min": 0.0,
+          "max": 174.0
+        },
+        "goals_conceded_per_match": {
+          "count": 39955,
+          "mean": 6.9291,
+          "median": 2.0,
+          "min": 0.0,
+          "max": 77.0
+        },
+        "goals_conceded_per90": {
+          "count": 39955,
+          "mean": 6.9584,
+          "median": 2.0,
+          "min": 0.0,
+          "max": 77.0
+        },
+        "clean_sheet_rate": {
+          "count": 39955,
+          "mean": 1.4562,
+          "median": 0.3889,
+          "min": 0.0,
+          "max": 25.0
+        },
+        "penalty_save_rate": {
+          "count": 39955,
+          "mean": 0.2531,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 6.0
+        },
+        "punches_per_match": {
+          "count": 39955,
+          "mean": 2.9433,
+          "median": 0.8125,
+          "min": 0.0,
+          "max": 41.0
+        },
+        "save_to_conceded_ratio": {
+          "count": 39955,
+          "mean": 2.3262,
+          "median": 2.2857,
+          "min": 0.0,
+          "max": 17.0
+        },
+        "keeper_reliability_index": {
+          "count": 39955,
+          "mean": -1.6906,
+          "median": 0.5,
+          "min": -71.987,
+          "max": 41.3333
+        },
+        "shot_stopping_index": {
+          "count": 39955,
+          "mean": 11.2707,
+          "median": 3.0,
+          "min": -5.0,
+          "max": 121.0
+        },
+        "box_command_index": {
+          "count": 39955,
+          "mean": 4.3994,
+          "median": 1.0455,
           "min": 0.0,
           "max": 61.0
         },
-        "goals_conceded": {
-          "count": 779,
-          "mean": 0.7702,
-          "median": 0.0,
-          "min": 0.0,
-          "max": 20.0
+        "player_age": {
+          "count": 39955,
+          "mean": 28.4503,
+          "median": 28.0,
+          "min": 16.0,
+          "max": 42.0
         },
-        "clean_sheets": {
-          "count": 779,
-          "mean": 1.285,
+        "player_height_cm": {
+          "count": 39955,
+          "mean": 189.3069,
+          "median": 189.0,
+          "min": 164.0,
+          "max": 205.0
+        },
+        "player_weight_kg": {
+          "count": 39955,
+          "mean": 83.4207,
+          "median": 84.0,
+          "min": 58.0,
+          "max": 102.0
+        },
+        "keeper_physical_index": {
+          "count": 39955,
+          "mean": 0.7231,
+          "median": 0.72,
+          "min": 0.0,
+          "max": 1.84
+        },
+        "prime_keeper_age_flag": {
+          "count": 39955,
+          "mean": 0.6208,
           "median": 1.0,
-          "min": 0.0,
-          "max": 5.0
-        },
-        "penalty_saves": {
-          "count": 779,
-          "mean": 0.0167,
-          "median": 0.0,
           "min": 0.0,
           "max": 1.0
         },
-        "punches": {
-          "count": 779,
-          "mean": 0.2465,
-          "median": 0.0,
-          "min": 0.0,
-          "max": 12.0
+        "season_start_year": {
+          "count": 39955,
+          "mean": 2015.9961,
+          "median": 2021.0,
+          "min": 2004.0,
+          "max": 2025.0
         }
       }
     },
     "match_stats": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\player_match_stats_cleaned.parquet",
-      "rows": 9678,
-      "columns": 29,
-      "failing_columns": [
-        "minutes_played",
-        "goals",
-        "assists",
-        "shots",
-        "shots_on_target",
-        "shots_off_target",
-        "shots_blocked",
-        "passes_completed",
-        "passes_attempted",
-        "pass_accuracy",
-        "crosses_completed",
-        "crosses_attempted",
-        "dribbles",
-        "offsides",
-        "tackles",
-        "tackles_won",
-        "tackles_lost",
-        "interceptions",
-        "clearances",
-        "fouls_committed",
-        "fouls_suffered",
-        "yellow_cards",
-        "red_cards",
-        "distance_covered",
-        "top_speed",
-        "touches"
-      ],
-      "numeric_summary": {}
-    },
-    "season_stats": {
-      "path": "D:\\Joaquin\\Cursos\\UPC\\Cursos UPC\\Ciclo 7\\Big Data\\goaldata-league\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
-      "rows": 4246,
-      "columns": 15,
-      "failing_columns": [
-        "matches_played",
-        "minutes_played",
-        "goals",
-        "assists",
-        "shots",
-        "shots_on_target",
-        "passes_completed",
-        "passes_attempted",
-        "tackles",
-        "interceptions",
-        "fouls_committed",
-        "yellow_cards",
-        "red_cards"
-      ],
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\stats\\player_match_stats_cleaned.parquet",
+      "rows": 1950578,
+      "columns": 90,
+      "failing_columns": [],
       "numeric_summary": {
-        "matches_played": {
-          "count": 4064,
-          "mean": 13.5736,
-          "median": 8.0,
-          "min": 1.0,
-          "max": 38.0
-        },
         "minutes_played": {
-          "count": 4064,
-          "mean": 889.8438,
-          "median": 450.0,
+          "count": 1950578,
+          "mean": 73.4251,
+          "median": 78.0,
           "min": 1.0,
-          "max": 3420.0
+          "max": 120.0
         },
         "goals": {
-          "count": 4064,
-          "mean": 0.2078,
+          "count": 1950578,
+          "mean": 0.1305,
           "median": 0.0,
           "min": 0.0,
-          "max": 15.0
+          "max": 6.0
         },
         "assists": {
-          "count": 4064,
-          "mean": 0.1642,
-          "median": 0.0,
-          "min": 0.0,
-          "max": 10.0
-        },
-        "shots": {
-          "count": 3885,
-          "mean": 2.0632,
-          "median": 1.0,
-          "min": 0.0,
-          "max": 45.0
-        },
-        "shots_on_target": {
-          "count": 3885,
-          "mean": 0.7014,
-          "median": 0.18,
-          "min": 0.0,
-          "max": 23.0
-        },
-        "passes_completed": {
-          "count": 3937,
-          "mean": 61.9868,
-          "median": 36.0,
-          "min": 0.0,
-          "max": 760.0
-        },
-        "passes_attempted": {
-          "count": 3937,
-          "mean": 74.5897,
-          "median": 45.8,
-          "min": 0.0,
-          "max": 814.0
-        },
-        "tackles": {
-          "count": 3956,
-          "mean": 2.3439,
-          "median": 1.73,
-          "min": 0.0,
-          "max": 35.0
-        },
-        "interceptions": {
-          "count": 3956,
-          "mean": 4.8189,
-          "median": 1.73,
-          "min": 0.0,
-          "max": 76.0
-        },
-        "fouls_committed": {
-          "count": 3915,
-          "mean": 2.0703,
-          "median": 1.41,
-          "min": 0.0,
-          "max": 23.0
-        },
-        "yellow_cards": {
-          "count": 4096,
-          "mean": 0.2203,
-          "median": 0.05,
-          "min": 0.0,
-          "max": 10.0
-        },
-        "red_cards": {
-          "count": 4096,
-          "mean": 0.1269,
+          "count": 1950578,
+          "mean": 0.0862,
           "median": 0.0,
           "min": 0.0,
           "max": 4.0
+        },
+        "shots": {
+          "count": 1950578,
+          "mean": 2.0671,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 54.0
+        },
+        "shots_on_target": {
+          "count": 1950578,
+          "mean": 0.8663,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 27.0
+        },
+        "shots_off_target": {
+          "count": 1950578,
+          "mean": 0.937,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 26.0
+        },
+        "shots_blocked": {
+          "count": 1950578,
+          "mean": 0.2638,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "passes_completed": {
+          "count": 1950578,
+          "mean": 36.5144,
+          "median": 33.0,
+          "min": 2.0,
+          "max": 92.0
+        },
+        "passes_attempted": {
+          "count": 1950578,
+          "mean": 45.4832,
+          "median": 41.0,
+          "min": 5.0,
+          "max": 95.0
+        },
+        "pass_accuracy": {
+          "count": 1950578,
+          "mean": 0.8009,
+          "median": 0.8,
+          "min": 0.4,
+          "max": 1.0
+        },
+        "crosses_completed": {
+          "count": 1950578,
+          "mean": 0.2969,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "crosses_attempted": {
+          "count": 1950578,
+          "mean": 1.0594,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "dribbles": {
+          "count": 1950578,
+          "mean": 1.503,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "offsides": {
+          "count": 1950578,
+          "mean": 0.4004,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tackles": {
+          "count": 1950578,
+          "mean": 1.8068,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tackles_won": {
+          "count": 1950578,
+          "mean": 1.0476,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tackles_lost": {
+          "count": 1950578,
+          "mean": 0.7592,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "interceptions": {
+          "count": 1950578,
+          "mean": 1.452,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "clearances": {
+          "count": 1950578,
+          "mean": 1.2391,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "fouls_committed": {
+          "count": 1950578,
+          "mean": 1.458,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 5.0
+        },
+        "fouls_suffered": {
+          "count": 1950578,
+          "mean": 1.3441,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 5.0
+        },
+        "yellow_cards": {
+          "count": 1950578,
+          "mean": 0.0716,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "red_cards": {
+          "count": 1950578,
+          "mean": 0.0089,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "distance_covered": {
+          "count": 1950578,
+          "mean": 7657.4901,
+          "median": 7988.0,
+          "min": 1000.0,
+          "max": 13000.0
+        },
+        "top_speed": {
+          "count": 1950578,
+          "mean": 32.1783,
+          "median": 32.2432,
+          "min": 25.0,
+          "max": 36.0
+        },
+        "touches": {
+          "count": 1950578,
+          "mean": 71.8213,
+          "median": 66.0,
+          "min": 7.0,
+          "max": 166.0
+        },
+        "goals_per90": {
+          "count": 1950578,
+          "mean": 0.1787,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 90.0
+        },
+        "assists_per90": {
+          "count": 1950578,
+          "mean": 0.2075,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 270.0
+        },
+        "shots_per90": {
+          "count": 1950578,
+          "mean": 2.7691,
+          "median": 1.0465,
+          "min": 0.0,
+          "max": 1530.0
+        },
+        "shots_on_target_per90": {
+          "count": 1950578,
+          "mean": 1.1632,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 720.0
+        },
+        "shots_off_target_per90": {
+          "count": 1950578,
+          "mean": 1.2526,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "shots_blocked_per90": {
+          "count": 1950578,
+          "mean": 0.3533,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 270.0
+        },
+        "passes_completed_per90": {
+          "count": 1950578,
+          "mean": 67.6806,
+          "median": 40.8,
+          "min": 2.2222,
+          "max": 8280.0
+        },
+        "passes_attempted_per90": {
+          "count": 1950578,
+          "mean": 84.633,
+          "median": 50.8696,
+          "min": 3.75,
+          "max": 8550.0
+        },
+        "crosses_completed_per90": {
+          "count": 1950578,
+          "mean": 0.5859,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 450.0
+        },
+        "crosses_attempted_per90": {
+          "count": 1950578,
+          "mean": 2.0891,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "dribbles_per90": {
+          "count": 1950578,
+          "mean": 3.277,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "offsides_per90": {
+          "count": 1950578,
+          "mean": 0.9416,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "tackles_per90": {
+          "count": 1950578,
+          "mean": 3.2861,
+          "median": 1.2676,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "tackles_won_per90": {
+          "count": 1950578,
+          "mean": 1.9069,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "tackles_lost_per90": {
+          "count": 1950578,
+          "mean": 1.3792,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "interceptions_per90": {
+          "count": 1950578,
+          "mean": 2.5953,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "clearances_per90": {
+          "count": 1950578,
+          "mean": 1.9303,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "fouls_committed_per90": {
+          "count": 1950578,
+          "mean": 2.7544,
+          "median": 1.3433,
+          "min": 0.0,
+          "max": 450.0
+        },
+        "fouls_suffered_per90": {
+          "count": 1950578,
+          "mean": 2.7325,
+          "median": 1.2,
+          "min": 0.0,
+          "max": 450.0
+        },
+        "yellow_cards_per90": {
+          "count": 1950578,
+          "mean": 0.1282,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 90.0
+        },
+        "red_cards_per90": {
+          "count": 1950578,
+          "mean": 0.0146,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 90.0
+        },
+        "distance_covered_per90": {
+          "count": 1950578,
+          "mean": 9807.3319,
+          "median": 9603.5294,
+          "min": 5732.4706,
+          "max": 90000.0
+        },
+        "touches_per90": {
+          "count": 1950578,
+          "mean": 134.0405,
+          "median": 81.6279,
+          "min": 5.25,
+          "max": 13770.0
+        },
+        "shot_accuracy": {
+          "count": 1950578,
+          "mean": 0.2245,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "goal_conversion_rate": {
+          "count": 1950578,
+          "mean": 0.0133,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "pass_completion_rate": {
+          "count": 1950578,
+          "mean": 0.8009,
+          "median": 0.8,
+          "min": 0.4,
+          "max": 1.0
+        },
+        "cross_completion_rate": {
+          "count": 1950578,
+          "mean": 0.0984,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tackle_success_rate": {
+          "count": 1950578,
+          "mean": 0.3392,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "defensive_actions": {
+          "count": 1950578,
+          "mean": 4.4978,
+          "median": 4.0,
+          "min": 0.0,
+          "max": 21.0
+        },
+        "attacking_actions": {
+          "count": 1950578,
+          "mean": 4.6295,
+          "median": 3.0,
+          "min": 0.0,
+          "max": 58.0
+        },
+        "ball_actions": {
+          "count": 1950578,
+          "mean": 80.9486,
+          "median": 75.0,
+          "min": 7.0,
+          "max": 204.0
+        },
+        "discipline_points": {
+          "count": 1950578,
+          "mean": 1.7264,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 14.0
+        },
+        "distance_per_minute": {
+          "count": 1950578,
+          "mean": 108.9704,
+          "median": 106.7059,
+          "min": 63.6941,
+          "max": 1000.0
+        },
+        "speed_distance_index": {
+          "count": 1950578,
+          "mean": 246.2002,
+          "median": 255.466,
+          "min": 28.4507,
+          "max": 468.0
+        },
+        "minutes_share_regular_time": {
+          "count": 1950578,
+          "mean": 0.8158,
+          "median": 0.8667,
+          "min": 0.0111,
+          "max": 1.3333
+        },
+        "starter_proxy": {
+          "count": 1950578,
+          "mean": 0.915,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "substitute_proxy": {
+          "count": 1950578,
+          "mean": 0.085,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "full_match_proxy": {
+          "count": 1950578,
+          "mean": 0.2016,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "goal_involvements": {
+          "count": 1950578,
+          "mean": 0.2167,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "non_shot_goal_proxy": {
+          "count": 1950578,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "season": {
+          "count": 229445,
+          "mean": 2020.6146,
+          "median": 2021.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "team_is_home": {
+          "count": 1950578,
+          "mean": 0.4996,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "team_goals_for": {
+          "count": 1950578,
+          "mean": 1.3471,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 13.0
+        },
+        "team_goals_against": {
+          "count": 1950578,
+          "mean": 1.3478,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 13.0
+        },
+        "team_goal_diff": {
+          "count": 1950578,
+          "mean": -0.0007,
+          "median": 0.0,
+          "min": -13.0,
+          "max": 13.0
+        },
+        "team_result_points": {
+          "count": 1950578,
+          "mean": 1.3742,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 3.0
+        },
+        "team_clean_sheet": {
+          "count": 1950578,
+          "mean": 0.2838,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "team_win": {
+          "count": 1950578,
+          "mean": 0.3744,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "team_draw": {
+          "count": 1950578,
+          "mean": 0.2511,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "team_loss": {
+          "count": 1950578,
+          "mean": 0.3745,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "is_english_league_match": {
+          "count": 1950578,
+          "mean": 0.0916,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "player_age": {
+          "count": 1950578,
+          "mean": 25.8834,
+          "median": 26.0,
+          "min": 16.0,
+          "max": 42.0
+        },
+        "player_height_cm": {
+          "count": 1950578,
+          "mean": 181.0597,
+          "median": 181.0,
+          "min": 160.0,
+          "max": 205.0
+        },
+        "player_weight_kg": {
+          "count": 1950578,
+          "mean": 76.0114,
+          "median": 76.0,
+          "min": 58.0,
+          "max": 102.0
+        },
+        "two_way_index": {
+          "count": 1950578,
+          "mean": 7.4009,
+          "median": 7.0,
+          "min": -14.0,
+          "max": 61.0
+        },
+        "role_fit_score": {
+          "count": 1950578,
+          "mean": 4.1037,
+          "median": 2.475,
+          "min": -0.925,
+          "max": 60.0
+        }
+      }
+    },
+    "season_stats": {
+      "path": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\data\\processed\\stats\\player_season_stats_cleaned.parquet",
+      "rows": 191191,
+      "columns": 58,
+      "failing_columns": [],
+      "numeric_summary": {
+        "season": {
+          "count": 43443,
+          "mean": 2018.6839,
+          "median": 2020.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "matches_played": {
+          "count": 191020,
+          "mean": 10.4555,
+          "median": 11.0,
+          "min": 0.0,
+          "max": 55.0
+        },
+        "minutes_played": {
+          "count": 191020,
+          "mean": 1515.463,
+          "median": 764.0,
+          "min": 1.0,
+          "max": 8229513.0
+        },
+        "goals": {
+          "count": 191020,
+          "mean": 4.6401,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 25381.0
+        },
+        "assists": {
+          "count": 191020,
+          "mean": 4.4789,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 24925.0
+        },
+        "shots": {
+          "count": 190867,
+          "mean": 22.2099,
+          "median": 9.0,
+          "min": 0.0,
+          "max": 120612.0
+        },
+        "shots_on_target": {
+          "count": 190867,
+          "mean": 10.9294,
+          "median": 4.0,
+          "min": 0.0,
+          "max": 59571.0
+        },
+        "passes_completed": {
+          "count": 190897,
+          "mean": 747.2518,
+          "median": 379.0,
+          "min": 0.0,
+          "max": 4091215.0
+        },
+        "passes_attempted": {
+          "count": 190897,
+          "mean": 930.7421,
+          "median": 481.0,
+          "min": 0.0,
+          "max": 5095765.0
+        },
+        "tackles": {
+          "count": 190932,
+          "mean": 36.9538,
+          "median": 14.0,
+          "min": 0.0,
+          "max": 203374.0
+        },
+        "interceptions": {
+          "count": 190932,
+          "mean": 29.7572,
+          "median": 11.0,
+          "min": 0.0,
+          "max": 162258.0
+        },
+        "fouls_committed": {
+          "count": 190896,
+          "mean": 29.8284,
+          "median": 14.0,
+          "min": 0.0,
+          "max": 162779.0
+        },
+        "yellow_cards": {
+          "count": 191067,
+          "mean": 1.6773,
+          "median": 0.13,
+          "min": 0.0,
+          "max": 9316.0
+        },
+        "red_cards": {
+          "count": 191067,
+          "mean": 0.1853,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 1014.0
+        },
+        "goals_per90": {
+          "count": 191191,
+          "mean": 0.3604,
+          "median": 0.158,
+          "min": 0.0,
+          "max": 225.0
+        },
+        "goals_per_match": {
+          "count": 191191,
+          "mean": 0.2413,
+          "median": 0.1333,
+          "min": 0.0,
+          "max": 5.0
+        },
+        "assists_per90": {
+          "count": 191191,
+          "mean": 0.3284,
+          "median": 0.1811,
+          "min": 0.0,
+          "max": 270.0
+        },
+        "assists_per_match": {
+          "count": 191191,
+          "mean": 0.223,
+          "median": 0.15,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "shots_per90": {
+          "count": 191191,
+          "mean": 1.6736,
+          "median": 1.3875,
+          "min": 0.0,
+          "max": 450.0
+        },
+        "shots_per_match": {
+          "count": 191191,
+          "mean": 1.1286,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 25.0
+        },
+        "shots_on_target_per90": {
+          "count": 191191,
+          "mean": 0.8256,
+          "median": 0.6287,
+          "min": 0.0,
+          "max": 360.0
+        },
+        "shots_on_target_per_match": {
+          "count": 191191,
+          "mean": 0.5571,
+          "median": 0.5,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "passes_completed_per90": {
+          "count": 191191,
+          "mean": 48.6654,
+          "median": 43.9432,
+          "min": 0.0,
+          "max": 6390.0
+        },
+        "passes_completed_per_match": {
+          "count": 191191,
+          "mean": 35.7962,
+          "median": 36.0,
+          "min": 0.0,
+          "max": 140.0
+        },
+        "passes_attempted_per90": {
+          "count": 191191,
+          "mean": 60.8809,
+          "median": 54.7388,
+          "min": 0.0,
+          "max": 8460.0
+        },
+        "passes_attempted_per_match": {
+          "count": 191191,
+          "mean": 44.6241,
+          "median": 44.8889,
+          "min": 0.0,
+          "max": 152.0
+        },
+        "tackles_per90": {
+          "count": 191191,
+          "mean": 2.3756,
+          "median": 2.2286,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "tackles_per_match": {
+          "count": 191191,
+          "mean": 1.769,
+          "median": 1.8,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "interceptions_per90": {
+          "count": 191191,
+          "mean": 1.895,
+          "median": 1.7134,
+          "min": 0.0,
+          "max": 630.0
+        },
+        "interceptions_per_match": {
+          "count": 191191,
+          "mean": 1.4265,
+          "median": 1.3462,
+          "min": 0.0,
+          "max": 10.6667
+        },
+        "fouls_committed_per90": {
+          "count": 191191,
+          "mean": 1.9969,
+          "median": 1.8519,
+          "min": 0.0,
+          "max": 450.0
+        },
+        "fouls_committed_per_match": {
+          "count": 191191,
+          "mean": 1.4497,
+          "median": 1.5,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "yellow_cards_per90": {
+          "count": 191191,
+          "mean": 0.1111,
+          "median": 0.0055,
+          "min": 0.0,
+          "max": 180.0
+        },
+        "yellow_cards_per_match": {
+          "count": 191191,
+          "mean": 0.0804,
+          "median": 0.0041,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "red_cards_per90": {
+          "count": 191191,
+          "mean": 0.0126,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 90.0
+        },
+        "red_cards_per_match": {
+          "count": 191191,
+          "mean": 0.0092,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 2.0
+        },
+        "minutes_per_match": {
+          "count": 191191,
+          "mean": 72.4013,
+          "median": 72.3333,
+          "min": 0.0,
+          "max": 120.0
+        },
+        "availability_rate": {
+          "count": 191191,
+          "mean": 0.2748,
+          "median": 0.2895,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "goal_involvements": {
+          "count": 191191,
+          "mean": 9.1108,
+          "median": 3.0,
+          "min": 0.0,
+          "max": 50306.0
+        },
+        "goal_involvements_per90": {
+          "count": 191191,
+          "mean": 0.6888,
+          "median": 0.4747,
+          "min": 0.0,
+          "max": 270.0
+        },
+        "shot_accuracy": {
+          "count": 191191,
+          "mean": 0.4306,
+          "median": 0.4615,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "goal_conversion_rate": {
+          "count": 191191,
+          "mean": 0.1798,
+          "median": 0.1333,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "pass_completion_rate": {
+          "count": 191191,
+          "mean": 0.7984,
+          "median": 0.8087,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "defensive_actions": {
+          "count": 191191,
+          "mean": 66.6206,
+          "median": 25.0,
+          "min": 0.0,
+          "max": 365632.0
+        },
+        "discipline_points": {
+          "count": 191191,
+          "mean": 35.9221,
+          "median": 16.0,
+          "min": 0.0,
+          "max": 196811.0
+        },
+        "discipline_points_per90": {
+          "count": 191191,
+          "mean": 2.4059,
+          "median": 2.1845,
+          "min": 0.0,
+          "max": 900.0
+        },
+        "scoring_index": {
+          "count": 191191,
+          "mean": 1.2353,
+          "median": 0.8,
+          "min": 0.0,
+          "max": 496.0
+        },
+        "creator_index": {
+          "count": 191191,
+          "mean": 3.2817,
+          "median": 2.9283,
+          "min": 0.0,
+          "max": 716.1615
+        },
+        "defensive_index": {
+          "count": 191191,
+          "mean": 6.1656,
+          "median": 5.9223,
+          "min": 0.0,
+          "max": 1800.0
+        },
+        "player_age": {
+          "count": 191191,
+          "mean": 25.7685,
+          "median": 26.0,
+          "min": 16.0,
+          "max": 42.0
+        },
+        "player_height_cm": {
+          "count": 191191,
+          "mean": 180.9235,
+          "median": 181.0,
+          "min": 160.0,
+          "max": 205.0
+        },
+        "player_weight_kg": {
+          "count": 191191,
+          "mean": 75.8922,
+          "median": 76.0,
+          "min": 58.0,
+          "max": 102.0
+        },
+        "season_start_year": {
+          "count": 191191,
+          "mean": 2016.5146,
+          "median": 2017.0,
+          "min": 2004.0,
+          "max": 2025.0
+        },
+        "is_peak_age_season": {
+          "count": 191191,
+          "mean": 0.5235,
+          "median": 1.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "bmi": {
+          "count": 191191,
+          "mean": 23.2506,
+          "median": 23.1481,
+          "min": 14.5,
+          "max": 38.6719
         }
       }
     }
