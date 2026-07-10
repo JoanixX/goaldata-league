@@ -93,10 +93,19 @@ def main() -> None:
         by_surname.setdefault(surname, []).append(cn)
         return (new_id, True)
 
-    # --- player_season: real players only ---
+    # --- player_season: real players only, and REAL-GOALS only ---
     ps = pd.read_parquet(PROC / "stats" / "player_season_stats_cleaned.parquet")
     ps_real = ps[ps["player_id"].isin(real_ids)].drop_duplicates(["player_id", "season"]).reset_index(drop=True)
-    print(f"player_season: {len(ps):,} -> {len(ps_real):,} real", flush=True)
+    # Policy: goals/assists are never simulated. Keep only player-seasons whose
+    # goals come from a real source (FBref full-season by canonical name+season).
+    # Non-Big-5 leagues without an accessible real player-goal source remain as
+    # real team-level scorelines (matches), never with a simulated player layer.
+    fb = pd.read_csv(ROOT / "data" / "raw" / "fbref_big5_multiseason.csv")
+    fb_keys = set(zip(fb["player_name"].map(canonical_text), fb["season"].astype(str)))
+    id_to_name = dict(zip(real_players["player_id"], real_players["player_name"]))
+    key = list(zip(ps_real["player_id"].map(id_to_name).map(canonical_text), ps_real["season"].astype(str)))
+    ps_real = ps_real[pd.Series([k in fb_keys for k in key], index=ps_real.index)].reset_index(drop=True)
+    print(f"player_season: {len(ps):,} -> {len(ps_real):,} REAL-goals (FBref-sourced)", flush=True)
 
     # --- goalkeepers: real only ---
     gk = pd.read_parquet(PROC / "stats" / "goalkeeper_stats_cleaned.parquet")
@@ -130,8 +139,25 @@ def main() -> None:
         if c not in pm.columns:
             pm[c] = 0
     pm = pm[PM_COLS].drop_duplicates(["player_id", "match_id"]).reset_index(drop=True)
-    print(f"player_match: REAL StatsBomb participations = {len(pm):,} "
-          f"({pm['player_id'].nunique():,} players; {len(new_rows):,} new real players added)", flush=True)
+
+    # Merge REAL lineups: add every player who was named in a match (incl. those
+    # with no ball-touch events), with real minutes/position from the team sheet.
+    lineups_path = ROOT / "data" / "raw" / "statsbomb_lineups_real.csv"
+    if lineups_path.exists():
+        lu = pd.read_csv(lineups_path)
+        lu["player_id"] = lu["player_name"].map(lambda n: resolve_to_catalog(str(n))[0])
+        lu = lu.rename(columns={"minutes": "minutes_played"})
+        for c in PM_COLS:
+            if c not in lu.columns:
+                lu[c] = 0
+        lu = lu[PM_COLS]
+        existing = set(zip(pm["player_id"], pm["match_id"]))
+        lu_only = lu[~lu.apply(lambda r: (r["player_id"], r["match_id"]) in existing, axis=1)]
+        pm = pd.concat([pm, lu_only], ignore_index=True).drop_duplicates(["player_id", "match_id"]).reset_index(drop=True)
+        print(f"player_match: +{len(lu_only):,} lineup-only real participations merged", flush=True)
+    print(f"player_match: REAL participations = {len(pm):,} "
+          f"({pm['player_id'].nunique():,} players, {pm['match_id'].nunique():,} matches; "
+          f"{len(new_rows):,} new real players added)", flush=True)
 
     # --- events: clean residual nulls (xg N/A for non-shots -> 0; position -> Unknown) ---
     ev = pd.read_parquet(EVENTS)
@@ -144,7 +170,8 @@ def main() -> None:
     # summary columns repeat (e.g. several passes in the same minute). Add a unique
     # event id and keep them all.
     ev = ev.reset_index(drop=True)
-    ev.insert(0, "event_id", range(1, len(ev) + 1))
+    if "event_id" not in ev.columns:
+        ev.insert(0, "event_id", range(1, len(ev) + 1))
     ev.to_parquet(EVENTS, index=False)
 
     # --- goals_events: REAL goals from the event stream ---
