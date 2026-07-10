@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-29T17:50:04",
+  "generated_at": "2026-07-09T02:02:16",
   "input": "C:\\Users\\practicante.coe03\\Desktop\\Clases\\Big Data\\Trabajos\\PC1\\artifacts\\pca_player_season_2d.csv",
-  "rows": 7257,
-  "selected_kmeans_k": 4,
+  "rows": 3670,
+  "selected_kmeans_k": 3,
   "selected_dbscan_eps": 0.25,
   "selected_dbscan_min_samples": 10,
   "outputs": {

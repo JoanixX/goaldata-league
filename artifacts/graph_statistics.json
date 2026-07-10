@@ -1,86 +1,86 @@
 {
-  "num_nodes": 4065,
-  "num_edges": 35365,
-  "density": 0.004281435530890742,
+  "num_nodes": 2531,
+  "num_edges": 17777,
+  "density": 0.005552336794499198,
   "num_connected_components": 1,
-  "largest_component_size": 4065,
+  "largest_component_size": 2531,
   "degree": {
-    "min": 1,
-    "max": 114,
-    "mean": 17.399753997539975
+    "min": 3,
+    "max": 62,
+    "mean": 14.047412090082972
   },
   "eigenvector_nonzero": true,
   "top_10_by_pagerank": [
     {
       "player_name": "Fernandinho",
       "position_group": "Midfielder",
-      "pagerank": 0.0013371610648169935
+      "pagerank": 0.001449367905610441
     },
     {
-      "player_name": "Wojciech Szczesny",
-      "position_group": "Goalkeeper",
-      "pagerank": 0.0013063975246453213
-    },
-    {
-      "player_name": "Lucas Moura",
+      "player_name": "Maximilian Arnold",
       "position_group": "Midfielder",
-      "pagerank": 0.0011571111131082302
+      "pagerank": 0.0013678212894409824
     },
     {
-      "player_name": "Raphaël Varane",
+      "player_name": "Kyle Walker",
       "position_group": "Defender",
-      "pagerank": 0.001144420913874606
+      "pagerank": 0.0013614488467325945
     },
     {
-      "player_name": "Zaid Romero",
-      "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "player_name": "Dayot Upamecano",
+      "position_group": "Defender",
+      "pagerank": 0.001360284552712295
     },
     {
-      "player_name": "Noah Jauny",
-      "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "player_name": "Ben Davies",
+      "position_group": "Defender",
+      "pagerank": 0.0013021066807769532
     },
     {
-      "player_name": "Younes Lachaab",
-      "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "player_name": "José María Giménez",
+      "position_group": "Defender",
+      "pagerank": 0.001278059994773998
     },
     {
-      "player_name": "Luca Raimund",
-      "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "player_name": "Eric Dier",
+      "position_group": "Defender",
+      "pagerank": 0.001254515045751329
     },
     {
-      "player_name": "Isaac Cossier",
+      "player_name": "Amadou Haidara",
       "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "pagerank": 0.0012284457545096918
     },
     {
-      "player_name": "Juan Córdoba",
+      "player_name": "Marcus Thuram",
+      "position_group": "Forward",
+      "pagerank": 0.0012232868535795255
+    },
+    {
+      "player_name": "Giovani Lo Celso",
       "position_group": "Midfielder",
-      "pagerank": 0.0010892763977232234
+      "pagerank": 0.0011710517026797217
     }
   ],
   "ranking_comparison_vs_external_baseline": {
-    "n_compared": 4065,
+    "n_compared": 2531,
     "pagerank_vs_goals_per90": {
-      "spearman_r": 0.1763538939939604,
-      "spearman_p": 9.395138090082885e-30,
-      "kendall_tau": 0.13224019809434379,
-      "kendall_p": 7.248938483533683e-31,
+      "spearman_r": 0.05233203279097299,
+      "spearman_p": 0.008456499116086752,
+      "kendall_tau": 0.03866082996409575,
+      "kendall_p": 0.006698693914980916,
       "top10_overlap": 0.0,
       "top20_overlap": 0.0,
       "top50_overlap": 0.0
     },
     "pagerank_vs_minutes_played": {
-      "spearman_r": 0.1877423169335476,
-      "spearman_p": 1.453023194846746e-33,
-      "kendall_tau": 0.12304754347828392,
-      "kendall_p": 7.05047083502647e-32,
+      "spearman_r": 0.07830652097814259,
+      "spearman_p": 8.025519068570001e-05,
+      "kendall_tau": 0.05309703264442,
+      "kendall_p": 6.25854130800353e-05,
       "top10_overlap": 0.0,
-      "top20_overlap": 0.0,
-      "top50_overlap": 0.0
+      "top20_overlap": 0.1,
+      "top50_overlap": 0.04
     }
   }
 }
