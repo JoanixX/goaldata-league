@@ -1,6 +1,6 @@
 # Week 10 - Offline Evaluation Report (Recommendation / Ranking)
 
-Generated: `2026-06-29T17:50:14`
+Generated: `2026-07-09T02:02:19`
 
 ## Task framing
 Content-based **item-item similarity / ranking** for scouting: given a
@@ -16,7 +16,7 @@ collaborative filtering.
 
 ## Evaluation protocol (leakage-safe, label-free)
 Ground truth = "same canonical player in another season should be retrieved".
-Leave-one-out over the 7,257 player-seasons; query set =
+Leave-one-out over the 3,670 player-seasons; query set =
 players present in >= 2 seasons. The query row is removed from the pool, and
 `player_id` is used only to build relevance labels, never as a model feature.
 
@@ -24,8 +24,8 @@ players present in >= 2 seasons. The query row is removed from the pool, and
 
 | representation | n_queries | MRR | MAP | Recall@5 | Recall@10 | Hit@5 | NDCG@10 | PosPurity@5 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline (PC1-PC2, 2 dims) | 4438 | 0.058 | 0.02 | 0.0184 | 0.029 | 0.0757 | 0.0259 | 0.4694 |
-| stronger (standardized 12 PCs) | 4438 | 0.1492 | 0.0567 | 0.0556 | 0.0762 | 0.1913 | 0.0754 | 0.9849 |
+| baseline (PC1-PC2, 2 dims) | 1662 | 0.0773 | 0.0384 | 0.0316 | 0.0614 | 0.1047 | 0.043 | 0.5889 |
+| stronger (standardized 11 PCs) | 1662 | 0.1788 | 0.0927 | 0.0939 | 0.1435 | 0.2395 | 0.1146 | 0.9978 |
 
 `PosPurity@5` is a sanity check: share of the top-5 sharing the query position.
 

@@ -1,25 +1,25 @@
 # Supervised Evaluation — Position Classification
 
-Generated: `2026-06-29T17:50:25`
+Generated: `2026-07-09T02:02:27`
 
 Task: predict position group (GK/DEF/MID/FW) from the season representation. A strong score proves the representation carries real role signal.
 
-## Full catalog (n=7257)
+## Full catalog (n=3670)
 
 | model | accuracy | macro-F1 | weighted-F1 |
 | --- | --- | --- | --- |
-| baseline (majority class) | 0.4033 | 0.1437 | 0.2318 |
-| RandomForest | 0.6474 | 0.6759 | 0.6485 |
-| GradientBoosting | 0.6364 | 0.6688 | 0.6377 |
+| baseline (majority class) | 0.4139 | 0.1464 | 0.2424 |
+| RandomForest | 0.7386 | 0.7762 | 0.7381 |
+| GradientBoosting | 0.7364 | 0.7746 | 0.7364 |
 
-## Real-feature subset — StatsBomb-covered (n=2327)
+## Real-feature subset — StatsBomb-covered (n=1227)
 
 Where high scores are legitimate (real features, real labels):
 
 | model | accuracy | macro-F1 | weighted-F1 |
 | --- | --- | --- | --- |
-| baseline (majority class) | 0.3952 | 0.1416 | 0.2239 |
-| RandomForest | 0.7921 | 0.8154 | 0.7911 |
-| GradientBoosting | 0.7887 | 0.8094 | 0.7879 |
+| baseline (majority class) | 0.4104 | 0.1455 | 0.2389 |
+| RandomForest | 0.8208 | 0.8388 | 0.8205 |
+| GradientBoosting | 0.8404 | 0.8375 | 0.8381 |
 
-**Best on real subset: RandomForest — macro-F1 0.8154.**
+**Best on real subset: RandomForest — macro-F1 0.8388.**
