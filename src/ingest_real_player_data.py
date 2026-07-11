@@ -24,8 +24,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[1]
 OUT_PATH = BASE_DIR / "data" / "raw" / "fbref_big5_multiseason.csv"
 
-SEASONS = ["2017-2018", "2018-2019", "2019-2020", "2020-2021",
-           "2021-2022", "2022-2023", "2023-2024", "2024-2025"]
+SEASONS = [f"{y}-{y + 1}" for y in range(2005, 2025)]  # 2005-2006 .. 2024-2025
 
 
 def _flat(columns) -> list[str]:
@@ -96,10 +95,20 @@ def _read(fb, stat: str, colmap: dict) -> pd.DataFrame:
 
 
 def fetch() -> pd.DataFrame:
+    """Incremental fetch: seasons already in the output CSV are kept, not re-scraped."""
     import soccerdata as sd
 
     frames = []
+    have: set[str] = set()
+    if OUT_PATH.exists():
+        existing = pd.read_csv(OUT_PATH)
+        if "season" in existing.columns and len(existing):
+            have = set(existing["season"].astype(str).unique())
+            frames.append(existing)
+            print(f"  keeping {len(existing):,} rows already ingested ({sorted(have)})", flush=True)
     for season in SEASONS:
+        if season in have:
+            continue
         try:
             fb = sd.FBref(leagues="Big 5 European Leagues Combined", seasons=season)
             tidy = _read(fb, "standard", _STD_MAP)
