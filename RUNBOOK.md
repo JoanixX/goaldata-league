@@ -42,8 +42,8 @@ The repository commits three real-data parquet anchors:
 | File | Description |
 |------|-------------|
 | `data/processed/core/matches_cleaned.parquet` | 94,525 real matches with final scores |
-| `data/processed/core/players_cleaned.parquet` | Real player profiles (FBref-sourced) |
-| `data/processed/core/teams_cleaned.parquet` | 1,538 real teams |
+| `data/processed/core/players_cleaned.parquet` | 18,782 real player profiles (FBref 2005-2025 + StatsBomb, identity-deduped) |
+| `data/processed/core/teams_cleaned.parquet` | 1,338 real teams |
 
 These are the ground-truth anchors for every downstream step.
 
@@ -59,33 +59,46 @@ print('Matches:', len(m), '| Players:', len(p), '| Teams:', len(t))
 
 ---
 
-## Step 2 — Rebuild Realistic Datasets
+## Step 2 — Rebuild the Data Layer (optional — committed parquet already contain the result)
 
-This is the **core pipeline step**. It:
-- Anchors all goals to real match scorelines (sum per team == real score)
+This is the **core pipeline step**, in two stages:
+
+**2a. Real-only observed layer** — enforces the real-only data policy:
+- Removes every invented entity (`{team} {season} Squad NN` placeholder players)
 - Resolves duplicate player identities (CR7 / CristianoRonaldo to one canonical ID)
-- Applies real FBref per-90 rates (shots, passes, tackles) from StatsBomb
-- Tags every row with `data_provenance`
+- Real StatsBomb participations (86,137 rows) and real event-stream goals
 
 ```bash
-python -m src.rebuild_realistic_datasets
+# Requires data/raw StatsBomb inputs (not versioned) — ingest first:
+python -m src.ingest_statsbomb_full
+python -m src.build_real_only_datasets
 ```
 
-Expected output:
-```
-Loading anchors from committed parquet...
-Resolving player identities (name normalisation + fuzzy merge)...
-  merged N duplicate player ids into canonical entities
-Allocating goals to real scorelines...
-  allocated 254,xxx player-goals (real total = 254,xxx)
-Rebuilding base player_match (shots/cards consistent)...
-Building goal-events base (real-sized goal table)...
-Writing matches: 94,525 rows x N cols
-Writing players: N rows x N cols
+**2b. Real-roster participation layer (≥1.5M rows)** — expands real FBref Big-5
+rosters (2005-2025) over their clubs' real deduplicated fixtures:
+- 100% real identities, nation-blocked homonym separation (two same-named players
+  from different countries stay distinct entities)
+- Per-player season sums of goals/assists/shots/cards **equal the real FBref
+  season totals** (verified in `logs/roster_participation_report.json`)
+- Observed StatsBomb rows always take precedence over derived rows
+
+```bash
+python -m src.ingest_real_player_data          # FBref Big-5 rosters 2005-2025
+python -m src.build_roster_participation_datasets
 ```
 
-Output files written to `data/processed/core/` (CSV + Parquet).  
-**Verification report:** `logs/realistic_rebuild_report.json`
+Skip this step entirely when working from a fresh clone: the committed LFS parquet
+under `data/processed/` are the verified output of this step.
+
+Resulting sizes: 18,782 players · 1,338 teams · **1,935,463 player-match rows** ·
+75,925 player-attributed scoring rows · 52,387 player-seasons · 1,751,751
+event-stream rows.
+
+> **Deprecated:** the earlier `python -m src.rebuild_realistic_datasets`
+> (scoreline-anchored multinomial goal allocation, `logs/realistic_rebuild_report.json`)
+> was the Week-10 remediation stage and is superseded by the stages above.
+> Do not run it on top of the current tables — it would reintroduce simulated
+> per-player allocations.
 
 ---
 
@@ -150,6 +163,14 @@ To run example queries interactively:
 ```bash
 python -m src.recommendation_engine
 ```
+
+Supervised representation probe (position classification, real subset in the 0.85–0.95 band):
+
+```bash
+python -m src.supervised_evaluation
+```
+
+Outputs: `artifacts/supervised_evaluation.json`, `reports/supervised_evaluation_report.md`
 
 ---
 
@@ -241,8 +262,37 @@ The dashboard shows:
 ## Step 12 — Run Diagnostic Tests
 
 ```bash
+# Core reproducibility gate (offline, fast):
+python -m pytest tests -q --ignore=tests/api_diagnostics --ignore=tests/scrapers
+
+# Network-bound source diagnostics (optional):
 python tests/api_diagnostics/run_all_tests.py
 ```
+
+---
+
+## Step 13 — Deploy the Demo (free tier only)
+
+### 13a. Static dashboard → GitHub Pages (primary, zero cost)
+
+The workflow `.github/workflows/deploy-pages.yml` publishes `reports/demo/` to GitHub Pages on
+every push to `main` that touches the demo. One-time setup by the repo owner:
+
+1. GitHub → repo **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. Push to `main` (or run the workflow manually from the Actions tab)
+3. The dashboard is served at `https://<owner>.github.io/goaldata-league/`
+
+The demo is fully self-contained (`data.js` is inlined) — no build step, no server, no cost.
+
+### 13b. Streamlit app → Streamlit Community Cloud (optional, also free)
+
+1. Sign in at https://share.streamlit.io with the GitHub account
+2. New app → repository `JoanixX/goaldata-league`, branch `main`, main file `app.py`
+3. Dependencies install from `requirements.txt` automatically
+
+Note: the app reads LFS-tracked parquet files. If the free tier fails to fetch LFS objects,
+keep the Pages dashboard as the deployed demo and run the app locally:
+`streamlit run app.py`.
 
 ---
 
@@ -263,7 +313,7 @@ python tests/api_diagnostics/run_all_tests.py
 ```
 goaldata-league/
 ├── src/                         # Core pipeline scripts
-│   ├── rebuild_realistic_datasets.py   # Step 2 — data rebuild
+│   ├── build_real_only_datasets.py     # Step 2 — real-only data rebuild
 │   ├── build_pca_feature_matrix.py     # Step 4 — PCA
 │   ├── build_clustering_analysis.py    # Step 5 — clustering
 │   ├── recommendation_engine.py        # Scouting recommender

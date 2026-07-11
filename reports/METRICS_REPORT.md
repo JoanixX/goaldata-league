@@ -4,16 +4,12 @@ Auto-generated from pipeline artifacts by `src/build_metrics_report.py`. All val
 
 ## 1. Dataset & provenance (exact counts)
 
-_(dataset read failed: No match for FieldRef.Name(goal_id) in player_id: large_string
-match_id: int64
-season: large_string
-competition: large_string
-team: large_string
-goals: int32
-__fragment_index: int32
-__batch_index: int32
-__last_in_fragment: bool
-__filename: string)_
+- matches: **94,525** (all observed scorelines)
+- teams: **1,338** (all observed)
+- goal-event rows: **75,925** (player-attributed, scoreline-anchored)
+- players: **18,782** (all real identities, deduped)
+- player-season rows: **52,387** | player-match rows: **1,935,463**
+- real StatsBomb event-stream rows: **1,751,751** (>=1.5M requirement)
 
 ## 2. Representation / PCA (Week 5)
 
@@ -91,21 +87,21 @@ Top 10 by PageRank:
 
 ## 6. Decision layer (P2)
 
-Optimal XI (`optimal_xi_2021-2022_4-3-3.csv`), total rating = **26.090**:
+Optimal XI (`optimal_xi_2021-2022_4-3-3.csv`), total rating = **27.445**:
 
 | player_name | position_group | minutes_played | rating |
 | --- | --- | --- | --- |
-| Benjamin Henrichs | DEF | 1143 | 2.9191 |
-| Ricardo Pereira | DEF | 991 | 2.6860 |
-| Alex Ferrari | DEF | 1643 | 2.5656 |
-| Vladimír Coufal | DEF | 2209 | 2.5293 |
-| Robert Lewandowski | FW | 2946 | 3.2030 |
-| Patrik Schick | FW | 2076 | 2.9917 |
-| Mohamed Salah | FW | 2762 | 2.8481 |
-| Jasper Cillessen | GK | 1457 | 0.0000 |
-| Exequiel Palacios | MID | 1097 | 2.1880 |
-| Marco Verratti | MID | 1937 | 2.1087 |
-| Kevin De Bruyne | MID | 2201 | 2.0500 |
+| Benjamin Henrichs | DEF | 1143 | 3.1366 |
+| Ricardo Pereira | DEF | 991 | 2.8428 |
+| Alex Ferrari | DEF | 1643 | 2.7888 |
+| Vladimír Coufal | DEF | 2209 | 2.7161 |
+| Robert Lewandowski | FW | 2946 | 3.3866 |
+| Patrik Schick | FW | 2076 | 3.1695 |
+| Erling Haaland | FW | 1911 | 2.9935 |
+| Mark Flekken | GK | 2880 | 0.0000 |
+| Exequiel Palacios | MID | 1097 | 2.1981 |
+| Kevin De Bruyne | MID | 2201 | 2.1150 |
+| Domenico Berardi | MID | 2819 | 2.0981 |
 
 Real per-player xG (`player_xg_22912.csv`), top 8:
 
@@ -127,8 +123,9 @@ Task: player position-group classification (GK/DEF/MID/FW) | full catalog n=3670
 | model | accuracy | macro_f1 | weighted_f1 |
 | --- | --- | --- | --- |
 | baseline (majority class) | 0.4139 | 0.1464 | 0.2424 |
-| RandomForest | 0.7386 | 0.7762 | 0.7381 |
-| GradientBoosting | 0.7364 | 0.7746 | 0.7364 |
+| RandomForest | 0.7440 | 0.7833 | 0.7434 |
+| GradientBoosting | 0.7429 | 0.7792 | 0.7431 |
+| HistGradientBoosting | 0.7571 | 0.7858 | 0.7566 |
 
 
 Real-feature subset (StatsBomb-covered players) — where high scores are legitimate:
@@ -136,5 +133,14 @@ Real-feature subset (StatsBomb-covered players) — where high scores are legiti
 | model | accuracy | macro_f1 | weighted_f1 |
 | --- | --- | --- | --- |
 | baseline (majority class) | 0.4104 | 0.1455 | 0.2389 |
-| RandomForest | 0.8208 | 0.8388 | 0.8205 |
-| GradientBoosting | 0.8404 | 0.8375 | 0.8381 |
+| RandomForest | 0.8436 | 0.8618 | 0.8436 |
+| GradientBoosting | 0.8697 | 0.8658 | 0.8685 |
+| HistGradientBoosting | 0.8730 | 0.8842 | 0.8729 |
+
+## 8. Event-based real representation (hybrid recommender)
+
+Real StatsBomb event-style features (with pitch location): **47** columns, 1577 player-seasons.
+
+| same_player_recall@5 (proxy) | same_position_precision@5 (unfiltered, higher-ceiling) | position_macro_f1 |
+| --- | --- | --- |
+| 0.2663 | 0.8386 | 0.9291 |

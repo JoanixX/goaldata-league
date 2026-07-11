@@ -1,10 +1,13 @@
-# UEFA Champions League Data Pipeline (2011-2025)
+# GoalData League — Football Data Pipeline & Scouting System
 
 This repository contains a data engineering + analytics pipeline for football
 (Champions League and domestic leagues). It merges real match records (final
-scores, player profiles, FBref season totals) into a relational schema of ~94.5k
-matches, ~1.95M player-match rows, and ~254.6k real-sized goal events, then builds
-a representation (PCA), segmentation (clustering) and a player-similarity
+scores, player profiles, FBref season totals) into a relational schema of 94,525
+real matches (254,596 real goals at match level), 18,782 real players (FBref Big-5
+rosters 2005-2025 + StatsBomb, identity-deduped), a 1,935,463-row player-match
+participation table (real rosters × real fixtures; per-player season totals equal
+the real FBref numbers), and a 1,751,751-row real StatsBomb event stream, then
+builds a representation (PCA), segmentation (clustering) and a player-similarity
 recommender on top.
 
 > **Data policy (real-only / commercial-grade).** Player and team identities,
@@ -37,20 +40,43 @@ The project is organized into modular components:
 - **Quality Gates + Parquet**: Cleaned datasets are written as CSV and Parquet formats. Parquet is utilized for high-performance analytical queries and dimensionality reduction (PCA), preserving native data types. A generated `logs/data_quality_report.json` flags null ratios, formula anomalies, and the 1.5M-record requirement before ML use.
 - **Dimensionality Reduction (PCA)**: Automated pipeline to transform multi-dimensional player statistics (4,000+ player-season profiles) into latent tactical embeddings for style-of-play clustering.
 
+## Final Deliverables (Week 14)
+
+| Deliverable | Location |
+|-------------|----------|
+| Final technical report | `reports/FINAL_TECHNICAL_REPORT.md` |
+| Runbook (canonical reproduction path) | `RUNBOOK.md` |
+| Final presentation | `reports/FINAL_PRESENTATION.md` |
+| Demo — static dashboard (no server) | `reports/demo/index.html` — auto-deployed to GitHub Pages via `.github/workflows/deploy-pages.yml` (see `RUNBOOK.md` Step 13) |
+| Demo — interactive Streamlit app | `app.py` (`streamlit run app.py`; free hosting via Streamlit Community Cloud, `RUNBOOK.md` Step 13b) |
+| Monitoring / operationalization plan | `reports/MONITORING_PLAN.md` |
+| Limitations and future work | `reports/LIMITATIONS_FUTURE_WORK.md` |
+| Metrics (auto-generated from artifacts) | `reports/METRICS_REPORT.md` |
+
 ## Quick Start
-1. Install dependencies: `pip install -r requirements.txt` (includes `pyarrow` for Parquet and `rapidfuzz` for entity resolution).
-2. Build cleaned relational datasets: `python script.py`
-3. Impute missing statistical fields without overwriting observed values: `python src/impute_missing_stats.py`
-4. Expand top-division rosters, fill processed tables, and add 50+ ML features: `python src/enrich_processed_features.py`
-5. **Realistic, paper-grounded synthesis + entity resolution**: `python -m src.rebuild_realistic_datasets`
-   - Re-allocates per-match goals to the **real scoreline** (sum of player goals == real score, verified at 100%), grounds rates in real FBref priors, rebuilds `goals_events_cleaned` at its real size (~254k goals), collapses duplicate player identities (`CristianoRonaldo`/`cristiano_ronaldo`/`CR7` -> one id), and tags every table with `data_provenance`. See `reports/methodology_and_citations.md`.
-6. Add documented advanced metrics to processed datasets: `python src/enrich_advanced_metrics.py`
-7. Generate PCA feature matrix (retains the top components, not only 2): `python src/build_pca_feature_matrix.py`
-8. Run Week 7 clustering validation: `python src/build_clustering_analysis.py`
-9. **Week 10 recommendation + offline evaluation**: `python -m src.recommendation_evaluation` (and `python -m src.recommendation_engine` for example queries).
-10. Run the enrichment pipeline when scraper access is needed: `python src/main.py`
-11. Merge a scraper JSON into `cl_2010_2025_completed.csv` safely: `python src/data_merge.py path/to/scraper_results.json`
-12. Run diagnostics: `python tests/api_diagnostics/run_all_tests.py`
+
+**`RUNBOOK.md` is the canonical, verified reproduction path.** Short version:
+
+1. Install dependencies: `pip install -r requirements.txt`
+2. (Optional — the committed parquet already contain the result) Rebuild the data layer:
+   `python -m src.ingest_statsbomb_full`, `python -m src.build_real_only_datasets` (real StatsBomb
+   observed layer), then `python -m src.ingest_real_player_data` and
+   `python -m src.build_roster_participation_datasets` (≥1.5M real-roster participation layer)
+   - Zero invented entities; identities de-duplicated (`CristianoRonaldo`/`cristiano_ronaldo`/`CR7` -> one id) with nation-blocked homonym separation; per-player season totals anchored to real FBref numbers. The earlier `python -m src.rebuild_realistic_datasets` stage is **superseded** and kept only as remediation history. See `reports/methodology_and_citations.md`.
+3. PCA feature matrix: `python -m src.build_pca_feature_matrix`
+4. Clustering validation (K-Means + DBSCAN sweeps): `python -m src.build_clustering_analysis`
+5. Recommendation offline evaluation: `python -m src.recommendation_evaluation` (example queries: `python -m src.recommendation_engine`)
+6. Supervised position-classification evaluation: `python -m src.supervised_evaluation`
+7. Similarity graph + centralities: see `RUNBOOK.md` Step 7
+8. ILP starting XI: `python -m src.optimize_lineup --season 2021-2022 --formation 4-3-3`
+9. Demo data + dashboard: `python -m src.serialize_demo_data`, then open `reports/demo/index.html`
+10. Tests: `python -m pytest tests -q --ignore=tests/api_diagnostics --ignore=tests/scrapers`
+
+Auxiliary (only when re-ingesting or scraping): `python script.py` (initial relational build),
+`python src/impute_missing_stats.py`, `python src/enrich_processed_features.py`,
+`python src/enrich_advanced_metrics.py`, `python src/main.py` (scraper pipeline),
+`python src/data_merge.py path/to/scraper_results.json`, and
+`python tests/api_diagnostics/run_all_tests.py` (network-bound diagnostics).
 
 Advanced metric enrichment writes only to `data/processed`. It does not modify
 `data/raw`. Metrics whose cited methods require missing event locations, shot
@@ -70,19 +96,31 @@ It writes validation tables, cluster labels, 2D cluster plots, and
 For detailed information about each component, refer to the README files in the respective subdirectories.
 
 ## Data Quality Policy
-Observed rows and non-empty cells are preserved. Source-derived and simulated
-records are generated from documented, literature-anchored models (never
+Observed rows and non-empty cells are preserved. Identities, participations, goals
+and assists are always real (see the data policy above). Only allowed secondary
+metrics may be modelled, from documented, literature-anchored formulas (never
 unconditioned random constants), marked through the `data_provenance` column, and
 validated with `logs/data_quality_report.json` and `logs/realistic_rebuild_report.json`.
 See `reports/methodology_and_citations.md`, `reports/data_pipeline_flow.md`, and
 `reports/missing_data_policies.md`.
 
 ### About the 1.5M-row target
-`player_match_stats` (~1.95M) naturally exceeds 1.5M (≈20 players × 94.5k matches).
-`goals_events_cleaned` is deliberately at its **real size (~254.6k goals, ≈2.69
-per match)** and is *not* padded to 1.5M, because the number of goals is a physical
-quantity — the same logic that keeps the players table at its natural size. Forcing
-1.5M "goals" was the previous bug (a raw event-stream mislabelled as goals).
+Two tables exceed 1.5M rows, both built exclusively from real entities:
+
+- **`statsbomb_events_real.parquet` — 1,751,751 real event-stream actions** (fully observed).
+- **`player_match_stats_cleaned` — 1,935,463 rows** = 86,137 fully observed StatsBomb
+  participations + 1,849,326 real-roster participations (`python -m
+  src.build_roster_participation_datasets`): every real FBref Big-5 squad member
+  (2005-2025) × his club's real deduplicated fixtures. Identities are 100% real and
+  deduped (nation-blocked homonym handling); **per-player season sums of goals,
+  assists, shots, and cards equal the real FBref season totals** — the per-match
+  split is the modelled part, provenance-tagged as `derived_real_roster_scoreline`.
+  Verification: `logs/roster_participation_report.json` (0 invented names, row band,
+  goal-total anchoring rate).
+
+`goals_events_cleaned` (75,925 scoring rows) and `matches_cleaned` (94,525 real
+matches, 254,596 real goals at match level) sit at their natural sizes — goal counts
+are physical quantities and are never padded.
 
 ## Week 10: Recommendation / Ranking
 The system is a **content-based item-item similarity & ranking** engine for

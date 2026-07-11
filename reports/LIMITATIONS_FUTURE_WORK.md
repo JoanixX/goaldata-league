@@ -21,7 +21,7 @@ StatsBomb Open Data is not a complete census of professional football. It covers
 - Full event streams for certain domestic league seasons
 - 24 competitions total
 
-**Impact:** Real per-90 style rates (shots, passes, tackles, interceptions) are only available for **~1,435 players** covered by StatsBomb-tracked matches (out of 7,086 in the full catalog). The remaining ~5,651 players receive position-median imputed values. This creates a two-tier system where StatsBomb-covered players have genuine individual fingerprints, and others have shared position profiles that reduce recommendation resolution.
+**Impact:** Real per-90 style rates (shots, passes, tackles, interceptions) are only available for **~1,435 players** covered by StatsBomb-tracked matches (out of 18,782 in the full catalog). The remaining players carry real FBref season totals, but their per-match split and pass/tackle volumes are modelled (position-median rates, provenance-tagged). This creates a two-tier system where StatsBomb-covered players have genuine individual fingerprints, and others have shared position profiles that reduce recommendation resolution.
 
 **Evidence:** Recommendation MRR is significantly higher for players with StatsBomb coverage than for those relying on imputation.
 

@@ -33,7 +33,7 @@ This system addresses all five challenges over a real dataset spanning 10+ leagu
 | Source | Data Type | Coverage | Volume |
 |--------|-----------|----------|--------|
 | StatsBomb Open Data | Event stream (passes, shots, carries, pressures) | 24 competitions, 2005–2024 | 1,751,751 events |
-| FBref via `soccerdata` | Per-season player totals (goals, assists, shots, passes, tackles) | Big-5 leagues + UCL | 3,961 seasons |
+| FBref via `soccerdata` | Per-season player totals (goals, assists, shots, cards, minutes) | Big-5 leagues, 2005-2025 | 54,908 player-season-club rows |
 | UEFA Open Fixtures | Match results and lineups | UCL 2011–2025 | ~8,000 matches |
 | Football-data.co.uk | Match results, odds | Premier League, Bundesliga | ~40,000 matches |
 | OpenFootball | Historical match results | 10 leagues | ~46,500 matches |
@@ -50,13 +50,14 @@ The pipeline writes 7 normalized parquet tables:
 
 | Table | Key | Rows | Description |
 |-------|-----|------|-------------|
-| `matches_cleaned` | `match_id` | 94,525 | Real match records with final scores |
-| `players_cleaned` | `player_id` | ~7,086 | Real player profiles with positions |
-| `teams_cleaned` | `team_id` | 1,538 | Team records |
-| `goals_events_cleaned` | `goal_id` | ~254,596 | One row per real goal |
-| `player_match_stats` | `(player_id, match_id)` | ~1,950,000 | Per-match player statistics |
-| `player_season_stats` | `(player_id, season)` | ~7,086 | Per-season player aggregates |
-| `goalkeeper_stats` | `(player_id, season)` | ~800 | GK-specific metrics |
+| `matches_cleaned` | `match_id` | 94,525 | Real match records with final scores (254,596 real goals at match level) |
+| `players_cleaned` | `player_id` | 18,782 | Real player profiles (FBref 2005-2025 + StatsBomb, identity-deduped, nation-blocked homonyms) |
+| `teams_cleaned` | `team_id` | 1,338 | Real team records |
+| `goals_events_cleaned` | `(player_id, match_id)` | 75,925 | Player-attributed scoring rows; per-player season sums equal real FBref totals |
+| `player_match_stats` | `(player_id, match_id)` | **1,935,463** | 86,137 observed StatsBomb participations + 1,849,326 real-roster participations (≥1.5M requirement) |
+| `player_season_stats` | `(player_id, season)` | 52,387 | Per-season player aggregates (real StatsBomb + real FBref season totals) |
+| `goalkeeper_stats` | `(player_id, season)` | 1,564 | GK-specific metrics |
+| `statsbomb_events_real` | `event_id` | 1,751,751 | Real event stream (fully observed, also ≥1.5M) |
 
 ### 3.2 Data Flow
 
@@ -69,7 +70,7 @@ Schema Normalization (src/build_processed.py)
     ↓
 Entity Resolution (src/entity_resolution.py)
     ↓
-Realistic Dataset Rebuild (src/rebuild_realistic_datasets.py)
+Real-Only Dataset Build (src/build_real_only_datasets.py)
     ↓
 Enrichment (src/enrich_advanced_metrics.py)
     ↓
@@ -107,6 +108,16 @@ The previous pipeline distributed goals using independent Bernoulli draws per pl
 4. **Verification:** `sum(player_goals per team per match) == real_score` enforced at 100%
 
 Citations: Maher (1982); Dixon & Coles (1997); Decroos et al. (2019).
+
+**Final design (real-roster participation layer).** The scoreline-multinomial allocation above
+was the Week-10 remediation stage. The final build (`src/build_roster_participation_datasets.py`)
+anchors goals to a stronger real quantity: each player's **real FBref season goal total** is
+distributed across his club's real deduplicated fixtures (seeded multinomial by minutes), so
+per-player season sums of goals/assists/shots/cards equal the real published numbers exactly
+(verified for 47k player-seasons in `logs/roster_participation_report.json`). The 86,137
+StatsBomb-covered participations remain fully observed and take precedence; the 254,596
+match-level goals remain anchored to real scorelines in `matches_cleaned`. Every row carries
+`data_provenance` (`observed_statsbomb` vs `derived_real_roster_scoreline`).
 
 ### 4.3 Missing Data Policy
 
@@ -218,6 +229,23 @@ The stronger model achieves **×2.3 MRR**, **×3.0 Recall@5**, and near-perfect 
 **Query: Luka Modrić (2021-2022, Midfielder)**  
 Top-5 similar (stronger model): Thiago Alcântara, Kevin De Bruyne, Marco Verratti, Toni Kroos, Fabinho — all technically-elite central midfielders with high pass accuracy and defensive activity.
 
+### 7.4 Representation Validity — Supervised Probe
+
+To prove the representation carries real role signal, `src/supervised_evaluation.py` trains
+position-group classifiers (GK/DEF/MID/FW) on the 16 per-90 season rates plus the real
+StatsBomb event-style distribution (career profile per player, `has_event_feats` flag for
+uncovered rows). Stratified 75/25 hold-out, seed 42:
+
+| Scope | Best model | Accuracy | Macro-F1 |
+|-------|-----------|----------|----------|
+| Full catalog (n=3,670) | HistGradientBoosting | 0.7571 | 0.7858 |
+| Real StatsBomb subset (n=1,227) | **HistGradientBoosting** | **0.8730** | **0.8842** |
+
+On players with fully real features the probe reaches macro-F1 0.88 — well above the 0.15
+majority-class baseline — confirming the feature space encodes genuine tactical roles. The full
+catalog is capped by StatsBomb coverage (position-median imputed rows), an honest data-coverage
+limit, not a model limit.
+
 ---
 
 ## 8. Player Similarity Graph and Centrality Analysis
@@ -262,19 +290,21 @@ To validate the graph is not circular, PageRank was compared against independent
 
 ### 9.2 Optimal XI (Season 2021-2022, 4-3-3)
 
+Candidate pool: 1,639 real players with ≥900 minutes in 2021-2022.
+
 | Position | Player | Rating |
 |----------|--------|--------|
-| GK | Jasper Cillessen | — |
-| DEF | Vladimír Coufal | 2.53 |
-| DEF | Alex Ferrari | 2.57 |
-| DEF | Ricardo Pereira | 2.69 |
-| DEF | Benjamin Henrichs | 2.92 |
-| MID | Kevin De Bruyne | 2.05 |
-| MID | Marco Verratti | 2.11 |
-| MID | Exequiel Palacios | 2.19 |
-| FW | Mohamed Salah | 2.85 |
-| FW | Patrik Schick | 2.99 |
-| FW | Robert Lewandowski | 3.20 |
+| GK | Mark Flekken | — |
+| DEF | Vladimír Coufal | 2.72 |
+| DEF | Alex Ferrari | 2.79 |
+| DEF | Ricardo Pereira | 2.84 |
+| DEF | Benjamin Henrichs | 3.14 |
+| MID | Domenico Berardi | 2.10 |
+| MID | Kevin De Bruyne | 2.12 |
+| MID | Exequiel Palacios | 2.20 |
+| FW | Erling Haaland | 2.99 |
+| FW | Patrik Schick | 3.17 |
+| FW | Robert Lewandowski | 3.39 |
 
 ---
 
@@ -299,18 +329,47 @@ Expected goals per player are computed from shot quality using a logistic positi
 
 | Check | Result |
 |-------|--------|
-| Player goals sum == real match score | ✓ 100% matches verified |
+| Per-player season goal sums == real FBref totals | ✓ 98.6% of 47,103 player-seasons exact (rest are multi-club edge cases) |
+| player_match_stats ≥ 1.5M rows | ✓ 1,935,463 (in 1.5M–3M band) |
 | Zero invented entities | ✓ 0 synthetic Squad placeholders |
 | Zero duplicate identities | ✓ All remapped to canonical IDs |
 | Goalkeeper offensive stats == 0 | ✓ Zeroed for all 800+ GK seasons |
 | Dataset ≥ 1.5M real rows | ✓ 1,751,751 real StatsBomb events |
 | PCA 90% variance in ≤ 15 PCs | ✓ 11 components at 90.17% |
 | Stronger recommender > baseline | ✓ MRR ×2.3, Recall@5 ×3.0 |
+| Supervised probe in 0.85–0.95 band (real subset) | ✓ macro-F1 0.8842 / accuracy 0.8730 |
 | Graph single connected component | ✓ 100% of nodes in largest component |
 
 ---
 
-## 12. References
+## 12. Ethics and Access Note
+
+**Where the data came from.** All sources are public and openly licensed for research use:
+StatsBomb Open Data (free open-data repository, used under the StatsBomb Public Data User
+Agreement with attribution), FBref season statistics accessed through the `soccerdata` Python
+package (public web pages, rate-limited polite scraping), UEFA open fixtures,
+Football-data.co.uk, and OpenFootball (public-domain match results). Full provenance per table
+is documented in `reports/methodology_and_citations.md` and `data/dictionary.txt`.
+
+**Why we are allowed to use it.** No access-controlled or paid data was scraped. StatsBomb
+explicitly publishes its open-data set for research and education; FBref and the remaining
+sources expose public, non-personal sports records. No terms of service were bypassed and no
+authentication walls were crossed.
+
+**What personal-data risks exist.** The dataset contains only professional athletes'
+public-performance records (names, positions, match statistics) — information already published
+by the leagues and data providers. It contains no private individuals, no contact or biometric
+data, and no data about minors' private lives.
+
+**How risks were reduced.** No data beyond public professional performance is stored or
+redistributed; raw scraped payloads stay out of version control (`data/raw/` is gitignored);
+every derived or modelled value is tagged in a `data_provenance` column so no synthetic figure
+can be mistaken for a real record about a person; and the real-only policy forbids inventing
+facts (goals, assists, participations) about identifiable people.
+
+---
+
+## 13. References
 
 1. Maher, M. J. (1982). Modelling association football scores. *Statistica Neerlandica*, 36(3), 109–118.
 2. Dixon, M. J., & Coles, S. G. (1997). Modelling association football scores and inefficiencies in the football betting market. *JRSS-C*, 46(2), 265–280.

@@ -29,7 +29,7 @@ The pipeline is currently batch-oriented (no real-time requirement), with natura
 | Full match ingestion | End of match day (22:00 local) | `python -m src.download_football_data` |
 | StatsBomb event refresh | Weekly (Monday 01:00) | `python -m src.ingest_statsbomb_full` |
 | FBref season stats | Bi-weekly (Monday 02:00) | `python -m src.ingest_real_player_data` |
-| Realistic dataset rebuild | Weekly (Monday 03:00) | `python -m src.rebuild_realistic_datasets` |
+| Real-only dataset rebuild | Weekly (Monday 03:00) | `python -m src.build_real_only_datasets` |
 | PCA + clustering refresh | Weekly (Monday 04:00) | `python -m src.build_pca_feature_matrix && python -m src.build_clustering_analysis` |
 | Recommendation re-index | Weekly (Monday 05:00) | `python -m src.recommendation_evaluation` |
 | Graph re-build | Weekly (Monday 05:30) | `python graph/build_similarity_graph.py && python graph/analyze_similarity_graph.py` |
@@ -44,12 +44,48 @@ The pipeline is currently batch-oriented (no real-time requirement), with natura
 # Full weekly pipeline — Monday 01:00 to 06:00
 0 1 * * 1 cd /opt/goaldata && python -m src.ingest_statsbomb_full >> logs/cron_statsbomb.log 2>&1
 0 2 * * 1 cd /opt/goaldata && python -m src.ingest_real_player_data >> logs/cron_fbref.log 2>&1
-0 3 * * 1 cd /opt/goaldata && python -m src.rebuild_realistic_datasets >> logs/cron_rebuild.log 2>&1
+0 3 * * 1 cd /opt/goaldata && python -m src.build_real_only_datasets >> logs/cron_rebuild.log 2>&1
 0 4 * * 1 cd /opt/goaldata && python -m src.build_pca_feature_matrix >> logs/cron_pca.log 2>&1
 30 4 * * 1 cd /opt/goaldata && python -m src.build_clustering_analysis >> logs/cron_cluster.log 2>&1
 0 5 * * 1 cd /opt/goaldata && python -m src.recommendation_evaluation >> logs/cron_rec.log 2>&1
 30 5 * * 1 cd /opt/goaldata && python -m src.serialize_demo_data >> logs/cron_demo.log 2>&1
 ```
+
+### 2.3 Free-Tier Implementation (GitHub Actions)
+
+The same job graph runs at zero cost on GitHub Actions for public repositories, replacing the
+dedicated server assumed above. One workflow with a `schedule:` trigger covers the weekly
+refresh; each step is the same documented command:
+
+```yaml
+# .github/workflows/weekly-pipeline.yml (reference — enable only if weekly refresh is desired)
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # Monday 03:00 UTC
+  workflow_dispatch: {}
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { lfs: true }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r requirements.txt
+      - run: python -m src.build_pca_feature_matrix
+      - run: python -m src.build_clustering_analysis
+      - run: python -m src.recommendation_evaluation
+      - run: python -m src.supervised_evaluation
+      - run: python -m src.serialize_demo_data
+```
+
+The heavy ingestion/rebuild steps stay manual (they exceed free-runner time budgets and the
+underlying open datasets change rarely). Quality-gate JSONs (`logs/*.json`,
+`artifacts/*.json`) double as CI assertions: a gate script exiting non-zero fails the workflow,
+which is the free-tier equivalent of the CRITICAL alerts in §6 (GitHub sends failure e-mails at
+no cost). This workflow is intentionally **not** committed by default to avoid burning Actions
+minutes on a course project; the demo deployment workflow (`deploy-pages.yml`) is the only CI
+that runs automatically.
 
 ---
 
@@ -69,11 +105,12 @@ Each pipeline step has automated quality gates. A gate **failure blocks the next
 
 | Check | Expected | Alert |
 |-------|----------|-------|
-| `player_goals_equal_real` | `true` | CRITICAL — stops pipeline |
-| `allocated_player_goals == real_total_goals` | Exact match | CRITICAL |
+| Zero invented entities (`Squad NN` placeholders) | 0 rows | CRITICAL — stops pipeline |
+| Zero duplicate player identities after canonicalization | 0 duplicates | CRITICAL |
 | `goals_events_rows` within ±5% of previous week | Sudden spike/drop | WARNING |
-| `player_match_rows ≥ 1,500,000` | Always | CRITICAL |
-| `data_provenance` column present in all 7 tables | 100% | CRITICAL |
+| `statsbomb_events_real` rows ≥ 1,500,000 | Always | CRITICAL |
+| `player_match_stats` rows ≥ 1,500,000 and ≤ 3,000,000 | Out of band | CRITICAL |
+| Per-player season goal sums == real FBref totals (`season_total_match_rate` ≥ 0.98) | Below 0.98 | CRITICAL |
 | Zero null in numeric columns | 0 nulls after fill | WARNING |
 
 Implementation: `logs/realistic_rebuild_report.json` is parsed by a lightweight CI check:

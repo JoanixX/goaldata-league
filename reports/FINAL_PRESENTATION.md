@@ -63,7 +63,7 @@
 | Source | Type | Volume |
 |--------|------|--------|
 | StatsBomb Open Data | Event stream | **1,751,751 real actions** |
-| FBref via soccerdata | Season totals | 3,961 player-seasons |
+| FBref via soccerdata | Season totals & rosters (2005-2025) | 54,908 player-season-club rows |
 | UEFA / OpenFootball | Match results | 94,525 real matches |
 
 ### Non-negotiable constraint
@@ -82,12 +82,13 @@
 
 | Metric | Before | After |
 |--------|--------|-------|
-| Real players | 190,979 (~4%) | **7,086 (100%)** |
+| Real players | 190,979 (~4%) | **18,782 (100%)** |
 | Impossible GK seasons (>3 goals/90) | 506 | **0** |
 | Duplicate identities (CR7 / CristianoRonaldo) | Unresolved | **0** |
-| 1.5M dataset | 1.95M simulated rows | **1.75M real StatsBomb events** |
+| 1.5M dataset | 1.95M simulated rows | **1.75M real events + 1.94M real-roster rows** |
 | Recommender MRR | 0.0018 | **0.179 (×99)** |
 | Position purity@5 | 0.59 (random) | **0.998** |
+| Position classification macro-F1 (real subset) | — | **0.884** (HistGradientBoosting) |
 
 ---
 
@@ -226,13 +227,13 @@ Subject to:
   x_i ∈ {0, 1}  ∀ i
 ```
 
-### Optimal XI — Season 2021-2022, 4-3-3
+### Optimal XI — Season 2021-2022, 4-3-3 (pool: 1,639 real players)
 
 ```
-         Jasper Cillessen (GK)
+           Mark Flekken (GK)
   Coufal  Ferrari  Pereira  Henrichs
-      De Bruyne  Verratti  Palacios
-         Salah  Lewandowski  Schick
+     De Bruyne  Berardi  Palacios
+     Haaland  Lewandowski  Schick
 ```
 
 ---
@@ -295,7 +296,7 @@ Subject to:
 
 ```
 StatsBomb (1.75M events)
-FBref (3,961 seasons)
+FBref (54,908 roster rows, 2005-2025)
 UEFA / OpenFootball (94,525 matches)
            ↓
 Entity Resolution → Schema Normalization → Provenance Tagging
@@ -321,12 +322,12 @@ Interactive Dashboard (reports/demo/index.html)
 
 **Demo:** Open `reports/demo/index.html` in any browser — no server required.
 
-**Reproduce everything:**
+**Reproduce everything** (committed parquet already contain the data-build result):
 ```bash
-python -m src.rebuild_realistic_datasets
 python -m src.build_pca_feature_matrix
 python -m src.build_clustering_analysis
 python -m src.recommendation_evaluation
+python -m src.supervised_evaluation
 python -m src.serialize_demo_data
 ```
 
