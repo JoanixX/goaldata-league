@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-07-11T09:29:38",
+  "representation": "real StatsBomb event-style (with pitch location)",
+  "n_features": 47,
+  "same_player_recall@5": 0.2663,
+  "same_position_precision@5_unfiltered": 0.8386,
+  "n_nodes": 1577,
+  "n_query_players_multi_season": 233,
+  "position_macro_f1": 0.9291
+}

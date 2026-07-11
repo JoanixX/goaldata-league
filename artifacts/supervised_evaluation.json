@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T02:02:27",
+  "generated_at": "2026-07-11T09:17:56",
   "task": "player position-group classification (GK/DEF/MID/FW)",
   "n_full": 3670,
   "n_real_subset": 1227,
@@ -19,7 +19,38 @@
     "pass_accuracy",
     "goal_conversion_rate",
     "defensive_actions_per90",
-    "discipline_points_per90"
+    "discipline_points_per90",
+    "evt_50/50",
+    "evt_Bad Behaviour",
+    "evt_Ball Receipt*",
+    "evt_Ball Recovery",
+    "evt_Block",
+    "evt_Carry",
+    "evt_Clearance",
+    "evt_Dispossessed",
+    "evt_Dribble",
+    "evt_Dribbled Past",
+    "evt_Duel",
+    "evt_Error",
+    "evt_Foul Committed",
+    "evt_Foul Won",
+    "evt_Goal Keeper",
+    "evt_Injury Stoppage",
+    "evt_Interception",
+    "evt_Miscontrol",
+    "evt_Offside",
+    "evt_Own Goal Against",
+    "evt_Own Goal For",
+    "evt_Pass",
+    "evt_Player Off",
+    "evt_Player On",
+    "evt_Pressure",
+    "evt_Shield",
+    "evt_Shot",
+    "evt_Substitution",
+    "xg_per_shot",
+    "events_per90",
+    "has_event_feats"
   ],
   "results": {
     "baseline (majority class)": {
@@ -28,14 +59,19 @@
       "weighted_f1": 0.2424
     },
     "RandomForest": {
-      "accuracy": 0.7386,
-      "macro_f1": 0.7762,
-      "weighted_f1": 0.7381
+      "accuracy": 0.744,
+      "macro_f1": 0.7833,
+      "weighted_f1": 0.7434
     },
     "GradientBoosting": {
-      "accuracy": 0.7364,
-      "macro_f1": 0.7746,
-      "weighted_f1": 0.7364
+      "accuracy": 0.7429,
+      "macro_f1": 0.7792,
+      "weighted_f1": 0.7431
+    },
+    "HistGradientBoosting": {
+      "accuracy": 0.7571,
+      "macro_f1": 0.7858,
+      "weighted_f1": 0.7566
     }
   },
   "results_real_subset": {
@@ -45,15 +81,20 @@
       "weighted_f1": 0.2389
     },
     "RandomForest": {
-      "accuracy": 0.8208,
-      "macro_f1": 0.8388,
-      "weighted_f1": 0.8205
+      "accuracy": 0.8436,
+      "macro_f1": 0.8618,
+      "weighted_f1": 0.8436
     },
     "GradientBoosting": {
-      "accuracy": 0.8404,
-      "macro_f1": 0.8375,
-      "weighted_f1": 0.8381
+      "accuracy": 0.8697,
+      "macro_f1": 0.8658,
+      "weighted_f1": 0.8685
+    },
+    "HistGradientBoosting": {
+      "accuracy": 0.873,
+      "macro_f1": 0.8842,
+      "weighted_f1": 0.8729
     }
   },
-  "best_model": "RandomForest"
+  "best_model": "HistGradientBoosting"
 }

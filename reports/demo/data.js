@@ -2,7 +2,7 @@
 window.DEMO_DATA = {
   "meta": {
     "project": "GoalData League — Football Data Pipeline & Scouting System",
-    "generated_at": "2026-07-10T22:20:08",
+    "generated_at": "2026-07-11T11:04:37",
     "n_players_indexed": 400,
     "n_centralities": 200,
     "pca_components_90pct": 11,
@@ -272,686 +272,11 @@ window.DEMO_DATA = {
   ],
   "clusters": [
     {
-      "player_name": "Takumi Minamino",
+      "player_name": "Vitinha",
       "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 2.1757,
-      "PC2": -3.9484,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Thibaut Courtois",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.8143,
-      "PC2": -0.122,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Bafodé Diakité",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.6319,
-      "PC2": -1.4627,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mikel Merino",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.9577,
-      "PC2": 0.2658,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jonathan David",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.8908,
-      "PC2": -0.8244,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Granit Xhaka",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.6817,
-      "PC2": 3.707,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jorginho",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -1.8934,
-      "PC2": 0.0781,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Leandro Trossard",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 3.7393,
-      "PC2": -2.4961,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Brendan Chardonnet",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.6792,
-      "PC2": -1.6403,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Edimilson Fernandes",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -1.5351,
-      "PC2": -1.4026,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rémy Cabella",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.8056,
-      "PC2": 2.369,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marcus Thuram",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 3.2529,
-      "PC2": -4.0646,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mike Maignan",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.4336,
-      "PC2": 0.0882,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Abdukodir Khusanov",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.9269,
-      "PC2": -1.2033,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rui Silva",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.9675,
-      "PC2": -0.9967,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Vanderson",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.2556,
-      "PC2": -2.1327,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rodrygo",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.6531,
-      "PC2": -0.8585,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Pedri",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.1137,
-      "PC2": -0.302,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Thomas Partey",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.3503,
-      "PC2": 3.7965,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mika Biereth",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 3.056,
-      "PC2": -4.3067,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Dayot Upamecano",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.7112,
-      "PC2": 0.0674,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Wojciech Szczesny",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -4.2541,
-      "PC2": -0.1025,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Serge Gnabry",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.1223,
-      "PC2": 1.531,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Maximilian Beier",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.8205,
-      "PC2": -2.7777,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Niklas Süle",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.106,
-      "PC2": 3.3688,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Christian Pulisic",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.2301,
-      "PC2": 0.1956,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Felix Nmecha",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.3356,
-      "PC2": -1.4055,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Florian Wirtz",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 5.6371,
-      "PC2": 1.568,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Raheem Sterling",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": -0.2822,
-      "PC2": 1.7113,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kieran Tierney",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.9,
-      "PC2": -2.6103,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Tyrone Mings",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.1322,
-      "PC2": 0.555,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Malick Thiaw",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.6973,
-      "PC2": -1.1284,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Myles Lewis-Skelly",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.0966,
-      "PC2": 2.4244,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Boubacar Kamara",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.1457,
-      "PC2": 0.205,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Serhou Guirassy",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.4249,
-      "PC2": -2.1966,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Arne Engels",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -1.9925,
-      "PC2": -1.2325,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jakub Moder",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -5.0746,
-      "PC2": 6.8347,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": -1
-    },
-    {
-      "player_name": "Gerard Martín",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.0543,
-      "PC2": -0.2537,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lamine Yamal",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 5.0654,
-      "PC2": -1.581,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Denis Zakaria",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.4612,
-      "PC2": -2.3804,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Patrik Schick",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.6741,
-      "PC2": -1.3144,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Khvicha Kvaratskhelia",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 3.8192,
-      "PC2": -2.2063,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Raphaël Guerreiro",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.988,
-      "PC2": 2.8478,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ilkay Gündogan",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.1266,
-      "PC2": 3.0467,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Désiré Doué",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.7044,
-      "PC2": -0.4481,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Francesco Acerbi",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.6619,
-      "PC2": 4.3711,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Amadou Haidara",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.5176,
-      "PC2": -2.0033,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kylian Mbappé",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.5915,
-      "PC2": -5.4967,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": -1
-    },
-    {
-      "player_name": "Weston McKennie",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.2309,
-      "PC2": 1.1652,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mario Hermoso",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.0312,
-      "PC2": 0.6282,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kingsley Coman",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.0032,
-      "PC2": -2.2177,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Amine Adli",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.5083,
-      "PC2": 1.2454,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nico Schlotterbeck",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.9572,
-      "PC2": 0.4325,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Waldemar Anton",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.7843,
-      "PC2": 0.2653,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Tyrell Malacia",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.874,
-      "PC2": 4.4001,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jurriën Timber",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.3461,
-      "PC2": 4.9816,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "André",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.0576,
-      "PC2": 5.133,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Grégoire Coudert",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -5.0322,
-      "PC2": 2.0109,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Breel Embolo",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.7608,
-      "PC2": -3.5727,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Fermín López",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.6635,
-      "PC2": -2.2258,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mohamed Salah",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 6.4186,
-      "PC2": -0.2446,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Federico Gatti",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.1297,
-      "PC2": -1.5643,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Konrad Laimer",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.8374,
-      "PC2": 3.0805,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Aleksandr Golovin",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.8792,
-      "PC2": 1.7965,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Douglas Luiz",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -1.2235,
-      "PC2": -1.299,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Matej Kovar",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -5.4764,
-      "PC2": -1.6983,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marquinhos",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.4786,
-      "PC2": 1.467,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Leon Goretzka",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.3643,
-      "PC2": 1.6796,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Timothy Weah",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.6424,
-      "PC2": 0.7441,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Martin Ødegaard",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.8207,
-      "PC2": -0.557,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "José María Giménez",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.6494,
-      "PC2": -1.2959,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Krépin Diatta",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.7136,
-      "PC2": 2.7898,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mateo Retegui",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.7547,
-      "PC2": -4.7102,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Thomas Meunier",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.2827,
-      "PC2": 3.8175,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nicolás González",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.9445,
-      "PC2": -1.5551,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Pierre Lees-Melou",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.927,
-      "PC2": -0.9586,
+      "PC1": 3.0272,
+      "PC2": -0.6024,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -965,1091 +290,11 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Rúben Dias",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.79,
-      "PC2": 3.9287,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gabriel Magalhães",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.0522,
-      "PC2": 0.254,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Conor Gallagher",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.032,
-      "PC2": -2.3042,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gianluigi Donnarumma",
+      "player_name": "Wojciech Szczesny",
       "season": "2024-2025",
       "position_group": "Goalkeeper",
-      "PC1": -3.7281,
-      "PC2": 0.0663,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Josko Gvardiol",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.4576,
-      "PC2": 4.4439,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Piotr Zielinski",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.3211,
-      "PC2": 2.1568,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Frenkie de Jong",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.8128,
-      "PC2": 2.67,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Isak Hien",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.8661,
-      "PC2": -1.6026,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Giuliano Simeone",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.7908,
-      "PC2": -1.3471,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ian Maatsen",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.4735,
-      "PC2": -2.6227,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Romain Faivre",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.1022,
-      "PC2": -2.5453,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Bukayo Saka",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.6272,
-      "PC2": 0.5839,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Piero Hincapié",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.2594,
-      "PC2": -1.8502,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nordi Mukiele",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.6948,
-      "PC2": -0.3671,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Morgan Rogers",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.4652,
-      "PC2": -0.8588,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mathias Pereira Lage",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.5484,
-      "PC2": -2.6142,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rodrigo De Paul",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.8973,
-      "PC2": 3.3066,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lukas Hradecky",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.77,
-      "PC2": 0.0409,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Julian Brandt",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.2236,
-      "PC2": 1.3401,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Renato Veiga",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.0123,
-      "PC2": -0.119,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Oleksandr Zinchenko",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.9974,
-      "PC2": 3.4234,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Carney Chukwuemeka",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.7008,
-      "PC2": -0.3098,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Pascal Groß",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.9843,
-      "PC2": 0.2989,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Stefan de Vrij",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.0551,
-      "PC2": 4.3075,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Leon Bailey",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.042,
-      "PC2": -3.443,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Robert Lewandowski",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 5.2161,
-      "PC2": -0.9443,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "André Onana",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -4.0414,
-      "PC2": -1.2411,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Samuel Dahl",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -4.1057,
-      "PC2": 3.7173,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "William Saliba",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.578,
-      "PC2": 4.0147,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ferran Torres",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 4.0559,
-      "PC2": -2.609,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ryan Gravenberch",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.0693,
-      "PC2": -1.197,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Raphinha",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.9186,
-      "PC2": -1.4221,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jan Oblak",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -4.0635,
-      "PC2": -0.5606,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Alessandro Bastoni",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.197,
-      "PC2": 3.4796,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rafael Leão",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.3196,
-      "PC2": -3.5903,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Harry Kane",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 6.0146,
-      "PC2": -1.4559,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Willian Pacho",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.6312,
-      "PC2": 1.8785,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Strahinja Pavlovic",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.1541,
-      "PC2": 3.7461,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Exequiel Palacios",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.7582,
-      "PC2": 3.8054,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Thomas Müller",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.3414,
-      "PC2": 1.2814,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kim Min-Jae",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.5322,
-      "PC2": 0.2762,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Yann Sommer",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.8415,
-      "PC2": 0.3053,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Dani Olmo",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.6468,
-      "PC2": -1.3234,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Matteo Darmian",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.566,
-      "PC2": 3.9578,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Hakan Çalhanoglu",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.9105,
-      "PC2": 1.704,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Leroy Sané",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.8408,
-      "PC2": 0.6835,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lloyd Kelly",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.2173,
-      "PC2": -0.5877,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Antonio Rüdiger",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.4663,
-      "PC2": 3.6944,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ismaily",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.7837,
-      "PC2": -1.8866,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ben White",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.2242,
-      "PC2": -1.1559,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Omar Marmoush",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 5.0822,
-      "PC2": -4.0041,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jonathan Tah",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.6797,
-      "PC2": 3.7312,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Carlos Augusto",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.6716,
-      "PC2": -1.371,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ramy Bensebaini",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.3776,
-      "PC2": 4.5732,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Randal Kolo Muani",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 3.8858,
-      "PC2": -0.09,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Julian Ryerson",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.6449,
-      "PC2": -0.4931,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jonas Urbig",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -4.1449,
-      "PC2": 1.6648,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Karim Adeyemi",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.4972,
-      "PC2": 0.1582,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Wilfried Singo",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.3336,
-      "PC2": -2.417,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Maghnes Akliouche",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.0183,
-      "PC2": -2.2462,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "João Félix",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.2828,
-      "PC2": -2.1271,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marcos Llorente",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.1271,
-      "PC2": -3.5957,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Clément Lenglet",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.1661,
-      "PC2": 3.8879,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Matty Cash",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.8759,
-      "PC2": 0.1252,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marten de Roon",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.4117,
-      "PC2": 4.1966,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lucas Chevalier",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.8532,
-      "PC2": -0.9506,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Luka Modric",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.3385,
-      "PC2": 3.7919,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Benjamin Pavard",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.3371,
-      "PC2": 4.746,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gavi",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.21,
-      "PC2": -0.8482,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Eric Dier",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.4087,
-      "PC2": 3.2891,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Eliesse Ben Seghir",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.1479,
-      "PC2": -3.2889,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marco Carnesecchi",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -4.2154,
-      "PC2": -2.2615,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mohammed Salisu",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.2595,
-      "PC2": 2.5788,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Tijjani Reijnders",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.6254,
-      "PC2": 2.0761,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marcus Rashford",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.9536,
-      "PC2": 0.2969,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nuno Mendes",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.2211,
-      "PC2": 4.0773,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Declan Rice",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.5033,
-      "PC2": 4.1202,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "John McGinn",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.7515,
-      "PC2": 2.758,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Yan Couto",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -1.0637,
-      "PC2": -0.4912,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Sead Kolasinac",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.0328,
-      "PC2": -1.0357,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Youri Tielemans",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.9397,
-      "PC2": 3.4232,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lucas Vázquez",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.5806,
-      "PC2": -1.2313,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "David Alaba",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -3.0294,
-      "PC2": 3.47,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Phil Foden",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.6943,
-      "PC2": 0.4,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Raoul Bellanova",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.3224,
-      "PC2": -2.1882,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Joshua Kimmich",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.2739,
-      "PC2": 3.4388,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Pau Torres",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.1981,
-      "PC2": 4.242,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Christian Mawissa",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.9454,
-      "PC2": -1.6185,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ousmane Dembélé",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 5.6865,
-      "PC2": -0.3327,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Soumaila Coulibaly",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.4155,
-      "PC2": 0.7406,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Bradley Barcola",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 5.4836,
-      "PC2": -1.2596,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kyle Walker",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 0.0146,
-      "PC2": 4.5103,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Thilo Kehrer",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.162,
-      "PC2": 4.2119,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Federico Dimarco",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.4606,
-      "PC2": -2.2974,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ben Davies",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.4111,
-      "PC2": 3.6624,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jude Bellingham",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 5.4632,
-      "PC2": 2.7727,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Davide Frattesi",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.1399,
-      "PC2": -2.0594,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Teun Koopmeiners",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.7274,
-      "PC2": -2.466,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Dominik Szoboszlai",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.5626,
-      "PC2": -2.3351,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Raúl Asencio",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.5063,
-      "PC2": 0.0171,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Michael Olise",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.7947,
-      "PC2": -2.3609,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jeremie Frimpong",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.5459,
-      "PC2": 1.6088,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ayyoub Bouaddi",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.8747,
-      "PC2": 0.3984,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lucas Digne",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.4113,
-      "PC2": 4.4839,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Stefan Posch",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.9246,
-      "PC2": -1.8931,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "John Stones",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.4084,
-      "PC2": 2.0234,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Axel Disasi",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -2.2563,
-      "PC2": -2.7033,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Charles De Ketelaere",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.9415,
-      "PC2": -2.4614,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gregor Kobel",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -3.3379,
-      "PC2": 0.3493,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ngal'ayel Mukau",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.0349,
-      "PC2": 0.845,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Henrikh Mkhitaryan",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.5358,
-      "PC2": 1.3141,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Daniel Svensson",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": -0.6582,
-      "PC2": -0.4529,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Vitinha",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 3.0272,
-      "PC2": -0.6024,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Achraf Hakimi",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 1.4276,
-      "PC2": -3.5064,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Josip Stanisic",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.9501,
-      "PC2": 4.083,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Aurélien Tchouaméni",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.2907,
-      "PC2": 4.8396,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Reinildo Mandava",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -1.453,
-      "PC2": -0.0985,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Denzel Dumfries",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.2475,
-      "PC2": 1.701,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ethan Nwaneri",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.3637,
-      "PC2": -2.5766,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Virgil van Dijk",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": 2.3087,
-      "PC2": 3.9994,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "David Raya",
-      "season": "2024-2025",
-      "position_group": "Goalkeeper",
-      "PC1": -2.7203,
-      "PC2": 0.4444,
+      "PC1": -4.2541,
+      "PC2": -0.1025,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
@@ -2063,6 +308,69 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Dominik Szoboszlai",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.5626,
+      "PC2": -2.3351,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "André Onana",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -4.0414,
+      "PC2": -1.2411,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Daniel Svensson",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -0.6582,
+      "PC2": -0.4529,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Soumaila Coulibaly",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.4155,
+      "PC2": 0.7406,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Randal Kolo Muani",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 3.8858,
+      "PC2": -0.09,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nicolás González",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.9445,
+      "PC2": -1.5551,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Declan Rice",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.5033,
+      "PC2": 4.1202,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Edson Álvarez",
       "season": "2024-2025",
       "position_group": "Midfielder",
@@ -2072,39 +380,12 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Michele Di Gregorio",
+      "player_name": "Marco Carnesecchi",
       "season": "2024-2025",
       "position_group": "Goalkeeper",
-      "PC1": -3.4857,
-      "PC2": 0.1804,
+      "PC1": -4.2154,
+      "PC2": -2.2615,
       "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Alexis Mac Allister",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 4.4222,
-      "PC2": 2.8544,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Diogo Jota",
-      "season": "2024-2025",
-      "position_group": "Forward",
-      "PC1": 2.9632,
-      "PC2": -2.3698,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jakub Kiwior",
-      "season": "2024-2025",
-      "position_group": "Defender",
-      "PC1": -0.3975,
-      "PC2": 3.3499,
-      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
@@ -2117,12 +398,48 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Mohamed Salah",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 6.4186,
+      "PC2": -0.2446,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Samuel Lino",
       "season": "2024-2025",
       "position_group": "Midfielder",
       "PC1": 1.8858,
       "PC2": -3.3508,
       "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pau Torres",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.1981,
+      "PC2": 4.242,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nuno Mendes",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.2211,
+      "PC2": 4.0773,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Eric Dier",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.4087,
+      "PC2": 3.2891,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
@@ -2144,47 +461,65 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Jamal Musiala",
+      "player_name": "Vanderson",
       "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 4.7719,
-      "PC2": 1.2431,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marcel Sabitzer",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 1.0877,
-      "PC2": 2.3476,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kristjan Asllani",
-      "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 0.6246,
-      "PC2": -2.0814,
+      "PC1": 1.2556,
+      "PC2": -2.1327,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Bernardo Silva",
+      "player_name": "Amine Adli",
       "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 3.5803,
-      "PC2": 2.7764,
+      "PC1": 1.5083,
+      "PC2": 1.2454,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Javi Galán",
+      "player_name": "Rúben Dias",
       "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": -0.3754,
-      "PC2": -0.7167,
+      "PC1": 0.79,
+      "PC2": 3.9287,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lloyd Kelly",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.2173,
+      "PC2": -0.5877,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matteo Darmian",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.566,
+      "PC2": 3.9578,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matty Cash",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.8759,
+      "PC2": 0.1252,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Carney Chukwuemeka",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -0.7008,
+      "PC2": -0.3098,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -2198,12 +533,390 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Ferran Torres",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.0559,
+      "PC2": -2.609,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Bafodé Diakité",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.6319,
+      "PC2": -1.4627,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Francesco Acerbi",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.6619,
+      "PC2": 4.3711,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "John McGinn",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.7515,
+      "PC2": 2.758,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ian Maatsen",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.4735,
+      "PC2": -2.6227,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Stefan Posch",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.9246,
+      "PC2": -1.8931,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lucas Digne",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.4113,
+      "PC2": 4.4839,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mario Hermoso",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.0312,
+      "PC2": 0.6282,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Edimilson Fernandes",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -1.5351,
+      "PC2": -1.4026,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Bukayo Saka",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.6272,
+      "PC2": 0.5839,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Raphaël Guerreiro",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.988,
+      "PC2": 2.8478,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jakub Kiwior",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.3975,
+      "PC2": 3.3499,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Piero Hincapié",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.2594,
+      "PC2": -1.8502,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ilkay Gündogan",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.1266,
+      "PC2": 3.0467,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gianluigi Donnarumma",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.7281,
+      "PC2": 0.0663,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lukas Hradecky",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.77,
+      "PC2": 0.0409,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mathias Pereira Lage",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.5484,
+      "PC2": -2.6142,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Morgan Rogers",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.4652,
+      "PC2": -0.8588,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Romain Faivre",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.1022,
+      "PC2": -2.5453,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Giuliano Simeone",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.7908,
+      "PC2": -1.3471,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Isak Hien",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.8661,
+      "PC2": -1.6026,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Denis Zakaria",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.4612,
+      "PC2": -2.3804,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Malick Thiaw",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.6973,
+      "PC2": -1.1284,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Luka Modric",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.3385,
+      "PC2": 3.7919,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Florian Wirtz",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 5.6371,
+      "PC2": 1.568,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Maximilian Beier",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 2.8205,
+      "PC2": -2.7777,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jonathan David",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.8908,
+      "PC2": -0.8244,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "William Saliba",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.578,
+      "PC2": 4.0147,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Charles De Ketelaere",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.9415,
+      "PC2": -2.4614,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Josko Gvardiol",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.4576,
+      "PC2": 4.4439,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ayyoub Bouaddi",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -0.8747,
+      "PC2": 0.3984,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Luis Díaz",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.8345,
+      "PC2": -0.5964,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Aurélien Tchouaméni",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.2907,
+      "PC2": 4.8396,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Sead Kolasinac",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.0328,
+      "PC2": -1.0357,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Denzel Dumfries",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.2475,
+      "PC2": 1.701,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lucas Vázquez",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.5806,
+      "PC2": -1.2313,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Piotr Zielinski",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.3211,
+      "PC2": 2.1568,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "José María Giménez",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.6494,
+      "PC2": -1.2959,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Phil Foden",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 2.6943,
+      "PC2": 0.4,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mateo Retegui",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.7547,
+      "PC2": -4.7102,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Ezri Konsa",
       "season": "2024-2025",
       "position_group": "Defender",
       "PC1": -0.2166,
       "PC2": 0.0179,
       "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Marquinhos",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.4786,
+      "PC2": 1.467,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jude Bellingham",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 5.4632,
+      "PC2": 2.7727,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
@@ -2216,12 +929,39 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Hákon Haraldsson",
+      "player_name": "Marcos Llorente",
       "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 1.721,
-      "PC2": -3.0055,
+      "PC1": -0.1271,
+      "PC2": -3.5957,
       "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Leroy Sané",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.8408,
+      "PC2": 0.6835,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Yan Couto",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -1.0637,
+      "PC2": -0.4912,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lucas Chevalier",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.8532,
+      "PC2": -0.9506,
+      "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
@@ -2234,11 +974,632 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Yann Sommer",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.8415,
+      "PC2": 0.3053,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Tijjani Reijnders",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.6254,
+      "PC2": 2.0761,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jan Oblak",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -4.0635,
+      "PC2": -0.5606,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Vinícius Júnior",
       "season": "2024-2025",
       "position_group": "Forward",
       "PC1": 5.5227,
       "PC2": 0.0653,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Grégoire Coudert",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -5.0322,
+      "PC2": 2.0109,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Marcus Rashford",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.9536,
+      "PC2": 0.2969,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Exequiel Palacios",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.7582,
+      "PC2": 3.8054,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nordi Mukiele",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.6948,
+      "PC2": -0.3671,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Teun Koopmeiners",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.7274,
+      "PC2": -2.466,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mikel Merino",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.9577,
+      "PC2": 0.2658,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Davide Frattesi",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.1399,
+      "PC2": -2.0594,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jamal Musiala",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.7719,
+      "PC2": 1.2431,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Tyrone Mings",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.1322,
+      "PC2": 0.555,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Samuel Dahl",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -4.1057,
+      "PC2": 3.7173,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Federico Gatti",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.1297,
+      "PC2": -1.5643,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Hakan Çalhanoglu",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.9105,
+      "PC2": 1.704,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Marcel Sabitzer",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.0877,
+      "PC2": 2.3476,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Thomas Müller",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.3414,
+      "PC2": 1.2814,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kristjan Asllani",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.6246,
+      "PC2": -2.0814,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Robert Lewandowski",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 5.2161,
+      "PC2": -0.9443,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Stefan de Vrij",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.0551,
+      "PC2": 4.3075,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Raoul Bellanova",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.3224,
+      "PC2": -2.1882,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Thilo Kehrer",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.162,
+      "PC2": 4.2119,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ben Davies",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.4111,
+      "PC2": 3.6624,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Javi Galán",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.3754,
+      "PC2": -0.7167,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Youri Tielemans",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.9397,
+      "PC2": 3.4232,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rémy Cabella",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.8056,
+      "PC2": 2.369,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Christian Pulisic",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.2301,
+      "PC2": 0.1956,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gabriel Magalhães",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.0522,
+      "PC2": 0.254,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Hákon Haraldsson",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.721,
+      "PC2": -3.0055,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Antonio Rüdiger",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.4663,
+      "PC2": 3.6944,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Oleksandr Zinchenko",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.9974,
+      "PC2": 3.4234,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ismaily",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.7837,
+      "PC2": -1.8866,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Breel Embolo",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 2.7608,
+      "PC2": -3.5727,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pierre Lees-Melou",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.927,
+      "PC2": -0.9586,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Leon Bailey",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.042,
+      "PC2": -3.443,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Reinildo Mandava",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.453,
+      "PC2": -0.0985,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Josip Stanisic",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.9501,
+      "PC2": 4.083,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Douglas Luiz",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -1.2235,
+      "PC2": -1.299,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Tyrell Malacia",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.874,
+      "PC2": 4.4001,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pedri",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.1137,
+      "PC2": -0.302,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lamine Yamal",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 5.0654,
+      "PC2": -1.581,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "David Raya",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -2.7203,
+      "PC2": 0.4444,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jakub Moder",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -5.0746,
+      "PC2": 6.8347,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": -1
+    },
+    {
+      "player_name": "Arne Engels",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -1.9925,
+      "PC2": -1.2325,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Boubacar Kamara",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.1457,
+      "PC2": 0.205,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Thomas Partey",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.3503,
+      "PC2": 3.7965,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Fermín López",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.6635,
+      "PC2": -2.2258,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Federico Dimarco",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.4606,
+      "PC2": -2.2974,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Achraf Hakimi",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.4276,
+      "PC2": -3.5064,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Takumi Minamino",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.1757,
+      "PC2": -3.9484,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jurriën Timber",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.3461,
+      "PC2": 4.9816,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Waldemar Anton",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.7843,
+      "PC2": 0.2653,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Leon Goretzka",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.3643,
+      "PC2": 1.6796,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nico Schlotterbeck",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.9572,
+      "PC2": 0.4325,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Diogo Jota",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 2.9632,
+      "PC2": -2.3698,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Niklas Süle",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.106,
+      "PC2": 3.3688,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Henrikh Mkhitaryan",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.5358,
+      "PC2": 1.3141,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Dayot Upamecano",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.7112,
+      "PC2": 0.0674,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Axel Disasi",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.2563,
+      "PC2": -2.7033,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Felix Nmecha",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.3356,
+      "PC2": -1.4055,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Thomas Meunier",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.2827,
+      "PC2": 3.8175,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ngal'ayel Mukau",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.0349,
+      "PC2": 0.845,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jorginho",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -1.8934,
+      "PC2": 0.0781,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kyle Walker",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.0146,
+      "PC2": 4.5103,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Christian Mawissa",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.9454,
+      "PC2": -1.6185,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gerard Martín",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.0543,
+      "PC2": -0.2537,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Khvicha Kvaratskhelia",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 3.8192,
+      "PC2": -2.2063,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Weston McKennie",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.2309,
+      "PC2": 1.1652,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Amadou Haidara",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -0.5176,
+      "PC2": -2.0033,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -2252,20 +1613,38 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Ronald Araújo",
+      "player_name": "Pau Cubarsí",
       "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": -0.0726,
-      "PC2": 0.7078,
+      "PC1": -0.496,
+      "PC2": 1.0432,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Abdallah Sima",
+      "player_name": "Marten de Roon",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.4117,
+      "PC2": 4.1966,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Maximilian Arnold",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.2267,
+      "PC2": -2.4868,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "João Félix",
       "season": "2024-2025",
       "position_group": "Forward",
-      "PC1": 2.2714,
-      "PC2": -3.9621,
+      "PC1": 2.2828,
+      "PC2": -2.1271,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -2279,137 +1658,650 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Maximilian Arnold",
+      "player_name": "Abdallah Sima",
       "season": "2024-2025",
-      "position_group": "Midfielder",
-      "PC1": 2.2267,
-      "PC2": -2.4868,
+      "position_group": "Forward",
+      "PC1": 2.2714,
+      "PC2": -3.9621,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Pau Cubarsí",
+      "player_name": "Ronald Araújo",
       "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": -0.496,
-      "PC2": 1.0432,
+      "PC1": -0.0726,
+      "PC2": 0.7078,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Luis Díaz",
+      "player_name": "Virgil van Dijk",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.3087,
+      "PC2": 3.9994,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Thibaut Courtois",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.8143,
+      "PC2": -0.122,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Omar Marmoush",
       "season": "2024-2025",
       "position_group": "Forward",
-      "PC1": 4.8345,
-      "PC2": -0.5964,
+      "PC1": 5.0822,
+      "PC2": -4.0041,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Danilo Cataldi",
-      "season": "2023-2024",
+      "player_name": "Ethan Nwaneri",
+      "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 0.8943,
-      "PC2": 2.8914,
+      "PC1": 1.3637,
+      "PC2": -2.5766,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mike Maignan",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.4336,
+      "PC2": 0.0882,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Leandro Trossard",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 3.7393,
+      "PC2": -2.4961,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Dani Olmo",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.6468,
+      "PC2": -1.3234,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Granit Xhaka",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.6817,
+      "PC2": 3.707,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Lee Kang-in",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.1303,
-      "PC2": -3.1132,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gonçalo Ramos",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 2.8797,
-      "PC2": -3.215,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Amir Rrahmani",
-      "season": "2023-2024",
+      "player_name": "Abdukodir Khusanov",
+      "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": 0.4176,
-      "PC2": -1.6932,
+      "PC1": -0.9269,
+      "PC2": -1.2033,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Mateo Kovacic",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.4761,
-      "PC2": 3.9592,
+      "player_name": "Serhou Guirassy",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.4249,
+      "PC2": -2.1966,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Brendan Chardonnet",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.6792,
+      "PC2": -1.6403,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Myles Lewis-Skelly",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.0966,
+      "PC2": 2.4244,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Brais Méndez",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 3.2813,
-      "PC2": -2.2403,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "César Azpilicueta",
-      "season": "2023-2024",
+      "player_name": "Strahinja Pavlovic",
+      "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": -0.1935,
-      "PC2": -0.1046,
-      "kmeans_cluster": 0,
+      "PC1": 2.1541,
+      "PC2": 3.7461,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Donyell Malen",
-      "season": "2023-2024",
+      "player_name": "Serge Gnabry",
+      "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 3.5286,
-      "PC2": -2.7757,
-      "kmeans_cluster": 0,
+      "PC1": 4.1223,
+      "PC2": 1.531,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Ander Barrenetxea",
-      "season": "2023-2024",
+      "player_name": "Rafael Leão",
+      "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 1.1449,
-      "PC2": -3.2987,
+      "PC1": 3.3196,
+      "PC2": -3.5903,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Álvaro Morata",
-      "season": "2023-2024",
+      "player_name": "Mika Biereth",
+      "season": "2024-2025",
       "position_group": "Forward",
-      "PC1": 5.0908,
-      "PC2": -1.914,
+      "PC1": 3.056,
+      "PC2": -4.3067,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Luis Alberto",
-      "season": "2023-2024",
+      "player_name": "Kingsley Coman",
+      "season": "2024-2025",
       "position_group": "Midfielder",
-      "PC1": 2.9399,
-      "PC2": -1.9586,
+      "PC1": 2.0032,
+      "PC2": -2.2177,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Elseid Hysaj",
-      "season": "2023-2024",
+      "player_name": "Timothy Weah",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.6424,
+      "PC2": 0.7441,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Raheem Sterling",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": -0.2822,
+      "PC2": 1.7113,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rui Silva",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.9675,
+      "PC2": -0.9967,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "David Alaba",
+      "season": "2024-2025",
       "position_group": "Defender",
-      "PC1": -0.8389,
-      "PC2": 3.8116,
+      "PC1": -3.0294,
+      "PC2": 3.47,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Michele Di Gregorio",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.4857,
+      "PC2": 0.1804,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kieran Tierney",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -2.9,
+      "PC2": -2.6103,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ryan Gravenberch",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.0693,
+      "PC2": -1.197,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Alessandro Bastoni",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.197,
+      "PC2": 3.4796,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Konrad Laimer",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.8374,
+      "PC2": 3.0805,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Aleksandr Golovin",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.8792,
+      "PC2": 1.7965,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Julian Ryerson",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.6449,
+      "PC2": -0.4931,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "André",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.0576,
+      "PC2": 5.133,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Joshua Kimmich",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.2739,
+      "PC2": 3.4388,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Renato Veiga",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.0123,
+      "PC2": -0.119,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "John Stones",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.4084,
+      "PC2": 2.0234,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Conor Gallagher",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.032,
+      "PC2": -2.3042,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gavi",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.21,
+      "PC2": -0.8482,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mohammed Salisu",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.2595,
+      "PC2": 2.5788,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rodrigo De Paul",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.8973,
+      "PC2": 3.3066,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Eliesse Ben Seghir",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.1479,
+      "PC2": -3.2889,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jeremie Frimpong",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.5459,
+      "PC2": 1.6088,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Michael Olise",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.7947,
+      "PC2": -2.3609,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Raúl Asencio",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.5063,
+      "PC2": 0.0171,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Krépin Diatta",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": -0.7136,
+      "PC2": 2.7898,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rodrygo",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 2.6531,
+      "PC2": -0.8585,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Bradley Barcola",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 5.4836,
+      "PC2": -1.2596,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Martin Ødegaard",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 2.8207,
+      "PC2": -0.557,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matej Kovar",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -5.4764,
+      "PC2": -1.6983,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Benjamin Pavard",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.3371,
+      "PC2": 4.746,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kylian Mbappé",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.5915,
+      "PC2": -5.4967,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": -1
+    },
+    {
+      "player_name": "Ben White",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -1.2242,
+      "PC2": -1.1559,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Raphinha",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.9186,
+      "PC2": -1.4221,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gregor Kobel",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -3.3379,
+      "PC2": 0.3493,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Julian Brandt",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.2236,
+      "PC2": 1.3401,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ousmane Dembélé",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 5.6865,
+      "PC2": -0.3327,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Clément Lenglet",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.1661,
+      "PC2": 3.8879,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Frenkie de Jong",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.8128,
+      "PC2": 2.67,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Maghnes Akliouche",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.0183,
+      "PC2": -2.2462,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Willian Pacho",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": -0.6312,
+      "PC2": 1.8785,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Harry Kane",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 6.0146,
+      "PC2": -1.4559,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Wilfried Singo",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.3336,
+      "PC2": -2.417,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Marcus Thuram",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 3.2529,
+      "PC2": -4.0646,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Désiré Doué",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.7044,
+      "PC2": -0.4481,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Patrik Schick",
+      "season": "2024-2025",
+      "position_group": "Forward",
+      "PC1": 4.6741,
+      "PC2": -1.3144,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Alexis Mac Allister",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.4222,
+      "PC2": 2.8544,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Carlos Augusto",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 0.6716,
+      "PC2": -1.371,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jonas Urbig",
+      "season": "2024-2025",
+      "position_group": "Goalkeeper",
+      "PC1": -4.1449,
+      "PC2": 1.6648,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kim Min-Jae",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 0.5322,
+      "PC2": 0.2762,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jonathan Tah",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 1.6797,
+      "PC2": 3.7312,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ramy Bensebaini",
+      "season": "2024-2025",
+      "position_group": "Defender",
+      "PC1": 2.3776,
+      "PC2": 4.5732,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pascal Groß",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 1.9843,
+      "PC2": 0.2989,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Karim Adeyemi",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 4.4972,
+      "PC2": 0.1582,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Bernardo Silva",
+      "season": "2024-2025",
+      "position_group": "Midfielder",
+      "PC1": 3.5803,
+      "PC2": 2.7764,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
@@ -2423,282 +2315,48 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Kevin De Bruyne",
+      "player_name": "Giovanni Di Lorenzo",
       "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 3.974,
-      "PC2": 1.0738,
+      "position_group": "Defender",
+      "PC1": 3.0065,
+      "PC2": 4.978,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Mattia Zaccagni",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.8638,
-      "PC2": -3.3977,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Adam Marusic",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 0.1469,
-      "PC2": -0.4876,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mohamed Simakan",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.1391,
-      "PC2": -3.0872,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Sheraldo Becker",
+      "player_name": "Gabriel Jesus",
       "season": "2023-2024",
       "position_group": "Forward",
-      "PC1": 1.523,
-      "PC2": -2.5995,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Robin Le Normand",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.8549,
-      "PC2": 2.7812,
+      "PC1": 4.3453,
+      "PC2": 0.8353,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Stefan Ortega",
+      "player_name": "Lukas Klostermann",
       "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -4.6989,
-      "PC2": -0.0967,
+      "position_group": "Defender",
+      "PC1": -0.978,
+      "PC2": -0.5543,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "David Raum",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 3.1493,
-      "PC2": 4.1465,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nacho",
+      "player_name": "Takehiro Tomiyasu",
       "season": "2023-2024",
       "position_group": "Defender",
-      "PC1": 0.0314,
-      "PC2": 2.3723,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gustav Isaksen",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 1.3963,
-      "PC2": -2.3139,
+      "PC1": -0.033,
+      "PC2": -1.5412,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Alexander Meyer",
-      "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -4.1773,
-      "PC2": 1.5328,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Alex Meret",
-      "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -4.0293,
-      "PC2": -1.0339,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Stanislav Lobotka",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.6066,
-      "PC2": 4.3687,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Xaver Schlager",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 2.2862,
-      "PC2": 4.0304,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Willi Orbán",
+      "player_name": "Noussair Mazraoui",
       "season": "2023-2024",
       "position_group": "Defender",
-      "PC1": -0.3897,
-      "PC2": 3.4741,
+      "PC1": 0.7108,
+      "PC2": 3.5826,
       "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Axel Witsel",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.6488,
-      "PC2": 3.4529,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Benjamin Mendy",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.5297,
-      "PC2": 2.9446,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Matías Vecino",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 2.8354,
-      "PC2": -2.4688,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Luca Pellegrini",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.446,
-      "PC2": -1.1381,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marco Reus",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 4.0937,
-      "PC2": 0.4096,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Niclas Füllkrug",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 4.6201,
-      "PC2": -0.7385,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rico Lewis",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.7031,
-      "PC2": -1.7674,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Rodri",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 3.7332,
-      "PC2": -2.2614,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Péter Gulácsi",
-      "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -4.5012,
-      "PC2": -0.0208,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Benjamin Sesko",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 3.3725,
-      "PC2": -2.6698,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mikel Oyarzabal",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 2.6944,
-      "PC2": -3.1426,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Castello Lukeba",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -1.2143,
-      "PC2": -1.5947,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Benjamin Henrichs",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 2.9208,
-      "PC2": 4.5313,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Scott McKenna",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -3.4323,
-      "PC2": 1.9796,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jens Cajuste",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 0.2636,
-      "PC2": -2.1526,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Matteo Guendouzi",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.9576,
-      "PC2": -0.3685,
-      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
@@ -2711,29 +2369,38 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Loïs Openda",
+      "player_name": "Alessio Romagnoli",
       "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 5.2918,
-      "PC2": -4.4744,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Toni Kroos",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 3.4214,
-      "PC2": 3.9634,
+      "position_group": "Defender",
+      "PC1": 1.2517,
+      "PC2": 3.892,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Stefan Savic",
+      "player_name": "Alexander Meyer",
       "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 0.1388,
-      "PC2": 4.3127,
+      "position_group": "Goalkeeper",
+      "PC1": -4.1773,
+      "PC2": 1.5328,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Xavi Simons",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 6.098,
+      "PC2": 1.7982,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matteo Politano",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 4.1149,
+      "PC2": 0.8423,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
@@ -2747,83 +2414,146 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Matteo Politano",
+      "player_name": "Loïs Openda",
       "season": "2023-2024",
       "position_group": "Forward",
-      "PC1": 4.1149,
-      "PC2": 0.8423,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nathan Aké",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.1684,
-      "PC2": 3.9799,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Xavi Simons",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 6.098,
-      "PC2": 1.7982,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Andriy Lunin",
-      "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -3.5635,
-      "PC2": 0.2333,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Alessio Romagnoli",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.2517,
-      "PC2": 3.892,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Álex Remiro",
-      "season": "2023-2024",
-      "position_group": "Goalkeeper",
-      "PC1": -2.7917,
-      "PC2": -0.4737,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Erling Haaland",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 5.1307,
-      "PC2": -2.8106,
+      "PC1": 5.2918,
+      "PC2": -4.4744,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Igor Zubeldia",
+      "player_name": "Matteo Guendouzi",
       "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.5661,
-      "PC2": -1.3255,
+      "position_group": "Midfielder",
+      "PC1": 1.9576,
+      "PC2": -0.3685,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Gabriel Jesus",
+      "player_name": "Jens Cajuste",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 0.2636,
+      "PC2": -2.1526,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Scott McKenna",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -3.4323,
+      "PC2": 1.9796,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Xaver Schlager",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 2.2862,
+      "PC2": 4.0304,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mikel Oyarzabal",
       "season": "2023-2024",
       "position_group": "Forward",
-      "PC1": 4.3453,
-      "PC2": 0.8353,
+      "PC1": 2.6944,
+      "PC2": -3.1426,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Benjamin Sesko",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 3.3725,
+      "PC2": -2.6698,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rico Lewis",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.7031,
+      "PC2": -1.7674,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Niclas Füllkrug",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 4.6201,
+      "PC2": -0.7385,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "João Cancelo",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 3.3742,
+      "PC2": 4.2867,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matthijs de Ligt",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 0.7241,
+      "PC2": 0.5483,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mário Rui",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.309,
+      "PC2": -0.7354,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mats Hummels",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 1.9777,
+      "PC2": 4.3169,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "André Silva",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 1.6732,
+      "PC2": 1.7989,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Danilo Pereira",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 0.0458,
+      "PC2": 4.5515,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Willi Orbán",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.3897,
+      "PC2": 3.4741,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
@@ -2846,183 +2576,21 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Danilo Pereira",
+      "player_name": "Marco Reus",
       "season": "2023-2024",
       "position_group": "Midfielder",
-      "PC1": 0.0458,
-      "PC2": 4.5515,
+      "PC1": 4.0937,
+      "PC2": 0.4096,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Aleksandar Pavlovic",
+      "player_name": "Stefan Ortega",
       "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 0.8614,
-      "PC2": -0.8204,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "André Silva",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 1.6732,
-      "PC2": 1.7989,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Nahuel Molina",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.6286,
-      "PC2": -0.0336,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Saúl Ñíguez",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.604,
-      "PC2": -2.1877,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lukas Klostermann",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.978,
-      "PC2": -0.5543,
+      "position_group": "Goalkeeper",
+      "PC1": -4.6989,
+      "PC2": -0.0967,
       "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Takefusa Kubo",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 2.5012,
-      "PC2": -2.6126,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Bertrand Traoré",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.1134,
-      "PC2": 1.3583,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Martín Zubimendi",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 1.6731,
-      "PC2": -1.9256,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Oscar Bobb",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": -0.9379,
-      "PC2": -0.8294,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jadon Sancho",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 0.6219,
-      "PC2": 1.3391,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "João Cancelo",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 3.3742,
-      "PC2": 4.2867,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jack Grealish",
-      "season": "2023-2024",
-      "position_group": "Forward",
-      "PC1": 1.6377,
-      "PC2": 0.6077,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Noussair Mazraoui",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 0.7108,
-      "PC2": 3.5826,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Giovanni Di Lorenzo",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 3.0065,
-      "PC2": 4.978,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Takehiro Tomiyasu",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.033,
-      "PC2": -1.5412,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mathías Olivera",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.9659,
-      "PC2": -0.8184,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mats Hummels",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": 1.9777,
-      "PC2": 4.3169,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mário Rui",
-      "season": "2023-2024",
-      "position_group": "Defender",
-      "PC1": -0.309,
-      "PC2": -0.7354,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kai Havertz",
-      "season": "2023-2024",
-      "position_group": "Midfielder",
-      "PC1": 5.4111,
-      "PC2": -0.0635,
-      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
@@ -3035,11 +2603,29 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Ciro Immobile",
+      "player_name": "César Azpilicueta",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.1935,
+      "PC2": -0.1046,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Luis Alberto",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 2.9399,
+      "PC2": -1.9586,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Álvaro Morata",
       "season": "2023-2024",
       "position_group": "Forward",
-      "PC1": 3.5693,
-      "PC2": -0.982,
+      "PC1": 5.0908,
+      "PC2": -1.914,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -3053,11 +2639,38 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Kevin De Bruyne",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.974,
+      "PC2": 1.0738,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Victor Osimhen",
       "season": "2023-2024",
       "position_group": "Forward",
       "PC1": 5.1151,
       "PC2": -2.3128,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mattia Zaccagni",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.8638,
+      "PC2": -3.3977,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Saúl Ñíguez",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.604,
+      "PC2": -2.1877,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -3071,30 +2684,435 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Matthijs de Ligt",
+      "player_name": "Robin Le Normand",
       "season": "2023-2024",
       "position_group": "Defender",
-      "PC1": 0.7241,
-      "PC2": 0.5483,
+      "PC1": 1.8549,
+      "PC2": 2.7812,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Danilo Cataldi",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 0.8943,
+      "PC2": 2.8914,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Sheraldo Becker",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 1.523,
+      "PC2": -2.5995,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Rade Krunic",
-      "season": "2022-2023",
+      "player_name": "Mohamed Simakan",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 1.1391,
+      "PC2": -3.0872,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Adam Marusic",
+      "season": "2023-2024",
       "position_group": "Midfielder",
-      "PC1": 0.9501,
-      "PC2": 2.9067,
+      "PC1": 0.1469,
+      "PC2": -0.4876,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Aleksandar Pavlovic",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 0.8614,
+      "PC2": -0.8204,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gustav Isaksen",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 1.3963,
+      "PC2": -2.3139,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nacho",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 0.0314,
+      "PC2": 2.3723,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Kalidou Koulibaly",
+      "player_name": "David Raum",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.1493,
+      "PC2": 4.1465,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gonçalo Ramos",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 2.8797,
+      "PC2": -3.215,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Brais Méndez",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.2813,
+      "PC2": -2.2403,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jadon Sancho",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 0.6219,
+      "PC2": 1.3391,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Jack Grealish",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 1.6377,
+      "PC2": 0.6077,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nahuel Molina",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.6286,
+      "PC2": -0.0336,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Martín Zubimendi",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.6731,
+      "PC2": -1.9256,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Takefusa Kubo",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 2.5012,
+      "PC2": -2.6126,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ciro Immobile",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 3.5693,
+      "PC2": -0.982,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kai Havertz",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 5.4111,
+      "PC2": -0.0635,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mathías Olivera",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.9659,
+      "PC2": -0.8184,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Stanislav Lobotka",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.6066,
+      "PC2": 4.3687,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Bertrand Traoré",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.1134,
+      "PC2": 1.3583,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Oscar Bobb",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": -0.9379,
+      "PC2": -0.8294,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lee Kang-in",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.1303,
+      "PC2": -3.1132,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Benjamin Henrichs",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 2.9208,
+      "PC2": 4.5313,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Amir Rrahmani",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 0.4176,
+      "PC2": -1.6932,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Luca Pellegrini",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.446,
+      "PC2": -1.1381,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Alex Meret",
+      "season": "2023-2024",
+      "position_group": "Goalkeeper",
+      "PC1": -4.0293,
+      "PC2": -1.0339,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Péter Gulácsi",
+      "season": "2023-2024",
+      "position_group": "Goalkeeper",
+      "PC1": -4.5012,
+      "PC2": -0.0208,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Toni Kroos",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.4214,
+      "PC2": 3.9634,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Andriy Lunin",
+      "season": "2023-2024",
+      "position_group": "Goalkeeper",
+      "PC1": -3.5635,
+      "PC2": 0.2333,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mateo Kovacic",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.4761,
+      "PC2": 3.9592,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Nathan Aké",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 1.1684,
+      "PC2": 3.9799,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Donyell Malen",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.5286,
+      "PC2": -2.7757,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ander Barrenetxea",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.1449,
+      "PC2": -3.2987,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Stefan Savic",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 0.1388,
+      "PC2": 4.3127,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rodri",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 3.7332,
+      "PC2": -2.2614,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Castello Lukeba",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -1.2143,
+      "PC2": -1.5947,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Axel Witsel",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 1.6488,
+      "PC2": 3.4529,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Álex Remiro",
+      "season": "2023-2024",
+      "position_group": "Goalkeeper",
+      "PC1": -2.7917,
+      "PC2": -0.4737,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Erling Haaland",
+      "season": "2023-2024",
+      "position_group": "Forward",
+      "PC1": 5.1307,
+      "PC2": -2.8106,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Benjamin Mendy",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": 1.5297,
+      "PC2": 2.9446,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Matías Vecino",
+      "season": "2023-2024",
+      "position_group": "Midfielder",
+      "PC1": 2.8354,
+      "PC2": -2.4688,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Elseid Hysaj",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.8389,
+      "PC2": 3.8116,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Igor Zubeldia",
+      "season": "2023-2024",
+      "position_group": "Defender",
+      "PC1": -0.5661,
+      "PC2": -1.3255,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Emil Forsberg",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 3.4557,
+      "PC2": 1.2306,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Cody Gakpo",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 3.1386,
+      "PC2": 0.8321,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Hirving Lozano",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 2.543,
+      "PC2": -1.587,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Sergio Ramos",
       "season": "2022-2023",
       "position_group": "Defender",
-      "PC1": 2.2004,
-      "PC2": 4.2561,
-      "kmeans_cluster": 2,
+      "PC1": 1.0435,
+      "PC2": -1.0743,
+      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
@@ -3107,6 +3125,15 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
+      "player_name": "Olivier Giroud",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 5.5588,
+      "PC2": -0.5523,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
       "player_name": "Pape Matar Sarr",
       "season": "2022-2023",
       "position_group": "Midfielder",
@@ -3116,57 +3143,30 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "James Milner",
+      "player_name": "Ansgar Knauff",
       "season": "2022-2023",
       "position_group": "Midfielder",
-      "PC1": -0.0839,
-      "PC2": 3.1443,
-      "kmeans_cluster": 2,
+      "PC1": 0.0361,
+      "PC2": -1.8629,
+      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Enzo Fernández",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 1.0253,
-      "PC2": 3.9394,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Edin Dzeko",
+      "player_name": "Riyad Mahrez",
       "season": "2022-2023",
       "position_group": "Forward",
-      "PC1": 3.9798,
-      "PC2": -1.2317,
-      "kmeans_cluster": 0,
+      "PC1": 3.8801,
+      "PC2": 1.2949,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Junior Messias",
+      "player_name": "Marcel Halstenberg",
       "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 2.6145,
-      "PC2": -0.5235,
+      "position_group": "Defender",
+      "PC1": -0.408,
+      "PC2": -1.4111,
       "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mykhailo Mudryk",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.5813,
-      "PC2": -2.1906,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Fraser Forster",
-      "season": "2022-2023",
-      "position_group": "Goalkeeper",
-      "PC1": -4.444,
-      "PC2": -0.6974,
-      "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
@@ -3179,20 +3179,11 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Ruben Loftus-Cheek",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.0317,
-      "PC2": 3.5467,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marc Cucurella",
+      "player_name": "Víctor Ruiz",
       "season": "2022-2023",
       "position_group": "Defender",
-      "PC1": -1.7545,
-      "PC2": -1.7187,
+      "PC1": -4.026,
+      "PC2": -0.6307,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
@@ -3203,33 +3194,6 @@ window.DEMO_DATA = {
       "PC1": -4.0513,
       "PC2": -0.1093,
       "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kepa Arrizabalaga",
-      "season": "2022-2023",
-      "position_group": "Goalkeeper",
-      "PC1": -3.124,
-      "PC2": 0.9293,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Christopher Lenz",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.9564,
-      "PC2": -1.6788,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Sandro Tonali",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 3.0643,
-      "PC2": 0.223,
-      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
@@ -3251,51 +3215,6 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Oliver Skipp",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.22,
-      "PC2": -1.7201,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Kevin Kampl",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 2.1428,
-      "PC2": 3.1614,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Salih Özcan",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.4893,
-      "PC2": -0.0862,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Hirving Lozano",
-      "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 2.543,
-      "PC2": -1.587,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Tanguy Ndombele",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": -0.2433,
-      "PC2": -1.1906,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
       "player_name": "Marcelo Brozovic",
       "season": "2022-2023",
       "position_group": "Midfielder",
@@ -3305,110 +3224,11 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Fabinho",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 0.8845,
-      "PC2": -1.2076,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ansgar Knauff",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 0.0361,
-      "PC2": -1.8629,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Davide Calabria",
-      "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": 0.072,
-      "PC2": -1.1431,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
       "player_name": "Marius Wolf",
       "season": "2022-2023",
       "position_group": "Midfielder",
       "PC1": -0.1417,
       "PC2": -1.7945,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Janis Blaswich",
-      "season": "2022-2023",
-      "position_group": "Goalkeeper",
-      "PC1": -4.0498,
-      "PC2": -1.2225,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Emil Forsberg",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 3.4557,
-      "PC2": 1.2306,
-      "kmeans_cluster": 2,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Timo Werner",
-      "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 2.5037,
-      "PC2": -2.3824,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mario Götze",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 0.8306,
-      "PC2": -2.5371,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Djibril Sow",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 1.5496,
-      "PC2": -2.0639,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Carlos Soler",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 0.8573,
-      "PC2": -2.8617,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Sébastien Haller",
-      "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 3.3195,
-      "PC2": -2.3512,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Olivier Giroud",
-      "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 5.5588,
-      "PC2": -0.5523,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -3422,29 +3242,65 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Sergio Ramos",
+      "player_name": "Sandro Tonali",
       "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": 1.0435,
-      "PC2": -1.0743,
+      "position_group": "Midfielder",
+      "PC1": 3.0643,
+      "PC2": 0.223,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Marco Verratti",
+      "player_name": "Oliver Skipp",
       "season": "2022-2023",
       "position_group": "Midfielder",
-      "PC1": 1.8537,
-      "PC2": 5.0623,
-      "kmeans_cluster": 2,
+      "PC1": -0.22,
+      "PC2": -1.7201,
+      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Cody Gakpo",
+      "player_name": "Philipp Max",
       "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 3.1386,
-      "PC2": 0.8321,
+      "position_group": "Defender",
+      "PC1": -1.0856,
+      "PC2": 0.3708,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kevin Trapp",
+      "season": "2022-2023",
+      "position_group": "Goalkeeper",
+      "PC1": -3.3871,
+      "PC2": 0.2011,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mario Götze",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 0.8306,
+      "PC2": -2.5371,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Fraser Forster",
+      "season": "2022-2023",
+      "position_group": "Goalkeeper",
+      "PC1": -4.444,
+      "PC2": -0.6974,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Ruben Loftus-Cheek",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.0317,
+      "PC2": 3.5467,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
@@ -3458,24 +3314,6 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Pierre Kalulu",
-      "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": -0.8227,
-      "PC2": -1.3753,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Alexis Saelemaekers",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 1.6361,
-      "PC2": -0.9683,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
       "player_name": "Stefan Bajcetic",
       "season": "2022-2023",
       "position_group": "Midfielder",
@@ -3485,30 +3323,57 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Ismaël Bennacer",
+      "player_name": "Davide Calabria",
       "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 1.3271,
-      "PC2": -0.1026,
+      "position_group": "Defender",
+      "PC1": 0.072,
+      "PC2": -1.1431,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Milan Skriniar",
+      "player_name": "Janis Blaswich",
       "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": 0.7306,
-      "PC2": 4.1694,
+      "position_group": "Goalkeeper",
+      "PC1": -4.0498,
+      "PC2": -1.2225,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Salih Özcan",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.4893,
+      "PC2": -0.0862,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Junior Messias",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 2.6145,
+      "PC2": -0.5235,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Rade Krunic",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 0.9501,
+      "PC2": 2.9067,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Philipp Max",
+      "player_name": "James Milner",
       "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": -1.0856,
-      "PC2": 0.3708,
-      "kmeans_cluster": 1,
+      "position_group": "Midfielder",
+      "PC1": -0.0839,
+      "PC2": 3.1443,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
@@ -3517,15 +3382,6 @@ window.DEMO_DATA = {
       "position_group": "Forward",
       "PC1": 1.2496,
       "PC2": -3.8273,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Neymar",
-      "season": "2022-2023",
-      "position_group": "Midfielder",
-      "PC1": 5.1222,
-      "PC2": -2.9558,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
@@ -3539,15 +3395,6 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Fikayo Tomori",
-      "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": 0.656,
-      "PC2": 0.5076,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
       "player_name": "Son Heung-Min",
       "season": "2022-2023",
       "position_group": "Midfielder",
@@ -3557,20 +3404,29 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Marcel Halstenberg",
+      "player_name": "Kalidou Koulibaly",
       "season": "2022-2023",
       "position_group": "Defender",
-      "PC1": -0.408,
-      "PC2": -1.4111,
-      "kmeans_cluster": 0,
+      "PC1": 2.2004,
+      "PC2": 4.2561,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Cristian Romero",
+      "player_name": "Thiago Silva",
       "season": "2022-2023",
       "position_group": "Defender",
-      "PC1": 1.7278,
-      "PC2": 4.9767,
+      "PC1": 0.608,
+      "PC2": 4.9295,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Milan Skriniar",
+      "season": "2022-2023",
+      "position_group": "Defender",
+      "PC1": 0.7306,
+      "PC2": 4.1694,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
@@ -3584,21 +3440,93 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Riyad Mahrez",
+      "player_name": "Cristian Romero",
       "season": "2022-2023",
-      "position_group": "Forward",
-      "PC1": 3.8801,
-      "PC2": 1.2949,
+      "position_group": "Defender",
+      "PC1": 1.7278,
+      "PC2": 4.9767,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Kristijan Jakic",
+      "player_name": "Ismaël Bennacer",
       "season": "2022-2023",
       "position_group": "Midfielder",
-      "PC1": -0.4435,
-      "PC2": -1.9707,
+      "PC1": 1.3271,
+      "PC2": -0.1026,
       "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Alexis Saelemaekers",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 1.6361,
+      "PC2": -0.9683,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Sébastien Haller",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 3.3195,
+      "PC2": -2.3512,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Carlos Soler",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 0.8573,
+      "PC2": -2.8617,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Djibril Sow",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 1.5496,
+      "PC2": -2.0639,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Fikayo Tomori",
+      "season": "2022-2023",
+      "position_group": "Defender",
+      "PC1": 0.656,
+      "PC2": 0.5076,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Marc Cucurella",
+      "season": "2022-2023",
+      "position_group": "Defender",
+      "PC1": -1.7545,
+      "PC2": -1.7187,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mykhailo Mudryk",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.5813,
+      "PC2": -2.1906,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kevin Kampl",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 2.1428,
+      "PC2": 3.1614,
+      "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
@@ -3611,263 +3539,335 @@ window.DEMO_DATA = {
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Thiago Silva",
+      "player_name": "Neymar",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 5.1222,
+      "PC2": -2.9558,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Edin Dzeko",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 3.9798,
+      "PC2": -1.2317,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kristijan Jakic",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.4435,
+      "PC2": -1.9707,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Christopher Lenz",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.9564,
+      "PC2": -1.6788,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kepa Arrizabalaga",
+      "season": "2022-2023",
+      "position_group": "Goalkeeper",
+      "PC1": -3.124,
+      "PC2": 0.9293,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Fabinho",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 0.8845,
+      "PC2": -1.2076,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Tanguy Ndombele",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": -0.2433,
+      "PC2": -1.1906,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Enzo Fernández",
+      "season": "2022-2023",
+      "position_group": "Midfielder",
+      "PC1": 1.0253,
+      "PC2": 3.9394,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Timo Werner",
+      "season": "2022-2023",
+      "position_group": "Forward",
+      "PC1": 2.5037,
+      "PC2": -2.3824,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pierre Kalulu",
       "season": "2022-2023",
       "position_group": "Defender",
-      "PC1": 0.608,
-      "PC2": 4.9295,
-      "kmeans_cluster": 2,
+      "PC1": -0.8227,
+      "PC2": -1.3753,
+      "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Kevin Trapp",
+      "player_name": "Marco Verratti",
       "season": "2022-2023",
-      "position_group": "Goalkeeper",
-      "PC1": -3.3871,
-      "PC2": 0.2011,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Víctor Ruiz",
-      "season": "2022-2023",
-      "position_group": "Defender",
-      "PC1": -4.026,
-      "PC2": -0.6307,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Ryad Boudebouz",
-      "season": "2021-2022",
       "position_group": "Midfielder",
-      "PC1": 2.4841,
-      "PC2": 2.3002,
+      "PC1": 1.8537,
+      "PC2": 5.0623,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Sofiane Boufal",
+      "player_name": "Luan Peres Petroni",
       "season": "2021-2022",
-      "position_group": "Midfielder",
-      "PC1": 4.8384,
-      "PC2": 1.5729,
+      "position_group": "Defender",
+      "PC1": -1.3636,
+      "PC2": -0.5687,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Brayann Pereira",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": -5.1544,
+      "PC2": 7.1725,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": -1
+    },
+    {
+      "player_name": "Ricardo Pereira",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": 1.0715,
+      "PC2": 4.4711,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Delano Burgzorg",
+      "player_name": "Gastón Pereiro",
       "season": "2021-2022",
       "position_group": "Forward",
-      "PC1": -0.4609,
-      "PC2": 0.0853,
+      "PC1": 1.2345,
+      "PC2": -3.7549,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Jonathan Burkardt",
+      "player_name": "Leonardo Pavoletti",
       "season": "2021-2022",
       "position_group": "Forward",
-      "PC1": 2.3926,
-      "PC2": -4.7071,
+      "PC1": 3.1123,
+      "PC2": -0.7592,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Roman Bürki",
-      "season": "2021-2022",
-      "position_group": "Goalkeeper",
-      "PC1": -6.2131,
-      "PC2": -1.1567,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Dan Burn",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": 0.3068,
-      "PC2": -1.3742,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Maxime Busi",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": -0.9016,
-      "PC2": -1.2176,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Gianluca Busio",
+      "player_name": "Dor Peretz",
       "season": "2021-2022",
       "position_group": "Midfielder",
-      "PC1": 0.6564,
-      "PC2": -1.7329,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jack Butland",
-      "season": "2021-2022",
-      "position_group": "Goalkeeper",
-      "PC1": -4.9709,
-      "PC2": -0.629,
+      "PC1": -1.7581,
+      "PC2": -0.5172,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Adrián Butzke",
-      "season": "2021-2022",
-      "position_group": "Forward",
-      "PC1": -7.5132,
-      "PC2": -2.935,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 1
-    },
-    {
-      "player_name": "Bilal Brahimi",
-      "season": "2021-2022",
-      "position_group": "Forward",
-      "PC1": -1.6598,
-      "PC2": -2.378,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Martin Braithwaite",
-      "season": "2021-2022",
-      "position_group": "Forward",
-      "PC1": 0.345,
-      "PC2": -3.3568,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Jarrad Branthwaite",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": -1.6281,
-      "PC2": -1.3387,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Lilian Brassier",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": -0.7452,
-      "PC2": -1.2523,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Claudio Bravo",
-      "season": "2021-2022",
-      "position_group": "Goalkeeper",
-      "PC1": -4.3441,
-      "PC2": -2.3618,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Iker Bravo",
-      "season": "2021-2022",
-      "position_group": "Forward",
-      "PC1": -6.7068,
-      "PC2": -3.4582,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 1
-    },
-    {
-      "player_name": "Fabian Bredlow",
-      "season": "2021-2022",
-      "position_group": "Goalkeeper",
-      "PC1": -5.4393,
-      "PC2": -1.2362,
-      "kmeans_cluster": 1,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Josip Brekalo",
+      "player_name": "Ayoze Pérez",
       "season": "2021-2022",
       "position_group": "Midfielder",
-      "PC1": 1.7479,
-      "PC2": -3.1341,
+      "PC1": 1.5012,
+      "PC2": -2.0196,
       "kmeans_cluster": 0,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Martín Cáceres",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": -0.6144,
-      "PC2": -1.1699,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Anthony Caci",
-      "season": "2021-2022",
-      "position_group": "Defender",
-      "PC1": 0.4819,
-      "PC2": -1.3864,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Mathieu Cafaro",
+      "player_name": "Carles Pérez",
       "season": "2021-2022",
       "position_group": "Midfielder",
-      "PC1": -1.2466,
-      "PC2": -0.6075,
+      "PC1": 1.0264,
+      "PC2": -2.1042,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Iñigo Pérez",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": -2.9803,
+      "PC2": -1.7555,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Yannick Cahuzac",
+      "player_name": "Juan Pérez",
+      "season": "2021-2022",
+      "position_group": "Goalkeeper",
+      "PC1": -6.1698,
+      "PC2": -2.1601,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Roberto Pereyra",
       "season": "2021-2022",
       "position_group": "Midfielder",
-      "PC1": -1.7744,
-      "PC2": 3.8672,
+      "PC1": 3.8735,
+      "PC2": 2.5163,
       "kmeans_cluster": 2,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Felipe Caicedo",
+      "player_name": "Ricardo Pepi",
       "season": "2021-2022",
       "position_group": "Forward",
-      "PC1": 0.4902,
-      "PC2": -3.0142,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Moisés Caicedo",
-      "season": "2021-2022",
-      "position_group": "Midfielder",
-      "PC1": -0.1149,
-      "PC2": -1.2688,
-      "kmeans_cluster": 0,
-      "dbscan_cluster": 0
-    },
-    {
-      "player_name": "Marc-Aurèle Caillard",
-      "season": "2021-2022",
-      "position_group": "Goalkeeper",
-      "PC1": -4.745,
-      "PC2": -2.5646,
+      "PC1": -2.4458,
+      "PC2": -2.6628,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     },
     {
-      "player_name": "Lewis Brunt",
+      "player_name": "Alberto Perea",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": -0.6385,
+      "PC2": -1.2931,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Dimitri Payet",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": 4.538,
+      "PC2": 1.3492,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Philipp Pentke",
+      "season": "2021-2022",
+      "position_group": "Goalkeeper",
+      "PC1": -6.0439,
+      "PC2": -0.5088,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Timothee Pembele",
       "season": "2021-2022",
       "position_group": "Defender",
-      "PC1": -5.9552,
-      "PC2": 1.4078,
+      "PC1": -0.1005,
+      "PC2": -1.6936,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Federico Peluso",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": -5.6499,
+      "PC2": -0.8313,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Lorenzo Pellegrini",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": 5.54,
+      "PC2": 2.1906,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pietro Pellegri",
+      "season": "2021-2022",
+      "position_group": "Forward",
+      "PC1": -0.391,
+      "PC2": -2.9827,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Peter Pekarík",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": 0.133,
+      "PC2": 3.8523,
+      "kmeans_cluster": 2,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Gianluca Pegolo",
+      "season": "2021-2022",
+      "position_group": "Goalkeeper",
+      "PC1": -6.0353,
+      "PC2": -0.5455,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Pedro",
+      "season": "2021-2022",
+      "position_group": "Forward",
+      "PC1": 3.2197,
+      "PC2": -3.6421,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Kike Pérez",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": 0.4202,
+      "PC2": -1.7871,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Mads Pedersen",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": 0.5326,
+      "PC2": -2.1886,
+      "kmeans_cluster": 0,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Facundo Pellistri",
+      "season": "2021-2022",
+      "position_group": "Midfielder",
+      "PC1": -2.3163,
+      "PC2": -1.7639,
+      "kmeans_cluster": 1,
+      "dbscan_cluster": 0
+    },
+    {
+      "player_name": "Alex Petxa",
+      "season": "2021-2022",
+      "position_group": "Defender",
+      "PC1": -1.5671,
+      "PC2": 0.4503,
       "kmeans_cluster": 1,
       "dbscan_cluster": 0
     }
@@ -5914,67 +5914,67 @@ window.DEMO_DATA = {
       "player_name": "Benjamin Henrichs",
       "position_group": "DEF",
       "minutes_played": 1143,
-      "rating": 2.9191
+      "rating": 3.1366
     },
     {
       "player_name": "Ricardo Pereira",
       "position_group": "DEF",
       "minutes_played": 991,
-      "rating": 2.686
+      "rating": 2.8428
     },
     {
       "player_name": "Alex Ferrari",
       "position_group": "DEF",
       "minutes_played": 1643,
-      "rating": 2.5656
+      "rating": 2.7888
     },
     {
       "player_name": "Vladimír Coufal",
       "position_group": "DEF",
       "minutes_played": 2209,
-      "rating": 2.5293
+      "rating": 2.7161
     },
     {
       "player_name": "Robert Lewandowski",
       "position_group": "FW",
       "minutes_played": 2946,
-      "rating": 3.203
+      "rating": 3.3866
     },
     {
       "player_name": "Patrik Schick",
       "position_group": "FW",
       "minutes_played": 2076,
-      "rating": 2.9917
+      "rating": 3.1695
     },
     {
-      "player_name": "Mohamed Salah",
+      "player_name": "Erling Haaland",
       "position_group": "FW",
-      "minutes_played": 2762,
-      "rating": 2.8481
+      "minutes_played": 1911,
+      "rating": 2.9935
     },
     {
-      "player_name": "Jasper Cillessen",
+      "player_name": "Mark Flekken",
       "position_group": "GK",
-      "minutes_played": 1457,
+      "minutes_played": 2880,
       "rating": 0.0
     },
     {
       "player_name": "Exequiel Palacios",
       "position_group": "MID",
       "minutes_played": 1097,
-      "rating": 2.188
-    },
-    {
-      "player_name": "Marco Verratti",
-      "position_group": "MID",
-      "minutes_played": 1937,
-      "rating": 2.1087
+      "rating": 2.1981
     },
     {
       "player_name": "Kevin De Bruyne",
       "position_group": "MID",
       "minutes_played": 2201,
-      "rating": 2.05
+      "rating": 2.115
+    },
+    {
+      "player_name": "Domenico Berardi",
+      "position_group": "MID",
+      "minutes_played": 2819,
+      "rating": 2.0981
     }
   ],
   "passing_liverpool": [
@@ -6145,2434 +6145,34 @@ window.DEMO_DATA = {
   ],
   "similarity_index": [
     {
-      "player": "Takumi Minamino",
+      "player": "Vitinha",
       "position": "Midfielder",
       "season": "2024-2025",
       "similar": [
         {
-          "name": "Dan Gosling",
+          "name": "Gerrit Holtmann",
           "position": "Midfielder",
-          "distance": 2.1853
-        },
-        {
-          "name": "Jon Guridi",
-          "position": "Midfielder",
-          "distance": 2.3586
-        },
-        {
-          "name": "Abdul Majeed Waris",
-          "position": "Midfielder",
-          "distance": 2.4186
-        },
-        {
-          "name": "Diego Perotti",
-          "position": "Midfielder",
-          "distance": 2.5076
-        },
-        {
-          "name": "Edoardo Bove",
-          "position": "Midfielder",
-          "distance": 2.57
-        }
-      ]
-    },
-    {
-      "player": "Thibaut Courtois",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Hugo Lloris",
-          "position": "Goalkeeper",
-          "distance": 0.1172
-        },
-        {
-          "name": "Hugo Lloris",
-          "position": "Goalkeeper",
-          "distance": 0.311
-        },
-        {
-          "name": "Martin Dúbravka",
-          "position": "Goalkeeper",
-          "distance": 0.3539
-        },
-        {
-          "name": "Wojciech Szczesny",
-          "position": "Goalkeeper",
-          "distance": 0.3695
-        },
-        {
-          "name": "Hugo Lloris",
-          "position": "Goalkeeper",
-          "distance": 0.4462
-        }
-      ]
-    },
-    {
-      "player": "Bafodé Diakité",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Tuta",
-          "position": "Defender",
-          "distance": 0.8789
-        },
-        {
-          "name": "Sergio Ramos",
-          "position": "Defender",
-          "distance": 1.0461
-        },
-        {
-          "name": "Aritz Elustondo",
-          "position": "Defender",
-          "distance": 1.0779
-        },
-        {
-          "name": "Brendan Chardonnet",
-          "position": "Defender",
-          "distance": 1.1698
-        },
-        {
-          "name": "Stefan Mitrovic",
-          "position": "Defender",
-          "distance": 1.1943
-        }
-      ]
-    },
-    {
-      "player": "Mikel Merino",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Thomas Monconduit",
-          "position": "Midfielder",
-          "distance": 0.4207
-        },
-        {
-          "name": "Saúl Ñíguez",
-          "position": "Midfielder",
-          "distance": 0.732
-        },
-        {
-          "name": "Joelinton",
-          "position": "Midfielder",
-          "distance": 0.8307
-        },
-        {
-          "name": "Koke",
-          "position": "Midfielder",
-          "distance": 0.8768
-        },
-        {
-          "name": "Mattias Svanberg",
-          "position": "Midfielder",
-          "distance": 0.8903
-        }
-      ]
-    },
-    {
-      "player": "Jonathan David",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Raheem Sterling",
-          "position": "Forward",
-          "distance": 1.4793
-        },
-        {
-          "name": "Robert Lewandowski",
-          "position": "Forward",
-          "distance": 1.6557
-        },
-        {
-          "name": "Ciro Immobile",
-          "position": "Forward",
-          "distance": 1.657
-        },
-        {
-          "name": "Harry Kane",
-          "position": "Forward",
-          "distance": 1.6603
-        },
-        {
-          "name": "Robert Lewandowski",
-          "position": "Forward",
-          "distance": 1.6624
-        }
-      ]
-    },
-    {
-      "player": "Granit Xhaka",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Jordan Ferri",
-          "position": "Midfielder",
-          "distance": 1.0493
-        },
-        {
-          "name": "Daniele De Rossi",
-          "position": "Midfielder",
-          "distance": 1.2785
-        },
-        {
-          "name": "Aurélien Tchouaméni",
-          "position": "Midfielder",
-          "distance": 1.3274
-        },
-        {
-          "name": "Robert Andrich",
-          "position": "Midfielder",
-          "distance": 1.4206
-        },
-        {
-          "name": "Leandro Paredes",
-          "position": "Midfielder",
-          "distance": 1.5193
-        }
-      ]
-    },
-    {
-      "player": "Jorginho",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Fabinho",
-          "position": "Midfielder",
-          "distance": 1.5972
-        },
-        {
-          "name": "Stanislav Lobotka",
-          "position": "Midfielder",
-          "distance": 1.6231
-        },
-        {
-          "name": "Manuel Lanzini",
-          "position": "Midfielder",
-          "distance": 1.6702
-        },
-        {
-          "name": "Julian Ryerson",
-          "position": "Midfielder",
-          "distance": 1.6875
-        },
-        {
-          "name": "Frenkie de Jong",
-          "position": "Midfielder",
-          "distance": 1.7097
-        }
-      ]
-    },
-    {
-      "player": "Leandro Trossard",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Terem Moffi",
-          "position": "Forward",
-          "distance": 0.808
-        },
-        {
-          "name": "Arkadiusz Milik",
-          "position": "Forward",
-          "distance": 0.9867
-        },
-        {
-          "name": "Ihlas Bebou",
-          "position": "Forward",
-          "distance": 1.0094
-        },
-        {
-          "name": "Pedro",
-          "position": "Forward",
-          "distance": 1.0658
-        },
-        {
-          "name": "Teemu Pukki",
-          "position": "Forward",
-          "distance": 1.0861
-        }
-      ]
-    },
-    {
-      "player": "Brendan Chardonnet",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Tuta",
-          "position": "Defender",
-          "distance": 1.0012
-        },
-        {
-          "name": "Stefan Mitrovic",
-          "position": "Defender",
-          "distance": 1.0415
-        },
-        {
-          "name": "Enock Kwateng",
-          "position": "Defender",
-          "distance": 1.0915
-        },
-        {
-          "name": "Aritz Elustondo",
-          "position": "Defender",
-          "distance": 1.1223
-        },
-        {
-          "name": "Bafodé Diakité",
-          "position": "Defender",
-          "distance": 1.1698
-        }
-      ]
-    },
-    {
-      "player": "Edimilson Fernandes",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Naïs Djouahra",
-          "position": "Midfielder",
-          "distance": 0.8121
-        },
-        {
-          "name": "Nicola Zalewski",
-          "position": "Midfielder",
-          "distance": 1.1232
-        },
-        {
-          "name": "Roberto Navarro",
-          "position": "Midfielder",
-          "distance": 1.141
-        },
-        {
-          "name": "Erik Thommy",
-          "position": "Midfielder",
-          "distance": 1.1706
-        },
-        {
-          "name": "Alberto Soro",
-          "position": "Midfielder",
-          "distance": 1.231
-        }
-      ]
-    },
-    {
-      "player": "Rémy Cabella",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Patrick Berg",
-          "position": "Midfielder",
-          "distance": 0.9846
-        },
-        {
-          "name": "Theo Walcott",
-          "position": "Midfielder",
-          "distance": 1.3029
-        },
-        {
-          "name": "Víctor Camarasa",
-          "position": "Midfielder",
-          "distance": 1.3313
-        },
-        {
-          "name": "Marc Roca",
-          "position": "Midfielder",
-          "distance": 1.37
-        },
-        {
-          "name": "Martín Merquelanz",
-          "position": "Midfielder",
-          "distance": 1.4177
-        }
-      ]
-    },
-    {
-      "player": "Marcus Thuram",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Alexander Sørloth",
-          "position": "Forward",
-          "distance": 0.6667
-        },
-        {
-          "name": "Guido Burgstaller",
-          "position": "Forward",
-          "distance": 0.8247
-        },
-        {
-          "name": "Antonio Sanabria",
-          "position": "Forward",
-          "distance": 1.0155
-        },
-        {
-          "name": "Asier Villalibre",
-          "position": "Forward",
-          "distance": 1.0829
-        },
-        {
-          "name": "Kike",
-          "position": "Forward",
-          "distance": 1.1012
-        }
-      ]
-    },
-    {
-      "player": "Mike Maignan",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Péter Gulácsi",
-          "position": "Goalkeeper",
-          "distance": 0.3902
-        },
-        {
-          "name": "Yann Sommer",
-          "position": "Goalkeeper",
-          "distance": 0.4797
-        },
-        {
-          "name": "Ciprian Tatarusanu",
-          "position": "Goalkeeper",
-          "distance": 0.6801
-        },
-        {
-          "name": "Lukas Hradecky",
-          "position": "Goalkeeper",
-          "distance": 0.6963
-        },
-        {
-          "name": "Jasper Cillessen",
-          "position": "Goalkeeper",
-          "distance": 0.699
-        }
-      ]
-    },
-    {
-      "player": "Abdukodir Khusanov",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ben Gibson",
-          "position": "Defender",
-          "distance": 1.834
-        },
-        {
-          "name": "Jemerson",
-          "position": "Defender",
-          "distance": 1.975
-        },
-        {
-          "name": "Sebastiano Luperto",
-          "position": "Defender",
-          "distance": 2.0288
-        },
-        {
-          "name": "Stefan Strandberg",
-          "position": "Defender",
-          "distance": 2.1807
-        },
-        {
-          "name": "Dylan Bronn",
-          "position": "Defender",
-          "distance": 2.3333
-        }
-      ]
-    },
-    {
-      "player": "Rui Silva",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Unai Simón",
-          "position": "Goalkeeper",
-          "distance": 0.2956
-        },
-        {
-          "name": "Diego López",
-          "position": "Goalkeeper",
-          "distance": 0.3038
-        },
-        {
-          "name": "Emil Audero",
-          "position": "Goalkeeper",
-          "distance": 0.3305
-        },
-        {
-          "name": "Gauthier Gallon",
-          "position": "Goalkeeper",
-          "distance": 0.3491
-        },
-        {
-          "name": "Sergio Romero",
-          "position": "Goalkeeper",
-          "distance": 0.3566
-        }
-      ]
-    },
-    {
-      "player": "Vanderson",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Marius Wolf",
-          "position": "Midfielder",
-          "distance": 0.657
-        },
-        {
-          "name": "Daniel Caligiuri",
-          "position": "Midfielder",
-          "distance": 0.9809
-        },
-        {
-          "name": "Moisés Caicedo",
-          "position": "Midfielder",
-          "distance": 1.02
-        },
-        {
-          "name": "Alessandro Deiola",
-          "position": "Midfielder",
-          "distance": 1.0544
-        },
-        {
-          "name": "Dennis Praet",
-          "position": "Midfielder",
-          "distance": 1.0632
-        }
-      ]
-    },
-    {
-      "player": "Rodrygo",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Álvaro Morata",
-          "position": "Forward",
-          "distance": 1.2142
-        },
-        {
-          "name": "Lamine Yamal",
-          "position": "Forward",
-          "distance": 1.292
-        },
-        {
-          "name": "Grégoire Defrel",
-          "position": "Forward",
-          "distance": 1.3072
-        },
-        {
-          "name": "Jack Grealish",
-          "position": "Forward",
-          "distance": 1.3385
-        },
-        {
-          "name": "João Félix",
-          "position": "Forward",
-          "distance": 1.3919
-        }
-      ]
-    },
-    {
-      "player": "Pedri",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Julian Draxler",
-          "position": "Midfielder",
-          "distance": 1.3932
-        },
-        {
-          "name": "Emile Smith Rowe",
-          "position": "Midfielder",
-          "distance": 1.5146
-        },
-        {
-          "name": "Philipp Klement",
-          "position": "Midfielder",
-          "distance": 1.7619
-        },
-        {
-          "name": "Jadon Sancho",
-          "position": "Midfielder",
-          "distance": 1.7983
-        },
-        {
-          "name": "Dele Alli",
-          "position": "Midfielder",
-          "distance": 1.8972
-        }
-      ]
-    },
-    {
-      "player": "Thomas Partey",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Scott McTominay",
-          "position": "Midfielder",
-          "distance": 0.9365
-        },
-        {
-          "name": "Geoffrey Kondogbia",
-          "position": "Midfielder",
-          "distance": 1.0322
-        },
-        {
-          "name": "Daniel Wass",
-          "position": "Midfielder",
-          "distance": 1.0474
-        },
-        {
-          "name": "Andre-Frank Zambo Anguissa",
-          "position": "Midfielder",
-          "distance": 1.0897
-        },
-        {
-          "name": "Moussa Sissoko",
-          "position": "Midfielder",
-          "distance": 1.1186
-        }
-      ]
-    },
-    {
-      "player": "Mika Biereth",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Erling Haaland",
-          "position": "Forward",
-          "distance": 0.9909
-        },
-        {
-          "name": "Mauro Icardi",
-          "position": "Forward",
-          "distance": 1.1942
-        },
-        {
-          "name": "Edinson Cavani",
-          "position": "Forward",
-          "distance": 1.2372
-        },
-        {
-          "name": "Erling Haaland",
-          "position": "Forward",
-          "distance": 1.398
-        },
-        {
-          "name": "Benjamin Sesko",
-          "position": "Forward",
-          "distance": 1.4996
-        }
-      ]
-    },
-    {
-      "player": "Dayot Upamecano",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Danilo",
-          "position": "Defender",
-          "distance": 1.5172
-        },
-        {
-          "name": "Rúben Dias",
-          "position": "Defender",
-          "distance": 1.54
-        },
-        {
-          "name": "Jordi Alba",
-          "position": "Defender",
-          "distance": 1.5572
-        },
-        {
-          "name": "Jordi Alba",
-          "position": "Defender",
-          "distance": 1.5632
-        },
-        {
-          "name": "Jesús Navas",
-          "position": "Defender",
-          "distance": 1.6337
-        }
-      ]
-    },
-    {
-      "player": "Wojciech Szczesny",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Andrea Consigli",
-          "position": "Goalkeeper",
-          "distance": 0.2183
-        },
-        {
-          "name": "Jordan Pickford",
-          "position": "Goalkeeper",
-          "distance": 0.3408
-        },
-        {
-          "name": "Thibaut Courtois",
-          "position": "Goalkeeper",
-          "distance": 0.3593
-        },
-        {
-          "name": "Hugo Lloris",
-          "position": "Goalkeeper",
-          "distance": 0.382
-        },
-        {
-          "name": "Hugo Lloris",
-          "position": "Goalkeeper",
-          "distance": 0.3981
-        }
-      ]
-    },
-    {
-      "player": "Serge Gnabry",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Emil Forsberg",
-          "position": "Midfielder",
-          "distance": 1.4845
-        },
-        {
-          "name": "Saïd Benrahma",
-          "position": "Midfielder",
-          "distance": 1.5449
-        },
-        {
-          "name": "Bernardo Silva",
-          "position": "Midfielder",
-          "distance": 1.6496
-        },
-        {
-          "name": "Raphaël Guerreiro",
-          "position": "Midfielder",
-          "distance": 1.7638
-        },
-        {
-          "name": "Diego Perotti",
-          "position": "Midfielder",
-          "distance": 1.7949
-        }
-      ]
-    },
-    {
-      "player": "Maximilian Beier",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Marcus Thuram",
-          "position": "Forward",
-          "distance": 1.0115
-        },
-        {
-          "name": "João Félix",
-          "position": "Forward",
-          "distance": 1.0956
-        },
-        {
-          "name": "Ferran Torres",
-          "position": "Forward",
-          "distance": 1.2582
-        },
-        {
-          "name": "Franck Ribéry",
-          "position": "Forward",
-          "distance": 1.348
-        },
-        {
-          "name": "Luis Muriel",
-          "position": "Forward",
-          "distance": 1.428
-        }
-      ]
-    },
-    {
-      "player": "Niklas Süle",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Matthias Ginter",
-          "position": "Defender",
-          "distance": 1.002
-        },
-        {
-          "name": "Phil Jones",
-          "position": "Defender",
-          "distance": 1.0267
-        },
-        {
-          "name": "Christopher Wooh",
-          "position": "Defender",
-          "distance": 1.0588
-        },
-        {
-          "name": "David Alaba",
-          "position": "Defender",
-          "distance": 1.0764
-        },
-        {
-          "name": "Joachim Andersen",
-          "position": "Defender",
-          "distance": 1.1787
-        }
-      ]
-    },
-    {
-      "player": "Christian Pulisic",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Xherdan Shaqiri",
-          "position": "Midfielder",
-          "distance": 1.1723
-        },
-        {
-          "name": "Christoph Baumgartner",
-          "position": "Midfielder",
-          "distance": 1.2333
-        },
-        {
-          "name": "Marcus Rashford",
-          "position": "Midfielder",
-          "distance": 1.2929
-        },
-        {
-          "name": "Ivan Perisic",
-          "position": "Midfielder",
-          "distance": 1.3436
-        },
-        {
-          "name": "Franck Honorat",
-          "position": "Midfielder",
-          "distance": 1.3508
-        }
-      ]
-    },
-    {
-      "player": "Felix Nmecha",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Emanuel Vignato",
-          "position": "Midfielder",
-          "distance": 1.1423
-        },
-        {
-          "name": "Tanguy Ndombele",
-          "position": "Midfielder",
-          "distance": 1.1494
-        },
-        {
-          "name": "Thiago Alcantara",
-          "position": "Midfielder",
-          "distance": 1.3374
-        },
-        {
-          "name": "Christopher Lenz",
-          "position": "Midfielder",
-          "distance": 1.4053
-        },
-        {
-          "name": "Nicolò Rovella",
-          "position": "Midfielder",
-          "distance": 1.4136
-        }
-      ]
-    },
-    {
-      "player": "Florian Wirtz",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Jonas Hofmann",
-          "position": "Midfielder",
-          "distance": 0.8426
-        },
-        {
-          "name": "Leroy Sané",
-          "position": "Midfielder",
-          "distance": 0.9344
-        },
-        {
-          "name": "David Silva",
-          "position": "Midfielder",
-          "distance": 0.9696
-        },
-        {
-          "name": "Marco Reus",
-          "position": "Midfielder",
-          "distance": 1.1691
-        },
-        {
-          "name": "Julian Brandt",
-          "position": "Midfielder",
-          "distance": 1.2346
-        }
-      ]
-    },
-    {
-      "player": "Raheem Sterling",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Antoine Griezmann",
-          "position": "Forward",
-          "distance": 0.8
-        },
-        {
-          "name": "Antoine Griezmann",
-          "position": "Forward",
-          "distance": 0.9171
-        },
-        {
-          "name": "Antoine Griezmann",
-          "position": "Forward",
-          "distance": 0.9764
-        },
-        {
-          "name": "André Silva",
-          "position": "Forward",
-          "distance": 1.0475
-        },
-        {
-          "name": "Ousmane Dembélé",
-          "position": "Forward",
-          "distance": 1.21
-        }
-      ]
-    },
-    {
-      "player": "Kieran Tierney",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Quentin Merlin",
-          "position": "Defender",
-          "distance": 1.3306
-        },
-        {
-          "name": "Federico Dimarco",
-          "position": "Defender",
-          "distance": 1.3908
-        },
-        {
-          "name": "Luca Netz",
-          "position": "Defender",
-          "distance": 1.5253
-        },
-        {
-          "name": "Matías Viña",
-          "position": "Defender",
-          "distance": 1.5657
-        },
-        {
-          "name": "Jean-Kevin Duverne",
-          "position": "Defender",
-          "distance": 1.5697
-        }
-      ]
-    },
-    {
-      "player": "Tyrone Mings",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Anthony Caci",
-          "position": "Defender",
-          "distance": 0.5981
-        },
-        {
-          "name": "Vital N'Simba",
-          "position": "Defender",
-          "distance": 0.8151
-        },
-        {
-          "name": "Max Aarons",
-          "position": "Defender",
-          "distance": 0.906
-        },
-        {
-          "name": "Brandon Williams",
-          "position": "Defender",
-          "distance": 0.9643
-        },
-        {
-          "name": "Dan Burn",
-          "position": "Defender",
-          "distance": 0.9672
-        }
-      ]
-    },
-    {
-      "player": "Malick Thiaw",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Andrés Andrade Cedeño",
-          "position": "Defender",
-          "distance": 1.0033
-        },
-        {
-          "name": "Yvann Macon",
-          "position": "Defender",
-          "distance": 1.2508
-        },
-        {
-          "name": "Giorgio Altare",
-          "position": "Defender",
-          "distance": 1.2867
-        },
-        {
-          "name": "Sam Byram",
-          "position": "Defender",
-          "distance": 1.3189
-        },
-        {
-          "name": "Brian Oliván",
-          "position": "Defender",
-          "distance": 1.3347
-        }
-      ]
-    },
-    {
-      "player": "Myles Lewis-Skelly",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Nikola Maksimovic",
-          "position": "Defender",
-          "distance": 2.3871
-        },
-        {
-          "name": "Juan Foyth",
-          "position": "Defender",
-          "distance": 2.4418
-        },
-        {
-          "name": "Lucas Beraldo",
-          "position": "Defender",
-          "distance": 2.4523
-        },
-        {
-          "name": "Juan Foyth",
-          "position": "Defender",
-          "distance": 2.5177
-        },
-        {
-          "name": "Mats Hummels",
-          "position": "Defender",
-          "distance": 2.5734
-        }
-      ]
-    },
-    {
-      "player": "Boubacar Kamara",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Fran Beltrán",
-          "position": "Midfielder",
-          "distance": 0.815
-        },
-        {
-          "name": "Omar Mascarell",
-          "position": "Midfielder",
-          "distance": 0.8794
-        },
-        {
-          "name": "Bryan Cristante",
-          "position": "Midfielder",
-          "distance": 0.8801
-        },
-        {
-          "name": "Rafinha",
-          "position": "Midfielder",
-          "distance": 0.8854
-        },
-        {
-          "name": "Maxence Caqueret",
-          "position": "Midfielder",
-          "distance": 0.9187
-        }
-      ]
-    },
-    {
-      "player": "Serhou Guirassy",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Cédric Bakambu",
-          "position": "Forward",
-          "distance": 1.6271
-        },
-        {
-          "name": "Ansu Fati",
-          "position": "Forward",
-          "distance": 1.6469
-        },
-        {
-          "name": "Jonathan David",
-          "position": "Forward",
-          "distance": 1.6917
-        },
-        {
-          "name": "Olivier Giroud",
-          "position": "Forward",
-          "distance": 1.6923
-        },
-        {
-          "name": "Callum Wilson",
-          "position": "Forward",
-          "distance": 1.7697
-        }
-      ]
-    },
-    {
-      "player": "Arne Engels",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Junior Dina Ebimbe",
-          "position": "Midfielder",
-          "distance": 2.276
-        },
-        {
-          "name": "Joscha Wosz",
-          "position": "Midfielder",
-          "distance": 2.32
-        },
-        {
-          "name": "Maghnes Akliouche",
-          "position": "Midfielder",
-          "distance": 2.4139
-        },
-        {
-          "name": "Tom Bischof",
-          "position": "Midfielder",
-          "distance": 2.4336
-        },
-        {
-          "name": "Iker Benito",
-          "position": "Midfielder",
-          "distance": 2.453
-        }
-      ]
-    },
-    {
-      "player": "Jakub Moder",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ilan Kebbal",
-          "position": "Midfielder",
-          "distance": 1.0084
-        },
-        {
-          "name": "Youssouf Fofana",
-          "position": "Midfielder",
-          "distance": 1.0173
-        },
-        {
-          "name": "Mërgim Vojvoda",
-          "position": "Midfielder",
-          "distance": 1.0977
-        },
-        {
-          "name": "Alberto Perea",
-          "position": "Midfielder",
-          "distance": 1.1141
-        },
-        {
-          "name": "Florian Krüger",
-          "position": "Midfielder",
-          "distance": 1.195
-        }
-      ]
-    },
-    {
-      "player": "Gerard Martín",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Jordi Alba",
-          "position": "Defender",
-          "distance": 1.315
-        },
-        {
-          "name": "Davide Calabria",
-          "position": "Defender",
-          "distance": 1.3672
-        },
-        {
-          "name": "Lucas Vázquez",
-          "position": "Defender",
-          "distance": 1.405
-        },
-        {
-          "name": "Ian Maatsen",
-          "position": "Defender",
-          "distance": 1.5033
-        },
-        {
-          "name": "Yuri Berchiche",
-          "position": "Defender",
-          "distance": 1.5037
-        }
-      ]
-    },
-    {
-      "player": "Lamine Yamal",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Khvicha Kvaratskhelia",
-          "position": "Forward",
-          "distance": 1.0049
-        },
-        {
-          "name": "Rodrygo",
-          "position": "Forward",
-          "distance": 1.0158
-        },
-        {
-          "name": "Vinícius Júnior",
-          "position": "Forward",
-          "distance": 1.1904
-        },
-        {
-          "name": "Hirving Lozano",
-          "position": "Forward",
-          "distance": 1.1926
-        },
-        {
-          "name": "Luis Díaz",
-          "position": "Forward",
-          "distance": 1.2025
-        }
-      ]
-    },
-    {
-      "player": "Denis Zakaria",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Gelson Martins",
-          "position": "Midfielder",
-          "distance": 1.5209
-        },
-        {
-          "name": "Conor Gallagher",
-          "position": "Midfielder",
-          "distance": 1.5281
-        },
-        {
-          "name": "Vicente Iborra",
-          "position": "Midfielder",
-          "distance": 1.5438
-        },
-        {
-          "name": "Pablo Fornals",
-          "position": "Midfielder",
-          "distance": 1.6005
-        },
-        {
-          "name": "Dejan Ljubicic",
-          "position": "Midfielder",
-          "distance": 1.6042
-        }
-      ]
-    },
-    {
-      "player": "Patrik Schick",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Robert Lewandowski",
-          "position": "Forward",
-          "distance": 1.1026
-        },
-        {
-          "name": "Robert Lewandowski",
-          "position": "Forward",
-          "distance": 1.1524
-        },
-        {
-          "name": "Erling Haaland",
-          "position": "Forward",
-          "distance": 1.1827
-        },
-        {
-          "name": "Benjamin Sesko",
-          "position": "Forward",
-          "distance": 1.3068
-        },
-        {
-          "name": "Cristiano Ronaldo",
-          "position": "Forward",
-          "distance": 1.3818
-        }
-      ]
-    },
-    {
-      "player": "Khvicha Kvaratskhelia",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Kylian Mbappé",
-          "position": "Forward",
-          "distance": 0.7547
-        },
-        {
-          "name": "Rodrygo",
-          "position": "Forward",
-          "distance": 1.0332
-        },
-        {
-          "name": "Ángel Di María",
-          "position": "Forward",
-          "distance": 1.1759
-        },
-        {
-          "name": "Cristiano Ronaldo",
-          "position": "Forward",
-          "distance": 1.2512
-        },
-        {
-          "name": "José Callejón",
-          "position": "Forward",
-          "distance": 1.2819
-        }
-      ]
-    },
-    {
-      "player": "Raphaël Guerreiro",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Emil Forsberg",
-          "position": "Midfielder",
-          "distance": 0.8746
-        },
-        {
-          "name": "Luka Modric",
-          "position": "Midfielder",
-          "distance": 1.0549
-        },
-        {
-          "name": "Alex Iwobi",
-          "position": "Midfielder",
-          "distance": 1.0615
-        },
-        {
-          "name": "Alex Oxlade-Chamberlain",
-          "position": "Midfielder",
-          "distance": 1.0637
-        },
-        {
-          "name": "Diego Perotti",
-          "position": "Midfielder",
-          "distance": 1.1371
-        }
-      ]
-    },
-    {
-      "player": "Ilkay Gündogan",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Stephan El Shaarawy",
-          "position": "Midfielder",
-          "distance": 1.0332
-        },
-        {
-          "name": "Jamal Musiala",
-          "position": "Midfielder",
-          "distance": 1.1073
-        },
-        {
-          "name": "Stephan El Shaarawy",
-          "position": "Midfielder",
-          "distance": 1.1359
-        },
-        {
-          "name": "Jonas Hofmann",
-          "position": "Midfielder",
-          "distance": 1.1519
-        },
-        {
-          "name": "Emil Forsberg",
-          "position": "Midfielder",
-          "distance": 1.1628
-        }
-      ]
-    },
-    {
-      "player": "Désiré Doué",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Marcus Rashford",
-          "position": "Midfielder",
-          "distance": 1.0124
-        },
-        {
-          "name": "Isco",
-          "position": "Midfielder",
-          "distance": 1.1072
-        },
-        {
-          "name": "Martin Ødegaard",
-          "position": "Midfielder",
-          "distance": 1.1451
-        },
-        {
-          "name": "Jamal Musiala",
-          "position": "Midfielder",
-          "distance": 1.1903
-        },
-        {
-          "name": "Leroy Sané",
-          "position": "Midfielder",
-          "distance": 1.2427
-        }
-      ]
-    },
-    {
-      "player": "Francesco Acerbi",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Mats Hummels",
-          "position": "Defender",
-          "distance": 1.0985
-        },
-        {
-          "name": "William Saliba",
-          "position": "Defender",
-          "distance": 1.2266
-        },
-        {
-          "name": "John Stones",
-          "position": "Defender",
-          "distance": 1.5237
-        },
-        {
-          "name": "Manuel Akanji",
-          "position": "Defender",
-          "distance": 1.5247
-        },
-        {
-          "name": "Thiago Silva",
-          "position": "Defender",
-          "distance": 1.5825
-        }
-      ]
-    },
-    {
-      "player": "Amadou Haidara",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Felix Nmecha",
-          "position": "Midfielder",
-          "distance": 1.001
-        },
-        {
-          "name": "Julian Ryerson",
-          "position": "Midfielder",
-          "distance": 1.0144
+          "distance": 1.1599
         },
         {
           "name": "Junior Messias",
           "position": "Midfielder",
-          "distance": 1.0968
+          "distance": 1.161
         },
         {
-          "name": "Teun Koopmeiners",
+          "name": "Jesper Lindstrøm",
           "position": "Midfielder",
-          "distance": 1.3208
+          "distance": 1.1638
         },
         {
-          "name": "Sebastian Rode",
+          "name": "Mohamed Elyounoussi",
           "position": "Midfielder",
-          "distance": 1.3383
-        }
-      ]
-    },
-    {
-      "player": "Kylian Mbappé",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Lionel Messi",
-          "position": "Forward",
-          "distance": 1.2252
-        },
-        {
-          "name": "Bradley Barcola",
-          "position": "Forward",
-          "distance": 1.4853
-        },
-        {
-          "name": "João Félix",
-          "position": "Forward",
-          "distance": 1.5869
-        },
-        {
-          "name": "Lionel Messi",
-          "position": "Forward",
-          "distance": 1.7838
-        },
-        {
-          "name": "Timo Werner",
-          "position": "Forward",
-          "distance": 1.81
-        }
-      ]
-    },
-    {
-      "player": "Weston McKennie",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ilkay Gündogan",
-          "position": "Midfielder",
-          "distance": 1.2502
-        },
-        {
-          "name": "Leon Goretzka",
-          "position": "Midfielder",
-          "distance": 1.2779
-        },
-        {
-          "name": "Franck Kessié",
-          "position": "Midfielder",
-          "distance": 1.3624
-        },
-        {
-          "name": "Azzedine Ounahi",
-          "position": "Midfielder",
-          "distance": 1.3764
-        },
-        {
-          "name": "Georginio Wijnaldum",
-          "position": "Midfielder",
-          "distance": 1.4204
-        }
-      ]
-    },
-    {
-      "player": "Mario Hermoso",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Alexander Hack",
-          "position": "Defender",
-          "distance": 1.1665
-        },
-        {
-          "name": "Nacho",
-          "position": "Defender",
-          "distance": 1.3458
-        },
-        {
-          "name": "Juan Foyth",
-          "position": "Defender",
-          "distance": 1.3757
-        },
-        {
-          "name": "Luke Ayling",
-          "position": "Defender",
-          "distance": 1.4017
-        },
-        {
-          "name": "Martín Cáceres",
-          "position": "Defender",
-          "distance": 1.4349
-        }
-      ]
-    },
-    {
-      "player": "Kingsley Coman",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Tijjani Reijnders",
-          "position": "Midfielder",
-          "distance": 1.5308
-        },
-        {
-          "name": "Marcel Sabitzer",
-          "position": "Midfielder",
-          "distance": 1.6076
-        },
-        {
-          "name": "James Ward-Prowse",
-          "position": "Midfielder",
-          "distance": 1.703
-        },
-        {
-          "name": "Marcus Rashford",
-          "position": "Midfielder",
-          "distance": 1.7214
-        },
-        {
-          "name": "Son Heung-Min",
-          "position": "Midfielder",
-          "distance": 1.7228
-        }
-      ]
-    },
-    {
-      "player": "Amine Adli",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Kevin De Bruyne",
-          "position": "Midfielder",
-          "distance": 1.2033
-        },
-        {
-          "name": "Kai Havertz",
-          "position": "Midfielder",
-          "distance": 1.2502
-        },
-        {
-          "name": "Nathan Tella",
-          "position": "Midfielder",
-          "distance": 1.4139
-        },
-        {
-          "name": "Samuel Moutoussamy",
-          "position": "Midfielder",
-          "distance": 1.5275
-        },
-        {
-          "name": "Thomas Lemar",
-          "position": "Midfielder",
-          "distance": 1.5472
-        }
-      ]
-    },
-    {
-      "player": "Nico Schlotterbeck",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Daniel Vivian",
-          "position": "Defender",
-          "distance": 0.7387
-        },
-        {
-          "name": "Gleison Bremer",
-          "position": "Defender",
-          "distance": 0.9581
-        },
-        {
-          "name": "Niklas Stark",
-          "position": "Defender",
-          "distance": 0.9631
-        },
-        {
-          "name": "Mattia Caldara",
-          "position": "Defender",
-          "distance": 1.043
-        },
-        {
-          "name": "Marcel Halstenberg",
-          "position": "Defender",
-          "distance": 1.1017
-        }
-      ]
-    },
-    {
-      "player": "Waldemar Anton",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Pietro Ceccaroni",
-          "position": "Defender",
-          "distance": 0.8546
-        },
-        {
-          "name": "Alexander Hack",
-          "position": "Defender",
-          "distance": 1.0382
-        },
-        {
-          "name": "Pascal Struijk",
-          "position": "Defender",
-          "distance": 1.0649
-        },
-        {
-          "name": "Yunis Abdelhamid",
-          "position": "Defender",
-          "distance": 1.0769
-        },
-        {
-          "name": "Luke Ayling",
-          "position": "Defender",
-          "distance": 1.0881
-        }
-      ]
-    },
-    {
-      "player": "Tyrell Malacia",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Cody Drameh",
-          "position": "Defender",
-          "distance": 1.4273
-        },
-        {
-          "name": "Mateo Musacchio",
-          "position": "Defender",
-          "distance": 1.5408
-        },
-        {
-          "name": "Paul Dummett",
-          "position": "Defender",
-          "distance": 1.5959
-        },
-        {
-          "name": "Abdoulaye Sylla",
-          "position": "Defender",
-          "distance": 1.6756
-        },
-        {
-          "name": "David Schnegg",
-          "position": "Defender",
-          "distance": 1.8728
-        }
-      ]
-    },
-    {
-      "player": "Jurriën Timber",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Thilo Kehrer",
-          "position": "Defender",
-          "distance": 0.7536
-        },
-        {
-          "name": "Josko Gvardiol",
-          "position": "Defender",
-          "distance": 0.7732
-        },
-        {
-          "name": "Mats Hummels",
-          "position": "Defender",
-          "distance": 0.9018
-        },
-        {
-          "name": "Benjamin Stambouli",
-          "position": "Defender",
-          "distance": 0.998
-        },
-        {
-          "name": "Kyle Walker",
-          "position": "Defender",
-          "distance": 1.0352
-        }
-      ]
-    },
-    {
-      "player": "André",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Andre-Frank Zambo Anguissa",
-          "position": "Midfielder",
-          "distance": 1.1094
-        },
-        {
-          "name": "Tomás Pina Isla",
-          "position": "Midfielder",
-          "distance": 1.1219
-        },
-        {
-          "name": "Nemanja Matic",
-          "position": "Midfielder",
-          "distance": 1.1463
-        },
-        {
-          "name": "Florian Grillitsch",
-          "position": "Midfielder",
-          "distance": 1.1734
-        },
-        {
-          "name": "Nemanja Radoja",
-          "position": "Midfielder",
-          "distance": 1.1877
-        }
-      ]
-    },
-    {
-      "player": "Grégoire Coudert",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Sergio Rico",
-          "position": "Goalkeeper",
-          "distance": 0.9058
-        },
-        {
-          "name": "Alexander Meyer",
-          "position": "Goalkeeper",
-          "distance": 1.0269
-        },
-        {
-          "name": "Jonas Urbig",
-          "position": "Goalkeeper",
-          "distance": 1.3274
-        },
-        {
-          "name": "Stefan Ortega",
-          "position": "Goalkeeper",
-          "distance": 1.3758
-        },
-        {
-          "name": "Alexander Meyer",
-          "position": "Goalkeeper",
-          "distance": 1.6882
-        }
-      ]
-    },
-    {
-      "player": "Breel Embolo",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Rafael Borré",
-          "position": "Forward",
-          "distance": 0.6249
-        },
-        {
-          "name": "Odsonne Édouard",
-          "position": "Forward",
-          "distance": 0.7375
-        },
-        {
-          "name": "Ollie Watkins",
-          "position": "Forward",
-          "distance": 0.8798
-        },
-        {
-          "name": "Tammy Abraham",
-          "position": "Forward",
-          "distance": 0.9018
-        },
-        {
-          "name": "Branimir Hrgota",
-          "position": "Forward",
-          "distance": 0.9045
-        }
-      ]
-    },
-    {
-      "player": "Fermín López",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Kike Barja",
-          "position": "Midfielder",
-          "distance": 1.543
-        },
-        {
-          "name": "Kike Pérez",
-          "position": "Midfielder",
-          "distance": 1.6548
-        },
-        {
-          "name": "Nolito",
-          "position": "Midfielder",
-          "distance": 1.7085
-        },
-        {
-          "name": "Marco Richter",
-          "position": "Midfielder",
-          "distance": 1.7176
-        },
-        {
-          "name": "Marcus Ingvartsen",
-          "position": "Midfielder",
-          "distance": 1.7775
-        }
-      ]
-    },
-    {
-      "player": "Mohamed Salah",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Phil Foden",
-          "position": "Forward",
-          "distance": 1.2597
-        },
-        {
-          "name": "Lorenzo Insigne",
-          "position": "Forward",
-          "distance": 1.3533
-        },
-        {
-          "name": "Ousmane Dembélé",
-          "position": "Forward",
-          "distance": 1.3789
-        },
-        {
-          "name": "Phil Foden",
-          "position": "Forward",
-          "distance": 1.4048
-        },
-        {
-          "name": "Lionel Messi",
-          "position": "Forward",
-          "distance": 1.5446
-        }
-      ]
-    },
-    {
-      "player": "Federico Gatti",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ben White",
-          "position": "Defender",
-          "distance": 1.0299
-        },
-        {
-          "name": "Max Kilman",
-          "position": "Defender",
-          "distance": 1.1762
-        },
-        {
-          "name": "Jesús Navas",
-          "position": "Defender",
-          "distance": 1.1817
-        },
-        {
-          "name": "Víctor Chust",
-          "position": "Defender",
-          "distance": 1.2234
-        },
-        {
-          "name": "Harold Moukoudi",
-          "position": "Defender",
-          "distance": 1.2261
-        }
-      ]
-    },
-    {
-      "player": "Konrad Laimer",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Emil Forsberg",
-          "position": "Midfielder",
-          "distance": 1.264
-        },
-        {
-          "name": "Fred",
-          "position": "Midfielder",
-          "distance": 1.4897
-        },
-        {
-          "name": "Bernardo Silva",
-          "position": "Midfielder",
-          "distance": 1.5122
-        },
-        {
-          "name": "Kevin Kampl",
-          "position": "Midfielder",
-          "distance": 1.5689
-        },
-        {
-          "name": "Erik Lamela",
-          "position": "Midfielder",
-          "distance": 1.59
-        }
-      ]
-    },
-    {
-      "player": "Aleksandr Golovin",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "David Silva",
-          "position": "Midfielder",
-          "distance": 1.1199
-        },
-        {
-          "name": "Denzel Dumfries",
-          "position": "Midfielder",
-          "distance": 1.143
-        },
-        {
-          "name": "Giacomo Bonaventura",
-          "position": "Midfielder",
-          "distance": 1.1975
-        },
-        {
-          "name": "Luka Modric",
-          "position": "Midfielder",
-          "distance": 1.3761
-        },
-        {
-          "name": "Jude Bellingham",
-          "position": "Midfielder",
-          "distance": 1.4178
-        }
-      ]
-    },
-    {
-      "player": "Douglas Luiz",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Christian Nørgaard",
-          "position": "Midfielder",
-          "distance": 0.6334
-        },
-        {
-          "name": "Nicolas Höfler",
-          "position": "Midfielder",
-          "distance": 0.6498
-        },
-        {
-          "name": "Wilfried Singo",
-          "position": "Midfielder",
-          "distance": 0.7364
-        },
-        {
-          "name": "Josh Brownhill",
-          "position": "Midfielder",
-          "distance": 0.8229
-        },
-        {
-          "name": "Rúben Neves",
-          "position": "Midfielder",
-          "distance": 0.8322
-        }
-      ]
-    },
-    {
-      "player": "Matej Kovar",
-      "position": "Goalkeeper",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Dimitry Bertaud",
-          "position": "Goalkeeper",
-          "distance": 0.4065
-        },
-        {
-          "name": "Julen Agirrezabala",
-          "position": "Goalkeeper",
-          "distance": 0.4649
-        },
-        {
-          "name": "Francesco Bardi",
-          "position": "Goalkeeper",
-          "distance": 0.5318
-        },
-        {
-          "name": "Jeroen Zoet",
-          "position": "Goalkeeper",
-          "distance": 0.555
-        },
-        {
-          "name": "Angus Gunn",
-          "position": "Goalkeeper",
-          "distance": 0.6447
-        }
-      ]
-    },
-    {
-      "player": "Marquinhos",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Sven Botman",
-          "position": "Defender",
-          "distance": 1.4399
-        },
-        {
-          "name": "Lucas Vázquez",
-          "position": "Defender",
-          "distance": 1.5968
-        },
-        {
-          "name": "Raphaël Varane",
-          "position": "Defender",
-          "distance": 1.6182
-        },
-        {
-          "name": "Pau Torres",
-          "position": "Defender",
-          "distance": 1.6856
-        },
-        {
-          "name": "Stefan de Vrij",
-          "position": "Defender",
-          "distance": 1.6878
-        }
-      ]
-    },
-    {
-      "player": "Leon Goretzka",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Stephan El Shaarawy",
-          "position": "Midfielder",
-          "distance": 0.9281
-        },
-        {
-          "name": "Ilkay Gündogan",
-          "position": "Midfielder",
-          "distance": 1.2103
-        },
-        {
-          "name": "Rémy Cabella",
-          "position": "Midfielder",
-          "distance": 1.217
-        },
-        {
-          "name": "Georginio Wijnaldum",
-          "position": "Midfielder",
-          "distance": 1.2315
-        },
-        {
-          "name": "Toni Kroos",
-          "position": "Midfielder",
-          "distance": 1.2651
-        }
-      ]
-    },
-    {
-      "player": "Timothy Weah",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ivan Rakitić",
-          "position": "Midfielder",
-          "distance": 1.5163
-        },
-        {
-          "name": "David Silva",
-          "position": "Midfielder",
-          "distance": 1.5394
-        },
-        {
-          "name": "Joshua Kimmich",
-          "position": "Midfielder",
-          "distance": 1.5411
-        },
-        {
-          "name": "Radja Nainggolan",
-          "position": "Midfielder",
-          "distance": 1.616
-        },
-        {
-          "name": "Declan Rice",
-          "position": "Midfielder",
-          "distance": 1.6521
-        }
-      ]
-    },
-    {
-      "player": "Martin Ødegaard",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Giovani Lo Celso",
-          "position": "Midfielder",
-          "distance": 0.6545
-        },
-        {
-          "name": "Romain Faivre",
-          "position": "Midfielder",
-          "distance": 0.7921
-        },
-        {
-          "name": "Angeliño",
-          "position": "Midfielder",
-          "distance": 0.8332
-        },
-        {
-          "name": "Angelo Fulgini",
-          "position": "Midfielder",
-          "distance": 0.8526
-        },
-        {
-          "name": "Stephy Mavididi",
-          "position": "Midfielder",
-          "distance": 0.8582
-        }
-      ]
-    },
-    {
-      "player": "José María Giménez",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Tiago Djaló",
-          "position": "Defender",
-          "distance": 0.6197
-        },
-        {
-          "name": "Fikayo Tomori",
-          "position": "Defender",
-          "distance": 1.0364
-        },
-        {
-          "name": "Kim Min-Jae",
-          "position": "Defender",
-          "distance": 1.1156
-        },
-        {
-          "name": "Ronald Araújo",
-          "position": "Defender",
-          "distance": 1.1562
-        },
-        {
-          "name": "Sebastiaan Bornauw",
-          "position": "Defender",
-          "distance": 1.1581
-        }
-      ]
-    },
-    {
-      "player": "Krépin Diatta",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Mark Noble",
-          "position": "Midfielder",
-          "distance": 1.5306
-        },
-        {
-          "name": "Jesse Lingard",
-          "position": "Midfielder",
-          "distance": 1.7888
-        },
-        {
-          "name": "Jens Cajuste",
-          "position": "Midfielder",
-          "distance": 1.9879
-        },
-        {
-          "name": "Sargis Adamyan",
-          "position": "Midfielder",
-          "distance": 2.002
-        },
-        {
-          "name": "Dávid Strelec",
-          "position": "Midfielder",
-          "distance": 2.1669
-        }
-      ]
-    },
-    {
-      "player": "Mateo Retegui",
-      "position": "Forward",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Diogo Jota",
-          "position": "Forward",
-          "distance": 1.2088
-        },
-        {
-          "name": "Sergio Agüero",
-          "position": "Forward",
-          "distance": 1.3508
-        },
-        {
-          "name": "Willian José",
-          "position": "Forward",
-          "distance": 1.518
-        },
-        {
-          "name": "Iago Aspas",
-          "position": "Forward",
-          "distance": 1.5281
-        },
-        {
-          "name": "Erling Haaland",
-          "position": "Forward",
-          "distance": 1.5591
-        }
-      ]
-    },
-    {
-      "player": "Thomas Meunier",
-      "position": "Defender",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Ben Davies",
-          "position": "Defender",
-          "distance": 1.1367
-        },
-        {
-          "name": "João Cancelo",
-          "position": "Defender",
-          "distance": 1.2509
-        },
-        {
-          "name": "João Cancelo",
-          "position": "Defender",
-          "distance": 1.4042
-        },
-        {
-          "name": "Ashley Young",
-          "position": "Defender",
-          "distance": 1.4462
-        },
-        {
-          "name": "Léo Dubois",
-          "position": "Defender",
-          "distance": 1.4733
-        }
-      ]
-    },
-    {
-      "player": "Nicolás González",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Henrikh Mkhitaryan",
-          "position": "Midfielder",
-          "distance": 1.036
-        },
-        {
-          "name": "Rodri",
-          "position": "Midfielder",
-          "distance": 1.4116
-        },
-        {
-          "name": "Maximilian Arnold",
-          "position": "Midfielder",
-          "distance": 1.4223
-        },
-        {
-          "name": "Vanderson",
-          "position": "Midfielder",
-          "distance": 1.5506
-        },
-        {
-          "name": "Wilfried Singo",
-          "position": "Midfielder",
-          "distance": 1.5744
-        }
-      ]
-    },
-    {
-      "player": "Pierre Lees-Melou",
-      "position": "Midfielder",
-      "season": "2024-2025",
-      "similar": [
-        {
-          "name": "Kristijan Jakic",
-          "position": "Midfielder",
-          "distance": 0.6154
-        },
-        {
-          "name": "Anthony Losilla",
-          "position": "Midfielder",
-          "distance": 0.655
-        },
-        {
-          "name": "Wilfred Ndidi",
-          "position": "Midfielder",
-          "distance": 0.7784
-        },
-        {
-          "name": "Lucas Torró",
-          "position": "Midfielder",
-          "distance": 0.8267
+          "distance": 1.1654
         },
         {
-          "name": "Stuart Dallas",
+          "name": "Riccardo Orsolini",
           "position": "Midfielder",
-          "distance": 0.9083
+          "distance": 1.1989
         }
       ]
     },
@@ -8609,6 +6209,678 @@ window.DEMO_DATA = {
       ]
     },
     {
+      "player": "Wojciech Szczesny",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Andrea Consigli",
+          "position": "Goalkeeper",
+          "distance": 0.2183
+        },
+        {
+          "name": "Jordan Pickford",
+          "position": "Goalkeeper",
+          "distance": 0.3408
+        },
+        {
+          "name": "Thibaut Courtois",
+          "position": "Goalkeeper",
+          "distance": 0.3593
+        },
+        {
+          "name": "Hugo Lloris",
+          "position": "Goalkeeper",
+          "distance": 0.382
+        },
+        {
+          "name": "Hugo Lloris",
+          "position": "Goalkeeper",
+          "distance": 0.3981
+        }
+      ]
+    },
+    {
+      "player": "Ollie Watkins",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Sergi Guardiola",
+          "position": "Forward",
+          "distance": 0.7693
+        },
+        {
+          "name": "Teemu Pukki",
+          "position": "Forward",
+          "distance": 0.8553
+        },
+        {
+          "name": "Breel Embolo",
+          "position": "Forward",
+          "distance": 0.8798
+        },
+        {
+          "name": "Hwang Hee-chan",
+          "position": "Forward",
+          "distance": 0.8964
+        },
+        {
+          "name": "Rodrigo",
+          "position": "Forward",
+          "distance": 0.9309
+        }
+      ]
+    },
+    {
+      "player": "Dominik Szoboszlai",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Luis Alberto",
+          "position": "Midfielder",
+          "distance": 0.8319
+        },
+        {
+          "name": "Michael Olise",
+          "position": "Midfielder",
+          "distance": 0.9181
+        },
+        {
+          "name": "James Rodríguez",
+          "position": "Midfielder",
+          "distance": 1.0362
+        },
+        {
+          "name": "Isco",
+          "position": "Midfielder",
+          "distance": 1.1199
+        },
+        {
+          "name": "Matt Doherty",
+          "position": "Midfielder",
+          "distance": 1.1228
+        }
+      ]
+    },
+    {
+      "player": "André Onana",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Lucas Chevalier",
+          "position": "Goalkeeper",
+          "distance": 0.2758
+        },
+        {
+          "name": "Pietro Terracciano",
+          "position": "Goalkeeper",
+          "distance": 0.5265
+        },
+        {
+          "name": "Roman Bürki",
+          "position": "Goalkeeper",
+          "distance": 0.5473
+        },
+        {
+          "name": "Alex Meret",
+          "position": "Goalkeeper",
+          "distance": 0.5517
+        },
+        {
+          "name": "Ivan Provedel",
+          "position": "Goalkeeper",
+          "distance": 0.5745
+        }
+      ]
+    },
+    {
+      "player": "Daniel Svensson",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Matt Doherty",
+          "position": "Midfielder",
+          "distance": 1.6207
+        },
+        {
+          "name": "Dominik Szoboszlai",
+          "position": "Midfielder",
+          "distance": 1.7149
+        },
+        {
+          "name": "Óliver Torres",
+          "position": "Midfielder",
+          "distance": 1.7589
+        },
+        {
+          "name": "Luis Alberto",
+          "position": "Midfielder",
+          "distance": 1.8038
+        },
+        {
+          "name": "Aleksei Miranchuk",
+          "position": "Midfielder",
+          "distance": 1.8739
+        }
+      ]
+    },
+    {
+      "player": "Soumaila Coulibaly",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Keven Schlotterbeck",
+          "position": "Defender",
+          "distance": 1.0145
+        },
+        {
+          "name": "Simon Asta",
+          "position": "Defender",
+          "distance": 1.1637
+        },
+        {
+          "name": "Joan Sastre Vanrell",
+          "position": "Defender",
+          "distance": 1.2
+        },
+        {
+          "name": "Liberato Cacace",
+          "position": "Defender",
+          "distance": 1.275
+        },
+        {
+          "name": "Kevin Long",
+          "position": "Defender",
+          "distance": 1.5398
+        }
+      ]
+    },
+    {
+      "player": "Randal Kolo Muani",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Ante Budimir",
+          "position": "Forward",
+          "distance": 1.0961
+        },
+        {
+          "name": "Olivier Giroud",
+          "position": "Forward",
+          "distance": 1.2265
+        },
+        {
+          "name": "Raheem Sterling",
+          "position": "Forward",
+          "distance": 1.2355
+        },
+        {
+          "name": "Gabriel Jesus",
+          "position": "Forward",
+          "distance": 1.3252
+        },
+        {
+          "name": "Gabriel Jesus",
+          "position": "Forward",
+          "distance": 1.3473
+        }
+      ]
+    },
+    {
+      "player": "Nicolás González",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Henrikh Mkhitaryan",
+          "position": "Midfielder",
+          "distance": 1.036
+        },
+        {
+          "name": "Rodri",
+          "position": "Midfielder",
+          "distance": 1.4116
+        },
+        {
+          "name": "Maximilian Arnold",
+          "position": "Midfielder",
+          "distance": 1.4223
+        },
+        {
+          "name": "Vanderson",
+          "position": "Midfielder",
+          "distance": 1.5506
+        },
+        {
+          "name": "Wilfried Singo",
+          "position": "Midfielder",
+          "distance": 1.5744
+        }
+      ]
+    },
+    {
+      "player": "Declan Rice",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Abdoulaye Doucouré",
+          "position": "Midfielder",
+          "distance": 0.8172
+        },
+        {
+          "name": "Nicolò Barella",
+          "position": "Midfielder",
+          "distance": 0.8569
+        },
+        {
+          "name": "Mateo Kovacic",
+          "position": "Midfielder",
+          "distance": 0.9006
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 0.9395
+        },
+        {
+          "name": "Adrien Rabiot",
+          "position": "Midfielder",
+          "distance": 0.9728
+        }
+      ]
+    },
+    {
+      "player": "Edson Álvarez",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mathias Normann",
+          "position": "Midfielder",
+          "distance": 1.1737
+        },
+        {
+          "name": "Amadou Haidara",
+          "position": "Midfielder",
+          "distance": 1.2391
+        },
+        {
+          "name": "Fransérgio",
+          "position": "Midfielder",
+          "distance": 1.2399
+        },
+        {
+          "name": "Rodri",
+          "position": "Midfielder",
+          "distance": 1.3653
+        },
+        {
+          "name": "Tonny Vilhena",
+          "position": "Midfielder",
+          "distance": 1.3944
+        }
+      ]
+    },
+    {
+      "player": "Marco Carnesecchi",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Aaron Ramsdale",
+          "position": "Goalkeeper",
+          "distance": 0.2179
+        },
+        {
+          "name": "Marco Silvestri",
+          "position": "Goalkeeper",
+          "distance": 0.2954
+        },
+        {
+          "name": "Robin Zentner",
+          "position": "Goalkeeper",
+          "distance": 0.3244
+        },
+        {
+          "name": "Ouparine Djoco",
+          "position": "Goalkeeper",
+          "distance": 0.3493
+        },
+        {
+          "name": "Tim Krul",
+          "position": "Goalkeeper",
+          "distance": 0.3551
+        }
+      ]
+    },
+    {
+      "player": "Antoine Griezmann",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Matteo Politano",
+          "position": "Forward",
+          "distance": 0.7909
+        },
+        {
+          "name": "Jack Grealish",
+          "position": "Forward",
+          "distance": 0.8326
+        },
+        {
+          "name": "Vinícius Júnior",
+          "position": "Forward",
+          "distance": 0.9184
+        },
+        {
+          "name": "Matteo Politano",
+          "position": "Forward",
+          "distance": 1.0053
+        },
+        {
+          "name": "Jordan Ayew",
+          "position": "Forward",
+          "distance": 1.0288
+        }
+      ]
+    },
+    {
+      "player": "Mohamed Salah",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Phil Foden",
+          "position": "Forward",
+          "distance": 1.2597
+        },
+        {
+          "name": "Lorenzo Insigne",
+          "position": "Forward",
+          "distance": 1.3533
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "position": "Forward",
+          "distance": 1.3789
+        },
+        {
+          "name": "Phil Foden",
+          "position": "Forward",
+          "distance": 1.4048
+        },
+        {
+          "name": "Lionel Messi",
+          "position": "Forward",
+          "distance": 1.5446
+        }
+      ]
+    },
+    {
+      "player": "Samuel Lino",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Alexis Saelemaekers",
+          "position": "Midfielder",
+          "distance": 0.8985
+        },
+        {
+          "name": "Houssem Aouar",
+          "position": "Midfielder",
+          "distance": 1.0099
+        },
+        {
+          "name": "Kingsley Coman",
+          "position": "Midfielder",
+          "distance": 1.0425
+        },
+        {
+          "name": "Christopher Nkunku",
+          "position": "Midfielder",
+          "distance": 1.1468
+        },
+        {
+          "name": "Donyell Malen",
+          "position": "Midfielder",
+          "distance": 1.1803
+        }
+      ]
+    },
+    {
+      "player": "Pau Torres",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "William Saliba",
+          "position": "Defender",
+          "distance": 0.7213
+        },
+        {
+          "name": "Dejan Lovren",
+          "position": "Defender",
+          "distance": 1.1682
+        },
+        {
+          "name": "Antonio Rüdiger",
+          "position": "Defender",
+          "distance": 1.1883
+        },
+        {
+          "name": "Antonio Rüdiger",
+          "position": "Defender",
+          "distance": 1.2857
+        },
+        {
+          "name": "John Stones",
+          "position": "Defender",
+          "distance": 1.2949
+        }
+      ]
+    },
+    {
+      "player": "Nuno Mendes",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Benjamin Pavard",
+          "position": "Defender",
+          "distance": 0.6214
+        },
+        {
+          "name": "Francesco Acerbi",
+          "position": "Defender",
+          "distance": 0.8454
+        },
+        {
+          "name": "Aymeric Laporte",
+          "position": "Defender",
+          "distance": 0.9147
+        },
+        {
+          "name": "Raphaël Varane",
+          "position": "Defender",
+          "distance": 0.9368
+        },
+        {
+          "name": "Kyle Walker",
+          "position": "Defender",
+          "distance": 0.9867
+        }
+      ]
+    },
+    {
+      "player": "Eric Dier",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Toby Alderweireld",
+          "position": "Defender",
+          "distance": 0.9521
+        },
+        {
+          "name": "Peter Pekarík",
+          "position": "Defender",
+          "distance": 1.0473
+        },
+        {
+          "name": "David Alaba",
+          "position": "Defender",
+          "distance": 1.0674
+        },
+        {
+          "name": "Oleksandr Zinchenko",
+          "position": "Defender",
+          "distance": 1.069
+        },
+        {
+          "name": "Virgil van Dijk",
+          "position": "Defender",
+          "distance": 1.2033
+        }
+      ]
+    },
+    {
+      "player": "Jamie Gittens",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Dele Alli",
+          "position": "Midfielder",
+          "distance": 1.046
+        },
+        {
+          "name": "Maximilian Arnold",
+          "position": "Midfielder",
+          "distance": 1.0477
+        },
+        {
+          "name": "Romain Faivre",
+          "position": "Midfielder",
+          "distance": 1.1293
+        },
+        {
+          "name": "Martin Ødegaard",
+          "position": "Midfielder",
+          "distance": 1.1314
+        },
+        {
+          "name": "Paulinho",
+          "position": "Midfielder",
+          "distance": 1.1707
+        }
+      ]
+    },
+    {
+      "player": "Arthur",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mato Jajalo",
+          "position": "Midfielder",
+          "distance": 1.3245
+        },
+        {
+          "name": "Giuseppe Pezzella",
+          "position": "Midfielder",
+          "distance": 1.3906
+        },
+        {
+          "name": "Cheikhou Kouyaté",
+          "position": "Midfielder",
+          "distance": 1.5303
+        },
+        {
+          "name": "Xaver Schlager",
+          "position": "Midfielder",
+          "distance": 1.5973
+        },
+        {
+          "name": "Bruno Guimarães",
+          "position": "Midfielder",
+          "distance": 1.5986
+        }
+      ]
+    },
+    {
+      "player": "Vanderson",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Marius Wolf",
+          "position": "Midfielder",
+          "distance": 0.657
+        },
+        {
+          "name": "Daniel Caligiuri",
+          "position": "Midfielder",
+          "distance": 0.9809
+        },
+        {
+          "name": "Moisés Caicedo",
+          "position": "Midfielder",
+          "distance": 1.02
+        },
+        {
+          "name": "Alessandro Deiola",
+          "position": "Midfielder",
+          "distance": 1.0544
+        },
+        {
+          "name": "Dennis Praet",
+          "position": "Midfielder",
+          "distance": 1.0632
+        }
+      ]
+    },
+    {
+      "player": "Amine Adli",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Kevin De Bruyne",
+          "position": "Midfielder",
+          "distance": 1.2033
+        },
+        {
+          "name": "Kai Havertz",
+          "position": "Midfielder",
+          "distance": 1.2502
+        },
+        {
+          "name": "Nathan Tella",
+          "position": "Midfielder",
+          "distance": 1.4139
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "position": "Midfielder",
+          "distance": 1.5275
+        },
+        {
+          "name": "Thomas Lemar",
+          "position": "Midfielder",
+          "distance": 1.5472
+        }
+      ]
+    },
+    {
       "player": "Rúben Dias",
       "position": "Defender",
       "season": "2024-2025",
@@ -8641,66 +6913,1794 @@ window.DEMO_DATA = {
       ]
     },
     {
-      "player": "Gabriel Magalhães",
+      "player": "Lloyd Kelly",
       "position": "Defender",
       "season": "2024-2025",
       "similar": [
         {
-          "name": "Amir Rrahmani",
+          "name": "Riccardo Marchizza",
           "position": "Defender",
-          "distance": 0.9265
+          "distance": 0.8739
         },
         {
-          "name": "Lucas Vázquez",
+          "name": "Nehuén Pérez",
           "position": "Defender",
-          "distance": 0.9769
+          "distance": 1.0485
         },
         {
-          "name": "Konstantinos Mavropanos",
+          "name": "Gian-Luca Itter",
           "position": "Defender",
-          "distance": 1.0715
+          "distance": 1.1517
         },
         {
-          "name": "Benoît Badiashile",
+          "name": "Alessandro Buongiorno",
           "position": "Defender",
-          "distance": 1.0772
+          "distance": 1.2123
         },
         {
-          "name": "Mohamed Simakan",
+          "name": "Tariq Lamptey",
           "position": "Defender",
-          "distance": 1.0873
+          "distance": 1.2318
         }
       ]
     },
     {
-      "player": "Conor Gallagher",
+      "player": "Matteo Darmian",
       "position": "Midfielder",
       "season": "2024-2025",
       "similar": [
         {
-          "name": "Marshall Munetsi",
+          "name": "Tiemoué Bakayoko",
           "position": "Midfielder",
-          "distance": 0.9085
+          "distance": 1.1402
         },
         {
-          "name": "Alessandro Deiola",
+          "name": "Thomas Partey",
           "position": "Midfielder",
-          "distance": 1.0602
+          "distance": 1.5487
         },
         {
-          "name": "Mikel Merino",
+          "name": "Ibrahim Amadou",
           "position": "Midfielder",
-          "distance": 1.1167
+          "distance": 1.6125
         },
         {
-          "name": "Antonio Puertas",
+          "name": "Fabinho",
           "position": "Midfielder",
-          "distance": 1.1524
+          "distance": 1.6212
+        },
+        {
+          "name": "Thomas Mangani",
+          "position": "Midfielder",
+          "distance": 1.6608
+        }
+      ]
+    },
+    {
+      "player": "Matty Cash",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "James Tarkowski",
+          "position": "Defender",
+          "distance": 0.8479
+        },
+        {
+          "name": "Arnaud Souquet",
+          "position": "Defender",
+          "distance": 0.9656
+        },
+        {
+          "name": "Alfonso Espino",
+          "position": "Defender",
+          "distance": 0.9861
+        },
+        {
+          "name": "Sergio Reguilón",
+          "position": "Defender",
+          "distance": 1.0389
+        },
+        {
+          "name": "Marcelo",
+          "position": "Defender",
+          "distance": 1.0844
+        }
+      ]
+    },
+    {
+      "player": "Carney Chukwuemeka",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Andreas Skov Olsen",
+          "position": "Midfielder",
+          "distance": 0.9875
+        },
+        {
+          "name": "Jonathan Schmid",
+          "position": "Midfielder",
+          "distance": 1.1416
+        },
+        {
+          "name": "Tobias Raschl",
+          "position": "Midfielder",
+          "distance": 1.2264
+        },
+        {
+          "name": "Rayan Cherki",
+          "position": "Midfielder",
+          "distance": 1.3171
+        },
+        {
+          "name": "Callum Hudson-Odoi",
+          "position": "Midfielder",
+          "distance": 1.41
+        }
+      ]
+    },
+    {
+      "player": "Lucas Beraldo",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Kalidou Koulibaly",
+          "position": "Defender",
+          "distance": 1.4022
+        },
+        {
+          "name": "Clément Lenglet",
+          "position": "Defender",
+          "distance": 1.5157
+        },
+        {
+          "name": "Juan Foyth",
+          "position": "Defender",
+          "distance": 1.6872
+        },
+        {
+          "name": "Enock Kwateng",
+          "position": "Defender",
+          "distance": 1.7857
+        },
+        {
+          "name": "Kaan Ayhan",
+          "position": "Defender",
+          "distance": 1.822
+        }
+      ]
+    },
+    {
+      "player": "Ferran Torres",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Ángel Di María",
+          "position": "Forward",
+          "distance": 0.7577
+        },
+        {
+          "name": "Terem Moffi",
+          "position": "Forward",
+          "distance": 1.183
+        },
+        {
+          "name": "José Callejón",
+          "position": "Forward",
+          "distance": 1.2403
+        },
+        {
+          "name": "Amine Gouiri",
+          "position": "Forward",
+          "distance": 1.264
+        },
+        {
+          "name": "Ángel Di María",
+          "position": "Forward",
+          "distance": 1.4137
+        }
+      ]
+    },
+    {
+      "player": "Bafodé Diakité",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Tuta",
+          "position": "Defender",
+          "distance": 0.8789
+        },
+        {
+          "name": "Sergio Ramos",
+          "position": "Defender",
+          "distance": 1.0461
+        },
+        {
+          "name": "Aritz Elustondo",
+          "position": "Defender",
+          "distance": 1.0779
+        },
+        {
+          "name": "Brendan Chardonnet",
+          "position": "Defender",
+          "distance": 1.1698
+        },
+        {
+          "name": "Stefan Mitrovic",
+          "position": "Defender",
+          "distance": 1.1943
+        }
+      ]
+    },
+    {
+      "player": "Francesco Acerbi",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mats Hummels",
+          "position": "Defender",
+          "distance": 1.0985
+        },
+        {
+          "name": "William Saliba",
+          "position": "Defender",
+          "distance": 1.2266
+        },
+        {
+          "name": "John Stones",
+          "position": "Defender",
+          "distance": 1.5237
+        },
+        {
+          "name": "Manuel Akanji",
+          "position": "Defender",
+          "distance": 1.5247
+        },
+        {
+          "name": "Thiago Silva",
+          "position": "Defender",
+          "distance": 1.5825
+        }
+      ]
+    },
+    {
+      "player": "John McGinn",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Victor Moses",
+          "position": "Midfielder",
+          "distance": 1.0569
+        },
+        {
+          "name": "Ludovic Blas",
+          "position": "Midfielder",
+          "distance": 1.0866
+        },
+        {
+          "name": "Lorenzo Pellegrini",
+          "position": "Midfielder",
+          "distance": 1.1114
+        },
+        {
+          "name": "Abdoulaye Doucouré",
+          "position": "Midfielder",
+          "distance": 1.2016
+        },
+        {
+          "name": "Emre Can",
+          "position": "Midfielder",
+          "distance": 1.2065
+        }
+      ]
+    },
+    {
+      "player": "Ian Maatsen",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Jérôme Boateng",
+          "position": "Defender",
+          "distance": 1.4763
+        },
+        {
+          "name": "Gerard Martín",
+          "position": "Defender",
+          "distance": 1.5033
+        },
+        {
+          "name": "Javi Galán",
+          "position": "Defender",
+          "distance": 1.686
+        },
+        {
+          "name": "Colin Dagba",
+          "position": "Defender",
+          "distance": 1.7182
+        },
+        {
+          "name": "Medhi Benatia",
+          "position": "Defender",
+          "distance": 1.7665
+        }
+      ]
+    },
+    {
+      "player": "Stefan Posch",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Gleison Bremer",
+          "position": "Defender",
+          "distance": 0.8011
+        },
+        {
+          "name": "Dayot Upamecano",
+          "position": "Defender",
+          "distance": 0.8047
+        },
+        {
+          "name": "Mattia Caldara",
+          "position": "Defender",
+          "distance": 0.83
+        },
+        {
+          "name": "Thomas Foket",
+          "position": "Defender",
+          "distance": 0.9306
+        },
+        {
+          "name": "Dayot Upamecano",
+          "position": "Defender",
+          "distance": 0.9484
+        }
+      ]
+    },
+    {
+      "player": "Lucas Digne",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Danny Rose",
+          "position": "Defender",
+          "distance": 0.6992
+        },
+        {
+          "name": "Eric Dier",
+          "position": "Defender",
+          "distance": 1.0215
+        },
+        {
+          "name": "Giovanni Di Lorenzo",
+          "position": "Defender",
+          "distance": 1.0555
+        },
+        {
+          "name": "Benjamin Mendy",
+          "position": "Defender",
+          "distance": 1.1143
+        },
+        {
+          "name": "Kyle Walker",
+          "position": "Defender",
+          "distance": 1.1345
+        }
+      ]
+    },
+    {
+      "player": "Mario Hermoso",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Alexander Hack",
+          "position": "Defender",
+          "distance": 1.1665
+        },
+        {
+          "name": "Nacho",
+          "position": "Defender",
+          "distance": 1.3458
+        },
+        {
+          "name": "Juan Foyth",
+          "position": "Defender",
+          "distance": 1.3757
+        },
+        {
+          "name": "Luke Ayling",
+          "position": "Defender",
+          "distance": 1.4017
+        },
+        {
+          "name": "Martín Cáceres",
+          "position": "Defender",
+          "distance": 1.4349
+        }
+      ]
+    },
+    {
+      "player": "Edimilson Fernandes",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Naïs Djouahra",
+          "position": "Midfielder",
+          "distance": 0.8121
+        },
+        {
+          "name": "Nicola Zalewski",
+          "position": "Midfielder",
+          "distance": 1.1232
+        },
+        {
+          "name": "Roberto Navarro",
+          "position": "Midfielder",
+          "distance": 1.141
+        },
+        {
+          "name": "Erik Thommy",
+          "position": "Midfielder",
+          "distance": 1.1706
+        },
+        {
+          "name": "Alberto Soro",
+          "position": "Midfielder",
+          "distance": 1.231
+        }
+      ]
+    },
+    {
+      "player": "Bukayo Saka",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Raheem Sterling",
+          "position": "Forward",
+          "distance": 0.7011
+        },
+        {
+          "name": "Alexis Sánchez",
+          "position": "Forward",
+          "distance": 0.8163
+        },
+        {
+          "name": "Antoine Griezmann",
+          "position": "Forward",
+          "distance": 1.0472
+        },
+        {
+          "name": "Antoine Griezmann",
+          "position": "Forward",
+          "distance": 1.1073
+        },
+        {
+          "name": "Luis Díaz",
+          "position": "Forward",
+          "distance": 1.1245
+        }
+      ]
+    },
+    {
+      "player": "Raphaël Guerreiro",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Emil Forsberg",
+          "position": "Midfielder",
+          "distance": 0.8746
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 1.0549
+        },
+        {
+          "name": "Alex Iwobi",
+          "position": "Midfielder",
+          "distance": 1.0615
+        },
+        {
+          "name": "Alex Oxlade-Chamberlain",
+          "position": "Midfielder",
+          "distance": 1.0637
+        },
+        {
+          "name": "Diego Perotti",
+          "position": "Midfielder",
+          "distance": 1.1371
+        }
+      ]
+    },
+    {
+      "player": "Jakub Kiwior",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Alessio Romagnoli",
+          "position": "Defender",
+          "distance": 0.4881
+        },
+        {
+          "name": "Elseid Hysaj",
+          "position": "Defender",
+          "distance": 0.8696
+        },
+        {
+          "name": "Éder Militão",
+          "position": "Defender",
+          "distance": 0.916
+        },
+        {
+          "name": "Lorenzo Tonelli",
+          "position": "Defender",
+          "distance": 0.929
+        },
+        {
+          "name": "Gabriel Mercado",
+          "position": "Defender",
+          "distance": 1.0397
+        }
+      ]
+    },
+    {
+      "player": "Piero Hincapié",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Santiago Arias",
+          "position": "Defender",
+          "distance": 0.749
+        },
+        {
+          "name": "Luca Ceppitelli",
+          "position": "Defender",
+          "distance": 0.8662
+        },
+        {
+          "name": "Stian Rode Gregersen",
+          "position": "Defender",
+          "distance": 1.0229
+        },
+        {
+          "name": "Kostas Manolas",
+          "position": "Defender",
+          "distance": 1.1013
+        },
+        {
+          "name": "Colin Dagba",
+          "position": "Defender",
+          "distance": 1.1048
+        }
+      ]
+    },
+    {
+      "player": "Ilkay Gündogan",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Stephan El Shaarawy",
+          "position": "Midfielder",
+          "distance": 1.0332
+        },
+        {
+          "name": "Jamal Musiala",
+          "position": "Midfielder",
+          "distance": 1.1073
+        },
+        {
+          "name": "Stephan El Shaarawy",
+          "position": "Midfielder",
+          "distance": 1.1359
+        },
+        {
+          "name": "Jonas Hofmann",
+          "position": "Midfielder",
+          "distance": 1.1519
+        },
+        {
+          "name": "Emil Forsberg",
+          "position": "Midfielder",
+          "distance": 1.1628
+        }
+      ]
+    },
+    {
+      "player": "Gianluigi Donnarumma",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Kevin Trapp",
+          "position": "Goalkeeper",
+          "distance": 0.6634
+        },
+        {
+          "name": "Marc-André ter Stegen",
+          "position": "Goalkeeper",
+          "distance": 0.745
+        },
+        {
+          "name": "Gianluigi Buffon",
+          "position": "Goalkeeper",
+          "distance": 0.7673
+        },
+        {
+          "name": "Kevin Trapp",
+          "position": "Goalkeeper",
+          "distance": 0.7926
+        },
+        {
+          "name": "Yann Sommer",
+          "position": "Goalkeeper",
+          "distance": 0.8798
+        }
+      ]
+    },
+    {
+      "player": "Lukas Hradecky",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Samir Handanovic",
+          "position": "Goalkeeper",
+          "distance": 0.1291
+        },
+        {
+          "name": "Mike Maignan",
+          "position": "Goalkeeper",
+          "distance": 0.2276
+        },
+        {
+          "name": "Koen Casteels",
+          "position": "Goalkeeper",
+          "distance": 0.2392
+        },
+        {
+          "name": "Péter Gulácsi",
+          "position": "Goalkeeper",
+          "distance": 0.3053
+        },
+        {
+          "name": "Rui Patrício",
+          "position": "Goalkeeper",
+          "distance": 0.3429
+        }
+      ]
+    },
+    {
+      "player": "Mathias Pereira Lage",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Lee Jae-sung",
+          "position": "Midfielder",
+          "distance": 1.1897
+        },
+        {
+          "name": "Salva Sevilla",
+          "position": "Midfielder",
+          "distance": 1.2311
+        },
+        {
+          "name": "Kamaldeen Sulemana",
+          "position": "Midfielder",
+          "distance": 1.2393
+        },
+        {
+          "name": "Pablo Fornals",
+          "position": "Midfielder",
+          "distance": 1.3032
+        },
+        {
+          "name": "Kieran Dowell",
+          "position": "Midfielder",
+          "distance": 1.3081
+        }
+      ]
+    },
+    {
+      "player": "Morgan Rogers",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Dele Alli",
+          "position": "Midfielder",
+          "distance": 0.9571
         },
         {
           "name": "Mattia Zaccagni",
           "position": "Midfielder",
-          "distance": 1.1583
+          "distance": 1.2503
+        },
+        {
+          "name": "Karim Adeyemi",
+          "position": "Midfielder",
+          "distance": 1.2993
+        },
+        {
+          "name": "Florian Neuhaus",
+          "position": "Midfielder",
+          "distance": 1.3005
+        },
+        {
+          "name": "Arturo Vidal",
+          "position": "Midfielder",
+          "distance": 1.3802
+        }
+      ]
+    },
+    {
+      "player": "Romain Faivre",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Martin Ødegaard",
+          "position": "Midfielder",
+          "distance": 0.7921
+        },
+        {
+          "name": "Angeliño",
+          "position": "Midfielder",
+          "distance": 0.8629
+        },
+        {
+          "name": "Josip Brekalo",
+          "position": "Midfielder",
+          "distance": 0.9869
+        },
+        {
+          "name": "Ethan Nwaneri",
+          "position": "Midfielder",
+          "distance": 1.0366
+        },
+        {
+          "name": "Dele Alli",
+          "position": "Midfielder",
+          "distance": 1.0386
+        }
+      ]
+    },
+    {
+      "player": "Giuliano Simeone",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Lamine Ghezali",
+          "position": "Midfielder",
+          "distance": 0.5472
+        },
+        {
+          "name": "Stuart McKinstry",
+          "position": "Midfielder",
+          "distance": 0.6683
+        },
+        {
+          "name": "Alassane Sidibe",
+          "position": "Midfielder",
+          "distance": 1.1544
+        },
+        {
+          "name": "Miguel Baeza",
+          "position": "Midfielder",
+          "distance": 1.1597
+        },
+        {
+          "name": "Mahame Siby",
+          "position": "Midfielder",
+          "distance": 1.1979
+        }
+      ]
+    },
+    {
+      "player": "Isak Hien",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Norbert Gyömbér",
+          "position": "Defender",
+          "distance": 0.5073
+        },
+        {
+          "name": "Yvann Macon",
+          "position": "Defender",
+          "distance": 0.8926
+        },
+        {
+          "name": "Koray Günter",
+          "position": "Defender",
+          "distance": 0.9433
+        },
+        {
+          "name": "Armel Bella Kotchap",
+          "position": "Defender",
+          "distance": 0.9945
+        },
+        {
+          "name": "Samir Santos",
+          "position": "Defender",
+          "distance": 1.0839
+        }
+      ]
+    },
+    {
+      "player": "Denis Zakaria",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Gelson Martins",
+          "position": "Midfielder",
+          "distance": 1.5209
+        },
+        {
+          "name": "Conor Gallagher",
+          "position": "Midfielder",
+          "distance": 1.5281
+        },
+        {
+          "name": "Vicente Iborra",
+          "position": "Midfielder",
+          "distance": 1.5438
+        },
+        {
+          "name": "Pablo Fornals",
+          "position": "Midfielder",
+          "distance": 1.6005
+        },
+        {
+          "name": "Dejan Ljubicic",
+          "position": "Midfielder",
+          "distance": 1.6042
+        }
+      ]
+    },
+    {
+      "player": "Malick Thiaw",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Andrés Andrade Cedeño",
+          "position": "Defender",
+          "distance": 1.0033
+        },
+        {
+          "name": "Yvann Macon",
+          "position": "Defender",
+          "distance": 1.2508
+        },
+        {
+          "name": "Giorgio Altare",
+          "position": "Defender",
+          "distance": 1.2867
+        },
+        {
+          "name": "Sam Byram",
+          "position": "Defender",
+          "distance": 1.3189
+        },
+        {
+          "name": "Brian Oliván",
+          "position": "Defender",
+          "distance": 1.3347
+        }
+      ]
+    },
+    {
+      "player": "Luka Modric",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 0.8558
+        },
+        {
+          "name": "Joshua Kimmich",
+          "position": "Midfielder",
+          "distance": 0.8678
+        },
+        {
+          "name": "Joshua Kimmich",
+          "position": "Midfielder",
+          "distance": 0.8685
+        },
+        {
+          "name": "Bernardo Silva",
+          "position": "Midfielder",
+          "distance": 0.9325
+        },
+        {
+          "name": "Joshua Kimmich",
+          "position": "Midfielder",
+          "distance": 0.943
+        }
+      ]
+    },
+    {
+      "player": "Florian Wirtz",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Jonas Hofmann",
+          "position": "Midfielder",
+          "distance": 0.8426
+        },
+        {
+          "name": "Leroy Sané",
+          "position": "Midfielder",
+          "distance": 0.9344
+        },
+        {
+          "name": "David Silva",
+          "position": "Midfielder",
+          "distance": 0.9696
+        },
+        {
+          "name": "Marco Reus",
+          "position": "Midfielder",
+          "distance": 1.1691
+        },
+        {
+          "name": "Julian Brandt",
+          "position": "Midfielder",
+          "distance": 1.2346
+        }
+      ]
+    },
+    {
+      "player": "Maximilian Beier",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Marcus Thuram",
+          "position": "Forward",
+          "distance": 1.0115
+        },
+        {
+          "name": "João Félix",
+          "position": "Forward",
+          "distance": 1.0956
+        },
+        {
+          "name": "Ferran Torres",
+          "position": "Forward",
+          "distance": 1.2582
+        },
+        {
+          "name": "Franck Ribéry",
+          "position": "Forward",
+          "distance": 1.348
+        },
+        {
+          "name": "Luis Muriel",
+          "position": "Forward",
+          "distance": 1.428
+        }
+      ]
+    },
+    {
+      "player": "Jonathan David",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Raheem Sterling",
+          "position": "Forward",
+          "distance": 1.4793
+        },
+        {
+          "name": "Robert Lewandowski",
+          "position": "Forward",
+          "distance": 1.6557
+        },
+        {
+          "name": "Ciro Immobile",
+          "position": "Forward",
+          "distance": 1.657
+        },
+        {
+          "name": "Harry Kane",
+          "position": "Forward",
+          "distance": 1.6603
+        },
+        {
+          "name": "Robert Lewandowski",
+          "position": "Forward",
+          "distance": 1.6624
+        }
+      ]
+    },
+    {
+      "player": "William Saliba",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Jan Vertonghen",
+          "position": "Defender",
+          "distance": 0.8315
+        },
+        {
+          "name": "Antonio Rüdiger",
+          "position": "Defender",
+          "distance": 0.9192
+        },
+        {
+          "name": "Rúben Dias",
+          "position": "Defender",
+          "distance": 0.9521
+        },
+        {
+          "name": "Antonio Rüdiger",
+          "position": "Defender",
+          "distance": 1.013
+        },
+        {
+          "name": "Thiago Silva",
+          "position": "Defender",
+          "distance": 1.144
+        }
+      ]
+    },
+    {
+      "player": "Charles De Ketelaere",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Isco",
+          "position": "Midfielder",
+          "distance": 0.6081
+        },
+        {
+          "name": "Rafael Leão",
+          "position": "Midfielder",
+          "distance": 0.7833
+        },
+        {
+          "name": "Willian",
+          "position": "Midfielder",
+          "distance": 0.8271
+        },
+        {
+          "name": "Sergio Canales",
+          "position": "Midfielder",
+          "distance": 0.9858
+        },
+        {
+          "name": "Matt Doherty",
+          "position": "Midfielder",
+          "distance": 1.098
+        }
+      ]
+    },
+    {
+      "player": "Josko Gvardiol",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Thilo Kehrer",
+          "position": "Defender",
+          "distance": 0.7175
+        },
+        {
+          "name": "Jurriën Timber",
+          "position": "Defender",
+          "distance": 0.7732
+        },
+        {
+          "name": "Mats Hummels",
+          "position": "Defender",
+          "distance": 1.0041
+        },
+        {
+          "name": "Fabian Schär",
+          "position": "Defender",
+          "distance": 1.0764
+        },
+        {
+          "name": "Giovanni Di Lorenzo",
+          "position": "Defender",
+          "distance": 1.0907
+        }
+      ]
+    },
+    {
+      "player": "Ayyoub Bouaddi",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Harry Winks",
+          "position": "Midfielder",
+          "distance": 0.7693
+        },
+        {
+          "name": "Florentino Luís",
+          "position": "Midfielder",
+          "distance": 0.8366
+        },
+        {
+          "name": "Luca Fiordilino",
+          "position": "Midfielder",
+          "distance": 0.9786
+        },
+        {
+          "name": "Adam Forshaw",
+          "position": "Midfielder",
+          "distance": 1.0248
+        },
+        {
+          "name": "Ruben Aguilar",
+          "position": "Midfielder",
+          "distance": 1.0851
+        }
+      ]
+    },
+    {
+      "player": "Luis Díaz",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Khvicha Kvaratskhelia",
+          "position": "Forward",
+          "distance": 0.8768
+        },
+        {
+          "name": "Gonzalo Higuaín",
+          "position": "Forward",
+          "distance": 1.1833
+        },
+        {
+          "name": "Lamine Yamal",
+          "position": "Forward",
+          "distance": 1.2025
+        },
+        {
+          "name": "Alexandre Lacazette",
+          "position": "Forward",
+          "distance": 1.2078
+        },
+        {
+          "name": "Matteo Politano",
+          "position": "Forward",
+          "distance": 1.2678
+        }
+      ]
+    },
+    {
+      "player": "Aurélien Tchouaméni",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Daniele De Rossi",
+          "position": "Midfielder",
+          "distance": 1.2914
+        },
+        {
+          "name": "Adrien Rabiot",
+          "position": "Midfielder",
+          "distance": 1.312
+        },
+        {
+          "name": "Robert Andrich",
+          "position": "Midfielder",
+          "distance": 1.3271
+        },
+        {
+          "name": "Granit Xhaka",
+          "position": "Midfielder",
+          "distance": 1.3274
+        },
+        {
+          "name": "Adrien Rabiot",
+          "position": "Midfielder",
+          "distance": 1.5736
+        }
+      ]
+    },
+    {
+      "player": "Sead Kolasinac",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Javi Galán",
+          "position": "Defender",
+          "distance": 0.879
+        },
+        {
+          "name": "Igor Zubeldia",
+          "position": "Defender",
+          "distance": 0.8797
+        },
+        {
+          "name": "Mario Hermoso",
+          "position": "Defender",
+          "distance": 1.0973
+        },
+        {
+          "name": "Marcelo",
+          "position": "Defender",
+          "distance": 1.3833
+        },
+        {
+          "name": "Óscar Gil",
+          "position": "Defender",
+          "distance": 1.4255
+        }
+      ]
+    },
+    {
+      "player": "Denzel Dumfries",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Sofiane Boufal",
+          "position": "Midfielder",
+          "distance": 0.7965
+        },
+        {
+          "name": "Thomas Lemar",
+          "position": "Midfielder",
+          "distance": 0.8257
+        },
+        {
+          "name": "Gonçalo Guedes",
+          "position": "Midfielder",
+          "distance": 0.8798
+        },
+        {
+          "name": "Jeremie Frimpong",
+          "position": "Midfielder",
+          "distance": 0.9149
+        },
+        {
+          "name": "Paul Pogba",
+          "position": "Midfielder",
+          "distance": 1.046
+        }
+      ]
+    },
+    {
+      "player": "Lucas Vázquez",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Davinson Sánchez",
+          "position": "Defender",
+          "distance": 0.9482
+        },
+        {
+          "name": "Mohamed Simakan",
+          "position": "Defender",
+          "distance": 0.9689
+        },
+        {
+          "name": "Gabriel Magalhães",
+          "position": "Defender",
+          "distance": 0.9769
+        },
+        {
+          "name": "Gabriel Magalhães",
+          "position": "Defender",
+          "distance": 1.0483
+        },
+        {
+          "name": "Sergio Ramos",
+          "position": "Defender",
+          "distance": 1.1395
+        }
+      ]
+    },
+    {
+      "player": "Piotr Zielinski",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 0.9789
+        },
+        {
+          "name": "Jonathan Bamba",
+          "position": "Midfielder",
+          "distance": 0.9987
+        },
+        {
+          "name": "Ruben Loftus-Cheek",
+          "position": "Midfielder",
+          "distance": 1.0654
+        },
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 1.0662
+        },
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 1.1963
+        }
+      ]
+    },
+    {
+      "player": "José María Giménez",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Tiago Djaló",
+          "position": "Defender",
+          "distance": 0.6197
+        },
+        {
+          "name": "Fikayo Tomori",
+          "position": "Defender",
+          "distance": 1.0364
+        },
+        {
+          "name": "Kim Min-Jae",
+          "position": "Defender",
+          "distance": 1.1156
+        },
+        {
+          "name": "Ronald Araújo",
+          "position": "Defender",
+          "distance": 1.1562
+        },
+        {
+          "name": "Sebastiaan Bornauw",
+          "position": "Defender",
+          "distance": 1.1581
+        }
+      ]
+    },
+    {
+      "player": "Phil Foden",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Karl Toko Ekambi",
+          "position": "Forward",
+          "distance": 1.0261
+        },
+        {
+          "name": "Gonzalo Higuaín",
+          "position": "Forward",
+          "distance": 1.0858
+        },
+        {
+          "name": "Lorenzo Insigne",
+          "position": "Forward",
+          "distance": 1.1102
+        },
+        {
+          "name": "Mohamed Salah",
+          "position": "Forward",
+          "distance": 1.1391
+        },
+        {
+          "name": "Eden Hazard",
+          "position": "Forward",
+          "distance": 1.1752
+        }
+      ]
+    },
+    {
+      "player": "Mateo Retegui",
+      "position": "Forward",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Diogo Jota",
+          "position": "Forward",
+          "distance": 1.2088
+        },
+        {
+          "name": "Sergio Agüero",
+          "position": "Forward",
+          "distance": 1.3508
+        },
+        {
+          "name": "Willian José",
+          "position": "Forward",
+          "distance": 1.518
+        },
+        {
+          "name": "Iago Aspas",
+          "position": "Forward",
+          "distance": 1.5281
+        },
+        {
+          "name": "Erling Haaland",
+          "position": "Forward",
+          "distance": 1.5591
+        }
+      ]
+    },
+    {
+      "player": "Ezri Konsa",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Dante",
+          "position": "Defender",
+          "distance": 1.8163
+        },
+        {
+          "name": "Kelvin Amian",
+          "position": "Defender",
+          "distance": 1.8186
+        },
+        {
+          "name": "Pietro Ceccaroni",
+          "position": "Defender",
+          "distance": 1.9519
+        },
+        {
+          "name": "Pascal Struijk",
+          "position": "Defender",
+          "distance": 1.9707
+        },
+        {
+          "name": "Yunis Abdelhamid",
+          "position": "Defender",
+          "distance": 2.0175
+        }
+      ]
+    },
+    {
+      "player": "Marquinhos",
+      "position": "Defender",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Sven Botman",
+          "position": "Defender",
+          "distance": 1.4399
+        },
+        {
+          "name": "Lucas Vázquez",
+          "position": "Defender",
+          "distance": 1.5968
+        },
+        {
+          "name": "Raphaël Varane",
+          "position": "Defender",
+          "distance": 1.6182
+        },
+        {
+          "name": "Pau Torres",
+          "position": "Defender",
+          "distance": 1.6856
+        },
+        {
+          "name": "Stefan de Vrij",
+          "position": "Defender",
+          "distance": 1.6878
+        }
+      ]
+    },
+    {
+      "player": "Jude Bellingham",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Rodrigo De Paul",
+          "position": "Midfielder",
+          "distance": 0.8428
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 0.8852
+        },
+        {
+          "name": "Youri Tielemans",
+          "position": "Midfielder",
+          "distance": 0.8875
+        },
+        {
+          "name": "Mateo Kovacic",
+          "position": "Midfielder",
+          "distance": 0.8937
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 0.9046
+        }
+      ]
+    },
+    {
+      "player": "Yunus Musah",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mario Suárez",
+          "position": "Midfielder",
+          "distance": 0.9288
+        },
+        {
+          "name": "Danilo Cataldi",
+          "position": "Midfielder",
+          "distance": 1.1226
+        },
+        {
+          "name": "Otávio",
+          "position": "Midfielder",
+          "distance": 1.1736
+        },
+        {
+          "name": "Xeka",
+          "position": "Midfielder",
+          "distance": 1.2204
+        },
+        {
+          "name": "Emre Can",
+          "position": "Midfielder",
+          "distance": 1.2323
+        }
+      ]
+    },
+    {
+      "player": "Marcos Llorente",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Ngal'ayel Mukau",
+          "position": "Midfielder",
+          "distance": 1.1403
+        },
+        {
+          "name": "Henrikh Mkhitaryan",
+          "position": "Midfielder",
+          "distance": 1.1714
+        },
+        {
+          "name": "Fabinho",
+          "position": "Midfielder",
+          "distance": 1.2127
+        },
+        {
+          "name": "Saúl Ñíguez",
+          "position": "Midfielder",
+          "distance": 1.2534
+        },
+        {
+          "name": "Otávio",
+          "position": "Midfielder",
+          "distance": 1.3098
+        }
+      ]
+    },
+    {
+      "player": "Leroy Sané",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Marcus Rashford",
+          "position": "Midfielder",
+          "distance": 0.8968
+        },
+        {
+          "name": "Marco Reus",
+          "position": "Midfielder",
+          "distance": 0.9559
+        },
+        {
+          "name": "Piotr Zielinski",
+          "position": "Midfielder",
+          "distance": 1.0295
+        },
+        {
+          "name": "David Silva",
+          "position": "Midfielder",
+          "distance": 1.072
+        },
+        {
+          "name": "Nabil Fekir",
+          "position": "Midfielder",
+          "distance": 1.1728
+        }
+      ]
+    },
+    {
+      "player": "Yan Couto",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mario Suárez",
+          "position": "Midfielder",
+          "distance": 0.9927
+        },
+        {
+          "name": "Jamie Shackleton",
+          "position": "Midfielder",
+          "distance": 0.9936
+        },
+        {
+          "name": "Tomás Rincón",
+          "position": "Midfielder",
+          "distance": 1.1001
+        },
+        {
+          "name": "Iñigo Ruiz de Galarreta",
+          "position": "Midfielder",
+          "distance": 1.1084
+        },
+        {
+          "name": "Renato Tapia",
+          "position": "Midfielder",
+          "distance": 1.1303
+        }
+      ]
+    },
+    {
+      "player": "Lucas Chevalier",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "André Onana",
+          "position": "Goalkeeper",
+          "distance": 0.2758
+        },
+        {
+          "name": "Ivan Provedel",
+          "position": "Goalkeeper",
+          "distance": 0.5363
+        },
+        {
+          "name": "Roman Bürki",
+          "position": "Goalkeeper",
+          "distance": 0.6117
+        },
+        {
+          "name": "Michele Di Gregorio",
+          "position": "Goalkeeper",
+          "distance": 0.6731
+        },
+        {
+          "name": "David de Gea",
+          "position": "Goalkeeper",
+          "distance": 0.7026
+        }
+      ]
+    },
+    {
+      "player": "Nicolò Barella",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Jude Bellingham",
+          "position": "Midfielder",
+          "distance": 1.1916
+        },
+        {
+          "name": "Joshua Kimmich",
+          "position": "Midfielder",
+          "distance": 1.2424
+        },
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 1.2651
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 1.2903
+        },
+        {
+          "name": "Luka Modric",
+          "position": "Midfielder",
+          "distance": 1.3124
+        }
+      ]
+    },
+    {
+      "player": "Yann Sommer",
+      "position": "Goalkeeper",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Mike Maignan",
+          "position": "Goalkeeper",
+          "distance": 0.4797
+        },
+        {
+          "name": "Jasper Cillessen",
+          "position": "Goalkeeper",
+          "distance": 0.5359
+        },
+        {
+          "name": "Marc-André ter Stegen",
+          "position": "Goalkeeper",
+          "distance": 0.6294
+        },
+        {
+          "name": "Péter Gulácsi",
+          "position": "Goalkeeper",
+          "distance": 0.6608
+        },
+        {
+          "name": "Gianluigi Donnarumma",
+          "position": "Goalkeeper",
+          "distance": 0.7316
+        }
+      ]
+    },
+    {
+      "player": "Tijjani Reijnders",
+      "position": "Midfielder",
+      "season": "2024-2025",
+      "similar": [
+        {
+          "name": "Kingsley Coman",
+          "position": "Midfielder",
+          "distance": 1.5308
+        },
+        {
+          "name": "James Ward-Prowse",
+          "position": "Midfielder",
+          "distance": 1.6055
+        },
+        {
+          "name": "Toni Kroos",
+          "position": "Midfielder",
+          "distance": 1.6994
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "position": "Midfielder",
+          "distance": 1.8341
+        },
+        {
+          "name": "Ivan Rakitić",
+          "position": "Midfielder",
+          "distance": 1.956
         }
       ]
     }
