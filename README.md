@@ -47,8 +47,8 @@ The project is organized into modular components:
 | Final technical report | `reports/FINAL_TECHNICAL_REPORT.md` |
 | Runbook (canonical reproduction path) | `RUNBOOK.md` |
 | Final presentation | `reports/FINAL_PRESENTATION.md` |
-| Demo — static dashboard (no server) | `reports/demo/index.html` — auto-deployed to GitHub Pages via `.github/workflows/deploy-pages.yml` (see `RUNBOOK.md` Step 13) |
-| Demo — interactive Streamlit app | `app.py` (`streamlit run app.py`; free hosting via Streamlit Community Cloud, `RUNBOOK.md` Step 13b) |
+| Demo — static dashboard (no server) | `reports/demo/index.html` — auto-deployed to GitHub Pages: https://joanixx.github.io/goaldata-league/ (see `RUNBOOK.md` Step 13) |
+| Demo — interactive Streamlit app | `app.py` — live at https://tf-goal-data-league.streamlit.app/ (`streamlit run app.py` for local; `RUNBOOK.md` Step 13b) |
 | Monitoring / operationalization plan | `reports/MONITORING_PLAN.md` |
 | Limitations and future work | `reports/LIMITATIONS_FUTURE_WORK.md` |
 | Metrics (auto-generated from artifacts) | `reports/METRICS_REPORT.md` |

@@ -280,11 +280,13 @@ every push to `main` that touches the demo. One-time setup by the repo owner:
 
 1. GitHub → repo **Settings → Pages → Build and deployment → Source: GitHub Actions**
 2. Push to `main` (or run the workflow manually from the Actions tab)
-3. The dashboard is served at `https://<owner>.github.io/goaldata-league/`
+3. The dashboard is served at https://joanixx.github.io/goaldata-league/
 
 The demo is fully self-contained (`data.js` is inlined) — no build step, no server, no cost.
 
 ### 13b. Streamlit app → Streamlit Community Cloud (optional, also free)
+
+Live URL: https://tf-goal-data-league.streamlit.app/
 
 1. Sign in at https://share.streamlit.io with the GitHub account
 2. New app → repository `JoanixX/goaldata-league`, branch `main`, main file `app.py`
