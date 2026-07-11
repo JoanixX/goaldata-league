@@ -2,7 +2,7 @@
 window.DEMO_DATA = {
   "meta": {
     "project": "GoalData League — Football Data Pipeline & Scouting System",
-    "generated_at": "2026-07-11T12:06:46",
+    "generated_at": "2026-07-11T14:00:19",
     "n_players_indexed": 400,
     "n_centralities": 200,
     "pca_components_90pct": 11,
@@ -5953,10 +5953,10 @@ window.DEMO_DATA = {
       "rating": 3.7597
     },
     {
-      "player_name": "Mark Flekken",
+      "player_name": "Alisson",
       "position_group": "GK",
-      "minutes_played": 2880,
-      "rating": 0.0
+      "minutes_played": 3240,
+      "rating": 1.007
     },
     {
       "player_name": "Exequiel Palacios",

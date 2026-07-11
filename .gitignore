@@ -53,7 +53,10 @@ logs/
 # ===========================================================================
 # Raw data — not versioned (rebuild via src/download_*.py; see source inventory)
 # ===========================================================================
-data/raw/
+data/raw/*
+!data/raw/uefa_country_coefficients.csv
+
+
 
 # ===========================================================================
 # Generated CSV outputs (reproducible). Processed datasets are kept as
