@@ -101,6 +101,26 @@ except Exception as e:
     st.warning("Please ensure that you have run the feature engineering and clustering scripts first.")
     st.stop()
 
+# Plain-language introduction for first-time visitors
+with st.expander("👋 New here? What this app is and how to use it", expanded=False):
+    st.markdown("""
+**GoalData League** is a football scouting system built entirely from **real match data**
+(StatsBomb event streams, FBref season statistics, Understat match logs). Everything you see is
+computed from what actually happened on the pitch — no invented players, no fabricated numbers.
+
+It answers four practical questions, one per page (pick them in the sidebar):
+
+| Page | Question it answers | Who would use it |
+|------|--------------------|------------------|
+| 🔍 **Scouting & Player Recommender** | *"Who plays like this player?"* | A sporting director looking for a replacement or a cheaper alternative |
+| 📊 **Tactical Clustering** | *"What playing styles exist, and who belongs to each?"* | An analyst mapping the tactical landscape of the league |
+| 🧠 **Squad Lineup Optimizer** | *"Which 11 players are provably the best combination?"* | A coach or fantasy manager building a team of the season |
+| 🕸️ **Passing Network & xG** | *"Who really organised the play in this match?"* | A match analyst preparing for an opponent |
+
+Every page has its own *"How this works"* box explaining what the numbers mean and what
+conclusions you can (and cannot) draw from them.
+""")
+
 # Sidebar config
 st.sidebar.markdown("## Navigation & Config")
 menu = st.sidebar.radio(
@@ -119,6 +139,27 @@ st.sidebar.metric(label="Seasons Covered", value=", ".join(sorted(df_recsys['sea
 if menu == "Scouting & Player Recommender":
     st.markdown("## 🔍 Scouting & Player Similarity Engine")
     st.markdown("Find candidate replacements or comparable profiles using low-dimensional tactical embeddings.")
+
+    with st.expander("💡 How this works, what it's for, and how to read the results"):
+        st.markdown("""
+**How it works.** Each player-season is summarised by 33 real statistics (goals, passes,
+tackles, accuracy rates…) compressed into 11 "summary axes" via PCA. When you pick a player, the
+engine measures the statistical distance to every other player **of the same position group**
+and returns the closest profiles. Similarity 1.0 = an identical statistical profile.
+
+**What it's for.** The classic scouting question: *"our midfielder is leaving — who plays like
+him?"* Clubs use exactly this kind of engine to build replacement shortlists without watching
+thousands of hours of video.
+
+**How to read the results.**
+- The table ranks real candidates by closeness; *distance* is raw, *similarity* is the friendly 0-1 version.
+- The chart shows the whole league as grey dots: your query player is the ⭐, recommendations are the blue dots connected to it. Close on the chart = similar overall style.
+- *"Stronger"* model = position-aware, all 11 axes (recommended). *"Baseline"* = naive 2-axis version, shown so you can see how much better the real model is.
+- *"Current form only"* limits candidates to each player's most recent season — turn it off to search across history.
+
+**What it does NOT say:** similar style ≠ equal quality. Use the Lineup Optimizer page for
+quality-adjusted rankings (it weights output by league strength).
+""")
 
     col1, col2 = st.columns([1, 3])
 
@@ -255,27 +296,50 @@ elif menu == "Tactical Clustering Analysis":
     st.markdown("## 📊 Style-of-Play Clustering Analysis")
     st.markdown("Analysis of players' tactical profiles segmented using K-Means and DBSCAN algorithms on the PCA feature space.")
 
+    with st.expander("💡 How this works and what each dot means"):
+        st.markdown("""
+**How it works.** Every dot in the chart is one **player-season**. Its position comes from
+compressing 33 real statistics into two axes: further **right** = more attacking volume (shots,
+goals, involvement); further **up** = more defensive/possession work (passes, tackles,
+interceptions). The K-Means algorithm then groups players into styles **on its own** — nobody
+told it what a "defender" is; it discovered the roles purely from the numbers.
+
+**What it's for.** It turns thousands of stat lines into one picture of the tactical landscape.
+Players close together play similarly — whatever their official position says.
+
+**What you can get out of it.**
+- See how roles blur in modern football (some full-backs sit among midfielders).
+- Spot outliers: extreme seasons sit far away from every group (DBSCAN flags them as "noise", cluster −1).
+- Browse each cluster's members below to understand who defines each style.
+""")
+
     c1, c2 = st.columns([1, 2])
+
+    cluster_ids = sorted(df_recsys['kmeans_cluster'].unique())
+    cluster_descriptions = {
+        0: "High-volume attackers & dynamic midfielders",
+        1: "Low-volume defensive & goalkeeper profiles",
+        2: "High-possession midfielders & ball-playing defenders",
+        3: "Additional profile (present only if K > 3)",
+    }
 
     with c1:
         st.subheader("Cluster Details")
-        st.markdown("""
-        The clustering algorithm identifies four distinct style-of-play profiles:
-        * **Cluster 0**: Attacking Forwards & Creative Wingers
-        * **Cluster 1**: Goalkeepers (distinct profile, fully isolated)
-        * **Cluster 2**: Midfielders (distribution, progression and control)
-        * **Cluster 3**: Defensive Specialists & Center Backs
-        """)
+        st.markdown(f"K-Means found **{len(cluster_ids)} style-of-play profiles** "
+                    "(chosen automatically by silhouette score):")
+        for cid in cluster_ids:
+            st.markdown(f"* **Cluster {cid}**: {cluster_descriptions.get(cid, 'Mixed profile')}")
 
         # Cluster distribution stats
         cluster_counts = df_recsys['kmeans_cluster'].value_counts().sort_index()
         fig_dist, ax_dist = plt.subplots(figsize=(6, 4), facecolor="#0f172a")
         ax_dist.set_facecolor("#1e293b")
         
+        palette = ["#f43f5e", "#10b981", "#8b5cf6", "#f59e0b", "#38bdf8"]
         bars = ax_dist.bar(
-            [f"Cluster {i}" for i in cluster_counts.index], 
-            cluster_counts.values, 
-            color=["#f43f5e", "#10b981", "#8b5cf6", "#f59e0b"]
+            [f"Cluster {i}" for i in cluster_counts.index],
+            cluster_counts.values,
+            color=[palette[i % len(palette)] for i in range(len(cluster_counts))]
         )
         ax_dist.set_title("Player Distribution by Cluster", color="#f8fafc")
         ax_dist.tick_params(colors="#94a3b8")
@@ -301,8 +365,8 @@ elif menu == "Tactical Clustering Analysis":
         fig_proj, ax_proj = plt.subplots(figsize=(10, 7), facecolor="#0f172a")
         ax_proj.set_facecolor("#1e293b")
         
-        colors = ["#f43f5e", "#10b981", "#8b5cf6", "#f59e0b"]
-        for i in range(4):
+        colors = ["#f43f5e", "#10b981", "#8b5cf6", "#f59e0b", "#38bdf8"]
+        for i in cluster_ids:
             c_mask = df_recsys['kmeans_cluster'] == i
             ax_proj.scatter(
                 df_recsys.loc[c_mask, 'PC1'], 
@@ -326,7 +390,7 @@ elif menu == "Tactical Clustering Analysis":
         st.pyplot(fig_proj)
 
     st.markdown("### Browse Players inside Clusters")
-    selected_c = st.selectbox("Inspect Cluster Details", [0, 1, 2, 3])
+    selected_c = st.selectbox("Inspect Cluster Details", cluster_ids)
     cluster_players = df_recsys[df_recsys['kmeans_cluster'] == selected_c].head(20)
     st.dataframe(cluster_players[["player_name", "season", "position_group", "PC1", "PC2", "dbscan_cluster"]], use_container_width=True)
 
@@ -335,6 +399,28 @@ elif menu == "Tactical Clustering Analysis":
 elif menu == "Squad Lineup Optimizer":
     st.markdown("## 🧠 Starting-XI Lineup Optimizer (ILP)")
     st.markdown("Solve an Integer Linear Program (ILP) using PuLP to assemble the mathematically optimal starting XI based on position groups and rating weights.")
+
+    with st.expander("💡 How the optimizer picks the eleven (and why you can trust it)"):
+        st.markdown("""
+**How it works — three steps.**
+1. **Rate every player** from his real season output: scoring, chance creation and defensive
+   work, weighted by role (a striker is judged mostly on scoring, a defender on defending;
+   goalkeepers use real FBref saves and clean sheets).
+2. **Adjust for league strength**: ratings are scaled by the official **UEFA country
+   coefficient of that season**, so 50 goals in a weaker league don't outrank 39 goals in the
+   Premier League. Champions League minutes add a premium.
+3. **Solve, don't guess**: an Integer Linear Program tries every valid combination and returns
+   the 11 players that *provably* maximise total rating while respecting the formation
+   (e.g. 4-3-3 = exactly 1 GK, 4 DEF, 3 MID, 3 FW) — it's mathematics, not opinion.
+
+**What it's for.** A defensible "team of the season", or squad planning under different
+formations: switch to 4-4-2 or 3-5-2 and see how the optimal picks change.
+
+**How to read the result.** The *rating* column is a z-score: how many standard deviations
+above the average player of the pool. Expect surprises next to the stars — the solver has no
+reputation bias, only output per 90 minutes. Raise *Minimum Minutes* to demand more sample
+size per player; lower it to allow super-subs in.
+""")
 
     col_opt1, col_opt2 = st.columns([1, 2])
 
@@ -467,6 +553,25 @@ elif menu == "Squad Lineup Optimizer":
 elif menu == "Passing Network & xG Graph":
     st.markdown("## 🕸️ Passing Network & real xG Graph")
     st.markdown("Tactical representation of player passing combinations and shot expectations from StatsBomb Event streams.")
+
+    with st.expander("💡 What a passing network shows and how to read it"):
+        st.markdown("""
+**How it works.** The match is rebuilt from **real StatsBomb event data** (default: the 2019
+Champions League final). Every completed pass between two teammates becomes a connection —
+thicker lines mean more passes, bigger circles mean more passing involvement.
+
+**Three different ways a player can be "important":**
+- **Weighted degree** — the volume distributor: who touched and moved the ball most.
+- **Betweenness** — the bridge: the player play flows *through* on the way from defence to
+  attack. Mark him out of the game and the team's circulation breaks.
+- **xG (expected goals)** — real chance quality from StatsBomb's shot model: who generated
+  genuine scoring danger, regardless of whether the ball actually went in.
+
+**What you can get out of it.** Post-match analysis and opponent preparation: identify the
+true organiser of the play (often not the most famous name), find the passing patterns to
+press, and measure attacking threat beyond the final score. Try another StatsBomb match ID
+from their open-data repository to analyse a different game.
+""")
 
     match_id = st.sidebar.number_input("StatsBomb Match ID", value=22912)
 

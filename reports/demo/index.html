@@ -59,6 +59,20 @@
         </div>
       </div>
 
+      <details class="explainer" open>
+        <summary>What is this dashboard and how do I read this page?</summary>
+        <h4>What it is</h4>
+        <p>A football scouting system built from <strong>real match data</strong> (StatsBomb events, FBref season stats, Understat match logs). It answers three practical questions: <em>who plays like this player?</em>, <em>which players are the most typical of a style?</em>, and <em>which eleven players should we field?</em></p>
+        <h4>How to read the charts below</h4>
+        <ul>
+          <li><strong>PCA Explained Variance</strong> — we compress 33 statistics per player into 11 "summary axes". The curve shows that those 11 axes keep ~90% of the original information, so we can compare players fairly in a much smaller space.</li>
+          <li><strong>Silhouette Sweep</strong> — a quality score for grouping players into K styles. The peak at K=3 means three groups separate players most cleanly.</li>
+          <li><strong>Model Comparison</strong> — the "stronger" recommender beats the simple baseline on every retrieval metric: it finds the same player's other seasons 2–3× more often.</li>
+        </ul>
+        <h4>What you can get out of it</h4>
+        <p>Use the tabs above: <strong>Clustering</strong> to see the map of playing styles, <strong>Scout</strong> to find replacements for any player, <strong>Graph</strong> to spot the most typical/versatile profiles, <strong>Lineup</strong> for the mathematically optimal XI, and <strong>Passing</strong> to see who really organised play in a Champions League final.</p>
+      </details>
+
       <div class="grid-2" style="gap:1.25rem;margin-bottom:1.25rem">
         <!-- PCA variance chart -->
         <div class="card">
@@ -100,6 +114,20 @@
         </div>
       </div>
 
+      <details class="explainer">
+        <summary>How does this map work and what does each dot mean?</summary>
+        <h4>How it works</h4>
+        <p>Every dot is one <strong>player-season</strong> (e.g. "Modrić 2021-22"). Its position comes from compressing 33 real statistics into two axes: moving <strong>right</strong> means more attacking volume (shots, goals, involvement); moving <strong>up</strong> means more defensive/possession work (passes, tackles, interceptions). Colors are the three style groups found automatically by K-Means — no one told the algorithm what a "defender" is; it discovered the roles from the numbers alone.</p>
+        <h4>What it's for</h4>
+        <p>It turns thousands of stat lines into a single picture of the league's tactical landscape. Players close together play similarly, whatever their official position says.</p>
+        <h4>What you can get out of it</h4>
+        <ul>
+          <li>Filter by position and see how roles overlap (e.g. some full-backs live among midfielders).</li>
+          <li>Hover any dot to identify outliers — extreme seasons sit far from every group.</li>
+          <li>Use the cluster cards below to see who defines each style.</li>
+        </ul>
+      </details>
+
       <!-- Filters -->
       <div class="filter-row" id="scatter-filters">
         <span class="text-sm text-muted" style="margin-right:.25rem">Position:</span>
@@ -137,6 +165,20 @@
           <p class="section-desc">Content-based recommendations using standardized 11-PC Euclidean distance within same position group</p>
         </div>
       </div>
+
+      <details class="explainer">
+        <summary>How does the similarity search work and when would I use it?</summary>
+        <h4>How it works</h4>
+        <p>Type a player's name and the system finds the statistically closest profiles: it measures the distance between players across all 11 summary axes (not just the 2 shown on the map) and only compares players of the <strong>same position group</strong> — so a goalkeeper is never "similar" to a striker by accident. Similarity of 1.0 would be an identical statistical profile.</p>
+        <h4>What it's for</h4>
+        <p>This is the classic scouting question: <em>"our midfielder is leaving — who plays like him?"</em>. Clubs use this to build shortlists of replacements or cheaper alternatives with the same playing profile.</p>
+        <h4>What you can get out of it</h4>
+        <ul>
+          <li>Search a star (e.g. Modrić) and get real, same-role alternatives ranked by closeness.</li>
+          <li>Check whether a player's profile changed across seasons — his own other seasons should rank high.</li>
+          <li>Numbers to trust: the model retrieves the same player's other seasons with position purity of 99.8%.</li>
+        </ul>
+      </details>
 
       <div class="card">
         <div class="card-title"><span class="dot" style="background:#10b981"></span>Find Similar Players</div>
@@ -178,6 +220,19 @@
           <p class="section-desc">k-NN graph (k=8, similarity ≥ 0.15) — PageRank measures profile typicality within the player catalog</p>
         </div>
       </div>
+
+      <details class="explainer">
+        <summary>What is a similarity graph and what does "centrality" tell me?</summary>
+        <h4>How it works</h4>
+        <p>Every player-season is connected to his 8 most similar peers, forming a network of 3,670 players and ~18,000 connections. We then run the same math Google uses to rank web pages (<strong>PageRank</strong>) on this network.</p>
+        <h4>What it's for — read the columns like this</h4>
+        <ul>
+          <li><strong>PageRank / Degree</strong> = how <em>typical</em> a profile is. High scores are players who resemble many others — the "template" of a common role. It does NOT mean "best player".</li>
+          <li><strong>Betweenness</strong> = <em>bridge</em> profiles that connect different styles — versatile, hybrid players (e.g. an attacking midfielder linking MID and FW styles).</li>
+        </ul>
+        <h4>What you can get out of it</h4>
+        <p>If you need a plug-and-play role player, target high-PageRank profiles (many market substitutes exist). If you need someone who can cover two roles, look at high betweenness. Unique stars sit at the edge of the network — few substitutes, higher price.</p>
+      </details>
 
       <!-- Graph stats -->
       <div class="grid-3" style="margin-bottom:1.25rem" id="graph-stats-cards">
@@ -225,6 +280,20 @@
         </div>
       </div>
 
+      <details class="explainer">
+        <summary>How is this eleven chosen? Why these players?</summary>
+        <h4>How it works</h4>
+        <p>Each player gets a rating built from his real season output — scoring, creation and defensive work, weighted by role (a striker is judged mostly on scoring, a defender on defending). Ratings are then <strong>adjusted by league strength</strong> using the official UEFA country coefficients of that season, so 50 goals in a weaker league don't outrank 39 in the Premier League. A mathematical solver (Integer Linear Programming) then picks the 11 players that maximise total rating while respecting the formation: exactly 1 GK, 4 DEF, 3 MID, 3 FW.</p>
+        <h4>What it's for</h4>
+        <p>It turns descriptive stats into a <strong>decision</strong>: given every real player with 900+ minutes in 2021-22, this is the provably best combination under the chosen rating — not an opinion, a solved optimisation.</p>
+        <h4>What you can get out of it</h4>
+        <ul>
+          <li>A defensible "team of the season" — and the exact rating that justifies each pick.</li>
+          <li>Surprising names next to stars: the solver has no reputation bias, only output per 90 minutes.</li>
+          <li>The same engine can answer squad questions under other formations (4-4-2, 3-5-2, 4-2-3-1) in the Streamlit app.</li>
+        </ul>
+      </details>
+
       <div class="grid-2" style="gap:1.25rem;align-items:start">
         <div class="card">
           <div class="card-title"><span class="dot" style="background:#10b981"></span>Pitch View</div>
@@ -258,6 +327,20 @@
           <p class="section-desc">Real StatsBomb passing connections weighted by pass count · Liverpool vs Tottenham Hotspur</p>
         </div>
       </div>
+
+      <details class="explainer">
+        <summary>What am I looking at? How do I read a passing network?</summary>
+        <h4>How it works</h4>
+        <p>This is the <strong>2019 Champions League final</strong> rebuilt from real event data: every completed pass between two teammates becomes a connection, and thicker lines mean more passes. Node size grows with how involved a player was in the passing game.</p>
+        <h4>What it's for — three different "important player" measures</h4>
+        <ul>
+          <li><strong>Weighted degree</strong> — the volume distributor: who touched and moved the ball most (Robertson for Liverpool).</li>
+          <li><strong>Betweenness</strong> — the bridge: the player play flows <em>through</em> when moving from defence to attack (Alexander-Arnold). Mark him out of the game and the team's circulation breaks.</li>
+          <li><strong>xG (expected goals)</strong> — real chance quality per shot taken, from StatsBomb's model: who generated genuine scoring danger, regardless of whether the ball went in.</li>
+        </ul>
+        <h4>What you can get out of it</h4>
+        <p>Post-match analysis and opponent preparation: identify the true organiser (not always the most famous name), and quantify attacking threat beyond the scoreline.</p>
+      </details>
 
       <div class="filter-row">
         <span class="text-sm text-muted" style="margin-right:.25rem">Team:</span>
