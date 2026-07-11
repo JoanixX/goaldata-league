@@ -13,3 +13,4 @@ networkx>=3.0
 scipy>=1.11
 soccerdata>=1.9  # real multi-season FBref ingestion (P1-2)
 pulp>=2.7        # ILP starting-XI optimisation (P2-3)
+streamlit>=1.30
