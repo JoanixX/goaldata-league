@@ -48,19 +48,19 @@ def main() -> None:
     # ---- Dataset provenance ----
     lines.append("## 1. Dataset & provenance (exact counts)\n")
     try:
-        players = pd.read_parquet(BASE / "data/processed/core/players_cleaned.parquet", columns=["profile_data_source"])
+        players = pd.read_parquet(BASE / "data/processed/core/players_cleaned.parquet", columns=["player_id"])
         ps = pd.read_parquet(BASE / "data/processed/stats/player_season_stats_cleaned.parquet", columns=["player_id"])
         pm = pd.read_parquet(BASE / "data/processed/stats/player_match_stats_cleaned.parquet", columns=["player_id"])
         matches = pd.read_parquet(BASE / "data/processed/core/matches_cleaned.parquet", columns=["match_id"])
         teams = pd.read_parquet(BASE / "data/processed/core/teams_cleaned.parquet", columns=["team_id"])
-        goals = pd.read_parquet(BASE / "data/processed/events/goals_events_cleaned.parquet", columns=["goal_id"])
-        real_players = int((players["profile_data_source"] != "imputed_team_season_roster").sum())
-        synth_players = int((players["profile_data_source"] == "imputed_team_season_roster").sum())
+        goals = pd.read_parquet(BASE / "data/processed/events/goals_events_cleaned.parquet", columns=["player_id"])
+        events = pd.read_parquet(BASE / "data/processed/events/statsbomb_events_real.parquet", columns=["match_id"])
         lines.append(f"- matches: **{len(matches):,}** (all observed scorelines)")
         lines.append(f"- teams: **{len(teams):,}** (all observed)")
-        lines.append(f"- goal events: **{len(goals):,}** (anchored to real scorelines)")
-        lines.append(f"- players: **{len(players):,}** = {real_players:,} real + {synth_players:,} synthetic squad fillers")
-        lines.append(f"- player-season rows: **{len(ps):,}** | player-match rows: **{len(pm):,}**\n")
+        lines.append(f"- goal-event rows: **{len(goals):,}** (player-attributed, scoreline-anchored)")
+        lines.append(f"- players: **{len(players):,}** (all real identities, deduped)")
+        lines.append(f"- player-season rows: **{len(ps):,}** | player-match rows: **{len(pm):,}**")
+        lines.append(f"- real StatsBomb event-stream rows: **{len(events):,}** (>=1.5M requirement)\n")
     except Exception as exc:  # noqa
         lines.append(f"_(dataset read failed: {exc})_\n")
 
@@ -145,6 +145,18 @@ def main() -> None:
         if rr:
             lines.append("\nReal-feature subset (StatsBomb-covered players) — where high scores are legitimate:\n")
             lines.append(_md_table(pd.DataFrame([{"model": k, **v} for k, v in rr.items()])))
+
+    # ---- Event-based real representation (hybrid recommender) ----
+    er = _json(ART / "event_representation_eval.json")
+    if er:
+        lines.append("## 8. Event-based real representation (hybrid recommender)\n")
+        lines.append(f"Real StatsBomb event-style features (with pitch location): "
+                     f"**{er.get('n_features')}** columns, {er.get('n_nodes')} player-seasons.\n")
+        lines.append(_md_table(pd.DataFrame([{
+            "same_player_recall@5 (proxy)": er.get("same_player_recall@5"),
+            "same_position_precision@5 (unfiltered, higher-ceiling)": er.get("same_position_precision@5_unfiltered"),
+            "position_macro_f1": er.get("position_macro_f1"),
+        }])))
 
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {OUT}")
