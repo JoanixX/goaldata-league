@@ -13,6 +13,7 @@ ANALISIS_GOALDATA_2026-06-27.md
 CAMBIOS_2026-06-27.md
 IMPLEMENTATION_PLAN_2026-06-27.md
 ai-docs/
+review_week_10.md
 src.zip
 
 # ===========================================================================
@@ -68,3 +69,11 @@ scratch/*
 uefa_match_events.csv
 match_links.json
 matches_test.csv
+
+# ===========================================================================
+# Reports
+# ===========================================================================
+goaldata-league.tex
+main.tex
+reports/*.tex
+reports/arquitectura_feature_engineering_pca.md
