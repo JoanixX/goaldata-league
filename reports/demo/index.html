@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoalData League — Football Scouting Dashboard</title>
+  <meta name="description" content="Interactive football analytics dashboard: PCA clustering, player similarity recommendations, graph centrality analysis, and ILP starting-XI optimization." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js"></script>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ============================================================ NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="#" id="brand-link">
+      <div class="nav-logo">GL</div>
+      <div class="nav-title">Goal<span>Data</span> League</div>
+    </a>
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab active" role="tab" data-section="overview"    id="tab-overview">Overview</button>
+      <button class="nav-tab"        role="tab" data-section="clusters"    id="tab-clusters">Clustering</button>
+      <button class="nav-tab"        role="tab" data-section="scout"       id="tab-scout">Scout</button>
+      <button class="nav-tab"        role="tab" data-section="graph"       id="tab-graph">Graph</button>
+      <button class="nav-tab"        role="tab" data-section="lineup"      id="tab-lineup">Lineup</button>
+      <button class="nav-tab"        role="tab" data-section="passing"     id="tab-passing">Passing</button>
+    </div>
+    <div class="nav-badge">Week 15 · Final</div>
+  </nav>
+
+  <!-- ============================================================ HERO -->
+  <header class="hero" id="hero-section">
+    <div class="hero-eyebrow">⚽ GoalData League · Football Analytics Pipeline</div>
+    <h1>Data-Driven <span class="hl">Football Scouting</span><br>from Raw Events to Optimal XI</h1>
+    <p class="hero-sub">
+      1,751,751 real StatsBomb events · 94,525 matches · PCA · Clustering · 
+      Content-based Recommendations · Graph Centrality · ILP Optimizer
+    </p>
+    <div class="kpi-bar" id="kpi-bar">
+      <div class="kpi"><div class="kpi-value" id="kpi-matches">94,525</div><div class="kpi-label">Real Matches</div></div>
+      <div class="kpi"><div class="kpi-value" id="kpi-events">1.75M</div><div class="kpi-label">StatsBomb Events</div></div>
+      <div class="kpi"><div class="kpi-value" id="kpi-players">3,670</div><div class="kpi-label">Player Seasons</div></div>
+      <div class="kpi"><div class="kpi-value" id="kpi-pca">90.2%</div><div class="kpi-label">PCA Variance (11 PCs)</div></div>
+      <div class="kpi"><div class="kpi-value" id="kpi-mrr">0.179</div><div class="kpi-label">Recommender MRR</div></div>
+      <div class="kpi"><div class="kpi-value" id="kpi-nodes">–</div><div class="kpi-label">Graph Nodes</div></div>
+    </div>
+  </header>
+
+  <!-- ============================================================ MAIN CONTENT -->
+  <main class="main" role="main">
+
+    <!-- ====================================================== OVERVIEW -->
+    <section class="section active" id="section-overview" role="tabpanel" aria-labelledby="tab-overview">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(59,130,246,.15)">📊</div>
+        <div>
+          <h2 class="section-title">Pipeline Overview</h2>
+          <p class="section-desc">End-to-end system metrics and model performance comparison</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="gap:1.25rem;margin-bottom:1.25rem">
+        <!-- PCA variance chart -->
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#06b6d4"></span>PCA Explained Variance</div>
+          <canvas id="varianceChart" height="200" aria-label="PCA cumulative variance chart"></canvas>
+          <p class="text-sm text-muted mt-1">11 components explain 90.2% of variance in player-season profiles.</p>
+        </div>
+
+        <!-- K-Means silhouette chart -->
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#8b5cf6"></span>K-Means Silhouette Sweep</div>
+          <canvas id="silhouetteChart" height="200" aria-label="K-Means silhouette sweep chart"></canvas>
+          <p class="text-sm text-muted mt-1">K=3 selected by peak silhouette score (0.454).</p>
+        </div>
+      </div>
+
+      <!-- Recommendation comparison -->
+      <div class="card" style="margin-bottom:1.25rem">
+        <div class="card-title"><span class="dot" style="background:#10b981"></span>Recommendation Model Comparison (Leave-One-Out Evaluation)</div>
+        <div class="metric-comparison" id="rec-comparison">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Pipeline flow -->
+      <div class="card">
+        <div class="card-title"><span class="dot" style="background:#f59e0b"></span>Pipeline Architecture</div>
+        <div id="pipeline-flow" style="display:flex;gap:0;align-items:stretch;flex-wrap:wrap;margin-top:0.5rem"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================== CLUSTERING -->
+    <section class="section" id="section-clusters" role="tabpanel" aria-labelledby="tab-clusters">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(139,92,246,.15)">🔬</div>
+        <div>
+          <h2 class="section-title">Tactical Clustering</h2>
+          <p class="section-desc">PCA 2D scatter with K-Means cluster labels — hover over a player to see their profile</p>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-row" id="scatter-filters">
+        <span class="text-sm text-muted" style="margin-right:.25rem">Position:</span>
+        <button class="filter-btn active" data-pos="All"         id="filter-all">All</button>
+        <button class="filter-btn"        data-pos="Goalkeeper"  id="filter-gk">Goalkeepers</button>
+        <button class="filter-btn"        data-pos="Defender"    id="filter-def">Defenders</button>
+        <button class="filter-btn"        data-pos="Midfielder"  id="filter-mid">Midfielders</button>
+        <button class="filter-btn"        data-pos="Forward"     id="filter-fw">Forwards</button>
+      </div>
+
+      <div class="card" style="position:relative;padding:1rem">
+        <canvas id="pcaCanvas" aria-label="PCA 2D scatter plot of player-seasons colored by cluster"></canvas>
+        <div class="scatter-tooltip" id="scatter-tooltip" aria-live="polite"></div>
+      </div>
+
+      <div class="scatter-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div> Cluster 0 — Attackers & Dynamic Midfielders</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> Cluster 1 — Defensive & GK Profiles</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div> Cluster 2 — Possession Mid & Central Defenders</div>
+      </div>
+
+      <!-- Cluster profile cards -->
+      <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem">Cluster Profiles</h3>
+      <div class="grid-3" id="cluster-cards">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ====================================================== SCOUT -->
+    <section class="section" id="section-scout" role="tabpanel" aria-labelledby="tab-scout">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(16,185,129,.15)">🔍</div>
+        <div>
+          <h2 class="section-title">Player Scout — Similarity Search</h2>
+          <p class="section-desc">Content-based recommendations using standardized 11-PC Euclidean distance within same position group</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="dot" style="background:#10b981"></span>Find Similar Players</div>
+
+        <div class="search-box" style="position:relative">
+          <span class="search-icon" aria-hidden="true">🔎</span>
+          <input
+            type="search"
+            class="search-input"
+            id="player-search"
+            placeholder="Search player name (e.g. Luka Modrić, Mohamed Salah…)"
+            autocomplete="off"
+            aria-label="Search for a player"
+            aria-controls="autocomplete-list"
+            aria-autocomplete="list"
+          />
+          <div class="autocomplete-list" id="autocomplete-list" role="listbox" aria-label="Player suggestions"></div>
+        </div>
+
+        <div class="similarity-results" id="similarity-results">
+          <div class="query-player-card" id="query-player-card"></div>
+          <h4 style="font-size:0.85rem;font-weight:600;color:var(--text-secondary);margin-bottom:0.75rem">Top 5 Most Similar Players</h4>
+          <div id="similar-list"></div>
+        </div>
+
+        <div class="empty-state" id="scout-empty">
+          <div class="icon">⚽</div>
+          <p>Search for any player above to see their most similar comparables</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== GRAPH -->
+    <section class="section" id="section-graph" role="tabpanel" aria-labelledby="tab-graph">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(249,115,22,.15)">🕸️</div>
+        <div>
+          <h2 class="section-title">Player Similarity Graph</h2>
+          <p class="section-desc">k-NN graph (k=8, similarity ≥ 0.15) — PageRank measures profile typicality within the player catalog</p>
+        </div>
+      </div>
+
+      <!-- Graph stats -->
+      <div class="grid-3" style="margin-bottom:1.25rem" id="graph-stats-cards">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Centrality table -->
+      <div class="card">
+        <div class="card-title" style="justify-content:space-between">
+          <span><span class="dot" style="background:#f97316;display:inline-block;margin-right:.4rem;border-radius:50%;width:7px;height:7px"></span>Top Players by Graph Centrality</span>
+          <select id="centrality-sort" style="background:var(--bg-tertiary);border:1px solid var(--border);color:var(--text-primary);padding:.25rem .6rem;border-radius:6px;font-size:.8rem;cursor:pointer">
+            <option value="pagerank">PageRank</option>
+            <option value="betweenness">Betweenness</option>
+            <option value="degree">Degree</option>
+            <option value="eigenvector">Eigenvector</option>
+          </select>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="centrality-table" id="centrality-table" aria-label="Player centrality metrics">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Degree</th>
+                <th>PageRank</th>
+                <th>Betweenness</th>
+                <th>Eigenvector</th>
+                <th>Centrality</th>
+              </tr>
+            </thead>
+            <tbody id="centrality-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== LINEUP -->
+    <section class="section" id="section-lineup" role="tabpanel" aria-labelledby="tab-lineup">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(16,185,129,.15)">🏆</div>
+        <div>
+          <h2 class="section-title">ILP Optimal Starting XI</h2>
+          <p class="section-desc">Integer Linear Programming lineup — Season 2021-2022 · Formation 4-3-3 · Maximize composite rating</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="gap:1.25rem;align-items:start">
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#10b981"></span>Pitch View</div>
+          <div class="pitch" id="pitch-view" aria-label="Football pitch with optimal 11 player positions">
+            <div class="loading"><div class="spinner"></div> Loading lineup…</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#f59e0b"></span>Player Ratings</div>
+          <div id="lineup-table-container">
+            <div class="loading"><div class="spinner"></div></div>
+          </div>
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)">
+            <p class="text-sm text-muted">
+              <strong style="color:var(--text-primary)">Objective:</strong> Maximize Σ rating × x where x ∈ {0,1}.<br>
+              <strong style="color:var(--text-primary)">Rating:</strong> Composite of goals, assists, shots_on_target/90, pass_accuracy, minutes_played.<br>
+              <strong style="color:var(--text-primary)">Solver:</strong> PuLP + CBC (open-source ILP).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== PASSING NETWORK -->
+    <section class="section" id="section-passing" role="tabpanel" aria-labelledby="tab-passing">
+      <div class="section-header">
+        <div class="section-icon" style="background:rgba(6,182,212,.15)">🔗</div>
+        <div>
+          <h2 class="section-title">Passing Networks — UCL Match 22912</h2>
+          <p class="section-desc">Real StatsBomb passing connections weighted by pass count · Liverpool vs Tottenham Hotspur</p>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <span class="text-sm text-muted" style="margin-right:.25rem">Team:</span>
+        <button class="filter-btn active" data-team="liverpool" id="team-btn-liverpool">🔴 Liverpool</button>
+        <button class="filter-btn" data-team="tottenham" id="team-btn-tottenham">⚪ Tottenham</button>
+      </div>
+
+      <div class="grid-2" style="gap:1.25rem;align-items:start">
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#06b6d4"></span>Passing Network</div>
+          <canvas id="passingCanvas" aria-label="Passing network graph"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-title"><span class="dot" style="background:#06b6d4"></span>Player Centrality</div>
+          <div id="passing-stats"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ============================================================ SCRIPTS -->
+<script>
+'use strict';
+
+/* ------------------------------------------------------------------ DATA */
+const D = window.DEMO_DATA || {};
+const meta = D.meta || {};
+const clusters      = D.clusters      || [];
+const centralities  = D.centralities  || [];
+const optimalXI     = D.optimal_xi    || [];
+const passingLiv    = D.passing_liverpool   || [];
+const passingTot    = D.passing_tottenham   || [];
+const similarity    = D.similarity_index    || [];
+const recEval       = D.recommendation_eval || [];
+const clusterProfs  = D.cluster_profiles    || [];
+const pcaVariance   = D.pca_variance        || [];
+const kmeansSweep   = D.kmeans_sweep        || [];
+const graphStats    = D.graph_statistics    || {};
+
+/* ------------------------------------------------------------------ COLORS */
+const POS_COLORS = {
+  Goalkeeper: '#10b981',
+  Defender:   '#3b82f6',
+  Midfielder: '#8b5cf6',
+  Forward:    '#f97316',
+  GK:  '#10b981', DEF: '#3b82f6', MID: '#8b5cf6', FW: '#f97316'
+};
+const CLUSTER_COLORS = ['#f97316', '#3b82f6', '#8b5cf6', '#10b981', '#f59e0b'];
+
+/* ------------------------------------------------------------------ UTILS */
+const $ = id => document.getElementById(id);
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+function shortName(name) {
+  if (!name) return '?';
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0].slice(0, 3).toUpperCase();
+  return parts[parts.length - 1].slice(0, 5).toUpperCase();
+}
+
+function posClass(pos) {
+  pos = pos || '';
+  return 'pos-' + pos.replace(/\s+/g, '');
+}
+
+function fmt(v, d = 4) {
+  if (v === null || v === undefined || isNaN(v)) return '–';
+  return (+v).toFixed(d);
+}
+
+/* ------------------------------------------------------------------ KPI */
+function initKPIs() {
+  $('kpi-nodes').textContent = meta.graph_nodes ? meta.graph_nodes.toLocaleString() : (graphStats.num_nodes || '–');
+  $('kpi-pca').textContent   = meta.pca_variance_2d ? (meta.pca_variance_2d * 100).toFixed(1) + '% / 2PC' : '90.2%';
+}
+
+/* ------------------------------------------------------------------ TABS */
+function initTabs() {
+  const tabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      const sec = t.dataset.section;
+      tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected', 'false'); });
+      sections.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
+      $('section-' + sec).classList.add('active');
+      if (sec === 'clusters') { setTimeout(drawScatter, 50); }
+      if (sec === 'graph') { sortAndRenderCentrality(); }
+      if (sec === 'passing') { drawPassingNetwork(currentTeam); }
+    });
+  });
+}
+
+/* ------------------------------------------------------------------ OVERVIEW — Variance chart */
+function drawVarianceChart() {
+  const canvas = $('varianceChart');
+  if (!canvas || !pcaVariance.length) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.offsetWidth || 400;
+  const H = canvas.height;
+  canvas.width = W;
+
+  const cumKey = pcaVariance[0] && 'cumulative_variance' in pcaVariance[0] ? 'cumulative_variance' : Object.keys(pcaVariance[0]).find(k => k.includes('cum'));
+  const indKey = Object.keys(pcaVariance[0]).find(k => k.includes('explained') && !k.includes('cum'));
+  const data = pcaVariance.map(r => +r[cumKey] || 0);
+
+  const pad = {top: 20, right: 20, bottom: 36, left: 42};
+  const cw = W - pad.left - pad.right;
+  const ch = H - pad.top - pad.bottom;
+  const n = data.length;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid lines
+  for (let i = 0; i <= 4; i++) {
+    const y = pad.top + ch * (1 - i / 4);
+    ctx.beginPath(); ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 1;
+    ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + cw, y); ctx.stroke();
+    ctx.fillStyle = 'rgba(148,163,184,0.6)'; ctx.font = '10px Inter';
+    ctx.textAlign = 'right';
+    ctx.fillText((i * 25) + '%', pad.left - 5, y + 3);
+  }
+
+  // 90% line
+  const y90 = pad.top + ch * (1 - 0.9);
+  ctx.beginPath(); ctx.setLineDash([4, 4]); ctx.strokeStyle = 'rgba(16,185,129,0.4)';
+  ctx.moveTo(pad.left, y90); ctx.lineTo(pad.left + cw, y90); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = 'rgba(16,185,129,0.7)'; ctx.font = '10px Inter'; ctx.textAlign = 'left';
+  ctx.fillText('90%', pad.left + 4, y90 - 3);
+
+  // Area fill
+  const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + ch);
+  grad.addColorStop(0, 'rgba(59,130,246,0.3)');
+  grad.addColorStop(1, 'rgba(59,130,246,0.02)');
+  ctx.beginPath();
+  ctx.moveTo(pad.left, pad.top + ch);
+  data.forEach((v, i) => {
+    const x = pad.left + (i / (n - 1)) * cw;
+    const y = pad.top + ch * (1 - v);
+    i === 0 ? ctx.lineTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.lineTo(pad.left + cw, pad.top + ch);
+  ctx.closePath();
+  ctx.fillStyle = grad; ctx.fill();
+
+  // Line
+  ctx.beginPath(); ctx.strokeStyle = '#3b82f6'; ctx.lineWidth = 2.5;
+  data.forEach((v, i) => {
+    const x = pad.left + (i / (n - 1)) * cw;
+    const y = pad.top + ch * (1 - v);
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Dots + X labels
+  data.forEach((v, i) => {
+    const x = pad.left + (i / (n - 1)) * cw;
+    const y = pad.top + ch * (1 - v);
+    ctx.beginPath(); ctx.fillStyle = '#3b82f6'; ctx.arc(x, y, 3.5, 0, Math.PI * 2); ctx.fill();
+    if (i < n) {
+      ctx.fillStyle = 'rgba(148,163,184,0.6)'; ctx.font = '10px Inter'; ctx.textAlign = 'center';
+      ctx.fillText('PC' + (i + 1), x, pad.top + ch + 16);
+    }
+  });
+}
+
+/* ------------------------------------------------------------------ OVERVIEW — Silhouette chart */
+function drawSilhouetteChart() {
+  const canvas = $('silhouetteChart');
+  if (!canvas || !kmeansSweep.length) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.offsetWidth || 400;
+  const H = canvas.height;
+  canvas.width = W;
+
+  const data = kmeansSweep.filter(r => r.algorithm === 'kmeans' || !r.algorithm);
+  const kVals = data.map(r => r.k || r.K || r.cluster_count);
+  const silVals = data.map(r => +(r.silhouette || r.silhouette_score || 0));
+  const maxSil = Math.max(...silVals);
+
+  const pad = {top: 20, right: 20, bottom: 36, left: 48};
+  const cw = W - pad.left - pad.right;
+  const ch = H - pad.top - pad.bottom;
+  const n = data.length;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  for (let i = 0; i <= 4; i++) {
+    const y = pad.top + ch * (1 - i / 4);
+    ctx.beginPath(); ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 1;
+    ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + cw, y); ctx.stroke();
+    ctx.fillStyle = 'rgba(148,163,184,0.6)'; ctx.font = '10px Inter'; ctx.textAlign = 'right';
+    ctx.fillText((i * 25 / 100).toFixed(2), pad.left - 5, y + 3);
+  }
+
+  // Bars
+  const bw = (cw / n) * 0.65;
+  data.forEach((row, i) => {
+    const v = silVals[i];
+    const x = pad.left + (i + 0.5) * (cw / n) - bw / 2;
+    const bh = (v / (maxSil * 1.1)) * ch;
+    const y = pad.top + ch - bh;
+    const isSelected = (kVals[i] === 3);
+    const g = ctx.createLinearGradient(0, y, 0, y + bh);
+    g.addColorStop(0, isSelected ? '#8b5cf6' : '#3b82f6');
+    g.addColorStop(1, isSelected ? 'rgba(139,92,246,0.3)' : 'rgba(59,130,246,0.3)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.roundRect(x, y, bw, bh, [4, 4, 0, 0]);
+    ctx.fill();
+    if (isSelected) {
+      ctx.fillStyle = '#8b5cf6'; ctx.font = 'bold 10px Inter'; ctx.textAlign = 'center';
+      ctx.fillText('★', x + bw / 2, y - 5);
+    }
+    ctx.fillStyle = 'rgba(148,163,184,0.6)'; ctx.font = '10px Inter'; ctx.textAlign = 'center';
+    ctx.fillText('K=' + kVals[i], x + bw / 2, pad.top + ch + 16);
+    ctx.fillStyle = 'rgba(240,246,255,0.8)'; ctx.font = 'bold 9px Inter';
+    ctx.fillText(v.toFixed(3), x + bw / 2, y - (isSelected ? 18 : 5));
+  });
+}
+
+/* ------------------------------------------------------------------ OVERVIEW — Rec comparison */
+function renderRecComparison() {
+  const el = $('rec-comparison');
+  if (!el || !recEval.length) { el && (el.innerHTML = '<p class="text-muted text-sm">No data</p>'); return; }
+
+  const metrics = [
+    {key:'MRR',         label:'MRR',          max:0.25},
+    {key:'recall@5',    label:'Recall@5',      max:0.15},
+    {key:'recall@10',   label:'Recall@10',     max:0.20},
+    {key:'ndcg@10',     label:'NDCG@10',       max:0.18},
+    {key:'pos_purity@5',label:'PosPurity@5',   max:1.0},
+  ];
+  const colors = ['rgba(148,163,184,0.7)', '#3b82f6'];
+
+  el.innerHTML = metrics.map(m => {
+    const bars = recEval.map((r, ri) => {
+      const v = r[m.key] ?? r[m.key.replace('@','_at_')] ?? 0;
+      const pct = clamp((v / m.max) * 100, 0, 100);
+      return `<div class="metric-bar-row">
+        <span class="model-label">${ri === 0 ? 'Baseline' : 'Stronger'}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${colors[ri]}"></div></div>
+        <span class="bar-value" style="color:${colors[ri]}">${v.toFixed(4)}</span>
+      </div>`;
+    }).join('');
+    return `<div class="metric-row">
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-bars">${bars}</div>
+    </div>`;
+  }).join('');
+}
+
+/* ------------------------------------------------------------------ OVERVIEW — Pipeline flow */
+function renderPipelineFlow() {
+  const el = $('pipeline-flow');
+  if (!el) return;
+  const steps = [
+    {icon:'📥', label:'Ingest', sub:'StatsBomb\nFBref\nUEFA'},
+    {icon:'🔗', label:'Resolve', sub:'Entity\ndedup\nProvenance'},
+    {icon:'🧮', label:'Feature\nMatrix', sub:'29 features\nlog1p + scale'},
+    {icon:'📉', label:'PCA', sub:'11 components\n90.2% variance'},
+    {icon:'🔬', label:'Cluster', sub:'K-Means k=3\nDBSCAN'},
+    {icon:'🔍', label:'Scout', sub:'11-PC\nsimilarity'},
+    {icon:'🕸️', label:'Graph', sub:'k-NN\nCentrality'},
+    {icon:'🏆', label:'ILP XI', sub:'PuLP/CBC\n4-3-3'},
+  ];
+  el.innerHTML = steps.map((s, i) => `
+    <div style="display:flex;align-items:center;gap:0">
+      <div style="text-align:center;padding:.75rem .5rem;min-width:80px">
+        <div style="font-size:1.4rem;line-height:1">${s.icon}</div>
+        <div style="font-size:.75rem;font-weight:700;color:var(--text-primary);margin:.3rem 0 .1rem;white-space:pre-line">${s.label}</div>
+        <div style="font-size:.65rem;color:var(--text-muted);white-space:pre-line;line-height:1.4">${s.sub}</div>
+      </div>
+      ${i < steps.length - 1 ? '<div style="color:var(--text-muted);font-size:.8rem;flex-shrink:0">›</div>' : ''}
+    </div>
+  `).join('');
+}
+
+/* ------------------------------------------------------------------ SCATTER */
+let scatterFilter = 'All';
+let scatterDots = [];
+
+function drawScatter() {
+  const canvas = $('pcaCanvas');
+  if (!canvas || !clusters.length) return;
+  const ctx = canvas.getContext('2d');
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const W = rect.width - 32;
+  const H = 420;
+  canvas.width = W;
+  canvas.height = H;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+
+  const filtered = scatterFilter === 'All' ? clusters : clusters.filter(d => d.position_group === scatterFilter);
+  const allX = filtered.map(d => d.PC1);
+  const allY = filtered.map(d => d.PC2);
+  if (!allX.length) return;
+
+  const pad = 48;
+  const minX = Math.min(...allX), maxX = Math.max(...allX);
+  const minY = Math.min(...allY), maxY = Math.max(...allY);
+  const scaleX = v => pad + ((v - minX) / (maxX - minX || 1)) * (W - pad * 2);
+  const scaleY = v => H - pad - ((v - minY) / (maxY - minY || 1)) * (H - pad * 2);
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  for (let i = 0; i <= 4; i++) {
+    const x = pad + (i / 4) * (W - pad * 2);
+    const y = pad + (i / 4) * (H - pad * 2);
+    ctx.beginPath(); ctx.strokeStyle = 'rgba(255,255,255,0.04)'; ctx.lineWidth = 1;
+    ctx.moveTo(x, pad); ctx.lineTo(x, H - pad); ctx.stroke();
+    ctx.moveTo(pad, y); ctx.lineTo(W - pad, y); ctx.stroke();
+  }
+  // Axes
+  ctx.beginPath(); ctx.strokeStyle = 'rgba(255,255,255,0.1)'; ctx.lineWidth = 1.5;
+  ctx.moveTo(pad, H / 2); ctx.lineTo(W - pad, H / 2); ctx.stroke();
+  ctx.moveTo(W / 2, pad); ctx.lineTo(W / 2, H - pad); ctx.stroke();
+
+  // Axis labels
+  ctx.fillStyle = 'rgba(148,163,184,0.6)'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+  ctx.fillText('PC1 → Attacking Volume', W / 2, H - 8);
+  ctx.save(); ctx.translate(12, H / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText('PC2 → Defensive/Possession', 0, 0); ctx.restore();
+
+  // Points
+  scatterDots = [];
+  filtered.forEach(d => {
+    const cluster = d.kmeans_cluster ?? 0;
+    const color = CLUSTER_COLORS[cluster] || '#64748b';
+    const x = scaleX(d.PC1);
+    const y = scaleY(d.PC2);
+    scatterDots.push({ x, y, d });
+
+    ctx.beginPath();
+    ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+    ctx.fillStyle = color + 'bb';
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+    ctx.strokeStyle = color + '55';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  });
+}
+
+function initScatterInteraction() {
+  const canvas = $('pcaCanvas');
+  const tooltip = $('scatter-tooltip');
+  if (!canvas || !tooltip) return;
+
+  canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    let closest = null, minD = 12;
+
+    scatterDots.forEach(dot => {
+      const dist = Math.hypot(dot.x - mx, dot.y - my);
+      if (dist < minD) { minD = dist; closest = dot; }
+    });
+
+    if (closest) {
+      const d = closest.d;
+      const pos = d.position_group || '—';
+      tooltip.innerHTML = `
+        <strong style="color:var(--text-primary)">${d.player_name}</strong><br>
+        <span class="pill ${posClass(pos)}" style="font-size:.68rem;padding:.1rem .5rem">${pos}</span>
+        <span style="color:var(--text-muted);font-size:.72rem;margin-left:.3rem">${d.season || ''}</span><br>
+        <span style="color:var(--text-muted);font-size:.72rem">PC1: ${fmt(d.PC1, 2)} · PC2: ${fmt(d.PC2, 2)}</span><br>
+        <span style="color:${CLUSTER_COLORS[d.kmeans_cluster]}; font-size:.72rem">Cluster ${d.kmeans_cluster}</span>
+      `;
+      const tooltipX = clamp(e.clientX - rect.left + 12, 0, canvas.width - 210);
+      const tooltipY = clamp(e.clientY - rect.top - 10, 0, canvas.height - 100);
+      tooltip.style.left = tooltipX + 'px';
+      tooltip.style.top  = tooltipY + 'px';
+      tooltip.classList.add('visible');
+    } else {
+      tooltip.classList.remove('visible');
+    }
+  });
+
+  canvas.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+
+  // Filter buttons
+  document.querySelectorAll('[data-pos]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-pos]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      scatterFilter = btn.dataset.pos;
+      drawScatter();
+    });
+  });
+}
+
+/* ------------------------------------------------------------------ CLUSTER CARDS */
+const CLUSTER_LABELS = [
+  'High-Volume Attackers & Dynamic Midfielders',
+  'Defensive & Goalkeeper Profiles',
+  'Possession Mid & Central Defenders'
+];
+const CLUSTER_BG = [
+  'rgba(249,115,22,0.08)',
+  'rgba(59,130,246,0.08)',
+  'rgba(139,92,246,0.08)'
+];
+
+function renderClusterCards() {
+  const el = $('cluster-cards');
+  if (!el) return;
+  if (!clusterProfs.length) {
+    el.innerHTML = '<p class="text-muted text-sm">Cluster profile data not available.</p>';
+    return;
+  }
+  el.innerHTML = clusterProfs.filter(r => r.cluster !== undefined && r.cluster !== null && r.cluster >= 0).map(r => {
+    const ci = +r.cluster;
+    const ex = (r.example_players || '').split(';').slice(0, 5).map(s => s.trim());
+    return `
+      <div class="cluster-card" style="background:${CLUSTER_BG[ci] || 'var(--bg-card)'}">
+        <div class="cluster-badge" style="background:${CLUSTER_COLORS[ci]}22;color:${CLUSTER_COLORS[ci]}">Cluster ${ci}</div>
+        <div class="cluster-size" style="color:${CLUSTER_COLORS[ci]}">${(+r.size).toLocaleString()}</div>
+        <div class="cluster-label">${CLUSTER_LABELS[ci] || 'Tactical Profile ' + ci}</div>
+        <div style="font-size:.78rem;color:var(--text-secondary);margin-top:.35rem">
+          PC1 mean: <strong>${fmt(r.pc1_mean, 2)}</strong> · PC2 mean: <strong>${fmt(r.pc2_mean, 2)}</strong>
+        </div>
+        <div class="cluster-examples" style="margin-top:.6rem">
+          ${ex.map(p => `<span style="display:inline-block;margin:.15rem .25rem .15rem 0;background:var(--bg-glass);padding:.15rem .6rem;border-radius:4px;font-size:.72rem">${p}</span>`).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ------------------------------------------------------------------ SCOUT */
+function initScout() {
+  const input = $('player-search');
+  const list  = $('autocomplete-list');
+  if (!input || !list) return;
+
+  const players = [...new Map(similarity.map(s => [s.player, s])).values()];
+
+  function filterPlayers(q) {
+    q = q.toLowerCase();
+    return players.filter(p => p.player.toLowerCase().includes(q)).slice(0, 10);
+  }
+
+  function renderDropdown(q) {
+    if (!q || q.length < 2) { list.classList.remove('open'); return; }
+    const matches = filterPlayers(q);
+    if (!matches.length) { list.classList.remove('open'); return; }
+    list.innerHTML = matches.map(p => `
+      <div class="autocomplete-item" role="option" tabindex="0" data-player="${p.player}">
+        <span>${p.player}</span>
+        <span class="pos-tag ${posClass(p.position)}">${p.position}</span>
+      </div>
+    `).join('');
+    list.classList.add('open');
+    list.querySelectorAll('.autocomplete-item').forEach(item => {
+      item.addEventListener('click', () => selectPlayer(item.dataset.player));
+      item.addEventListener('keydown', e => e.key === 'Enter' && selectPlayer(item.dataset.player));
+    });
+  }
+
+  function selectPlayer(name) {
+    input.value = name;
+    list.classList.remove('open');
+    showSimilarPlayers(name);
+  }
+
+  input.addEventListener('input', () => renderDropdown(input.value));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Escape') list.classList.remove('open');
+    if (e.key === 'Enter') { const first = list.querySelector('.autocomplete-item'); if (first) selectPlayer(first.dataset.player); }
+  });
+  document.addEventListener('click', e => { if (!e.target.closest('.search-box')) list.classList.remove('open'); });
+}
+
+function showSimilarPlayers(name) {
+  const rec = similarity.find(s => s.player === name);
+  const empty = $('scout-empty');
+  const results = $('similarity-results');
+  const queryCard = $('query-player-card');
+  const simList = $('similar-list');
+
+  if (!rec) {
+    empty && (empty.style.display = '');
+    results && results.classList.remove('visible');
+    return;
+  }
+
+  empty && (empty.style.display = 'none');
+  results && results.classList.add('visible');
+
+  const initials = name.split(' ').map(w => w[0]).filter(Boolean).slice(0, 2).join('').toUpperCase();
+  queryCard.innerHTML = `
+    <div class="query-avatar" style="background:${POS_COLORS[rec.position] || 'var(--grad-blue)'}">${initials}</div>
+    <div>
+      <div style="font-weight:700;font-size:1rem">${name}</div>
+      <div style="margin-top:.25rem">
+        <span class="pill ${posClass(rec.position)}">${rec.position}</span>
+        <span class="text-sm text-muted" style="margin-left:.5rem">${rec.season}</span>
+      </div>
+    </div>
+  `;
+
+  const maxDist = Math.max(...rec.similar.map(s => s.distance), 0.001);
+  simList.innerHTML = rec.similar.map((s, i) => {
+    const simScore = 1 / (1 + s.distance);
+    const pct = clamp((1 - s.distance / maxDist) * 100, 5, 100);
+    return `
+      <div class="similar-player-row">
+        <div class="rank-badge" style="background:${CLUSTER_COLORS[i] || 'var(--bg-tertiary)'}22;color:${CLUSTER_COLORS[i] || 'var(--text-secondary)'}">${i + 1}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:600;font-size:.88rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</div>
+          <div class="text-sm text-muted">${s.position}</div>
+        </div>
+        <div style="text-align:right;margin-right:.5rem">
+          <div style="font-size:.8rem;font-weight:700;color:var(--accent-cyan)">${(simScore * 100).toFixed(1)}%</div>
+          <div style="font-size:.7rem;color:var(--text-muted)">similarity</div>
+        </div>
+        <div class="similarity-bar" style="min-width:80px">
+          <div class="similarity-fill" style="width:${pct}%"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ------------------------------------------------------------------ GRAPH */
+function sortAndRenderCentrality() {
+  const sort = $('centrality-sort')?.value || 'pagerank';
+  const sorted = [...centralities].sort((a, b) => (b[sort] || 0) - (a[sort] || 0));
+  const maxVals = {};
+  ['degree', 'pagerank', 'betweenness', 'eigenvector'].forEach(k => {
+    maxVals[k] = Math.max(...sorted.map(r => r[k] || 0), 0.0001);
+  });
+
+  const tbody = $('centrality-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = sorted.slice(0, 30).map((r, i) => {
+    const pr = r.pagerank || 0;
+    const prPct = clamp((pr / maxVals.pagerank) * 100, 0, 100);
+    const bPct = clamp(((r.betweenness || 0) / maxVals.betweenness) * 100, 0, 100);
+    const pos = r.position_group || '—';
+    return `
+      <tr>
+        <td style="color:var(--text-muted);font-size:.78rem">${i + 1}</td>
+        <td style="font-weight:600">${r.player_name}</td>
+        <td><span class="pill ${posClass(pos)}" style="font-size:.68rem;padding:.15rem .5rem">${pos}</span></td>
+        <td style="font-variant-numeric:tabular-nums">${r.degree || '–'}</td>
+        <td style="font-variant-numeric:tabular-nums">${pr.toFixed(5)}</td>
+        <td style="font-variant-numeric:tabular-nums">${(r.betweenness || 0).toFixed(5)}</td>
+        <td style="font-variant-numeric:tabular-nums">${(r.eigenvector || 0).toFixed(5)}</td>
+        <td class="bar-cell">
+          <div class="mini-bar">
+            <div class="mini-bar-fill" style="width:${prPct}%;background:${POS_COLORS[pos] || '#3b82f6'}"></div>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  // Stats cards
+  const statsEl = $('graph-stats-cards');
+  if (statsEl) {
+    const gs = graphStats;
+    statsEl.innerHTML = [
+      {label: 'Nodes',          value: (gs.num_nodes || '–').toLocaleString(), icon: '⬤', color: '#3b82f6'},
+      {label: 'Edges',          value: (gs.num_edges || '–').toLocaleString(), icon: '🔗', color: '#06b6d4'},
+      {label: 'Density',        value: gs.density ? gs.density.toFixed(5) : '–',   icon: '📊', color: '#8b5cf6'},
+      {label: 'Components',     value: gs.num_connected_components || 1,             icon: '🌐', color: '#10b981'},
+      {label: 'Avg Degree',     value: gs.degree?.mean?.toFixed(1) || '–',           icon: '📐', color: '#f59e0b'},
+      {label: 'Isolated Nodes', value: 0,                                            icon: '✅', color: '#10b981'},
+    ].map(s => `
+      <div class="card" style="padding:1rem">
+        <div style="font-size:1.6rem">${s.icon}</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;color:${s.color};margin:.25rem 0">${s.value}</div>
+        <div style="font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em">${s.label}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function initCentralitySort() {
+  const sel = $('centrality-sort');
+  if (sel) sel.addEventListener('change', sortAndRenderCentrality);
+}
+
+/* ------------------------------------------------------------------ LINEUP */
+const FORMATION_433 = {
+  GK:  [['GK']],
+  DEF: [['DEF','DEF','DEF','DEF']],
+  MID: [['MID','MID','MID']],
+  FW:  [['FW','FW','FW']],
+};
+const POS_GRAD = {
+  GK: '#065f46', DEF: '#1e3a8a', MID: '#4c1d95', FW: '#7c2d12'
+};
+
+function renderLineup() {
+  const pitch = $('pitch-view');
+  const tableEl = $('lineup-table-container');
+  if (!pitch || !optimalXI.length) return;
+
+  const gks  = optimalXI.filter(p => p.position_group === 'GK');
+  const defs = optimalXI.filter(p => p.position_group === 'DEF');
+  const mids = optimalXI.filter(p => p.position_group === 'MID');
+  const fws  = optimalXI.filter(p => p.position_group === 'FW');
+
+  function rowHTML(players) {
+    return `<div class="formation-row">${players.map(p => {
+      const initials = shortName(p.player_name);
+      const rat = p.rating ? (+p.rating).toFixed(2) : '—';
+      return `
+        <div class="player-token">
+          <div class="player-circle" style="background:${POS_GRAD[p.position_group] || '#1e3a8a'}" title="${p.player_name} — Rating: ${rat}">
+            ${initials}
+          </div>
+          <div class="player-name-tag">${p.player_name.split(' ').slice(-1)[0]}</div>
+          <div class="player-rating">★ ${rat}</div>
+        </div>
+      `;
+    }).join('')}</div>`;
+  }
+
+  pitch.innerHTML = rowHTML(fws) + rowHTML(mids) + rowHTML(defs) + rowHTML(gks);
+
+  // Table
+  tableEl.innerHTML = `<table class="centrality-table">
+    <thead><tr><th>Player</th><th>Position</th><th>Minutes</th><th>Rating</th></tr></thead>
+    <tbody>${optimalXI.map(p => `
+      <tr>
+        <td style="font-weight:600">${p.player_name}</td>
+        <td><span class="pill pos-${p.position_group}" style="font-size:.68rem">${p.position_group}</span></td>
+        <td style="font-variant-numeric:tabular-nums">${(+p.minutes_played || 0).toLocaleString()}</td>
+        <td style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent-yellow)">
+          ${p.rating ? (+p.rating).toFixed(3) : '—'}
+        </td>
+      </tr>
+    `).join('')}</tbody>
+  </table>`;
+}
+
+/* ------------------------------------------------------------------ PASSING NETWORK */
+let currentTeam = 'liverpool';
+
+function drawPassingNetwork(team) {
+  currentTeam = team;
+  const data = team === 'liverpool' ? passingLiv : passingTot;
+  const canvas = $('passingCanvas');
+  const statsEl = $('passing-stats');
+  if (!canvas || !data.length) return;
+
+  const W = canvas.parentElement.clientWidth - 32 || 500;
+  const H = 380;
+  canvas.width = W;
+  canvas.height = H;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  const ctx = canvas.getContext('2d');
+
+  // Layout: circular
+  const n = data.length;
+  const cx = W / 2, cy = H / 2;
+  const R = Math.min(W, H) / 2 - 60;
+  const maxWD = Math.max(...data.map(d => d.weighted_degree || 0), 1);
+
+  const positions = data.map((d, i) => {
+    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+    return { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle), d };
+  });
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Draw edges (simplified — connect to highest WD player)
+  const hub = positions.reduce((best, p) => (p.d.weighted_degree || 0) > (best.d.weighted_degree || 0) ? p : best, positions[0]);
+  positions.forEach(p => {
+    if (p === hub) return;
+    const alpha = clamp((p.d.weighted_degree || 0) / maxWD * 0.5, 0.05, 0.4);
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
+    ctx.lineWidth = 1;
+    ctx.moveTo(hub.x, hub.y);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+  });
+
+  // Draw nodes
+  positions.forEach(p => {
+    const r = 8 + (p.d.weighted_degree / maxWD) * 16;
+    const alpha = 0.5 + (p.d.weighted_degree / maxWD) * 0.5;
+    const color = team === 'liverpool' ? `rgba(220,38,38,${alpha})` : `rgba(255,255,255,${alpha})`;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 1.5; ctx.stroke();
+
+    // Label
+    const nameParts = (p.d.player || '').split(' ');
+    const label = nameParts[nameParts.length - 1].slice(0, 12);
+    ctx.fillStyle = 'rgba(240,246,255,0.85)'; ctx.font = `bold ${clamp(8 + r * 0.3, 8, 12)}px Inter`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    // Place label outside
+    const nx = p.x + (p.x - cx) / R * (r + 16);
+    const ny = p.y + (p.y - cy) / R * (r + 16);
+    ctx.fillText(label, nx, ny);
+  });
+
+  // Stats table
+  const sorted = [...data].sort((a, b) => (b.weighted_degree || 0) - (a.weighted_degree || 0));
+  statsEl.innerHTML = `<table class="centrality-table">
+    <thead><tr><th>Player</th><th>W. Degree</th><th>Betweenness</th><th>Eigenvector</th></tr></thead>
+    <tbody>${sorted.map(d => `
+      <tr>
+        <td style="font-weight:600;font-size:.82rem">${d.player}</td>
+        <td style="font-variant-numeric:tabular-nums">${d.weighted_degree || '–'}</td>
+        <td style="font-variant-numeric:tabular-nums">${(d.betweenness || 0).toFixed(4)}</td>
+        <td style="font-variant-numeric:tabular-nums">${(d.eigenvector || 0).toFixed(4)}</td>
+      </tr>
+    `).join('')}</tbody>
+  </table>`;
+}
+
+function initPassingFilters() {
+  document.querySelectorAll('[data-team]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-team]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      drawPassingNetwork(btn.dataset.team);
+    });
+  });
+}
+
+/* ------------------------------------------------------------------ INIT */
+document.addEventListener('DOMContentLoaded', () => {
+  initKPIs();
+  initTabs();
+  renderRecComparison();
+  renderPipelineFlow();
+  renderClusterCards();
+  initScatterInteraction();
+  initScout();
+  initCentralitySort();
+  initPassingFilters();
+  renderLineup();
+
+  // Draw charts after fonts load
+  if (document.fonts) {
+    document.fonts.ready.then(() => {
+      drawVarianceChart();
+      drawSilhouetteChart();
+    });
+  } else {
+    setTimeout(() => { drawVarianceChart(); drawSilhouetteChart(); }, 200);
+  }
+
+  // Redraw on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      drawVarianceChart();
+      drawSilhouetteChart();
+      if (document.getElementById('section-clusters').classList.contains('active')) drawScatter();
+      if (document.getElementById('section-passing').classList.contains('active')) drawPassingNetwork(currentTeam);
+    }, 120);
+  });
+});
+</script>
+</body>
+</html>

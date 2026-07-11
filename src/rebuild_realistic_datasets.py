@@ -297,6 +297,29 @@ def main() -> None:
     players = read_cleaned("players")
     teams = read_cleaned("teams")
     player_match = read_cleaned("match_stats")
+    
+    if "team_id" not in player_match.columns and "team" in player_match.columns:
+        print("Resolving team names to team_id using fuzzy match on home/away options...", flush=True)
+        from rapidfuzz import fuzz
+        team_id_to_name = dict(zip(teams["team_id"].astype(str), teams["team_name"].astype(str)))
+        match_to_teams = matches.set_index("match_id")[["home_team_id", "away_team_id"]].to_dict(orient="index")
+        
+        def resolve_row_team_id(row):
+            m_id = row["match_id"]
+            t_name = row["team"]
+            if m_id not in match_to_teams:
+                return "NULL"
+            m_info = match_to_teams[m_id]
+            h_id = str(m_info["home_team_id"])
+            a_id = str(m_info["away_team_id"])
+            h_name = team_id_to_name.get(h_id, "")
+            a_name = team_id_to_name.get(a_id, "")
+            h_ratio = fuzz.ratio(str(t_name).lower(), str(h_name).lower())
+            a_ratio = fuzz.ratio(str(t_name).lower(), str(a_name).lower())
+            return h_id if h_ratio >= a_ratio else a_id
+            
+        player_match["team_id"] = player_match.apply(resolve_row_team_id, axis=1)
+
     player_season = read_cleaned("season_stats")
     goalkeepers = read_cleaned("gk")
 
