@@ -29,7 +29,12 @@ MIN_EVENTS = 200
 
 
 def build() -> pd.DataFrame:
-    ev = pd.read_parquet(EVENTS, columns=["player_id", "player_name", "season", "event_type", "xg", "position"])
+    cols = ["player_id", "player_name", "season", "event_type", "xg", "position"]
+    av = pd.read_parquet(EVENTS)
+    for extra in ("x", "y", "end_x", "end_y", "pass_length"):
+        if extra in av.columns:
+            cols.append(extra)
+    ev = av[cols].copy()
     keys = ["player_id", "player_name", "season"]
 
     # 1) event-type distribution (share of each action) -> playing style
@@ -44,8 +49,27 @@ def build() -> pd.DataFrame:
         shots=("event_type", "size"), xg_sum=("xg", "sum")).reindex(frac.index).fillna(0)
     shots["xg_per_shot"] = np.where(shots["shots"] > 0, shots["xg_sum"] / shots["shots"], 0.0)
 
-    # 3) involvement volume (total actions) + per-90 via real lineup minutes
     feats = frac.join(shots)
+
+    # 2b) LOCATION features (100% real pitch coordinates): where a player acts,
+    # pass direction/length, progressive actions. StatsBomb pitch is 120x80.
+    if "x" in ev.columns:
+        loc = ev.dropna(subset=["x", "y"]).copy()
+        loc["zx"] = pd.cut(loc["x"], [0, 40, 80, 120], labels=["def", "mid", "att"], include_lowest=True)
+        loc["zy"] = pd.cut(loc["y"], [0, 26.7, 53.3, 80], labels=["right", "center", "left"], include_lowest=True)
+        loc["zone"] = loc["zx"].astype(str) + "_" + loc["zy"].astype(str)
+        zone = loc.groupby(keys)["zone"].value_counts(normalize=True).unstack(fill_value=0).add_prefix("zone_")
+        feats = feats.join(zone.reindex(feats.index).fillna(0))
+        # pass direction & progression (passes only)
+        pas = loc[(loc["event_type"] == "Pass") & loc["end_x"].notna()].copy()
+        pas["fwd"] = (pas["end_x"] > pas["x"] + 3).astype(int)
+        pas["back"] = (pas["end_x"] < pas["x"] - 3).astype(int)
+        pas["prog"] = ((pas["end_x"] - pas["x"]) >= 15).astype(int)
+        pdir = pas.groupby(keys).agg(pass_fwd_share=("fwd", "mean"), pass_back_share=("back", "mean"),
+                                     pass_prog_share=("prog", "mean"),
+                                     pass_len_mean=("pass_length", "mean"),
+                                     avg_x=("x", "mean"))
+        feats = feats.join(pdir.reindex(feats.index).fillna(0))
     feats["total_events"] = totals
     if LINEUPS.exists():
         lu = pd.read_csv(LINEUPS)
@@ -66,8 +90,8 @@ def build() -> pd.DataFrame:
 def recall_at_5(feats: pd.DataFrame) -> float:
     from sklearn.neighbors import NearestNeighbors
     from sklearn.preprocessing import StandardScaler
-    fcols = [c for c in feats.columns if c.startswith(("evt_",)) or c in
-             ("xg_per_shot", "events_per90", "total_events", "shots", "xg_sum")]
+    fcols = [c for c in feats.columns if c.startswith(("evt_", "zone_", "pass_")) or c in
+             ("xg_per_shot", "events_per90", "total_events", "shots", "xg_sum", "avg_x", "pass_len_mean")]
     X = StandardScaler().fit_transform(feats[fcols].to_numpy())
     names = feats["player_name"].to_numpy()
     multi = pd.Series(names).value_counts()
