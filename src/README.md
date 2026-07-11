@@ -1,6 +1,39 @@
 # Source Code (`src/`)
 
-This directory houses the core logic for the UEFA Champions League (UCL) Data Enrichment Pipeline. The architecture is designed to be modular, resilient, and highly extensible, supporting multiple data sources with automated fallback mechanisms.
+This directory houses the core logic for the GoalData League pipeline. The architecture is designed to be modular, resilient, and highly extensible, supporting multiple data sources with automated fallback mechanisms.
+
+## Module Map (active vs auxiliary vs deprecated)
+
+**Canonical pipeline (RUNBOOK order):**
+
+| Stage | Module |
+|-------|--------|
+| Real StatsBomb ingestion | `ingest_statsbomb_full.py`, `ingest_statsbomb_lineups.py`, `ingest_statsbomb.py` |
+| Real FBref rosters (2005-2025) | `ingest_real_player_data.py` |
+| UEFA country coefficients | `ingest_uefa_coefficients.py` |
+| Real-only observed layer | `build_real_only_datasets.py` |
+| ≥1.5M real-roster participation layer | `build_roster_participation_datasets.py` |
+| Entity resolution (shared) | `entity_resolution.py`, `position_resolution.py` |
+| Feature building | `build_pca_feature_matrix.py`, `build_event_features.py` |
+| Models & evaluation | `build_clustering_analysis.py`, `recommendation_engine.py`, `recommendation_evaluation.py`, `supervised_evaluation.py`, `evaluate_event_representation.py` |
+| Decision layer | `optimize_lineup.py` (+ `league_strength.py`), `build_passing_network.py` |
+| Reporting / demo | `build_metrics_report.py`, `serialize_demo_data.py`, `build_defense_figures.py`, `generate_goaldata_figures.py`, `eda_report.py` |
+| Shared utilities | `logging_utils.py`, `config.py`, `advanced_metric_formulas.py`, `data_quality.py`, `build_processed.py` |
+
+**Auxiliary (only for re-scraping / alternative ingestion):** `main.py` and
+`scrapers/` (UEFA/ESPN/Flashscore/FBref/Worldfootball/Transfermarkt), `api_clients.py`,
+`download_*.py`, `data_merge.py`, `source_ingestion.py`, `formatter.py`,
+`conversion_csv.py`, `enrich_advanced_metrics.py`.
+
+**Deprecated (superseded, kept as remediation history — do not run on current tables):**
+`rebuild_realistic_datasets.py`, `impute_missing_stats.py`, `enrich_processed_features.py`,
+`build_dataset.py`, `ingest_statsbomb_events_rich.py` (one-off enrichment), `resolve_entities.py`
+(one-off), `script.py` (root; legacy entry point for `build_processed`).
+
+The equivalent split in `graph/`: active — `build_similarity_graph.py`,
+`analyze_similarity_graph.py`; legacy earlier iterations — `build_graph.py`,
+`build_player_similarity_graph.py`, `analyze_graph.py`, `graph_report.py`,
+`analysis_report.py`, `compare_rankings.py`, `data_processing.py`.
 
 ## Project Architecture
 

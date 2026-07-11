@@ -39,6 +39,7 @@ The project is organized into modular components:
 - **Diagnostic Reporting**: Automated field coverage reports to ensure data integrity.
 - **Quality Gates + Parquet**: Cleaned datasets are written as CSV and Parquet formats. Parquet is utilized for high-performance analytical queries and dimensionality reduction (PCA), preserving native data types. A generated `logs/data_quality_report.json` flags null ratios, formula anomalies, and the 1.5M-record requirement before ML use.
 - **Dimensionality Reduction (PCA)**: Automated pipeline to transform multi-dimensional player statistics (4,000+ player-season profiles) into latent tactical embeddings for style-of-play clustering.
+- **League-Strength Adjustment (UEFA)**: Decision-layer ratings (ILP starting XI) are scaled by the official season-specific UEFA country coefficients (`src/league_strength.py` + `src/ingest_uefa_coefficients.py`), so 50 goals in a weaker league do not outrank 39 in the Premier League; Champions League minutes carry a premium anchored to UEFA's own CL:EL:Conference bonus ratios.
 
 ## Final Deliverables (Week 14)
 

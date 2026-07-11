@@ -1,3 +1,7 @@
+"""DEPRECATED as a pipeline stage (superseded — do not run on current tables).
+Its roster-expansion/simulation path produced the removed synthetic entities; only
+its derived-feature helper functions remain imported by the (also deprecated)
+rebuild_realistic_datasets. See src/README.md "Module Map"."""
 from __future__ import annotations
 
 import hashlib

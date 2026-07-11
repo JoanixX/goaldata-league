@@ -116,46 +116,42 @@ match_year/month/dayofweek, is_* flags                            ... all derive
 data_provenance        string  observed_score+derived_features.              meta
 
 ================================================================================
-TABLE: events/goals_events_cleaned (key: goal_id)   ~254,596 rows
+TABLE: events/goals_events_cleaned (key: player_id, match_id)  scoring rows only
 ================================================================================
-This is a REAL-SIZED goal table: one row per goal. It is intentionally below
-1.5M rows because the number of goals is a physical quantity (~2.69 goals/match),
-exactly like the players table is allowed to be "small" by logic.
+One row per (scorer, match) with the goal count. Observed where an event source
+covers the match; elsewhere the split of the player's REAL season total.
+per-player season sums equal the real FBref totals.
 
-goal_id          string  Stable hash id of the goal.                          derived
-match_id         string  FK -> matches.match_id.                              observed
-minute           int     Goal minute (documented increasing-hazard model).    simulated
-goal_type        string  regular / penalty / own_goal (real base rates).      simulated
-player_id        string  Scorer (from scoreline allocation).                  derived_from_real_scoreline
-assist_player_id string  Assisting team-mate or NO_ASSIST.                    simulated
-event_type       string  Always "goal" in this table.                         derived
-player_name      string  Scorer canonical name.                               observed
-is_penalty       bool    goal_type == penalty.                                derived
-is_own_goal      bool    goal_type == own_goal.                               derived
-minute_*, is_first_half/second_half/extra_time/late_event, event_phase_weight,
-season, competition, match_country, player_age/height/weight/position_group,
-player_bmi, headed_goal_probability_proxy, goal_value_weight,
-open_play_goal_proxy, event_recency_weight                        ... all derived
-data_provenance  string  derived_from_real_scoreline.                         meta
+player_id        string  Scorer (real identity).                              observed
+match_id         string  FK -> matches.match_id (or source match id).         observed
+season, competition, team                                        string       observed
+goals            int     Goals by that player in that match.                  observed (statsbomb/understat) / derived residual split
+data_provenance  string  observed_statsbomb / observed_understat_core /
+                         derived_real_roster_scoreline.                       meta
 
 ================================================================================
-TABLE: stats/player_match_stats_cleaned (key: player_id, match_id)  ~1.95M rows
+TABLE: stats/player_match_stats_cleaned (key: player_id, match_id)  ~1.94M rows
 ================================================================================
-goals            int   Goals in the match. SUM per match-team == real score.  derived_from_real_scoreline
-assists          int   Assists (from goal-event allocation).                  derived
-shots, shots_on_target, shots_off_target, shots_blocked  int  Shots family,
-                       consistent with goals and additive identity.           simulated (goal-anchored)
-minutes_played   int   Minutes played (1-120).                                simulated
-passes_completed/attempted, pass_accuracy, crosses_*, dribbles, offsides,
-tackles(_won/_lost), interceptions, clearances, fouls_committed/suffered,
-distance_covered, top_speed, touches                            int/float  position-conditioned  simulated
-yellow_cards, red_cards  int  Cards from fouls x position factor.             simulated
-team_id          string  Player's team in the match (FK).                     observed
-*_per90, shot_accuracy, goal_conversion_rate, pass_completion_rate,
-defensive_actions, attacking_actions, ball_actions, discipline_points,
-team_goals_for/against, team_win/draw/loss, role_fit_score, two_way_index,
-player_age/height/weight/position_group                          ... all derived
-data_provenance  string  goals_derived_from_score;other_counts_simulated.     meta
+Built by src/build_roster_participation_datasets.py: real FBref Big-5 rosters
+(2005-2025) x their clubs' real deduplicated fixtures, overlaid with real
+per-match sources where they exist.
+
+Row provenance tiers (data_provenance):
+  observed_statsbomb          full event-derived per-match line (real)
+  observed_understat_core     minutes/goals/assists/shots REAL from Understat
+                              (Big-5 2014+); passes/tackles/cards modelled
+  derived_real_roster_scoreline  pre-2014 / uncovered: split of the player's
+                              REAL FBref season totals (multinomial by minutes)
+
+goals/assists/shots/shots_on_target/cards/fouls  int  Season sums per player ==
+                       real FBref totals (verified in
+                       logs/roster_participation_report.json).
+minutes_played   float Real where observed; season residual split elsewhere.
+passes_completed/attempted, tackles, interceptions  int  Modelled from real
+                       StatsBomb per-90 rates (player-level where covered,
+                       else position median). Allowed secondary metrics.
+position_group/team/competition/season             string  observed
+data_provenance  string  see tiers above.                                     meta
 
 ================================================================================
 TABLE: stats/player_season_stats_cleaned (key: player_id, season)
@@ -164,17 +160,18 @@ Season aggregates. matches_played/minutes_played/goals/assists/shots/... are
 SUMS of the per-match table (so goals here inherit the real-scoreline anchoring);
 the *_per90, *_per_match, scoring_index, creator_index, defensive_index, bmi,
 is_peak_age_season columns are derived.
-data_provenance  string  aggregated_from_player_match.                        meta
+data_provenance  string  observed_fbref_season_totals (real published totals)
+                         / aggregated_from_player_match (real StatsBomb agg).  meta
 
 ================================================================================
 TABLE: stats/goalkeeper_stats_cleaned (key: player_id, season)
 ================================================================================
-saves/goals_conceded/clean_sheets/penalty_saves/punches  int  goals_conceded is
-anchored to the REAL scoreline (goals the keeper's team conceded); saves and the
-rest follow a Poisson model around conceded.                     simulated (conceded-anchored)
-*_per_match, *_per90, clean_sheet_rate, keeper_reliability_index,
-shot_stopping_index, box_command_index, keeper_physical_index    ... all derived
-data_provenance  string  derived_from_real_scoreline.                         meta
+REBUILT FROM REAL SOURCE (src/ingest_fbref_keepers.py): all values come from the
+official FBref goalkeeper tables (Big-5, 2005-2025).
+minutes_played/matches_played/goals_against/shots_on_target_against/
+saves/clean_sheets/wins/draws/losses/penalties_faced/penalties_saved  int  observed
+saves_per90, goals_against_per90, clean_sheet_rate, save_pct          float derived
+data_provenance  string  observed_fbref_keeper.                              meta
 
 ================================================================================
 RELATIONSHIPS / JOIN KEYS

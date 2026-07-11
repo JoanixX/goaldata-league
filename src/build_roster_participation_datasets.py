@@ -18,11 +18,16 @@ from REAL rosters instead of the removed "Squad NN" placeholder players:
   member per deduplicated club fixture). Minutes spread the player's REAL season
   minutes uniformly. Cross-source duplicate fixtures are collapsed by
   normalized (date, home, away) before expansion.
+* **Understat overlay (REAL per-match stats, Big-5 2014+).** Where Understat
+  publishes the real per-match line (minutes, goals, assists, shots — ingested
+  by `src/ingest_understat.py`), those values are kept verbatim
+  (`observed_understat_core`) and only the residual of the player's real FBref
+  season total is spread over his uncovered matches.
 * **Goals / assists / shots / cards / fouls preserve real season totals.** Each
   player's REAL FBref season total is distributed across their match rows
   (seeded multinomial by minutes), so per-player season sums equal the real
-  numbers exactly — goals are never inflated or invented (verified at 100% in
-  the report). The per-match split is the modelled part (Maher 1982;
+  numbers exactly — goals are never inflated or invented (verified in the
+  report). The per-match split is the modelled part (Maher 1982;
   Dixon & Coles 1997) and every such row is provenance-tagged.
 * **Passes / tackles / interceptions** (absent from FBref combined tables) use
   each player's real StatsBomb per-90 rates when observed, else position-median
@@ -223,23 +228,31 @@ def _spread_int(total: float, weights: np.ndarray) -> np.ndarray:
     return RNG.multinomial(n, weights / weights.sum())
 
 
+def dedup_fixtures(matches: pd.DataFrame) -> pd.DataFrame:
+    """One row per real fixture, keyed by normalized (date, home, away).
+
+    matches_cleaned carries the same fixture from several sources under
+    different match_ids (e.g. La Liga 2011-2012: 38 football-data rows + 37
+    StatsBomb rows); the first occurrence wins. `_date_norm` and `_fixture_key`
+    stay on the frame for source alignment (Understat joins by fixture).
+    """
+    m = matches[["match_id", "season", "competition", "date",
+                 "home_team_id", "away_team_id", "home_score", "away_score"]].copy()
+    m["season"] = m["season"].astype(str)
+    date_norm = pd.to_datetime(m["date"], errors="coerce", format="mixed", dayfirst=False)
+    m["_date_norm"] = date_norm.dt.strftime("%Y-%m-%d").fillna(m["date"].astype(str))
+    m["_fixture_key"] = (m["_date_norm"] + "|" + m["home_team_id"].astype(str)
+                         + "|" + m["away_team_id"].astype(str))
+    return m.drop_duplicates(subset="_fixture_key", keep="first")
+
+
 def build_grid(fb: pd.DataFrame, matches: pd.DataFrame, team_map: pd.DataFrame) -> pd.DataFrame:
     """One row per real squad member per real club match of that season."""
     fb = fb.copy()
     fb["season"] = fb["season"].astype(str)
     fb = fb.merge(team_map, on=["team", "season"], how="inner")
 
-    m = matches[["match_id", "season", "competition", "date",
-                 "home_team_id", "away_team_id", "home_score", "away_score"]].copy()
-    m["season"] = m["season"].astype(str)
-    # matches_cleaned carries the same fixture from several sources under
-    # different match_ids (e.g. La Liga 2011-2012: 38 football-data rows + 37
-    # StatsBomb rows). Deduplicate by normalized (date, home, away) so each real
-    # fixture appears once in the participation grid.
-    date_norm = pd.to_datetime(m["date"], errors="coerce", format="mixed", dayfirst=False)
-    m["_fixture_key"] = (date_norm.dt.strftime("%Y-%m-%d").fillna(m["date"].astype(str))
-                         + "|" + m["home_team_id"].astype(str) + "|" + m["away_team_id"].astype(str))
-    m = m.drop_duplicates(subset="_fixture_key", keep="first").drop(columns="_fixture_key")
+    m = dedup_fixtures(matches).drop(columns=["_fixture_key", "_date_norm"])
     long = pd.concat([
         m.rename(columns={"home_team_id": "team_id", "home_score": "team_score"})[
             ["match_id", "season", "competition", "team_id", "team_score"]],
@@ -258,29 +271,131 @@ def build_grid(fb: pd.DataFrame, matches: pd.DataFrame, team_map: pd.DataFrame) 
     return grid
 
 
+UNDERSTAT_PM = BASE / "data" / "raw" / "understat_player_matches.csv"
+
+
+def integrate_understat(grid: pd.DataFrame, matches: pd.DataFrame,
+                        teams: pd.DataFrame) -> pd.DataFrame:
+    """Overlay REAL Understat per-match stats (Big-5, 2014+) onto the grid.
+
+    Adds u_minutes / u_goals / u_assists / u_shots columns (NaN where Understat
+    has no coverage). Join: fixture = normalized (date, home, away) with fuzzy
+    team-name mapping; player = canonical name (nation-ambiguous homonyms are
+    skipped — Understat publishes no nationality).
+    """
+    from rapidfuzz import fuzz, process
+    from src.position_resolution import _canonical_name
+
+    if not UNDERSTAT_PM.exists():
+        print("Understat overlay: no data file — skipped", flush=True)
+        grid[["u_minutes", "u_goals", "u_assists", "u_shots"]] = np.nan
+        return grid
+    u = pd.read_csv(UNDERSTAT_PM)
+    u["date"] = u["date"].astype(str).str[:10]
+
+    # -- team-name map: understat name -> our team_id (over grid participants) --
+    tid_names = teams.set_index("team_id")["team_name"].astype(str).to_dict()
+    grid_tids = set(grid["team_id"])
+    by_canon: dict[str, str] = {}
+    for tid in grid_tids:
+        by_canon.setdefault(canonical_text(tid_names.get(tid, "")), tid)
+    u_names = pd.unique(pd.concat([u["h_team"], u["a_team"]]).astype(str))
+    name_map: dict[str, str] = {}
+    for name in u_names:
+        canon = TEAM_ALIASES.get(canonical_text(name), canonical_text(name))
+        canon = TEAM_ALIASES.get(canon, canon)
+        if canon in by_canon:
+            name_map[name] = by_canon[canon]
+            continue
+        best = process.extractOne(canon, list(by_canon), scorer=fuzz.token_sort_ratio)
+        if best and best[1] >= 85:
+            name_map[name] = by_canon[best[0]]
+    print(f"Understat overlay: mapped {len(name_map)}/{len(u_names)} team names", flush=True)
+
+    # -- fixture -> our match_id --
+    m = dedup_fixtures(matches)
+    fixture_to_match = dict(zip(m["_fixture_key"], m["match_id"].astype(str)))
+    u["_h"] = u["h_team"].map(name_map)
+    u["_a"] = u["a_team"].map(name_map)
+    u = u.dropna(subset=["_h", "_a"])
+    u["match_id"] = (u["date"] + "|" + u["_h"] + "|" + u["_a"]).map(fixture_to_match)
+    u = u.dropna(subset=["match_id"])
+
+    # -- player -> our player_id (canonical name; skip cross-nation homonyms) --
+    ids = grid[["player_id", "player_name"]].drop_duplicates()
+    canon_ids = ids.assign(_c=ids["player_name"].map(_canonical_name))
+    counts = canon_ids.groupby("_c")["player_id"].nunique()
+    unique_canon = canon_ids[canon_ids["_c"].map(counts) == 1]
+    pid_by_canon = dict(zip(unique_canon["_c"], unique_canon["player_id"]))
+    u["player_id"] = u["player_name"].map(_canonical_name).map(pid_by_canon)
+    u = u.dropna(subset=["player_id"])
+
+    for c in ("time", "goals", "assists", "shots"):
+        u[c] = pd.to_numeric(u[c], errors="coerce")
+    u = (u.sort_values("time", ascending=False)
+         .drop_duplicates(subset=["player_id", "match_id"], keep="first"))
+    overlay = u.set_index(["player_id", "match_id"])[["time", "goals", "assists", "shots"]]
+    overlay.columns = ["u_minutes", "u_goals", "u_assists", "u_shots"]
+
+    grid = grid.join(overlay, on=["player_id", "match_id"])
+    n = int(grid["u_minutes"].notna().sum())
+    print(f"Understat overlay: {n:,} grid rows now carry REAL per-match stats "
+          f"({len(u):,} mapped source rows)", flush=True)
+    return grid
+
+
 def spread_season_totals(grid: pd.DataFrame) -> pd.DataFrame:
     """Distribute each player's REAL season totals over their match rows.
 
-    Goals included: a player's REAL FBref season goal count is spread across his
-    matches (seeded multinomial by minutes), so per-player season goal sums are
-    exactly the real totals — never inflated, never invented. The per-match
-    distribution is the modelled part and is provenance-tagged.
+    A player's REAL FBref season totals (goals, assists, shots, cards, fouls)
+    are spread across his matches (seeded multinomial by minutes), so
+    per-player season sums are exactly the real totals — never inflated, never
+    invented. Where Understat provides the REAL per-match value (u_* columns),
+    that value is kept verbatim and only the residual (season total minus the
+    observed part) is spread over the uncovered matches.
     """
-    out = {k: np.zeros(len(grid), dtype=np.int64)
-           for k in ("goals", "assists", "shots", "shots_on_target", "yellow_cards",
-                     "red_cards", "fouls_committed")}
+    fixed_map = {"goals": "u_goals", "assists": "u_assists", "shots": "u_shots"}
+    cols = ("goals", "assists", "shots", "shots_on_target", "yellow_cards",
+            "red_cards", "fouls_committed")
+    out = {k: np.zeros(len(grid), dtype=np.int64) for k in cols}
+    fixed_arrays = {c: (grid[fc].to_numpy(dtype=float) if fc in grid.columns
+                        else np.full(len(grid), np.nan))
+                    for c, fc in fixed_map.items()}
+    u_minutes = (grid["u_minutes"].to_numpy(dtype=float) if "u_minutes" in grid.columns
+                 else np.full(len(grid), np.nan))
+
     order = np.lexsort((grid["season"].to_numpy(), grid["player_id"].to_numpy()))
     keys = grid["player_id"].astype(str).to_numpy() + "|" + grid["season"].to_numpy()
     ks = keys[order]
     bounds = np.flatnonzero(np.r_[True, ks[1:] != ks[:-1], True])
     minutes = np.maximum(grid["minutes_played"].to_numpy(), 0.1)
+    new_minutes = grid["minutes_played"].to_numpy(dtype=float).copy()
+
     for a, b in zip(bounds[:-1], bounds[1:]):
         idx = order[a:b]
-        w = minutes[idx]
         row0 = grid.iloc[idx[0]]
-        for col in out:
-            out[col][idx] = _spread_int(row0[col], w)
+        covered = ~np.isnan(u_minutes[idx])
+        free = idx[~covered]
+        # minutes: real where observed; season residual spread over free rows
+        if covered.any():
+            obs_min = np.nansum(u_minutes[idx])
+            new_minutes[idx[covered]] = u_minutes[idx[covered]]
+            if len(free):
+                resid_min = max(float(row0["minutes"]) - obs_min, 0.0)
+                new_minutes[free] = round(min(resid_min / len(free), 90.0), 1)
+        w_free = minutes[free] if len(free) else np.array([])
+        for col in cols:
+            if col in fixed_map and covered.any():
+                obs_vals = np.nan_to_num(fixed_arrays[col][idx], nan=0.0)
+                out[col][idx[covered]] = obs_vals[covered].round().astype(np.int64)
+                residual = max(float(row0[col]) - obs_vals[covered].sum(), 0.0)
+                if len(free):
+                    out[col][free] = _spread_int(residual, w_free)
+            else:
+                out[col][idx] = _spread_int(row0[col], minutes[idx])
     res = grid.copy()
+    res["minutes_played"] = new_minutes
+    res["_understat_covered"] = ~np.isnan(u_minutes)
     for col, vals in out.items():
         res[f"m_{col}"] = vals
     return res
@@ -320,6 +435,7 @@ def main() -> None:
     grid = build_grid(fb, matches, team_map)
     print(f"Participation grid: {len(grid):,} rows over {grid['match_id'].nunique():,} real matches", flush=True)
 
+    grid = integrate_understat(grid, matches, teams)
     grid = spread_season_totals(grid)
 
     # shots >= goals, goals <= SoT <= shots (repair the few violated rows)
@@ -350,7 +466,9 @@ def main() -> None:
         "yellow_cards": g["m_yellow_cards"].astype(float), "red_cards": g["m_red_cards"].astype(float),
         "position_group": g["position_group"], "team": g["team"],
         "competition": g["competition"], "season": g["season"],
-        PROVENANCE: "derived_real_roster_scoreline",
+        PROVENANCE: np.where(g["_understat_covered"],
+                             "observed_understat_core",
+                             "derived_real_roster_scoreline"),
     })
 
     observed = real_pm.copy()
@@ -408,10 +526,12 @@ def main() -> None:
                                 else players_final[c].astype("object").fillna("Unknown"))
 
     # --- verification: per-player season goal sums == real FBref totals ---------
+    # (understat-observed rows + residual spread must reproduce the real totals)
     per_season = derived.groupby(["player_id", "season"])["goals"].sum()
     fb_totals = fb.groupby(["player_id", "season"])["goals"].sum().round().astype(int)
     common = per_season.index.intersection(fb_totals.index)
     goal_sum_ok = float((per_season.loc[common] == fb_totals.loc[common]).mean()) if len(common) else 1.0
+    n_understat = int((derived[PROVENANCE] == "observed_understat_core").sum())
 
     for df_chk in (pm_final, goals_events, ps_final):  # no-NULL guarantee
         for c in df_chk.columns:
@@ -435,6 +555,7 @@ def main() -> None:
                             "real_entities": int(players_final["player_id"].nunique())},
         "goal_anchoring": {"player_seasons_checked": int(len(common)),
                            "season_total_match_rate": round(goal_sum_ok, 4)},
+        "understat_observed_rows": n_understat,
         "unmatched_clubs": unmatched_teams,
         "provenance_counts": pm_final[PROVENANCE].value_counts().to_dict(),
     }

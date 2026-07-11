@@ -1,3 +1,6 @@
+"""DEPRECATED (superseded — do not run on current tables).
+The real-only / real-roster builds replace this imputation stage.
+Kept as remediation history; see src/README.md "Module Map"."""
 import json
 import sys
 from datetime import date, datetime

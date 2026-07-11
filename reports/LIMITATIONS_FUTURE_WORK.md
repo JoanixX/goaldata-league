@@ -48,6 +48,18 @@ This creates a survivorship bias: only players who appeared in covered competiti
 
 ---
 
+### 2.5 League-Strength Adjustment Coverage
+
+Decision-layer ratings are scaled by the official UEFA 5-year country coefficients per season
+(`src/league_strength.py`). Two boundaries of this adjustment:
+
+- **Women's leagues** (WSL, Liga F, Frauen-Bundesliga) have no UEFA men's coefficient and take
+  the seasonal median domestic weight instead of inheriting their country's men's value; a
+  dedicated women's strength index would require a separate source.
+- **Competition granularity**: matches are weighted by their competition and season, not by the
+  specific opponent. Beating Manchester City counts the same as beating the bottom club within
+  one league-season; opponent-level difficulty (e.g. club Elo) is future work.
+
 ## 3. Modeling Limitations
 
 ### 3.1 PCA Assumptions

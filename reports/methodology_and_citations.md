@@ -4,6 +4,15 @@ This document explains **how every value in `data/processed/` is produced** and
 **why each modelling choice is defensible**. It is the reference for the defense
 question "which data is real and which is modelled, and on what basis?".
 
+> **2026-07 update.** The volume layer is now built by
+> `src/build_roster_participation_datasets.py` (real FBref Big-5 rosters 2005-2025
+> expanded over real deduplicated fixtures; per-player season totals equal the real
+> FBref numbers). Decision-layer ratings are additionally scaled by the **official
+> UEFA 5-year country coefficients per season** (`src/ingest_uefa_coefficients.py`
+> from uefa.com methodology via the kassiesa.net archive; `src/league_strength.py`),
+> so cross-league output is comparable. §3.1 below documents the earlier
+> scoreline-allocation stage, retained as remediation history.
+
 ## 1. Provenance policy
 
 Every processed table carries a `data_provenance` column. Each value is one of:

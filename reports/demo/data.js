@@ -2,7 +2,7 @@
 window.DEMO_DATA = {
   "meta": {
     "project": "GoalData League — Football Data Pipeline & Scouting System",
-    "generated_at": "2026-07-11T11:04:37",
+    "generated_at": "2026-07-11T12:06:46",
     "n_players_indexed": 400,
     "n_centralities": 200,
     "pca_components_90pct": 11,
@@ -5911,46 +5911,46 @@ window.DEMO_DATA = {
   ],
   "optimal_xi": [
     {
-      "player_name": "Benjamin Henrichs",
-      "position_group": "DEF",
-      "minutes_played": 1143,
-      "rating": 3.1366
-    },
-    {
       "player_name": "Ricardo Pereira",
       "position_group": "DEF",
       "minutes_played": 991,
-      "rating": 2.8428
-    },
-    {
-      "player_name": "Alex Ferrari",
-      "position_group": "DEF",
-      "minutes_played": 1643,
-      "rating": 2.7888
+      "rating": 3.4602
     },
     {
       "player_name": "Vladimír Coufal",
       "position_group": "DEF",
       "minutes_played": 2209,
-      "rating": 2.7161
+      "rating": 3.0562
     },
     {
-      "player_name": "Robert Lewandowski",
-      "position_group": "FW",
-      "minutes_played": 2946,
-      "rating": 3.3866
+      "player_name": "Ramy Bensebaini",
+      "position_group": "DEF",
+      "minutes_played": 2020,
+      "rating": 2.9467
+    },
+    {
+      "player_name": "João Cancelo",
+      "position_group": "DEF",
+      "minutes_played": 3227,
+      "rating": 2.9213
     },
     {
       "player_name": "Patrik Schick",
       "position_group": "FW",
       "minutes_played": 2076,
-      "rating": 3.1695
+      "rating": 3.9589
+    },
+    {
+      "player_name": "Mohamed Salah",
+      "position_group": "FW",
+      "minutes_played": 2762,
+      "rating": 3.8945
     },
     {
       "player_name": "Erling Haaland",
       "position_group": "FW",
       "minutes_played": 1911,
-      "rating": 2.9935
+      "rating": 3.7597
     },
     {
       "player_name": "Mark Flekken",
@@ -5962,19 +5962,19 @@ window.DEMO_DATA = {
       "player_name": "Exequiel Palacios",
       "position_group": "MID",
       "minutes_played": 1097,
-      "rating": 2.1981
+      "rating": 2.6971
     },
     {
       "player_name": "Kevin De Bruyne",
       "position_group": "MID",
       "minutes_played": 2201,
-      "rating": 2.115
+      "rating": 2.6443
     },
     {
-      "player_name": "Domenico Berardi",
+      "player_name": "Thorgan Hazard",
       "position_group": "MID",
-      "minutes_played": 2819,
-      "rating": 2.0981
+      "minutes_played": 1337,
+      "rating": 2.4228
     }
   ],
   "passing_liverpool": [

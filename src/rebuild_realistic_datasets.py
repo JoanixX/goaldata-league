@@ -1,4 +1,8 @@
 """
+DEPRECATED (superseded remediation stage — do not run on current tables).
+Replaced by src/build_real_only_datasets.py + src/build_roster_participation_datasets.py.
+Kept as documented remediation history; see src/README.md "Module Map".
+
 Realistic dataset rebuild (no arbitrary RNG fabrication)
 ========================================================
 

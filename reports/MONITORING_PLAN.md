@@ -29,6 +29,9 @@ The pipeline is currently batch-oriented (no real-time requirement), with natura
 | Full match ingestion | End of match day (22:00 local) | `python -m src.download_football_data` |
 | StatsBomb event refresh | Weekly (Monday 01:00) | `python -m src.ingest_statsbomb_full` |
 | FBref season stats | Bi-weekly (Monday 02:00) | `python -m src.ingest_real_player_data` |
+| FBref keeper stats (real GK) | Bi-weekly (Monday 02:20) | `python -m src.ingest_fbref_keepers` |
+| Understat per-match refresh | Weekly (Monday 02:40) | `python -m src.ingest_understat` |
+| UEFA coefficients | Once per season | `python -m src.ingest_uefa_coefficients` |
 | Real-only dataset rebuild | Weekly (Monday 03:00) | `python -m src.build_real_only_datasets` |
 | PCA + clustering refresh | Weekly (Monday 04:00) | `python -m src.build_pca_feature_matrix && python -m src.build_clustering_analysis` |
 | Recommendation re-index | Weekly (Monday 05:00) | `python -m src.recommendation_evaluation` |

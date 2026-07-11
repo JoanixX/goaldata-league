@@ -23,6 +23,12 @@ Rating (z-scored within the candidate pool so positions are comparable):
     DEF : 0.15*scoring + 0.25*creation + 0.60*defence
     GK  : 0.50*clean_sheet_rate + 0.50*saves_per90   (from goalkeeper_stats)
 
+League-strength adjustment (src/league_strength.py): each player's indices are
+multiplied by his season's minutes-weighted competition strength, derived from
+the official UEFA 5-year country coefficients of that season. 50 goals in the
+Primeira Liga no longer outrank 39 goals in the Premier League plus Champions
+League minutes. Disable with --no-league-weight to compare.
+
 Run:  python -m src.optimize_lineup --season 2021-2022 --formation 4-3-3
 """
 from __future__ import annotations
@@ -36,6 +42,7 @@ import pulp
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 SEASON_STATS = BASE_DIR / "data" / "processed" / "stats" / "player_season_stats_cleaned.parquet"
+PLAYER_MATCH = BASE_DIR / "data" / "processed" / "stats" / "player_match_stats_cleaned.parquet"
 GK_STATS = BASE_DIR / "data" / "processed" / "stats" / "goalkeeper_stats_cleaned.parquet"
 PLAYERS = BASE_DIR / "data" / "processed" / "core" / "players_cleaned.parquet"
 
@@ -59,7 +66,23 @@ def _z(series: pd.Series) -> pd.Series:
     return (s - s.mean()) / std if std and std > 0 else s * 0.0
 
 
-def build_candidate_pool(season: str, min_minutes: int = 900) -> pd.DataFrame:
+from functools import lru_cache
+
+
+@lru_cache(maxsize=4)
+def _league_strength_map(season: str) -> pd.Series:
+    """(player_id -> strength) for one season from the player-match layer."""
+    from src.league_strength import player_season_strength
+
+    pm = pd.read_parquet(PLAYER_MATCH,
+                         columns=["player_id", "season", "competition", "minutes_played"])
+    pm = pm[pm["season"].astype(str) == season]
+    strength = player_season_strength(pm)
+    return strength.reset_index(level="season", drop=True)
+
+
+def build_candidate_pool(season: str, min_minutes: int = 900,
+                         league_weight: bool = True) -> pd.DataFrame:
     ps = pd.read_parquet(SEASON_STATS)
     players = pd.read_parquet(PLAYERS, columns=["player_id", "player_name", "profile_data_source"])
     ps = ps.merge(players, on="player_id", how="left")
@@ -70,8 +93,19 @@ def build_candidate_pool(season: str, min_minutes: int = 900) -> pd.DataFrame:
     pos = ps["player_position_group"].astype(str).str.upper()
     ps["position_group"] = pos.where(pos.isin(["GK", "DEF", "MID", "FW"]), "MID")
 
-    # Outfield rating from z-scored indices, weighted by role.
-    sc, cr, de = _z(ps["scoring_index"]), _z(ps["creator_index"]), _z(ps["defensive_index"])
+    # Season-specific competition strength (UEFA coefficients); neutral fallback 1.0.
+    if league_weight:
+        strength = ps["player_id"].map(_league_strength_map(season)).fillna(1.0)
+        print(f"League-strength adjustment ON — range "
+              f"[{strength.min():.3f}, {strength.max():.3f}], mean {strength.mean():.3f}")
+    else:
+        strength = pd.Series(1.0, index=ps.index)
+        print("League-strength adjustment OFF (--no-league-weight)")
+
+    # Outfield rating from z-scored, league-strength-scaled indices, weighted by role.
+    sc = _z(pd.to_numeric(ps["scoring_index"], errors="coerce") * strength)
+    cr = _z(pd.to_numeric(ps["creator_index"], errors="coerce") * strength)
+    de = _z(pd.to_numeric(ps["defensive_index"], errors="coerce") * strength)
     rating = pd.Series(0.0, index=ps.index)
     for grp, (ws, wc, wd) in _OUTFIELD_WEIGHTS.items():
         m = ps["position_group"].eq(grp)
@@ -79,10 +113,16 @@ def build_candidate_pool(season: str, min_minutes: int = 900) -> pd.DataFrame:
     ps["rating"] = rating
 
     # GK rating from goalkeeper_stats (clean sheets + saves), z-scored among GKs.
+    # A clean sheet in a stronger league is worth more — same strength scaling.
     gk = pd.read_parquet(GK_STATS)
     gk = gk[gk["season"].astype(str) == season]
     if not gk.empty:
-        gk_rating = (0.5 * _z(gk.get("clean_sheet_rate", 0)) + 0.5 * _z(gk.get("saves_per90", 0)))
+        if league_weight:
+            gk_strength = gk["player_id"].map(_league_strength_map(season)).fillna(1.0).to_numpy()
+        else:
+            gk_strength = 1.0
+        gk_rating = (0.5 * _z(pd.to_numeric(gk.get("clean_sheet_rate", 0), errors="coerce") * gk_strength)
+                     + 0.5 * _z(pd.to_numeric(gk.get("saves_per90", 0), errors="coerce") * gk_strength))
         gk_map = dict(zip(gk["player_id"].astype(str), gk_rating))
         is_gk = ps["position_group"].eq("GK")
         ps.loc[is_gk, "rating"] = ps.loc[is_gk, "player_id"].astype(str).map(gk_map).fillna(0.0).to_numpy()
@@ -109,9 +149,12 @@ def main() -> None:
     parser.add_argument("--season", default="2021-2022")
     parser.add_argument("--formation", default="4-3-3", choices=list(FORMATIONS))
     parser.add_argument("--min-minutes", type=int, default=900)
+    parser.add_argument("--no-league-weight", action="store_true",
+                        help="disable the UEFA league-strength adjustment (raw indices)")
     args = parser.parse_args()
 
-    pool = build_candidate_pool(args.season, args.min_minutes)
+    pool = build_candidate_pool(args.season, args.min_minutes,
+                                league_weight=not args.no_league_weight)
     counts = pool["position_group"].value_counts().to_dict()
     print(f"Candidate pool ({args.season}, >= {args.min_minutes} min): {len(pool)} real players {counts}")
     xi = optimise_xi(pool, FORMATIONS[args.formation])

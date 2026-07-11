@@ -4,6 +4,16 @@ The project uses missing-value imputation only as a last step after source
 cross-reference. The goal is not to make the tables look complete; the goal is
 to make them true enough for analysis.
 
+> **2026-07 update — observed-first sourcing.** Before any modelling, every free
+> real source is exhausted: StatsBomb Open Data (event level), **Understat**
+> (real per-match minutes/goals/assists/shots, Big-5 2014+,
+> `src/ingest_understat.py`), **FBref keeper tables** (real GK saves/clean
+> sheets, `src/ingest_fbref_keepers.py`) and FBref season totals (2005-2025).
+> Modelling now only fills what no free source publishes: the within-season
+> per-match split before 2014-15 and secondary volumes (passes/tackles) outside
+> StatsBomb coverage — always as the residual of REAL season totals, tagged in
+> `data_provenance`.
+
 > **Update — anchored simulation + provenance (supersedes the "never create rows"
 > stance for the granular tables).** Real granular event data does not exist for
 > the full historical scope, so the per-match and goal-event tables are produced

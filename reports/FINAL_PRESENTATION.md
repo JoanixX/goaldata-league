@@ -227,13 +227,19 @@ Subject to:
   x_i ∈ {0, 1}  ∀ i
 ```
 
-### Optimal XI — Season 2021-2022, 4-3-3 (pool: 1,639 real players)
+### League-strength adjustment (new)
+
+Ratings are scaled by the **official UEFA country coefficient of that season**
+(50 Primeira Liga goals ≠ 39 Premier League goals). Champions League minutes add a
+1.10 premium (UEFA's own CL:EL:Conference = 1.5:1.0:0.5 bonus ratios).
+
+### Optimal XI — Season 2021-2022, 4-3-3 (pool: 1,639 real players, UEFA-adjusted)
 
 ```
-           Mark Flekken (GK)
-  Coufal  Ferrari  Pereira  Henrichs
-     De Bruyne  Berardi  Palacios
-     Haaland  Lewandowski  Schick
+             Alisson (GK)
+  Cancelo  Bensebaini  Coufal  Pereira
+     T. Hazard  De Bruyne  Palacios
+       Haaland  Salah  Schick
 ```
 
 ---

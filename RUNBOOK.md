@@ -83,7 +83,9 @@ rosters (2005-2025) over their clubs' real deduplicated fixtures:
 - Observed StatsBomb rows always take precedence over derived rows
 
 ```bash
-python -m src.ingest_real_player_data          # FBref Big-5 rosters 2005-2025
+python -m src.ingest_real_player_data            # FBref Big-5 rosters 2005-2025
+python -m src.ingest_fbref_keepers               # REAL goalkeeper stats (saves/CS/GA)
+python -m src.ingest_understat                   # REAL per-match stats, Big-5 2014+ (long crawl, resumable)
 python -m src.build_roster_participation_datasets
 ```
 
@@ -197,13 +199,20 @@ Key outputs:
 
 ## Step 8 — ILP Starting-XI Optimization
 
-Selects the optimal 11-player lineup using Integer Linear Programming:
+Selects the optimal 11-player lineup using Integer Linear Programming. Player ratings
+are scaled by the **season-specific UEFA league-strength weight** (official 5-year
+country coefficients; `src/league_strength.py`), so output in a weaker league does not
+outrank output in a stronger one:
 
 ```bash
+# One-time (or when new seasons appear): download official UEFA coefficients
+python -m src.ingest_uefa_coefficients
+
 python -m src.optimize_lineup --season 2021-2022 --formation 4-3-3
+# add --no-league-weight to reproduce the unadjusted ranking for comparison
 ```
 
-Output: `artifacts/optimal_xi_2021-2022_4-3-3.csv`
+Outputs: `artifacts/optimal_xi_2021-2022_4-3-3.csv`, `data/raw/uefa_country_coefficients.csv`
 
 ---
 

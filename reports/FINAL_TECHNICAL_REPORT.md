@@ -119,7 +119,36 @@ StatsBomb-covered participations remain fully observed and take precedence; the 
 match-level goals remain anchored to real scorelines in `matches_cleaned`. Every row carries
 `data_provenance` (`observed_statsbomb` vs `derived_real_roster_scoreline`).
 
-### 4.3 Missing Data Policy
+### 4.3 Why the observed/modelled proportions are what they are
+
+A fair question is why per-match player statistics are not majority-observed. The answer is
+**source availability, not methodology**: free, legally usable per-match player data only exists
+where an event-data provider covered the match.
+
+| Real per-match source | Coverage | What it provides |
+|----------------------|----------|------------------|
+| StatsBomb Open Data | Selected competitions/seasons (2,270 matches here) | Full event streams |
+| Understat | Big-5 leagues, **2014-15 onward only** | Real minutes, goals, assists, shots, xG per player-match |
+| FBref keeper tables | Big-5, 2005+ (season level) | Real GK saves, clean sheets, goals against |
+| — before 2014-15 | **No free source exists** | Only season totals (FBref) are published |
+
+Consequences, by table:
+
+- **`goalkeeper_stats_cleaned` is now 100% observed** (real FBref keeper tables via
+  `src/ingest_fbref_keepers.py`); the earlier scoreline-derived version existed only because the
+  original ingest didn't pull FBref's keeper pages.
+- **`player_match_stats`**: every match from 2014-15 covered by Understat carries real
+  minutes/goals/assists/shots per player; StatsBomb rows are fully observed. Rows from
+  2005-2014 (roughly half the fixture base) **cannot** be observed from any free source — for
+  those, the player's REAL season totals are disaggregated over his club's real fixtures
+  (seeded multinomial by minutes; Maher 1982, Dixon & Coles 1997), so season sums stay exactly
+  real and only the within-season split is modelled. Nothing is invented: identities, fixtures,
+  and season totals are all published facts.
+- **`goals_events_cleaned`** inherits the same structure: scorer rows are observed where an
+  event source covers the match and residual-split elsewhere, always summing to the player's
+  real season goal count.
+
+### 4.4 Missing Data Policy
 
 | Column type | Treatment |
 |-------------|-----------|
@@ -288,23 +317,52 @@ To validate the graph is not circular, PageRank was compared against independent
 
 **Rating formula:** Composite of goals, assists, shots_on_target_per90, pass_accuracy, and minutes_played (normalized to [0, 3]).
 
-### 9.2 Optimal XI (Season 2021-2022, 4-3-3)
+### 9.2 League-Strength Adjustment (UEFA Coefficients)
 
-Candidate pool: 1,639 real players with ≥900 minutes in 2021-2022.
+Raw indices are not comparable across leagues: 50 goals in the Primeira Liga are not worth 39
+goals in the Premier League, and which league is strongest changes by season (La Liga topped the
+official UEFA ranking through most of 2012-2020; the Premier League leads since 2020-2021).
+`src/league_strength.py` therefore scales each player's indices by a **season-specific
+competition strength** before z-scoring:
+
+- **Source:** official UEFA 5-year country coefficients per season (method defined at
+  uefa.com/nationalassociations/uefarankings/country/about; historical tables 2004-2026 ingested
+  by `src/ingest_uefa_coefficients.py` from the kassiesa.net archive, which reproduces the
+  official calculation). 1,184 (season, country) values.
+- **Domestic league weight** = country coefficient ÷ strongest country that season (e.g.
+  2021-2022: Premier League 1.00, La Liga 0.86, Serie A 0.75, Primeira Liga 0.62).
+- **UEFA club competitions** anchored to UEFA's own bonus-point ratios (CL:EL:Conference =
+  1.5:1.0:0.5): Champions League 1.10, Europa League 0.73, Conference 0.37.
+- **Per player-season strength** = minutes-weighted mean of his matches' competition weights
+  (a Champions League run raises the blend), computed from `player_match_stats`.
+- Toggle: `--no-league-weight` reproduces the unadjusted ranking for comparison.
+- Scope: **decision layer only** (ILP squad selection). The representation models (PCA,
+  clustering, recommender) stay unweighted by design — they describe playing *style*, not quality.
+- Limitation: women's leagues have no UEFA men's coefficient and take the seasonal median
+  domestic weight rather than inheriting their country's men's value.
+
+### 9.3 Optimal XI (Season 2021-2022, 4-3-3, league-strength adjusted)
+
+Candidate pool: 1,639 real players with ≥900 minutes in 2021-2022; player strengths in
+[0.56, 1.05].
 
 | Position | Player | Rating |
 |----------|--------|--------|
-| GK | Mark Flekken | — |
-| DEF | Vladimír Coufal | 2.72 |
-| DEF | Alex Ferrari | 2.79 |
-| DEF | Ricardo Pereira | 2.84 |
-| DEF | Benjamin Henrichs | 3.14 |
-| MID | Domenico Berardi | 2.10 |
-| MID | Kevin De Bruyne | 2.12 |
-| MID | Exequiel Palacios | 2.20 |
-| FW | Erling Haaland | 2.99 |
-| FW | Patrik Schick | 3.17 |
-| FW | Robert Lewandowski | 3.39 |
+| GK | Alisson | 1.01 (real FBref keeper stats) |
+| DEF | João Cancelo | 2.92 |
+| DEF | Ramy Bensebaini | 2.95 |
+| DEF | Vladimír Coufal | 3.06 |
+| DEF | Ricardo Pereira | 3.46 |
+| MID | Thorgan Hazard | 2.42 |
+| MID | Kevin De Bruyne | 2.64 |
+| MID | Exequiel Palacios | 2.70 |
+| FW | Erling Haaland | 3.76 |
+| FW | Mohamed Salah | 3.89 |
+| FW | Patrik Schick | 3.96 |
+
+Versus the unadjusted XI, Serie-B and weaker-league profiles drop out while Premier
+League/Champions-League performers (Salah, Cancelo) enter — the exact correction the
+adjustment targets.
 
 ---
 
