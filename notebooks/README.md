@@ -1,10 +1,10 @@
 # Notebooks
 
-Este directorio se usa para notebooks interactivos de EDA y visualización.
+This directory holds interactive notebooks for EDA and visualization.
 
-Sugerencias:
-- notebook_01_build_and_inspect.ipynb: cargar graphs/*.gpickle, ejecutar analysis_report.py, mostrar distribuciones y redes.
-- notebook_02_comparison.ipynb: comparar centralities vs goles/asistencias.
+Suggestions:
+- notebook_01_build_and_inspect.ipynb: load graphs/*.gpickle, run analysis_report.py, plot distributions and networks.
+- notebook_02_comparison.ipynb: compare centralities against goals/assists.
 
 Commands quick-start:
 - python graph/build_graph.py --lineups processed/lineups.csv --out graphs/player_graph.gpickle

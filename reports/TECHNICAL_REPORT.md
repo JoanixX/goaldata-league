@@ -8,7 +8,7 @@
 
 ## Abstract
 
-This report documents the complete design, implementation, and validation of a football analytics pipeline that ingests real match data from UEFA, ESPN, StatsBomb, and FBref, constructs a unified relational schema, performs dimensionality reduction (PCA), tactical clustering (K-Means + DBSCAN), content-based player similarity recommendation, graph-theoretic centrality analysis, and Integer Linear Programming starting-XI optimization. The system processes 94,525 real matches, 1,751,751 real StatsBomb event-stream actions, and 3,670 player-season profiles, delivering a fully reproducible end-to-end pipeline with zero invented data.
+This report documents the complete design, implementation, and validation of a football analytics pipeline that ingests real match data from UEFA, ESPN, StatsBomb, and FBref, constructs a unified relational schema, performs dimensionality reduction (PCA), tactical clustering (K-Means + DBSCAN), content-based player similarity recommendation, graph-theoretic centrality analysis, and Integer Linear Programming starting-XI optimization. The system processes 94,525 real matches, 1,751,751 real StatsBomb event-stream actions, and 3,670 player-season profiles, delivering a fully reproducible end-to-end pipeline.
 
 ---
 
@@ -37,7 +37,7 @@ This system addresses all five challenges over a real dataset spanning 10+ leagu
 | Football-data.co.uk | Match results, odds | Premier League, Bundesliga | ~40,000 matches |
 | OpenFootball | Historical match results | 10 leagues | ~46,500 matches |
 
-**Data policy (commercial-grade, real-only):** Player and team identities, participations, goals, and assists are never simulated. Only secondary metrics (touches, possession, cards, fouls, offsides, shots where a match has no real source) may be modelled via cited formulas.
+**Data policy:** Player and team identities, participations, goals, and assists come from the sources above. Secondary metrics (touches, possession, cards, fouls, offsides, and shots where a match has no event-level source) are modelled from cited formulas and tagged in `data_provenance`.
 
 ---
 
@@ -53,10 +53,10 @@ The pipeline writes 7 normalized parquet tables:
 | `players_cleaned` | `player_id` | 18,782 | Real player profiles (FBref 2005-2025 + StatsBomb, identity-deduped, nation-blocked homonyms) |
 | `teams_cleaned` | `team_id` | 1,338 | Real team records |
 | `goals_events_cleaned` | `(player_id, match_id)` | 75,925 | Player-attributed scoring rows; per-player season sums equal real FBref totals |
-| `player_match_stats` | `(player_id, match_id)` | **1,935,463** | 86,137 observed StatsBomb participations + 1,849,326 real-roster participations (≥1.5M requirement) |
+| `player_match_stats` | `(player_id, match_id)` | **1,935,463** | 86,137 observed StatsBomb participations + 1,849,326 roster participations |
 | `player_season_stats` | `(player_id, season)` | 52,387 | Per-season player aggregates (real StatsBomb + real FBref season totals) |
 | `goalkeeper_stats` | `(player_id, season)` | 1,564 | GK-specific metrics |
-| `statsbomb_events_real` | `event_id` | 1,751,751 | Real event stream (fully observed, also ≥1.5M) |
+| `statsbomb_events_real` | `event_id` | 1,751,751 | Event stream (fully observed) |
 
 ### 3.2 Data Flow
 
@@ -120,9 +120,9 @@ match-level goals remain anchored to real scorelines in `matches_cleaned`. Every
 
 ### 4.3 Why the observed/modelled proportions are what they are
 
-A fair question is why per-match player statistics are not majority-observed. The answer is
-**source availability, not methodology**: free, legally usable per-match player data only exists
-where an event-data provider covered the match.
+Per-match player statistics are not majority-observed because of **source availability**:
+freely licensed per-match player data exists only where an event-data provider covered the
+match.
 
 | Real per-match source | Coverage | What it provides |
 |----------------------|----------|------------------|
@@ -133,9 +133,8 @@ where an event-data provider covered the match.
 
 Consequences, by table:
 
-- **`goalkeeper_stats_cleaned` is now 100% observed** (real FBref keeper tables via
-  `src/ingest_fbref_keepers.py`); the earlier scoreline-derived version existed only because the
-  original ingest didn't pull FBref's keeper pages.
+- **`goalkeeper_stats_cleaned` is 100% observed**, from the FBref keeper tables ingested by
+  `src/ingest_fbref_keepers.py`.
 - **`player_match_stats`**: every match from 2014-15 covered by Understat carries real
   minutes/goals/assists/shots per player; StatsBomb rows are fully observed. Rows from
   2005-2014 (roughly half the fixture base) **cannot** be observed from any free source — for
@@ -386,43 +385,36 @@ Expected goals per player are computed from shot quality using a logistic positi
 
 | Check | Result |
 |-------|--------|
-| Per-player season goal sums == real FBref totals | ✓ 98.6% of 47,103 player-seasons exact (rest are multi-club edge cases) |
-| player_match_stats ≥ 1.5M rows | ✓ 1,935,463 (in 1.5M–3M band) |
-| Zero invented entities | ✓ 0 synthetic Squad placeholders |
-| Zero duplicate identities | ✓ All remapped to canonical IDs |
+| Per-player season goal sums == FBref season totals | ✓ 98.6% of 47,103 player-seasons exact (rest are multi-club edge cases) |
+| Duplicate identities remapped to canonical IDs | ✓ 0 remaining |
 | Goalkeeper offensive stats == 0 | ✓ Zeroed for all 800+ GK seasons |
-| Dataset ≥ 1.5M real rows | ✓ 1,751,751 real StatsBomb events |
-| PCA 90% variance in ≤ 15 PCs | ✓ 11 components at 90.17% |
-| Stronger recommender > baseline | ✓ MRR ×2.3, Recall@5 ×3.0 |
-| Supervised probe in 0.85–0.95 band (real subset) | ✓ macro-F1 0.8842 / accuracy 0.8730 |
+| PCA variance target reached | ✓ 90.17% in 11 components |
+| Stronger retrieval model > baseline | ✓ MRR ×2.3, Recall@5 ×3.0 |
+| Supervised probe (real-feature subset) | ✓ macro-F1 0.8842 / accuracy 0.8730 |
 | Graph single connected component | ✓ 100% of nodes in largest component |
 
 ---
 
-## 12. Ethics and Access Note
+## 12. Data Sources and Licensing
 
-**Where the data came from.** All sources are public and openly licensed for research use:
-StatsBomb Open Data (free open-data repository, used under the StatsBomb Public Data User
-Agreement with attribution), FBref season statistics accessed through the `soccerdata` Python
-package (public web pages, rate-limited polite scraping), UEFA open fixtures,
-Football-data.co.uk, and OpenFootball (public-domain match results). Full provenance per table
-is documented in `reports/methodology_and_citations.md` and `data/dictionary.txt`.
+**Origin.** All sources are public and openly licensed for research use: StatsBomb Open Data
+(used under the StatsBomb Public Data User Agreement, with attribution), FBref season
+statistics accessed through the `soccerdata` Python package (public pages, rate-limited
+polite scraping), UEFA open fixtures, Football-data.co.uk, and OpenFootball (public-domain
+match results). Per-table provenance is documented in `reports/methodology_and_citations.md`
+and `data/dictionary.txt`.
 
-**Why we are allowed to use it.** No access-controlled or paid data was scraped. StatsBomb
-explicitly publishes its open-data set for research and education; FBref and the remaining
-sources expose public, non-personal sports records. No terms of service were bypassed and no
-authentication walls were crossed.
+**Access.** No access-controlled or paid data is scraped, no terms of service are bypassed and
+no authentication walls are crossed. StatsBomb publishes its open-data set for research and
+education; the remaining sources expose public sports records.
 
-**What personal-data risks exist.** The dataset contains only professional athletes'
-public-performance records (names, positions, match statistics) — information already published
-by the leagues and data providers. It contains no private individuals, no contact or biometric
-data, and no data about minors' private lives.
-
-**How risks were reduced.** No data beyond public professional performance is stored or
-redistributed; raw scraped payloads stay out of version control (`data/raw/` is gitignored);
-every derived or modelled value is tagged in a `data_provenance` column so no synthetic figure
-can be mistaken for a real record about a person; and the real-only policy forbids inventing
-facts (goals, assists, participations) about identifiable people.
+**Personal data.** The dataset holds professional athletes' public performance records — names,
+positions, match statistics — already published by the leagues and data providers. It holds no
+private individuals, no contact or biometric data, and nothing about minors' private lives.
+Raw scraped payloads stay out of version control (`data/raw/` is gitignored), every derived or
+modelled value is tagged in `data_provenance` so no modelled figure can be mistaken for a
+published record, and the data policy forbids inventing goals, assists or participations
+attributed to identifiable people.
 
 ---
 

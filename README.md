@@ -11,8 +11,9 @@ player-season, it ranks the closest comparable player-seasons from a position-fi
 candidate pool. The same embedding backs a clustering layer, a k-NN similarity graph and
 an ILP starting-XI optimizer.
 
-<!-- Screenshot pending: capture the Streamlit scouting screen and commit it as docs/demo.png -->
-![demo](docs/demo.png)
+![Scouting screen: a query player-season and its ranked comparables](docs/demo.png)
+
+*Scouting screen: a query player-season, its ranked comparables from the position-filtered pool, and the similarity/distance behind each match.*
 
 ## Results
 
@@ -108,9 +109,9 @@ against a 0.1464 majority-class baseline (`python -m src.supervised_evaluation`,
 
 | Deliverable | Location |
 |-------------|----------|
-| Technical report | `reports/FINAL_TECHNICAL_REPORT.md` |
+| Technical report | `reports/TECHNICAL_REPORT.md` |
 | Runbook (canonical reproduction path) | `RUNBOOK.md` |
-| Presentation | `reports/FINAL_PRESENTATION.md` |
+| Presentation | `reports/PRESENTATION.md` |
 | Demo — static dashboard (no server) | `reports/demo/index.html` — auto-deployed to GitHub Pages: https://joanixx.github.io/goaldata-league/ (see `RUNBOOK.md` Step 13) |
 | Demo — interactive Streamlit app | `app.py` — live at https://tf-goal-data-league.streamlit.app/ (`streamlit run app.py` for local; `RUNBOOK.md` Step 13b) |
 | Monitoring / operationalization plan | `reports/MONITORING_PLAN.md` |

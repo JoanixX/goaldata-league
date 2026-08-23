@@ -37,7 +37,7 @@ def download_all() -> dict:
     LOGS_DIR.mkdir(exist_ok=True)
     results = []
     session = requests.Session()
-    session.headers.update({"User-Agent": "goaldata-league academic data pipeline"})
+    session.headers.update({"User-Agent": "goaldata-league data pipeline"})
     for year in SEASONS:
         code = season_code(year)
         season_dir = RAW_DIR / code

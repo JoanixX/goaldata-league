@@ -10,9 +10,9 @@ import pickle
 
 
 def build_co_participation_graph(df_lineups: pd.DataFrame, min_shared_minutes: int = 1) -> nx.Graph:
-    """Construye un grafo no dirigido donde cada par de jugadores que participaron en un mismo partido
-    acumula peso = minutos compartidos (aproximación con min(minutes_i, minutes_j)).
-    df_lineups debe tener columnas: match_id, player_id, minutes_played
+    """Build an undirected graph where each pair of players that appeared in the same match
+    accumulates weight = shared minutes (approximated by min(minutes_i, minutes_j)).
+    df_lineups must have columns: match_id, player_id, minutes_played
     """
     G = nx.Graph()
     players = pd.unique(df_lineups['player_id'])
@@ -43,7 +43,7 @@ def build_interaction_graph(df_events: pd.DataFrame, event_types=None) -> nx.DiG
     if event_types is not None:
         df_events = df_events[df_events['event_type'].isin(event_types)]
     G = nx.DiGraph()
-    # añadir nodos encontrados
+    # add the nodes found
     nodes = pd.unique(df_events[['from_player', 'to_player']].values.ravel())
     nodes = [n for n in nodes if pd.notnull(n)]
     G.add_nodes_from(nodes)
@@ -60,13 +60,13 @@ def build_interaction_graph(df_events: pd.DataFrame, event_types=None) -> nx.DiG
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Construir grafos desde CSVs processed')
-    parser.add_argument('--lineups', help='CSV processed con match_id,player_id,minutes_played')
-    parser.add_argument('--events', help='CSV processed con match_id,from_player,to_player,event_type,minute')
-    parser.add_argument('--out-co', help='Salida .gpickle para grafo co-participation')
-    parser.add_argument('--out-inter', help='Salida .gpickle para grafo interaction (directed)')
+    parser = argparse.ArgumentParser(description='Build graphs from processed CSVs')
+    parser.add_argument('--lineups', help='Processed CSV with match_id,player_id,minutes_played')
+    parser.add_argument('--events', help='Processed CSV with match_id,from_player,to_player,event_type,minute')
+    parser.add_argument('--out-co', help='Output .gpickle for the co-participation graph')
+    parser.add_argument('--out-inter', help='Output .gpickle for the interaction graph (directed)')
     parser.add_argument('--min-shared-minutes', type=int, default=1)
-    parser.add_argument('--event-types', nargs='*', help='Tipos de evento a incluir (opcional)')
+    parser.add_argument('--event-types', nargs='*', help='Event types to include (optional)')
     args = parser.parse_args()
 
     if args.lineups and args.out_co:

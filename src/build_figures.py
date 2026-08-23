@@ -1,6 +1,6 @@
 """
-Defense figures (P0-P2 visual evidence)
-=======================================
+Report figures
+==============
 
 Generates the key visuals into ``reports/figures/``:
 
@@ -8,9 +8,8 @@ Generates the key visuals into ``reports/figures/``:
      node size = betweenness, edge width = completed passes (the tactical graph).
   2. pagerank_vs_goals.png          - similarity-graph PageRank vs an external
      baseline (goals/90), with Spearman rho for the ranking comparison.
-  3. remediation_before_after.png   - before/after of the headline fixes.
 
-Run:  python -m src.build_defense_figures
+Run:  python -m src.build_figures
 """
 from __future__ import annotations
 
@@ -86,28 +85,6 @@ def fig_pagerank_vs_goals() -> None:
     fig.savefig(FIG / "pagerank_vs_goals.png", dpi=130)
     plt.close(fig)
     print("  saved pagerank_vs_goals.png")
-
-
-def fig_before_after() -> None:
-    panels = [
-        ("PCA components for 90% var", 46, 13, ""),
-        ("PCA PC1+PC2 variance", 0.2148, 0.3866, ""),
-        ("Recsys MRR (stronger)", 0.0018, 0.0342, ""),
-        ("Impossible GK seasons", 506, 0, ""),
-    ]
-    fig, axes = plt.subplots(1, 4, figsize=(16, 4))
-    for ax, (title, before, after, _) in zip(axes, panels):
-        bars = ax.bar(["before", "after"], [before, after], color=["#bbbbbb", "#2a9d8f"])
-        ax.set_title(title, fontsize=10)
-        for b, v in zip(bars, [before, after]):
-            ax.text(b.get_x() + b.get_width() / 2, b.get_height(),
-                    f"{v:g}", ha="center", va="bottom", fontsize=9)
-        ax.margins(y=0.2)
-    fig.suptitle("Remediation impact (before -> after)", fontsize=13)
-    fig.tight_layout()
-    fig.savefig(FIG / "remediation_before_after.png", dpi=130)
-    plt.close(fig)
-    print("  saved remediation_before_after.png")
 
 
 def fig_recsys_metrics() -> None:
@@ -199,9 +176,8 @@ def fig_provenance() -> None:
 
 def main() -> None:
     FIG.mkdir(parents=True, exist_ok=True)
-    print("Generating defense figures...")
+    print("Generating figures...")
     fig_provenance()
-    fig_before_after()
     fig_recsys_metrics()
     fig_clustering_selection()
     fig_pagerank_vs_goals()
@@ -211,4 +187,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     from src.logging_utils import run_logged
-    run_logged("build_defense_figures", main)
+    run_logged("build_figures", main)

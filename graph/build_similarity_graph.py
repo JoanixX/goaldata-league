@@ -16,22 +16,22 @@ def build_feature_similarity_graph(csv_path: str, max_k_neighbors: int = 5, simi
     Nodos: player_id (perfiles de jugador-temporada).
     Aristas: Conexiones con los K vecinos estadísticamente más cercanos.
     """
-    print(" Cargando archivo de clusters...")
+    print(" Loading cluster file...")
     df = pd.read_csv(csv_path)
     
-    # Extraer las variables latentes PCx disponibles (robusto: el PCA puede
-    # retener menos de 12 componentes sobre el catalogo real limpio).
+    # Pick up whichever PCx latent variables are available (the PCA may retain
+    # fewer than 12 components on the cleaned catalog).
     pc_cols = sorted([c for c in df.columns if c.startswith('PC') and c[2:].isdigit()],
                      key=lambda c: int(c[2:]))
     if not pc_cols:
         raise ValueError("no PC columns found in input (expected PC1, PC2, ...)")
-    print(f" Usando {len(pc_cols)} componentes: {pc_cols}")
-    features = df[pc_cols].to_numpy().astype(np.float32) # float32 para reducir memoria
+    print(f" Using {len(pc_cols)} components: {pc_cols}")
+    features = df[pc_cols].to_numpy().astype(np.float32) # float32 to reduce memory
     player_ids = df['player_id'].tolist()
     
     G = nx.Graph()
     
-    print(" Inyectando metadatos a los nodos...")
+    print(" Attaching metadata to nodes...")
     for idx, row in df.iterrows():
         G.add_node(
             row['player_id'], 
@@ -41,15 +41,15 @@ def build_feature_similarity_graph(csv_path: str, max_k_neighbors: int = 5, simi
             kmeans_cluster=row['kmeans_cluster']
         )
     
-    print(f" Entrenando indexador de vecinos cercanos para {len(player_ids)} registros...")
-    # Buscamos max_k_neighbors + 1 porque el vecino más cercano a un nodo es siempre sí mismo
+    print(f" Fitting nearest-neighbor index over {len(player_ids)} records...")
+    # Query max_k_neighbors + 1 because a node's nearest neighbor is always itself
     nn = NearestNeighbors(n_neighbors=max_k_neighbors + 1, metric='euclidean', algorithm='auto', n_jobs=-1)
     nn.fit(features)
     
-    print(" Buscando vecinos mas cercanos por lotes...")
+    print(" Querying nearest neighbors in batches...")
     distances, indices = nn.kneighbors(features)
     
-    print(" Construyendo aristas basadas en el umbral de similitud...")
+    print(" Building edges from the similarity threshold...")
     for i, pid_i in enumerate(player_ids):
         for j_idx, distance in zip(indices[i], distances[i]):
             pid_j = player_ids[j_idx]
@@ -65,11 +65,11 @@ def build_feature_similarity_graph(csv_path: str, max_k_neighbors: int = 5, simi
     return G
 
 def _cli():
-    parser = argparse.ArgumentParser(description='Construir Grafo de Similitud por Componentes de PCA sin fallos de Memoria')
-    parser.add_argument('--input-csv', required=True, help='Ruta al archivo player_season_cluster_labels.csv')
-    parser.add_argument('--out-graph', required=True, help='Ruta de salida para el archivo .pickle del grafo')
-    parser.add_argument('--k-neighbors', type=int, default=5, help='Vecinos cercanos por nodo')
-    parser.add_argument('--threshold', type=float, default=0.15, help='Umbral de corte de similitud')
+    parser = argparse.ArgumentParser(description='Build the PCA-component similarity graph in a memory-bounded way')
+    parser.add_argument('--input-csv', required=True, help='Path to player_season_cluster_labels.csv')
+    parser.add_argument('--out-graph', required=True, help='Output path for the graph .pickle file')
+    parser.add_argument('--k-neighbors', type=int, default=5, help='Nearest neighbors per node')
+    parser.add_argument('--threshold', type=float, default=0.15, help='Similarity cutoff threshold')
     args = parser.parse_args()
 
     G = build_feature_similarity_graph(args.input_csv, max_k_neighbors=args.k_neighbors, similarity_threshold=args.threshold)
@@ -78,7 +78,7 @@ def _cli():
     with open(args.out_graph, 'wb') as f:
         pickle.dump(G, f)
 
-    print(f" ¡Éxito! Grafo construido con {G.number_of_nodes()} nodos y {G.number_of_edges()} aristas.")
+    print(f" Done. Graph built with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges.")
 
 
 if __name__ == '__main__':

@@ -187,12 +187,12 @@ def compare_centrality_to_popularity(G: nx.Graph, suitability_file: str, form_fi
     for node_id in G.nodes():
         player_id = G.nodes[node_id].get('player_id')
         
-        # Intentar buscar el nombre directamente en los parquets originales por su ID único
+        # Look the name up directly in the source parquet files by unique ID
         suitability_row = suitability[suitability['player_id'] == player_id]
         form_row = form[form['player_id'] == player_id]
         
-        # Si el parquet original tiene una columna alternativa de nombre real, la usamos.
-        # De lo contrario, tomamos el que viene en el nodo.
+        # Use the source parquet's alternative real-name column when it has one;
+        # otherwise fall back to the name carried on the node.
         player_name = G.nodes[node_id].get('player_name', f'Player_{node_id}')
         if len(suitability_row) > 0 and 'player_name' in suitability.columns:
             possible_name = suitability_row['player_name'].values[0]
@@ -204,7 +204,7 @@ def compare_centrality_to_popularity(G: nx.Graph, suitability_file: str, form_fi
         
         comparison_data.append({
             'node_id': node_id, 
-            'player_name': str(player_name), # Forzamos que sea texto limpio
+            'player_name': str(player_name), # Coerce to clean text
             'position_group': G.nodes[node_id].get('position_group', 'Unknown'),
             'pagerank': pagerank.get(node_id, 0), 
             'betweenness_centrality': betweenness.get(node_id, 0),

@@ -25,7 +25,7 @@ def download_all() -> dict:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     LOGS_DIR.mkdir(exist_ok=True)
     session = requests.Session()
-    session.headers.update({"User-Agent": "goaldata-league academic openfootball ingester"})
+    session.headers.update({"User-Agent": "goaldata-league openfootball ingester"})
     results = []
     for name, url in REPOSITORIES.items():
         zip_path = RAW_DIR / f"{name}.zip"

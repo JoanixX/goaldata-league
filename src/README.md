@@ -17,7 +17,7 @@ This directory houses the core logic for the GoalData League pipeline. The archi
 | Feature building | `build_pca_feature_matrix.py`, `build_event_features.py` |
 | Models & evaluation | `build_clustering_analysis.py`, `recommendation_engine.py`, `recommendation_evaluation.py`, `supervised_evaluation.py`, `evaluate_event_representation.py` |
 | Decision layer | `optimize_lineup.py` (+ `league_strength.py`), `build_passing_network.py` |
-| Reporting / demo | `build_metrics_report.py`, `serialize_demo_data.py`, `build_defense_figures.py`, `generate_goaldata_figures.py`, `eda_report.py` |
+| Reporting / demo | `build_metrics_report.py`, `serialize_demo_data.py`, `build_figures.py`, `generate_goaldata_figures.py`, `eda_report.py` |
 | Shared utilities | `logging_utils.py`, `config.py`, `advanced_metric_formulas.py`, `data_quality.py`, `build_processed.py` |
 
 **Auxiliary (only for re-scraping / alternative ingestion):** `main.py` and
