@@ -1,4 +1,4 @@
-# Week 10 - Offline Evaluation Report (Recommendation / Ranking)
+# Offline Evaluation Report — Retrieval / Ranking
 
 Generated: `2026-07-09T02:02:19`
 
@@ -33,7 +33,7 @@ players present in >= 2 seasons. The query row is removed from the pool, and
 - If the stronger (full standardized PC) representation beats the baseline on
   MRR / Recall / NDCG, the extra components carry real same-player signal that
   the 2D map discards. If it does **not** beat the baseline, that must be stated
-  honestly in the defense (a complex model that does not beat a simple baseline
+  plainly (a complex model that does not beat a simple baseline
   is a finding, not a failure to hide).
 - Limitation: with few seasons in the current data, the query set is small; the
   metric is a representation probe, not a production accuracy guarantee.

@@ -2,10 +2,10 @@
 GOALDATA LEAGUE - DATA DICTIONARY
 ================================================================================
 This is the authoritative data dictionary for the processed datasets in
-data/processed/. It replaces the earlier free-text generation prompt.
+data/processed/.
 
 For every column we state: meaning, type, unit, and PROVENANCE. Provenance is the
-single most important field for the defense, so each value is labelled as one of:
+most important field here, so each value is labelled as one of:
 
   - observed   : taken directly from a real source (e.g. real final scores,
                  real player profiles, real FBref season totals).

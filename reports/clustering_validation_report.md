@@ -1,10 +1,10 @@
-# Week 7 Clustering and Validation Report
+# Clustering and Validation Report
 
 Generated at: `2026-07-09T02:02:16`
 
 ## Objective
 
-This report satisfies the Week 7 requirement: segment the domain and validate
+This report segments the player-season domain and validates
 whether the segmentation is meaningful. The experiments use the existing
 player-season PCA embedding from `artifacts/pca_player_season_2d.csv`.
 
@@ -24,7 +24,7 @@ Why these variables:
   shots, passes, tackles, interceptions, fouls, cards, and engineered per-90
   rates.
 - Clustering on PCA coordinates reduces redundancy among correlated football
-  statistics and keeps the Week 7 work tied to the Week 5 representation layer.
+  statistics and keeps the segmentation tied to the representation layer.
 - `player_id` and `player_name` are identifiers, so they are not valid
   clustering features.
 - `season` and `position_group` are not used to force clusters; they are used

@@ -1,7 +1,6 @@
-# GoalData League — Final Defense Presentation
+# GoalData League — System Presentation
 
 **Project:** Football Data Pipeline & Scouting System  
-**Delivery:** Week 15 — Academic Defense  
 **Format:** Markdown slide deck (one `---` separator = one slide)
 
 ---
@@ -11,9 +10,8 @@
 # GoalData League
 ## Football Data Pipeline & Scouting System
 
-**End-to-End Analytics from Raw Match Data to ILP Squad Selection**
+**End-to-end analytics from raw match data to ILP squad selection**
 
-> Week 15 Final Defense  
 > July 2026
 
 ---
@@ -22,12 +20,12 @@
 
 ## Agenda
 
-1. Problem Statement & Business Case
+1. Problem Statement & Use Case
 2. Data Sources & Architecture
-3. Data Cleaning & Entity Resolution
+3. Data Quality & Entity Resolution
 4. PCA Representation
 5. Tactical Clustering
-6. Player Similarity Recommendation
+6. Player Similarity Retrieval
 7. Graph Analysis & Centrality
 8. ILP Starting-XI Optimization
 9. Passing Networks
@@ -38,7 +36,7 @@
 
 ---
 
-## 1. The Problem We Solved
+## 1. The Problem
 
 ### Traditional scouting is broken
 
@@ -58,7 +56,7 @@
 
 ---
 
-## 2. Data Sources & Real-Only Policy
+## 2. Data Sources & Provenance
 
 | Source | Type | Volume |
 |--------|------|--------|
@@ -66,29 +64,28 @@
 | FBref via soccerdata | Season totals & rosters (2005-2025) | 54,908 player-season-club rows |
 | UEFA / OpenFootball | Match results | 94,525 real matches |
 
-### Non-negotiable constraint
+### Provenance rule
 
-> **Zero invented data.** Player identities, goals, and participations are always real.  
-> Only secondary metrics (cards, fouls, shots where no real source exists) are modelled  
-> via cited formulas — and tagged with `data_provenance`.
-
----
+> Identities, goals and participations come from the sources above.  
+> Secondary metrics (cards, fouls, shots where no event-level source exists) are  
+> modelled from cited formulas and tagged in `data_provenance`.
 
 ---
 
-## 3. What We Fixed (Audit → Remediation)
+---
 
-### The root cause: 96% synthetic entities
+## 3. Data Quality Gates
 
-| Metric | Before | After |
-|--------|--------|-------|
-| Real players | 190,979 (~4%) | **18,782 (100%)** |
-| Impossible GK seasons (>3 goals/90) | 506 | **0** |
-| Duplicate identities (CR7 / CristianoRonaldo) | Unresolved | **0** |
-| 1.5M dataset | 1.95M simulated rows | **1.75M real events + 1.94M real-roster rows** |
-| Recommender MRR | 0.0018 | **0.179 (×99)** |
-| Position purity@5 | 0.59 (random) | **0.998** |
-| Position classification macro-F1 (real subset) | — | **0.884** (HistGradientBoosting) |
+### Checks enforced on every build
+
+| Gate | Result |
+|------|--------|
+| Player catalog, identity-deduplicated | **18,782** |
+| Goalkeeper seasons with impossible output | **0** |
+| Duplicate identities (CR7 / CristianoRonaldo) | **0**, remapped to canonical ids |
+| Per-player season sums vs FBref totals | **98.6% exact** |
+| Position purity@5 of the retrieval pool | **0.998** |
+| Position classification macro-F1 (real-feature subset) | **0.884** (HistGradientBoosting) |
 
 ---
 
@@ -167,7 +164,7 @@ Silhouette score peaks at K=3 (0.4536); inertia elbow confirms it.
 
 ---
 
-## 7. Player Similarity Recommendation
+## 7. Player Similarity Retrieval
 
 ### Content-based item-item system
 
@@ -324,11 +321,11 @@ Interactive Dashboard (reports/demo/index.html)
 
 ---
 
-# Thank You
+# Demo & Reproduction
 
-**Demo:** Open `reports/demo/index.html` in any browser — no server required.
+**Demo:** open `reports/demo/index.html` in any browser — no server required.
 
-**Reproduce everything** (committed parquet already contain the data-build result):
+**Reproduce everything** (the committed parquet already contain the data-build result):
 ```bash
 python -m src.build_pca_feature_matrix
 python -m src.build_clustering_analysis
@@ -336,5 +333,3 @@ python -m src.recommendation_evaluation
 python -m src.supervised_evaluation
 python -m src.serialize_demo_data
 ```
-
-**Questions?**

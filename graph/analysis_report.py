@@ -1,7 +1,7 @@
 """analysis_report.py
 
-Cálculos básicos: componentes, degree/weighted degree, centralidades, PageRank.
-Exporta CSVs con resultados que luego se pueden usar para comparar.
+Basic computations: components, degree/weighted degree, centralities, PageRank.
+Exports result CSVs that can then be used for comparison.
 """
 import argparse
 import networkx as nx
@@ -63,10 +63,10 @@ def centralities_to_df(centralities: dict) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Analizar grafo y exportar metrics')
-    parser.add_argument('--graph', required=True, help='Archivo .gpickle del grafo')
-    parser.add_argument('--out-prefix', required=True, help='Prefijo para output CSVs')
-    parser.add_argument('--approx-betweenness-k', type=int, default=200, help='k para betweenness approx (opcional)')
+    parser = argparse.ArgumentParser(description='Analyze the graph and export metrics')
+    parser.add_argument('--graph', required=True, help='Graph .gpickle file')
+    parser.add_argument('--out-prefix', required=True, help='Prefix for the output CSVs')
+    parser.add_argument('--approx-betweenness-k', type=int, default=200, help='k for approximate betweenness (optional)')
     args = parser.parse_args()
 
     #G = nx.read_gpickle(args.graph)

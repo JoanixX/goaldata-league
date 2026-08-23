@@ -1,7 +1,7 @@
 """compare_rankings.py
 
-Comparar ranking generado por centralidad con baseline (goles/asistencias/minutos).
-Produce métricas: Spearman, Kendall, top-k overlap.
+Compare a centrality-based ranking against a baseline (goals/assists/minutes).
+Produces Spearman, Kendall and top-k overlap metrics.
 """
 import argparse
 import pandas as pd
@@ -24,46 +24,46 @@ def compare_rankings(graph_scores: pd.Series, baseline_scores: pd.Series, ks=[10
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Comparar rankings graph vs baseline')
-    parser.add_argument('--graph-centralities', required=True, help='CSV con centralities (index player_id)')
-    parser.add_argument('--baseline', required=True, help='CSV con metricas baseline (index player_id e.g. goals)')
-    parser.add_argument('--graph-col', default='pagerank', help='Columna de centrality a comparar')
-    parser.add_argument('--baseline-col', default='goals', help='Columna baseline a usar')
-    parser.add_argument('--out', help='CSV de salida con resultados (single-row)')
+    parser = argparse.ArgumentParser(description='Compare graph vs baseline rankings')
+    parser.add_argument('--graph-centralities', required=True, help='CSV of centralities (indexed by player_id)')
+    parser.add_argument('--baseline', required=True, help='CSV of baseline metrics (indexed by player_id, e.g. goals)')
+    parser.add_argument('--graph-col', default='pagerank', help='Centrality column to compare')
+    parser.add_argument('--baseline-col', default='goals', help='Baseline column to use')
+    parser.add_argument('--out', help='Output CSV with the results (single row)')
     args = parser.parse_args()
 
     #dfg = pd.read_csv(args.graph_centralities, index_col=0)
     #dfb = pd.read_csv(args.baseline, index_col=0)
-    # 1. Leer los archivos CSV de forma plana sin índices restrictivos
+    # 1. Read the CSV files flat, without restrictive indexes
     dfg = pd.read_csv(args.graph_centralities)
     dfb = pd.read_csv(args.baseline)
     
-    # 2. Validar que las columnas que solicitas existan en la data
+    # 2. Validate that the requested columns exist in the data
     if args.graph_col not in dfg.columns:
-        raise ValueError(f"graph column {args.graph_col} no encontrada en {args.graph_centralities}")
+        raise ValueError(f"graph column {args.graph_col} not found in {args.graph_centralities}")
     if args.baseline_col not in dfb.columns:
-        raise ValueError(f"baseline column {args.baseline_col} no encontrada en {args.baseline}")
+        raise ValueError(f"baseline column {args.baseline_col} not found in {args.baseline}")
         
-    # 3. Alinear por player_id con un merge (NO posicionalmente). El código previo
-    #    ordenaba cada CSV por separado y tomaba las columnas por posición de fila;
-    #    si los conjuntos de jugadores difieren, eso compara jugadores distintos.
+    # 3. Align on player_id with a merge (NOT positionally). The previous code
+    #    sorted each CSV separately and took the columns by row position; if the
+    #    two player sets differ, that compares different players.
     if 'player_id' not in dfg.columns or 'player_id' not in dfb.columns:
-        raise ValueError("ambos archivos deben tener columna 'player_id' para alinear por id")
+        raise ValueError("both files must have a 'player_id' column to align by id")
     merged = dfg[['player_id', args.graph_col]].merge(
         dfb[['player_id', args.baseline_col]], on='player_id', how='inner'
     )
-    # Indexar por player_id para que el top-k overlap use ids, no posiciones.
+    # Index by player_id so the top-k overlap uses ids, not positions.
     merged = merged.set_index('player_id')
     graph_scores = merged[args.graph_col]
     baseline_scores = merged[args.baseline_col]
 
-    # 5. Ejecutar la comparación estadística
+    # 5. Run the statistical comparison
     res = compare_rankings(graph_scores, baseline_scores)
     res['n_compared'] = int(len(merged))
     
-    # 6. Escribir los resultados en el archivo de salida
+    # 6. Write the results to the output file
     if args.out:
         pd.DataFrame([res]).to_csv(args.out, index=False)
-        print(f'¡Éxito! Archivo guardado con datos en: {args.out}')
+        print(f'Done. Results written to: {args.out}')
     else:
         print(res)

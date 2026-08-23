@@ -17,41 +17,41 @@ TABLES = [
 
 def clean_table(df: pd.DataFrame, table_name: str) -> pd.DataFrame:
     """
-    Función base para la futura limpieza de los datasets.
-    Actualmente actúa como passthrough, lista para agregar validaciones y limpieza 
-    cuando termine la etapa de scraping.
+    Base hook for dataset cleaning.
+    Currently a passthrough, ready for validation and cleaning rules once the
+    scraping stage is finished.
     """
-    # Ejemplo de estructura futura:
+    # Example of the intended structure:
     # if "players" in table_name:
     #     df = df.drop_duplicates(subset=["player_id"])
     
     return df
 
 def main():
-    print("Iniciando pipeline de limpieza de datos...")
+    print("Starting the data cleaning pipeline...")
     
     for table in TABLES:
         raw_path = os.path.join(RAW_DIR, table["raw"])
         processed_path = os.path.join(PROCESSED_DIR, table["processed"])
         
         if not os.path.exists(raw_path):
-            print(f"  [!] Archivo no encontrado: {raw_path}")
+            print(f"  [!] File not found: {raw_path}")
             continue
             
-        print(f"Procesando: {table['raw']}...")
+        print(f"Processing: {table['raw']}...")
         df = pd.read_csv(raw_path)
         
-        # Aplicar limpieza
+        # Apply cleaning
         df_clean = clean_table(df, table["raw"])
         
-        # Asegurar que el directorio de destino exista
+        # Make sure the destination directory exists
         os.makedirs(os.path.dirname(processed_path), exist_ok=True)
         
-        # Guardar archivo limpio
+        # Write the cleaned file
         df_clean.to_csv(processed_path, index=False)
-        print(f"  -> Guardado en {processed_path} con shape {df_clean.shape}")
+        print(f"  -> Written to {processed_path} with shape {df_clean.shape}")
 
-    print("Pipeline finalizado exitosamente.")
+    print("Pipeline finished successfully.")
 
 if __name__ == "__main__":
-    main()
+    main()

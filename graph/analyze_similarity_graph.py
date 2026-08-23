@@ -1,6 +1,6 @@
 """analyze_similarity_graph.py  (P0-3 — consolidated graph analytics)
 
-Single, reproducible graph-analytics step for the Week 12 deliverable. It loads
+Single, reproducible graph-analytics step. It loads
 the k-NN player-similarity graph produced by ``graph/build_similarity_graph.py``
 (real players only, since the upstream cluster-labels are already filtered to
 real entities) and reports:

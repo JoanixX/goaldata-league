@@ -17,7 +17,7 @@ This directory houses the core logic for the GoalData League pipeline. The archi
 | Feature building | `build_pca_feature_matrix.py`, `build_event_features.py` |
 | Models & evaluation | `build_clustering_analysis.py`, `recommendation_engine.py`, `recommendation_evaluation.py`, `supervised_evaluation.py`, `evaluate_event_representation.py` |
 | Decision layer | `optimize_lineup.py` (+ `league_strength.py`), `build_passing_network.py` |
-| Reporting / demo | `build_metrics_report.py`, `serialize_demo_data.py`, `build_defense_figures.py`, `generate_goaldata_figures.py`, `eda_report.py` |
+| Reporting / demo | `build_metrics_report.py`, `serialize_demo_data.py`, `build_figures.py`, `generate_goaldata_figures.py`, `eda_report.py` |
 | Shared utilities | `logging_utils.py`, `config.py`, `advanced_metric_formulas.py`, `data_quality.py`, `build_processed.py` |
 
 **Auxiliary (only for re-scraping / alternative ingestion):** `main.py` and
@@ -64,7 +64,7 @@ To solve the "Entity Resolution" problem (e.g., "Paris Saint-Germain" vs "PSG" v
 *   **`conversion_csv.py`**: A specialized tool to export the final enriched dataset into seasonal JSON files for easier consumption by frontend applications or data analysts.
 *   **`enrich_advanced_metrics.py`**: Adds documented xT/VAEP/xA/pressing/load/discipline proxy columns to processed datasets. It writes formula provenance and coverage reports under `data/processed/metadata/`.
 *   **`build_pca_feature_matrix.py`**: Generates a high-dimensional feature matrix from seasonal stats. It utilizes **Parquet** inputs for efficiency, performs One-Hot Encoding on categorical features, and identifies the optimal number of components for tactical clustering.
-*   **`build_clustering_analysis.py`**: Runs the Week 7 K-Means and DBSCAN sweeps on the PCA player-season embedding, saving validation tables, cluster labels, plots, and a clustering report.
+*   **`build_clustering_analysis.py`**: Runs the K-Means and DBSCAN sweeps on the PCA player-season embedding, saving validation tables, cluster labels, plots, and a clustering report.
 *   **`advanced_metric_formulas.py`**: Central catalog of required columns, formulas, references, and "not computable from current schema" notes for advanced metrics.
 
 ## Enrichment Flow

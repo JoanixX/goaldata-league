@@ -187,12 +187,12 @@ def compare_centrality_to_popularity(G: nx.Graph, suitability_file: str, form_fi
     for node_id in G.nodes():
         player_id = G.nodes[node_id].get('player_id')
         
-        # Intentar buscar el nombre directamente en los parquets originales por su ID único
+        # Look the name up directly in the source parquet files by unique ID
         suitability_row = suitability[suitability['player_id'] == player_id]
         form_row = form[form['player_id'] == player_id]
         
-        # Si el parquet original tiene una columna alternativa de nombre real, la usamos.
-        # De lo contrario, tomamos el que viene en el nodo.
+        # Use the source parquet's alternative real-name column when it has one;
+        # otherwise fall back to the name carried on the node.
         player_name = G.nodes[node_id].get('player_name', f'Player_{node_id}')
         if len(suitability_row) > 0 and 'player_name' in suitability.columns:
             possible_name = suitability_row['player_name'].values[0]
@@ -204,7 +204,7 @@ def compare_centrality_to_popularity(G: nx.Graph, suitability_file: str, form_fi
         
         comparison_data.append({
             'node_id': node_id, 
-            'player_name': str(player_name), # Forzamos que sea texto limpio
+            'player_name': str(player_name), # Coerce to clean text
             'position_group': G.nodes[node_id].get('position_group', 'Unknown'),
             'pagerank': pagerank.get(node_id, 0), 
             'betweenness_centrality': betweenness.get(node_id, 0),
@@ -247,8 +247,8 @@ def validity_checks(G: nx.Graph) -> Dict:
 
 
 def generate_report(components_analysis, degree_analysis, betweenness_analysis, closeness_analysis, pagerank_analysis, comparison_analysis, validity_analysis, threshold):
-    # (El cuerpo del reporte se mantiene idéntico al original, mapeando correctamente las llaves de metadata añadidas)
-    report = f"""# Week 13: Graph Analytics and Centrality Report
+    # Report body is unchanged from the original, with the added metadata keys mapped correctly.
+    report = f"""# Graph Analytics and Centrality Report
 ## Executive Summary
 Graph constructed from player features using cosine similarity with threshold = {threshold}.
 
@@ -314,7 +314,7 @@ def main():
     parser.add_argument('--suitability', required=True)
     parser.add_argument('--form', required=True)
     parser.add_argument('--threshold', type=float, default=0.75)
-    parser.add_argument('--output-report', default='artifacts/WEEK13_GRAPH_ANALYSIS_REPORT.md')
+    parser.add_argument('--output-report', default='artifacts/GRAPH_ANALYSIS_REPORT.md')
     args = parser.parse_args()
     
     G = load_graph_data(args.graph_nodes, args.graph_edges)

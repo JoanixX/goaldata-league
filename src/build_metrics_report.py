@@ -1,10 +1,10 @@
 """
-Exact metrics report (defense reference)
-========================================
+Exact metrics report
+====================
 
 Reads the real pipeline artifacts and dumps every exact number into one
 Markdown file (``reports/METRICS_REPORT.md``) so each metric can be cited
-verbatim during the defense. Nothing is hard-coded: values come from the JSON/CSV
+verbatim. Nothing is hard-coded: values come from the JSON/CSV
 the pipeline produced. Re-run after re-running the pipeline.
 
 Run:  python -m src.build_metrics_report
@@ -41,7 +41,7 @@ def _md_table(df: pd.DataFrame) -> str:
 
 
 def main() -> None:
-    lines: list[str] = ["# Exact Metrics Report (defense reference)\n"]
+    lines: list[str] = ["# Exact Metrics Report\n"]
     lines.append("Auto-generated from pipeline artifacts by `src/build_metrics_report.py`. "
                  "All values are read verbatim from the real outputs.\n")
 
@@ -60,13 +60,13 @@ def main() -> None:
         lines.append(f"- goal-event rows: **{len(goals):,}** (player-attributed, scoreline-anchored)")
         lines.append(f"- players: **{len(players):,}** (all real identities, deduped)")
         lines.append(f"- player-season rows: **{len(ps):,}** | player-match rows: **{len(pm):,}**")
-        lines.append(f"- real StatsBomb event-stream rows: **{len(events):,}** (>=1.5M requirement)\n")
+        lines.append(f"- real StatsBomb event-stream rows: **{len(events):,}**\n")
     except Exception as exc:  # noqa
         lines.append(f"_(dataset read failed: {exc})_\n")
 
     # ---- PCA ----
     pca = _json(ART / "pca_feature_matrix_report.json")
-    lines.append("## 2. Representation / PCA (Week 5)\n")
+    lines.append("## 2. Representation / PCA\n")
     if pca:
         lines.append(f"- rows (real player-seasons): **{pca.get('rows')}**")
         lines.append(f"- encoded feature count: **{pca.get('encoded_feature_count')}**")
@@ -80,7 +80,7 @@ def main() -> None:
 
     # ---- Clustering ----
     clu = _json(ART / "clustering_validation_report.json")
-    lines.append("## 3. Clustering (Week 7)\n")
+    lines.append("## 3. Clustering\n")
     if clu:
         lines.append(f"- rows: **{clu.get('rows')}** | selected K-Means k: **{clu.get('selected_kmeans_k')}** "
                      f"| selected DBSCAN eps/min_samples: **{clu.get('selected_dbscan_eps')}/{clu.get('selected_dbscan_min_samples')}**\n")
@@ -91,7 +91,7 @@ def main() -> None:
 
     # ---- Recommendation ----
     rec = _json(ART / "recommendation_evaluation.json")
-    lines.append("## 4. Recommendation / ranking (Week 10)\n")
+    lines.append("## 4. Retrieval / ranking\n")
     if rec:
         lines.append(f"- protocol: {rec.get('protocol')}")
         lines.append(f"- player-seasons: **{rec.get('player_seasons')}** | retained PCs: **{rec.get('retained_pcs')}**\n")
@@ -104,7 +104,7 @@ def main() -> None:
 
     # ---- Graph ----
     g = _json(ART / "graph_statistics.json")
-    lines.append("## 5. Graph analytics (Week 12)\n")
+    lines.append("## 5. Graph analytics\n")
     if g:
         lines.append(f"- nodes: **{g.get('num_nodes')}** | edges: **{g.get('num_edges')}** "
                      f"| connected components: **{g.get('num_connected_components')}** "

@@ -1,6 +1,6 @@
 """
-Offline evaluation for the player-similarity recommender (Week 10)
-==================================================================
+Offline evaluation for the player-similarity retrieval model
+============================================================
 
 Problem: this is an item-item similarity recommender, and we have no click/rating
 log to evaluate against. We therefore use a **leakage-safe, label-free proxy** that
@@ -149,7 +149,7 @@ def main() -> None:
                 str(m["recall@5"]), str(m["recall@10"]), str(m["hit@5"]), str(m["ndcg@10"]),
                 str(m["pos_purity@5"])]) + " |")
 
-    md = f"""# Week 10 - Offline Evaluation Report (Recommendation / Ranking)
+    md = f"""# Offline Evaluation Report — Retrieval / Ranking
 
 Generated: `{report['generated_at']}`
 
@@ -184,7 +184,7 @@ players present in >= 2 seasons. The query row is removed from the pool, and
 - If the stronger (full standardized PC) representation beats the baseline on
   MRR / Recall / NDCG, the extra components carry real same-player signal that
   the 2D map discards. If it does **not** beat the baseline, that must be stated
-  honestly in the defense (a complex model that does not beat a simple baseline
+  plainly (a complex model that does not beat a simple baseline
   is a finding, not a failure to hide).
 - Limitation: with few seasons in the current data, the query set is small; the
   metric is a representation probe, not a production accuracy guarantee.
@@ -207,7 +207,7 @@ See `recommendation_error_analysis.md` for concrete good/bad cases.
             lines.append("- (none in the sampled queries)")
         return "\n".join(lines)
 
-    err = f"""# Week 10 - Recommendation Error Analysis
+    err = f"""# Recommendation Error Analysis
 
 Generated: `{report['generated_at']}`
 System analysed: stronger (standardized {len(all_pcs)}-PC similarity).

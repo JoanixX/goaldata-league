@@ -2,7 +2,7 @@
 """
 build_player_similarity_graph.py
 ================================
-Constructs a player-similarity graph for Week 13 Graph Analytics Report.
+Constructs a player-similarity graph for the graph analytics report.
 """
 
 import argparse
@@ -154,7 +154,7 @@ def compute_graph_statistics(G: nx.Graph, df: pd.DataFrame) -> dict:
         "mean": float(np.mean(edge_weights)), "median": float(np.median(edge_weights))
     }
     
-    # SOLUCIÓN DE CLUSTERING VELOZ (weight=None para usar BFS rápido en vez de triángulos ponderados pesados)
+    # Fast clustering path: weight=None uses quick BFS instead of heavy weighted triangles
     logger.info("  Computing clustering coefficient (fast unweighted clustering)...")
     clustering_coeffs = list(nx.clustering(G, weight=None).values())
     stats["clustering"] = {

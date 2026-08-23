@@ -1,4 +1,4 @@
-# Week-12 Graph Analytics Report (auditable, real-only)
+# Graph Analytics Report
 
 ## 1. Graph definition
 

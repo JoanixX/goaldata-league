@@ -1,4 +1,4 @@
-# Week 13: Graph Analytics and Centrality Report
+# Graph Analytics and Centrality Report
 ## Executive Summary
 Graph constructed from player features using cosine similarity with threshold = 0.75.
 

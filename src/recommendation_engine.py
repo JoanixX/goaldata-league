@@ -1,6 +1,6 @@
 """
-Player similarity / ranking engine (Week 10)
-============================================
+Player similarity / ranking engine
+==================================
 
 Task framing
 ------------
@@ -10,20 +10,20 @@ similar player-seasons (candidate replacements / comparables). The unit being
 ranked is a ``(player, season)`` profile. There is no user-click interaction log,
 so this is an item-similarity recommender, not collaborative filtering.
 
-Two systems (so we can compare, per the rubric)
------------------------------------------------
+Two systems (so the representations can be compared)
+----------------------------------------------------
 * **Baseline - content-based, 2 PCs, global pool.** Euclidean distance on the
   first two PCA axes over *all* player-seasons. Simple and cheap; this is the
   previous behaviour and the reference the stronger model must beat.
 * **Stronger - segmentation-feeding ranking, full PC space, position-aware pool.**
   Standardized distance over *all retained* PCA components, with the candidate
   pool restricted to the same ``position_group`` (optionally the same K-Means
-  cluster). Standardisation stops PC1 from dominating; the wider space keeps
+  cluster). Standardization stops PC1 from dominating; the wider space keeps
   efficiency/discipline signal that the 2D map discards; the position pool stops
   the engine recommending a defender to a striker.
 
-Candidate pool (explicit, per rubric)
--------------------------------------
+Candidate pool (explicit)
+-------------------------
 ``stronger``: player-seasons that share the query's ``position_group`` and are
 not the query player. ``baseline``: every other player-season. The query player's
 own rows (all seasons) are always excluded.
