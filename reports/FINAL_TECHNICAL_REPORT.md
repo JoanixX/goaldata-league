@@ -1,8 +1,7 @@
-# GoalData League — Final Technical Report
+# GoalData League — Technical Report
 
 **Project:** Football Data Pipeline & Scouting System  
 **Team:** GoalData League  
-**Delivery:** Week 15 — Final Integrated Delivery  
 **Date:** July 2026
 
 ---
@@ -109,8 +108,8 @@ The previous pipeline distributed goals using independent Bernoulli draws per pl
 
 Citations: Maher (1982); Dixon & Coles (1997); Decroos et al. (2019).
 
-**Final design (real-roster participation layer).** The scoreline-multinomial allocation above
-was the Week-10 remediation stage. The final build (`src/build_roster_participation_datasets.py`)
+**Current design (real-roster participation layer).** The scoreline-multinomial allocation above
+was an earlier stage. The current build (`src/build_roster_participation_datasets.py`)
 anchors goals to a stronger real quantity: each player's **real FBref season goal total** is
 distributed across his club's real deduplicated fixtures (seeded multinomial by minutes), so
 per-player season sums of goals/assists/shots/cards equal the real published numbers exactly

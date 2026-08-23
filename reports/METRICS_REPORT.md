@@ -1,4 +1,4 @@
-# Exact Metrics Report (defense reference)
+# Exact Metrics Report
 
 Auto-generated from pipeline artifacts by `src/build_metrics_report.py`. All values are read verbatim from the real outputs.
 
@@ -9,9 +9,9 @@ Auto-generated from pipeline artifacts by `src/build_metrics_report.py`. All val
 - goal-event rows: **75,925** (player-attributed, scoreline-anchored)
 - players: **18,782** (all real identities, deduped)
 - player-season rows: **52,387** | player-match rows: **1,935,463**
-- real StatsBomb event-stream rows: **1,751,751** (>=1.5M requirement)
+- real StatsBomb event-stream rows: **1,751,751**
 
-## 2. Representation / PCA (Week 5)
+## 2. Representation / PCA
 
 - rows (real player-seasons): **3670**
 - encoded feature count: **33**
@@ -36,7 +36,7 @@ First 13 components:
 | PC12 | 0.0184 | 0.9201 |
 | PC13 | 0.0169 | 0.9369 |
 
-## 3. Clustering (Week 7)
+## 3. Clustering
 
 - rows: **3670** | selected K-Means k: **3** | selected DBSCAN eps/min_samples: **0.25/10**
 
@@ -54,7 +54,7 @@ K-Means parameter sweep:
 | kmeans | 9 | 822.6639 | 0.3515 | 3625.4217 | 0.8896 | 9 | 0.0000 |
 | kmeans | 10 | 739.9827 | 0.3628 | 3627.2112 | 0.8603 | 10 | 0.0000 |
 
-## 4. Recommendation / ranking (Week 10)
+## 4. Retrieval / ranking
 
 - protocol: leave-one-out same-player cross-season retrieval (leakage-safe)
 - player-seasons: **3670** | retained PCs: **11**
@@ -64,7 +64,7 @@ K-Means parameter sweep:
 | baseline (PC1-PC2, 2 dims) | 1662 | 0.0773 | 0.0384 | 0.0316 | 0.0614 | 0.1047 | 0.1751 | 0.0304 | 0.0430 | 0.5889 | 0.5925 |
 | stronger (standardized 11 PCs) | 1662 | 0.1788 | 0.0927 | 0.0939 | 0.1435 | 0.2395 | 0.3183 | 0.0953 | 0.1146 | 0.9978 | 0.9960 |
 
-## 5. Graph analytics (Week 12)
+## 5. Graph analytics
 
 - nodes: **2531** | edges: **17777** | connected components: **1** | eigenvector non-zero: **True**
 - pagerank_vs_goals_per90: Spearman r=**0.0523** (p=8.5e-03), Kendall tau=**0.0387**, top50_overlap=0.0

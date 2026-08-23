@@ -1,7 +1,6 @@
 # GoalData League — Limitations and Future Work
 
 **System:** Football Data Pipeline & Scouting System  
-**Delivery:** Week 15 — Final Report  
 **Date:** July 2026
 
 ---

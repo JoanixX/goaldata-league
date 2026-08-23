@@ -1,8 +1,8 @@
 # Data Methodology, Provenance and Citations
 
 This document explains **how every value in `data/processed/` is produced** and
-**why each modelling choice is defensible**. It is the reference for the defense
-question "which data is real and which is modelled, and on what basis?".
+**why each modelling choice is justified**. It is the reference for the question
+"which data is observed and which is modelled, and on what basis?".
 
 > **2026-07 update.** The volume layer is now built by
 > `src/build_roster_participation_datasets.py` (real FBref Big-5 rosters 2005-2025

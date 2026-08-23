@@ -1,6 +1,6 @@
 """
-Auditable graph analytics report (addresses the Week-12 graph rubric feedback)
-==============================================================================
+Auditable graph analytics report
+================================
 
 Single, reproducible artifact that regenerates the player-similarity graph AND
 its full analysis, writing every raw output so the whole thing is auditable:
@@ -156,7 +156,7 @@ def main() -> None:
             "goals_per90", "minutes_played"]].to_csv(ART / "graph_ranking_comparison_full.csv", index=False)
 
     # --- written report ---
-    L = [f"# Week-12 Graph Analytics Report (auditable, real-only)\n",
+    L = [f"# Graph Analytics Report\n",
          "## 1. Graph definition\n",
          "- **Grain:** one **player-similarity** graph. **Node = one real player-season** "
          "(key `player_id` + `season`; label `player_name`). No team-match grain is used here.",

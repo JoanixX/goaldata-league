@@ -1,4 +1,4 @@
-# Week 10 - Recommendation Error Analysis
+# Recommendation Error Analysis
 
 Generated: `2026-07-09T02:02:19`
 System analysed: stronger (standardized 11-PC similarity).

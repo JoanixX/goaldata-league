@@ -2,7 +2,6 @@
 
 **System:** Football Data Pipeline & Scouting System  
 **Audience:** MLOps, Data Engineering, Team Leads  
-**Version:** Week 15
 
 ---
 

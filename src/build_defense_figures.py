@@ -2,12 +2,12 @@
 Defense figures (P0-P2 visual evidence)
 =======================================
 
-Generates the key visuals for the final defense into ``reports/figures/``:
+Generates the key visuals into ``reports/figures/``:
 
   1. passing_network_ucl_final.png  - real passing networks (StatsBomb UCL final),
      node size = betweenness, edge width = completed passes (the tactical graph).
   2. pagerank_vs_goals.png          - similarity-graph PageRank vs an external
-     baseline (goals/90), with Spearman rho (the rubric's ranking comparison).
+     baseline (goals/90), with Spearman rho for the ranking comparison.
   3. remediation_before_after.png   - before/after of the headline fixes.
 
 Run:  python -m src.build_defense_figures

@@ -1,7 +1,6 @@
-# GoalData League — Final Defense Presentation
+# GoalData League — System Presentation
 
 **Project:** Football Data Pipeline & Scouting System  
-**Delivery:** Week 15 — Academic Defense  
 **Format:** Markdown slide deck (one `---` separator = one slide)
 
 ---
@@ -13,7 +12,7 @@
 
 **End-to-End Analytics from Raw Match Data to ILP Squad Selection**
 
-> Week 15 Final Defense  
+> System Presentation  
 > July 2026
 
 ---

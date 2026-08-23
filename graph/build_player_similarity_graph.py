@@ -2,7 +2,7 @@
 """
 build_player_similarity_graph.py
 ================================
-Constructs a player-similarity graph for Week 13 Graph Analytics Report.
+Constructs a player-similarity graph for the graph analytics report.
 """
 
 import argparse

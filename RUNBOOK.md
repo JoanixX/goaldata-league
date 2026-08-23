@@ -1,7 +1,6 @@
 # GoalData League — Runbook
 
 **System:** Football Data Pipeline & Scouting System  
-**Version:** Week 15 — Final Delivery  
 **Python:** 3.10+  
 **OS:** Windows / Linux / macOS (paths use `/`; substitute `\` on Windows)
 
@@ -74,7 +73,7 @@ python -m src.ingest_statsbomb_full
 python -m src.build_real_only_datasets
 ```
 
-**2b. Real-roster participation layer (≥1.5M rows)** — expands real FBref Big-5
+**2b. Real-roster participation layer** — expands real FBref Big-5
 rosters (2005-2025) over their clubs' real deduplicated fixtures:
 - 100% real identities, nation-blocked homonym separation (two same-named players
   from different countries stay distinct entities)
@@ -96,11 +95,10 @@ Resulting sizes: 18,782 players · 1,338 teams · **1,935,463 player-match rows*
 75,925 player-attributed scoring rows · 52,387 player-seasons · 1,751,751
 event-stream rows.
 
-> **Deprecated:** the earlier `python -m src.rebuild_realistic_datasets`
+> **Deprecated:** `python -m src.rebuild_realistic_datasets`
 > (scoreline-anchored multinomial goal allocation, `logs/realistic_rebuild_report.json`)
-> was the Week-10 remediation stage and is superseded by the stages above.
-> Do not run it on top of the current tables — it would reintroduce simulated
-> per-player allocations.
+> is superseded by the stages above. Do not run it on top of the current tables —
+> it would reintroduce simulated per-player allocations.
 
 ---
 
@@ -147,9 +145,9 @@ Key outputs:
 
 ---
 
-## Step 6 — Recommendation Offline Evaluation
+## Step 6 — Retrieval Offline Evaluation
 
-Runs leakage-safe leave-one-out evaluation of baseline vs. stronger recommender:
+Runs leakage-safe leave-one-out evaluation of baseline vs. stronger retrieval model:
 
 ```bash
 python -m src.recommendation_evaluation
@@ -340,7 +338,7 @@ goaldata-league/
 ├── artifacts/                   # Generated artifacts (plots, CSVs, JSONs)
 ├── reports/
 │   ├── demo/                    # Interactive HTML dashboard
-│   └── *.md                     # All milestone reports
+│   └── *.md                     # Analysis and evaluation reports
 ├── tests/                       # Integration and diagnostic tests
 ├── requirements.txt
 └── RUNBOOK.md                   # This file

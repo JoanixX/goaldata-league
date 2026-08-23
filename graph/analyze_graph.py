@@ -247,8 +247,8 @@ def validity_checks(G: nx.Graph) -> Dict:
 
 
 def generate_report(components_analysis, degree_analysis, betweenness_analysis, closeness_analysis, pagerank_analysis, comparison_analysis, validity_analysis, threshold):
-    # (El cuerpo del reporte se mantiene idéntico al original, mapeando correctamente las llaves de metadata añadidas)
-    report = f"""# Week 13: Graph Analytics and Centrality Report
+    # Report body is unchanged from the original, with the added metadata keys mapped correctly.
+    report = f"""# Graph Analytics and Centrality Report
 ## Executive Summary
 Graph constructed from player features using cosine similarity with threshold = {threshold}.
 
@@ -314,7 +314,7 @@ def main():
     parser.add_argument('--suitability', required=True)
     parser.add_argument('--form', required=True)
     parser.add_argument('--threshold', type=float, default=0.75)
-    parser.add_argument('--output-report', default='artifacts/WEEK13_GRAPH_ANALYSIS_REPORT.md')
+    parser.add_argument('--output-report', default='artifacts/GRAPH_ANALYSIS_REPORT.md')
     args = parser.parse_args()
     
     G = load_graph_data(args.graph_nodes, args.graph_edges)
