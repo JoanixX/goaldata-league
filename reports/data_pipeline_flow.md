@@ -42,11 +42,10 @@ terminating the run.
 
 1. Data ingestion: `src.download_football_data` fetches Football-Data CSV
    files for the configured European league set from `2004-2005` through
-   `2025-2026`. In the sandboxed Codex environment, this step requires
-   explicit network permission; the latest approved refresh downloaded `483`
-   CSV files. `src.source_ingestion` remains the generic reader for CSV, TSV,
-   JSON, JSONL, HTML, XLS/XLSX, Parquet, text, directories, and ZIP archives
-   while excluding audio/video.
+   `2025-2026`. This step requires outbound network access; the latest
+   refresh downloaded `483` CSV files. `src.source_ingestion` remains the
+   generic reader for CSV, TSV, JSON, JSONL, HTML, XLS/XLSX, Parquet, text,
+   directories, and ZIP archives while excluding audio/video.
 2. Data merging and unification: `src.build_processed` normalizes match,
    team, player, goal, player-match, player-season, and goalkeeper rows into
    the original processed schemas.
